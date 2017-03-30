@@ -1,6 +1,7 @@
-#include <iostream>
+//
+// Created by Oleg Morozenkov on 30.03.17.
+//
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
     return 0;
 }

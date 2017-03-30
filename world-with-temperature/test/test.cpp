@@ -4,36 +4,45 @@
 
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
+#include "../src/TemperatureWorld.h"
 
-TEST_CASE( "vectors can be sized and resized", "[vector]" ) {
 
-    std::vector<int> v( 5 );
+SCENARIO("TemperatureWorld data can be accessed") {
+    GIVEN("ordinary TemperatureWorld") {
+        TemperatureWorld world(101, 55, 4);
 
-    REQUIRE( v.size() == 5 );
-    REQUIRE( v.capacity() >= 5 );
+        REQUIRE(world.getMinX() == -51);
+        REQUIRE(world.getMinY() == -28);
+        REQUIRE(world.getMinZ() == -3);
+        REQUIRE(world.getMaxX() == 51);
+        REQUIRE(world.getMaxY() == 28);
+        REQUIRE(world.getMaxZ() == 3);
 
-    SECTION( "resizing bigger changes size and capacity" ) {
-        v.resize( 10 );
+        REQUIRE(world.getMaxX() - world.getMinX() >= 101);
+        REQUIRE(world.getMaxY() - world.getMinY() >= 55);
+        REQUIRE(world.getMaxZ() - world.getMinZ() >= 4);
 
-        REQUIRE( v.size() == 10 );
-        REQUIRE( v.capacity() >= 10 );
-    }
-    SECTION( "resizing smaller changes size but not capacity" ) {
-        v.resize( 0 );
+        WHEN("getting non-accessed cell") {
+            THEN("temperature is zero") {
+                REQUIRE(world.get(0, 0, 0) == 0);
+            }
+        }
 
-        REQUIRE( v.size() == 0 );
-        REQUIRE( v.capacity() >= 5 );
-    }
-    SECTION( "reserving bigger changes capacity but not size" ) {
-        v.reserve( 10 );
+        WHEN("set") {
+            world.set(0, 0, 0, 228);
 
-        REQUIRE( v.size() == 5 );
-        REQUIRE( v.capacity() >= 10 );
-    }
-    SECTION( "reserving smaller does not change size or capacity" ) {
-        v.reserve( 0 );
+            THEN("") {
+                REQUIRE(world.get(0, 0, 0) == 228);
+            }
+        }
 
-        REQUIRE( v.size() == 5 );
-        REQUIRE( v.capacity() >= 5 );
+        WHEN("amplify") {
+            world.set(0, 0, 0, 228);
+            world.amplify(0, 0, 0, 100);
+
+            THEN("") {
+                REQUIRE(world.get(0, 0, 0) == 328);
+            }
+        }
     }
 }
