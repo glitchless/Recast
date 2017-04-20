@@ -7,8 +7,12 @@
 
 
 namespace MathUtils {
+
     template <typename T>
-    T lerp(T a, T b, float t);
+    inline T lerp(T a, T b, float t) {
+        return (1 - t) * a + t * b;
+    }
+
 };
 
 

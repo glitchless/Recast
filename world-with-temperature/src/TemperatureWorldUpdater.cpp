@@ -30,6 +30,6 @@ void TemperatureWorldUpdater::_shareTemperature(Coord x, Coord y, Coord z, Coord
     Temperature currentT = _world->get(x, y, z);
     Temperature anotherT = _world->get(nextX, nextY, nextZ);
     Temperature avgT = (currentT + anotherT) / 2;
-    _world->set(nextX, nextY, nextZ, MathUtils::lerp(anotherT, avgT, kTemperatureExchangeCoefficient));
     _world->set(x, y, z, MathUtils::lerp(currentT, avgT, kTemperatureExchangeCoefficient));
+    _world->set(nextX, nextY, nextZ, MathUtils::lerp(anotherT, avgT, kTemperatureExchangeCoefficient));
 }
