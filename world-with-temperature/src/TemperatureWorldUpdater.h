@@ -15,13 +15,16 @@ public:
 
     TemperatureWorldUpdater(std::shared_ptr<TemperatureWorld> world);
 
+    void update();
     void update(float dt);
 
 private:
     std::shared_ptr<TemperatureWorld> _world;
 
-    void _checkThenShareTemperature(Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
-    void _shareTemperature(Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
+    void _checkThenShareTemperature(float dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
+    void _shareTemperature(float dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
+
+    long long int _lastUpdateTime = 0;
 };
 
 

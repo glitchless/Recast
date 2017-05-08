@@ -18,7 +18,7 @@ int main() {
     const float kTickDelay = 0.5;
     while (true) {
         updater.update(kTickDelay);
-        usleep(kTickDelay * 1000000);
+        usleep((useconds_t) (kTickDelay * 1000000));
         cout << "Tick (delta time = " << kTickDelay << "s)" << endl;
     }
 

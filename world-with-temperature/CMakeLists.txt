@@ -1,4 +1,4 @@
-set(SOURCE_FILES src/TemperatureWorld.cpp src/TemperatureWorld.h src/Coord.h src/Temperature.h src/TemperatureWorldUpdater.cpp src/TemperatureWorldUpdater.h src/MathUtils.h)
+set(SOURCE_FILES src/TemperatureWorld.cpp src/TemperatureWorld.h src/Coord.h src/Temperature.h src/TemperatureWorldUpdater.cpp src/TemperatureWorldUpdater.h src/MathUtils.h src/TimeUtils.h)
 add_executable(world-with-temperature src/main.cpp ${SOURCE_FILES})
 
 add_executable(world-with-temperature-unittest test/test.cpp test/catch.hpp ${SOURCE_FILES})
