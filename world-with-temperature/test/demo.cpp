@@ -70,16 +70,9 @@ int main() {
     shared_ptr<TemperatureWorld> world(new TemperatureWorld(10, 10, 10));
     TemperatureWorldUpdater updater(world);
 
-//    for (Coord x = -2; x <= 2; x++) {
-//        for (Coord z = -2; z <= 2; z++) {
-//            world->set(x, world->getMaxY(), z, 1000);
-//        }
-//    }
     for (Coord x = -2; x <= 2; x++) {
-        for (Coord y = -2; y <= 2; y++) {
-            for (Coord z = -2; z <= 2; z++) {
-                world->set(x, y, z, 100);
-            }
+        for (Coord z = -2; z <= 2; z++) {
+            world->set(x, world->getMaxY(), z, 750);
         }
     }
 

@@ -7,6 +7,8 @@ var scene, camera, renderer;
 var clock = new THREE.Clock();
 var keyboard = new KeyboardState();
 
+var meshCache = null;
+
 init();
 animate();
 
@@ -82,8 +84,8 @@ function loadWorldAsync(callback) {
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
-                console.log('Reload world');
                 callback(JSON.parse(xmlhttp.responseText)['blocks']);
+                document.getElementById('info').innerHTML = 'Last update: ' + new Date().toISOString().replace(/[TZ]/g, ' ');
             }
         }
     };
@@ -93,17 +95,29 @@ function loadWorldAsync(callback) {
 }
 
 function initWorld(scene, world) {
-    clearScene(scene);
-    world.forEach(function (block) {
-        var geometry = new THREE.BoxGeometry(5, 5, 5);
-        var material = new THREE.MeshBasicMaterial({color: new THREE.Color(block.t / 100, 0.1, 0)});
+    if (meshCache == null) {
+        meshCache = new Map();
+        world.forEach(function (block) {
+            var geometry = new THREE.BoxGeometry(5, 5, 5);
+            var material = new THREE.MeshBasicMaterial({color: new THREE.Color(block.t / 100, 0, 0.05)});
 
-        var mesh = new THREE.Mesh(geometry, material);
-        mesh.position.x = block.x * 100;
-        mesh.position.y = block.y * 100;
-        mesh.position.z = block.z * 100;
-        scene.add(mesh);
-    });
+            var mesh = new THREE.Mesh(geometry, material);
+            mesh.position.x = block.x * 100;
+            mesh.position.y = block.y * 100;
+            mesh.position.z = block.z * 100;
+            scene.add(mesh);
+            meshCache.set(block.x + ' ' + block.y + ' ' + block.z, mesh);
+        });
+    } else {
+        world.forEach(function (block) {
+            var mesh = meshCache.get(block.x + ' ' + block.y + ' ' + block.z);
+            if (mesh == null) {
+                console.error('mesh == null');
+                return;
+            }
+            mesh.material.color.r = block.t / 100;
+        });
+    }
 }
 
 function clearScene(scene) {

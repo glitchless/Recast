@@ -33,7 +33,7 @@ void TemperatureWorldUpdater::update(double minDt) {
         }
     }
 
-    _lastUpdateTime = TimeUtils::currentTimeMillis();
+    _lastUpdateTime = TimeUtils::currentTimeSeconds();
 
     double currentIterationTime = _lastUpdateTime - updateTimeStart;
     if (currentIterationTime < minDt) {

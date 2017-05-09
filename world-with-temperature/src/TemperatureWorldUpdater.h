@@ -12,7 +12,7 @@
 
 class TemperatureWorldUpdater {
 public:
-    static constexpr double kTemperatureExchangeCoefficient = 0.1;
+    static constexpr double kTemperatureExchangeCoefficient = 1;
 
     TemperatureWorldUpdater(std::shared_ptr<TemperatureWorld> world);
 
