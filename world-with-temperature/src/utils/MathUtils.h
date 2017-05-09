@@ -11,8 +11,9 @@
 
 namespace MathUtils {
 
-    inline double lerp(double a, double b, double t) {
-        assert(!isnan(a) && !isnan(b) && !isnan(t));
+    template<typename T>
+    inline double lerp(T a, T b, double t) {
+        assert(!std::isnan(a) && !std::isnan(b) && !std::isnan(t));
         return (1 - t) * a + t * b;
     }
 
