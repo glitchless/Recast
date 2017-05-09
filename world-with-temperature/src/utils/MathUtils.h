@@ -8,7 +8,7 @@
 
 #include <cmath>
 #include <cassert>
-
+using namespace std;
 namespace MathUtils {
 
     inline double lerp(double a, double b, double t) {
