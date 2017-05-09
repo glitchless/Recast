@@ -14,11 +14,7 @@ namespace TemperatureWorldUtils {
         assert(minTemp < maxTemp);
         Temperature tempRange = maxTemp - minTemp;
         world.foreach([&world, minTemp, maxTemp, tempRange](Coord x, Coord y, Coord z) {
-            Temperature newTemperature = minTemp + (Temperature) ((double) rand() / RAND_MAX * tempRange);
-            if (isnan(newTemperature)) {
-                newTemperature = minTemp;
-            }
-            world.set(x, y, z, newTemperature);
+            world.set(x, y, z, minTemp + (Temperature) ((double) rand() / RAND_MAX * tempRange));
         });
     }
 }
