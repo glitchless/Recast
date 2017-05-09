@@ -6,7 +6,7 @@
 #define RECAST_TEMPERATURE_H
 
 
-typedef int Temperature;
+typedef double Temperature;
 
 
 #endif //RECAST_TEMPERATURE_H

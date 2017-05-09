@@ -11,16 +11,16 @@ SCENARIO("TemperatureWorld data can be accessed") {
     GIVEN("ordinary TemperatureWorld") {
         TemperatureWorld world(101, 55, 4);
 
-        REQUIRE(world.getMinX() == -51);
-        REQUIRE(world.getMinY() == -28);
-        REQUIRE(world.getMinZ() == -3);
-        REQUIRE(world.getMaxX() == 51);
-        REQUIRE(world.getMaxY() == 28);
-        REQUIRE(world.getMaxZ() == 3);
+        REQUIRE(world.getMinX() < 0);
+        REQUIRE(world.getMinY() < 0);
+        REQUIRE(world.getMinZ() < 0);
+        REQUIRE(world.getMaxX() > 0);
+        REQUIRE(world.getMaxY() > 0);
+        REQUIRE(world.getMaxZ() > 0);
 
-        REQUIRE(world.getMaxX() - world.getMinX() >= 101);
-        REQUIRE(world.getMaxY() - world.getMinY() >= 55);
-        REQUIRE(world.getMaxZ() - world.getMinZ() >= 4);
+        REQUIRE(world.getMaxX() - world.getMinX() < 101);
+        REQUIRE(world.getMaxY() - world.getMinY() < 55);
+        REQUIRE(world.getMaxZ() - world.getMinZ() < 4);
 
         WHEN("getting non-accessed cell") {
             THEN("temperature is zero") {

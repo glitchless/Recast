@@ -16,6 +16,10 @@ namespace TimeUtils {
         return millis;
     }
 
+    inline double currentTimeSeconds() {
+        return (double) currentTimeMillis() / 1000;
+    }
+
 };
 
 #endif //RECAST_TIMEUTILS_H

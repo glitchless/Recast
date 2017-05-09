@@ -14,11 +14,11 @@ function init() {
     scene = new THREE.Scene();
 
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
-    camera.position.z = 1000;
+    camera.position.z = 2000;
 
     continuouslyLoadWorldAsync(function (world) {
         initWorld(scene, world);
-    }, 10000);
+    }, 1000);
 
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -57,7 +57,7 @@ function animate() {
     if (keyboard.pressed("Z")) {
         camera.position.x = 0;
         camera.position.y = 0;
-        camera.position.z = 1000;
+        camera.position.z = 2000;
         camera.rotation.x = 0;
         camera.rotation.y = 0;
         camera.rotation.z = 0;
@@ -68,11 +68,12 @@ function animate() {
 }
 
 function continuouslyLoadWorldAsync(callback, delay) {
-    loadWorldAsync(callback);
-    // updateWorld(); // TODO
-    setTimeout(function () {
-        continuouslyLoadWorldAsync(callback, delay);
-    }, delay);
+    loadWorldAsync(function (world) {
+        callback(world);
+        setTimeout(function () {
+            continuouslyLoadWorldAsync(callback, delay);
+        }, delay);
+    });
 }
 
 function loadWorldAsync(callback) {
@@ -81,6 +82,7 @@ function loadWorldAsync(callback) {
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
+                console.log('Reload world');
                 callback(JSON.parse(xmlhttp.responseText)['blocks']);
             }
         }
@@ -94,7 +96,7 @@ function initWorld(scene, world) {
     clearScene(scene);
     world.forEach(function (block) {
         var geometry = new THREE.BoxGeometry(5, 5, 5);
-        var material = new THREE.MeshBasicMaterial({color: new THREE.Color(block.t / 100, 0.2, 0), });
+        var material = new THREE.MeshBasicMaterial({color: new THREE.Color(block.t / 100, 0.1, 0)});
 
         var mesh = new THREE.Mesh(geometry, material);
         mesh.position.x = block.x * 100;
@@ -102,19 +104,6 @@ function initWorld(scene, world) {
         mesh.position.z = block.z * 100;
         scene.add(mesh);
     });
-}
-
-function updateWorld() {
-    var xmlhttp = new XMLHttpRequest();
-
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == XMLHttpRequest.DONE) {
-            console.log('update world: response ' + xmlhttp.status);
-        }
-    };
-
-    xmlhttp.open("GET", "/update_world", true);
-    xmlhttp.send();
 }
 
 function clearScene(scene) {

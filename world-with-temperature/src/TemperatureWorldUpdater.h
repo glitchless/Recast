@@ -7,24 +7,25 @@
 
 
 #include <memory>
+#include <mutex>
 #include "TemperatureWorld.h"
 
 class TemperatureWorldUpdater {
 public:
-    static constexpr float kTemperatureExchangeCoefficient = 0.01;
+    static constexpr double kTemperatureExchangeCoefficient = 0.1;
 
     TemperatureWorldUpdater(std::shared_ptr<TemperatureWorld> world);
 
-    void update();
-    void update(float dt);
+    void update(double minDt);
 
 private:
     std::shared_ptr<TemperatureWorld> _world;
 
-    void _checkThenShareTemperature(float dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
-    void _shareTemperature(float dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
+    void _checkThenShareTemperature(double dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
+    void _shareTemperature(double dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
 
-    long long int _lastUpdateTime = 0;
+    double _lastUpdateTime = 0;
+    std::mutex _mutex;
 };
 
 

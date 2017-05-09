@@ -3,23 +3,26 @@
 //
 
 #include "TemperatureWorldUpdater.h"
-#include "MathUtils.h"
-#include "TimeUtils.h"
+#include "utils/MathUtils.h"
+#include "utils/TimeUtils.h"
+#include <iostream>
+#include <unistd.h>
+
+using namespace std;
+
 
 TemperatureWorldUpdater::TemperatureWorldUpdater(std::shared_ptr<TemperatureWorld> world) : _world(world) {
 }
 
-void TemperatureWorldUpdater::update() {
-    if (_lastUpdateTime == 0) {
-        const long long int now = TimeUtils::currentTimeMillis();
-        const double deltaMillis = (double) now - _lastUpdateTime;
-        update((float) (deltaMillis / 1000));
-    } else {
-        update(1);
-    }
-}
+void TemperatureWorldUpdater::update(double minDt) {
+    lock_guard<mutex> guard(_mutex);
+    double updateTimeStart = TimeUtils::currentTimeSeconds();
 
-void TemperatureWorldUpdater::update(float dt) {
+    double dt = 1;
+    if (_lastUpdateTime != 0) {
+        dt = updateTimeStart - _lastUpdateTime;
+    }
+
     for (Coord x = _world->getMinX(); x <= _world->getMaxX(); x++) {
         for (Coord y = _world->getMinY(); y <= _world->getMaxY(); y++) {
             for (Coord z = _world->getMinZ(); z <= _world->getMaxZ(); z++) {
@@ -29,16 +32,22 @@ void TemperatureWorldUpdater::update(float dt) {
             }
         }
     }
+
     _lastUpdateTime = TimeUtils::currentTimeMillis();
+
+    double currentIterationTime = _lastUpdateTime - updateTimeStart;
+    if (currentIterationTime < minDt) {
+        usleep((useconds_t) ((minDt - currentIterationTime) * 1000000));
+    }
 }
 
-void TemperatureWorldUpdater::_checkThenShareTemperature(float dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ) {
+void TemperatureWorldUpdater::_checkThenShareTemperature(double dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ) {
     if (nextX <= _world->getMaxX() && nextY <= _world->getMaxY() && nextZ <= _world->getMaxZ()) {
         _shareTemperature(dt, x, y, z, nextX, nextY, nextZ);
     }
 }
 
-void TemperatureWorldUpdater::_shareTemperature(float dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ) {
+void TemperatureWorldUpdater::_shareTemperature(double dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ) {
     Temperature currentT = _world->get(x, y, z);
     Temperature anotherT = _world->get(nextX, nextY, nextZ);
     Temperature avgT = (currentT + anotherT) / 2;

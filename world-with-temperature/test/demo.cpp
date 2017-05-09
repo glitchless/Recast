@@ -8,6 +8,8 @@
 #include "crow_all.h"
 #include "../src/TemperatureWorld.h"
 #include "../src/TemperatureWorldUpdater.h"
+#include "../src/utils/TemperatureWorldUtils.h"
+#include "../src/utils/TimeUtils.h"
 
 using namespace std;
 
@@ -39,35 +41,49 @@ void startServer(shared_ptr<TemperatureWorld> world, TemperatureWorldUpdater& up
     CROW_ROUTE(app, "/get_world")([world](){
         crow::json::wvalue json;
         size_t i = 0;
-        for (Coord x = world->getMinX(); x <= world->getMaxX(); x++) {
-            for (Coord y = world->getMinY(); y <= world->getMaxY(); y++) {
-                for (Coord z = world->getMinZ(); z <= world->getMaxZ(); z++) {
-                    json["blocks"][i]["x"] = x;
-                    json["blocks"][i]["y"] = y;
-                    json["blocks"][i]["z"] = z;
-                    json["blocks"][i]["t"] = world->get(x, y, z);
-                    i++;
-                }
-            }
-        }
+        world->foreach([&world, &json, &i](Coord x, Coord y, Coord z) {
+            json["blocks"][i]["x"] = x;
+            json["blocks"][i]["y"] = y;
+            json["blocks"][i]["z"] = z;
+            json["blocks"][i]["t"] = world->get(x, y, z);
+            i++;
+        });
         return json;
-    });
-
-    CROW_ROUTE(app, "/update_world")([&updater](){
-        updater.update();
-        return "OK";
     });
 
     app.port(18080).multithreaded().run();
 }
 
 
+void startUpdater(TemperatureWorldUpdater& updater) {
+    const float iterationTime = 0.2;
+    thread t([&updater, iterationTime]() {
+        while (true) {
+            updater.update(iterationTime);
+        }
+    });
+    t.detach();
+}
+
+
 int main() {
-    auto world = shared_ptr<TemperatureWorld>(new TemperatureWorld(10, 10, 10));
-    world->amplify(0, 0, 0, 50);
-    auto updater = TemperatureWorldUpdater(world);
+    shared_ptr<TemperatureWorld> world(new TemperatureWorld(10, 10, 10));
+    TemperatureWorldUpdater updater(world);
 
+//    for (Coord x = -2; x <= 2; x++) {
+//        for (Coord z = -2; z <= 2; z++) {
+//            world->set(x, world->getMaxY(), z, 1000);
+//        }
+//    }
+    for (Coord x = -2; x <= 2; x++) {
+        for (Coord y = -2; y <= 2; y++) {
+            for (Coord z = -2; z <= 2; z++) {
+                world->set(x, y, z, 100);
+            }
+        }
+    }
+
+    startUpdater(updater);
     startServer(world, updater);
-
     return 0;
 }
