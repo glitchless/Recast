@@ -13,9 +13,14 @@ public:
     virtual ~ITimer() {}
 
     /**
-     * @return Time from last update.
+     * @return Time from last update in milliseconds.
      */
     virtual std::chrono::milliseconds delta() = 0;
+
+    /**
+     * @return Time from last update in float-number seconds.
+     */
+    virtual double deltaFloatSeconds() = 0;
 
     /**
      * Saves update, saves "tick". It will influence value of `delta`.

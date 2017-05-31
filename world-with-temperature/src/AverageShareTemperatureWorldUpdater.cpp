@@ -11,7 +11,7 @@ AverageShareTemperatureWorldUpdater::AverageShareTemperatureWorldUpdater(shared_
 }
 
 void AverageShareTemperatureWorldUpdater::update() {
-    double dt = _timer->delta().count() / 1000.0;
+    double dt = _timer->deltaFloatSeconds();
 
     _world->foreach([&](CoordX x, CoordY y, CoordZ z) {
         _checkThenShareTemperature(dt, x, y, z, CoordX(x + CoordX(1)), y, z);

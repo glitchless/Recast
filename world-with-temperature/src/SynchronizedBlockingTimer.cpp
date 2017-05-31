@@ -17,6 +17,10 @@ milliseconds SynchronizedBlockingTimer::delta() {
     return duration_cast<milliseconds>(system_clock::now() - _lastUpdateTime);
 }
 
+double SynchronizedBlockingTimer::deltaFloatSeconds() {
+    return delta().count() / 1000.0;
+}
+
 void SynchronizedBlockingTimer::update() {
     lock_guard<mutex> guard(_mutex);
     const auto dt = system_clock::now() - _lastUpdateTime;

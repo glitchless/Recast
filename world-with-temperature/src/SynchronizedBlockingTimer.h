@@ -19,6 +19,8 @@ public:
 
     std::chrono::milliseconds delta() override;
 
+    double deltaFloatSeconds() override;
+
     void update() override;
 
     std::chrono::milliseconds minDelta() override;
