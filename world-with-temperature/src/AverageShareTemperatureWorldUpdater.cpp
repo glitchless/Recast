@@ -11,7 +11,7 @@ AverageShareTemperatureWorldUpdater::AverageShareTemperatureWorldUpdater(shared_
 }
 
 void AverageShareTemperatureWorldUpdater::update() {
-    double dt = _timer->deltaFloatSeconds();
+    const double dt = _timer->deltaFloatSeconds();
 
     _world->foreach([&](CoordX x, CoordY y, CoordZ z) {
         _checkThenShareTemperature(dt, x, y, z, CoordX(x + CoordX(1)), y, z);
@@ -29,9 +29,14 @@ void AverageShareTemperatureWorldUpdater::_checkThenShareTemperature(double dt, 
 }
 
 void AverageShareTemperatureWorldUpdater::_shareTemperature(double dt, CoordX x, CoordY y, CoordZ z, CoordX nextX, CoordY nextY, CoordZ nextZ) {
-    Temperature currentT = _world->get(x, y, z);
-    Temperature anotherT = _world->get(nextX, nextY, nextZ);
-    Temperature avgT = Temperature((currentT + anotherT) / 2);
-    _world->set(x, y, z, MathUtils::lerp(currentT, avgT, _temperatureExchangeCoefficient * dt));
-    _world->set(nextX, nextY, nextZ, MathUtils::lerp(anotherT, avgT, _temperatureExchangeCoefficient * dt));
+    const Temperature currentT = _world->get(x, y, z);
+    const Temperature anotherT = _world->get(nextX, nextY, nextZ);
+
+    const Temperature averageT = Temperature((currentT + anotherT) / 2);
+
+    const Temperature newCurrentT = MathUtils::lerp(currentT, averageT, _temperatureExchangeCoefficient * dt);
+    const Temperature newAnotherT = MathUtils::lerp(anotherT, averageT, _temperatureExchangeCoefficient * dt);
+
+    _world->set(x, y, z, newCurrentT);
+    _world->set(nextX, nextY, nextZ, newAnotherT);
 }
