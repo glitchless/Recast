@@ -24,9 +24,9 @@ namespace MathUtils {
      * @return Linear interpolated value.
      */
     template<typename T>
-    inline double lerp(T a, T b, double t) {
-        assert(!std::isnan(a) && !std::isnan(b) && !std::isnan(t));
-        return (1 - t) * a + t * b;
+    inline T lerp(T a, T b, double t) {
+        assert(!std::isnan(a.t) && !std::isnan(b.t) && !std::isnan(t));
+        return T((1 - t) * a + t * b);
     }
 
     /**
