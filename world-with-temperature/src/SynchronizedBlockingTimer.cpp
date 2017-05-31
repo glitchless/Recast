@@ -2,7 +2,7 @@
 // Created by Oleg Morozenkov on 31.05.17.
 //
 
-#include <zconf.h>
+#include <unistd.h>
 #include "SynchronizedBlockingTimer.h"
 
 using namespace std;
