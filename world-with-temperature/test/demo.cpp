@@ -2,12 +2,13 @@
 // Created by Oleg Morozenkov on 03.04.17.
 //
 
+/*
 #include <iostream>
 #include <sstream>
 #include <memory>
-#include "crow_all.h"
-#include "../src/TemperatureWorld.h"
-#include "../src/TemperatureWorldUpdater.h"
+#include "lib/crow_all.h"
+#include "../src/ITemperatureWorld.h"
+#include "../src/ITemperatureWorldUpdater.h"
 #include "../src/utils/TemperatureWorldUtils.h"
 #include "../src/utils/TimeUtils.h"
 
@@ -22,7 +23,7 @@ string readFile(const string& fileName) {
 }
 
 
-void startServer(shared_ptr<TemperatureWorld> world, TemperatureWorldUpdater& updater) {
+void startServer(shared_ptr<ITemperatureWorld> world, ITemperatureWorldUpdater& updater) {
     crow::SimpleApp app;
 
     CROW_ROUTE(app, "/")([](){
@@ -55,7 +56,7 @@ void startServer(shared_ptr<TemperatureWorld> world, TemperatureWorldUpdater& up
 }
 
 
-void startUpdater(TemperatureWorldUpdater& updater) {
+void startUpdater(ITemperatureWorldUpdater& updater) {
     const float iterationTime = 0.2;
     thread t([&updater, iterationTime]() {
         while (true) {
@@ -67,8 +68,8 @@ void startUpdater(TemperatureWorldUpdater& updater) {
 
 
 int main() {
-    shared_ptr<TemperatureWorld> world(new TemperatureWorld(10, 10, 10));
-    TemperatureWorldUpdater updater(world);
+    shared_ptr<ITemperatureWorld> world(new ITemperatureWorld(10, 10, 10));
+    ITemperatureWorldUpdater updater(world);
 
     for (Coord x = -2; x <= 2; x++) {
         for (Coord z = -2; z <= 2; z++) {
@@ -80,3 +81,4 @@ int main() {
     startServer(world, updater);
     return 0;
 }
+*/

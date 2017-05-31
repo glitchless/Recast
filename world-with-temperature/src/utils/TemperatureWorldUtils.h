@@ -5,18 +5,33 @@
 #ifndef RECAST_TEMPERATUREWORLDUTILS_H
 #define RECAST_TEMPERATUREWORLDUTILS_H
 
+
 #include <cstdlib>
 #include <cassert>
-#include "../TemperatureWorld.h"
+#include "../ITemperatureWorld.h"
+#include "MathUtils.h"
 
+/**
+ * Collection of functions which work with temperature world.
+ */
 namespace TemperatureWorldUtils {
-    inline void randomize(TemperatureWorld& world, Temperature minTemp, Temperature maxTemp) {
-        assert(minTemp < maxTemp);
-        Temperature tempRange = maxTemp - minTemp;
-        world.foreach([&world, minTemp, maxTemp, tempRange](Coord x, Coord y, Coord z) {
-            world.set(x, y, z, minTemp + (Temperature) ((double) rand() / RAND_MAX * tempRange));
+
+    /**
+     * Initializes temperature world with random temperatures. Random temperatures are generated within the range.
+     *
+     * @param world World to initialize.
+     * @param minTemperature Minimum possible temperature in the world.
+     * @param maxTemperature Maximum possible temperature in the world.
+     */
+    inline void randomize(ITemperatureWorld& world, Temperature minTemperature, Temperature maxTemperature) {
+        assert(minTemperature < maxTemperature);
+        const Temperature temperatureRange = maxTemperature - minTemperature;
+        world.foreach([&](CoordX x, CoordY y, CoordZ z) {
+            const Temperature t = minTemperature + Temperature(MathUtils::randomFloat() * temperatureRange);
+            world.set(x, y, z, t);
         });
     }
+    
 }
 
 #endif //RECAST_TEMPERATUREWORLDUTILS_H

@@ -2,8 +2,9 @@
 // Created by Oleg Morozenkov on 30.03.17.
 //
 
-#include "TemperatureWorld.h"
-#include "TemperatureWorldUpdater.h"
+/*
+#include "../src/ITemperatureWorld.h"
+#include "../src/ITemperatureWorldUpdater.h"
 
 #include <memory>
 #include <unistd.h>
@@ -12,8 +13,9 @@
 using namespace std;
 
 int main() {
-    auto world = shared_ptr<TemperatureWorld>(new TemperatureWorld(10, 10, 10));
-    auto updater = TemperatureWorldUpdater(world);
+    const size_t n = 999999;
+    auto world = shared_ptr<ITemperatureWorld>(new ITemperatureWorld(n, n, n));
+    auto updater = ITemperatureWorldUpdater(world);
 
     const float kTickDelay = 0.5;
     while (true) {
@@ -24,3 +26,4 @@ int main() {
 
     return 0;
 }
+*/
