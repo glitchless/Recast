@@ -15,7 +15,7 @@ public:
     /**
      * @return Time from last update.
      */
-    virtual std::chrono::duration delta() = 0;
+    virtual std::chrono::milliseconds delta() = 0;
 
     /**
      * Saves update, saves "tick". It will influence value of `delta`.

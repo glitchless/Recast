@@ -14,9 +14,9 @@
  * Bound temperature world backed by `std::vector`.
  * This class is thread-safe.
  */
-class VectorTemperatureWorld : public IBoundTemperatureWorld {
+class SynchronizedVectorTemperatureWorld : public IBoundTemperatureWorld {
 public:
-    VectorTemperatureWorld(SizeX sizeX, SizeY sizeY, SizeZ sizeZ);
+    SynchronizedVectorTemperatureWorld(SizeX sizeX, SizeY sizeY, SizeZ sizeZ);
 
     Temperature get(CoordX x, CoordY y, CoordZ z) override;
 
