@@ -1,4 +1,4 @@
-# Recast
+# Recast [![Build Status](https://travis-ci.org/LionZXY/Recast.svg?branch=master)](https://travis-ci.org/LionZXY/Recast)
 Основная идея проекта - не ограничивать игрока в создании заклинаний. Игрок может создавать заклинания, опираясь на физические законы окружающего мира.
 
 ## Основные концепции проекта:
@@ -21,9 +21,9 @@
 
 ## Архитектура проекта:
 ### Диаграмма общей архитектуры
-![Архитектура проекта](https://lionzxy.github.io/Recast/docs/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0.svg)
+![Архитектура проекта](https://lionzxy.github.io/Recast/custom-docs/simple_architecture.svg)
 ### Диаграмма потока авторизации
-![Архитектура проекта](https://lionzxy.github.io/Recast/docs/ProcessDiagram_PocketLifeCycle.svg)
+![Архитектура проекта](https://lionzxy.github.io/Recast/custom-docs/procces_pocketlife.svg)
 ## Команда "Шкаф Бендера":
 - Олег Морозенков
 - Василий Дмитриев
