@@ -1,0 +1,47 @@
+language: cpp
+
+sudo: true
+
+compiler:  
+    - gcc
+
+# Blacklist
+branches:
+  except:
+    - gh-pages
+
+# Environment variables
+env:
+  global:
+    - GH_REPO_NAME: Recast
+    - DOXYFILE: $TRAVIS_BUILD_DIR/doxyfile
+    - GH_REPO_REF: github.com/LionZXY/Recast.git
+
+# Install dependencies
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports # cmake 3.2.3 / doxygen 1.8.3
+    packages:
+      - doxygen
+      - doxygen-doc
+      - doxygen-latex
+      - doxygen-gui
+      - graphviz
+      - cmake
+      - cmake-data
+
+before_script:  
+    - mkdir build
+    - cd build
+    - cmake ..
+
+# Build your code e.g. by calling make
+script:
+  - make
+
+# Generate and deploy documentation
+after_success:
+  - cd $TRAVIS_BUILD_DIR
+  - chmod +x generateDocumentationAndDeploy.sh
+  - ./generateDocumentationAndDeploy.sh
