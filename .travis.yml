@@ -7,6 +7,8 @@ compiler:
 
 # Blacklist
 branches:
+  only: 
+    - master
   except:
     - gh-pages
 
@@ -44,4 +46,4 @@ script:
 after_success:
   - cd $TRAVIS_BUILD_DIR
   - chmod +x generateDocumentationAndDeploy.sh
-  - ./generateDocumentationAndDeploy.sh
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./generateDocumentationAndDeploy.sh; fi'
