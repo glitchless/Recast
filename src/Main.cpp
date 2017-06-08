@@ -1,4 +1,5 @@
 /**
+ * @mainpage
  * @file
  * @brief Start point
  * @author LionZXY
