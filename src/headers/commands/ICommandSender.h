@@ -4,7 +4,10 @@
 
 #include <models/Player.h>
 #include <boost/shared_ptr.hpp>
-#include <Server.h>
+
+using namespace std;
+
+class Server;
 
 class ICommandSender {
 public:
@@ -14,10 +17,10 @@ public:
 
     virtual bool isOP() = 0;
 
-    virtual Server *getServer() = 0;
+    virtual shared_ptr<Server> getServer() = 0;
 
     //TODO getWorld()
-    virtual Player *getPlayer() = 0;
+    virtual shared_ptr<Player> getPlayer() = 0;
 
     virtual void onMessage(std::string msg) = 0;
 };

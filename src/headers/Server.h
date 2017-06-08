@@ -37,9 +37,9 @@ public:
 
     bool isOP() { return true; };
 
-    Server *getServer() { return this; }
+    shared_ptr<Server> getServer() { return shared_ptr<Server>(this); }
 
-    Player *getPlayer() { return NULL; }
+    shared_ptr<Player> getPlayer() { return shared_ptr<Player>(NULL); }
 
     void onMessage(std::string msg);
 
