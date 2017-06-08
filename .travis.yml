@@ -31,11 +31,10 @@ addons:
       - cmake-data
 
 services:
+  - docker
+script:
   - docker build -t recast -f Dockerfile
   - docker run -rm recast
-
-script:
-  - docker build .
 
 # Generate and deploy documentation
 after_success:
