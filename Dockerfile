@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get -qq update &&\
-        apt-get --qq upgrade && apt-get -qq install -y g++ libboost-all-dev cmake cmake-data
+        apt-get upgrade && apt-get -qq install -y g++ libboost-all-dev cmake cmake-data
 
 WORKDIR /tmp/recast
 COPY src src
