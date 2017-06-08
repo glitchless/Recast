@@ -2,7 +2,6 @@
 #include "commands/ICommandSender.h"
 #include "commands/StopCommand.h"
 #include "Server.h"
-
 using namespace std;
 
 bool StopCommand::isValid(std::string cmd, vector<string> args) {
