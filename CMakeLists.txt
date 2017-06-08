@@ -8,7 +8,7 @@ file(GLOB_RECURSE SOURCE_FILES
         "src/*.c"
         "src/*.cpp")
 
-include_directories(src/headers/)
+include_directories(headers)
 
 add_definitions(-DBOOST_LOG_DYN_LINK)
 find_package(Boost 1.55 COMPONENTS system thread log program_options filesystem REQUIRED)

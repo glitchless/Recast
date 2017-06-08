@@ -2,9 +2,6 @@ language: cpp
 
 sudo: true
 
-compiler:  
-    - gcc
-
 # Blacklist
 branches:
   only: 
@@ -24,18 +21,7 @@ addons:
   apt:
     sources:
       - george-edison55-precise-backports # cmake 3.2.3 / doxygen 1.8.3
-      - boost-latest
     packages:
-      - libaudit-dev
-      - e2fslibs-dev
-      - libblkid-dev
-      - build-essential
-      - g++
-      - python-dev
-      - autotools-dev
-      - libicu-dev
-      - libbz2-dev
-      - libboost-all-dev
       - doxygen
       - doxygen-doc
       - doxygen-latex
@@ -44,15 +30,12 @@ addons:
       - cmake
       - cmake-data
 
-before_script:
-    - ./installBoost.sh
-    - mkdir build
-    - cd build
-    - cmake ..
+services:
+  - docker build -t recast -f Dockerfile
+  - docker run -rm recast
 
-# Build your code e.g. by calling make
 script:
-  - make
+  - docker build .
 
 # Generate and deploy documentation
 after_success:
