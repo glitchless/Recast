@@ -1,4 +1,4 @@
-# Recast [![Build Status](https://travis-ci.org/LionZXY/Recast.svg?branch=master)](https://travis-ci.org/LionZXY/Recast)
+# Recast [![Build Status](https://travis-ci.org/bender-wardrobe/Recast.svg?branch=master)](https://travis-ci.org/bender-wardrobe/Recast)
 Основная идея проекта - не ограничивать игрока в создании заклинаний. Игрок может создавать заклинания, опираясь на физические законы окружающего мира.
 
 ## Основные концепции проекта:
