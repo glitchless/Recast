@@ -79,6 +79,5 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-.gitignore
 .idea/
 cmake-build-debug/
