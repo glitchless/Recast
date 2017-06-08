@@ -12,16 +12,14 @@
 #ifndef RECAST_SERVER_H
 #define RECAST_SERVER_H
 
-#include <commands/ICommandSender.h>
-#include <commands/CommandManager.h>
-
-using namespace std;
+#include "commands/ICommandSender.h"
+#include "commands/CommandManager.h"
+#include <memory>
 
 /**
  * @brief Main class in Recast Server
- *
  */
-class Server : public ICommandSender {
+class Server : public std::enable_shared_from_this<ICommandSender> {
 public:
     volatile bool isRunning;
 
@@ -37,9 +35,9 @@ public:
 
     bool isOP() { return true; };
 
-    shared_ptr<Server> getServer() { return shared_ptr<Server>(this); }
+    std::shared_ptr<Server> getServer() { return shared_from_this(); }
 
-    shared_ptr<Player> getPlayer() { return shared_ptr<Player>(NULL); }
+    std::shared_ptr<Player> getPlayer() { return std::shared_ptr<Player>(NULL); }
 
     void onMessage(std::string msg);
 
