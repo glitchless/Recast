@@ -1,13 +1,3 @@
-/**
- * @file
- * @brief //TODO Add brief
- * @author LionZXY
- * @project Recast-server
- * @date 08.06.17
- *
- * //TODO add comment
- * 
- **/
 #ifndef RECAST_SERVER_ICOMMANDSENDER_H
 #define RECAST_SERVER_ICOMMANDSENDER_H
 
