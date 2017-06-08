@@ -5,7 +5,6 @@ RUN apt-get -qq update &&\
 
 WORKDIR /tmp/recast
 COPY src src
-COPY headers headers
 COPY CMakeLists.txt ./
 
 RUN mkdir build && cd build && cmake .. && make
