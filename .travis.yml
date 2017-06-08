@@ -34,7 +34,7 @@ services:
   - docker
 script:
   - docker build -t recast -f Dockerfile
-  - docker run -rm recast
+  - docker run --rm recast
 
 # Generate and deploy documentation
 after_success:
