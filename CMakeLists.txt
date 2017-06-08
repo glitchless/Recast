@@ -10,8 +10,17 @@ file(GLOB_RECURSE SOURCE_FILES
 
 include_directories(src/headers/)
 
+set(Boost_USE_STATIC_LIBS   ON)
+set(Boost_USE_MULTITHREADED ON)
+
 add_definitions(-DBOOST_LOG_DYN_LINK)
-find_package(Boost 1.52 COMPONENTS system thread log program_options filesystem REQUIRED)
+
+find_package(Boost 1.46 COMPONENTS  system
+                                    thread
+                                    log
+                                    program_options
+                                    filesystem
+             REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
 add_executable(Recast-server ${SOURCE_FILES})
