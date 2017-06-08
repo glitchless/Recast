@@ -15,9 +15,10 @@ set(Boost_USE_MULTITHREADED ON)
 
 add_definitions(-DBOOST_LOG_DYN_LINK)
 
-find_package(Boost 1.46 COMPONENTS  system
+find_package(Boost 1.55 COMPONENTS  system
                                     thread
                                     log
+                                    log_setup
                                     program_options
                                     filesystem
              REQUIRED)

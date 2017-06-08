@@ -29,6 +29,12 @@ addons:
       - libaudit-dev
       - e2fslibs-dev
       - libblkid-dev
+      - build-essential
+      - g++
+      - python-dev
+      - autotools-dev
+      - libicu-dev
+      - libbz2-dev
       - libboost-all-dev
       - doxygen
       - doxygen-doc
@@ -38,7 +44,8 @@ addons:
       - cmake
       - cmake-data
 
-before_script:  
+before_script:
+    - ./installBoost.sh
     - mkdir build
     - cd build
     - cmake ..
