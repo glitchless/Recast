@@ -15,11 +15,12 @@
 #include "commands/ICommandSender.h"
 #include "commands/CommandManager.h"
 #include <memory>
+#include "models/Player.h"
 
 /**
  * @brief Main class in Recast Server
  */
-class Server : public std::enable_shared_from_this<ICommandSender> {
+class Server : public ICommandSender {
 public:
     volatile bool isRunning;
 
@@ -29,13 +30,13 @@ public:
 
     Server(Server &other) = delete;
 
-    static Server *initServer();
+    void initServer();
 
     void mainLoop();
 
     bool isOP() { return true; };
 
-    std::shared_ptr<Server> getServer() { return shared_from_this(); }
+    std::shared_ptr<Server> getServer() { return std::shared_ptr<Server>(this); }
 
     std::shared_ptr<Player> getPlayer() { return std::shared_ptr<Player>(NULL); }
 

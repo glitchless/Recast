@@ -1,8 +1,9 @@
 /**
- * @file
+ * @file Server.cpp
  * @brief Config file
  * @author LionZXY
  * @project Recast
+ * @email nikita@kulikof.ru
  * @date 08.06.17
  *
  * Server file description
@@ -19,27 +20,25 @@
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
 
-#include "./headers/Server.h"
+#include "Server.h"
 
 void initLogger() {
     std::string output = (std::string("recast_") + std::to_string(time(NULL)) + std::string(".log"));
     boost::filesystem::path dir("./logs/");
     if (!boost::filesystem::exists(dir))
         if (boost::filesystem::create_directory(dir)) {
-            BOOST_LOG_TRIVIAL(info) << "Папка " << dir << " создана успешно";
+            BOOST_LOG_TRIVIAL(info) << "Folder " << dir << " create successful";
         } else {
-            BOOST_LOG_TRIVIAL(info) << "Невозможно создать папку " << dir;
+            BOOST_LOG_TRIVIAL(info) << "Failed create dir: " << dir;
         }
     boost::log::add_file_log(dir.string() + output);
     boost::log::add_console_log(std::cout);
 }
 
-Server *Server::initServer() {
-    Server *server = new Server();
+void Server::initServer() {
     initLogger();
-    BOOST_LOG_TRIVIAL(info) << "Инициализация сервера...";
-    server->isRunning = true;
-    return server;
+    BOOST_LOG_TRIVIAL(info) << "Initializing server...";
+    isRunning = true;
 }
 
 Server::Server() {
@@ -49,6 +48,8 @@ Server::Server() {
 void Server::mainLoop() {
     while (isRunning) {
         std::string cmd = "";
+        this->getPlayer();
+        this->getServer();
         std::cin >> cmd;
         manager.onCommand(this, cmd);
     }

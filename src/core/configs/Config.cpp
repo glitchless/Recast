@@ -16,9 +16,10 @@
 
 
 using namespace boost::property_tree::json_parser;
+using namespace std;
 const int CONFIG_VERSION = 1;
-const std::string DEFAULT_FOLDER = std::string("./config/");
-const std::string DEFAULT_CONFIG = std::string("general.json");
+const string DEFAULT_FOLDER = string("./config/");
+const string DEFAULT_CONFIG = string("general.json");
 static shared_ptr<Config> INSTANCE = NULL;
 
 shared_ptr<Config> Config::instance() {
@@ -30,7 +31,7 @@ shared_ptr<Config> Config::instance() {
     }
 }
 
-Config::Config(std::string filename) {
+Config::Config(string filename) {
     this->filename = DEFAULT_FOLDER + filename;
     try {
         read_json(this->filename, pt);

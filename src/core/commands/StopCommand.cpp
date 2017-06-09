@@ -4,15 +4,16 @@
 #include "Server.h"
 using namespace std;
 
-bool StopCommand::isValid(std::string cmd, vector<string> args) {
+bool StopCommand::isValid(string &cmd, vector<string> args) {
     return cmd == "stop";
 }
 
-void StopCommand::onCommand(ICommandSender &sender, string cmd, vector<string> args) {
+void StopCommand::onCommand(ICommandSender &sender, string &cmd, vector<string> args) {
+    sender.getPlayer();
     if (!sender.isOP())
-        sender.onMessage("У вас нет прав");
+        sender.onMessage("Permission error");
     else if (sender.getServer() != NULL)
         sender.getServer()->isRunning = false;
     else
-        sender.onMessage("Невозможно получить класс сервера. Обратитесь к разработчикам");
+        sender.onMessage("Unavilable Server class. Contact to developers.");
 }

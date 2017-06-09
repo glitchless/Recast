@@ -15,8 +15,6 @@
 #include <boost/property_tree/ptree.hpp>
 
 using boost::property_tree::ptree;
-using std::shared_ptr;
-
 /**
  * @brief Config class
  *
@@ -37,7 +35,7 @@ public:
 
     void load();
 
-    static shared_ptr<Config> instance();
+    static std::shared_ptr<Config> instance();
 
 private:
     Config(std::string filename);

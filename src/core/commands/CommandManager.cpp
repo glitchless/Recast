@@ -48,12 +48,12 @@ CommandManager::CommandManager() {
 
 
 /**
- * @brief call string command
+ * @brief call string command.
  *
  * Split string to arguments. Find command and run it.
  *
  * @param sender Link to any class who extend ICommandSender. Like Server, Player and other Context-like object.
- * @param cmd Command in string. @example stop now
+ * @param cmd Command in string. @example stop now.
  */
 void CommandManager::onCommand(ICommandSender *sender, std::string cmd) {
     std::vector<int> valid;
@@ -67,7 +67,7 @@ void CommandManager::onCommand(ICommandSender *sender, std::string cmd) {
             valid.push_back(i);
 
     if (valid.size() == 0)
-        sender->onMessage("Не найдено комманд, которые подходят под это описание");
+        sender->onMessage("Not found command");
     else {
         for (int i = 0; i < valid.size(); i++)
             commands[valid[i]]->onCommand(*sender, cmds[0], args);
