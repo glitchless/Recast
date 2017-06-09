@@ -12,8 +12,8 @@
 class StopCommand: public ICommand {
 public:
     StopCommand() { }
-    bool isValid(string &cmd, vector<string> args);
-    void onCommand(ICommandSender &sender, string &cmd, vector<string> args);
+    bool isValid(std::string &cmd, std::vector<std::string> args);
+    void onCommand(ICommandSender &sender, std::string &cmd, std::vector<std::string> args);
 };
 
 

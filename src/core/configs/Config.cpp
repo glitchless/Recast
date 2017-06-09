@@ -17,6 +17,7 @@
 
 using namespace boost::property_tree::json_parser;
 using namespace std;
+using namespace boost::property_tree;
 const int CONFIG_VERSION = 1;
 const string DEFAULT_FOLDER = string("./config/");
 const string DEFAULT_CONFIG = string("general.json");
@@ -26,7 +27,7 @@ shared_ptr<Config> Config::instance() {
     if (INSTANCE != NULL)
         return INSTANCE;
     else {
-        INSTANCE = shared_ptr<Config>(new Config(DEFAULT_CONFIG));
+        INSTANCE = make_shared<Config>(DEFAULT_CONFIG);
         return INSTANCE;
     }
 }

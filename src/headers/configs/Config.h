@@ -14,7 +14,6 @@
 #include <cstdio>
 #include <boost/property_tree/ptree.hpp>
 
-using boost::property_tree::ptree;
 /**
  * @brief Config class
  *
@@ -25,11 +24,13 @@ using boost::property_tree::ptree;
  **/
 class Config {
 public:
+    Config(std::string filename);
+
     ~Config();
 
     Config(Config &other) = delete;
 
-    ptree &tree();
+    boost::property_tree::ptree &tree();
 
     void save();
 
@@ -38,10 +39,9 @@ public:
     static std::shared_ptr<Config> instance();
 
 private:
-    Config(std::string filename);
 
     std::string filename;
-    ptree pt;
+    boost::property_tree::ptree pt;
 };
 
 

@@ -16,9 +16,10 @@
 #include "commands/StopCommand.h"
 
 using namespace std;
+
 namespace {
     template<typename Out>
-    void split(const std::string &s, char delim, Out result) {
+    void split(const string &s, char delim, Out result) {
         std::stringstream ss;
         ss.str(s);
         std::string item;
@@ -27,7 +28,7 @@ namespace {
         }
     }
 
-    std::vector<std::string> split(const std::string &s, char delim) {
+    std::vector<std::string> split(const string &s, char delim) {
         std::vector<std::string> elems;
         split(s, delim, std::back_inserter(elems));
         return elems;
@@ -57,10 +58,10 @@ CommandManager::CommandManager() {
  */
 void CommandManager::onCommand(ICommandSender *sender, std::string cmd) {
     std::vector<int> valid;
-    vector <string> cmds = split(cmd, ' ');
+    vector<string> cmds = split(cmd, ' ');
     vector<string>::const_iterator first = cmds.begin() + 1;
     vector<string>::const_iterator last = cmds.end();
-    vector <string> args(first, last);
+    vector<string> args(first, last);
 
     for (int i = 0; i < commands.size(); i++)
         if (commands[i]->isValid(cmds[0], args))
@@ -69,8 +70,9 @@ void CommandManager::onCommand(ICommandSender *sender, std::string cmd) {
     if (valid.size() == 0)
         sender->onMessage("Not found command");
     else {
-        for (int i = 0; i < valid.size(); i++)
+        for (int i = 0; i < valid.size(); i++) {
             commands[valid[i]]->onCommand(*sender, cmds[0], args);
+        }
     }
 }
 

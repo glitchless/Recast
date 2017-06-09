@@ -15,8 +15,6 @@
 #include <vector>
 #include "ICommandSender.h"
 
-using namespace std;
-
 /**
  * @brief Superclass for Command object
  *
@@ -31,7 +29,7 @@ public:
 
     ICommand(ICommand &other) {}
 
-    virtual bool isValid(string &cmd, vector<string> args) = 0; //// You should return @var True if this command line satisfied with you.
+    virtual bool isValid(std::string &cmd, std::vector<std::string> args) = 0; //// You should return @var True if this command line satisfied with you.
 
     /**
      * Run command.
@@ -41,7 +39,7 @@ public:
      * @param cmd first word in command
      * @param args second and next word in command (Always not null)
      */
-    virtual void onCommand(ICommandSender &sender, string &cmd, vector<string> args) = 0;
+    virtual void onCommand(ICommandSender &sender, std::string &cmd, std::vector<std::string> args) = 0;
 };
 
 
