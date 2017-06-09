@@ -19,16 +19,16 @@ using namespace boost::property_tree::json_parser;
 using namespace std;
 using namespace boost::property_tree;
 const int CONFIG_VERSION = 1;
-const string DEFAULT_FOLDER = string("./config/");
-const string DEFAULT_CONFIG = string("general.json");
+const string DEFAULT_FOLDER("./config/");
+const string DEFAULT_CONFIG("general.json");
 static shared_ptr<Config> INSTANCE = NULL;
 
-shared_ptr<Config> Config::instance() {
+Config * Config::instance() {
     if (INSTANCE != NULL)
-        return INSTANCE;
+        return INSTANCE.get();
     else {
         INSTANCE = make_shared<Config>(DEFAULT_CONFIG);
-        return INSTANCE;
+        return INSTANCE.get();
     }
 }
 
@@ -39,8 +39,9 @@ Config::Config(string filename) {
     } catch (const json_parser_error &e) {
         save();
     }
-    if (pt.get("config.version", NULL) == NULL)
+    if (pt.get("config.version", NULL) == NULL) {
         pt.put("config.version", CONFIG_VERSION);
+    }
 }
 
 ptree &Config::tree() {
@@ -49,14 +50,14 @@ ptree &Config::tree() {
 
 void Config::save() {
     boost::filesystem::path dir(DEFAULT_FOLDER);
-    if (!boost::filesystem::exists(dir))
+    if (!boost::filesystem::exists(dir)) {
         if (boost::filesystem::create_directory(dir)) {
-            BOOST_LOG_TRIVIAL(info) << "Папка " << DEFAULT_FOLDER << " создана успешно";
+            BOOST_LOG_TRIVIAL(info) << "Folder " << DEFAULT_FOLDER << " create successful";
             write_json(filename, pt);
         } else {
-            BOOST_LOG_TRIVIAL(info) << "Невозможно создать папку " << DEFAULT_FOLDER;
+            BOOST_LOG_TRIVIAL(info) << "Error while create dir: " << DEFAULT_FOLDER;
         }
-    else write_json(filename, pt);
+    } else { write_json(filename, pt); }
 }
 
 void Config::load() {

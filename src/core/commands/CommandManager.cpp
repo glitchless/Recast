@@ -59,13 +59,14 @@ CommandManager::CommandManager() {
 void CommandManager::onCommand(ICommandSender *sender, const std::string &cmd) {
     std::vector<int> valid;
     vector<string> cmds = split(cmd, ' ');
-    vector<string>::const_iterator first = cmds.begin() + 1;
-    vector<string>::const_iterator last = cmds.end();
+    auto first = cmds.begin() + 1;
+    auto last = cmds.end();
     vector<string> args(first, last);
 
     for (int i = 0; i < commands.size(); i++)
-        if (commands[i]->isValid(cmds[0], args))
+        if (commands[i]->isValid(cmds[0], args)) {
             valid.push_back(i);
+        }
 
     if (valid.size() == 0)
         sender->onMessage("Not found command");

@@ -11,7 +11,6 @@
 #ifndef RECAST_CONFIG_H
 #define RECAST_CONFIG_H
 
-#include <cstdio>
 #include <boost/property_tree/ptree.hpp>
 
 /**
@@ -36,7 +35,7 @@ public:
 
     void load();
 
-    static std::shared_ptr<Config> instance();
+    static Config *instance();
 
 private:
 

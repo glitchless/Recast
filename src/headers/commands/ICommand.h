@@ -27,7 +27,7 @@ class ICommand {
 public:
     ICommand() {}
 
-    ICommand(ICommand &other) {}
+    ICommand(const ICommand &other) {}
 
     virtual bool isValid(const std::string &cmd, const std::vector<std::string> &args) const = 0; //// You should return @var True if this command line satisfied with you.
 
