@@ -13,7 +13,7 @@ void StopCommand::onCommand(ICommandSender &sender, const string &cmd, const vec
     if (!sender.isOP()) {
         sender.onMessage("Permission error");
     } else if (sender.getServer() != NULL) {
-        sender.getServer()->isRunning = false;
+        sender.getServer()->shutdown();
         sender.onMessage("Server stopping...");
     } else {
         sender.onMessage("Unavilable Server class. Contact to developers.");
