@@ -34,7 +34,7 @@ public:
 
     void mainLoop();
 
-    bool isOP() { return true; };
+    bool isOP() const { return true; };
 
     std::shared_ptr<Server> getServer() { return std::shared_ptr<Server>(this); }
 

@@ -26,7 +26,7 @@ public:
 
     CommandManager(CommandManager &other) = delete;
 
-    void onCommand(ICommandSender *sender, std::string cmd);
+    void onCommand(ICommandSender *sender, const std::string &cmd);
 
 private:
     std::vector<std::shared_ptr<ICommand>> commands;

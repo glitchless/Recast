@@ -5,11 +5,11 @@
 
 using namespace std;
 
-bool StopCommand::isValid(string &cmd, vector<string> args) {
+bool StopCommand::isValid(const string &cmd, const vector<string> &args) const {
     return cmd == "stop";
 }
 
-void StopCommand::onCommand(ICommandSender &sender, string &cmd, vector<string> args) {
+void StopCommand::onCommand(ICommandSender &sender, const string &cmd, const vector<string> &args) {
     sender.getPlayer();
     if (!sender.isOP())
         sender.onMessage("Permission error");

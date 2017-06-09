@@ -3,7 +3,9 @@
 
 
 #include <boost/shared_ptr.hpp>
+
 class Server;
+
 class Player;
 
 class ICommandSender {
@@ -12,9 +14,9 @@ public:
 
     ~ICommandSender() {}
 
-    virtual bool isOP() = 0;
+    virtual bool isOP() const = 0;
 
-    virtual std::shared_ptr<Server> getServer() = 0;
+    virtual std::shared_ptr<Server> getServer()= 0;
 
     //TODO getWorld()
     virtual std::shared_ptr<Player> getPlayer() = 0;

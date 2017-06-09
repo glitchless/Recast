@@ -56,7 +56,7 @@ CommandManager::CommandManager() {
  * @param sender Link to any class who extend ICommandSender. Like Server, Player and other Context-like object.
  * @param cmd Command in string. @example stop now.
  */
-void CommandManager::onCommand(ICommandSender *sender, std::string cmd) {
+void CommandManager::onCommand(ICommandSender *sender, const std::string &cmd) {
     std::vector<int> valid;
     vector<string> cmds = split(cmd, ' ');
     vector<string>::const_iterator first = cmds.begin() + 1;
@@ -68,7 +68,7 @@ void CommandManager::onCommand(ICommandSender *sender, std::string cmd) {
             valid.push_back(i);
 
     if (valid.size() == 0)
-        sender->onMessage("Not found command");
+        sender->onMessage((string &) "Not found command");
     else {
         for (int i = 0; i < valid.size(); i++) {
             commands[valid[i]]->onCommand(*sender, cmds[0], args);
