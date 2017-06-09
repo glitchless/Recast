@@ -26,12 +26,13 @@
 void initLogger() {
     std::string output = (std::string("recast_") + std::to_string(time(NULL)) + std::string(".log"));
     boost::filesystem::path dir("./logs/");
-    if (!boost::filesystem::exists(dir))
+    if (!boost::filesystem::exists(dir)) {
         if (boost::filesystem::create_directory(dir)) {
             BOOST_LOG_TRIVIAL(info) << "Folder " << dir << " create successful";
         } else {
             BOOST_LOG_TRIVIAL(info) << "Failed create dir: " << dir;
         }
+    }
     boost::log::add_file_log(dir.string() + output);
     boost::log::add_console_log(std::cout);
 }
@@ -54,6 +55,10 @@ void Server::mainLoop() {
     }
 }
 
+bool Server::shutdown() {
+    return isRunning ? !(isRunning = false) : false; // Return true if isRunning equals true
+}
+
 void Server::onMessage(const std::string &msg) {
     BOOST_LOG_TRIVIAL(info) << msg;
 }
@@ -61,3 +66,4 @@ void Server::onMessage(const std::string &msg) {
 Server::~Server() {
     delete Config::instance();
 }
+

@@ -9,8 +9,6 @@ class Player;
 
 class ICommandSender {
 public:
-    ICommandSender() {}
-
     virtual bool isOP() const = 0;
 
     virtual Server *getServer() = 0;

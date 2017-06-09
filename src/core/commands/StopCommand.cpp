@@ -10,7 +10,6 @@ bool StopCommand::isValid(const string &cmd, const vector<string> &args) const {
 }
 
 void StopCommand::onCommand(ICommandSender &sender, const string &cmd, const vector<string> &args) {
-    sender.getPlayer();
     if (!sender.isOP()) {
         sender.onMessage("Permission error");
     } else if (sender.getServer() != NULL) {

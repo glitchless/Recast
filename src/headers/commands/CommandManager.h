@@ -28,7 +28,7 @@ class CommandManager {
 public:
     CommandManager();
 
-    CommandManager(CommandManager &other) = delete;
+    CommandManager(const CommandManager &other) = delete;
 
     void onCommand(ICommandSender *sender, const std::string &cmd);
 

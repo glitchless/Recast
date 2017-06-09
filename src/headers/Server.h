@@ -23,7 +23,6 @@ class Player;
  */
 class Server : public ICommandSender {
 public:
-    volatile bool isRunning;
 
     Server();
 
@@ -43,8 +42,11 @@ public:
 
     void onMessage(const std::string &msg);
 
+    bool shutdown();
+
 private:
     CommandManager manager;
+    volatile bool isRunning;
 };
 
 
