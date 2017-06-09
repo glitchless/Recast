@@ -48,14 +48,12 @@ Server::Server() {
 void Server::mainLoop() {
     while (isRunning) {
         std::string cmd = "";
-        this->getPlayer();
-        this->getServer();
         std::cin >> cmd;
         manager.onCommand(this, cmd);
     }
 }
 
-void Server::onMessage(std::string  msg) {
+void Server::onMessage(std::string msg) {
     BOOST_LOG_TRIVIAL(info) << msg;
 }
 

@@ -11,10 +11,12 @@ bool StopCommand::isValid(const string &cmd, const vector<string> &args) const {
 
 void StopCommand::onCommand(ICommandSender &sender, const string &cmd, const vector<string> &args) {
     sender.getPlayer();
-    if (!sender.isOP())
+    if (!sender.isOP()) {
         sender.onMessage("Permission error");
-    else if (sender.getServer() != NULL)
+    } else if (sender.getServer() != NULL) {
         sender.getServer()->isRunning = false;
-    else
+        sender.onMessage("Server stopping...");
+    } else {
         sender.onMessage("Unavilable Server class. Contact to developers.");
+    }
 }

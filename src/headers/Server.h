@@ -36,9 +36,9 @@ public:
 
     bool isOP() const { return true; };
 
-    std::shared_ptr<Server> getServer() { return std::shared_ptr<Server>(this); }
+    Server *getServer() { return this; }
 
-    std::shared_ptr<Player> getPlayer() { return std::shared_ptr<Player>(NULL); }
+    Player *getPlayer() { return NULL; }
 
     void onMessage(std::string msg);
 
