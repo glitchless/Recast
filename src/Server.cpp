@@ -55,7 +55,7 @@ void Server::mainLoop() {
     }
 }
 
-void Server::onMessage(std::string msg) {
+void Server::onMessage(std::string  msg) {
     BOOST_LOG_TRIVIAL(info) << msg;
 }
 

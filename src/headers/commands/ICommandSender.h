@@ -5,7 +5,6 @@
 #include <boost/shared_ptr.hpp>
 
 class Server;
-
 class Player;
 
 class ICommandSender {

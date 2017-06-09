@@ -68,7 +68,7 @@ void CommandManager::onCommand(ICommandSender *sender, const std::string &cmd) {
             valid.push_back(i);
 
     if (valid.size() == 0)
-        sender->onMessage((string &) "Not found command");
+        sender->onMessage("Not found command");
     else {
         for (int i = 0; i < valid.size(); i++) {
             commands[valid[i]]->onCommand(*sender, cmds[0], args);
