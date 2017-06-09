@@ -19,7 +19,7 @@
 #include <boost/log/utility/setup/common_attributes.hpp>
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
-#include <configs/Config.h>
+#include "configs/Config.h"
 
 #include "Server.h"
 

@@ -14,7 +14,6 @@
 
 #include "commands/ICommandSender.h"
 #include "commands/CommandManager.h"
-#include <memory>
 #include <string>
 
 class Player;
