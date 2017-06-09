@@ -3,6 +3,7 @@
 
 
 #include <boost/shared_ptr.hpp>
+#include <string>
 
 class Server;
 
@@ -12,8 +13,6 @@ class ICommandSender {
 public:
     ICommandSender() {}
 
-    virtual ~ICommandSender() {}
-
     virtual bool isOP() const = 0;
 
     virtual Server *getServer() = 0;
@@ -21,7 +20,7 @@ public:
     //TODO getWorld()
     virtual Player *getPlayer() = 0;
 
-    virtual void onMessage(std::string msg) = 0;
+    virtual void onMessage(const std::string &msg) = 0;
 };
 
 

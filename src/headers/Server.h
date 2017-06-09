@@ -40,7 +40,7 @@ public:
 
     Player *getPlayer() { return NULL; }
 
-    void onMessage(std::string msg);
+    void onMessage(const std::string &msg);
 
 private:
     CommandManager manager;

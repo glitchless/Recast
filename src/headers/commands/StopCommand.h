@@ -11,7 +11,6 @@
  */
 class StopCommand: public ICommand {
 public:
-    StopCommand() { }
     bool isValid(const std::string &cmd, const std::vector<std::string> &args) const;
     void onCommand(ICommandSender &sender, const std::string &cmd, const std::vector<std::string> &args);
 
