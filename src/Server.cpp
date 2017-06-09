@@ -19,6 +19,7 @@
 #include <boost/log/utility/setup/common_attributes.hpp>
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
+#include <configs/Config.h>
 
 #include "Server.h"
 
@@ -58,5 +59,5 @@ void Server::onMessage(const std::string &msg) {
 }
 
 Server::~Server() {
-    //TODO
+    delete Config::instance();
 }

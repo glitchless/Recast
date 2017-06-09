@@ -23,11 +23,11 @@
  **/
 class Config {
 public:
-    Config(std::string filename);
+    Config(const std::string &filename);
 
     ~Config();
 
-    Config(Config &other) = delete;
+    Config(const Config &other) = delete;
 
     boost::property_tree::ptree &tree();
 

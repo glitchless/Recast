@@ -44,7 +44,7 @@ namespace {
  *
  */
 CommandManager::CommandManager() {
-    commands.push_back(std::make_shared<StopCommand>());
+    commands.push_back(make_shared<StopCommand>());
 }
 
 
@@ -57,7 +57,7 @@ CommandManager::CommandManager() {
  * @param cmd Command in string. @example stop now.
  */
 void CommandManager::onCommand(ICommandSender *sender, const std::string &cmd) {
-    std::vector<int> valid;
+    vector<int> valid;
     vector<string> cmds = split(cmd, ' ');
     auto first = cmds.begin() + 1;
     auto last = cmds.end();

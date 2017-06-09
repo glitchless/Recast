@@ -15,7 +15,9 @@
 #include "commands/ICommandSender.h"
 #include "commands/CommandManager.h"
 #include <memory>
-#include "models/Player.h"
+#include <string>
+
+class Player;
 
 /**
  * @brief Main class in Recast Server
@@ -28,7 +30,7 @@ public:
 
     ~Server();
 
-    Server(Server &other) = delete;
+    Server(const Server &other) = delete;
 
     void initServer();
 

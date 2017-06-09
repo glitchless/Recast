@@ -21,18 +21,16 @@ using namespace boost::property_tree;
 const int CONFIG_VERSION = 1;
 const string DEFAULT_FOLDER("./config/");
 const string DEFAULT_CONFIG("general.json");
-static shared_ptr<Config> INSTANCE = NULL;
+static Config *INSTANCE = NULL;
 
-Config * Config::instance() {
-    if (INSTANCE != NULL)
-        return INSTANCE.get();
-    else {
-        INSTANCE = make_shared<Config>(DEFAULT_CONFIG);
-        return INSTANCE.get();
+Config *Config::instance() {
+    if (INSTANCE == NULL) {
+        INSTANCE = new Config(DEFAULT_CONFIG);
     }
+    return INSTANCE;
 }
 
-Config::Config(string filename) {
+Config::Config(const string &filename) {
     this->filename = DEFAULT_FOLDER + filename;
     try {
         read_json(this->filename, pt);

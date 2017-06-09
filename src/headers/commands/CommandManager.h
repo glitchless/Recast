@@ -11,9 +11,13 @@
 #ifndef RECAST_SERVER_COMMANDMANAGER_H
 #define RECAST_SERVER_COMMANDMANAGER_H
 
+#include <vector>
+#include <string>
+#include <boost/shared_ptr.hpp>
 
-#include "ICommandSender.h"
-#include "ICommand.h"
+class ICommandSender;
+
+class ICommand;
 
 /**
  * @brief Send string-command through CommandManager

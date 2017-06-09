@@ -1,8 +1,6 @@
 #ifndef RECAST_SERVER_ICOMMANDSENDER_H
 #define RECAST_SERVER_ICOMMANDSENDER_H
 
-
-#include <boost/shared_ptr.hpp>
 #include <string>
 
 class Server;
