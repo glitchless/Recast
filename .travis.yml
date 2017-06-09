@@ -2,9 +2,6 @@ language: cpp
 
 sudo: true
 
-compiler:  
-    - gcc
-
 # Blacklist
 branches:
   only: 
@@ -33,14 +30,11 @@ addons:
       - cmake
       - cmake-data
 
-before_script:  
-    - mkdir build
-    - cd build
-    - cmake ..
-
-# Build your code e.g. by calling make
+services:
+  - docker
 script:
-  - make
+  - docker build -t lionzxy/recast .
+  - docker run lionzxy/recast
 
 # Generate and deploy documentation
 after_success:
