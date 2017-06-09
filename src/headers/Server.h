@@ -34,7 +34,7 @@ public:
 
     void mainLoop();
 
-    bool isOP() const { return true; };
+    bool isOP() const { return true; }
 
     Server *getServer() { return this; }
 
