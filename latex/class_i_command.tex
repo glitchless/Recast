@@ -1,0 +1,49 @@
+\hypertarget{class_i_command}{\section{I\-Command Class Reference}
+\label{class_i_command}\index{I\-Command@{I\-Command}}
+}
+
+
+Superclass for Command object.  
+
+
+
+
+{\ttfamily \#include $<$I\-Command.\-h$>$}
+
+
+
+Inheritance diagram for I\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_i_command__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_i_command_a1a3e297aea5c94d785060e49801860dc}{{\bfseries I\-Command} (const \hyperlink{class_i_command}{I\-Command} \&other)}\label{class_i_command_a1a3e297aea5c94d785060e49801860dc}
+
+\item 
+\hypertarget{class_i_command_acb0beea12bd5ec963884dc35d4d48014}{virtual bool {\bfseries is\-Valid} (const std\-::string \&cmd, const std\-::vector$<$ std\-::string $>$ \&args) const =0}\label{class_i_command_acb0beea12bd5ec963884dc35d4d48014}
+
+\item 
+\hypertarget{class_i_command_a55f931bb7304e2bc591ba2edd717e86c}{virtual void {\bfseries on\-Command} (\hyperlink{class_i_command_sender}{I\-Command\-Sender} \&sender, const std\-::string \&cmd, const std\-::vector$<$ std\-::string $>$ \&args)=0}\label{class_i_command_a55f931bb7304e2bc591ba2edd717e86c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Superclass for Command object. 
+
+If you want create new command you should extend \hyperlink{class_i_command}{I\-Command} class and register this in \hyperlink{class_command_manager}{Command\-Manager} constructor
+
+\begin{DoxyWarning}{Warning}
+Don't forget register your Command in Command\-Manager!!! 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/commands/\hyperlink{_i_command_8h}{I\-Command.\-h}\end{DoxyCompactItemize}

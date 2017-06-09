@@ -1,0 +1,53 @@
+\hypertarget{class_command_manager}{\section{Command\-Manager Class Reference}
+\label{class_command_manager}\index{Command\-Manager@{Command\-Manager}}
+}
+
+
+Send string-\/command through \hyperlink{class_command_manager}{Command\-Manager}.  
+
+
+
+
+{\ttfamily \#include $<$Command\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_command_manager_a8a13226bf933396a3f35dfb5bee3e813}{Command\-Manager} ()
+\begin{DoxyCompactList}\small\item\em Init \hyperlink{class_command_manager}{Command\-Manager}. \end{DoxyCompactList}\item 
+\hypertarget{class_command_manager_aeaffe7fa7dd8f1dd45b642120013a076}{{\bfseries Command\-Manager} (const \hyperlink{class_command_manager}{Command\-Manager} \&other)=delete}\label{class_command_manager_aeaffe7fa7dd8f1dd45b642120013a076}
+
+\item 
+\hypertarget{class_command_manager_abef8721bbe32e1ecb22f2f3d3b8c0601}{void {\bfseries on\-Command} (\hyperlink{class_i_command_sender}{I\-Command\-Sender} $\ast$sender, const std\-::string \&cmd)}\label{class_command_manager_abef8721bbe32e1ecb22f2f3d3b8c0601}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Send string-\/command through \hyperlink{class_command_manager}{Command\-Manager}. 
+
+This is very important class. Through this you can execute console-\/like text command. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_command_manager_a8a13226bf933396a3f35dfb5bee3e813}{\index{Command\-Manager@{Command\-Manager}!Command\-Manager@{Command\-Manager}}
+\index{Command\-Manager@{Command\-Manager}!CommandManager@{Command\-Manager}}
+\subsubsection[{Command\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Command\-Manager\-::\-Command\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_command_manager_a8a13226bf933396a3f35dfb5bee3e813}
+
+
+Init \hyperlink{class_command_manager}{Command\-Manager}. 
+
+Adding all objects that extend \hyperlink{class_i_command}{I\-Command} to list (std\-::vector).
+
+\begin{DoxyWarning}{Warning}
+If you add \hyperlink{class_i_command}{I\-Command}, you should add line here 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/commands/\hyperlink{_command_manager_8h}{Command\-Manager.\-h}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/core/commands/\hyperlink{_command_manager_8cpp}{Command\-Manager.\-cpp}\end{DoxyCompactItemize}
