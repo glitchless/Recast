@@ -2,47 +2,45 @@
 // Created by Oleg Morozenkov on 03.04.17.
 //
 
-/*
 #include <iostream>
-#include <sstream>
-#include <memory>
 #include "lib/crow_all.h"
-#include "../src/ITemperatureWorld.h"
-#include "../src/ITemperatureWorldUpdater.h"
-#include "../src/utils/TemperatureWorldUtils.h"
-#include "../src/utils/TimeUtils.h"
+#include "../src/interfaces/ITemperatureWorld.h"
+#include "../src/interfaces/ITemperatureWorldUpdater.h"
+#include "../src/module.h"
+#include "../src/utils/FileUtils.h"
 
 using namespace std;
+using namespace fruit;
 
-
-string readFile(const string& fileName) {
-    ifstream file(fileName);
-    ostringstream output;
-    output << file.rdbuf();
-    return output.str();
+void startUpdater(shared_ptr<ITemperatureWorldUpdater> updater) {
+    thread t([&updater]() {
+        while (true) {
+            updater->update();
+        }
+    });
+    t.detach();
 }
 
-
-void startServer(shared_ptr<ITemperatureWorld> world, ITemperatureWorldUpdater& updater) {
+void startServer(shared_ptr<IBoundTemperatureWorld> world, shared_ptr<ITemperatureWorldUpdater> updater) {
     crow::SimpleApp app;
 
     CROW_ROUTE(app, "/")([](){
-        return readFile("world-with-temperature/test/demo-web/index.html");
+        return FileUtils::readFile("world-with-temperature/test/demo-web/index.html");
     });
     CROW_ROUTE(app, "/script.js")([](){
-        return readFile("world-with-temperature/test/demo-web/script.js");
+        return FileUtils::readFile("world-with-temperature/test/demo-web/script.js");
     });
     CROW_ROUTE(app, "/KeyboardState.js")([](){
-        return readFile("world-with-temperature/test/demo-web/KeyboardState.js");
+        return FileUtils::readFile("world-with-temperature/test/demo-web/KeyboardState.js");
     });
     CROW_ROUTE(app, "/three.min.js")([](){
-        return readFile("world-with-temperature/test/demo-web/three.min.js");
+        return FileUtils::readFile("world-with-temperature/test/demo-web/three.min.js");
     });
 
-    CROW_ROUTE(app, "/get_world")([world](){
+    CROW_ROUTE(app, "/get_world")([&](){
         crow::json::wvalue json;
         size_t i = 0;
-        world->foreach([&world, &json, &i](Coord x, Coord y, Coord z) {
+        world->foreach([&](Coord x, Coord y, Coord z) {
             json["blocks"][i]["x"] = x;
             json["blocks"][i]["y"] = y;
             json["blocks"][i]["z"] = z;
@@ -55,25 +53,26 @@ void startServer(shared_ptr<ITemperatureWorld> world, ITemperatureWorldUpdater& 
     app.port(18080).multithreaded().run();
 }
 
-
-void startUpdater(ITemperatureWorldUpdater& updater) {
-    const float iterationTime = 0.2;
-    thread t([&updater, iterationTime]() {
-        while (true) {
-            updater.update(iterationTime);
-        }
-    });
-    t.detach();
-}
-
-
 int main() {
-    shared_ptr<ITemperatureWorld> world(new ITemperatureWorld(10, 10, 10));
-    ITemperatureWorldUpdater updater(world);
+    using namespace BoundTemperatureWorldAnnotations;
+
+    static Size worldWidth = 10;
+    static Size worldHeight = 10;
+    static Size worldDepth = 10;
+    Component<IBoundTemperatureWorld, ITemperatureWorldUpdater> component =
+            createComponent()
+                    .install(WorldWithTemperatureModule::component())
+                    .bindInstance<Annotated<Width, Size>>(worldWidth)
+                    .bindInstance<Annotated<Height, Size>>(worldHeight)
+                    .bindInstance<Annotated<Depth, Size>>(worldDepth);
+    Injector<IBoundTemperatureWorld, ITemperatureWorldUpdater> injector(component);
+
+    auto world = injector.get<shared_ptr<IBoundTemperatureWorld>>();
+    auto updater = injector.get<shared_ptr<ITemperatureWorldUpdater>>();
 
     for (Coord x = -2; x <= 2; x++) {
         for (Coord z = -2; z <= 2; z++) {
-            world->set(x, world->getMaxY(), z, 750);
+            world->set(x, world->maxY(), z, 750);
         }
     }
 
@@ -81,4 +80,4 @@ int main() {
     startServer(world, updater);
     return 0;
 }
-*/
+

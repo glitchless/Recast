@@ -6,15 +6,26 @@
 #define RECAST_TEMPERATUREWORLD_H
 
 
-#include "scalars/Coord.h"
-#include "scalars/Temperature.h"
+#include "../scalars/Coord.h"
+#include "../scalars/Temperature.h"
 
 /**
  * Holds temperature world data.
  */
 class ITemperatureWorld {
 public:
-    virtual ~ITemperatureWorld() {}
+    virtual ~ITemperatureWorld() noexcept = default;
+
+    /**
+     * Tells whether temperature at the point is accessible.
+     * This method doesn't throw exceptions.
+     *
+     * @param x X coordinate.
+     * @param y Y coordinate.
+     * @param z Z coordinate.
+     * @return True if the point is accessible.
+     */
+    virtual bool has(Coord x, Coord y, Coord z) const noexcept = 0;
 
     /**
      * Returns temperature at the point.
@@ -24,7 +35,7 @@ public:
      * @param z Z coordinate.
      * @return Temperature at the point.
      */
-    virtual Temperature get(CoordX x, CoordY y, CoordZ z) = 0;
+    virtual Temperature get(Coord x, Coord y, Coord z) const = 0;
 
     /**
      * Sets temperature at the point.
@@ -34,7 +45,7 @@ public:
      * @param z Z coordinate.
      * @param temperature Temperature to set.
      */
-    virtual void set(CoordX x, CoordY y, CoordZ z, Temperature temperature) = 0;
+    virtual void set(Coord x, Coord y, Coord z, Temperature temperature) = 0;
 
     /**
      * Adds or substracts temperature value from existing temperature value at the point.
@@ -44,7 +55,7 @@ public:
      * @param z Z coordinate.
      * @param temperature Temperature difference.
      */
-    virtual void amplify(CoordX x, CoordY y, CoordZ z, Temperature temperature) = 0;
+    virtual void amplify(Coord x, Coord y, Coord z, Temperature temperature) = 0;
 };
 
 

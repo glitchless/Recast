@@ -11,7 +11,7 @@
  */
 class ITemperatureWorldUpdater {
 public:
-    virtual ~ITemperatureWorldUpdater() {}
+    virtual ~ITemperatureWorldUpdater() noexcept = default;
 
     /**
      * Updates world.

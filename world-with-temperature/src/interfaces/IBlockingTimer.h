@@ -16,7 +16,7 @@ public:
     /**
      * @return Minimum possible value of `delta`.
      */
-    virtual std::chrono::milliseconds minDelta() = 0;
+    virtual std::chrono::milliseconds minDelta() const = 0;
 };
 
 

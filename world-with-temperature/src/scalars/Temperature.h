@@ -11,7 +11,7 @@
 /**
  * Represents temperature of world object.
  */
-BOOST_STRONG_TYPEDEF(double, Temperature)
+using Temperature = double;
 
 
 #endif //RECAST_TEMPERATURE_H

@@ -2,26 +2,24 @@
 // Created by Oleg Morozenkov on 30.03.17.
 //
 
-/*
 #define CATCH_CONFIG_MAIN
 #include "lib/catch.hpp"
-#include "../src/ITemperatureWorld.h"
+#include "../src/implementation/SynchronizedVectorTemperatureWorld.h"
 
+SCENARIO("SynchronizedVectorTemperatureWorld data can be accessed") {
+    GIVEN("small SynchronizedVectorTemperatureWorld") {
+        SynchronizedVectorTemperatureWorld world(101, 55, 4);
 
-SCENARIO("ITemperatureWorld data can be accessed") {
-    GIVEN("small ITemperatureWorld") {
-        ITemperatureWorld world(101, 55, 4);
+        REQUIRE(world.minX() < 0);
+        REQUIRE(world.minY() < 0);
+        REQUIRE(world.minZ() < 0);
+        REQUIRE(world.maxX() > 0);
+        REQUIRE(world.maxY() > 0);
+        REQUIRE(world.maxZ() > 0);
 
-        REQUIRE(world.getMinX() < 0);
-        REQUIRE(world.getMinY() < 0);
-        REQUIRE(world.getMinZ() < 0);
-        REQUIRE(world.getMaxX() > 0);
-        REQUIRE(world.getMaxY() > 0);
-        REQUIRE(world.getMaxZ() > 0);
-
-        REQUIRE(world.getMaxX() - world.getMinX() < 101);
-        REQUIRE(world.getMaxY() - world.getMinY() < 55);
-        REQUIRE(world.getMaxZ() - world.getMinZ() < 4);
+        REQUIRE(world.maxX() - world.minX() < 101);
+        REQUIRE(world.maxY() - world.minY() < 55);
+        REQUIRE(world.maxZ() - world.minZ() < 4);
 
         WHEN("getting non-accessed cell") {
             THEN("temperature is zero") {
@@ -47,4 +45,3 @@ SCENARIO("ITemperatureWorld data can be accessed") {
         }
     }
 }
-*/

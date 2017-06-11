@@ -85,7 +85,7 @@ function loadWorldAsync(callback) {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 callback(JSON.parse(xmlhttp.responseText)['blocks']);
-                document.getElementById('info').innerHTML = 'Last update: ' + new Date().toISOString().replace(/[TZ]/g, ' ');
+                document.getElementById('info').innerHTML = 'Last update was at ' + new Date().toLocaleTimeString();
             }
         }
     };

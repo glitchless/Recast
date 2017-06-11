@@ -8,7 +8,7 @@
 
 #include <cstdlib>
 #include <cassert>
-#include "../ITemperatureWorld.h"
+#include "../interfaces/IBoundTemperatureWorld.h"
 #include "MathUtils.h"
 
 /**
@@ -23,10 +23,10 @@ namespace TemperatureWorldUtils {
      * @param minTemperature Minimum possible temperature in the world.
      * @param maxTemperature Maximum possible temperature in the world.
      */
-    inline void randomize(ITemperatureWorld& world, Temperature minTemperature, Temperature maxTemperature) {
+    inline void randomize(IBoundTemperatureWorld& world, Temperature minTemperature, Temperature maxTemperature) {
         assert(minTemperature < maxTemperature);
         const Temperature temperatureRange = maxTemperature - minTemperature;
-        world.foreach([&](CoordX x, CoordY y, CoordZ z) {
+        world.foreach([&](Coord x, Coord y, Coord z) {
             const Temperature t = minTemperature + Temperature(MathUtils::randomFloat() * temperatureRange);
             world.set(x, y, z, t);
         });

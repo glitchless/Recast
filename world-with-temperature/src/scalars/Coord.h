@@ -9,19 +9,9 @@
 #include <boost/serialization/strong_typedef.hpp>
 
 /**
- * Represents x coordinate in a world.
+ * Represents coordinate in a world.
  */
-BOOST_STRONG_TYPEDEF(int, CoordX)
-
-/**
- * Represents y coordinate in a world.
- */
-BOOST_STRONG_TYPEDEF(int, CoordY)
-
-/**
- * Represents z coordinate in a world.
- */
-BOOST_STRONG_TYPEDEF(int, CoordZ)
+using Coord = int;
 
 
 #endif //RECAST_COORD_H

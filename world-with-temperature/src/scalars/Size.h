@@ -9,19 +9,9 @@
 #include <boost/serialization/strong_typedef.hpp>
 
 /**
- * Represents size of world or world object by x axis.
+ * Represents world object or size of world by some axis.
  */
-BOOST_STRONG_TYPEDEF(int, SizeX)
-
-/**
- * Represents size of world or world object by y axis.
- */
-BOOST_STRONG_TYPEDEF(int, SizeY)
-
-/**
- * Represents size of world or world object by z axis.
- */
-BOOST_STRONG_TYPEDEF(int, SizeZ)
+using Size = int;
 
 
 #endif //RECAST_SIZE_H_H

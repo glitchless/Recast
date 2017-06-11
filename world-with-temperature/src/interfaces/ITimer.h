@@ -10,17 +10,17 @@
 
 class ITimer {
 public:
-    virtual ~ITimer() {}
+    virtual ~ITimer() noexcept = default;
 
     /**
      * @return Time from last update in milliseconds.
      */
-    virtual std::chrono::milliseconds delta() = 0;
+    virtual std::chrono::milliseconds delta() const = 0;
 
     /**
      * @return Time from last update in float-number seconds.
      */
-    virtual double deltaFloatSeconds() = 0;
+    virtual double deltaFloatSeconds() const = 0;
 
     /**
      * Saves update, saves "tick". It will influence value of `delta`.
