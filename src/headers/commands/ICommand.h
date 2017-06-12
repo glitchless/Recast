@@ -35,6 +35,8 @@ public:
      * Run command.
      * @example On command 'stop now 1 2' from Server console this method recieve (Server, 'stop'. {'now','1', '2'})
      *
+     * @warning ICommandSender is NOT thread-safety. It means @var sender send from background thread. If you ICommand need main thread execute create issue. I create flag for command.
+     *
      * @param sender context object
      * @param cmd first word in command
      * @param args second and next word in command (Always not null)
