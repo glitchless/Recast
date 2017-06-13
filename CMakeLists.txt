@@ -3,6 +3,9 @@ project(Recast-server)
 
 set(CMAKE_CXX_STANDARD 14)
 
+add_subdirectory(libs)
+include_directories(libs)
+
 file(GLOB_RECURSE SOURCE_FILES
         "src/*.h"
         "src/*.c"
@@ -18,3 +21,4 @@ add_executable(Recast-server ${SOURCE_FILES})
 
 target_link_libraries(Recast-server ${Boost_LIBRARIES})
 target_link_libraries(Recast-server ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(Recast-server sqlite3)
