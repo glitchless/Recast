@@ -1,0 +1,5 @@
+# .idea meta
+.idea/
+
+# cmake build meta
+cmake-build-debug/
