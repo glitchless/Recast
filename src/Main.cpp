@@ -15,7 +15,6 @@
  **/
 int main() {
     Server server;
-    sqlite3 *sq;
     server.initServer();
     return EXIT_SUCCESS;
 }
