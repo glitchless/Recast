@@ -2,58 +2,68 @@
 #include <thread>
 #include "networking.hpp"
 
-const uint32_t port = 8888;
-
-void client_work(std::shared_ptr<Socket> client);
+void runServer(uint32_t &port);
+void directProvide(int argc, char *argv[], uint32_t &port);
+void clientWork(std::shared_ptr<Socket> client);
 std::string exchange(const std::string action);
-std::string checkAppliability(const std::string action);
+std::string check(const std::string action);
 
 int main(int argc, char *argv[]) {
-    /* Terminal usage
-    // Incorrect run parameter (must be exactly 1 additional)
-    // Getting run port
-    if (argc != 2) {
-        std::cerr << "usage: " << argv[0] << " port" << std::endl;
-        return 0;
-    }
-    int port_ = std::stoi(std::string(argv[1]));
-    */
+    // Getting port somehow (defaults?)
+    uint32_t port = 8888;
+    // External terminal usage to set the port manually
+    if (argc == 2) { directProvide(argc, argv, port); }
+    // Server initialization
+    runServer(port);
+
+    return 0;
+}
+
+void runServer(uint32_t &port) {
     try {
         Socket s;
         s.createServerSocket(port, 25);
 
         // Creating serving processes
         pid_t pid = fork();
+        std::cerr << "Server is running on port " << port << std::endl;
         if (pid > 0) {
-            std::cerr << "parent pid: " << getpid() << std::endl;
+            std::cerr << "Parent pid: " << getpid() << std::endl;
         } else {
-            std::cerr << "child pid: " << getpid() << std::endl;
+            std::cerr << "Child pid: " << getpid() << std::endl;
         }
 
         // Endless loop listening to connections
-        while(true) {
+        bool trigger = true;
+        while(trigger) {
             std::shared_ptr<Socket> client = s.accept();
-            client_work(client);
+            clientWork(client);
         }
-    }
-    catch(const std::exception &e) {
+    } catch(const std::exception &e) {
         std::cerr << e.what() << std::endl;
     }
-
-    return 0;
 }
 
 
-void client_work(std::shared_ptr<Socket> client) {
-    client->setRcvTimeout(/*sec*/30, /*microsec*/0);
-    while (true) try {
-            std::string line = client->recv();
-            std::string response = exchange(line);
-
-            client->send(response);
+void directProvide(int argc, char *argv[], uint32_t &port) {
+    if (argc == 2) {
+        try {
+            port = static_cast<uint32_t >(std::stoi(std::string(argv[1])));
+        } catch (const std::exception &e) {
+            std::cerr << e.what() << std::endl;
         }
-        catch(const std::exception &e) {
-            std::cerr << "exception: " << e.what() << std::endl;
+    }
+}
+
+
+void clientWork(std::shared_ptr<Socket> client) {
+    client->setRcvTimeout(30, 0); // s, ms
+    while (true) try {
+            std::string request = client->recv();
+            std::string response = exchange(request);
+            client->send(response);
+        } catch(const std::exception &e) {
+            std::cerr << "An exception occurred: " << e.what() << std::endl;
             return;
         }
 }
@@ -62,12 +72,12 @@ std::string exchange(const std::string action) {
     // Game logic goes here
 
     // Answer to client (difference snapshots? yes/no answer?)
-    std::string state = checkAppliability(action);
+    std::string state = check(action);
 
     return state;
 }
 
-std::string checkAppliability(const std::string action) {
+std::string check(const std::string action) {
     // Example
     std::string result = "DENIED";
     if (action.find("CAST") != -1) {
