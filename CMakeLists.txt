@@ -8,6 +8,7 @@ include_directories(libs)
 
 file(GLOB_RECURSE SOURCE_FILES
         "src/*.h"
+        "src/*.hpp"
         "src/*.c"
         "src/*.cpp")
 
