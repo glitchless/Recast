@@ -15,6 +15,5 @@
 int main() {
     Server server;
     server.initServer();
-    server.mainLoop();
     return EXIT_SUCCESS;
 }
