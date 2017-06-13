@@ -1,6 +1,7 @@
 PROJECT(sqlite3)
 cmake_minimum_required(VERSION 2.8)
 
+link_libraries(pthread)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 add_library(sqlite3 STATIC src/sqlite3.c src/sqlite3.h src/sqlite3ext.h)
 add_executable(sqlite src/sqlite3.c src/shell.c src/sqlite3.h src/sqlite3ext.h)
