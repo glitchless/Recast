@@ -5,6 +5,7 @@ RUN apt-get -qq update &&\
 
 WORKDIR /tmp/recast
 RUN rm -rf /tmp/recast/*
+COPY libs libs
 COPY src src
 COPY CMakeLists.txt ./
 
