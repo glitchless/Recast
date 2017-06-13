@@ -17,6 +17,5 @@ int main() {
     Server server;
     sqlite3 *sq;
     server.initServer();
-    server.mainLoop();
     return EXIT_SUCCESS;
 }
