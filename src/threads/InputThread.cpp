@@ -1,6 +1,6 @@
 /**
  * @file InputThread.cpp
- * @brief Input thread for execute terminal command
+ * @brief Input thread for execution of terminal command
  * @author LionZXY
  * @project Recast-server
  * @date 12.06.17
