@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get -qq update &&\
-        apt-get upgrade && apt-get -qq install -y g++ libboost-all-dev cmake cmake-data libc6
+        apt-get upgrade && apt-get -qq install -y g++ libboost-all-dev cmake cmake-data libc6 lib64
 
 WORKDIR /tmp/recast
 RUN rm -rf /tmp/recast/*
