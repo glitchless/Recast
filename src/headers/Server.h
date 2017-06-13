@@ -12,9 +12,10 @@
 #ifndef RECAST_SERVER_H
 #define RECAST_SERVER_H
 
+#include <string>
+#include <thread>
 #include "commands/ICommandSender.h"
 #include "commands/CommandManager.h"
-#include <string>
 
 class Player;
 
@@ -32,8 +33,6 @@ public:
 
     void initServer();
 
-    void mainLoop();
-
     bool isOP() const { return true; }
 
     Server *getServer() { return this; }
@@ -44,9 +43,12 @@ public:
 
     bool shutdown();
 
+    bool isRunning() const { return isLaunching; }
+
 private:
-    CommandManager manager;
-    volatile bool isRunning;
+    volatile bool isLaunching;
+
+    std::thread inputThread;
 };
 
 
