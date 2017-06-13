@@ -80,12 +80,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">On</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Run command. command 'stop now 1 2' from <a class="el" href="class_server.html" title="Main class in Recast Server. ">Server</a> console this method recieve (<a class="el" href="class_server.html" title="Main class in Recast Server. ">Server</a>, 'stop'. {'now','1', '2'})</p>
+<p>Run command. command 'stop now 1 2' from <a class="el" href="class_server.html" title="Main class in Recast Server. ">Server</a> console this method receives (<a class="el" href="class_server.html" title="Main class in Recast Server. ">Server</a>, 'stop'. {'now','1', '2'})</p>
+<dl class="section warning"><dt>Warning</dt><dd><a class="el" href="class_i_command_sender.html">ICommandSender</a> is NOT thread-safe. It means </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">sender</td><td>is sent from background thread. If your <a class="el" href="class_i_command.html" title="Superclass for Command object. ">ICommand</a> needs main thread execution, create an issue. I will create a flag for that command.</td></tr>
     <tr><td class="paramname">sender</td><td>context object </td></tr>
     <tr><td class="paramname">cmd</td><td>first word in command </td></tr>
-    <tr><td class="paramname">args</td><td>second and next word in command (Always not null)</td></tr>
+    <tr><td class="paramname">args</td><td>second and next words in command (Always not null)</td></tr>
   </table>
   </dd>
 </dl>
