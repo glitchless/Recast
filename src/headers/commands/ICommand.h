@@ -18,9 +18,9 @@
 /**
  * @brief Superclass for Command object
  *
- * If you want create new command you should extend ICommand class and register this in CommandManager constructor
+ * If you want to create new command you should extend ICommand class and register that in CommandManager constructor
  *
- * @warning Don't forget register your Command in CommandManager!!!
+ * @warning Don't forget to register your Command in CommandManager!!!
  *
  */
 class ICommand {
@@ -33,13 +33,13 @@ public:
 
     /**
      * Run command.
-     * @example On command 'stop now 1 2' from Server console this method recieve (Server, 'stop'. {'now','1', '2'})
+     * @example On command 'stop now 1 2' from Server console this method receives (Server, 'stop'. {'now','1', '2'})
      *
-     * @warning ICommandSender is NOT thread-safety. It means @var sender send from background thread. If you ICommand need main thread execute create issue. I create flag for command.
+     * @warning ICommandSender is NOT thread-safe. It means @param sender is sent from background thread. If your ICommand needs main thread execution, create an issue. I will create a flag for that command.
      *
      * @param sender context object
      * @param cmd first word in command
-     * @param args second and next word in command (Always not null)
+     * @param args second and next words in command (Always not null)
      */
     virtual void onCommand(ICommandSender &sender, const std::string &cmd, const std::vector<std::string> &args) = 0;
 };
