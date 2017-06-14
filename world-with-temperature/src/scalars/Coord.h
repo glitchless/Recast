@@ -7,11 +7,15 @@
 
 
 #include <boost/serialization/strong_typedef.hpp>
+#include "GenericScalar.h"
 
 /**
  * Represents coordinate in a world.
  */
-using Coord = int;
+struct Coord : public GenericScalar<int> {
+    Coord(int value = 0) : GenericScalar(value) {
+    }
+};
 
 
 #endif //RECAST_COORD_H

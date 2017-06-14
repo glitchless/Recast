@@ -2,10 +2,10 @@
 // Created by Oleg Morozenkov on 11.06.17.
 //
 
+#include "module.h"
 #include <fruit/fruit.h>
 #include "interfaces/ITemperatureWorld.h"
 #include "interfaces/IBoundTemperatureWorld.h"
-#include "module.h"
 #include "implementation/SynchronizedVectorBoundTemperatureWorld.h"
 #include "implementation/AverageShareTemperatureWorldUpdater.h"
 #include "implementation/SynchronizedBlockingTimer.h"
@@ -30,14 +30,12 @@ WorldWithTemperatureModule::updaterComponent(
 
 Component<ITemperatureWorld, IBoundTemperatureWorld, ITemperatureWorldUpdater>
 WorldWithTemperatureModule::boundTemperatureWorldComponent(
-        Size& width, Size& height, Size& depth,
+        ScaledParallelepiped& bounds,
         Component<Required<IBoundTemperatureWorld>, ITemperatureWorldUpdater> updaterComponent_)
 {
     return fruit::createComponent()
             .bind<ITemperatureWorld, SynchronizedVectorBoundTemperatureWorld>()
             .bind<IBoundTemperatureWorld, SynchronizedVectorBoundTemperatureWorld>()
-            .bindInstance<Annotated<Width, Size>>(width)
-            .bindInstance<Annotated<Height, Size>>(height)
-            .bindInstance<Annotated<Depth, Size>>(depth)
+            .bindInstance<Annotated<Bounds, ScaledParallelepiped>>(bounds)
             .install(updaterComponent_);
 }

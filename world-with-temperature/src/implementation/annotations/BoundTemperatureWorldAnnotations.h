@@ -7,9 +7,7 @@
 
 
 namespace BoundTemperatureWorldAnnotations {
-    struct Width {};
-    struct Height {};
-    struct Depth {};
+    struct Bounds {};
 }
 
 

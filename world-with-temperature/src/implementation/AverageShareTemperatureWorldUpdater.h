@@ -11,7 +11,7 @@
 #include "../interfaces/ITemperatureWorldUpdater.h"
 #include "../interfaces/IBoundTemperatureWorld.h"
 #include "../interfaces/ITimer.h"
-#include "../annotations/TemperatureWorldUpdaterAnnotations.h"
+#include "annotations/TemperatureWorldUpdaterAnnotations.h"
 
 class AverageShareTemperatureWorldUpdater : public ITemperatureWorldUpdater {
 public:
@@ -24,10 +24,9 @@ public:
 
 private:
     void _checkThenShareTemperature(double dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
-
     void _shareTemperature(double dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
 
-    const double _temperatureExchangeCoefficient;
+    double _temperatureExchangeCoefficient;
     std::shared_ptr<IBoundTemperatureWorld> _world;
     std::shared_ptr<ITimer> _timer;
 };

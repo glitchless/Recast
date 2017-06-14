@@ -6,12 +6,15 @@
 #define RECAST_SIZE_H_H
 
 
-#include <boost/serialization/strong_typedef.hpp>
+#include "GenericScalar.h"
 
 /**
  * Represents world object or size of world by some axis.
  */
-using Size = int;
+struct Size : public GenericScalar<int> {
+    Size(int value = 0) : GenericScalar(value) {
+    }
+};
 
 
 #endif //RECAST_SIZE_H_H

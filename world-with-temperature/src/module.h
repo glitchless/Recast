@@ -8,10 +8,10 @@
 
 #include <fruit/fruit.h>
 #include <chrono>
-#include "annotations/BoundTemperatureWorldAnnotations.h"
 #include "scalars/Size.h"
 #include "interfaces/IBoundTemperatureWorld.h"
 #include "interfaces/ITemperatureWorldUpdater.h"
+#include "scalars/ScaledParallelepiped.h"
 
 namespace WorldWithTemperatureModule {
     namespace Defaults {
@@ -26,7 +26,7 @@ namespace WorldWithTemperatureModule {
 
     fruit::Component<ITemperatureWorld, IBoundTemperatureWorld, ITemperatureWorldUpdater>
     boundTemperatureWorldComponent(
-            Size& width, Size& height, Size& depth,
+            ScaledParallelepiped& bounds,
             fruit::Component<fruit::Required<IBoundTemperatureWorld>, ITemperatureWorldUpdater> updaterComponent_ = updaterComponent());
 }
 

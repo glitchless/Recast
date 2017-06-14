@@ -11,6 +11,7 @@
 #include "../scalars/Size.h"
 #include "../scalars/Temperature.h"
 #include "ITemperatureWorld.h"
+#include "../scalars/Parallelepiped.h"
 
 /**
  * Holds temperate world data. Temperature world is not endless.
@@ -25,49 +26,9 @@ public:
     virtual void foreach(std::function<void(Coord, Coord, Coord)> func) = 0;
 
     /**
-     * @return Minimum possible x coordinate.
+     * @return Bounds of this temperature world.
      */
-    virtual Coord minX() const = 0;
-
-    /**
-     * @return Maximum possible x coordinate.
-     */
-    virtual Coord maxX() const = 0;
-
-    /**
-     * @return Minimum possible y coordinate.
-     */
-    virtual Coord minY() const = 0;
-
-    /**
-     * @return Maximum possible y coordinate.
-     */
-    virtual Coord maxY() const = 0;
-
-    /**
-     * @return Minimum possible z coordinate.
-     */
-    virtual Coord minZ() const = 0;
-
-    /**
-     * @return Maximum possible z coordinate.
-     */
-    virtual Coord maxZ() const = 0;
-
-    /**
-     * @return Size of the world by x axis;
-     */
-    virtual Size sizeX() const = 0;
-
-    /**
-     * @return Size of the world by y axis;
-     */
-    virtual Size sizeY() const = 0;
-
-    /**
-     * @return Size of the world by z axis;
-     */
-    virtual Size sizeZ() const = 0;
+    virtual Parallelepiped bounds() const noexcept = 0;
 };
 
 

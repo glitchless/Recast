@@ -7,32 +7,12 @@
 
 using namespace std;
 
-SynchronizedVectorBoundTemperatureWorld::SynchronizedVectorBoundTemperatureWorld(Size sizeX, Size sizeY, Size sizeZ)
-        : _sizeX(sizeX), _sizeY(sizeY), _sizeZ(sizeZ)
-{
-    _maxX = sizeX / 2;
-    _maxY = sizeY / 2;
-    _maxZ = sizeZ / 2;
-
-    _minX = _maxX - (sizeX - 1);
-    _minY = _maxY - (sizeY - 1);
-    _minZ = _maxZ - (sizeZ - 1);
-
-    _data.resize((size_t) (_sizeX * _sizeY * sizeZ), 0);
-}
-
-SynchronizedVectorBoundTemperatureWorld::SynchronizedVectorBoundTemperatureWorld(Coord minX, Coord maxX, Coord minY, Coord maxY, Coord minZ, Coord maxZ)
-        : _minX(minX), _maxX(maxX), _minY(minY), _maxY(maxY), _minZ(minZ), _maxZ(maxZ)
-{
-    assert(minX < maxX && minY < maxY && minZ < maxZ);
-    _sizeX = maxX - minX + 1;
-    _sizeY = maxY - minY + 1;
-    _sizeY = maxY - minY + 1;
-    _data.resize((size_t) (_sizeX * _sizeY * _sizeZ), 0);
+SynchronizedVectorBoundTemperatureWorld::SynchronizedVectorBoundTemperatureWorld(ScaledParallelepiped bounds) : _bounds(bounds) {
+    _data.resize((size_t) (_bounds.sizeX() * _bounds.sizeY() * _bounds.sizeZ()), 0);
 }
 
 bool SynchronizedVectorBoundTemperatureWorld::has(Coord x, Coord y, Coord z) const noexcept {
-    return (_minX <= x && x <= _maxX) && (_minY <= y && y <= _maxY) && (_minZ <= z && z <= _maxZ);
+    return (_bounds.minX() <= x && x <= _bounds.maxX()) && (_bounds.minY() <= y && y <= _bounds.maxY()) && (_bounds.minZ() <= z && z <= _bounds.maxZ());
 }
 
 Temperature SynchronizedVectorBoundTemperatureWorld::get(Coord x, Coord y, Coord z) const {
@@ -51,55 +31,54 @@ void SynchronizedVectorBoundTemperatureWorld::amplify(Coord x, Coord y, Coord z,
 }
 
 void SynchronizedVectorBoundTemperatureWorld::foreach(std::function<void(Coord, Coord, Coord)> func) {
-    for (Coord x = _minX; x <= _maxX; x++) {
-        for (Coord y = _minY; y <= _maxY; y++) {
-            for (Coord z = _minZ; z <= _maxZ; z++) {
+    for (Coord x = _bounds.minX(); x <= _bounds.maxX(); x++) {
+        for (Coord y = _bounds.minY(); y <= _bounds.maxY(); y++) {
+            for (Coord z = _bounds.minZ(); z <= _bounds.maxZ(); z++) {
                 func(x, y, z);
             }
         }
     }
 }
 
-Coord SynchronizedVectorBoundTemperatureWorld::minX() const {
-    return _minX;
+Parallelepiped SynchronizedVectorBoundTemperatureWorld::bounds() const noexcept {
+    return _bounds;
 }
 
-Coord SynchronizedVectorBoundTemperatureWorld::maxX() const {
-    return _maxX;
-}
-
-Coord SynchronizedVectorBoundTemperatureWorld::minY() const {
-    return _minY;
-}
-
-Coord SynchronizedVectorBoundTemperatureWorld::maxY() const {
-    return _maxY;
-}
-
-Coord SynchronizedVectorBoundTemperatureWorld::minZ() const {
-    return _minZ;
-}
-
-Coord SynchronizedVectorBoundTemperatureWorld::maxZ() const {
-    return _maxZ;
-}
-
-Size SynchronizedVectorBoundTemperatureWorld::sizeX() const {
-    return _sizeX;
-}
-
-Size SynchronizedVectorBoundTemperatureWorld::sizeY() const {
-    return _sizeY;
-}
-
-Size SynchronizedVectorBoundTemperatureWorld::sizeZ() const {
-    return _sizeZ;
+ScaledParallelepiped SynchronizedVectorBoundTemperatureWorld::boundsWithScale() const noexcept {
+    return _bounds;
 }
 
 size_t SynchronizedVectorBoundTemperatureWorld::_getIndexInData(Coord x, Coord y, Coord z) const {
     if (!has(x, y, z)) {
         throw out_of_range("This point doesn't belong to this bound temperature world");
     }
-    size_t index = (size_t) (x - _minX) * _sizeY * _sizeZ + (size_t) (y - _minY) * _sizeZ + (size_t) (z - _minZ);
+    size_t index = (size_t) (_bounds.scaleX() * x - _bounds.minX()) * _bounds.sizeY() * _bounds.sizeZ()
+                   + (size_t) (_bounds.scaleY() * y - _bounds.minY()) * _bounds.sizeZ()
+                   + (size_t) (_bounds.scaleZ() * z - _bounds.minZ());
     return index;
+}
+
+SynchronizedVectorBoundTemperatureWorld::SynchronizedVectorBoundTemperatureWorld(const SynchronizedVectorBoundTemperatureWorld& other)
+        : SynchronizedVectorBoundTemperatureWorld(other, lock_guard<mutex>(other._mutex))
+{
+}
+
+SynchronizedVectorBoundTemperatureWorld::SynchronizedVectorBoundTemperatureWorld(SynchronizedVectorBoundTemperatureWorld&& other)
+        : SynchronizedVectorBoundTemperatureWorld(other, lock_guard<mutex>(other._mutex))
+{
+}
+
+SynchronizedVectorBoundTemperatureWorld::SynchronizedVectorBoundTemperatureWorld(const SynchronizedVectorBoundTemperatureWorld& other, const std::lock_guard<std::mutex>&)
+        : _bounds(other._bounds), _data(other._data)
+{
+}
+
+SynchronizedVectorBoundTemperatureWorld::SynchronizedVectorBoundTemperatureWorld(SynchronizedVectorBoundTemperatureWorld&& other, const std::lock_guard<std::mutex>&)
+        : _bounds(move(other._bounds)), _data(move(other._data))
+{
+}
+
+SynchronizedVectorBoundTemperatureWorld& SynchronizedVectorBoundTemperatureWorld::operator=(SynchronizedVectorBoundTemperatureWorld other) {
+    swap(*this, other);
+    return *this;
 }

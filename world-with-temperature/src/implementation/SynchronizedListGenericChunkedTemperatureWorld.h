@@ -19,23 +19,21 @@ public:
     SynchronizedListGenericChunkedTemperatureWorld(NeedChunkFn needChunkFn, MakeChunkFn makeChunkFn);
 
     bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
-
     IBoundTemperatureWorld getChunk(Coord x, Coord y, Coord z) const override;
 
     bool has(Coord x, Coord y, Coord z) const noexcept override;
-
     Temperature get(Coord x, Coord y, Coord z) const override;
-
     void set(Coord x, Coord y, Coord z, Temperature temperature) override;
-
     void amplify(Coord x, Coord y, Coord z, Temperature temperature) override;
 
 private:
-    std::list<Chunk> _chunks;
+    mutable std::list<Chunk> _chunks;
     mutable std::mutex _mutex;
-    const NeedChunkFn _needChunkFn;
-    const MakeChunkFn _makeChunkFn;
+    NeedChunkFn _needChunkFn;
+    MakeChunkFn _makeChunkFn;
 };
+
+#include "SynchronizedListGenericChunkedTemperatureWorld.inc.h"
 
 
 #endif //RECAST_SYNCHRONIZEDVECTORCHUNKEDTEMPERATUREWORLD_H

@@ -2,10 +2,6 @@
 // Created by Oleg Morozenkov on 13.06.17.
 //
 
-#include "SynchronizedListGenericChunkedTemperatureWorld.h"
-
-using namespace std;
-
 template<typename Chunk>
 SynchronizedListGenericChunkedTemperatureWorld<Chunk>::SynchronizedListGenericChunkedTemperatureWorld(
         SynchronizedListGenericChunkedTemperatureWorld<Chunk>::NeedChunkFn needChunkFn, SynchronizedListGenericChunkedTemperatureWorld<Chunk>::MakeChunkFn makeChunkFn)
@@ -15,7 +11,7 @@ SynchronizedListGenericChunkedTemperatureWorld<Chunk>::SynchronizedListGenericCh
 
 template<typename Chunk>
 bool SynchronizedListGenericChunkedTemperatureWorld<Chunk>::hasChunk(Coord x, Coord y, Coord z) const noexcept {
-    lock_guard<mutex> guard(_mutex);
+    std::lock_guard<std::mutex> guard(_mutex);
     for (const Chunk& chunk : _chunks) {
         if (chunk.has(x, y, z)) {
             return true;
@@ -26,16 +22,16 @@ bool SynchronizedListGenericChunkedTemperatureWorld<Chunk>::hasChunk(Coord x, Co
 
 template<typename Chunk>
 IBoundTemperatureWorld SynchronizedListGenericChunkedTemperatureWorld<Chunk>::getChunk(Coord x, Coord y, Coord z) const {
-    lock_guard<mutex> guard(_mutex);
+    std::lock_guard<std::mutex> guard(_mutex);
     for (const Chunk& chunk : _chunks) {
         if (chunk.has(x, y, z)) {
             return chunk;
         }
     }
     if (_needChunkFn(x, y, z)) {
-        _chunks.push_back(move(_makeChunkFn(x, y, z)));
+        _chunks.push_back(std::move(_makeChunkFn(x, y, z)));
     } else {
-        throw out_of_range("No chunk exist at this point");
+        throw std::out_of_range("No chunk exist at this point");
     }
 }
 

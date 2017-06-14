@@ -13,18 +13,16 @@ using namespace fruit;
 
 int main() {
     static Size n = 99;
-    static Size worldWidth = n;
-    static Size worldHeight = n;
-    static Size worldDepth = n;
+    static ScaledParallelepiped worldBounds(n, n, n);
     Component<IBoundTemperatureWorld, ITemperatureWorldUpdater> component =
-                    WorldWithTemperatureModule::boundTemperatureWorldComponent(worldWidth, worldHeight, worldDepth);
+                    WorldWithTemperatureModule::boundTemperatureWorldComponent(worldBounds);
     Injector<IBoundTemperatureWorld, ITemperatureWorldUpdater> injector(component);
 
     auto world = injector.get<shared_ptr<IBoundTemperatureWorld>>();
     auto updater = injector.get<shared_ptr<ITemperatureWorldUpdater>>();
 
     BasicTimer benchmarkTimer;
-    cout << "Number of blocks: " << world->sizeX() * world->sizeY() * world->sizeZ() << endl;
+    cout << "Number of blocks: " << world->bounds().volume() << endl;
     while (true) {
         benchmarkTimer.update();
         updater->update();

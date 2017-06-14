@@ -27,17 +27,19 @@ set(SOURCE_FILES
         src/implementation/AverageShareTemperatureWorldUpdater.h
         src/utils/FileUtils.h
         src/module.h
-        src/annotations/TemperatureWorldUpdaterAnnotations.h
-        src/annotations/BoundTemperatureWorldAnnotations.h
+        src/implementation/annotations/TemperatureWorldUpdaterAnnotations.h
+        src/implementation/annotations/BoundTemperatureWorldAnnotations.h
         src/module.cpp
-        src/annotations/BlockingTimerAnnotations.h
+        src/implementation/annotations/BlockingTimerAnnotations.h
         src/implementation/BasicTimer.cpp
         src/implementation/BasicTimer.h
         src/interfaces/IChunkedTemperatureWorld.h
-        src/implementation/SynchronizedListGenericChunkedTemperatureWorld.cpp
+        src/implementation/SynchronizedListGenericChunkedTemperatureWorld.inc.h
         src/implementation/SynchronizedListGenericChunkedTemperatureWorld.h
         src/implementation/ScalableSynchronizedListChunkedTemperatureWorld.cpp
-        src/implementation/ScalableSynchronizedListChunkedTemperatureWorld.h)
+        src/implementation/ScalableSynchronizedListChunkedTemperatureWorld.h
+        src/scalars/Parallelepiped.h
+        src/scalars/ScaledParallelepiped.h src/scalars/GenericScalar.h)
 
 # unittest
 add_executable(world-with-temperature-unittest test/unittest.cpp test/lib/catch.hpp ${SOURCE_FILES})

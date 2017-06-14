@@ -6,12 +6,15 @@
 #define RECAST_TEMPERATURE_H
 
 
-#include <boost/serialization/strong_typedef.hpp>
+#include "GenericScalar.h"
 
 /**
  * Represents temperature of world object.
  */
-using Temperature = double;
+struct Temperature : public GenericScalar<int> {
+    Temperature(int value = 0) : GenericScalar(value) {
+    }
+};
 
 
 #endif //RECAST_TEMPERATURE_H

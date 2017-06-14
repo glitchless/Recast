@@ -14,7 +14,6 @@ public:
     INJECT(BasicTimer());
 
     std::chrono::milliseconds delta() const;
-
     double deltaFloatSeconds() const;
 
     void update();

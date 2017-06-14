@@ -9,7 +9,7 @@
 #include <mutex>
 #include <fruit/fruit.h>
 #include "../interfaces/IBlockingTimer.h"
-#include "../annotations/BlockingTimerAnnotations.h"
+#include "annotations/BlockingTimerAnnotations.h"
 
 /**
  * Implementation of blocking timer.
@@ -21,15 +21,13 @@ public:
             ANNOTATED(BlockingTimerAnnotations::MinDelta, std::chrono::milliseconds) minDelta));
 
     std::chrono::milliseconds delta() const override;
-
+    std::chrono::milliseconds minDelta() const override;
     double deltaFloatSeconds() const override;
 
     void update() override;
 
-    std::chrono::milliseconds minDelta() const override;
-
 private:
-    const std::chrono::milliseconds _minDelta;
+    std::chrono::milliseconds _minDelta;
 
     std::chrono::system_clock::time_point _lastUpdateTime;
     mutable std::mutex _mutex;

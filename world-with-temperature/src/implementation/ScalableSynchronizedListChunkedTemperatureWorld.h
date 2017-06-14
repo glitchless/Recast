@@ -14,27 +14,22 @@ class ScalableSynchronizedListChunkedTemperatureWorld : public IChunkedTemperatu
 public:
     ScalableSynchronizedListChunkedTemperatureWorld(Size baseChunkSizeX, Size baseChunkSizeY, Size baseChunkSizeZ);
 
-    bool hasChunk(Coord x, Coord y, Coord z) const override;
-
+    bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
     IBoundTemperatureWorld getChunk(Coord x, Coord y, Coord z) const override;
 
-    bool has(Coord x, Coord y, Coord z) const override;
-
+    bool has(Coord x, Coord y, Coord z) const noexcept override;
     Temperature get(Coord x, Coord y, Coord z) const override;
-
     void set(Coord x, Coord y, Coord z, Temperature temperature) override;
-
     void amplify(Coord x, Coord y, Coord z, Temperature temperature) override;
 
 private:
     using Chunk = SynchronizedVectorBoundTemperatureWorld;
 
-    bool _needChunkFn(Coord x, Coord y, Coord z) const noexcept;
-
-    Chunk _makeChunkFn(Coord x, Coord y, Coord z) const;
+    static bool _needChunkFn(Coord x, Coord y, Coord z) noexcept;
+    static Chunk _makeChunkFn(Coord x, Coord y, Coord z);
 
     SynchronizedListGenericChunkedTemperatureWorld<Chunk> _component;
-    const Size _baseChunkSizeX, _baseChunkSizeY, _baseChunkSizeZ;
+    Size _baseChunkSizeX, _baseChunkSizeY, _baseChunkSizeZ;
 };
 
 
