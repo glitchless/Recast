@@ -17,8 +17,8 @@
  * @brief Config class
  *
  * Using Boost ptree struct.
- * Config file hashing and buffering in memmory. (You can't get Config from constructor)
- * Please calling Config::instance for get Config.
+ * Config file hashing and buffering in memory. (You can't get an instance of Config from constructor)
+ * Please call Config::instance to get an instance of Config.
  *
  **/
 class Config {
