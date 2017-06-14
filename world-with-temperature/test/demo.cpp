@@ -54,17 +54,11 @@ void startServer(shared_ptr<IBoundTemperatureWorld> world, shared_ptr<ITemperatu
 }
 
 int main() {
-    using namespace BoundTemperatureWorldAnnotations;
-
     static Size worldWidth = 10;
     static Size worldHeight = 10;
     static Size worldDepth = 10;
     Component<IBoundTemperatureWorld, ITemperatureWorldUpdater> component =
-            createComponent()
-                    .install(WorldWithTemperatureModule::component())
-                    .bindInstance<Annotated<Width, Size>>(worldWidth)
-                    .bindInstance<Annotated<Height, Size>>(worldHeight)
-                    .bindInstance<Annotated<Depth, Size>>(worldDepth);
+                    WorldWithTemperatureModule::boundTemperatureWorldComponent(worldWidth, worldHeight, worldDepth);
     Injector<IBoundTemperatureWorld, ITemperatureWorldUpdater> injector(component);
 
     auto world = injector.get<shared_ptr<IBoundTemperatureWorld>>();

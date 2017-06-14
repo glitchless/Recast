@@ -27,7 +27,7 @@ private:
 
     void _shareTemperature(double dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
 
-    double _temperatureExchangeCoefficient;
+    const double _temperatureExchangeCoefficient;
     std::shared_ptr<IBoundTemperatureWorld> _world;
     std::shared_ptr<ITimer> _timer;
 };

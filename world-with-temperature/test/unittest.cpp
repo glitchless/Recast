@@ -4,11 +4,11 @@
 
 #define CATCH_CONFIG_MAIN
 #include "lib/catch.hpp"
-#include "../src/implementation/SynchronizedVectorTemperatureWorld.h"
+#include "../src/implementation/SynchronizedVectorBoundTemperatureWorld.h"
 
-SCENARIO("SynchronizedVectorTemperatureWorld data can be accessed") {
-    GIVEN("small SynchronizedVectorTemperatureWorld") {
-        SynchronizedVectorTemperatureWorld world(101, 55, 4);
+SCENARIO("SynchronizedVectorBoundTemperatureWorld data can be accessed") {
+    GIVEN("small SynchronizedVectorBoundTemperatureWorld") {
+        SynchronizedVectorBoundTemperatureWorld world(101, 55, 4);
 
         REQUIRE(world.minX() < 0);
         REQUIRE(world.minY() < 0);

@@ -16,12 +16,14 @@
  * Bound temperature world backed by `std::vector`.
  * This class is thread-safe.
  */
-class SynchronizedVectorTemperatureWorld : public IBoundTemperatureWorld {
+class SynchronizedVectorBoundTemperatureWorld : public IBoundTemperatureWorld {
 public:
-    INJECT(SynchronizedVectorTemperatureWorld(
+    INJECT(SynchronizedVectorBoundTemperatureWorld(
             ANNOTATED(BoundTemperatureWorldAnnotations::Width, Size) sizeX,
             ANNOTATED(BoundTemperatureWorldAnnotations::Height, Size) sizeY,
             ANNOTATED(BoundTemperatureWorldAnnotations::Depth, Size) sizeZ));
+
+    SynchronizedVectorBoundTemperatureWorld(Coord minX, Coord maxX, Coord minY, Coord maxY, Coord minZ, Coord maxZ);
 
     bool has(Coord x, Coord y, Coord z) const noexcept override;
 
@@ -54,12 +56,12 @@ public:
 private:
     size_t _getIndexInData(Coord x, Coord y, Coord z) const;
 
-    Size _sizeX;
-    Size _sizeY;
-    Size _sizeZ;
-    Coord _minX, _maxX;
-    Coord _minY, _maxY;
-    Coord _minZ, _maxZ;
+    const Size _sizeX;
+    const Size _sizeY;
+    const Size _sizeZ;
+    const Coord _minX, _maxX;
+    const Coord _minY, _maxY;
+    const Coord _minZ, _maxZ;
 
     std::vector<Temperature> _data;
     mutable std::mutex _mutex;

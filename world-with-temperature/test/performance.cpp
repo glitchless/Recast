@@ -12,18 +12,12 @@ using namespace std;
 using namespace fruit;
 
 int main() {
-    using namespace BoundTemperatureWorldAnnotations;
-
     static Size n = 99;
     static Size worldWidth = n;
     static Size worldHeight = n;
     static Size worldDepth = n;
     Component<IBoundTemperatureWorld, ITemperatureWorldUpdater> component =
-            createComponent()
-                    .install(WorldWithTemperatureModule::component())
-                    .bindInstance<Annotated<Width, Size>>(worldWidth)
-                    .bindInstance<Annotated<Height, Size>>(worldHeight)
-                    .bindInstance<Annotated<Depth, Size>>(worldDepth);
+                    WorldWithTemperatureModule::boundTemperatureWorldComponent(worldWidth, worldHeight, worldDepth);
     Injector<IBoundTemperatureWorld, ITemperatureWorldUpdater> injector(component);
 
     auto world = injector.get<shared_ptr<IBoundTemperatureWorld>>();
