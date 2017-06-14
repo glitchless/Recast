@@ -40,7 +40,7 @@ namespace {
  *
  * Adding all objects that extend ICommand to list (std::vector).
  *
- * @warning If you add ICommand, you should add line here
+ * @warning If you add an ICommand, you should add line here
  *
  */
 CommandManager::CommandManager() {
@@ -53,7 +53,7 @@ CommandManager::CommandManager() {
  *
  * Split string to arguments. Find command and run it.
  *
- * @param sender Link to any class who extend ICommandSender. Like Server, Player and other Context-like object.
+ * @param sender Link to any class that extends ICommandSender. Like Server, Player and other Context-like object.
  * @param cmd Command in string. @example stop now.
  */
 void CommandManager::onCommand(ICommandSender *sender, const std::string &cmd) {
