@@ -22,7 +22,7 @@ class ICommand;
 /**
  * @brief Send string-command through CommandManager
  *
- * This is very important class. Through this you can execute console-like text command.
+ * This is a very important class. Through this you can execute console-like text commands.
  */
 class CommandManager {
 public:
