@@ -16,21 +16,21 @@ bool SynchronizedVectorBoundTemperatureWorld::has(Coord x, Coord y, Coord z) con
 }
 
 Temperature SynchronizedVectorBoundTemperatureWorld::get(Coord x, Coord y, Coord z) const {
-    lock_guard<mutex> guard(_mutex);
+    lock_guard<mutex> guard(_dataMutex);
     return _data[_getIndexInData(x, y, z)];
 }
 
 void SynchronizedVectorBoundTemperatureWorld::set(Coord x, Coord y, Coord z, Temperature temperature) {
-    lock_guard<mutex> guard(_mutex);
+    lock_guard<mutex> guard(_dataMutex);
     _data[_getIndexInData(x, y, z)] = temperature;
 }
 
 void SynchronizedVectorBoundTemperatureWorld::amplify(Coord x, Coord y, Coord z, Temperature temperature) {
-    lock_guard<mutex> guard(_mutex);
+    lock_guard<mutex> guard(_dataMutex);
     _data[_getIndexInData(x, y, z)] += temperature;
 }
 
-void SynchronizedVectorBoundTemperatureWorld::foreach(std::function<void(Coord, Coord, Coord)> func) {
+void SynchronizedVectorBoundTemperatureWorld::foreach(std::function<void(Coord, Coord, Coord)> func) const {
     for (Coord x = _bounds.minX(); x <= _bounds.maxX(); x++) {
         for (Coord y = _bounds.minY(); y <= _bounds.maxY(); y++) {
             for (Coord z = _bounds.minZ(); z <= _bounds.maxZ(); z++) {
@@ -59,12 +59,12 @@ size_t SynchronizedVectorBoundTemperatureWorld::_getIndexInData(Coord x, Coord y
 }
 
 SynchronizedVectorBoundTemperatureWorld::SynchronizedVectorBoundTemperatureWorld(const SynchronizedVectorBoundTemperatureWorld& other)
-        : SynchronizedVectorBoundTemperatureWorld(other, lock_guard<mutex>(other._mutex))
+        : SynchronizedVectorBoundTemperatureWorld(other, lock_guard<mutex>(other._dataMutex))
 {
 }
 
 SynchronizedVectorBoundTemperatureWorld::SynchronizedVectorBoundTemperatureWorld(SynchronizedVectorBoundTemperatureWorld&& other)
-        : SynchronizedVectorBoundTemperatureWorld(other, lock_guard<mutex>(other._mutex))
+        : SynchronizedVectorBoundTemperatureWorld(other, lock_guard<mutex>(other._dataMutex))
 {
 }
 

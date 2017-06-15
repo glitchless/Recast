@@ -23,7 +23,7 @@ public:
      *
      * @param func Function to execute at each point.
      */
-    virtual void foreach(std::function<void(Coord, Coord, Coord)> func) = 0;
+    virtual void foreach(std::function<void(Coord, Coord, Coord)> func) const = 0;
 
     /**
      * @return Bounds of this temperature world.

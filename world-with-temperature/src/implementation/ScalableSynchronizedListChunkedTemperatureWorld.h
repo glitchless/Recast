@@ -9,10 +9,11 @@
 #include "SynchronizedVectorBoundTemperatureWorld.h"
 #include "../interfaces/IChunkedTemperatureWorld.h"
 #include "SynchronizedListGenericChunkedTemperatureWorld.h"
+#include "OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld.h"
 
 class ScalableSynchronizedListChunkedTemperatureWorld : public IChunkedTemperatureWorld {
 public:
-    ScalableSynchronizedListChunkedTemperatureWorld(Size baseChunkSizeX, Size baseChunkSizeY, Size baseChunkSizeZ);
+    ScalableSynchronizedListChunkedTemperatureWorld(Parallelepiped baseChunkSize);
 
     bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
     IBoundTemperatureWorld getChunk(Coord x, Coord y, Coord z) const override;
@@ -22,14 +23,14 @@ public:
     void set(Coord x, Coord y, Coord z, Temperature temperature) override;
     void amplify(Coord x, Coord y, Coord z, Temperature temperature) override;
 
-private:
+protected:
     using Chunk = SynchronizedVectorBoundTemperatureWorld;
 
     static bool _needChunkFn(Coord x, Coord y, Coord z) noexcept;
     static Chunk _makeChunkFn(Coord x, Coord y, Coord z);
 
-    SynchronizedListGenericChunkedTemperatureWorld<Chunk> _component;
-    Size _baseChunkSizeX, _baseChunkSizeY, _baseChunkSizeZ;
+    OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld<Chunk> _component;
+    Parallelepiped _baseChunkSize;
 };
 
 

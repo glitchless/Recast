@@ -13,24 +13,23 @@
 template<typename Chunk>
 class SynchronizedListGenericChunkedTemperatureWorld : public IChunkedTemperatureWorld {
 public:
-    using NeedChunkFn = std::function<bool(Coord, Coord, Coord)>;
-    using MakeChunkFn = std::function<Chunk(Coord, Coord, Coord)>;
-
-    SynchronizedListGenericChunkedTemperatureWorld(NeedChunkFn needChunkFn, MakeChunkFn makeChunkFn);
+    SynchronizedListGenericChunkedTemperatureWorld();
 
     bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
     IBoundTemperatureWorld getChunk(Coord x, Coord y, Coord z) const override;
+    void foreachChunk(std::function<void(const IBoundTemperatureWorld&)> func) const override;
 
     bool has(Coord x, Coord y, Coord z) const noexcept override;
     Temperature get(Coord x, Coord y, Coord z) const override;
     void set(Coord x, Coord y, Coord z, Temperature temperature) override;
     void amplify(Coord x, Coord y, Coord z, Temperature temperature) override;
 
-private:
+    void addChunk(Chunk chunk);
+    void removeChunk(Chunk chunk);
+
+protected:
     mutable std::list<Chunk> _chunks;
-    mutable std::mutex _mutex;
-    NeedChunkFn _needChunkFn;
-    MakeChunkFn _makeChunkFn;
+    mutable std::mutex _chunksMutex;
 };
 
 #include "SynchronizedListGenericChunkedTemperatureWorld.inc.h"

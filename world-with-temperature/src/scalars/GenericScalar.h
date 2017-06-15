@@ -20,7 +20,7 @@ public:
         return _value;
     }
 
-private:
+protected:
     T _value;
 };
 

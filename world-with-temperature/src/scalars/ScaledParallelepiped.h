@@ -54,7 +54,7 @@ struct ScaledParallelepiped : public Parallelepiped {
         return _scaleZ;
     };
 
-private:
+protected:
     int _scaleX;
     int _scaleY;
     int _scaleZ;

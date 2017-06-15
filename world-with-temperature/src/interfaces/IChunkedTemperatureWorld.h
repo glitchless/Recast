@@ -34,6 +34,13 @@ public:
      * @return Chunk at the point.
      */
     virtual IBoundTemperatureWorld getChunk(Coord x, Coord y, Coord z) const = 0;
+
+    /**
+     * Loops over each chunk.
+     *
+     * @param func Function to execute at each chunk.
+     */
+    virtual void foreachChunk(std::function<void(const IBoundTemperatureWorld&)> func) const = 0;
 };
 
 

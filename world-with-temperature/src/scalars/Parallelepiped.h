@@ -93,7 +93,7 @@ public:
         return _sizeX * _sizeY * _sizeZ;
     }
 
-private:
+protected:
     Size _sizeX;
     Size _sizeY;
     Size _sizeZ;

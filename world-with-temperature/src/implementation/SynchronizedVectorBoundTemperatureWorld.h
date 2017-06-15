@@ -33,12 +33,12 @@ public:
     void set(Coord x, Coord y, Coord z, Temperature temperature) override;
     void amplify(Coord x, Coord y, Coord z, Temperature temperature) override;
 
-    void foreach(std::function<void(Coord, Coord, Coord)> func) override;
+    void foreach(std::function<void(Coord, Coord, Coord)> func) const override;
 
     Parallelepiped bounds() const noexcept override;
     ScaledParallelepiped boundsWithScale() const noexcept;
 
-private:
+protected:
     SynchronizedVectorBoundTemperatureWorld(const SynchronizedVectorBoundTemperatureWorld& other, const std::lock_guard<std::mutex>&);
     SynchronizedVectorBoundTemperatureWorld(SynchronizedVectorBoundTemperatureWorld&& other, const std::lock_guard<std::mutex>&);
 
@@ -46,17 +46,9 @@ private:
 
     ScaledParallelepiped _bounds;
     std::vector<Temperature> _data;
-    mutable std::mutex _mutex;
+    mutable std::mutex _dataMutex;
 };
 
-inline void swap(SynchronizedVectorBoundTemperatureWorld& first, SynchronizedVectorBoundTemperatureWorld& second) {
-    std::unique_lock<std::mutex> firstGuard(first._mutex, std::defer_lock);
-    std::unique_lock<std::mutex> secondGuard(second._mutex, std::defer_lock);
-    std::lock(firstGuard, secondGuard);
-
-    std::swap(first._bounds, second._bounds);
-    std::swap(first._data, second._data);
-}
-
+#include "SynchronizedVectorBoundTemperatureWorld.inc.h"
 
 #endif //RECAST_VECTORTEMPERATUREWORLD_H

@@ -4,12 +4,9 @@
 
 #include "ScalableSynchronizedListChunkedTemperatureWorld.h"
 
-ScalableSynchronizedListChunkedTemperatureWorld::ScalableSynchronizedListChunkedTemperatureWorld(
-        Size baseChunkSizeX, Size baseChunkSizeY, Size baseChunkSizeZ)
+ScalableSynchronizedListChunkedTemperatureWorld::ScalableSynchronizedListChunkedTemperatureWorld(Parallelepiped baseChunkSize)
         : _component(&_needChunkFn, [](Coord x, Coord y, Coord z) -> Chunk {return _makeChunkFn(x, y,z);})
-        , _baseChunkSizeX(baseChunkSizeX)
-        , _baseChunkSizeY(baseChunkSizeY)
-        , _baseChunkSizeZ(baseChunkSizeZ)
+        , _baseChunkSize(baseChunkSize)
 {
 }
 

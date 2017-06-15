@@ -26,11 +26,11 @@ public:
 
     void update() override;
 
-private:
+protected:
     std::chrono::milliseconds _minDelta;
 
     std::chrono::system_clock::time_point _lastUpdateTime;
-    mutable std::mutex _mutex;
+    mutable std::mutex _lastUpdateTimeMutex;
 };
 
 

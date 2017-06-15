@@ -18,7 +18,7 @@ public:
 
     void update();
 
-private:
+protected:
     std::chrono::system_clock::time_point _lastUpdateTime;
 };
 

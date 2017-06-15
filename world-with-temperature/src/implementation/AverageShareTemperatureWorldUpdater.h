@@ -22,7 +22,7 @@ public:
 
     void update() override;
 
-private:
+protected:
     void _checkThenShareTemperature(double dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
     void _shareTemperature(double dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
 

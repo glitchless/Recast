@@ -39,7 +39,11 @@ set(SOURCE_FILES
         src/implementation/ScalableSynchronizedListChunkedTemperatureWorld.cpp
         src/implementation/ScalableSynchronizedListChunkedTemperatureWorld.h
         src/scalars/Parallelepiped.h
-        src/scalars/ScaledParallelepiped.h src/scalars/GenericScalar.h)
+        src/scalars/ScaledParallelepiped.h
+        src/scalars/GenericScalar.h
+        src/implementation/SynchronizedVectorBoundTemperatureWorld.inc.h
+        src/implementation/OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld.inc.h
+        src/implementation/OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld.h)
 
 # unittest
 add_executable(world-with-temperature-unittest test/unittest.cpp test/lib/catch.hpp ${SOURCE_FILES})

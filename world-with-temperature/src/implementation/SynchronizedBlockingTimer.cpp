@@ -14,7 +14,7 @@ SynchronizedBlockingTimer::SynchronizedBlockingTimer(milliseconds minDelta)
 }
 
 milliseconds SynchronizedBlockingTimer::delta() const {
-    lock_guard<mutex> guard(_mutex);
+    lock_guard<mutex> guard(_lastUpdateTimeMutex);
     return duration_cast<milliseconds>(system_clock::now() - _lastUpdateTime);
 }
 
@@ -23,7 +23,7 @@ double SynchronizedBlockingTimer::deltaFloatSeconds() const {
 }
 
 void SynchronizedBlockingTimer::update() {
-    lock_guard<mutex> guard(_mutex);
+    lock_guard<mutex> guard(_lastUpdateTimeMutex);
     const auto dt = system_clock::now() - _lastUpdateTime;
     _lastUpdateTime = system_clock::now();
     if (dt < _minDelta) {
