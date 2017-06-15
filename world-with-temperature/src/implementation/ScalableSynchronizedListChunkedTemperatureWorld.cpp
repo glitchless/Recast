@@ -4,8 +4,12 @@
 
 #include "ScalableSynchronizedListChunkedTemperatureWorld.h"
 
+using namespace std;
+
 ScalableSynchronizedListChunkedTemperatureWorld::ScalableSynchronizedListChunkedTemperatureWorld(Parallelepiped baseChunkSize)
-        : _component(&_needChunkFn, [](Coord x, Coord y, Coord z) -> Chunk {return _makeChunkFn(x, y,z);})
+        : _component(
+                [&](Coord x, Coord y, Coord z) { return this->_needChunkFn(x, y, z); },
+                [&](Coord x, Coord y, Coord z) { return this->_makeChunkFn(x, y, z); })
         , _baseChunkSize(baseChunkSize)
 {
 }
@@ -14,7 +18,7 @@ bool ScalableSynchronizedListChunkedTemperatureWorld::hasChunk(Coord x, Coord y,
     return _component.hasChunk(x, y, z);
 }
 
-IBoundTemperatureWorld ScalableSynchronizedListChunkedTemperatureWorld::getChunk(Coord x, Coord y, Coord z) const {
+shared_ptr<IBoundTemperatureWorld> ScalableSynchronizedListChunkedTemperatureWorld::getChunk(Coord x, Coord y, Coord z) const {
     return _component.getChunk(x, y, z);
 }
 

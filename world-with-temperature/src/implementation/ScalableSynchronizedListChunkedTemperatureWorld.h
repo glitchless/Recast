@@ -16,7 +16,7 @@ public:
     ScalableSynchronizedListChunkedTemperatureWorld(Parallelepiped baseChunkSize);
 
     bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
-    IBoundTemperatureWorld getChunk(Coord x, Coord y, Coord z) const override;
+    std::shared_ptr<IBoundTemperatureWorld> getChunk(Coord x, Coord y, Coord z) const override;
 
     bool has(Coord x, Coord y, Coord z) const noexcept override;
     Temperature get(Coord x, Coord y, Coord z) const override;

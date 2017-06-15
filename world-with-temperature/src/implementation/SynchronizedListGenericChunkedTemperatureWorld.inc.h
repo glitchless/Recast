@@ -9,8 +9,8 @@ SynchronizedListGenericChunkedTemperatureWorld<Chunk>::SynchronizedListGenericCh
 template<typename Chunk>
 bool SynchronizedListGenericChunkedTemperatureWorld<Chunk>::hasChunk(Coord x, Coord y, Coord z) const noexcept {
     std::lock_guard<std::mutex> guard(_chunksMutex);
-    for (const Chunk& chunk : _chunks) {
-        if (chunk.has(x, y, z)) {
+    for (const std::shared_ptr<Chunk>& chunk : _chunks) {
+        if (chunk->has(x, y, z)) {
             return true;
         }
     }
@@ -18,10 +18,10 @@ bool SynchronizedListGenericChunkedTemperatureWorld<Chunk>::hasChunk(Coord x, Co
 }
 
 template<typename Chunk>
-IBoundTemperatureWorld SynchronizedListGenericChunkedTemperatureWorld<Chunk>::getChunk(Coord x, Coord y, Coord z) const {
+std::shared_ptr<IBoundTemperatureWorld> SynchronizedListGenericChunkedTemperatureWorld<Chunk>::getChunk(Coord x, Coord y, Coord z) const {
     std::lock_guard<std::mutex> guard(_chunksMutex);
-    for (const Chunk& chunk : _chunks) {
-        if (chunk.has(x, y, z)) {
+    for (const std::shared_ptr<Chunk>& chunk : _chunks) {
+        if (chunk->has(x, y, z)) {
             return chunk;
         }
     }
@@ -29,10 +29,14 @@ IBoundTemperatureWorld SynchronizedListGenericChunkedTemperatureWorld<Chunk>::ge
 }
 
 template<typename Chunk>
-void SynchronizedListGenericChunkedTemperatureWorld<Chunk>::foreachChunk(std::function<void(const IBoundTemperatureWorld&)> func) const {
-    std::lock_guard<std::mutex> guard(_chunksMutex);
-    for (const Chunk& chunk : _chunks) {
-        func(chunk);
+void SynchronizedListGenericChunkedTemperatureWorld<Chunk>::foreachChunk(std::function<void(IBoundTemperatureWorld&)> func) const {
+    std::list<std::shared_ptr<Chunk>> chunksShallowCopy;
+    {
+        std::lock_guard<std::mutex> guard(_chunksMutex);
+        chunksShallowCopy = _chunks;
+    }
+    for (const std::shared_ptr<Chunk>& chunk : chunksShallowCopy) {
+        func(*chunk);
     }
 }
 
@@ -43,27 +47,27 @@ bool SynchronizedListGenericChunkedTemperatureWorld<Chunk>::has(Coord x, Coord y
 
 template<typename Chunk>
 Temperature SynchronizedListGenericChunkedTemperatureWorld<Chunk>::get(Coord x, Coord y, Coord z) const {
-    return getChunk(x, y, z).get(x, y, z);
+    return getChunk(x, y, z)->get(x, y, z);
 }
 
 template<typename Chunk>
 void SynchronizedListGenericChunkedTemperatureWorld<Chunk>::set(Coord x, Coord y, Coord z, Temperature temperature) {
-    return getChunk(x, y, z).set(x, y, z, temperature);
+    return getChunk(x, y, z)->set(x, y, z, temperature);
 }
 
 template<typename Chunk>
 void SynchronizedListGenericChunkedTemperatureWorld<Chunk>::amplify(Coord x, Coord y, Coord z, Temperature temperature) {
-    return getChunk(x, y, z).amplify(x, y, z, temperature);
+    return getChunk(x, y, z)->amplify(x, y, z, temperature);
 }
 
 template<typename Chunk>
 void SynchronizedListGenericChunkedTemperatureWorld<Chunk>::addChunk(Chunk chunk) {
     std::lock_guard<std::mutex> guard(_chunksMutex);
-    _chunks.push_back(chunk);
+    _chunks.push_back(std::shared_ptr<Chunk>(chunk));
 }
 
 template<typename Chunk>
 void SynchronizedListGenericChunkedTemperatureWorld<Chunk>::removeChunk(Chunk chunk) {
     std::lock_guard<std::mutex> guard(_chunksMutex);
-    _chunks.remove(chunk);
+    _chunks.remove(std::shared_ptr<Chunk>(chunk));
 }

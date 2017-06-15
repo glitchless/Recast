@@ -17,7 +17,7 @@ public:
     OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld(NeedChunkFn needChunkFn, MakeChunkFn makeChunkFn);
 
     bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
-    IBoundTemperatureWorld getChunk(Coord x, Coord y, Coord z) const override;
+    std::shared_ptr<IBoundTemperatureWorld> getChunk(Coord x, Coord y, Coord z) const override;
 
 protected:
     NeedChunkFn _needChunkFn;

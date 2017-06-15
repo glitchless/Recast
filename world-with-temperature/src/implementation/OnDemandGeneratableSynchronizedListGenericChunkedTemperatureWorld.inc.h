@@ -14,8 +14,8 @@ OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld<Chunk>::OnDema
 template<typename Chunk>
 bool OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld<Chunk>::hasChunk(Coord x, Coord y, Coord z) const noexcept {
     std::lock_guard<std::mutex> guard(this->_chunksMutex);
-    for (const Chunk& chunk : this->_chunks) {
-        if (chunk.has(x, y, z)) {
+    for (const std::shared_ptr<Chunk>& chunk : this->_chunks) {
+        if (chunk->has(x, y, z)) {
             return true;
         }
     }
@@ -23,15 +23,16 @@ bool OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld<Chunk>::h
 }
 
 template<typename Chunk>
-IBoundTemperatureWorld OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld<Chunk>::getChunk(Coord x, Coord y, Coord z) const {
+std::shared_ptr<IBoundTemperatureWorld> OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld<Chunk>::getChunk(Coord x, Coord y, Coord z) const {
     std::lock_guard<std::mutex> guard(this->_chunksMutex);
-    for (const Chunk& chunk : this->_chunks) {
-        if (chunk.has(x, y, z)) {
+    for (const std::shared_ptr<Chunk>& chunk : this->_chunks) {
+        if (chunk->has(x, y, z)) {
             return chunk;
         }
     }
     if (_needChunkFn(x, y, z)) {
-        this->_chunks.push_back(std::move(_makeChunkFn(x, y, z)));
+        Chunk* newChunk = new Chunk(_makeChunkFn(x, y, z));
+        this->_chunks.push_back(std::shared_ptr<Chunk>(newChunk));
     } else {
         throw std::out_of_range("No chunk exist at this point");
     }

@@ -64,7 +64,7 @@ SynchronizedVectorBoundTemperatureWorld::SynchronizedVectorBoundTemperatureWorld
 }
 
 SynchronizedVectorBoundTemperatureWorld::SynchronizedVectorBoundTemperatureWorld(SynchronizedVectorBoundTemperatureWorld&& other)
-        : SynchronizedVectorBoundTemperatureWorld(other, lock_guard<mutex>(other._dataMutex))
+        : SynchronizedVectorBoundTemperatureWorld(move(other), lock_guard<mutex>(other._dataMutex))
 {
 }
 

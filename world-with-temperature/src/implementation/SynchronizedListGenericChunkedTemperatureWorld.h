@@ -16,8 +16,8 @@ public:
     SynchronizedListGenericChunkedTemperatureWorld();
 
     bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
-    IBoundTemperatureWorld getChunk(Coord x, Coord y, Coord z) const override;
-    void foreachChunk(std::function<void(const IBoundTemperatureWorld&)> func) const override;
+    std::shared_ptr<IBoundTemperatureWorld> getChunk(Coord x, Coord y, Coord z) const override;
+    void foreachChunk(std::function<void(IBoundTemperatureWorld&)> func) const override;
 
     bool has(Coord x, Coord y, Coord z) const noexcept override;
     Temperature get(Coord x, Coord y, Coord z) const override;
@@ -28,7 +28,7 @@ public:
     void removeChunk(Chunk chunk);
 
 protected:
-    mutable std::list<Chunk> _chunks;
+    mutable std::list<std::shared_ptr<Chunk>> _chunks;
     mutable std::mutex _chunksMutex;
 };
 
