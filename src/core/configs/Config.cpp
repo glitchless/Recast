@@ -21,6 +21,7 @@ using namespace boost::property_tree;
 const int CONFIG_VERSION = 1;
 const string DEFAULT_FOLDER("./config/");
 const string DEFAULT_CONFIG("general.json");
+const int NOTHING = -1;
 static Config *INSTANCE = NULL;
 
 Config *Config::instance() {
@@ -37,7 +38,7 @@ Config::Config(const string &filename) {
     } catch (const json_parser_error &e) {
         save();
     }
-    if (pt.get("config.version", NULL) == NULL) {
+    if (pt.get("config.version", NOTHING) == NOTHING) {
         pt.put("config.version", CONFIG_VERSION);
     }
 }
