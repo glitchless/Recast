@@ -21,7 +21,7 @@ if (Boost_NO_SYSTEM_PATHS)
     set(BOOST_LIBRARY_DIRS "${BOOST_ROOT}/lib")
 endif (Boost_NO_SYSTEM_PATHS)
 add_definitions(-DBOOST_LOG_DYN_LINK)
-find_package(Boost 1.61 COMPONENTS system thread log program_options filesystem REQUIRED)
+find_package(Boost 1.61 COMPONENTS system thread log program_options filesystem log REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
 add_executable(recast-server ${SOURCE_FILES})
