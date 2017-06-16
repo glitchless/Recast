@@ -16,9 +16,12 @@
 /**
  * @brief Player class.
  *
- * Lol. Aka Context for Player only.
+ * Aka Context for Player only.
  */
 class Player {
+public:
+    Player(Point location) : location(location) {};
+
 private:
     int id;
     Point location;

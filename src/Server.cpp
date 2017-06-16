@@ -23,6 +23,7 @@
 
 #include "Server.h"
 #include "threads/InputThread.h"
+#include "models/collections/PlayersOnline.h"
 
 using namespace std;
 using namespace boost;
@@ -52,6 +53,7 @@ void Server::initServer() {
 
 Server::Server() {
     isLaunching = false;
+    players = new PlayersOnline(Config::instance()->get("server.max_players", 20));
 }
 
 bool Server::shutdown() {
@@ -65,4 +67,3 @@ void Server::onMessage(const std::string &msg) {
 Server::~Server() {
     delete Config::instance();
 }
-

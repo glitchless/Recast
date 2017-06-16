@@ -37,6 +37,16 @@ public:
 
     static Config *instance();
 
+
+    template<class T>
+    T get(const std::string &key, T defaultVar) {
+        try {
+            return tree().get<T>(key);
+        } catch (std::exception &e) {
+            tree().put(key, defaultVar);
+            return defaultVar;
+        }
+    }
 private:
 
     std::string filename;

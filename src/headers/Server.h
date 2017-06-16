@@ -19,6 +19,8 @@
 
 class Player;
 
+class PlayersOnline;
+
 /**
  * @brief Main class in Recast Server
  */
@@ -45,10 +47,12 @@ public:
 
     bool isRunning() const { return isLaunching; }
 
+    PlayersOnline *getPlayers() const { return players; }
+
 private:
     volatile bool isLaunching;
-
     std::thread inputThread;
+    PlayersOnline *players;
 };
 
 
