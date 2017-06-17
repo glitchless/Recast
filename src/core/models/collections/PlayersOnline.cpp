@@ -6,7 +6,7 @@
  * @date 16.06.17
  * @email nikita@kulikof.ru
  *
- * Player online thread-safetly class
+ * Player online thread-safe class
  * 
  **/
 

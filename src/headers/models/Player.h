@@ -14,7 +14,7 @@
 #include "Point.h"
 
 /**
- * @brief Player class. XP, Live point and other
+ * @brief Player class. XP, Life points and other
  */
 struct Player {
 public:

@@ -13,7 +13,7 @@
 #include "Player.h"
 
 /**
- * @brief User is a technical data for player (login, password and other)
+ * @brief User - technical data of a player (login, password and other)
  */
 struct User {
 public:

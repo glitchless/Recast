@@ -18,7 +18,7 @@ static const char ALPHANUM[] =
                 "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 "abcdefghijklmnopqrstuvwxyz";
 /**
- * Return random string contains [0-9A-Za-z] symbols
+ * Return random string that contains symbols [0-9A-Za-z]
  *
  * @param len of string
  * @return std::string

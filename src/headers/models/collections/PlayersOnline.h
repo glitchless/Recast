@@ -6,7 +6,7 @@
  * @date 16.06.17
  * @email nikita@kulikof.ru
  *
- * Player online thread-safetly class
+ * Player online thread-safe class
  * 
  **/
 #ifndef RECAST_SERVER_PLAYERSONLINE_H
@@ -19,7 +19,7 @@
 #include "io/SQLite.h"
 #include "models/Player.h"
 
-const int SESSION_LENGTH = 128; //// Length session string
+const int SESSION_LENGTH = 128; //// Length of session string
 
 class PlayersOnline {
 public:
@@ -33,8 +33,8 @@ public:
 
     /**
      * Auth player on Server. Get all game data from SQLite
-     * On failed auth (if user don't contains in table) throw InvalidLoginOrPassword
-     * On fulled server (maxPlayer == currentPlayers) throw ServerFullException
+     * On failed auth (if user is not in a table) throw InvalidLoginOrPassword
+     * On fulled server (maxPlayers == currentPlayers) throw ServerFullException
      *
      * @warning Can throw exception! Must be in try{}catch{} block
      * @param login user login
@@ -44,14 +44,14 @@ public:
     std::string authPlayer(std::string login, std::string password);
 
     /**
-     * Register player in SQLite. Can throw InvalidLoginOrPassword when login already exist
+     * Register player in SQLite. Can throw InvalidLoginOrPassword when login already exists
      * @param login new login
      * @param password user password
      */
     void registerPlayer(std::string login, std::string password);
 
     /**
-     * Remove user from user list and save in SQLite
+     * Remove user from user list and save that in SQLite
      *
      * @param session
      * @return
@@ -63,7 +63,7 @@ public:
 private:
     std::unordered_map<std::string, Player *> players; //// Hashmap <Session, Player>
     mutable std::mutex lock_writing;
-    int maxPlayer;
+    int maxPlayers;
     volatile int currentPlayers;
     SQLite sqLite;
 };

@@ -6,7 +6,7 @@
  * @date 17.06.17
  * @email nikita@kulikof.ru
  *
- * This class helped easy put or get var from DB. Using sqlite_orm and sqlite
+ * This class helps to easily put or get var from DB. Using sqlite_orm and sqlite
  * 
  **/
 #ifndef RECAST_SERVER_SQLITE_H
@@ -40,7 +40,7 @@ inline auto create_db() {
                                                &User::playerId)));
 }
 /**
- * @brief This class helped easy put or get var from DB. Using sqlite_orm and sqlite
+ * @brief This class helps to easily put or get var from DB. Using sqlite_orm and sqlite
  **/
 class SQLite {
 public:
