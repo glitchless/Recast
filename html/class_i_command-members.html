@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,10 +91,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_i_command.html">ICommand</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ICommand</b>() (defined in <a class="el" href="class_i_command.html">ICommand</a>)</td><td class="entry"><a class="el" href="class_i_command.html">ICommand</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>ICommand</b>(const ICommand &amp;other) (defined in <a class="el" href="class_i_command.html">ICommand</a>)</td><td class="entry"><a class="el" href="class_i_command.html">ICommand</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>isValid</b>(const std::string &amp;cmd, const std::vector&lt; std::string &gt; &amp;args) const =0 (defined in <a class="el" href="class_i_command.html">ICommand</a>)</td><td class="entry"><a class="el" href="class_i_command.html">ICommand</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>onCommand</b>(ICommandSender &amp;sender, const std::string &amp;cmd, const std::vector&lt; std::string &gt; &amp;args)=0 (defined in <a class="el" href="class_i_command.html">ICommand</a>)</td><td class="entry"><a class="el" href="class_i_command.html">ICommand</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_command.html#acf142bc073aaf829663ba395bacd34cc">ICommand</a>()</td><td class="entry"><a class="el" href="class_i_command.html">ICommand</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_command.html#a1a3e297aea5c94d785060e49801860dc">ICommand</a>(const ICommand &amp;other)</td><td class="entry"><a class="el" href="class_i_command.html">ICommand</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_command.html#acb0beea12bd5ec963884dc35d4d48014">isValid</a>(const std::string &amp;cmd, const std::vector&lt; std::string &gt; &amp;args) const =0</td><td class="entry"><a class="el" href="class_i_command.html">ICommand</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_command.html#a55f931bb7304e2bc591ba2edd717e86c">onCommand</a>(ICommandSender &amp;sender, const std::string &amp;cmd, const std::vector&lt; std::string &gt; &amp;args)=0</td><td class="entry"><a class="el" href="class_i_command.html">ICommand</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

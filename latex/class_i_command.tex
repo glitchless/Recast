@@ -17,20 +17,29 @@ Inheritance diagram for I\-Command\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=162pt]{class_i_command__inherit__graph}
+\includegraphics[width=166pt]{class_i_command__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for I\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_i_command__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_i_command_a1a3e297aea5c94d785060e49801860dc}{{\bfseries I\-Command} (const \hyperlink{class_i_command}{I\-Command} \&other)}\label{class_i_command_a1a3e297aea5c94d785060e49801860dc}
-
+\hyperlink{class_i_command_acf142bc073aaf829663ba395bacd34cc}{I\-Command} ()
 \item 
-\hypertarget{class_i_command_acb0beea12bd5ec963884dc35d4d48014}{virtual bool {\bfseries is\-Valid} (const std\-::string \&cmd, const std\-::vector$<$ std\-::string $>$ \&args) const =0}\label{class_i_command_acb0beea12bd5ec963884dc35d4d48014}
-
+\hyperlink{class_i_command_a1a3e297aea5c94d785060e49801860dc}{I\-Command} (const \hyperlink{class_i_command}{I\-Command} \&other)
 \item 
-\hypertarget{class_i_command_a55f931bb7304e2bc591ba2edd717e86c}{virtual void {\bfseries on\-Command} (\hyperlink{class_i_command_sender}{I\-Command\-Sender} \&sender, const std\-::string \&cmd, const std\-::vector$<$ std\-::string $>$ \&args)=0}\label{class_i_command_a55f931bb7304e2bc591ba2edd717e86c}
-
+virtual bool \hyperlink{class_i_command_acb0beea12bd5ec963884dc35d4d48014}{is\-Valid} (const std\-::string \&cmd, const std\-::vector$<$ std\-::string $>$ \&args) const =0
+\item 
+virtual void \hyperlink{class_i_command_a55f931bb7304e2bc591ba2edd717e86c}{on\-Command} (\hyperlink{class_i_command_sender}{I\-Command\-Sender} \&sender, const std\-::string \&cmd, const std\-::vector$<$ std\-::string $>$ \&args)=0
 \end{DoxyCompactItemize}
 
 
@@ -42,6 +51,51 @@ If you want to create new command you should extend \hyperlink{class_i_command}{
 \begin{DoxyWarning}{Warning}
 Don't forget to register your Command in Command\-Manager!!! 
 \end{DoxyWarning}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_i_command_acf142bc073aaf829663ba395bacd34cc}{\index{I\-Command@{I\-Command}!I\-Command@{I\-Command}}
+\index{I\-Command@{I\-Command}!ICommand@{I\-Command}}
+\subsubsection[{I\-Command}]{\setlength{\rightskip}{0pt plus 5cm}I\-Command\-::\-I\-Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_i_command_acf142bc073aaf829663ba395bacd34cc}
+\hypertarget{class_i_command_a1a3e297aea5c94d785060e49801860dc}{\index{I\-Command@{I\-Command}!I\-Command@{I\-Command}}
+\index{I\-Command@{I\-Command}!ICommand@{I\-Command}}
+\subsubsection[{I\-Command}]{\setlength{\rightskip}{0pt plus 5cm}I\-Command\-::\-I\-Command (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\-Command} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_i_command_a1a3e297aea5c94d785060e49801860dc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i_command_acb0beea12bd5ec963884dc35d4d48014}{\index{I\-Command@{I\-Command}!is\-Valid@{is\-Valid}}
+\index{is\-Valid@{is\-Valid}!ICommand@{I\-Command}}
+\subsubsection[{is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool I\-Command\-::is\-Valid (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{cmd, }
+\item[{const std\-::vector$<$ std\-::string $>$ \&}]{args}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_command_acb0beea12bd5ec963884dc35d4d48014}
+
+
+Implemented in \hyperlink{class_stop_command_a0f9a9fd9bb238524e1be3ea25b9bbb79}{Stop\-Command}.
+
+\hypertarget{class_i_command_a55f931bb7304e2bc591ba2edd717e86c}{\index{I\-Command@{I\-Command}!on\-Command@{on\-Command}}
+\index{on\-Command@{on\-Command}!ICommand@{I\-Command}}
+\subsubsection[{on\-Command}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Command\-::on\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Command\-Sender} \&}]{sender, }
+\item[{const std\-::string \&}]{cmd, }
+\item[{const std\-::vector$<$ std\-::string $>$ \&}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_command_a55f931bb7304e2bc591ba2edd717e86c}
+
+
+Implemented in \hyperlink{class_stop_command_a5f1df22a117e1f9afd65f0c55dcfc983}{Stop\-Command}.
+
 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}

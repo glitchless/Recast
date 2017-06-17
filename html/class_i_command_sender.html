@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,29 +91,163 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ICommandSender Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_i_command_sender_8h_source.html">ICommandSender.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ICommandSender:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_command_sender__inherit__graph.png" border="0" usemap="#_i_command_sender_inherit__map" alt="Inheritance graph"/></div>
 <map name="_i_command_sender_inherit__map" id="_i_command_sender_inherit__map">
-<area shape="rect" id="node2" href="class_server.html" title="Main class in Recast Server. " alt="" coords="38,80,97,107"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<area shape="rect" id="node2" href="class_server.html" title="Main class in Recast Server. " alt="" coords="13,176,123,400"/></map>
+</div>
+<div class="dynheader">
+Collaboration diagram for ICommandSender:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_command_sender__coll__graph.png" border="0" usemap="#_i_command_sender_coll__map" alt="Collaboration graph"/></div>
+<map name="_i_command_sender_coll__map" id="_i_command_sender_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afe930466c485c8d9a67f624dc1dcac5e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe930466c485c8d9a67f624dc1dcac5e"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isOP</b> () const =0</td></tr>
+<tr class="memitem:afe930466c485c8d9a67f624dc1dcac5e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command_sender.html#afe930466c485c8d9a67f624dc1dcac5e">isOP</a> () const =0</td></tr>
 <tr class="separator:afe930466c485c8d9a67f624dc1dcac5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe665fdd44daefad719049b540fc14b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe665fdd44daefad719049b540fc14b9"></a>
-virtual <a class="el" href="class_server.html">Server</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getServer</b> ()=0</td></tr>
+<tr class="memitem:afe665fdd44daefad719049b540fc14b9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_server.html">Server</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command_sender.html#afe665fdd44daefad719049b540fc14b9">getServer</a> ()=0</td></tr>
 <tr class="separator:afe665fdd44daefad719049b540fc14b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe8ec89d12e5de40cec1062da47f336c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe8ec89d12e5de40cec1062da47f336c"></a>
-virtual <a class="el" href="struct_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayer</b> ()=0</td></tr>
+<tr class="memitem:abe8ec89d12e5de40cec1062da47f336c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command_sender.html#abe8ec89d12e5de40cec1062da47f336c">getPlayer</a> ()=0</td></tr>
 <tr class="separator:abe8ec89d12e5de40cec1062da47f336c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a613b27b190c7fb5123597939c0896080"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a613b27b190c7fb5123597939c0896080"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onMessage</b> (const std::string &amp;msg)=0</td></tr>
+<tr class="memitem:a613b27b190c7fb5123597939c0896080"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command_sender.html#a613b27b190c7fb5123597939c0896080">onMessage</a> (const std::string &amp;msg)=0</td></tr>
 <tr class="separator:a613b27b190c7fb5123597939c0896080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="abe8ec89d12e5de40cec1062da47f336c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_player.html">Player</a>* ICommandSender::getPlayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_server.html#a35be365123751e27d6c52ad3962b9b1e">Server</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe665fdd44daefad719049b540fc14b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_server.html">Server</a>* ICommandSender::getServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_server.html#a8af940772beedcc0b1243adf3f5aec0c">Server</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_command_sender_afe665fdd44daefad719049b540fc14b9_icgraph.png" border="0" usemap="#class_i_command_sender_afe665fdd44daefad719049b540fc14b9_icgraph" alt=""/></div>
+<map name="class_i_command_sender_afe665fdd44daefad719049b540fc14b9_icgraph" id="class_i_command_sender_afe665fdd44daefad719049b540fc14b9_icgraph">
+<area shape="rect" id="node2" href="class_stop_command.html#a5f1df22a117e1f9afd65f0c55dcfc983" title="StopCommand::onCommand" alt="" coords="246,5,437,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afe930466c485c8d9a67f624dc1dcac5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ICommandSender::isOP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_server.html#a7b6439f1e85af364215c544d675ea972">Server</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_command_sender_afe930466c485c8d9a67f624dc1dcac5e_icgraph.png" border="0" usemap="#class_i_command_sender_afe930466c485c8d9a67f624dc1dcac5e_icgraph" alt=""/></div>
+<map name="class_i_command_sender_afe930466c485c8d9a67f624dc1dcac5e_icgraph" id="class_i_command_sender_afe930466c485c8d9a67f624dc1dcac5e_icgraph">
+<area shape="rect" id="node2" href="class_stop_command.html#a5f1df22a117e1f9afd65f0c55dcfc983" title="StopCommand::onCommand" alt="" coords="219,5,410,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a613b27b190c7fb5123597939c0896080"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ICommandSender::onMessage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_server.html#a37a56fedea3137e9b8080ee0e86e8278">Server</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_command_sender_a613b27b190c7fb5123597939c0896080_icgraph.png" border="0" usemap="#class_i_command_sender_a613b27b190c7fb5123597939c0896080_icgraph" alt=""/></div>
+<map name="class_i_command_sender_a613b27b190c7fb5123597939c0896080_icgraph" id="class_i_command_sender_a613b27b190c7fb5123597939c0896080_icgraph">
+<area shape="rect" id="node2" href="class_command_manager.html#abef8721bbe32e1ecb22f2f3d3b8c0601" title="CommandManager::onCommand" alt="" coords="257,5,471,32"/><area shape="rect" id="node3" href="class_stop_command.html#a5f1df22a117e1f9afd65f0c55dcfc983" title="StopCommand::onCommand" alt="" coords="269,56,459,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/travis/build/bender-wardrobe/Recast/src/headers/commands/<a class="el" href="_i_command_sender_8h_source.html">ICommandSender.h</a></li>
 </ul>

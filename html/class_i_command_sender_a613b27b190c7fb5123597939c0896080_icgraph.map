@@ -1,0 +1,4 @@
+<map id="ICommandSender::onMessage" name="ICommandSender::onMessage">
+<area shape="rect" id="node2" href="$class_command_manager.html#abef8721bbe32e1ecb22f2f3d3b8c0601" title="CommandManager::onCommand" alt="" coords="257,5,471,32"/>
+<area shape="rect" id="node3" href="$class_stop_command.html#a5f1df22a117e1f9afd65f0c55dcfc983" title="StopCommand::onCommand" alt="" coords="269,56,459,83"/>
+</map>

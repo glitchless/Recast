@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,26 +101,159 @@ Inheritance diagram for ICommand:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_command__inherit__graph.png" border="0" usemap="#_i_command_inherit__map" alt="Inheritance graph"/></div>
 <map name="_i_command_inherit__map" id="_i_command_inherit__map">
-<area shape="rect" id="node2" href="class_stop_command.html" title="StopCommand" alt="" coords="5,80,115,107"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<area shape="rect" id="node2" href="class_stop_command.html" title="{StopCommand\n||+ isValid()\l+ onCommand()\l}" alt="" coords="5,177,120,269"/></map>
+</div>
+<div class="dynheader">
+Collaboration diagram for ICommand:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_command__coll__graph.png" border="0" usemap="#_i_command_coll__map" alt="Collaboration graph"/></div>
+<map name="_i_command_coll__map" id="_i_command_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1a3e297aea5c94d785060e49801860dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a3e297aea5c94d785060e49801860dc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ICommand</b> (const <a class="el" href="class_i_command.html">ICommand</a> &amp;other)</td></tr>
+<tr class="memitem:acf142bc073aaf829663ba395bacd34cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command.html#acf142bc073aaf829663ba395bacd34cc">ICommand</a> ()</td></tr>
+<tr class="separator:acf142bc073aaf829663ba395bacd34cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3e297aea5c94d785060e49801860dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command.html#a1a3e297aea5c94d785060e49801860dc">ICommand</a> (const <a class="el" href="class_i_command.html">ICommand</a> &amp;other)</td></tr>
 <tr class="separator:a1a3e297aea5c94d785060e49801860dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb0beea12bd5ec963884dc35d4d48014"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb0beea12bd5ec963884dc35d4d48014"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> (const std::string &amp;cmd, const std::vector&lt; std::string &gt; &amp;args) const =0</td></tr>
+<tr class="memitem:acb0beea12bd5ec963884dc35d4d48014"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command.html#acb0beea12bd5ec963884dc35d4d48014">isValid</a> (const std::string &amp;cmd, const std::vector&lt; std::string &gt; &amp;args) const =0</td></tr>
 <tr class="separator:acb0beea12bd5ec963884dc35d4d48014"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55f931bb7304e2bc591ba2edd717e86c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55f931bb7304e2bc591ba2edd717e86c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onCommand</b> (<a class="el" href="class_i_command_sender.html">ICommandSender</a> &amp;sender, const std::string &amp;cmd, const std::vector&lt; std::string &gt; &amp;args)=0</td></tr>
+<tr class="memitem:a55f931bb7304e2bc591ba2edd717e86c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command.html#a55f931bb7304e2bc591ba2edd717e86c">onCommand</a> (<a class="el" href="class_i_command_sender.html">ICommandSender</a> &amp;sender, const std::string &amp;cmd, const std::vector&lt; std::string &gt; &amp;args)=0</td></tr>
 <tr class="separator:a55f931bb7304e2bc591ba2edd717e86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Superclass for Command object. </p>
 <p>If you want to create new command you should extend <a class="el" href="class_i_command.html" title="Superclass for Command object. ">ICommand</a> class and register that in <a class="el" href="class_command_manager.html" title="Send string-command through CommandManager. ">CommandManager</a> constructor</p>
 <dl class="section warning"><dt>Warning</dt><dd>Don't forget to register your Command in CommandManager!!! </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="acf142bc073aaf829663ba395bacd34cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ICommand::ICommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1a3e297aea5c94d785060e49801860dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ICommand::ICommand </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_i_command.html">ICommand</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="acb0beea12bd5ec963884dc35d4d48014"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ICommand::isValid </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_stop_command.html#a0f9a9fd9bb238524e1be3ea25b9bbb79">StopCommand</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a55f931bb7304e2bc591ba2edd717e86c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ICommand::onCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_command_sender.html">ICommandSender</a> &amp;&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_stop_command.html#a5f1df22a117e1f9afd65f0c55dcfc983">StopCommand</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/travis/build/bender-wardrobe/Recast/src/headers/commands/<a class="el" href="_i_command_8h_source.html">ICommand.h</a></li>
 </ul>
 </div><!-- contents -->

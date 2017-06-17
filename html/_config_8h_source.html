@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,26 +98,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_config.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_config.html">Config</a> {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_config.html">Config</a>(<span class="keyword">const</span> std::string &amp;filename);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_config.html#abc51a2c710c8666d27b53cc03597201d">Config</a>(<span class="keyword">const</span> std::string &amp;filename);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    ~<a class="code" href="class_config.html">Config</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_config.html#a543dce59b66475c5108088ee4ce1cdfc">~Config</a>();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_config.html">Config</a>(<span class="keyword">const</span> <a class="code" href="class_config.html">Config</a> &amp;other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_config.html#abc51a2c710c8666d27b53cc03597201d">Config</a>(<span class="keyword">const</span> <a class="code" href="class_config.html">Config</a> &amp;other) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    boost::property_tree::ptree &amp;tree();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    boost::property_tree::ptree &amp;<a class="code" href="class_config.html#a006701bd126aa5809b3a15e75c63bfb6">tree</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> save();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_config.html#ae7e68962f22a2c965a61702de1c637db">save</a>();</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> load();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_config.html#add4ebd0c89505c9b5368f03264555606">load</a>();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_config.html">Config</a> *instance();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_config.html">Config</a> *<a class="code" href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9">instance</a>();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_config.html#a1f8e429f853f20cac7cf128f2b71543e">   49</a></span>&#160;    T <span class="keyword">get</span>(<span class="keyword">const</span> std::string &amp;key, T defaultVar) {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">return</span> tree().get&lt;T&gt;(key);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_config.html#a006701bd126aa5809b3a15e75c63bfb6">tree</a>().get&lt;T&gt;(key);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        } <span class="keywordflow">catch</span> (std::exception &amp;e) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            tree().put(key, defaultVar);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="class_config.html#a006701bd126aa5809b3a15e75c63bfb6">tree</a>().put(key, defaultVar);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> defaultVar;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
@@ -128,7 +128,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif //RECAST_CONFIG_H</span></div>
+<div class="ttc" id="class_config_html_add4ebd0c89505c9b5368f03264555606"><div class="ttname"><a href="class_config.html#add4ebd0c89505c9b5368f03264555606">Config::load</a></div><div class="ttdeci">void load()</div><div class="ttdef"><b>Definition:</b> Config.cpp:62</div></div>
+<div class="ttc" id="class_config_html_abc51a2c710c8666d27b53cc03597201d"><div class="ttname"><a href="class_config.html#abc51a2c710c8666d27b53cc03597201d">Config::Config</a></div><div class="ttdeci">Config(const std::string &amp;filename)</div></div>
+<div class="ttc" id="class_config_html_ae7e68962f22a2c965a61702de1c637db"><div class="ttname"><a href="class_config.html#ae7e68962f22a2c965a61702de1c637db">Config::save</a></div><div class="ttdeci">void save()</div><div class="ttdef"><b>Definition:</b> Config.cpp:50</div></div>
+<div class="ttc" id="class_config_html_a006701bd126aa5809b3a15e75c63bfb6"><div class="ttname"><a href="class_config.html#a006701bd126aa5809b3a15e75c63bfb6">Config::tree</a></div><div class="ttdeci">boost::property_tree::ptree &amp; tree()</div><div class="ttdef"><b>Definition:</b> Config.cpp:46</div></div>
 <div class="ttc" id="class_config_html"><div class="ttname"><a href="class_config.html">Config</a></div><div class="ttdoc">Config class. </div><div class="ttdef"><b>Definition:</b> Config.h:24</div></div>
+<div class="ttc" id="class_config_html_abf1d4539011ef83cac0fef2ac864a3a9"><div class="ttname"><a href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9">Config::instance</a></div><div class="ttdeci">static Config * instance()</div><div class="ttdef"><b>Definition:</b> Config.cpp:27</div></div>
+<div class="ttc" id="class_config_html_a543dce59b66475c5108088ee4ce1cdfc"><div class="ttname"><a href="class_config.html#a543dce59b66475c5108088ee4ce1cdfc">Config::~Config</a></div><div class="ttdeci">~Config()</div><div class="ttdef"><b>Definition:</b> Config.cpp:66</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

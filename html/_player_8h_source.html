@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -94,22 +94,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef RECAST_SERVER_PLAYER_H</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RECAST_SERVER_PLAYER_H</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;Point.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_point_8h.html">Point.h</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_player.html">   19</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_player.html">Player</a> {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="struct_player.html">Player</a>() : location(<a class="code" href="struct_point.html">Point</a>(0, 0, 0)) {};</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">   21</a></span>&#160;    <a class="code" href="struct_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a>() : <a class="code" href="struct_player.html#adfb7d7a2aa0757fa7bf5a570b74528db">location</a>(<a class="code" href="struct_point.html">Point</a>(0, 0, 0)) {};</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="struct_player.html">Player</a>(<a class="code" href="struct_point.html">Point</a> location) : location(location) {};</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_player.html#ad1c9500a9f02f1055209e1d0e33e27e5">   23</a></span>&#160;    <a class="code" href="struct_player.html#ad1c9500a9f02f1055209e1d0e33e27e5">Player</a>(<a class="code" href="struct_point.html">Point</a> <a class="code" href="struct_player.html#adfb7d7a2aa0757fa7bf5a570b74528db">location</a>) : location(location) {};</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> id;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> userId;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="struct_point.html">Point</a> location;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_player.html#a05e05f3a23de78da7ec032ec2bcf8c6c">id</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_player.html#a5c801c5fa6666baddd65a2863cc6e7f2">   26</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_player.html#a5c801c5fa6666baddd65a2863cc6e7f2">userId</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_player.html#adfb7d7a2aa0757fa7bf5a570b74528db">   27</a></span>&#160;    <a class="code" href="struct_point.html">Point</a> <a class="code" href="struct_player.html#adfb7d7a2aa0757fa7bf5a570b74528db">location</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_PLAYER_H</span></div>
+<div class="ttc" id="struct_player_html_adfb7d7a2aa0757fa7bf5a570b74528db"><div class="ttname"><a href="struct_player.html#adfb7d7a2aa0757fa7bf5a570b74528db">Player::location</a></div><div class="ttdeci">Point location</div><div class="ttdef"><b>Definition:</b> Player.h:27</div></div>
+<div class="ttc" id="_point_8h_html"><div class="ttname"><a href="_point_8h.html">Point.h</a></div></div>
+<div class="ttc" id="struct_player_html_affe0cc3cb714f6deb4e62f0c0d3f1fd8"><div class="ttname"><a href="struct_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player::Player</a></div><div class="ttdeci">Player()</div><div class="ttdef"><b>Definition:</b> Player.h:21</div></div>
 <div class="ttc" id="struct_point_html"><div class="ttname"><a href="struct_point.html">Point</a></div><div class="ttdoc">Just point. </div><div class="ttdef"><b>Definition:</b> Point.h:9</div></div>
+<div class="ttc" id="struct_player_html_a05e05f3a23de78da7ec032ec2bcf8c6c"><div class="ttname"><a href="struct_player.html#a05e05f3a23de78da7ec032ec2bcf8c6c">Player::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> Player.h:23</div></div>
+<div class="ttc" id="struct_player_html_ad1c9500a9f02f1055209e1d0e33e27e5"><div class="ttname"><a href="struct_player.html#ad1c9500a9f02f1055209e1d0e33e27e5">Player::Player</a></div><div class="ttdeci">Player(Point location)</div><div class="ttdef"><b>Definition:</b> Player.h:23</div></div>
+<div class="ttc" id="struct_player_html_a5c801c5fa6666baddd65a2863cc6e7f2"><div class="ttname"><a href="struct_player.html#a5c801c5fa6666baddd65a2863cc6e7f2">Player::userId</a></div><div class="ttdeci">int userId</div><div class="ttdef"><b>Definition:</b> Player.h:26</div></div>
 <div class="ttc" id="struct_player_html"><div class="ttname"><a href="struct_player.html">Player</a></div><div class="ttdoc">Player class. XP, Life points and other. </div><div class="ttdef"><b>Definition:</b> Player.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_command_manager.html#a8a13226bf933396a3f35dfb5bee3e813">CommandManager</a>(<span class="keyword">const</span> <a class="code" href="class_command_manager.html">CommandManager</a> &amp;other) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> onCommand(<a class="code" href="class_i_command_sender.html">ICommandSender</a> *sender, <span class="keyword">const</span> std::string &amp;cmd);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_command_manager.html#abef8721bbe32e1ecb22f2f3d3b8c0601">onCommand</a>(<a class="code" href="class_i_command_sender.html">ICommandSender</a> *sender, <span class="keyword">const</span> std::string &amp;cmd);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::vector&lt;std::shared_ptr&lt;ICommand&gt;&gt; commands;</div>
@@ -118,6 +118,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_COMMANDMANAGER_H</span></div>
 <div class="ttc" id="class_command_manager_html_a8a13226bf933396a3f35dfb5bee3e813"><div class="ttname"><a href="class_command_manager.html#a8a13226bf933396a3f35dfb5bee3e813">CommandManager::CommandManager</a></div><div class="ttdeci">CommandManager()</div><div class="ttdoc">Init CommandManager. </div><div class="ttdef"><b>Definition:</b> CommandManager.cpp:46</div></div>
 <div class="ttc" id="class_command_manager_html"><div class="ttname"><a href="class_command_manager.html">CommandManager</a></div><div class="ttdoc">Send string-command through CommandManager. </div><div class="ttdef"><b>Definition:</b> CommandManager.h:27</div></div>
+<div class="ttc" id="class_command_manager_html_abef8721bbe32e1ecb22f2f3d3b8c0601"><div class="ttname"><a href="class_command_manager.html#abef8721bbe32e1ecb22f2f3d3b8c0601">CommandManager::onCommand</a></div><div class="ttdeci">void onCommand(ICommandSender *sender, const std::string &amp;cmd)</div><div class="ttdef"><b>Definition:</b> CommandManager.cpp:59</div></div>
 <div class="ttc" id="class_i_command_sender_html"><div class="ttname"><a href="class_i_command_sender.html">ICommandSender</a></div><div class="ttdef"><b>Definition:</b> ICommandSender.h:10</div></div>
 <div class="ttc" id="class_i_command_html"><div class="ttname"><a href="class_i_command.html">ICommand</a></div><div class="ttdoc">Superclass for Command object. </div><div class="ttdef"><b>Definition:</b> ICommand.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->

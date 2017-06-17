@@ -1,17 +1,30 @@
 \hypertarget{class_players_online}{\section{Players\-Online Class Reference}
 \label{class_players_online}\index{Players\-Online@{Players\-Online}}
 }
+
+
+{\ttfamily \#include $<$Players\-Online.\-h$>$}
+
+
+
+Collaboration diagram for Players\-Online\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{class_players_online__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_players_online_a8496d232e48655c31e1f74539f11c985}{{\bfseries Players\-Online} (int player\-Count)}\label{class_players_online_a8496d232e48655c31e1f74539f11c985}
-
+\hyperlink{class_players_online_a8496d232e48655c31e1f74539f11c985}{Players\-Online} (int player\-Count)
 \item 
-\hypertarget{class_players_online_ab68bbbd25086eb09f875c7773cc784e6}{std\-::vector$<$ \hyperlink{struct_player}{Player} $\ast$ $>$ {\bfseries get\-Online\-Players} () const }\label{class_players_online_ab68bbbd25086eb09f875c7773cc784e6}
-
+\hyperlink{class_players_online_a2446f8f355a04a40b06ce17032b9c7a1}{$\sim$\-Players\-Online} ()
 \item 
-\hypertarget{class_players_online_a12d773bb368cdcb3fb6137fc19805281}{\hyperlink{struct_player}{Player} $\ast$ {\bfseries get\-Player\-By\-Session} (const std\-::string \&session) const }\label{class_players_online_a12d773bb368cdcb3fb6137fc19805281}
-
+std\-::vector$<$ \hyperlink{struct_player}{Player} $\ast$ $>$ \hyperlink{class_players_online_ab68bbbd25086eb09f875c7773cc784e6}{get\-Online\-Players} () const 
+\item 
+\hyperlink{struct_player}{Player} $\ast$ \hyperlink{class_players_online_a12d773bb368cdcb3fb6137fc19805281}{get\-Player\-By\-Session} (const std\-::string \&session) const 
 \item 
 std\-::string \hyperlink{class_players_online_a5b778414970f89fa01e999c9200c7001}{auth\-Player} (std\-::string login, std\-::string password)  throw (\-Invalid\-Login\-Or\-Password, Server\-Full\-Exception)
 \item 
@@ -19,9 +32,25 @@ void \hyperlink{class_players_online_a26463b293d6c3c38ff600f4b363283cc}{register
 \item 
 bool \hyperlink{class_players_online_a3469d271cd5b7ff8f5e7cbab8ff31b6d}{logout} (const std\-::string \&session)
 \item 
-\hypertarget{class_players_online_acace980a0794f56eecab5ddf01ff51c7}{int {\bfseries players\-Online} () const }\label{class_players_online_acace980a0794f56eecab5ddf01ff51c7}
-
+int \hyperlink{class_players_online_acace980a0794f56eecab5ddf01ff51c7}{players\-Online} () const 
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_players_online_a8496d232e48655c31e1f74539f11c985}{\index{Players\-Online@{Players\-Online}!Players\-Online@{Players\-Online}}
+\index{Players\-Online@{Players\-Online}!PlayersOnline@{Players\-Online}}
+\subsubsection[{Players\-Online}]{\setlength{\rightskip}{0pt plus 5cm}Players\-Online\-::\-Players\-Online (
+\begin{DoxyParamCaption}
+\item[{int}]{player\-Count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_players_online_a8496d232e48655c31e1f74539f11c985}
+\hypertarget{class_players_online_a2446f8f355a04a40b06ce17032b9c7a1}{\index{Players\-Online@{Players\-Online}!$\sim$\-Players\-Online@{$\sim$\-Players\-Online}}
+\index{$\sim$\-Players\-Online@{$\sim$\-Players\-Online}!PlayersOnline@{Players\-Online}}
+\subsubsection[{$\sim$\-Players\-Online}]{\setlength{\rightskip}{0pt plus 5cm}Players\-Online\-::$\sim$\-Players\-Online (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_players_online_a2446f8f355a04a40b06ce17032b9c7a1}
 
 
 \subsection{Member Function Documentation}
@@ -60,6 +89,20 @@ Here is the call graph for this function\-:
 \end{figure}
 
 
+\hypertarget{class_players_online_ab68bbbd25086eb09f875c7773cc784e6}{\index{Players\-Online@{Players\-Online}!get\-Online\-Players@{get\-Online\-Players}}
+\index{get\-Online\-Players@{get\-Online\-Players}!PlayersOnline@{Players\-Online}}
+\subsubsection[{get\-Online\-Players}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Player} $\ast$ $>$ Players\-Online\-::get\-Online\-Players (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_players_online_ab68bbbd25086eb09f875c7773cc784e6}
+\hypertarget{class_players_online_a12d773bb368cdcb3fb6137fc19805281}{\index{Players\-Online@{Players\-Online}!get\-Player\-By\-Session@{get\-Player\-By\-Session}}
+\index{get\-Player\-By\-Session@{get\-Player\-By\-Session}!PlayersOnline@{Players\-Online}}
+\subsubsection[{get\-Player\-By\-Session}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player} $\ast$ Players\-Online\-::get\-Player\-By\-Session (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{session}
+\end{DoxyParamCaption}
+) const}}\label{class_players_online_a12d773bb368cdcb3fb6137fc19805281}
 \hypertarget{class_players_online_a3469d271cd5b7ff8f5e7cbab8ff31b6d}{\index{Players\-Online@{Players\-Online}!logout@{logout}}
 \index{logout@{logout}!PlayersOnline@{Players\-Online}}
 \subsubsection[{logout}]{\setlength{\rightskip}{0pt plus 5cm}bool Players\-Online\-::logout (
@@ -77,6 +120,13 @@ Remove user from user list and save that in \hyperlink{class_s_q_lite}{S\-Q\-Lit
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+\hypertarget{class_players_online_acace980a0794f56eecab5ddf01ff51c7}{\index{Players\-Online@{Players\-Online}!players\-Online@{players\-Online}}
+\index{players\-Online@{players\-Online}!PlayersOnline@{Players\-Online}}
+\subsubsection[{players\-Online}]{\setlength{\rightskip}{0pt plus 5cm}int Players\-Online\-::players\-Online (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_players_online_acace980a0794f56eecab5ddf01ff51c7}
 \hypertarget{class_players_online_a26463b293d6c3c38ff600f4b363283cc}{\index{Players\-Online@{Players\-Online}!register\-Player@{register\-Player}}
 \index{register\-Player@{register\-Player}!PlayersOnline@{Players\-Online}}
 \subsubsection[{register\-Player}]{\setlength{\rightskip}{0pt plus 5cm}void Players\-Online\-::register\-Player (

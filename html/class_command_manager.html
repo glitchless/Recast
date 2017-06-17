@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -96,17 +96,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="class_command_manager.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_command_manager_8h_source.html">CommandManager.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for CommandManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_command_manager__coll__graph.png" border="0" usemap="#_command_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="_command_manager_coll__map" id="_command_manager_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a13226bf933396a3f35dfb5bee3e813"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_manager.html#a8a13226bf933396a3f35dfb5bee3e813">CommandManager</a> ()</td></tr>
 <tr class="memdesc:a8a13226bf933396a3f35dfb5bee3e813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init <a class="el" href="class_command_manager.html" title="Send string-command through CommandManager. ">CommandManager</a>.  <a href="#a8a13226bf933396a3f35dfb5bee3e813">More...</a><br/></td></tr>
 <tr class="separator:a8a13226bf933396a3f35dfb5bee3e813"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaffe7fa7dd8f1dd45b642120013a076"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaffe7fa7dd8f1dd45b642120013a076"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CommandManager</b> (const <a class="el" href="class_command_manager.html">CommandManager</a> &amp;other)=delete</td></tr>
+<tr class="memitem:aeaffe7fa7dd8f1dd45b642120013a076"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_manager.html#aeaffe7fa7dd8f1dd45b642120013a076">CommandManager</a> (const <a class="el" href="class_command_manager.html">CommandManager</a> &amp;other)=delete</td></tr>
 <tr class="separator:aeaffe7fa7dd8f1dd45b642120013a076"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abef8721bbe32e1ecb22f2f3d3b8c0601"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abef8721bbe32e1ecb22f2f3d3b8c0601"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onCommand</b> (<a class="el" href="class_i_command_sender.html">ICommandSender</a> *sender, const std::string &amp;cmd)</td></tr>
+<tr class="memitem:abef8721bbe32e1ecb22f2f3d3b8c0601"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_manager.html#abef8721bbe32e1ecb22f2f3d3b8c0601">onCommand</a> (<a class="el" href="class_i_command_sender.html">ICommandSender</a> *sender, const std::string &amp;cmd)</td></tr>
 <tr class="separator:abef8721bbe32e1ecb22f2f3d3b8c0601"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -129,6 +134,66 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>onCommand</b> (<a cla
 <p>Init <a class="el" href="class_command_manager.html" title="Send string-command through CommandManager. ">CommandManager</a>. </p>
 <p>Adding all objects that extend <a class="el" href="class_i_command.html" title="Superclass for Command object. ">ICommand</a> to list (std::vector).</p>
 <dl class="section warning"><dt>Warning</dt><dd>If you add an <a class="el" href="class_i_command.html" title="Superclass for Command object. ">ICommand</a>, you should add line here </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeaffe7fa7dd8f1dd45b642120013a076"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommandManager::CommandManager </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_command_manager.html">CommandManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="abef8721bbe32e1ecb22f2f3d3b8c0601"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CommandManager::onCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_command_sender.html">ICommandSender</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cmd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_command_manager_abef8721bbe32e1ecb22f2f3d3b8c0601_cgraph.png" border="0" usemap="#class_command_manager_abef8721bbe32e1ecb22f2f3d3b8c0601_cgraph" alt=""/></div>
+<map name="class_command_manager_abef8721bbe32e1ecb22f2f3d3b8c0601_cgraph" id="class_command_manager_abef8721bbe32e1ecb22f2f3d3b8c0601_cgraph">
+<area shape="rect" id="node2" href="class_i_command_sender.html#a613b27b190c7fb5123597939c0896080" title="ICommandSender::onMessage" alt="" coords="269,5,472,32"/></map>
+</div>
+</p>
 
 </div>
 </div>

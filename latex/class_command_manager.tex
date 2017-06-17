@@ -10,16 +10,24 @@ Send string-\/command through \hyperlink{class_command_manager}{Command\-Manager
 
 {\ttfamily \#include $<$Command\-Manager.\-h$>$}
 
+
+
+Collaboration diagram for Command\-Manager\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_command_manager__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_command_manager_a8a13226bf933396a3f35dfb5bee3e813}{Command\-Manager} ()
 \begin{DoxyCompactList}\small\item\em Init \hyperlink{class_command_manager}{Command\-Manager}. \end{DoxyCompactList}\item 
-\hypertarget{class_command_manager_aeaffe7fa7dd8f1dd45b642120013a076}{{\bfseries Command\-Manager} (const \hyperlink{class_command_manager}{Command\-Manager} \&other)=delete}\label{class_command_manager_aeaffe7fa7dd8f1dd45b642120013a076}
-
+\hyperlink{class_command_manager_aeaffe7fa7dd8f1dd45b642120013a076}{Command\-Manager} (const \hyperlink{class_command_manager}{Command\-Manager} \&other)=delete
 \item 
-\hypertarget{class_command_manager_abef8721bbe32e1ecb22f2f3d3b8c0601}{void {\bfseries on\-Command} (\hyperlink{class_i_command_sender}{I\-Command\-Sender} $\ast$sender, const std\-::string \&cmd)}\label{class_command_manager_abef8721bbe32e1ecb22f2f3d3b8c0601}
-
+void \hyperlink{class_command_manager_abef8721bbe32e1ecb22f2f3d3b8c0601}{on\-Command} (\hyperlink{class_i_command_sender}{I\-Command\-Sender} $\ast$sender, const std\-::string \&cmd)
 \end{DoxyCompactItemize}
 
 
@@ -45,6 +53,36 @@ Adding all objects that extend \hyperlink{class_i_command}{I\-Command} to list (
 \begin{DoxyWarning}{Warning}
 If you add an \hyperlink{class_i_command}{I\-Command}, you should add line here 
 \end{DoxyWarning}
+\hypertarget{class_command_manager_aeaffe7fa7dd8f1dd45b642120013a076}{\index{Command\-Manager@{Command\-Manager}!Command\-Manager@{Command\-Manager}}
+\index{Command\-Manager@{Command\-Manager}!CommandManager@{Command\-Manager}}
+\subsubsection[{Command\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Command\-Manager\-::\-Command\-Manager (
+\begin{DoxyParamCaption}
+\item[{const {\bf Command\-Manager} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_command_manager_aeaffe7fa7dd8f1dd45b642120013a076}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_command_manager_abef8721bbe32e1ecb22f2f3d3b8c0601}{\index{Command\-Manager@{Command\-Manager}!on\-Command@{on\-Command}}
+\index{on\-Command@{on\-Command}!CommandManager@{Command\-Manager}}
+\subsubsection[{on\-Command}]{\setlength{\rightskip}{0pt plus 5cm}void Command\-Manager\-::on\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Command\-Sender} $\ast$}]{sender, }
+\item[{const std\-::string \&}]{cmd}
+\end{DoxyParamCaption}
+)}}\label{class_command_manager_abef8721bbe32e1ecb22f2f3d3b8c0601}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_command_manager_abef8721bbe32e1ecb22f2f3d3b8c0601_cgraph}
+\end{center}
+\end{figure}
+
+
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

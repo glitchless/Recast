@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,17 +91,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">PlayersOnline Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_players_online_8h_source.html">PlayersOnline.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for PlayersOnline:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_players_online__coll__graph.png" border="0" usemap="#_players_online_coll__map" alt="Collaboration graph"/></div>
+<map name="_players_online_coll__map" id="_players_online_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8496d232e48655c31e1f74539f11c985"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8496d232e48655c31e1f74539f11c985"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PlayersOnline</b> (int playerCount)</td></tr>
+<tr class="memitem:a8496d232e48655c31e1f74539f11c985"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_players_online.html#a8496d232e48655c31e1f74539f11c985">PlayersOnline</a> (int playerCount)</td></tr>
 <tr class="separator:a8496d232e48655c31e1f74539f11c985"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab68bbbd25086eb09f875c7773cc784e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab68bbbd25086eb09f875c7773cc784e6"></a>
-std::vector&lt; <a class="el" href="struct_player.html">Player</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getOnlinePlayers</b> () const </td></tr>
+<tr class="memitem:a2446f8f355a04a40b06ce17032b9c7a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_players_online.html#a2446f8f355a04a40b06ce17032b9c7a1">~PlayersOnline</a> ()</td></tr>
+<tr class="separator:a2446f8f355a04a40b06ce17032b9c7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68bbbd25086eb09f875c7773cc784e6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_player.html">Player</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_players_online.html#ab68bbbd25086eb09f875c7773cc784e6">getOnlinePlayers</a> () const </td></tr>
 <tr class="separator:ab68bbbd25086eb09f875c7773cc784e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12d773bb368cdcb3fb6137fc19805281"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12d773bb368cdcb3fb6137fc19805281"></a>
-<a class="el" href="struct_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayerBySession</b> (const std::string &amp;session) const </td></tr>
+<tr class="memitem:a12d773bb368cdcb3fb6137fc19805281"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_players_online.html#a12d773bb368cdcb3fb6137fc19805281">getPlayerBySession</a> (const std::string &amp;session) const </td></tr>
 <tr class="separator:a12d773bb368cdcb3fb6137fc19805281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b778414970f89fa01e999c9200c7001"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_players_online.html#a5b778414970f89fa01e999c9200c7001">authPlayer</a> (std::string login, std::string password)  throw (InvalidLoginOrPassword, ServerFullException)</td></tr>
 <tr class="separator:a5b778414970f89fa01e999c9200c7001"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,10 +117,49 @@ std::vector&lt; <a class="el" href="struct_player.html">Player</a> * &gt;&#160;<
 <tr class="separator:a26463b293d6c3c38ff600f4b363283cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3469d271cd5b7ff8f5e7cbab8ff31b6d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_players_online.html#a3469d271cd5b7ff8f5e7cbab8ff31b6d">logout</a> (const std::string &amp;session)</td></tr>
 <tr class="separator:a3469d271cd5b7ff8f5e7cbab8ff31b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acace980a0794f56eecab5ddf01ff51c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acace980a0794f56eecab5ddf01ff51c7"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>playersOnline</b> () const </td></tr>
+<tr class="memitem:acace980a0794f56eecab5ddf01ff51c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_players_online.html#acace980a0794f56eecab5ddf01ff51c7">playersOnline</a> () const </td></tr>
 <tr class="separator:acace980a0794f56eecab5ddf01ff51c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a8496d232e48655c31e1f74539f11c985"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PlayersOnline::PlayersOnline </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>playerCount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2446f8f355a04a40b06ce17032b9c7a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PlayersOnline::~PlayersOnline </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a5b778414970f89fa01e999c9200c7001"></a>
 <div class="memitem">
@@ -168,6 +215,37 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="ab68bbbd25086eb09f875c7773cc784e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="struct_player.html">Player</a> * &gt; PlayersOnline::getOnlinePlayers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a12d773bb368cdcb3fb6137fc19805281"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_player.html">Player</a> * PlayersOnline::getPlayerBySession </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>session</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3469d271cd5b7ff8f5e7cbab8ff31b6d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -189,6 +267,29 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acace980a0794f56eecab5ddf01ff51c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PlayersOnline::playersOnline </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

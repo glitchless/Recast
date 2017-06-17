@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['main',['main',['../_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'Main.cpp']]],
-  ['main_2ecpp',['Main.cpp',['../_main_8cpp.html',1,'']]]
+  ['load',['load',['../class_config.html#add4ebd0c89505c9b5368f03264555606',1,'Config']]],
+  ['location',['location',['../struct_player.html#adfb7d7a2aa0757fa7bf5a570b74528db',1,'Player']]],
+  ['login',['login',['../struct_user.html#a68ef4336327a1ee8b4532a6042485f3a',1,'User']]],
+  ['logout',['logout',['../class_players_online.html#a3469d271cd5b7ff8f5e7cbab8ff31b6d',1,'PlayersOnline']]]
 ];

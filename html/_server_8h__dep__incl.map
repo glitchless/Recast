@@ -1,5 +1,6 @@
 <map id="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/Server.h" name="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/Server.h">
-<area shape="rect" id="node2" href="$_main_8cpp.html" title="Starting point. " alt="" coords="5,109,173,165"/>
-<area shape="rect" id="node3" href="$_server_8cpp.html" title="Config file. " alt="" coords="197,109,365,165"/>
-<area shape="rect" id="node4" href="$_input_thread_8cpp.html" title="Input thread for execution of terminal command. " alt="" coords="389,109,579,165"/>
+<area shape="rect" id="node2" href="$_stop_command_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/core/commands/StopCommand.cpp" alt="" coords="5,109,261,165"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html" title="Starting point. " alt="" coords="287,109,455,165"/>
+<area shape="rect" id="node4" href="$_server_8cpp.html" title="Config file. " alt="" coords="479,109,647,165"/>
+<area shape="rect" id="node5" href="$_input_thread_8cpp.html" title="Input thread for execution of terminal command. " alt="" coords="671,109,860,165"/>
 </map>

@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -97,34 +97,156 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="struct_user.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_user_8h_source.html">User.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for User:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_user__coll__graph.png" border="0" usemap="#_user_coll__map" alt="Collaboration graph"/></div>
+<map name="_user_coll__map" id="_user_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a074cc382f1a4178c6af5b8d7fdc505e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a074cc382f1a4178c6af5b8d7fdc505e7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>User</b> (std::string login, std::string password)</td></tr>
+<tr class="memitem:a4a0137053e591fbb79d9057dd7d2283d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_user.html#a4a0137053e591fbb79d9057dd7d2283d">User</a> ()</td></tr>
+<tr class="separator:a4a0137053e591fbb79d9057dd7d2283d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074cc382f1a4178c6af5b8d7fdc505e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_user.html#a074cc382f1a4178c6af5b8d7fdc505e7">User</a> (std::string <a class="el" href="struct_user.html#a68ef4336327a1ee8b4532a6042485f3a">login</a>, std::string <a class="el" href="struct_user.html#ac2f2e75b15e8eb6cbb030fc85a6cd59f">password</a>)</td></tr>
 <tr class="separator:a074cc382f1a4178c6af5b8d7fdc505e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aa7e6e39b43020bbe9c3a196b3689b0f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7e6e39b43020bbe9c3a196b3689b0f7"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
+<tr class="memitem:aa7e6e39b43020bbe9c3a196b3689b0f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_user.html#aa7e6e39b43020bbe9c3a196b3689b0f7">id</a></td></tr>
 <tr class="separator:aa7e6e39b43020bbe9c3a196b3689b0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add1a0a4d41bf6d364738b19f2cee96a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add1a0a4d41bf6d364738b19f2cee96a6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>playerId</b></td></tr>
+<tr class="memitem:add1a0a4d41bf6d364738b19f2cee96a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_user.html#add1a0a4d41bf6d364738b19f2cee96a6">playerId</a></td></tr>
 <tr class="separator:add1a0a4d41bf6d364738b19f2cee96a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68ef4336327a1ee8b4532a6042485f3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a68ef4336327a1ee8b4532a6042485f3a"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>login</b></td></tr>
+<tr class="memitem:a68ef4336327a1ee8b4532a6042485f3a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_user.html#a68ef4336327a1ee8b4532a6042485f3a">login</a></td></tr>
 <tr class="separator:a68ef4336327a1ee8b4532a6042485f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2f2e75b15e8eb6cbb030fc85a6cd59f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2f2e75b15e8eb6cbb030fc85a6cd59f"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>password</b></td></tr>
+<tr class="memitem:ac2f2e75b15e8eb6cbb030fc85a6cd59f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_user.html#ac2f2e75b15e8eb6cbb030fc85a6cd59f">password</a></td></tr>
 <tr class="separator:ac2f2e75b15e8eb6cbb030fc85a6cd59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55d128918fa7d3e66120d392092227fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55d128918fa7d3e66120d392092227fd"></a>
-std::shared_ptr&lt; <a class="el" href="struct_player.html">Player</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>player</b></td></tr>
+<tr class="memitem:a55d128918fa7d3e66120d392092227fd"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="struct_player.html">Player</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_user.html#a55d128918fa7d3e66120d392092227fd">player</a></td></tr>
 <tr class="separator:a55d128918fa7d3e66120d392092227fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="struct_user.html" title="User - technical data of a player (login, password and other) ">User</a> - technical data of a player (login, password and other) </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a4a0137053e591fbb79d9057dd7d2283d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">User::User </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a074cc382f1a4178c6af5b8d7fdc505e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">User::User </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>login</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aa7e6e39b43020bbe9c3a196b3689b0f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int User::id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a68ef4336327a1ee8b4532a6042485f3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string User::login</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac2f2e75b15e8eb6cbb030fc85a6cd59f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string User::password</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a55d128918fa7d3e66120d392092227fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="struct_player.html">Player</a>&gt; User::player</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="add1a0a4d41bf6d364738b19f2cee96a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int User::playerId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>/home/travis/build/bender-wardrobe/Recast/src/headers/models/<a class="el" href="_user_8h_source.html">User.h</a></li>
 </ul>
 </div><!-- contents -->

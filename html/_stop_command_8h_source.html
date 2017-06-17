@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">StopCommand.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RECAST_SERVER_STOPCOMMAND_H</span></div>
+<a href="_stop_command_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RECAST_SERVER_STOPCOMMAND_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RECAST_SERVER_STOPCOMMAND_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
@@ -98,8 +98,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_stop_command.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_stop_command.html">StopCommand</a>: <span class="keyword">public</span> <a class="code" href="class_i_command.html">ICommand</a> {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">bool</span> isValid(<span class="keyword">const</span> std::string &amp;cmd, <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;args) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> onCommand(<a class="code" href="class_i_command_sender.html">ICommandSender</a> &amp;sender, <span class="keyword">const</span> std::string &amp;cmd, <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;args);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_stop_command.html#a0f9a9fd9bb238524e1be3ea25b9bbb79">isValid</a>(<span class="keyword">const</span> std::string &amp;cmd, <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;args) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stop_command.html#a5f1df22a117e1f9afd65f0c55dcfc983">onCommand</a>(<a class="code" href="class_i_command_sender.html">ICommandSender</a> &amp;sender, <span class="keyword">const</span> std::string &amp;cmd, <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;args);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
@@ -109,6 +109,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="_i_command_8h_html"><div class="ttname"><a href="_i_command_8h.html">ICommand.h</a></div><div class="ttdoc">Command file. </div></div>
 <div class="ttc" id="class_i_command_sender_html"><div class="ttname"><a href="class_i_command_sender.html">ICommandSender</a></div><div class="ttdef"><b>Definition:</b> ICommandSender.h:10</div></div>
 <div class="ttc" id="class_i_command_html"><div class="ttname"><a href="class_i_command.html">ICommand</a></div><div class="ttdoc">Superclass for Command object. </div><div class="ttdef"><b>Definition:</b> ICommand.h:26</div></div>
+<div class="ttc" id="class_stop_command_html_a5f1df22a117e1f9afd65f0c55dcfc983"><div class="ttname"><a href="class_stop_command.html#a5f1df22a117e1f9afd65f0c55dcfc983">StopCommand::onCommand</a></div><div class="ttdeci">void onCommand(ICommandSender &amp;sender, const std::string &amp;cmd, const std::vector&lt; std::string &gt; &amp;args)</div><div class="ttdef"><b>Definition:</b> StopCommand.cpp:12</div></div>
+<div class="ttc" id="class_stop_command_html_a0f9a9fd9bb238524e1be3ea25b9bbb79"><div class="ttname"><a href="class_stop_command.html#a0f9a9fd9bb238524e1be3ea25b9bbb79">StopCommand::isValid</a></div><div class="ttdeci">bool isValid(const std::string &amp;cmd, const std::vector&lt; std::string &gt; &amp;args) const </div><div class="ttdef"><b>Definition:</b> StopCommand.cpp:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

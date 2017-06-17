@@ -10,38 +10,68 @@
 
 {\ttfamily \#include $<$Config.\-h$>$}
 
+
+
+Collaboration diagram for Config\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{class_config__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_config_abc51a2c710c8666d27b53cc03597201d}{{\bfseries Config} (const std\-::string \&filename)}\label{class_config_abc51a2c710c8666d27b53cc03597201d}
-
+\hyperlink{class_config_abc51a2c710c8666d27b53cc03597201d}{Config} (const std\-::string \&filename)
 \item 
-\hypertarget{class_config_aea1b7e862074892ee39a5583c342c482}{{\bfseries Config} (const \hyperlink{class_config}{Config} \&other)=delete}\label{class_config_aea1b7e862074892ee39a5583c342c482}
-
+\hyperlink{class_config_a543dce59b66475c5108088ee4ce1cdfc}{$\sim$\-Config} ()
 \item 
-\hypertarget{class_config_a006701bd126aa5809b3a15e75c63bfb6}{boost\-::property\-\_\-tree\-::ptree \& {\bfseries tree} ()}\label{class_config_a006701bd126aa5809b3a15e75c63bfb6}
-
+\hyperlink{class_config_aea1b7e862074892ee39a5583c342c482}{Config} (const \hyperlink{class_config}{Config} \&other)=delete
 \item 
-\hypertarget{class_config_ae7e68962f22a2c965a61702de1c637db}{void {\bfseries save} ()}\label{class_config_ae7e68962f22a2c965a61702de1c637db}
-
+boost\-::property\-\_\-tree\-::ptree \& \hyperlink{class_config_a006701bd126aa5809b3a15e75c63bfb6}{tree} ()
 \item 
-\hypertarget{class_config_add4ebd0c89505c9b5368f03264555606}{void {\bfseries load} ()}\label{class_config_add4ebd0c89505c9b5368f03264555606}
-
+void \hyperlink{class_config_ae7e68962f22a2c965a61702de1c637db}{save} ()
+\item 
+void \hyperlink{class_config_add4ebd0c89505c9b5368f03264555606}{load} ()
 \item 
 {\footnotesize template$<$class T $>$ }\\T \hyperlink{class_config_a1f8e429f853f20cac7cf128f2b71543e}{get} (const std\-::string \&key, T default\-Var)
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_config_abf1d4539011ef83cac0fef2ac864a3a9}{static \hyperlink{class_config}{Config} $\ast$ {\bfseries instance} ()}\label{class_config_abf1d4539011ef83cac0fef2ac864a3a9}
-
+static \hyperlink{class_config}{Config} $\ast$ \hyperlink{class_config_abf1d4539011ef83cac0fef2ac864a3a9}{instance} ()
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \hyperlink{class_config}{Config} class. 
 
-Using Boost ptree struct. \hyperlink{class_config}{Config} file hashing and buffering in memory. (You can't get an instance of \hyperlink{class_config}{Config} from constructor) Please call Config\-::instance to get an instance of \hyperlink{class_config}{Config}. 
+Using Boost ptree struct. \hyperlink{class_config}{Config} file hashing and buffering in memory. (You can't get an instance of \hyperlink{class_config}{Config} from constructor) Please call \hyperlink{class_config_abf1d4539011ef83cac0fef2ac864a3a9}{Config\-::instance} to get an instance of \hyperlink{class_config}{Config}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_config_abc51a2c710c8666d27b53cc03597201d}{\index{Config@{Config}!Config@{Config}}
+\index{Config@{Config}!Config@{Config}}
+\subsubsection[{Config}]{\setlength{\rightskip}{0pt plus 5cm}Config\-::\-Config (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_config_abc51a2c710c8666d27b53cc03597201d}
+\hypertarget{class_config_a543dce59b66475c5108088ee4ce1cdfc}{\index{Config@{Config}!$\sim$\-Config@{$\sim$\-Config}}
+\index{$\sim$\-Config@{$\sim$\-Config}!Config@{Config}}
+\subsubsection[{$\sim$\-Config}]{\setlength{\rightskip}{0pt plus 5cm}Config\-::$\sim$\-Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_config_a543dce59b66475c5108088ee4ce1cdfc}
+\hypertarget{class_config_aea1b7e862074892ee39a5583c342c482}{\index{Config@{Config}!Config@{Config}}
+\index{Config@{Config}!Config@{Config}}
+\subsubsection[{Config}]{\setlength{\rightskip}{0pt plus 5cm}Config\-::\-Config (
+\begin{DoxyParamCaption}
+\item[{const {\bf Config} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_config_aea1b7e862074892ee39a5583c342c482}
+
 
 \subsection{Member Function Documentation}
 \hypertarget{class_config_a1f8e429f853f20cac7cf128f2b71543e}{\index{Config@{Config}!get@{get}}
@@ -69,6 +99,94 @@ This method create param if not exist
 \begin{DoxyReturn}{Returns}
 defult\-Var returned if config var is empty 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{class_config_a1f8e429f853f20cac7cf128f2b71543e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_config_abf1d4539011ef83cac0fef2ac864a3a9}{\index{Config@{Config}!instance@{instance}}
+\index{instance@{instance}!Config@{Config}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Config} $\ast$ Config\-::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_config_abf1d4539011ef83cac0fef2ac864a3a9}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{class_config_abf1d4539011ef83cac0fef2ac864a3a9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{class_config_abf1d4539011ef83cac0fef2ac864a3a9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_config_add4ebd0c89505c9b5368f03264555606}{\index{Config@{Config}!load@{load}}
+\index{load@{load}!Config@{Config}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Config\-::load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_config_add4ebd0c89505c9b5368f03264555606}
+\hypertarget{class_config_ae7e68962f22a2c965a61702de1c637db}{\index{Config@{Config}!save@{save}}
+\index{save@{save}!Config@{Config}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Config\-::save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_config_ae7e68962f22a2c965a61702de1c637db}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_config_ae7e68962f22a2c965a61702de1c637db_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_config_a006701bd126aa5809b3a15e75c63bfb6}{\index{Config@{Config}!tree@{tree}}
+\index{tree@{tree}!Config@{Config}}
+\subsubsection[{tree}]{\setlength{\rightskip}{0pt plus 5cm}ptree \& Config\-::tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_config_a006701bd126aa5809b3a15e75c63bfb6}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{class_config_a006701bd126aa5809b3a15e75c63bfb6_icgraph}
+\end{center}
+\end{figure}
+
+
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

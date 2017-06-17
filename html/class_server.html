@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,49 +101,322 @@ Inheritance diagram for Server:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server__inherit__graph.png" border="0" usemap="#_server_inherit__map" alt="Inheritance graph"/></div>
 <map name="_server_inherit__map" id="_server_inherit__map">
-<area shape="rect" id="node2" href="class_i_command_sender.html" title="ICommandSender" alt="" coords="5,5,131,32"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<area shape="rect" id="node2" href="class_i_command_sender.html" title="{ICommandSender\n||+ isOP()\l+ getServer()\l+ getPlayer()\l+ onMessage()\l}" alt="" coords="5,6,131,127"/></map>
+</div>
 <div class="dynheader">
 Collaboration diagram for Server:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server__coll__graph.png" border="0" usemap="#_server_coll__map" alt="Collaboration graph"/></div>
 <map name="_server_coll__map" id="_server_coll__map">
-<area shape="rect" id="node2" href="class_i_command_sender.html" title="ICommandSender" alt="" coords="5,5,131,32"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<area shape="rect" id="node2" href="class_i_command_sender.html" title="{ICommandSender\n||+ isOP()\l+ getServer()\l+ getPlayer()\l+ onMessage()\l}" alt="" coords="5,6,131,127"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aca4a9834f8bf136619d3c4cdb1db4e1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca4a9834f8bf136619d3c4cdb1db4e1e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Server</b> (const <a class="el" href="class_server.html">Server</a> &amp;other)=delete</td></tr>
+<tr class="memitem:ad5ec9462b520e59f7ea831e157ee5e59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#ad5ec9462b520e59f7ea831e157ee5e59">Server</a> ()</td></tr>
+<tr class="separator:ad5ec9462b520e59f7ea831e157ee5e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b3aa2579cb1c8cd1d069582c14d0fa6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6">~Server</a> ()</td></tr>
+<tr class="separator:a4b3aa2579cb1c8cd1d069582c14d0fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca4a9834f8bf136619d3c4cdb1db4e1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#aca4a9834f8bf136619d3c4cdb1db4e1e">Server</a> (const <a class="el" href="class_server.html">Server</a> &amp;other)=delete</td></tr>
 <tr class="separator:aca4a9834f8bf136619d3c4cdb1db4e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bc5c00fa3ae1ddfae71274ee7d025ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bc5c00fa3ae1ddfae71274ee7d025ea"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initServer</b> ()</td></tr>
+<tr class="memitem:a7bc5c00fa3ae1ddfae71274ee7d025ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#a7bc5c00fa3ae1ddfae71274ee7d025ea">initServer</a> ()</td></tr>
 <tr class="separator:a7bc5c00fa3ae1ddfae71274ee7d025ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b6439f1e85af364215c544d675ea972"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b6439f1e85af364215c544d675ea972"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isOP</b> () const </td></tr>
+<tr class="memitem:a7b6439f1e85af364215c544d675ea972"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#a7b6439f1e85af364215c544d675ea972">isOP</a> () const </td></tr>
 <tr class="separator:a7b6439f1e85af364215c544d675ea972"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8af940772beedcc0b1243adf3f5aec0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8af940772beedcc0b1243adf3f5aec0c"></a>
-<a class="el" href="class_server.html">Server</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getServer</b> ()</td></tr>
+<tr class="memitem:a8af940772beedcc0b1243adf3f5aec0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_server.html">Server</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#a8af940772beedcc0b1243adf3f5aec0c">getServer</a> ()</td></tr>
 <tr class="separator:a8af940772beedcc0b1243adf3f5aec0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35be365123751e27d6c52ad3962b9b1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35be365123751e27d6c52ad3962b9b1e"></a>
-<a class="el" href="struct_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayer</b> ()</td></tr>
+<tr class="memitem:a35be365123751e27d6c52ad3962b9b1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#a35be365123751e27d6c52ad3962b9b1e">getPlayer</a> ()</td></tr>
 <tr class="separator:a35be365123751e27d6c52ad3962b9b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37a56fedea3137e9b8080ee0e86e8278"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37a56fedea3137e9b8080ee0e86e8278"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onMessage</b> (const std::string &amp;msg)</td></tr>
+<tr class="memitem:a37a56fedea3137e9b8080ee0e86e8278"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#a37a56fedea3137e9b8080ee0e86e8278">onMessage</a> (const std::string &amp;msg)</td></tr>
 <tr class="separator:a37a56fedea3137e9b8080ee0e86e8278"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58c74bafaaf20b24e9243c7cf5fdfd16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58c74bafaaf20b24e9243c7cf5fdfd16"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>shutdown</b> ()</td></tr>
+<tr class="memitem:a58c74bafaaf20b24e9243c7cf5fdfd16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#a58c74bafaaf20b24e9243c7cf5fdfd16">shutdown</a> ()</td></tr>
 <tr class="separator:a58c74bafaaf20b24e9243c7cf5fdfd16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8c22a0d6809e9aa84bebce478ba7bc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8c22a0d6809e9aa84bebce478ba7bc5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isRunning</b> () const </td></tr>
+<tr class="memitem:ab8c22a0d6809e9aa84bebce478ba7bc5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#ab8c22a0d6809e9aa84bebce478ba7bc5">isRunning</a> () const </td></tr>
 <tr class="separator:ab8c22a0d6809e9aa84bebce478ba7bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab103cde2777536fa63b2746b6e0a98d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab103cde2777536fa63b2746b6e0a98d4"></a>
-<a class="el" href="class_players_online.html">PlayersOnline</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayers</b> () const </td></tr>
+<tr class="memitem:ab103cde2777536fa63b2746b6e0a98d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_players_online.html">PlayersOnline</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#ab103cde2777536fa63b2746b6e0a98d4">getPlayers</a> () const </td></tr>
 <tr class="separator:ab103cde2777536fa63b2746b6e0a98d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main class in Recast <a class="el" href="class_server.html" title="Main class in Recast Server. ">Server</a>. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ad5ec9462b520e59f7ea831e157ee5e59"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Server::Server </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_ad5ec9462b520e59f7ea831e157ee5e59_cgraph.png" border="0" usemap="#class_server_ad5ec9462b520e59f7ea831e157ee5e59_cgraph" alt=""/></div>
+<map name="class_server_ad5ec9462b520e59f7ea831e157ee5e59_cgraph" id="class_server_ad5ec9462b520e59f7ea831e157ee5e59_cgraph">
+<area shape="rect" id="node2" href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9" title="Config::instance" alt="" coords="160,5,277,32"/><area shape="rect" id="node3" href="_config_8cpp.html#ab330b966aa1026a8014370d5732fae26" title="DEFAULT_CONFIG" alt="" coords="326,5,469,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b3aa2579cb1c8cd1d069582c14d0fa6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Server::~Server </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6_cgraph.png" border="0" usemap="#class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6_cgraph" alt=""/></div>
+<map name="class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6_cgraph" id="class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6_cgraph">
+<area shape="rect" id="node2" href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9" title="Config::instance" alt="" coords="168,5,285,32"/><area shape="rect" id="node3" href="_config_8cpp.html#ab330b966aa1026a8014370d5732fae26" title="DEFAULT_CONFIG" alt="" coords="334,5,477,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aca4a9834f8bf136619d3c4cdb1db4e1e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Server::Server </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_server.html">Server</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a35be365123751e27d6c52ad3962b9b1e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_player.html">Player</a>* Server::getPlayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_i_command_sender.html#abe8ec89d12e5de40cec1062da47f336c">ICommandSender</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab103cde2777536fa63b2746b6e0a98d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_players_online.html">PlayersOnline</a>* Server::getPlayers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8af940772beedcc0b1243adf3f5aec0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_server.html">Server</a>* Server::getServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_i_command_sender.html#afe665fdd44daefad719049b540fc14b9">ICommandSender</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7bc5c00fa3ae1ddfae71274ee7d025ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::initServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph.png" border="0" usemap="#class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph" alt=""/></div>
+<map name="class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph" id="class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph">
+<area shape="rect" id="node2" href="_server_8cpp.html#a4fa9798662b6f85f704142579620acd0" title="initLogger" alt="" coords="195,5,274,32"/><area shape="rect" id="node3" href="class_input_thread.html#ac33f0f934c6dc40c7747b96e8b60a736" title="InputThread::init" alt="" coords="177,56,293,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_icgraph.png" border="0" usemap="#class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_icgraph" alt=""/></div>
+<map name="class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_icgraph" id="class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_icgraph">
+<area shape="rect" id="node2" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main method :) " alt="" coords="176,5,227,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b6439f1e85af364215c544d675ea972"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Server::isOP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_i_command_sender.html#afe930466c485c8d9a67f624dc1dcac5e">ICommandSender</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab8c22a0d6809e9aa84bebce478ba7bc5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Server::isRunning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a37a56fedea3137e9b8080ee0e86e8278"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::onMessage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_i_command_sender.html#a613b27b190c7fb5123597939c0896080">ICommandSender</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a58c74bafaaf20b24e9243c7cf5fdfd16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Server::shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_a58c74bafaaf20b24e9243c7cf5fdfd16_icgraph.png" border="0" usemap="#class_server_a58c74bafaaf20b24e9243c7cf5fdfd16_icgraph" alt=""/></div>
+<map name="class_server_a58c74bafaaf20b24e9243c7cf5fdfd16_icgraph" id="class_server_a58c74bafaaf20b24e9243c7cf5fdfd16_icgraph">
+<area shape="rect" id="node2" href="class_stop_command.html#a5f1df22a117e1f9afd65f0c55dcfc983" title="StopCommand::onCommand" alt="" coords="179,5,370,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/bender-wardrobe/Recast/src/headers/<a class="el" href="_server_8h_source.html">Server.h</a></li>
 <li>/home/travis/build/bender-wardrobe/Recast/src/<a class="el" href="_server_8cpp.html">Server.cpp</a></li>
 </ul>

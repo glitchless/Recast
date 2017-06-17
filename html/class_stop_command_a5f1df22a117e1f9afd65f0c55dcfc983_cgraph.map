@@ -1,0 +1,6 @@
+<map id="StopCommand::onCommand" name="StopCommand::onCommand">
+<area shape="rect" id="node2" href="$class_i_command_sender.html#afe930466c485c8d9a67f624dc1dcac5e" title="ICommandSender::isOP" alt="" coords="265,5,429,32"/>
+<area shape="rect" id="node3" href="$class_i_command_sender.html#a613b27b190c7fb5123597939c0896080" title="ICommandSender::onMessage" alt="" coords="245,56,448,83"/>
+<area shape="rect" id="node4" href="$class_i_command_sender.html#afe665fdd44daefad719049b540fc14b9" title="ICommandSender::getServer" alt="" coords="251,107,442,133"/>
+<area shape="rect" id="node5" href="$class_server.html#a58c74bafaaf20b24e9243c7cf5fdfd16" title="Server::shutdown" alt="" coords="285,157,409,184"/>
+</map>

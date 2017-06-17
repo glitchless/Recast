@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,30 +102,113 @@ Collaboration diagram for Player:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_player__coll__graph.png" border="0" usemap="#_player_coll__map" alt="Collaboration graph"/></div>
 <map name="_player_coll__map" id="_player_coll__map">
-<area shape="rect" id="node2" href="struct_point.html" title="Just point. " alt="" coords="7,5,59,32"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<area shape="rect" id="node2" href="struct_point.html" title="Just point. " alt="" coords="8,5,80,112"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad1c9500a9f02f1055209e1d0e33e27e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1c9500a9f02f1055209e1d0e33e27e5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Player</b> (<a class="el" href="struct_point.html">Point</a> location)</td></tr>
+<tr class="memitem:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a> ()</td></tr>
+<tr class="separator:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1c9500a9f02f1055209e1d0e33e27e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_player.html#ad1c9500a9f02f1055209e1d0e33e27e5">Player</a> (<a class="el" href="struct_point.html">Point</a> <a class="el" href="struct_player.html#adfb7d7a2aa0757fa7bf5a570b74528db">location</a>)</td></tr>
 <tr class="separator:ad1c9500a9f02f1055209e1d0e33e27e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a05e05f3a23de78da7ec032ec2bcf8c6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05e05f3a23de78da7ec032ec2bcf8c6c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
+<tr class="memitem:a05e05f3a23de78da7ec032ec2bcf8c6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_player.html#a05e05f3a23de78da7ec032ec2bcf8c6c">id</a></td></tr>
 <tr class="separator:a05e05f3a23de78da7ec032ec2bcf8c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c801c5fa6666baddd65a2863cc6e7f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c801c5fa6666baddd65a2863cc6e7f2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>userId</b></td></tr>
+<tr class="memitem:a5c801c5fa6666baddd65a2863cc6e7f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_player.html#a5c801c5fa6666baddd65a2863cc6e7f2">userId</a></td></tr>
 <tr class="separator:a5c801c5fa6666baddd65a2863cc6e7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfb7d7a2aa0757fa7bf5a570b74528db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfb7d7a2aa0757fa7bf5a570b74528db"></a>
-<a class="el" href="struct_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><b>location</b></td></tr>
+<tr class="memitem:adfb7d7a2aa0757fa7bf5a570b74528db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_player.html#adfb7d7a2aa0757fa7bf5a570b74528db">location</a></td></tr>
 <tr class="separator:adfb7d7a2aa0757fa7bf5a570b74528db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="struct_player.html" title="Player class. XP, Life points and other. ">Player</a> class. XP, Life points and other. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="affe0cc3cb714f6deb4e62f0c0d3f1fd8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Player::Player </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad1c9500a9f02f1055209e1d0e33e27e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Player::Player </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_point.html">Point</a>&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a05e05f3a23de78da7ec032ec2bcf8c6c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adfb7d7a2aa0757fa7bf5a570b74528db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_point.html">Point</a> Player::location</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5c801c5fa6666baddd65a2863cc6e7f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::userId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>/home/travis/build/bender-wardrobe/Recast/src/headers/models/<a class="el" href="_player_8h_source.html">Player.h</a></li>
 </ul>
 </div><!-- contents -->

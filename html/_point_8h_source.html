@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,20 +90,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Point.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RECAST_SERVER_POINT_H</span></div>
+<a href="_point_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RECAST_SERVER_POINT_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RECAST_SERVER_POINT_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="struct_point.html">    9</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_point.html">Point</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">float</span> x;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">float</span> y;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">float</span> z;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_point.html#a05dfe2dfbde813ad234b514f30e662f1">   10</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_point.html#a05dfe2dfbde813ad234b514f30e662f1">x</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="struct_point.html#a6101960c8d2d4e8ea1d32c9234bbeb8d">   11</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_point.html#a6101960c8d2d4e8ea1d32c9234bbeb8d">y</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="struct_point.html#a9a666531e0e99adff132be93d2407d0c">   12</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_point.html#a9a666531e0e99adff132be93d2407d0c">z</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="struct_point.html">Point</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z) : x(x), y(y), z(z) {}</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_point.html#a405838cb39b8fb6119633d9ba7e6b4fb">   14</a></span>&#160;    <a class="code" href="struct_point.html#a405838cb39b8fb6119633d9ba7e6b4fb">Point</a>(<span class="keywordtype">float</span> <a class="code" href="struct_point.html#a05dfe2dfbde813ad234b514f30e662f1">x</a>, <span class="keywordtype">float</span> <a class="code" href="struct_point.html#a6101960c8d2d4e8ea1d32c9234bbeb8d">y</a>, <span class="keywordtype">float</span> <a class="code" href="struct_point.html#a9a666531e0e99adff132be93d2407d0c">z</a>) : x(x), y(y), z(z) {}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_POINT_H</span></div>
 <div class="ttc" id="struct_point_html"><div class="ttname"><a href="struct_point.html">Point</a></div><div class="ttdoc">Just point. </div><div class="ttdef"><b>Definition:</b> Point.h:9</div></div>
+<div class="ttc" id="struct_point_html_a405838cb39b8fb6119633d9ba7e6b4fb"><div class="ttname"><a href="struct_point.html#a405838cb39b8fb6119633d9ba7e6b4fb">Point::Point</a></div><div class="ttdeci">Point(float x, float y, float z)</div><div class="ttdef"><b>Definition:</b> Point.h:14</div></div>
+<div class="ttc" id="struct_point_html_a9a666531e0e99adff132be93d2407d0c"><div class="ttname"><a href="struct_point.html#a9a666531e0e99adff132be93d2407d0c">Point::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> Point.h:12</div></div>
+<div class="ttc" id="struct_point_html_a05dfe2dfbde813ad234b514f30e662f1"><div class="ttname"><a href="struct_point.html#a05dfe2dfbde813ad234b514f30e662f1">Point::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> Point.h:10</div></div>
+<div class="ttc" id="struct_point_html_a6101960c8d2d4e8ea1d32c9234bbeb8d"><div class="ttname"><a href="struct_point.html#a6101960c8d2d4e8ea1d32c9234bbeb8d">Point::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> Point.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

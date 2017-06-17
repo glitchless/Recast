@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -97,23 +97,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="class_config.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_config_8h_source.html">Config.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Config:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_config__coll__graph.png" border="0" usemap="#_config_coll__map" alt="Collaboration graph"/></div>
+<map name="_config_coll__map" id="_config_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abc51a2c710c8666d27b53cc03597201d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc51a2c710c8666d27b53cc03597201d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Config</b> (const std::string &amp;filename)</td></tr>
+<tr class="memitem:abc51a2c710c8666d27b53cc03597201d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#abc51a2c710c8666d27b53cc03597201d">Config</a> (const std::string &amp;filename)</td></tr>
 <tr class="separator:abc51a2c710c8666d27b53cc03597201d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea1b7e862074892ee39a5583c342c482"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea1b7e862074892ee39a5583c342c482"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Config</b> (const <a class="el" href="class_config.html">Config</a> &amp;other)=delete</td></tr>
+<tr class="memitem:a543dce59b66475c5108088ee4ce1cdfc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a543dce59b66475c5108088ee4ce1cdfc">~Config</a> ()</td></tr>
+<tr class="separator:a543dce59b66475c5108088ee4ce1cdfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea1b7e862074892ee39a5583c342c482"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#aea1b7e862074892ee39a5583c342c482">Config</a> (const <a class="el" href="class_config.html">Config</a> &amp;other)=delete</td></tr>
 <tr class="separator:aea1b7e862074892ee39a5583c342c482"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a006701bd126aa5809b3a15e75c63bfb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a006701bd126aa5809b3a15e75c63bfb6"></a>
-boost::property_tree::ptree &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>tree</b> ()</td></tr>
+<tr class="memitem:a006701bd126aa5809b3a15e75c63bfb6"><td class="memItemLeft" align="right" valign="top">boost::property_tree::ptree &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a006701bd126aa5809b3a15e75c63bfb6">tree</a> ()</td></tr>
 <tr class="separator:a006701bd126aa5809b3a15e75c63bfb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7e68962f22a2c965a61702de1c637db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7e68962f22a2c965a61702de1c637db"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> ()</td></tr>
+<tr class="memitem:ae7e68962f22a2c965a61702de1c637db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#ae7e68962f22a2c965a61702de1c637db">save</a> ()</td></tr>
 <tr class="separator:ae7e68962f22a2c965a61702de1c637db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add4ebd0c89505c9b5368f03264555606"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add4ebd0c89505c9b5368f03264555606"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> ()</td></tr>
+<tr class="memitem:add4ebd0c89505c9b5368f03264555606"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#add4ebd0c89505c9b5368f03264555606">load</a> ()</td></tr>
 <tr class="separator:add4ebd0c89505c9b5368f03264555606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f8e429f853f20cac7cf128f2b71543e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a1f8e429f853f20cac7cf128f2b71543e"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_config.html#a1f8e429f853f20cac7cf128f2b71543e">get</a> (const std::string &amp;key, T defaultVar)</td></tr>
@@ -121,14 +125,69 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:abf1d4539011ef83cac0fef2ac864a3a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf1d4539011ef83cac0fef2ac864a3a9"></a>
-static <a class="el" href="class_config.html">Config</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>instance</b> ()</td></tr>
+<tr class="memitem:abf1d4539011ef83cac0fef2ac864a3a9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_config.html">Config</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9">instance</a> ()</td></tr>
 <tr class="separator:abf1d4539011ef83cac0fef2ac864a3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_config.html" title="Config class. ">Config</a> class. </p>
-<p>Using Boost ptree struct. <a class="el" href="class_config.html" title="Config class. ">Config</a> file hashing and buffering in memory. (You can't get an instance of <a class="el" href="class_config.html" title="Config class. ">Config</a> from constructor) Please call Config::instance to get an instance of <a class="el" href="class_config.html" title="Config class. ">Config</a>. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p>Using Boost ptree struct. <a class="el" href="class_config.html" title="Config class. ">Config</a> file hashing and buffering in memory. (You can't get an instance of <a class="el" href="class_config.html" title="Config class. ">Config</a> from constructor) Please call <a class="el" href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9">Config::instance</a> to get an instance of <a class="el" href="class_config.html" title="Config class. ">Config</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="abc51a2c710c8666d27b53cc03597201d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Config::Config </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a543dce59b66475c5108088ee4ce1cdfc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Config::~Config </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aea1b7e862074892ee39a5583c342c482"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Config::Config </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_config.html">Config</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a1f8e429f853f20cac7cf128f2b71543e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -177,6 +236,119 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>defultVar returned if config var is empty </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_config_a1f8e429f853f20cac7cf128f2b71543e_cgraph.png" border="0" usemap="#class_config_a1f8e429f853f20cac7cf128f2b71543e_cgraph" alt=""/></div>
+<map name="class_config_a1f8e429f853f20cac7cf128f2b71543e_cgraph" id="class_config_a1f8e429f853f20cac7cf128f2b71543e_cgraph">
+<area shape="rect" id="node2" href="class_config.html#a006701bd126aa5809b3a15e75c63bfb6" title="Config::tree" alt="" coords="141,5,232,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abf1d4539011ef83cac0fef2ac864a3a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_config.html">Config</a> * Config::instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_config_abf1d4539011ef83cac0fef2ac864a3a9_cgraph.png" border="0" usemap="#class_config_abf1d4539011ef83cac0fef2ac864a3a9_cgraph" alt=""/></div>
+<map name="class_config_abf1d4539011ef83cac0fef2ac864a3a9_cgraph" id="class_config_abf1d4539011ef83cac0fef2ac864a3a9_cgraph">
+<area shape="rect" id="node2" href="_config_8cpp.html#ab330b966aa1026a8014370d5732fae26" title="DEFAULT_CONFIG" alt="" coords="171,5,314,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_config_abf1d4539011ef83cac0fef2ac864a3a9_icgraph.png" border="0" usemap="#class_config_abf1d4539011ef83cac0fef2ac864a3a9_icgraph" alt=""/></div>
+<map name="class_config_abf1d4539011ef83cac0fef2ac864a3a9_icgraph" id="class_config_abf1d4539011ef83cac0fef2ac864a3a9_icgraph">
+<area shape="rect" id="node2" href="class_server.html#ad5ec9462b520e59f7ea831e157ee5e59" title="Server::Server" alt="" coords="175,5,281,32"/><area shape="rect" id="node3" href="class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6" title="Server::~Server" alt="" coords="171,56,285,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="add4ebd0c89505c9b5368f03264555606"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Config::load </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae7e68962f22a2c965a61702de1c637db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Config::save </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_config_ae7e68962f22a2c965a61702de1c637db_cgraph.png" border="0" usemap="#class_config_ae7e68962f22a2c965a61702de1c637db_cgraph" alt=""/></div>
+<map name="class_config_ae7e68962f22a2c965a61702de1c637db_cgraph" id="class_config_ae7e68962f22a2c965a61702de1c637db_cgraph">
+<area shape="rect" id="node2" href="_config_8cpp.html#a26d7091acfa5c363d348bbe5043b5c39" title="DEFAULT_FOLDER" alt="" coords="149,5,293,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a006701bd126aa5809b3a15e75c63bfb6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ptree &amp; Config::tree </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_config_a006701bd126aa5809b3a15e75c63bfb6_icgraph.png" border="0" usemap="#class_config_a006701bd126aa5809b3a15e75c63bfb6_icgraph" alt=""/></div>
+<map name="class_config_a006701bd126aa5809b3a15e75c63bfb6_icgraph" id="class_config_a006701bd126aa5809b3a15e75c63bfb6_icgraph">
+<area shape="rect" id="node2" href="class_config.html#a1f8e429f853f20cac7cf128f2b71543e" title="Config::get" alt="" coords="145,5,231,32"/></map>
+</div>
+</p>
 
 </div>
 </div>

@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,19 +91,91 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">InputThread Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_input_thread_8h_source.html">InputThread.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for InputThread:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_thread__coll__graph.png" border="0" usemap="#_input_thread_coll__map" alt="Collaboration graph"/></div>
+<map name="_input_thread_coll__map" id="_input_thread_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a79ba754c063684c11485a951fac84e8b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79ba754c063684c11485a951fac84e8b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>InputThread</b> (<a class="el" href="class_input_thread.html">InputThread</a> &amp;&amp;thr1)</td></tr>
+<tr class="memitem:a79ba754c063684c11485a951fac84e8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_thread.html#a79ba754c063684c11485a951fac84e8b">InputThread</a> (<a class="el" href="class_input_thread.html">InputThread</a> &amp;&amp;thr1)</td></tr>
 <tr class="separator:a79ba754c063684c11485a951fac84e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a486139cd9105ce017bcf930dc3e0747b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a486139cd9105ce017bcf930dc3e0747b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>InputThread</b> (<a class="el" href="class_server.html">Server</a> *srv)</td></tr>
+<tr class="memitem:a486139cd9105ce017bcf930dc3e0747b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_thread.html#a486139cd9105ce017bcf930dc3e0747b">InputThread</a> (<a class="el" href="class_server.html">Server</a> *srv)</td></tr>
 <tr class="separator:a486139cd9105ce017bcf930dc3e0747b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac33f0f934c6dc40c7747b96e8b60a736"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac33f0f934c6dc40c7747b96e8b60a736"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
+<tr class="memitem:ac33f0f934c6dc40c7747b96e8b60a736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_thread.html#ac33f0f934c6dc40c7747b96e8b60a736">init</a> ()</td></tr>
 <tr class="separator:ac33f0f934c6dc40c7747b96e8b60a736"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a79ba754c063684c11485a951fac84e8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">InputThread::InputThread </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_input_thread.html">InputThread</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>thr1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a486139cd9105ce017bcf930dc3e0747b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InputThread::InputThread </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_server.html">Server</a> *&#160;</td>
+          <td class="paramname"><em>srv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac33f0f934c6dc40c7747b96e8b60a736"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InputThread::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_thread_ac33f0f934c6dc40c7747b96e8b60a736_icgraph.png" border="0" usemap="#class_input_thread_ac33f0f934c6dc40c7747b96e8b60a736_icgraph" alt=""/></div>
+<map name="class_input_thread_ac33f0f934c6dc40c7747b96e8b60a736_icgraph" id="class_input_thread_ac33f0f934c6dc40c7747b96e8b60a736_icgraph">
+<area shape="rect" id="node2" href="class_server.html#a7bc5c00fa3ae1ddfae71274ee7d025ea" title="Server::initServer" alt="" coords="171,5,293,32"/><area shape="rect" id="node3" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main method :) " alt="" coords="341,5,392,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/bender-wardrobe/Recast/src/headers/threads/<a class="el" href="_input_thread_8h_source.html">InputThread.h</a></li>
 <li>/home/travis/build/bender-wardrobe/Recast/src/threads/<a class="el" href="_input_thread_8cpp.html">InputThread.cpp</a></li>

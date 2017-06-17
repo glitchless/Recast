@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -96,50 +96,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;sqlite_orm/sqlite_orm.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_player_8h.html">models/Player.h</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;models/User.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_user_8h.html">models/User.h</a>&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> create_db() {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_s_q_lite_8h.html#a5080f07fca3d0d456ceae6e817803fd3">   19</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="_s_q_lite_8h.html#a5080f07fca3d0d456ceae6e817803fd3">create_db</a>() {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">using namespace </span>sqlite_orm;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> make_storage(<span class="stringliteral">&quot;db.sqlite&quot;</span>,</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                        make_table(<span class="stringliteral">&quot;players&quot;</span>,</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                   make_column(<span class="stringliteral">&quot;id&quot;</span>,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                               &amp;Player::id,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                               &amp;<a class="code" href="struct_player.html#a05e05f3a23de78da7ec032ec2bcf8c6c">Player::id</a>,</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                               autoincrement(),</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                               primary_key()),</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                   make_column(<span class="stringliteral">&quot;user_id&quot;</span>,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                               &amp;Player::userId)),</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                               &amp;<a class="code" href="struct_player.html#a5c801c5fa6666baddd65a2863cc6e7f2">Player::userId</a>)),</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                        make_table(<span class="stringliteral">&quot;users&quot;</span>,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                   make_column(<span class="stringliteral">&quot;id&quot;</span>,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                               &amp;User::id,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                               &amp;<a class="code" href="struct_user.html#aa7e6e39b43020bbe9c3a196b3689b0f7">User::id</a>,</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                               autoincrement(),</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                               primary_key()),</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                   make_column(<span class="stringliteral">&quot;login&quot;</span>,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                               &amp;User::login,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                               &amp;<a class="code" href="struct_user.html#a68ef4336327a1ee8b4532a6042485f3a">User::login</a>,</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                               unique()),</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                   make_column(<span class="stringliteral">&quot;password&quot;</span>,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                               &amp;User::password),</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                               &amp;<a class="code" href="struct_user.html#ac2f2e75b15e8eb6cbb030fc85a6cd59f">User::password</a>),</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                   make_column(<span class="stringliteral">&quot;player_id&quot;</span>,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                               &amp;User::playerId)));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                               &amp;<a class="code" href="struct_user.html#add1a0a4d41bf6d364738b19f2cee96a6">User::playerId</a>)));</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_s_q_lite.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_s_q_lite.html">SQLite</a> {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_s_q_lite.html">SQLite</a>() { storage.sync_schema(); }</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_s_q_lite.html#ae7b35dc7e3c41543a0acde669ad4ba0d">   47</a></span>&#160;    <a class="code" href="class_s_q_lite.html#ae7b35dc7e3c41543a0acde669ad4ba0d">SQLite</a>() { storage.sync_schema(); }</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="struct_user.html">User</a> registerUser(std::string login, std::string password);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="struct_user.html">User</a> <a class="code" href="class_s_q_lite.html#a0603da23858970214de63b0cbef55bcc">registerUser</a>(std::string login, std::string password);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="struct_user.html">User</a> authUser(std::string login, std::string password);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="struct_user.html">User</a> <a class="code" href="class_s_q_lite.html#a008a18ecfbb8d3db1127d25d147cdb8b">authUser</a>(std::string login, std::string password);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> update(<a class="code" href="struct_player.html">Player</a> player);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_s_q_lite.html#ad56342e900bc68110c8166c03bac229f">update</a>(<a class="code" href="struct_player.html">Player</a> player);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    decltype(create_db()) storage = create_db();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    decltype(<a class="code" href="_s_q_lite_8h.html#a5080f07fca3d0d456ceae6e817803fd3">create_db</a>()) storage = <a class="code" href="_s_q_lite_8h.html#a5080f07fca3d0d456ceae6e817803fd3">create_db</a>();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_SQLITE_H</span></div>
 <div class="ttc" id="_player_8h_html"><div class="ttname"><a href="_player_8h.html">Player.h</a></div><div class="ttdoc">Player file. </div></div>
+<div class="ttc" id="struct_user_html_aa7e6e39b43020bbe9c3a196b3689b0f7"><div class="ttname"><a href="struct_user.html#aa7e6e39b43020bbe9c3a196b3689b0f7">User::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> User.h:20</div></div>
+<div class="ttc" id="struct_user_html_add1a0a4d41bf6d364738b19f2cee96a6"><div class="ttname"><a href="struct_user.html#add1a0a4d41bf6d364738b19f2cee96a6">User::playerId</a></div><div class="ttdeci">int playerId</div><div class="ttdef"><b>Definition:</b> User.h:21</div></div>
+<div class="ttc" id="class_s_q_lite_html_a0603da23858970214de63b0cbef55bcc"><div class="ttname"><a href="class_s_q_lite.html#a0603da23858970214de63b0cbef55bcc">SQLite::registerUser</a></div><div class="ttdeci">User registerUser(std::string login, std::string password)</div><div class="ttdef"><b>Definition:</b> SQLite.cpp:17</div></div>
+<div class="ttc" id="struct_player_html_a05e05f3a23de78da7ec032ec2bcf8c6c"><div class="ttname"><a href="struct_player.html#a05e05f3a23de78da7ec032ec2bcf8c6c">Player::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> Player.h:23</div></div>
+<div class="ttc" id="struct_user_html_a68ef4336327a1ee8b4532a6042485f3a"><div class="ttname"><a href="struct_user.html#a68ef4336327a1ee8b4532a6042485f3a">User::login</a></div><div class="ttdeci">std::string login</div><div class="ttdef"><b>Definition:</b> User.h:22</div></div>
 <div class="ttc" id="class_s_q_lite_html"><div class="ttname"><a href="class_s_q_lite.html">SQLite</a></div><div class="ttdoc">This class helps to easily put or get var from DB. Using sqlite_orm and sqlite. </div><div class="ttdef"><b>Definition:</b> SQLite.h:45</div></div>
+<div class="ttc" id="struct_user_html_ac2f2e75b15e8eb6cbb030fc85a6cd59f"><div class="ttname"><a href="struct_user.html#ac2f2e75b15e8eb6cbb030fc85a6cd59f">User::password</a></div><div class="ttdeci">std::string password</div><div class="ttdef"><b>Definition:</b> User.h:23</div></div>
+<div class="ttc" id="class_s_q_lite_html_ae7b35dc7e3c41543a0acde669ad4ba0d"><div class="ttname"><a href="class_s_q_lite.html#ae7b35dc7e3c41543a0acde669ad4ba0d">SQLite::SQLite</a></div><div class="ttdeci">SQLite()</div><div class="ttdef"><b>Definition:</b> SQLite.h:47</div></div>
+<div class="ttc" id="_user_8h_html"><div class="ttname"><a href="_user_8h.html">User.h</a></div></div>
+<div class="ttc" id="class_s_q_lite_html_ad56342e900bc68110c8166c03bac229f"><div class="ttname"><a href="class_s_q_lite.html#ad56342e900bc68110c8166c03bac229f">SQLite::update</a></div><div class="ttdeci">void update(Player player)</div><div class="ttdef"><b>Definition:</b> SQLite.cpp:45</div></div>
+<div class="ttc" id="_s_q_lite_8h_html_a5080f07fca3d0d456ceae6e817803fd3"><div class="ttname"><a href="_s_q_lite_8h.html#a5080f07fca3d0d456ceae6e817803fd3">create_db</a></div><div class="ttdeci">auto create_db()</div><div class="ttdef"><b>Definition:</b> SQLite.h:19</div></div>
 <div class="ttc" id="struct_user_html"><div class="ttname"><a href="struct_user.html">User</a></div><div class="ttdoc">User - technical data of a player (login, password and other) </div><div class="ttdef"><b>Definition:</b> User.h:18</div></div>
+<div class="ttc" id="class_s_q_lite_html_a008a18ecfbb8d3db1127d25d147cdb8b"><div class="ttname"><a href="class_s_q_lite.html#a008a18ecfbb8d3db1127d25d147cdb8b">SQLite::authUser</a></div><div class="ttdeci">User authUser(std::string login, std::string password)</div><div class="ttdef"><b>Definition:</b> SQLite.cpp:32</div></div>
+<div class="ttc" id="struct_player_html_a5c801c5fa6666baddd65a2863cc6e7f2"><div class="ttname"><a href="struct_player.html#a5c801c5fa6666baddd65a2863cc6e7f2">Player::userId</a></div><div class="ttdeci">int userId</div><div class="ttdef"><b>Definition:</b> Player.h:26</div></div>
 <div class="ttc" id="struct_player_html"><div class="ttname"><a href="struct_player.html">Player</a></div><div class="ttdoc">Player class. XP, Life points and other. </div><div class="ttdef"><b>Definition:</b> Player.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['registerplayer',['registerPlayer',['../class_players_online.html#a26463b293d6c3c38ff600f4b363283cc',1,'PlayersOnline']]]
+  ['load',['load',['../class_config.html#add4ebd0c89505c9b5368f03264555606',1,'Config']]],
+  ['logout',['logout',['../class_players_online.html#a3469d271cd5b7ff8f5e7cbab8ff31b6d',1,'PlayersOnline']]]
 ];

@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -96,22 +96,121 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="class_s_q_lite.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_s_q_lite_8h_source.html">SQLite.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for SQLite:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_q_lite__coll__graph.png" border="0" usemap="#_s_q_lite_coll__map" alt="Collaboration graph"/></div>
+<map name="_s_q_lite_coll__map" id="_s_q_lite_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0603da23858970214de63b0cbef55bcc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0603da23858970214de63b0cbef55bcc"></a>
-<a class="el" href="struct_user.html">User</a>&#160;</td><td class="memItemRight" valign="bottom"><b>registerUser</b> (std::string login, std::string password)</td></tr>
+<tr class="memitem:ae7b35dc7e3c41543a0acde669ad4ba0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_lite.html#ae7b35dc7e3c41543a0acde669ad4ba0d">SQLite</a> ()</td></tr>
+<tr class="separator:ae7b35dc7e3c41543a0acde669ad4ba0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0603da23858970214de63b0cbef55bcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_user.html">User</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_lite.html#a0603da23858970214de63b0cbef55bcc">registerUser</a> (std::string login, std::string password)</td></tr>
 <tr class="separator:a0603da23858970214de63b0cbef55bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a008a18ecfbb8d3db1127d25d147cdb8b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a008a18ecfbb8d3db1127d25d147cdb8b"></a>
-<a class="el" href="struct_user.html">User</a>&#160;</td><td class="memItemRight" valign="bottom"><b>authUser</b> (std::string login, std::string password)</td></tr>
+<tr class="memitem:a008a18ecfbb8d3db1127d25d147cdb8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_user.html">User</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_lite.html#a008a18ecfbb8d3db1127d25d147cdb8b">authUser</a> (std::string login, std::string password)</td></tr>
 <tr class="separator:a008a18ecfbb8d3db1127d25d147cdb8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad56342e900bc68110c8166c03bac229f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad56342e900bc68110c8166c03bac229f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (<a class="el" href="struct_player.html">Player</a> player)</td></tr>
+<tr class="memitem:ad56342e900bc68110c8166c03bac229f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_lite.html#ad56342e900bc68110c8166c03bac229f">update</a> (<a class="el" href="struct_player.html">Player</a> player)</td></tr>
 <tr class="separator:ad56342e900bc68110c8166c03bac229f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class helps to easily put or get var from DB. Using sqlite_orm and sqlite. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ae7b35dc7e3c41543a0acde669ad4ba0d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SQLite::SQLite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a008a18ecfbb8d3db1127d25d147cdb8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_user.html">User</a> SQLite::authUser </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>login</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0603da23858970214de63b0cbef55bcc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_user.html">User</a> SQLite::registerUser </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>login</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad56342e900bc68110c8166c03bac229f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SQLite::update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_player.html">Player</a>&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/bender-wardrobe/Recast/src/headers/io/<a class="el" href="_s_q_lite_8h_source.html">SQLite.h</a></li>
 <li>/home/travis/build/bender-wardrobe/Recast/src/core/io/<a class="el" href="_s_q_lite_8cpp.html">SQLite.cpp</a></li>
 </ul>

@@ -70,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="globals.html"><span>All</span></a></li>
       <li class="current"><a href="globals_func.html"><span>Functions</span></a></li>
+      <li><a href="globals_vars.html"><span>Variables</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -78,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,9 +90,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="contents">
 &#160;<ul>
+<li>create_db()
+: <a class="el" href="_s_q_lite_8h.html#a5080f07fca3d0d456ceae6e817803fd3">SQLite.h</a>
+</li>
+<li>DEFAULT_CONFIG()
+: <a class="el" href="_config_8cpp.html#ab330b966aa1026a8014370d5732fae26">Config.cpp</a>
+</li>
+<li>DEFAULT_FOLDER()
+: <a class="el" href="_config_8cpp.html#a26d7091acfa5c363d348bbe5043b5c39">Config.cpp</a>
+</li>
 <li>genRandomString()
 : <a class="el" href="_utils_8cpp.html#af9e6c7bb1dffc92ec07e4e8098a027c3">Utils.cpp</a>
 , <a class="el" href="_utils_8h.html#a3ded6fd03b49d7ca090e45b416da7a08">Utils.h</a>
+</li>
+<li>initLogger()
+: <a class="el" href="_server_8cpp.html#a4fa9798662b6f85f704142579620acd0">Server.cpp</a>
 </li>
 <li>main()
 : <a class="el" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">Main.cpp</a>
