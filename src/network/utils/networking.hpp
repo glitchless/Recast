@@ -1,3 +1,13 @@
+/**
+ * @file networking.cpp
+ * @brief Basic networking utils header file
+ * @author StealthTech
+ * @project Recast-server
+ * @date 17.06.17
+ * @email st3althtech@mail.ru
+ *
+ **/
+
 #include <string>
 #include <unistd.h>     // close()
 #include <memory>

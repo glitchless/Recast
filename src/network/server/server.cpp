@@ -1,3 +1,13 @@
+/**
+ * @file server.cpp
+ * @brief Networking server source file
+ * @author StealthTech
+ * @project Recast-server
+ * @date 17.06.17
+ * @email st3althtech@mail.ru
+ *
+ **/
+
 #include <iostream>
 #include <thread>
 #include "networking.hpp"
