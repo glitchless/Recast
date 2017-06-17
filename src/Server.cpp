@@ -19,10 +19,13 @@
 #include <boost/log/utility/setup/common_attributes.hpp>
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
-#include "configs/Config.h"
+#include <exceptions/InvalidLoginOrPassword.h>
 
+#include "io/SQLite.h"
+#include "configs/Config.h"
 #include "Server.h"
 #include "threads/InputThread.h"
+#include "models/collections/PlayersOnline.h"
 
 using namespace std;
 using namespace boost;
@@ -52,6 +55,7 @@ void Server::initServer() {
 
 Server::Server() {
     isLaunching = false;
+    players = new PlayersOnline(Config::instance()->get("server.max_players", 20));
 }
 
 bool Server::shutdown() {
@@ -65,4 +69,3 @@ void Server::onMessage(const std::string &msg) {
 Server::~Server() {
     delete Config::instance();
 }
-

@@ -1,5 +1,4 @@
 /**
- * @mainpage
  * @file Main.cpp
  * @brief Starting point
  * @author LionZXY
