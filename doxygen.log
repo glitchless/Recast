@@ -25,14 +25,20 @@ Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/commands
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/configs
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/io
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/models
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/models/collections
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/utils
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/commands
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/configs
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/io
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/models
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/models/collections
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/threads
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/utils
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/threads
-Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/world
-Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/world/models
 Reading and parsing tag files
 Parsing files
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp...
@@ -45,6 +51,12 @@ Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/commands/StopCo
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/commands/StopCommand.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/utils/Utils.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/utils/Utils.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.h...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.h...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.h...
@@ -52,49 +64,49 @@ Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICom
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommandSender.h...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommandSender.h...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/commands/StopCommand.h...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/StopCommand.h...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/configs/Config.h...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/configs/Config.h...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.h...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.h...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point.h...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point.h...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/Server.h...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/Server.h...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.h...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.h...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/Main.cpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/Main.cpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/Se/home/travis/build/bender-wardrobe/Recast/src/headers/commands/StopCommand.h:10: warning: Example stop was already documented. Ignoring documentation found here.
+Parsing file /home/travis/build/bender-wa/home/travis/build/bender-wardrobe/Recast/src/headers/models/User.h:2: warning: the name `PlayerAuth.h' supplied as the second argument in the \file statement is not an input file
+/home/travis/build/bender-wardrobe/Recast/src/headers/commands/StopCommand.h:10: warning: Example stop was already documented. Ignoring documentation found here.
+/home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/ServerFullException.h:18: warning: Compound ServerFullException is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommandSender.h:10: warning: Compound ICommandSender is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/commands/StopCommand.h:12: warning: Compound StopCommand is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.h:25: warning: Compound PlayersOnline is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/InvalidLoginOrPassword.h:17: warning: Compound InvalidLoginOrPassword is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.h:19: warning: Compound InputThread is not documented.
-/home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp:33: warning: no matching class member found for 
+/home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp:34: warning: no matching class member found for 
   Config::Config(const string &filename)
 Possible candidates:
   Config::Config(const std::string &filename)
   Config::Config(const Config &other)=delete
 
-/home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.h:26: warning: included file On is not found. Check your EXAMPLE_PATH
-/home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp:21: warning: included file stop is not found. Check your EXAMPLE_PATH
-/home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommand.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommandSender.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp:22: warning: Member DEFAULT_FOLDER("./config/") (function) of file Config.cpp is not documented.
-/home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp:23: warning: Member DEFAULT_CONFIG("general.json") (function) of file Config.cpp is not documented.
-/home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp:21: warning: Member CONFIG_VERSION (variable) of file Config.cpp is not documented.
-/home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.h:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.h:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/headers/configs/Config.h:4: warning: Found unknown command `\project'
-rver.cpp...
+rdrobe/Recast/src/headers/commands/StopCommand.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/configs/Config.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/configs/Config.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/InvalidLoginOrPassword.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/InvalidLoginOrPassword.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/ServerFullException.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/ServerFullException.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/models/User.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/models/User.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/Server.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/Server.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Utils.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Utils.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/Main.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/Main.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/Server.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/Server.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/world/models/Player.cpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/world/models/Player.cpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/world/models/Point.cpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/world/models/Point.cpp...
 Building group list...
 Building directory list...
 Building namespace list...
@@ -143,40 +155,91 @@ Finding anchors and sections in the documentation...
 Transferring function references...
 Combining using relations...
 Adding members to index pages...
-Generating style sheet...
+Genera/home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.h:26: warning: included file On is not found. Check your EXAMPLE_PATH
+/home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp:21: warning: included file stop is not found. Check your EXAMPLE_PATH
+/home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommand.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommandSender.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp:22: warning: Member DEFAULT_FOLDER("./config/") (function) of file Config.cpp is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp:23: warning: Member DEFAULT_CONFIG("general.json") (function) of file Config.cpp is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp:21: warning: Member CONFIG_VERSION (variable) of file Config.cpp is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp:24: warning: Member NOTHING (variable) of file Config.cpp is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/core/utils/Utils.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/utils/Utils.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/configs/Config.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/InvalidLoginOrPassword.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/InvalidLoginOrPassword.h:6: warning: Found unknown command `\email'
+ting style sheet...
 Generating search indices...
 Generating example documentation...
 Generating docs for example On...
 Generating docs for example stop...
 Generating file sources...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommand.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommandSender.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/StopCommand.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/utils/Utils.cpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommandSender.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/StopCommand.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/configs/Config.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/InvalidLoginOrPassword.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/ServerFullException.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/User.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/Server.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Utils.h...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/Main.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/Server.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp...
 Generating file documentation...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommand.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommandSender.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/configs/Config.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/utils/Utils.cpp...
+Generating caller graph for function genRandomString
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.h...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.h...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/configs/Config.h...
-Generating docs for file /home/travis/build/bender-wardrobe/R/home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.h:4: warning: Found unknown command `\project'
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/InvalidLoginOrPassword.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/exc/home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/ServerFullException.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/ServerFullException.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.h:19: warning: Member create_db() (function) of file SQLite.h is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.h:23: warning: Member SESSION_LENGTH (variable) of file PlayersOnline.h is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.h:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.h:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.h:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/Server.cpp:30: warning: Member initLogger() (function) of file Server.cpp is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/utils/Utils.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/utils/Utils.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/Server.cpp:33: warning: Member initLogger() (function) of file Server.cpp is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/Server.cpp:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/Server.cpp:5: warning: Found unknown command `\email'
 /home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/world/models/Player.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/world/models/Point.cpp:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.h:31: warning: Member CommandManager(const CommandManager &other)=delete (function) of class CommandManager is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.h:33: warning: Member onCommand(ICommandSender *sender, const std::string &cmd) (function) of class CommandManager is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/configs/Config.h:26: warning: Member Config(const std::string &filename) (function) of class Config is not documented.
@@ -195,29 +258,52 @@ Generating docs for file /home/travis/build/bender-wardrobe/R/home/travis/build/
 /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.h:21: warning: Member InputThread(InputThread &&thr1) (function) of class InputThread is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.h:23: warning: Member InputThread(Server *srv) (function) of class InputThread is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.h:25: warning: Member init() (function) of class InputThread is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/InvalidLoginOrPassword.h:19: warning: Member what() const  (function) of class InvalidLoginOrPassword is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.h:23: warning: Member Player(Point location) (function) of class Player is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.h:25: warning: Member id (variable) of class Player is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.h:26: warning: Member userId (variable) of class Player is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.h:27: warning: Member location (variable) of class Player is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.h:27: warning: Member PlayersOnline(int playerCount) (function) of class PlayersOnline is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.h:31: warning: Member getOnlinePlayers() const  (function) of class PlayersOnline is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.h:33: warning: Member getPlayerBySession(const std::string &session) const  (function) of class PlayersOnline is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.h:62: warning: Member playersOnline() const  (function) of class PlayersOnline is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point.h:14: warning: Member Point(float x, float y, float z) (function) of class Point is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point.h:10: warning: Member x (variable) of class Point is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point.h:11: warning: Member y (variable) of class Point is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point.h:12: warning: Member z (variable) of class Point is not documented.
-/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:32: warning: Member Server(const Server &other)=delete (function) of class Server is not documented.
-/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:34: warning: Member initServer() (function) of class Server is not documented.
-/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:36: warning: Member isOP() const  (function) of class Server is not documented.
-/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:38: warning: Member getServer() (function) of class Server is not documented.
-/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:40: warning: Member getPlayer() (function) of class Server is not documented.
-/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:42: warning: Member onMessage(const std::string &msg) (function) of class Server is not documented.
-/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:44: warning: Member shutdown() (function) of class Server is not documented.
-/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:46: warning: Member isRunning() const  (function) of class Server is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:34: warning: Member Server(const Server &other)=delete (function) of class Server is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:36: warning: Member initServer() (function) of class Server is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:38: warning: Member isOP() const  (function) of class Server is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:40: warning: Member getServer() (function) of class Server is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:42: warning: Member getPlayer() (function) of class Server is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:44: warning: Member onMessage(const std::string &msg) (function) of class Server is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:46: warning: Member shutdown() (function) of class Server is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:48: warning: Member isRunning() const  (function) of class Server is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/Server.h:50: warning: Member getPlayers() const  (function) of class Server is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/ServerFullException.h:20: warning: Member what() const  (function) of class ServerFullException is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.h:49: warning: Member registerUser(std::string login, std::string password) (function) of class SQLite is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.h:51: warning: Member authUser(std::string login, std::string password) (function) of class SQLite is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.h:53: warning: Member update(Player player) (function) of class SQLite is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/commands/StopCommand.h:14: warning: Member isValid(const std::string &cmd, const std::vector< std::string > &args) const  (function) of class StopCommand is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/commands/StopCommand.h:15: warning: Member onCommand(ICommandSender &sender, const std::string &cmd, const std::vector< std::string > &args) (function) of class StopCommand is not documented.
 /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.h:30: warning: Member ICommand(const ICommand &other) (function) of class ICommand is not documented.
-ecast/src/headers/models/Player.h...
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/User.h:28: warning: Member User(std::string login, std::string password) (function) of class User is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/User.h:20: warning: Member id (variable) of class User is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/User.h:21: warning: Member playerId (variable) of class User is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/User.h:22: warning: Member login (variable) of class User is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/User.h:23: warning: Member password (variable) of class User is not documented.
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/User.h:24: warning: Member player (variable) of class User is not documented.
+eptions/ServerFullException.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.h...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/Server.h...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Utils.h...
+Generating caller graph for function genRandomString
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/Main.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/Server.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/world/models/Player.cpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/world/models/Point.cpp...
 Generating page documentation...
 Generating group documentation...
 Generating class documentation...
@@ -226,25 +312,37 @@ Generating docs for compound Config...
 Generating docs for compound ICommand...
 Generating docs for compound ICommandSender...
 Generating docs for compound InputThread...
+Generating docs for compound InvalidLoginOrPassword...
 Generating docs for compound Player...
+Generating docs for compound PlayersOnline...
+Generating call graph for function PlayersOnline::authPlayer
 Generating docs for compound Point...
 Generating docs for compound Server...
+Generating docs for compound ServerFullException...
+Generating docs for compound SQLite...
 Generating docs for compound StopCommand...
+Generating docs for compound User...
 Generating namespace index...
 Generating graph info page...
 Generating directory documentation...
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/models/collections
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core/models/collections
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/commands
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core/commands
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/configs
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core/configs
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers
-Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/world/models
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/io
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core/io
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/models
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core/models
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/threads
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/threads
-Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/world
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/utils
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core/utils
 Generating index page...
 Generating page index...
 Generating module index...
@@ -261,144 +359,240 @@ Generating example index...
 finalizing index lists...
 Running dot...
 Generating dot graphs using 3 parallel threads...
-Running dot for graph 1/80
-Running dot for graph 2/80
-Running dot for graph 3/80
-Running dot for graph 4/80
-Running dot for graph 5/80
-Running dot for graph 6/80
-Running dot for graph 7/80
-Running dot for graph 8/80
-Running dot for graph 9/80
-Running dot for graph 10/80
-Running dot for graph 11/80
-Running dot for graph 12/80
-Running dot for graph 13/80
-Running dot for graph 14/80
-Running dot for graph 15/80
-Running dot for graph 16/80
-Running dot for graph 17/80
-Running dot for graph 18/80
-Running dot for graph 19/80
-Running dot for graph 20/80
-Running dot for graph 21/80
-Running dot for graph 22/80
-Running dot for graph 23/80
-Running dot for graph 24/80
-Running dot for graph 25/80
-Running dot for graph 26/80
-Running dot for graph 27/80
-Running dot for graph 28/80
-Running dot for graph 29/80
-Running dot for graph 30/80
-Running dot for graph 31/80
-Running dot for graph 32/80
-Running dot for graph 33/80
-Running dot for graph 34/80
-Running dot for graph 35/80
-Running dot for graph 36/80
-Running dot for graph 37/80
-Running dot for graph 38/80
-Running dot for graph 39/80
-Running dot for graph 40/80
-Running dot for graph 41/80
-Running dot for graph 42/80
-Running dot for graph 43/80
-Running dot for graph 44/80
-Running dot for graph 45/80
-Running dot for graph 46/80
-Running dot for graph 47/80
-Running dot for graph 48/80
-Running dot for graph 49/80
-Running dot for graph 50/80
-Running dot for graph 51/80
-Running dot for graph 52/80
-Running dot for graph 53/80
-Running dot for graph 54/80
-Running dot for graph 55/80
-Running dot for graph 56/80
-Running dot for graph 57/80
-Running dot for graph 58/80
-Running dot for graph 59/80
-Running dot for graph 60/80
-Running dot for graph 61/80
-Running dot for graph 62/80
-Running dot for graph 63/80
-Running dot for graph 64/80
-Running dot for graph 65/80
-Running dot for graph 66/80
-Running dot for graph 67/80
-Running dot for graph 68/80
-Running dot for graph 69/80
-Running dot for graph 70/80
-Running dot for graph 71/80
-Running dot for graph 72/80
-Running dot for graph 73/80
-Running dot for graph 74/80
-Running dot for graph 75/80
-Running dot for graph 76/80
-Running dot for graph 77/80
-Running dot for graph 78/80
-Running dot for graph 79/80
-Running dot for graph 80/80
-Patching output file 1/59
-Patching output file 2/59
-Patching output file 3/59
-Patching output file 4/59
-Patching output file 5/59
-Patching output file 6/59
-Patching output file 7/59
-Patching output file 8/59
-Patching output file 9/59
-Patching output file 10/59
-Patching output file 11/59
-Patching output file 12/59
-Patching output file 13/59
-Patching output file 14/59
-Patching output file 15/59
-Patching output file 16/59
-Patching output file 17/59
-Patching output file 18/59
-Patching output file 19/59
-Patching output file 20/59
-Patching output file 21/59
-Patching output file 22/59
-Patching output file 23/59
-Patching output file 24/59
-Patching output file 25/59
-Patching output file 26/59
-Patching output file 27/59
-Patching output file 28/59
-Patching output file 29/59
-Patching output file 30/59
-Patching output file 31/59
-Patching output file 32/59
-Patching output file 33/59
-Patching output file 34/59
-Patching output file 35/59
-Patching output file 36/59
-Patching output file 37/59
-Patching output file 38/59
-Patching output file 39/59
-Patching output file 40/59
-Patching output file 41/59
-Patching output file 42/59
-Patching output file 43/59
-Patching output file 44/59
-Patching output file 45/59
-Patching output file 46/59
-Patching output file 47/59
-Patching output file 48/59
-Patching output file 49/59
-Patching output file 50/59
-Patching output file 51/59
-Patching output file 52/59
-Patching output file 53/59
-Patching output file 54/59
-Patching output file 55/59
-Patching output file 56/59
-Patching output file 57/59
-Patching output file 58/59
-Patching output file 59/59
-lookup cache used 75/65536 hits=270 misses=80
+Running dot for graph 1/140
+Running dot for graph 2/140
+Running dot for graph 3/140
+Running dot for graph 4/140
+Running dot for graph 5/140
+Running dot for graph 6/140
+Running dot for graph 7/140
+Running dot for graph 8/140
+Running dot for graph 9/140
+Running dot for graph 10/140
+Running dot for graph 11/140
+Running dot for graph 12/140
+Running dot for graph 13/140
+Running dot for graph 14/140
+Running dot for graph 15/140
+Running dot for graph 16/140
+Running dot for graph 17/140
+Running dot for graph 18/140
+Running dot for graph 19/140
+Running dot for graph 20/140
+Running dot for graph 21/140
+Running dot for graph 22/140
+Running dot for graph 23/140
+Running dot for graph 24/140
+Running dot for graph 25/140
+Running dot for graph 26/140
+Running dot for graph 27/140
+Running dot for graph 28/140
+Running dot for graph 29/140
+Running dot for graph 30/140
+Running dot for graph 31/140
+Running dot for graph 32/140
+Running dot for graph 33/140
+Running dot for graph 34/140
+Running dot for graph 35/140
+Running dot for graph 36/140
+Running dot for graph 37/140
+Running dot for graph 38/140
+Running dot for graph 39/140
+Running dot for graph 40/140
+Running dot for graph 41/140
+Running dot for graph 42/140
+Running dot for graph 43/140
+Running dot for graph 44/140
+Running dot for graph 45/140
+Running dot for graph 46/140
+Running dot for graph 47/140
+Running dot for graph 48/140
+Running dot for graph 49/140
+Running dot for graph 50/140
+Running dot for graph 51/140
+Running dot for graph 52/140
+Running dot for graph 53/140
+Running dot for graph 54/140
+Running dot for graph 55/140
+Running dot for graph 56/140
+Running dot for graph 57/140
+Running dot for graph 58/140
+Running dot for graph 59/140
+Running dot for graph 60/140
+Running dot for graph 61/140
+Running dot for graph 62/140
+Running dot for graph 63/140
+Running dot for graph 64/140
+Running dot for graph 65/140
+Running dot for graph 66/140
+Running dot for graph 67/140
+Running dot for graph 68/140
+Running dot for graph 69/140
+Running dot for graph 70/140
+Running dot for graph 71/140
+Running dot for graph 72/140
+Running dot for graph 73/140
+Running dot for graph 74/140
+Running dot for graph 75/140
+Running dot for graph 76/140
+Running dot for graph 77/140
+Running dot for graph 78/140
+Running dot for graph 79/140
+Running dot for graph 80/140
+Running dot for graph 81/140
+Running dot for graph 82/140
+Running dot for graph 83/140
+Running dot for graph 84/140
+Running dot for graph 85/140
+Running dot for graph 86/140
+Running dot for graph 87/140
+Running dot for graph 88/140
+Running dot for graph 89/140
+Running dot for graph 90/140
+Running dot for graph 91/140
+Running dot for graph 92/140
+Running dot for graph 93/140
+Running dot for graph 94/140
+Running dot for graph 95/140
+Running dot for graph 96/140
+Running dot for graph 97/140
+Running dot for graph 98/140
+Running dot for graph 99/140
+Running dot for graph 100/140
+Running dot for graph 101/140
+Running dot for graph 102/140
+Running dot for graph 103/140
+Running dot for graph 104/140
+Running dot for graph 105/140
+Running dot for graph 106/140
+Running dot for graph 107/140
+Running dot for graph 108/140
+Running dot for graph 109/140
+Running dot for graph 110/140
+Running dot for graph 111/140
+Running dot for graph 112/140
+Running dot for graph 113/140
+Running dot for graph 114/140
+Running dot for graph 115/140
+Running dot for graph 116/140
+Running dot for graph 117/140
+Running dot for graph 118/140
+Running dot for graph 119/140
+Running dot for graph 120/140
+Running dot for graph 121/140
+Running dot for graph 122/140
+Running dot for graph 123/140
+Running dot for graph 124/140
+Running dot for graph 125/140
+Running dot for graph 126/140
+Running dot for graph 127/140
+Running dot for graph 128/140
+Running dot for graph 129/140
+Running dot for graph 130/140
+Running dot for graph 131/140
+Running dot for graph 132/140
+Running dot for graph 133/140
+Running dot for graph 134/140
+Running dot for graph 135/140
+Running dot for graph 136/140
+Running dot for graph 137/140
+Running dot for graph 138/140
+Running dot for graph 139/140
+Running dot for graph 140/140
+Patching output file 1/95
+Patching output file 2/95
+Patching output file 3/95
+Patching output file 4/95
+Patching output file 5/95
+Patching output file 6/95
+Patching output file 7/95
+Patching output file 8/95
+Patching output file 9/95
+Patching output file 10/95
+Patching output file 11/95
+Patching output file 12/95
+Patching output file 13/95
+Patching output file 14/95
+Patching output file 15/95
+Patching output file 16/95
+Patching output file 17/95
+Patching output file 18/95
+Patching output file 19/95
+Patching output file 20/95
+Patching output file 21/95
+Patching output file 22/95
+Patching output file 23/95
+Patching output file 24/95
+Patching output file 25/95
+Patching output file 26/95
+Patching output file 27/95
+Patching output file 28/95
+Patching output file 29/95
+Patching output file 30/95
+Patching output file 31/95
+Patching output file 32/95
+Patching output file 33/95
+Patching output file 34/95
+Patching output file 35/95
+Patching output file 36/95
+Patching output file 37/95
+Patching output file 38/95
+Patching output file 39/95
+Patching output file 40/95
+Patching output file 41/95
+Patching output file 42/95
+Patching output file 43/95
+Patching output file 44/95
+Patching output file 45/95
+Patching output file 46/95
+Patching output file 47/95
+Patching output file 48/95
+Patching output file 49/95
+Patching output file 50/95
+Patching output file 51/95
+Patching output file 52/95
+Patching output file 53/95
+Patching output file 54/95
+Patching output file 55/95
+Patching output file 56/95
+Patching output file 57/95
+Patching output file 58/95
+Patching output file 59/95
+Patching output file 60/95
+Patching output file 61/95
+Patching output file 62/95
+Patching output file 63/95
+Patching output file 64/95
+Patching output file 65/95
+Patching output file 66/95
+Patching output file 67/95
+Patching output file 68/95
+Patching output file 69/95
+Patching output file 70/95
+Patching output file 71/95
+Patching output file 72/95
+Patching output file 73/95
+Patching output file 74/95
+Patching output file 75/95
+Patching output file 76/95
+Patching output file 77/95
+Patching output file 78/95
+Patching output file 79/95
+Patching output file 80/95
+Patching output file 81/95
+Patching output file 82/95
+Patching output file 83/95
+Patching output file 84/95
+Patching output file 85/95
+Patching output file 86/95
+Patching output file 87/95
+Patching output file 88/95
+Patching output file 89/95
+Patching output file 90/95
+Patching output file 91/95
+Patching output file 92/95
+Patching output file 93/95
+Patching output file 94/95
+Patching output file 95/95
+lookup cache used 280/65536 hits=1128 misses=289
 finished...

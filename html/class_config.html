@@ -115,6 +115,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> ()</td></tr>
 <tr class="memitem:add4ebd0c89505c9b5368f03264555606"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add4ebd0c89505c9b5368f03264555606"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> ()</td></tr>
 <tr class="separator:add4ebd0c89505c9b5368f03264555606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f8e429f853f20cac7cf128f2b71543e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a1f8e429f853f20cac7cf128f2b71543e"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_config.html#a1f8e429f853f20cac7cf128f2b71543e">get</a> (const std::string &amp;key, T defaultVar)</td></tr>
+<tr class="separator:a1f8e429f853f20cac7cf128f2b71543e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -125,7 +128,59 @@ static <a class="el" href="class_config.html">Config</a> *&#160;</td><td class="
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_config.html" title="Config class. ">Config</a> class. </p>
 <p>Using Boost ptree struct. <a class="el" href="class_config.html" title="Config class. ">Config</a> file hashing and buffering in memory. (You can't get an instance of <a class="el" href="class_config.html" title="Config class. ">Config</a> from constructor) Please call Config::instance to get an instance of <a class="el" href="class_config.html" title="Config class. ">Config</a>. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a1f8e429f853f20cac7cf128f2b71543e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Config::get </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>defaultVar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method create param if not exist</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>class of config var </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>string with path like 'general.server.port' </td></tr>
+    <tr><td class="paramname">defaultVar</td><td>var used when config var is empty </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>defultVar returned if config var is empty </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/bender-wardrobe/Recast/src/headers/configs/<a class="el" href="_config_8h_source.html">Config.h</a></li>
 <li>/home/travis/build/bender-wardrobe/Recast/src/core/configs/<a class="el" href="_config_8cpp.html">Config.cpp</a></li>
 </ul>

@@ -1,0 +1,100 @@
+\hypertarget{class_players_online}{\section{Players\-Online Class Reference}
+\label{class_players_online}\index{Players\-Online@{Players\-Online}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_players_online_a8496d232e48655c31e1f74539f11c985}{{\bfseries Players\-Online} (int player\-Count)}\label{class_players_online_a8496d232e48655c31e1f74539f11c985}
+
+\item 
+\hypertarget{class_players_online_ab68bbbd25086eb09f875c7773cc784e6}{std\-::vector$<$ \hyperlink{struct_player}{Player} $\ast$ $>$ {\bfseries get\-Online\-Players} () const }\label{class_players_online_ab68bbbd25086eb09f875c7773cc784e6}
+
+\item 
+\hypertarget{class_players_online_a12d773bb368cdcb3fb6137fc19805281}{\hyperlink{struct_player}{Player} $\ast$ {\bfseries get\-Player\-By\-Session} (const std\-::string \&session) const }\label{class_players_online_a12d773bb368cdcb3fb6137fc19805281}
+
+\item 
+std\-::string \hyperlink{class_players_online_a5b778414970f89fa01e999c9200c7001}{auth\-Player} (std\-::string login, std\-::string password)  throw (\-Invalid\-Login\-Or\-Password, Server\-Full\-Exception)
+\item 
+void \hyperlink{class_players_online_a26463b293d6c3c38ff600f4b363283cc}{register\-Player} (std\-::string login, std\-::string password)  throw (\-Invalid\-Login\-Or\-Password)
+\item 
+bool \hyperlink{class_players_online_a3469d271cd5b7ff8f5e7cbab8ff31b6d}{logout} (const std\-::string \&session)
+\item 
+\hypertarget{class_players_online_acace980a0794f56eecab5ddf01ff51c7}{int {\bfseries players\-Online} () const }\label{class_players_online_acace980a0794f56eecab5ddf01ff51c7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_players_online_a5b778414970f89fa01e999c9200c7001}{\index{Players\-Online@{Players\-Online}!auth\-Player@{auth\-Player}}
+\index{auth\-Player@{auth\-Player}!PlayersOnline@{Players\-Online}}
+\subsubsection[{auth\-Player}]{\setlength{\rightskip}{0pt plus 5cm}string Players\-Online\-::auth\-Player (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{login, }
+\item[{std\-::string}]{password}
+\end{DoxyParamCaption}
+) throw  {\bf Invalid\-Login\-Or\-Password}, {\bf Server\-Full\-Exception}) }}\label{class_players_online_a5b778414970f89fa01e999c9200c7001}
+Auth player on \hyperlink{class_server}{Server}. Get all game data from \hyperlink{class_s_q_lite}{S\-Q\-Lite} On failed auth (if user is not in a table) throw \hyperlink{class_invalid_login_or_password}{Invalid\-Login\-Or\-Password} On fulled server (max\-Players == current\-Players) throw \hyperlink{class_server_full_exception}{Server\-Full\-Exception}
+
+\begin{DoxyWarning}{Warning}
+Can throw exception! Must be in try\{\}catch\{\} block 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em login} & user login \\
+\hline
+{\em password} & user password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+session string 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_players_online_a5b778414970f89fa01e999c9200c7001_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_players_online_a3469d271cd5b7ff8f5e7cbab8ff31b6d}{\index{Players\-Online@{Players\-Online}!logout@{logout}}
+\index{logout@{logout}!PlayersOnline@{Players\-Online}}
+\subsubsection[{logout}]{\setlength{\rightskip}{0pt plus 5cm}bool Players\-Online\-::logout (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{session}
+\end{DoxyParamCaption}
+)}}\label{class_players_online_a3469d271cd5b7ff8f5e7cbab8ff31b6d}
+Remove user from user list and save that in \hyperlink{class_s_q_lite}{S\-Q\-Lite}
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_players_online_a26463b293d6c3c38ff600f4b363283cc}{\index{Players\-Online@{Players\-Online}!register\-Player@{register\-Player}}
+\index{register\-Player@{register\-Player}!PlayersOnline@{Players\-Online}}
+\subsubsection[{register\-Player}]{\setlength{\rightskip}{0pt plus 5cm}void Players\-Online\-::register\-Player (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{login, }
+\item[{std\-::string}]{password}
+\end{DoxyParamCaption}
+) throw  {\bf Invalid\-Login\-Or\-Password}) }}\label{class_players_online_a26463b293d6c3c38ff600f4b363283cc}
+Register player in \hyperlink{class_s_q_lite}{S\-Q\-Lite}. Can throw \hyperlink{class_invalid_login_or_password}{Invalid\-Login\-Or\-Password} when login already exists 
+\begin{DoxyParams}{Parameters}
+{\em login} & new login \\
+\hline
+{\em password} & user password \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/models/collections/\hyperlink{_players_online_8h}{Players\-Online.\-h}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/core/models/collections/\hyperlink{_players_online_8cpp}{Players\-Online.\-cpp}\end{DoxyCompactItemize}

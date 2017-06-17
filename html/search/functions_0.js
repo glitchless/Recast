@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['commandmanager',['CommandManager',['../class_command_manager.html#a8a13226bf933396a3f35dfb5bee3e813',1,'CommandManager']]]
+  ['authplayer',['authPlayer',['../class_players_online.html#a5b778414970f89fa01e999c9200c7001',1,'PlayersOnline']]]
 ];

@@ -27,6 +27,8 @@
 \item 
 \hypertarget{class_config_add4ebd0c89505c9b5368f03264555606}{void {\bfseries load} ()}\label{class_config_add4ebd0c89505c9b5368f03264555606}
 
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{class_config_a1f8e429f853f20cac7cf128f2b71543e}{get} (const std\-::string \&key, T default\-Var)
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -40,6 +42,34 @@
 \hyperlink{class_config}{Config} class. 
 
 Using Boost ptree struct. \hyperlink{class_config}{Config} file hashing and buffering in memory. (You can't get an instance of \hyperlink{class_config}{Config} from constructor) Please call Config\-::instance to get an instance of \hyperlink{class_config}{Config}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_config_a1f8e429f853f20cac7cf128f2b71543e}{\index{Config@{Config}!get@{get}}
+\index{get@{get}!Config@{Config}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T Config\-::get (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key, }
+\item[{T}]{default\-Var}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_config_a1f8e429f853f20cac7cf128f2b71543e}
+This method create param if not exist
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & class of config var \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & string with path like 'general.\-server.\-port' \\
+\hline
+{\em default\-Var} & var used when config var is empty \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+defult\-Var returned if config var is empty 
+\end{DoxyReturn}
+
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
