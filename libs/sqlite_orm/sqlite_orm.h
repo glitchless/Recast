@@ -4779,7 +4779,7 @@ namespace sqlite_orm {
                     res = int(sqlite3_last_insert_rowid(db));
                 }else{
                     auto msg = sqlite3_errmsg(db);
-                    throw std::runtime_error(msg);
+                   throw std::runtime_error(msg);
                 }
             }else {
                 auto msg = sqlite3_errmsg(db);

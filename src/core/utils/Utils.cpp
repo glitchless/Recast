@@ -23,7 +23,7 @@ string genRandomString(const size_t len) {
     randStr.reserve(len);
 
     for (int i = 0; i < len; ++i) {
-        randStr[i] = ALPHANUM[rand() % (sizeof(ALPHANUM) - 1)];
+        randStr.push_back(ALPHANUM[rand() % (sizeof(ALPHANUM) - 1)]);
     }
 
     return randStr;

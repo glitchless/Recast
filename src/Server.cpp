@@ -19,8 +19,10 @@
 #include <boost/log/utility/setup/common_attributes.hpp>
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
-#include "configs/Config.h"
+#include <exceptions/InvalidLoginOrPassword.h>
 
+#include "io/SQLite.h"
+#include "configs/Config.h"
 #include "Server.h"
 #include "threads/InputThread.h"
 #include "models/collections/PlayersOnline.h"
@@ -48,6 +50,16 @@ void Server::initServer() {
     isLaunching = true;
     inputThread = thread(&InputThread::init, InputThread(this));
     inputThread.detach();
+    try {
+        players->registerPlayer("lionzxy", "12345678");
+    } catch (InvalidLoginOrPassword &e) {
+        BOOST_LOG_TRIVIAL(info) << e.what();
+    }
+    std::string session = players->authPlayer("lionzxy", "12345678");
+    BOOST_LOG_TRIVIAL(info) << players->playersOnline();
+    players->logout(session);
+    BOOST_LOG_TRIVIAL(info) << players->playersOnline();
+    BOOST_LOG_TRIVIAL(info) << session;
     while (isRunning());
 }
 

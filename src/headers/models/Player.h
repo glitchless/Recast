@@ -18,12 +18,14 @@
  *
  * Aka Context for Player only.
  */
-class Player {
+struct Player {
 public:
+    Player() : location(Point(0, 0, 0)) {};
+
     Player(Point location) : location(location) {};
 
-private:
     int id;
+    int userId;
     Point location;
 };
 

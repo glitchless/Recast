@@ -15,8 +15,9 @@
 
 #include <exception>
 
-class ServerFullException : public std::exception{
-    const char * what () const throw () {
+class ServerFullException : public std::exception {
+public:
+    const char *what() const throw() {
         return "Server is full!";
     }
 };

@@ -16,6 +16,7 @@
 #include <string>
 #include <unordered_map>
 #include <mutex>
+#include <io/SQLite.h>
 #include "models/Player.h"
 
 const int SESSION_LENGTH = 128;
@@ -30,7 +31,9 @@ public:
 
     Player *getPlayerBySession(const std::string &session) const;
 
-    std::string registerPlayer(Player player);
+    std::string authPlayer(std::string login, std::string password);
+
+    void registerPlayer(std::string login, std::string password);
 
     bool logout(const std::string &session);
 
@@ -41,6 +44,7 @@ private:
     mutable std::mutex lock_writing;
     int maxPlayer;
     volatile int currentPlayers;
+    SQLite sqLite;
 };
 
 
