@@ -42,8 +42,8 @@ public:
      *
      * @tparam T class of config var
      * @param key string with path like 'general.server.port'
-     * @param defaultVar var using when config var is empty
-     * @return defultVar returning if config var is empty
+     * @param defaultVar var used when config var is empty
+     * @return defultVar returned if config var is empty
      */
     template<class T>
     T get(const std::string &key, T defaultVar) {
