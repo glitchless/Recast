@@ -12,8 +12,9 @@
 #include "io/SQLite.h"
 
 using namespace sqlite_orm;
+using namespace std;
 
-User SQLite::registerUser(std::string login, std::string password) {
+User SQLite::registerUser(string login, string password) {
     User user(login, password);
     user.id = storage.insert(user);
 
@@ -21,14 +22,14 @@ User SQLite::registerUser(std::string login, std::string password) {
     player.userId = user.id;
     player.id = storage.insert(player);
 
-    user.player = std::make_shared<Player>(player);
+    user.player = make_shared<Player>(player);
     user.playerId = player.id;
     storage.update(user);
 
     return user;
 }
 
-User SQLite::authUser(std::string login, std::string password) {
+User SQLite::authUser(string login, string password) {
     auto users = storage.get_all<User>(where(is_equal(&User::login, login)));
     for (auto &user : users) {
         if (user.password == password) {

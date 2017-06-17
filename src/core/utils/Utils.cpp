@@ -24,7 +24,7 @@ static const char ALPHANUM[] =
  * @return std::string
  */
 string genRandomString(const size_t len) {
-    std::string randStr;
+    string randStr;
     randStr.reserve(len);
 
     for (int i = 0; i < len; ++i) {

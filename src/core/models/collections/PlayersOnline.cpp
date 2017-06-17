@@ -18,7 +18,7 @@
 
 using namespace std;
 
-bool PlayersOnline::logout(const std::string &session) {
+bool PlayersOnline::logout(const string &session) {
     lock_guard<mutex> locker(lock_writing);
     Player *player = players[session];
     if (player == NULL)
@@ -60,7 +60,7 @@ PlayersOnline::~PlayersOnline() {
         }
 }
 
-void PlayersOnline::registerPlayer(std::string login, std::string password) {
+void PlayersOnline::registerPlayer(string login, string password) {
     try {
         sqLite.registerUser(login, password);
     } catch (exception &e) {
@@ -69,7 +69,7 @@ void PlayersOnline::registerPlayer(std::string login, std::string password) {
     }
 }
 
-std::string PlayersOnline::authPlayer(std::string login, std::string password) {
+string PlayersOnline::authPlayer(string login, string password) {
     User user = sqLite.authUser(login, password);
     if (currentPlayers == maxPlayer) {
         throw ServerFullException();
