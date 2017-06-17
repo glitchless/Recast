@@ -6,7 +6,7 @@
  * @date 16.06.17
  * @email nikita@kulikof.ru
  *
- * Exceptions when server is full
+ * Exceptions when server is full and user try connecting
  * 
  **/
 #ifndef RECAST_SERVER_SERVERFULLEXCEPTION_H

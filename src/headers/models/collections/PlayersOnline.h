@@ -16,10 +16,10 @@
 #include <string>
 #include <unordered_map>
 #include <mutex>
-#include <io/SQLite.h>
+#include "io/SQLite.h"
 #include "models/Player.h"
 
-const int SESSION_LENGTH = 128;
+const int SESSION_LENGTH = 128; //// Length session string
 
 class PlayersOnline {
 public:
@@ -27,14 +27,35 @@ public:
 
     ~PlayersOnline();
 
-    std::vector<Player *> getOnlinePlayers() const;
+    std::vector<Player *> getOnlinePlayers() const; //// Return all online players
 
-    Player *getPlayerBySession(const std::string &session) const;
+    Player *getPlayerBySession(const std::string &session) const; //// Return player by session. Thread-safe
 
+    /**
+     * Auth player on Server. Get all game data from SQLite
+     * On failed auth (if user don't contains in table) throw InvalidLoginOrPassword
+     * On fulled server (maxPlayer == currentPlayers) throw ServerFullException
+     *
+     * @warning Can throw exception! Must be in try{}catch{} block
+     * @param login user login
+     * @param password user password
+     * @return session string
+     */
     std::string authPlayer(std::string login, std::string password);
 
+    /**
+     * Register player in SQLite. Can throw InvalidLoginOrPassword when login already exist
+     * @param login new login
+     * @param password user password
+     */
     void registerPlayer(std::string login, std::string password);
 
+    /**
+     * Remove user from user list and save in SQLite
+     *
+     * @param session
+     * @return
+     */
     bool logout(const std::string &session);
 
     int playersOnline() const { return currentPlayers; }

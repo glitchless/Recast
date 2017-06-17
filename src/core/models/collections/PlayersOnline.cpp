@@ -10,9 +10,9 @@
  * 
  **/
 
-#include <exceptions/ServerFullException.h>
 #include <boost/log/trivial.hpp>
-#include <exceptions/InvalidLoginOrPassword.h>
+#include "exceptions/ServerFullException.h"
+#include "exceptions/InvalidLoginOrPassword.h"
 #include "models/collections/PlayersOnline.h"
 #include "utils/Utils.h"
 
@@ -64,7 +64,7 @@ void PlayersOnline::registerPlayer(std::string login, std::string password) {
     try {
         sqLite.registerUser(login, password);
     } catch (exception &e) {
-        BOOST_LOG_TRIVIAL(debug) << e.what();
+        BOOST_LOG_TRIVIAL(error) << e.what();
         throw InvalidLoginOrPassword();
     }
 }

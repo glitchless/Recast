@@ -1,12 +1,9 @@
 /**
  * @file PlayerAuth.h
- * @brief //TODO Add brief
  * @author LionZXY
  * @project Recast-server
  * @date 17.06.17
  * @email nikita@kulikof.ru
- * //TODO add comment
- * 
  **/
 #ifndef RECAST_SERVER_PLAYERAUTH_H
 #define RECAST_SERVER_PLAYERAUTH_H
@@ -15,6 +12,9 @@
 #include <boost/shared_ptr.hpp>
 #include "Player.h"
 
+/**
+ * @brief User is a technical data for player (login, password and other)
+ */
 struct User {
 public:
     int id;

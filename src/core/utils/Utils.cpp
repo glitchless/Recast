@@ -17,7 +17,12 @@ static const char ALPHANUM[] =
         "0123456789"
                 "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 "abcdefghijklmnopqrstuvwxyz";
-
+/**
+ * Return random string contains [0-9A-Za-z] symbols
+ *
+ * @param len of string
+ * @return std::string
+ */
 string genRandomString(const size_t len) {
     std::string randStr;
     randStr.reserve(len);

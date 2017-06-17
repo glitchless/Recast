@@ -50,16 +50,6 @@ void Server::initServer() {
     isLaunching = true;
     inputThread = thread(&InputThread::init, InputThread(this));
     inputThread.detach();
-    try {
-        players->registerPlayer("lionzxy", "12345678");
-    } catch (InvalidLoginOrPassword &e) {
-        BOOST_LOG_TRIVIAL(info) << e.what();
-    }
-    std::string session = players->authPlayer("lionzxy", "12345678");
-    BOOST_LOG_TRIVIAL(info) << players->playersOnline();
-    players->logout(session);
-    BOOST_LOG_TRIVIAL(info) << players->playersOnline();
-    BOOST_LOG_TRIVIAL(info) << session;
     while (isRunning());
 }
 

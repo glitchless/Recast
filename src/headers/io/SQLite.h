@@ -1,11 +1,12 @@
 /**
  * @file SQLite.h
- * @brief //TODO Add brief
+ * @brief Class-helper for DB vars
  * @author LionZXY
  * @project Recast-server
  * @date 17.06.17
  * @email nikita@kulikof.ru
- * //TODO add comment
+ *
+ * This class helped easy put or get var from DB. Using sqlite_orm and sqlite
  * 
  **/
 #ifndef RECAST_SERVER_SQLITE_H
@@ -38,7 +39,9 @@ inline auto create_db() {
                                    make_column("player_id",
                                                &User::playerId)));
 }
-
+/**
+ * @brief This class helped easy put or get var from DB. Using sqlite_orm and sqlite
+ **/
 class SQLite {
 public:
     SQLite() { storage.sync_schema(); }

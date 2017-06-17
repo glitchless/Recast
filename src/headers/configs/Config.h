@@ -37,7 +37,14 @@ public:
 
     static Config *instance();
 
-
+    /**
+     * This method create param if not exist
+     *
+     * @tparam T class of config var
+     * @param key string with path like 'general.server.port'
+     * @param defaultVar var using when config var is empty
+     * @return defultVar returning if config var is empty
+     */
     template<class T>
     T get(const std::string &key, T defaultVar) {
         try {
@@ -48,7 +55,6 @@ public:
         }
     }
 private:
-
     std::string filename;
     boost::property_tree::ptree pt;
 };

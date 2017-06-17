@@ -1,11 +1,12 @@
 /**
  * @file InvalidLoginOrPassword.h
- * @brief //TODO Add brief
+ * @brief Exception when auth is failed
  * @author LionZXY
  * @project Recast-server
  * @date 17.06.17
  * @email nikita@kulikof.ru
- * //TODO add comment
+ *
+ * Exception throw when auth failed. Login incorrect or password.
  * 
  **/
 #ifndef RECAST_SERVER_INVALIDLOGINORPASSWORD_H

@@ -14,9 +14,7 @@
 #include "Point.h"
 
 /**
- * @brief Player class.
- *
- * Aka Context for Player only.
+ * @brief Player class. XP, Live point and other
  */
 struct Player {
 public:
