@@ -17,8 +17,8 @@
  * @brief Config class
  *
  * Using Boost ptree struct.
- * Config file hashing and buffering in memmory. (You can't get Config from constructor)
- * Please calling Config::instance for get Config.
+ * Config file hashing and buffering in memory. (You can't get an instance of Config from constructor)
+ * Please call Config::instance to get an instance of Config.
  *
  **/
 class Config {
@@ -37,8 +37,24 @@ public:
 
     static Config *instance();
 
+    /**
+     * This method create param if not exist
+     *
+     * @tparam T class of config var
+     * @param key string with path like 'general.server.port'
+     * @param defaultVar var used when config var is empty
+     * @return defultVar returned if config var is empty
+     */
+    template<class T>
+    T get(const std::string &key, T defaultVar) {
+        try {
+            return tree().get<T>(key);
+        } catch (std::exception &e) {
+            tree().put(key, defaultVar);
+            return defaultVar;
+        }
+    }
 private:
-
     std::string filename;
     boost::property_tree::ptree pt;
 };

@@ -1,10 +1,10 @@
-FROM ubuntu:16.04
+FROM ubuntu:latest
 
-RUN apt-get -qq update &&\
-        apt-get upgrade && apt-get -qq install -y g++ libboost-all-dev cmake cmake-data
+RUN apt-get -qq update && apt-get -qq upgrade && apt-get -qqy install g++ libboost-all-dev cmake cmake-data libc6 libc6-dev sqlite3
 
 WORKDIR /tmp/recast
 RUN rm -rf /tmp/recast/*
+COPY libs libs
 COPY src src
 COPY CMakeLists.txt ./
 

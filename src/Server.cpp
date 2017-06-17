@@ -19,44 +19,47 @@
 #include <boost/log/utility/setup/common_attributes.hpp>
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
-#include "configs/Config.h"
+#include <exceptions/InvalidLoginOrPassword.h>
 
+#include "io/SQLite.h"
+#include "configs/Config.h"
 #include "Server.h"
+#include "threads/InputThread.h"
+#include "models/collections/PlayersOnline.h"
+
+using namespace std;
+using namespace boost;
 
 void initLogger() {
-    std::string output = (std::string("recast_") + std::to_string(time(NULL)) + std::string(".log"));
-    boost::filesystem::path dir("./logs/");
-    if (!boost::filesystem::exists(dir)) {
-        if (boost::filesystem::create_directory(dir)) {
+    string output = (string("recast_") + to_string(time(NULL)) + string(".log"));
+    filesystem::path dir("./logs/");
+    if (!filesystem::exists(dir)) {
+        if (filesystem::create_directory(dir)) {
             BOOST_LOG_TRIVIAL(info) << "Folder " << dir << " create successful";
         } else {
             BOOST_LOG_TRIVIAL(info) << "Failed create dir: " << dir;
         }
     }
-    boost::log::add_file_log(dir.string() + output);
-    boost::log::add_console_log(std::cout);
+    log::add_file_log(dir.string() + output);
+    log::add_console_log(std::cout);
 }
 
 void Server::initServer() {
     initLogger();
     BOOST_LOG_TRIVIAL(info) << "Initializing server...";
-    isRunning = true;
+    isLaunching = true;
+    inputThread = thread(&InputThread::init, InputThread(this));
+    inputThread.detach();
+    while (isRunning());
 }
 
 Server::Server() {
-    isRunning = false;
-}
-
-void Server::mainLoop() {
-    while (isRunning) {
-        std::string cmd = "";
-        std::cin >> cmd;
-        manager.onCommand(this, cmd);
-    }
+    isLaunching = false;
+    players = new PlayersOnline(Config::instance()->get("server.max_players", 20));
 }
 
 bool Server::shutdown() {
-    return isRunning ? !(isRunning = false) : false; // Return true if isRunning equals true
+    return isLaunching ? !(isLaunching = false) : false; // Return true if isLaunching equals true
 }
 
 void Server::onMessage(const std::string &msg) {
@@ -66,4 +69,3 @@ void Server::onMessage(const std::string &msg) {
 Server::~Server() {
     delete Config::instance();
 }
-

@@ -14,13 +14,16 @@
 #include "Point.h"
 
 /**
- * @brief Player class.
- *
- * Lol. Aka Context for Player only.
+ * @brief Player class. XP, Life points and other
  */
-class Player {
-private:
+struct Player {
+public:
+    Player() : location(Point(0, 0, 0)) {};
+
+    Player(Point location) : location(location) {};
+
     int id;
+    int userId;
     Point location;
 };
 
