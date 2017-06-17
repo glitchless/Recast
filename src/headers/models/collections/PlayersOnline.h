@@ -23,7 +23,7 @@ const int SESSION_LENGTH = 128; //// Length of session string
 
 class PlayersOnline {
 public:
-    PlayersOnline(int playerCount) : maxPlayer(playerCount), currentPlayers(0) {};
+    PlayersOnline(int playerCount) : maxPlayers(playerCount), currentPlayers(0) {};
 
     ~PlayersOnline();
 
@@ -41,14 +41,14 @@ public:
      * @param password user password
      * @return session string
      */
-    std::string authPlayer(std::string login, std::string password);
+    std::string authPlayer(std::string login, std::string password) throw(InvalidLoginOrPassword, ServerFullException);
 
     /**
      * Register player in SQLite. Can throw InvalidLoginOrPassword when login already exists
      * @param login new login
      * @param password user password
      */
-    void registerPlayer(std::string login, std::string password);
+    void registerPlayer(std::string login, std::string password) throw(InvalidLoginOrPassword);
 
     /**
      * Remove user from user list and save that in SQLite

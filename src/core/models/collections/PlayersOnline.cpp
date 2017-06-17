@@ -71,7 +71,7 @@ void PlayersOnline::registerPlayer(string login, string password) {
 
 string PlayersOnline::authPlayer(string login, string password) {
     User user = sqLite.authUser(login, password);
-    if (currentPlayers == maxPlayer) {
+    if (currentPlayers == maxPlayers) {
         throw ServerFullException();
     }
     string session = genRandomString(SESSION_LENGTH);
