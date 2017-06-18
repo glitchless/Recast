@@ -30,14 +30,12 @@ User SQLite::registerUser(string login, string password) {
 }
 
 User SQLite::authUser(string login, string password) {
-    auto users = storage.get_all<User>(where(is_equal(&User::login, login)));
+    auto users = storage.get_all<User>(where(eq(&User::login, login) and eq(&User::password, password)));
     for (auto &user : users) {
-        if (user.password == password) {
-            if (auto player = storage.get_no_throw<Player>(user.playerId)) {
-                user.player = player;
-            }
-            return user;
+        if (auto player = storage.get_no_throw<Player>(user.playerId)) {
+            user.player = player;
         }
+        return user;
     }
     throw InvalidLoginOrPassword();
 }
