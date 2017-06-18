@@ -22,12 +22,14 @@
 template<typename T>
 class ITemperatureWorldBoundable : public virtual T {
 public:
+    using ForeachCellFn = std::function<void(Coord, Coord, Coord)>;
+
     /**
      * Loops over each point.
      *
      * @param func Function to execute at each point.
      */
-    virtual void foreach(std::function<void(Coord, Coord, Coord)> func) const = 0;
+    virtual void foreach(ForeachCellFn func) const = 0;
 
     /**
      * @return Bounds of this temperature world.

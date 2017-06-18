@@ -26,7 +26,7 @@ public:
 
     bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
     std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> getChunk(Coord x, Coord y, Coord z) const override;
-    void foreachChunk(std::function<void(ITemperatureWorldBoundable<ITemperatureWorld>&)> func) const override;
+    void foreachChunk(ForeachChunkFn func) const override;
 
     bool has(Coord x, Coord y, Coord z) const noexcept override;
     Temperature get(Coord x, Coord y, Coord z) const override;

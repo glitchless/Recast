@@ -48,7 +48,7 @@ void ScalableBoundTemperatureWorldOnSynchronizedVector::amplify(Coord x_, Coord 
     }
 }
 
-void ScalableBoundTemperatureWorldOnSynchronizedVector::foreach(std::function<void(Coord, Coord, Coord)> func) const {
+void ScalableBoundTemperatureWorldOnSynchronizedVector::foreach(ScalableBoundTemperatureWorldOnSynchronizedVector::ForeachCellFn func) const {
     const int dx = _cellScale.x().scale();
     const int dy = _cellScale.y().scale();
     const int dz = _cellScale.z().scale();

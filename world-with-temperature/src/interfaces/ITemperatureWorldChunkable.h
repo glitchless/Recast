@@ -18,6 +18,8 @@
 template<typename T>
 class ITemperatureWorldChunkable : public virtual T {
 public:
+    using ForeachChunkFn = std::function<void(ITemperatureWorldBoundable<ITemperatureWorld>&)>;
+
     /**
      * Tells whether the chunk which holds this point exists.
      * This method doesn't throw exceptions.
@@ -44,7 +46,7 @@ public:
      *
      * @param func Function to execute at each chunk.
      */
-    virtual void foreachChunk(std::function<void(ITemperatureWorldBoundable<ITemperatureWorld>&)> func) const = 0;
+    virtual void foreachChunk(ForeachChunkFn func) const = 0;
 };
 
 

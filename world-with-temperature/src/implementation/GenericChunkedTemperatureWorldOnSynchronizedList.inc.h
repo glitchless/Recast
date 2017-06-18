@@ -31,7 +31,7 @@ std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> GenericChunkedTem
 }
 
 template<typename Chunk>
-void GenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::foreachChunk(std::function<void(ITemperatureWorldBoundable<ITemperatureWorld>&)> func) const {
+void GenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::foreachChunk(GenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::ForeachChunkFn func) const {
     std::list<std::shared_ptr<Chunk>> chunksShallowCopy;
     {
         std::lock_guard<std::mutex> guard(_chunksMutex);

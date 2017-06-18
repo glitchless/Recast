@@ -7,8 +7,8 @@
 
 
 namespace OnDemandGeneratableChunkedTemperatureWorldAnnotations {
-    struct NeedFuncFn {};
-    struct MakeFuncFn {};
+    struct NeedChunkFn {};
+    struct MakeChunkFn {};
 };
 
 

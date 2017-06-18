@@ -30,7 +30,7 @@ void BoundTemperatureWorldOnSynchronizedVector::amplify(Coord x, Coord y, Coord 
     _data[_getIndexInData(x, y, z)] += temperature;
 }
 
-void BoundTemperatureWorldOnSynchronizedVector::foreach(std::function<void(Coord, Coord, Coord)> func) const {
+void BoundTemperatureWorldOnSynchronizedVector::foreach(BoundTemperatureWorldOnSynchronizedVector::ForeachCellFn func) const {
     for (Coord x = _bounds.minX(); x <= _bounds.maxX(); x++) {
         for (Coord y = _bounds.minY(); y <= _bounds.maxY(); y++) {
             for (Coord z = _bounds.minZ(); z <= _bounds.maxZ(); z++) {

@@ -29,7 +29,7 @@ public:
 
     void set(Coord x, Coord y, Coord z, Temperature temperature) override;
     void amplify(Coord x, Coord y, Coord z, Temperature temperature) override;
-    void foreach(std::function<void(Coord, Coord, Coord)> func) const override;
+    void foreach(ForeachCellFn func) const override;
 
 protected:
     virtual Coord _findScaledAreaMinByAxis(Coord initialCoord, IntScale scale, Coord minCoord) const noexcept;

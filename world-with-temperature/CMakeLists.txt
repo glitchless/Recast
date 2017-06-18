@@ -53,14 +53,18 @@ set(SOURCE_FILES
         src/types/Point.h
         src/implementation/annotations/OnDemandGeneratableChunkedTemperatureWorldAnnotations.h
         src/implementation/annotations/ScaledTemperatureWorldAnnotations.h
-        src/fixes/fruit.h)
+        src/fixes/fruit.h
+        src/implementation/ThreadedChunkedTemperatureWorldUpdater.inc.h
+        src/implementation/ThreadedChunkedTemperatureWorldUpdater.h
+        src/interfaces/ITemperatureWorldChunkableOnDemandGeneratableObservable.h
+        src/implementation/annotations/ThreadedChunkedTemperatureWorldUpdaterAnnotations.h)
 
 # unittest
 add_executable(world-with-temperature-unittest test/unittest.cpp test/lib/catch.hpp ${SOURCE_FILES})
 target_link_libraries(world-with-temperature-unittest ${LIBRARIES})
 
 # demo
-add_executable(world-with-temperature-demo test/demo.cpp test/lib/crow_all.h ${SOURCE_FILES} src/interfaces/ITemperatureWorldScalableMutable.h)
+add_executable(world-with-temperature-demo test/demo.cpp test/lib/crow_all.h ${SOURCE_FILES})
 target_link_libraries(world-with-temperature-demo ${LIBRARIES})
 
 # performance

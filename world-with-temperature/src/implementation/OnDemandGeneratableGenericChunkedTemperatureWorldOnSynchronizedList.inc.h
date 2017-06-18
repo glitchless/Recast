@@ -31,9 +31,21 @@ std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> OnDemandGeneratab
         }
     }
     if (_needChunkFn(x, y, z)) {
-        Chunk* newChunk = new Chunk(_makeChunkFn(x, y, z));
-        this->_chunks.push_back(std::shared_ptr<Chunk>(newChunk));
+        auto newChunk = std::make_shared<Chunk>(_makeChunkFn(x, y, z));
+        _chunks.push_back(newChunk);
+
+        std::lock_guard<std::mutex> guard1(_onNewChunkListenersMutex);
+        for (OnNewChunkFn& func : _onNewChunkListeners) {
+            func(newChunk);
+        }
     } else {
         throw std::out_of_range("No chunk exist at this point");
     }
 }
+
+template<typename Chunk>
+void OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::onNewChunk(ITemperatureWorldChunkableOnDemandGeneratableObservable::OnNewChunkFn func) {
+    std::lock_guard<std::mutex> guard(_onNewChunkListenersMutex);
+    _onNewChunkListeners.push_back(func);
+}
+
