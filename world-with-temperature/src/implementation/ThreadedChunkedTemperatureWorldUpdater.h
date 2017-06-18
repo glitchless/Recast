@@ -17,6 +17,13 @@
 #include "../fixes/fruit.h"
 #include "annotations/ThreadedChunkedTemperatureWorldUpdaterAnnotations.h"
 
+/**
+ * Implementation of chunked temperature world updater.
+ * It updates every chunk asynchronously in a thread pool.
+ * This class is thread-safe.
+ *
+ * @tparam ChunkUpdater Bound temperature world updater.
+ */
 template<typename ChunkUpdater>
 class ThreadedChunkedTemperatureWorldUpdater : public IUpdater {
 public:
