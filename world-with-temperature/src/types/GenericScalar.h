@@ -6,17 +6,22 @@
 #define RECAST_GENERICSCALAR_H
 
 
+/**
+ * Template for structs that wrap fundamental types. You can consider it as medium-strong typedef.
+ *
+ * @tparam T Underlying type.
+ */
 template<typename T>
 struct GenericScalar {
 public:
     GenericScalar(T value) : _value(value) {
     }
 
-    inline operator T() const {
+    inline operator T() const noexcept {
         return _value;
     }
 
-    inline operator T&() {
+    inline operator T&() noexcept {
         return _value;
     }
 

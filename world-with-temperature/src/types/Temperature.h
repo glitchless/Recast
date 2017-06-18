@@ -9,9 +9,11 @@
 #include "GenericScalar.h"
 
 /**
+ * Type.
  * Represents temperature of world object.
  */
 struct Temperature : public GenericScalar<int> {
+public:
     Temperature(int value = 0) : GenericScalar(value) {
     }
 };

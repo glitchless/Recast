@@ -2,17 +2,17 @@
 // Created by Oleg Morozenkov on 15.06.17.
 //
 
-#include "OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld.h"
+#include "OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList.h"
 
 template<typename Chunk>
-OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld<Chunk>::OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld(
-        OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld<Chunk>::NeedChunkFn needChunkFn, OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld<Chunk>::MakeChunkFn makeChunkFn)
+OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList(
+        OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::NeedChunkFn needChunkFn, OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::MakeChunkFn makeChunkFn)
         : _needChunkFn(needChunkFn), _makeChunkFn(makeChunkFn)
 {
 }
 
 template<typename Chunk>
-bool OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld<Chunk>::hasChunk(Coord x, Coord y, Coord z) const noexcept {
+bool OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::hasChunk(Coord x, Coord y, Coord z) const noexcept {
     std::lock_guard<std::mutex> guard(this->_chunksMutex);
     for (const std::shared_ptr<Chunk>& chunk : this->_chunks) {
         if (chunk->has(x, y, z)) {
@@ -23,7 +23,7 @@ bool OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld<Chunk>::h
 }
 
 template<typename Chunk>
-std::shared_ptr<IBoundTemperatureWorld> OnDemandGeneratableSynchronizedListGenericChunkedTemperatureWorld<Chunk>::getChunk(Coord x, Coord y, Coord z) const {
+std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::getChunk(Coord x, Coord y, Coord z) const {
     std::lock_guard<std::mutex> guard(this->_chunksMutex);
     for (const std::shared_ptr<Chunk>& chunk : this->_chunks) {
         if (chunk->has(x, y, z)) {

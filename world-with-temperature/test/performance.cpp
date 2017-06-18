@@ -13,13 +13,13 @@ using namespace fruit;
 
 int main() {
     static Size n = 99;
-    static ScaledParallelepiped worldBounds(n, n, n);
-    Component<IBoundTemperatureWorld, ITemperatureWorldUpdater> component =
+    static Parallelepiped worldBounds(n, n, n);
+    Component<ITemperatureWorldBoundable<ITemperatureWorld>, IUpdater> component =
                     WorldWithTemperatureModule::boundTemperatureWorldComponent(worldBounds);
-    Injector<IBoundTemperatureWorld, ITemperatureWorldUpdater> injector(component);
+    Injector<ITemperatureWorldBoundable<ITemperatureWorld>, IUpdater> injector(component);
 
-    auto world = injector.get<shared_ptr<IBoundTemperatureWorld>>();
-    auto updater = injector.get<shared_ptr<ITemperatureWorldUpdater>>();
+    auto world = injector.get<shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>>();
+    auto updater = injector.get<shared_ptr<IUpdater>>();
 
     BasicTimer benchmarkTimer;
     cout << "Number of blocks: " << world->bounds().volume() << endl;

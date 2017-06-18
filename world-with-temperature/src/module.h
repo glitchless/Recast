@@ -8,26 +8,44 @@
 
 #include <fruit/fruit.h>
 #include <chrono>
-#include "scalars/Size.h"
-#include "interfaces/IBoundTemperatureWorld.h"
-#include "interfaces/ITemperatureWorldUpdater.h"
-#include "scalars/ScaledParallelepiped.h"
+#include "types/Size.h"
+#include "interfaces/ITemperatureWorldBoundable.h"
+#include "interfaces/IUpdater.h"
+#include "types/IntScaleParallelepiped.h"
 
+/**
+ * Namespace which has component factory methods.
+ */
 namespace WorldWithTemperatureModule {
     namespace Defaults {
         static double temperatureExchangeCoefficient = 0.1;
         static std::chrono::milliseconds minDelta(20);
     }
 
-    fruit::Component<fruit::Required<IBoundTemperatureWorld>, ITemperatureWorldUpdater>
+    /**
+     * Makes component which can create temperature world updater.
+     * Requires to configure temperature world.
+     *
+     * @param temperatureExchangeCoefficient Means speed of temperature exchange.
+     * @param minDelta Minimum time duration between temperature world updates.
+     * @return Component.
+     */
+    fruit::Component<fruit::Required<ITemperatureWorldBoundable<ITemperatureWorld>>, IUpdater>
     updaterComponent(
             double& temperatureExchangeCoefficient = Defaults::temperatureExchangeCoefficient,
-            std::chrono::milliseconds& = Defaults::minDelta);
+            std::chrono::milliseconds& minDelta = Defaults::minDelta);
 
-    fruit::Component<ITemperatureWorld, IBoundTemperatureWorld, ITemperatureWorldUpdater>
+    /**
+     * Makes component which can create temperature world and its updater.
+     *
+     * @param bounds Bounds of the temperature world.
+     * @param updaterComponent_ Component which creates temperature world updater.
+     * @return Component.
+     */
+    fruit::Component<ITemperatureWorld, ITemperatureWorldBoundable<ITemperatureWorld>, IUpdater>
     boundTemperatureWorldComponent(
-            ScaledParallelepiped& bounds,
-            fruit::Component<fruit::Required<IBoundTemperatureWorld>, ITemperatureWorldUpdater> updaterComponent_ = updaterComponent());
+            Parallelepiped& bounds,
+            fruit::Component<fruit::Required<ITemperatureWorldBoundable<ITemperatureWorld>>, IUpdater> updaterComponent_ = updaterComponent());
 }
 
 

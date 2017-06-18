@@ -7,16 +7,20 @@
 
 
 #include <functional>
-#include "../scalars/Coord.h"
-#include "../scalars/Size.h"
-#include "../scalars/Temperature.h"
+#include "../types/Coord.h"
+#include "../types/Size.h"
+#include "../types/Temperature.h"
 #include "ITemperatureWorld.h"
-#include "../scalars/Parallelepiped.h"
+#include "../types/Parallelepiped.h"
 
 /**
- * Holds temperate world data. Temperature world is not endless.
+ * Mixin to temperature world.
+ * Makes temperature world not to be endless.
+ *
+ * @tparam T Base temperature world class.
  */
-class IBoundTemperatureWorld : public ITemperatureWorld {
+template<typename T>
+class ITemperatureWorldBoundable : public virtual T {
 public:
     /**
      * Loops over each point.

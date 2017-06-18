@@ -8,16 +8,17 @@
 
 #include <mutex>
 #include <fruit/fruit.h>
-#include "../interfaces/IBlockingTimer.h"
+#include "../interfaces/ITimerBlockable.h"
 #include "annotations/BlockingTimerAnnotations.h"
+#include "../fixes/fruit.h"
 
 /**
  * Implementation of blocking timer.
  * This class is thread-safe.
  */
-class SynchronizedBlockingTimer : public IBlockingTimer {
+class SynchronizedBlockingTimer : public ITimerBlockable<ITimer> {
 public:
-    INJECT(SynchronizedBlockingTimer(
+    INJECT_F(SynchronizedBlockingTimer(
             ANNOTATED(BlockingTimerAnnotations::MinDelta, std::chrono::milliseconds) minDelta));
 
     std::chrono::milliseconds delta() const override;

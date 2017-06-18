@@ -7,14 +7,15 @@
 
 
 /**
- * Updates temperature world.
+ * Interface.
+ * Updates something.
  */
-class ITemperatureWorldUpdater {
+class IUpdater {
 public:
-    virtual ~ITemperatureWorldUpdater() noexcept = default;
+    virtual ~IUpdater() noexcept = default;
 
     /**
-     * Updates world.
+     * Updates.
      */
     virtual void update() = 0;
 };

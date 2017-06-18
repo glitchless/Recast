@@ -8,6 +8,10 @@
 
 #include <chrono>
 
+/**
+ * Interface.
+ * Measures time.
+ */
 class ITimer {
 public:
     virtual ~ITimer() noexcept = default;
@@ -23,7 +27,7 @@ public:
     virtual double deltaFloatSeconds() const = 0;
 
     /**
-     * Saves update, saves "tick". It will influence value of `delta`.
+     * Saves update, saves the "tick". It will influence value of `delta`.
      */
     virtual void update() = 0;
 };

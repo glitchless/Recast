@@ -7,12 +7,16 @@
 
 
 #include "ITemperatureWorld.h"
-#include "IBoundTemperatureWorld.h"
+#include "ITemperatureWorldBoundable.h"
 
 /**
- * Represents temperature world which is divided by chunks.
+ * Mixin to temperature world.
+ * Makes temperature world to be divided by chunks.
+ *
+ * @tparam T Base temperature world class.
  */
-class IChunkedTemperatureWorld : public ITemperatureWorld {
+template<typename T>
+class ITemperatureWorldChunkable : public virtual T {
 public:
     /**
      * Tells whether the chunk which holds this point exists.
@@ -33,14 +37,14 @@ public:
      * @param z Z coordinate.
      * @return Chunk at the point.
      */
-    virtual std::shared_ptr<IBoundTemperatureWorld> getChunk(Coord x, Coord y, Coord z) const = 0;
+    virtual std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> getChunk(Coord x, Coord y, Coord z) const = 0;
 
     /**
      * Loops over each chunk.
      *
      * @param func Function to execute at each chunk.
      */
-    virtual void foreachChunk(std::function<void(IBoundTemperatureWorld&)> func) const = 0;
+    virtual void foreachChunk(std::function<void(ITemperatureWorldBoundable<ITemperatureWorld>&)> func) const = 0;
 };
 
 

@@ -8,16 +8,24 @@
 
 #include <memory>
 #include <fruit/fruit.h>
-#include "../interfaces/ITemperatureWorldUpdater.h"
-#include "../interfaces/IBoundTemperatureWorld.h"
+#include "../interfaces/IUpdater.h"
+#include "../interfaces/ITemperatureWorldBoundable.h"
 #include "../interfaces/ITimer.h"
 #include "annotations/TemperatureWorldUpdaterAnnotations.h"
+#include "../fixes/fruit.h"
 
-class AverageShareTemperatureWorldUpdater : public ITemperatureWorldUpdater {
+/**
+ * Implementation of temperature world updater.
+ *
+ * How it works for every two cells:
+ * 1. Computes average of temperatures of two cells.
+ * 2. Brings temperature of each cell to this average world. Speed is determined by temperature exchange coefficient.
+ */
+class AverageShareTemperatureWorldUpdater : public IUpdater {
 public:
-    INJECT(AverageShareTemperatureWorldUpdater(
+    INJECT_F(AverageShareTemperatureWorldUpdater(
             ANNOTATED(TemperatureWorldUpdaterAnnotations::TemperatureExchangeCoefficient, double) temperatureExchangeCoefficient,
-            std::shared_ptr<IBoundTemperatureWorld> world,
+            std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> world,
             std::shared_ptr<ITimer> timer));
 
     void update() override;
@@ -27,7 +35,7 @@ protected:
     void _shareTemperature(double dt, Coord x, Coord y, Coord z, Coord nextX, Coord nextY, Coord nextZ);
 
     double _temperatureExchangeCoefficient;
-    std::shared_ptr<IBoundTemperatureWorld> _world;
+    std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> _world;
     std::shared_ptr<ITimer> _timer;
 };
 

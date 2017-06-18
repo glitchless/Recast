@@ -5,8 +5,8 @@
 #include "module.h"
 #include <fruit/fruit.h>
 #include "interfaces/ITemperatureWorld.h"
-#include "interfaces/IBoundTemperatureWorld.h"
-#include "implementation/SynchronizedVectorBoundTemperatureWorld.h"
+#include "interfaces/ITemperatureWorldBoundable.h"
+#include "implementation/BoundTemperatureWorldOnSynchronizedVector.h"
 #include "implementation/AverageShareTemperatureWorldUpdater.h"
 #include "implementation/SynchronizedBlockingTimer.h"
 
@@ -17,25 +17,25 @@ using namespace BoundTemperatureWorldAnnotations;
 using namespace TemperatureWorldUpdaterAnnotations;
 using namespace BlockingTimerAnnotations;
 
-Component<Required<IBoundTemperatureWorld>, ITemperatureWorldUpdater>
+Component<Required<ITemperatureWorldBoundable<ITemperatureWorld>>, IUpdater>
 WorldWithTemperatureModule::updaterComponent(
         double& temperatureExchangeCoefficient, milliseconds& minDelta)
 {
     return fruit::createComponent()
-            .bind<ITemperatureWorldUpdater, AverageShareTemperatureWorldUpdater>()
+            .bind<IUpdater, AverageShareTemperatureWorldUpdater>()
             .bindInstance<Annotated<TemperatureExchangeCoefficient, double>>(temperatureExchangeCoefficient)
             .bind<ITimer, SynchronizedBlockingTimer>()
             .bindInstance<Annotated<MinDelta, milliseconds>>(minDelta);
 }
 
-Component<ITemperatureWorld, IBoundTemperatureWorld, ITemperatureWorldUpdater>
+Component<ITemperatureWorld, ITemperatureWorldBoundable<ITemperatureWorld>, IUpdater>
 WorldWithTemperatureModule::boundTemperatureWorldComponent(
-        ScaledParallelepiped& bounds,
-        Component<Required<IBoundTemperatureWorld>, ITemperatureWorldUpdater> updaterComponent_)
+        Parallelepiped& bounds,
+        Component<Required<ITemperatureWorldBoundable<ITemperatureWorld>>, IUpdater> updaterComponent_)
 {
     return fruit::createComponent()
-            .bind<ITemperatureWorld, SynchronizedVectorBoundTemperatureWorld>()
-            .bind<IBoundTemperatureWorld, SynchronizedVectorBoundTemperatureWorld>()
-            .bindInstance<Annotated<Bounds, ScaledParallelepiped>>(bounds)
+            .bind<ITemperatureWorld, BoundTemperatureWorldOnSynchronizedVector>()
+            .bind<ITemperatureWorldBoundable<ITemperatureWorld>, BoundTemperatureWorldOnSynchronizedVector>()
+            .bindInstance<Annotated<Bounds, Parallelepiped>>(bounds)
             .install(updaterComponent_);
 }

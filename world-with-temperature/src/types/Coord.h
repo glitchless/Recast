@@ -10,9 +10,11 @@
 #include "GenericScalar.h"
 
 /**
- * Represents coordinate in a world.
+ * Type.
+ * Represents coordinate in a space.
  */
 struct Coord : public GenericScalar<int> {
+public:
     Coord(int value = 0) : GenericScalar(value) {
     }
 };

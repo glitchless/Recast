@@ -1,0 +1,15 @@
+//
+// Created by Oleg Morozenkov on 18.06.17.
+//
+
+#ifndef RECAST_ONDEMANDGENERATABLECHUNKEDTEMPERATUREWORLDANNOTATIONS_H
+#define RECAST_ONDEMANDGENERATABLECHUNKEDTEMPERATUREWORLDANNOTATIONS_H
+
+
+namespace OnDemandGeneratableChunkedTemperatureWorldAnnotations {
+    struct NeedFuncFn {};
+    struct MakeFuncFn {};
+};
+
+
+#endif //RECAST_ONDEMANDGENERATABLECHUNKEDTEMPERATUREWORLDANNOTATIONS_H

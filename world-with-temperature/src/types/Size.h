@@ -9,9 +9,11 @@
 #include "GenericScalar.h"
 
 /**
+ * Type.
  * Represents world object or size of world by some axis.
  */
 struct Size : public GenericScalar<int> {
+public:
     Size(int value = 0) : GenericScalar(value) {
     }
 };

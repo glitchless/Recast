@@ -6,10 +6,11 @@
 #define RECAST_TEMPERATUREWORLD_H
 
 
-#include "../scalars/Coord.h"
-#include "../scalars/Temperature.h"
+#include "../types/Coord.h"
+#include "../types/Temperature.h"
 
 /**
+ * Interface.
  * Holds temperature world data.
  */
 class ITemperatureWorld {

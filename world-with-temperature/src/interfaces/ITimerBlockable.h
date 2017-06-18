@@ -9,9 +9,11 @@
 #include "ITimer.h"
 
 /**
- * Timer can ask client to wait in blocking way, so the `delta` won't be less than `minDelta`.
+ * Mixin to timer.
+ * Makes timer to be able to ask client to wait in blocking way, so the `delta` won't be less than `minDelta`.
  */
-class IBlockingTimer : public ITimer {
+template<typename T>
+class ITimerBlockable : public virtual T {
 public:
     /**
      * @return Minimum possible value of `delta`.

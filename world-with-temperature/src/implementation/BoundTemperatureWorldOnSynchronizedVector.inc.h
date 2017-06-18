@@ -6,9 +6,9 @@
 #define RECAST_SYNCHRONIZEDVECTORBOUNDTEMPERATUREWORLD_INC_H
 
 
-#include "SynchronizedVectorBoundTemperatureWorld.h"
+#include "BoundTemperatureWorldOnSynchronizedVector.h"
 
-inline void swap(SynchronizedVectorBoundTemperatureWorld& first, SynchronizedVectorBoundTemperatureWorld& second) {
+inline void swap(BoundTemperatureWorldOnSynchronizedVector& first, BoundTemperatureWorldOnSynchronizedVector& second) {
     std::unique_lock<std::mutex> firstGuard(first._dataMutex, std::defer_lock);
     std::unique_lock<std::mutex> secondGuard(second._dataMutex, std::defer_lock);
     std::lock(firstGuard, secondGuard);
