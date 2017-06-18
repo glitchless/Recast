@@ -14,8 +14,8 @@
 
 #include <string>
 #include <thread>
-#include "commands/ICommandSender.h"
-#include "commands/CommandManager.h"
+#include "commands/ICommandSender.hpp"
+#include "commands/CommandManager.hpp"
 
 class Player;
 

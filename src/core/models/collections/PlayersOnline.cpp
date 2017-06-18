@@ -11,10 +11,10 @@
  **/
 
 #include <boost/log/trivial.hpp>
-#include "exceptions/ServerFullException.h"
-#include "exceptions/InvalidLoginOrPassword.h"
-#include "models/collections/PlayersOnline.h"
-#include "utils/Utils.h"
+#include "exceptions/ServerFullException.hpp"
+#include "exceptions/InvalidLoginOrPassword.hpp"
+#include "models/collections/PlayersOnline.hpp"
+#include "utils/Utils.hpp"
 
 using namespace std;
 

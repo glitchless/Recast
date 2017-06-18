@@ -16,9 +16,9 @@
 #include <string>
 #include <unordered_map>
 #include <mutex>
-#include "io/SQLite.h"
-#include "models/Player.h"
-#include "exceptions/ServerFullException.h"
+#include "io/SQLite.hpp"
+#include "models/Player.hpp"
+#include "exceptions/ServerFullException.hpp"
 
 const int SESSION_LENGTH = 128; //// Length of session string
 

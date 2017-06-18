@@ -13,7 +13,7 @@
 
 #include <string>
 #include <vector>
-#include "ICommandSender.h"
+#include "ICommandSender.hpp"
 
 /**
  * @brief Superclass for Command object

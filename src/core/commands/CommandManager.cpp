@@ -12,8 +12,8 @@
 #include <iterator>
 #include <memory>
 #include <vector>
-#include "commands/CommandManager.h"
-#include "commands/StopCommand.h"
+#include "commands/CommandManager.hpp"
+#include "commands/StopCommand.hpp"
 
 using namespace std;
 

@@ -13,7 +13,7 @@
 #include <string>
 #include <iostream>
 #include <boost/log/trivial.hpp>
-#include "threads/InputThread.h"
+#include "threads/InputThread.hpp"
 #include "Server.h"
 
 using namespace std;
