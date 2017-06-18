@@ -24,6 +24,15 @@ public:
 
     int id;
     int userId;
+
+    const double &getPosX() const { return location.x; }
+    void setPosX(double x) { location.x = x; }
+    const double &getPosY() const { return location.y; }
+    void setPosY(double y) { location.y = y; }
+    const double &getPosZ() const { return location.z; }
+    void setPosZ(double z) { location.z = z; }
+    const Point &getPoint() { return location; }
+private:
     Point location;
 };
 

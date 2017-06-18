@@ -25,7 +25,16 @@ inline auto create_db() {
                                                autoincrement(),
                                                primary_key()),
                                    make_column("user_id",
-                                               &Player::userId)),
+                                               &Player::userId),
+                                   make_column("pos_x",
+                                               &Player::setPosX,
+                                               &Player::getPosX),
+                                   make_column("pos_y",
+                                               &Player::setPosY,
+                                               &Player::getPosY),
+                                   make_column("pos_z",
+                                               &Player::setPosZ,
+                                               &Player::getPosZ)),
                         make_table("users",
                                    make_column("id",
                                                &User::id,
@@ -39,6 +48,7 @@ inline auto create_db() {
                                    make_column("player_id",
                                                &User::playerId)));
 }
+
 /**
  * @brief This class helps to easily put or get var from DB. Using sqlite_orm and sqlite
  **/
