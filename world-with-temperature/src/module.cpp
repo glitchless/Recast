@@ -6,7 +6,7 @@
 #include <fruit/fruit.h>
 #include "interfaces/ITemperatureWorld.h"
 #include "interfaces/ITemperatureWorldBoundable.h"
-#include "implementation/BoundTemperatureWorldOnSynchronizedVector.h"
+#include "implementation/BoundTemperatureWorld.h"
 #include "implementation/AverageShareTemperatureWorldUpdater.h"
 #include "implementation/SynchronizedBlockingTimer.h"
 
@@ -34,8 +34,8 @@ WorldWithTemperatureModule::boundTemperatureWorldComponent(
         Component<Required<ITemperatureWorldBoundable<ITemperatureWorld>>, IUpdater> updaterComponent_)
 {
     return fruit::createComponent()
-            .bind<ITemperatureWorld, BoundTemperatureWorldOnSynchronizedVector>()
-            .bind<ITemperatureWorldBoundable<ITemperatureWorld>, BoundTemperatureWorldOnSynchronizedVector>()
+            .bind<ITemperatureWorld, BoundTemperatureWorld>()
+            .bind<ITemperatureWorldBoundable<ITemperatureWorld>, BoundTemperatureWorld>()
             .bindInstance<Annotated<Bounds, Parallelepiped>>(bounds)
             .install(updaterComponent_);
 }

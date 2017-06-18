@@ -6,7 +6,7 @@
 #define RECAST_SCALABLESYNCHRONIZEDVECTORBOUNDTEMPERATUREWORLD_H
 
 
-#include "BoundTemperatureWorldOnSynchronizedVector.h"
+#include "BoundTemperatureWorld.h"
 #include "../types/IntScaleParallelepiped.h"
 #include "../interfaces/ITemperatureWorldScalable.h"
 #include "../interfaces/ITemperatureWorldScalableMutable.h"
@@ -18,9 +18,9 @@
  * You can make cell size bigger for `set`, `amplify` and `foreach` methods. It's useful for optimization.
  * Cell data access is thread-safe.
  */
-class ScalableBoundTemperatureWorldOnSynchronizedVector : public ITemperatureWorldScalableMutable<ITemperatureWorldScalable<BoundTemperatureWorldOnSynchronizedVector>> {
+class ScalableBoundTemperatureWorld : public ITemperatureWorldScalableMutable<ITemperatureWorldScalable<BoundTemperatureWorld>> {
 public:
-    INJECT_F(ScalableBoundTemperatureWorldOnSynchronizedVector(
+    INJECT_F(ScalableBoundTemperatureWorld(
             ANNOTATED(BoundTemperatureWorldAnnotations::Bounds, Parallelepiped) bounds,
             ANNOTATED(ScaledTemperatureWorldAnnotations::CellScale, IntScaleParallelepiped) cellScale));
 

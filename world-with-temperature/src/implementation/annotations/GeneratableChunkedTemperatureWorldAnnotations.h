@@ -6,7 +6,7 @@
 #define RECAST_ONDEMANDGENERATABLECHUNKEDTEMPERATUREWORLDANNOTATIONS_H
 
 
-namespace OnDemandGeneratableChunkedTemperatureWorldAnnotations {
+namespace GeneratableChunkedTemperatureWorldAnnotations {
     struct NeedChunkFn {};
     struct MakeChunkFn {};
 };

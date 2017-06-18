@@ -20,9 +20,9 @@
  * @tparam Chunk Temperature world type for chunks.
  */
 template<typename Chunk>
-class GenericChunkedTemperatureWorldOnSynchronizedList : public ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>> {
+class GenericChunkedTemperatureWorld : public ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>> {
 public:
-    INJECT_F(GenericChunkedTemperatureWorldOnSynchronizedList());
+    INJECT_F(GenericChunkedTemperatureWorld());
 
     bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
     std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> getChunk(Coord x, Coord y, Coord z) const override;
@@ -41,7 +41,7 @@ protected:
     mutable std::mutex _chunksMutex;
 };
 
-#include "GenericChunkedTemperatureWorldOnSynchronizedList.inc.h"
+#include "GenericChunkedTemperatureWorld.inc.h"
 
 
 #endif //RECAST_SYNCHRONIZEDVECTORCHUNKEDTEMPERATUREWORLD_H

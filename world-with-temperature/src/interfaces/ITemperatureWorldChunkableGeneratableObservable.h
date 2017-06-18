@@ -7,7 +7,7 @@
 
 
 template<typename T>
-class ITemperatureWorldChunkableOnDemandGeneratableObservable : public virtual T {
+class ITemperatureWorldChunkableGeneratableObservable : public virtual T {
 public:
     using OnNewChunkFn = std::function<void(ITemperatureWorldBoundable<ITemperatureWorld>&)>;
 

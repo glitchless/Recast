@@ -2,17 +2,17 @@
 // Created by Oleg Morozenkov on 15.06.17.
 //
 
-#include "OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList.h"
+#include "GeneratableGenericChunkedTemperatureWorld.h"
 
 template<typename Chunk>
-OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList(
-        OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::NeedChunkFn needChunkFn, OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::MakeChunkFn makeChunkFn)
+GeneratableGenericChunkedTemperatureWorld<Chunk>::GeneratableGenericChunkedTemperatureWorld(
+        GeneratableGenericChunkedTemperatureWorld<Chunk>::NeedChunkFn needChunkFn, GeneratableGenericChunkedTemperatureWorld<Chunk>::MakeChunkFn makeChunkFn)
         : _needChunkFn(needChunkFn), _makeChunkFn(makeChunkFn)
 {
 }
 
 template<typename Chunk>
-bool OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::hasChunk(Coord x, Coord y, Coord z) const noexcept {
+bool GeneratableGenericChunkedTemperatureWorld<Chunk>::hasChunk(Coord x, Coord y, Coord z) const noexcept {
     std::lock_guard<std::mutex> guard(this->_chunksMutex);
     for (const std::shared_ptr<Chunk>& chunk : this->_chunks) {
         if (chunk->has(x, y, z)) {
@@ -23,7 +23,7 @@ bool OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>:
 }
 
 template<typename Chunk>
-std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::getChunk(Coord x, Coord y, Coord z) const {
+std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> GeneratableGenericChunkedTemperatureWorld<Chunk>::getChunk(Coord x, Coord y, Coord z) const {
     std::lock_guard<std::mutex> guard(this->_chunksMutex);
     for (const std::shared_ptr<Chunk>& chunk : this->_chunks) {
         if (chunk->has(x, y, z)) {
@@ -44,7 +44,7 @@ std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> OnDemandGeneratab
 }
 
 template<typename Chunk>
-void OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::onNewChunk(ITemperatureWorldChunkableOnDemandGeneratableObservable::OnNewChunkFn func) {
+void GeneratableGenericChunkedTemperatureWorld<Chunk>::onNewChunk(ITemperatureWorldChunkableGeneratableObservable::OnNewChunkFn func) {
     std::lock_guard<std::mutex> guard(_onNewChunkListenersMutex);
     _onNewChunkListeners.push_back(func);
 }

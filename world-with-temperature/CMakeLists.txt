@@ -19,8 +19,8 @@ set(SOURCE_FILES
         src/interfaces/ITimer.h
         src/interfaces/ITimerBlockable.h
         src/interfaces/ITemperatureWorldBoundable.h
-        src/implementation/BoundTemperatureWorldOnSynchronizedVector.cpp
-        src/implementation/BoundTemperatureWorldOnSynchronizedVector.h
+        src/implementation/BoundTemperatureWorld.cpp
+        src/implementation/BoundTemperatureWorld.h
         src/implementation/SynchronizedBlockingTimer.cpp
         src/implementation/SynchronizedBlockingTimer.h
         src/implementation/AverageShareTemperatureWorldUpdater.cpp
@@ -34,29 +34,29 @@ set(SOURCE_FILES
         src/implementation/BasicTimer.cpp
         src/implementation/BasicTimer.h
         src/interfaces/ITemperatureWorldChunkable.h
-        src/implementation/GenericChunkedTemperatureWorldOnSynchronizedList.inc.h
-        src/implementation/GenericChunkedTemperatureWorldOnSynchronizedList.h
-        src/implementation/ScalingOnDemandChunkedTemperatureWorldOnSynchronizedList.inc.h
-        src/implementation/ScalingOnDemandGeneratableChunkedTemperatureWorldOnSynchronizedList.h
+        src/implementation/GenericChunkedTemperatureWorld.inc.h
+        src/implementation/GenericChunkedTemperatureWorld.h
+        src/implementation/ScalingChunkedTemperatureWorld.inc.h
+        src/implementation/ScalingGeneratableChunkedTemperatureWorld.h
         src/types/Parallelepiped.h
         src/types/IntScaleParallelepiped.h
         src/types/GenericScalar.h
-        src/implementation/BoundTemperatureWorldOnSynchronizedVector.inc.h
-        src/implementation/OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList.inc.h
-        src/implementation/OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList.h
-        src/implementation/ScalableBoundTemperatureWorldOnSynchronizedVector.cpp
-        src/implementation/ScalableBoundTemperatureWorldOnSynchronizedVector.h
+        src/implementation/BoundTemperatureWorld.inc.h
+        src/implementation/GeneratableGenericChunkedTemperatureWorld.inc.h
+        src/implementation/GeneratableGenericChunkedTemperatureWorld.h
+        src/implementation/ScalableBoundTemperatureWorld.cpp
+        src/implementation/ScalableBoundTemperatureWorld.h
         src/interfaces/ITemperatureWorldScalable.h
         src/types/IntScale.h
         src/interfaces/ITemperatureWorldChunkableMutable.h
         src/interfaces/ITemperatureWorldPointPrioritizable.h
         src/types/Point.h
-        src/implementation/annotations/OnDemandGeneratableChunkedTemperatureWorldAnnotations.h
+        src/implementation/annotations/GeneratableChunkedTemperatureWorldAnnotations.h
         src/implementation/annotations/ScaledTemperatureWorldAnnotations.h
         src/fixes/fruit.h
         src/implementation/ThreadedChunkedTemperatureWorldUpdater.inc.h
         src/implementation/ThreadedChunkedTemperatureWorldUpdater.h
-        src/interfaces/ITemperatureWorldChunkableOnDemandGeneratableObservable.h
+        src/interfaces/ITemperatureWorldChunkableGeneratableObservable.h
         src/implementation/annotations/ThreadedChunkedTemperatureWorldUpdaterAnnotations.h)
 
 # unittest

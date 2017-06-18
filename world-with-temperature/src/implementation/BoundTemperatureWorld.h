@@ -18,16 +18,16 @@
  * Bound temperature world backed by `std::vector`.
  * Cell data access is thread-safe.
  */
-class BoundTemperatureWorldOnSynchronizedVector : public ITemperatureWorldBoundable<ITemperatureWorld> {
+class BoundTemperatureWorld : public ITemperatureWorldBoundable<ITemperatureWorld> {
 public:
-    INJECT_F(BoundTemperatureWorldOnSynchronizedVector(
+    INJECT_F(BoundTemperatureWorld(
             ANNOTATED(BoundTemperatureWorldAnnotations::Bounds, Parallelepiped) bounds));
 
-    BoundTemperatureWorldOnSynchronizedVector(const BoundTemperatureWorldOnSynchronizedVector& other);
-    BoundTemperatureWorldOnSynchronizedVector(BoundTemperatureWorldOnSynchronizedVector&& other);
-    BoundTemperatureWorldOnSynchronizedVector& operator=(BoundTemperatureWorldOnSynchronizedVector other);
+    BoundTemperatureWorld(const BoundTemperatureWorld& other);
+    BoundTemperatureWorld(BoundTemperatureWorld&& other);
+    BoundTemperatureWorld& operator=(BoundTemperatureWorld other);
 
-    friend void swap(BoundTemperatureWorldOnSynchronizedVector& first, BoundTemperatureWorldOnSynchronizedVector& second);
+    friend void swap(BoundTemperatureWorld& first, BoundTemperatureWorld& second);
 
     bool has(Coord x, Coord y, Coord z) const noexcept override;
     Temperature get(Coord x, Coord y, Coord z) const override;
@@ -39,8 +39,8 @@ public:
     Parallelepiped bounds() const noexcept override;
 
 protected:
-    BoundTemperatureWorldOnSynchronizedVector(const BoundTemperatureWorldOnSynchronizedVector& other, const std::lock_guard<std::mutex>&);
-    BoundTemperatureWorldOnSynchronizedVector(BoundTemperatureWorldOnSynchronizedVector&& other, const std::lock_guard<std::mutex>&);
+    BoundTemperatureWorld(const BoundTemperatureWorld& other, const std::lock_guard<std::mutex>&);
+    BoundTemperatureWorld(BoundTemperatureWorld&& other, const std::lock_guard<std::mutex>&);
 
     virtual size_t _getIndexInData(Coord x, Coord y, Coord z) const;
 
@@ -49,7 +49,7 @@ protected:
     mutable std::mutex _dataMutex;
 };
 
-#include "BoundTemperatureWorldOnSynchronizedVector.inc.h"
+#include "BoundTemperatureWorld.inc.h"
 
 
 #endif //RECAST_VECTORTEMPERATUREWORLD_H

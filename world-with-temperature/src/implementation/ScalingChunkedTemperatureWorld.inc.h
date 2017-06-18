@@ -2,35 +2,35 @@
 // Created by Oleg Morozenkov on 14.06.17.
 //
 
-#include "ScalingOnDemandGeneratableChunkedTemperatureWorldOnSynchronizedList.h"
+#include "ScalingGeneratableChunkedTemperatureWorld.h"
 #include "../types/IntScale.h"
 #include "../types/IntScaleParallelepiped.h"
 
 template<typename Chunk>
-ScalingOnDemandGeneratableChunkedTemperatureWorldOnSynchronizedList<Chunk>::ScalingOnDemandGeneratableChunkedTemperatureWorldOnSynchronizedList(
-        OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::NeedChunkFn needChunkFn,
-        OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>::MakeChunkFn makeChunkFn,
+ScalingGeneratableChunkedTemperatureWorld<Chunk>::ScalingGeneratableChunkedTemperatureWorld(
+        GeneratableGenericChunkedTemperatureWorld<Chunk>::NeedChunkFn needChunkFn,
+        GeneratableGenericChunkedTemperatureWorld<Chunk>::MakeChunkFn makeChunkFn,
         Parallelepiped baseChunkSize)
-        : OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList(needChunkFn, makeChunkFn)
+        : GeneratableGenericChunkedTemperatureWorld(needChunkFn, makeChunkFn)
         , _baseChunkSize(baseChunkSize)
 {
 }
 
 template<typename Chunk>
-void ScalingOnDemandGeneratableChunkedTemperatureWorldOnSynchronizedList<Chunk>::addPriorityPoint(Coord x, Coord y, Coord z) {
+void ScalingGeneratableChunkedTemperatureWorld<Chunk>::addPriorityPoint(Coord x, Coord y, Coord z) {
     std::lock_guard<std::mutex> guard(_priorityPointMutex);
     _priorityPoints.push_back(Point(x, y, z));
     _updateScales();
 }
 
 template<typename Chunk>
-void ScalingOnDemandGeneratableChunkedTemperatureWorldOnSynchronizedList<Chunk>::removePriorityPoint(Coord x, Coord y, Coord z) {
+void ScalingGeneratableChunkedTemperatureWorld<Chunk>::removePriorityPoint(Coord x, Coord y, Coord z) {
     _priorityPoints.remove(Point(x, y, z));
     _updateScales();
 }
 
 template<typename Chunk>
-void ScalingOnDemandGeneratableChunkedTemperatureWorldOnSynchronizedList<Chunk>::_updateScales() {
+void ScalingGeneratableChunkedTemperatureWorld<Chunk>::_updateScales() {
     std::lock_guard<std::mutex> guard(_priorityPointMutex);
     if (_priorityPoints.empty()) {
         return;

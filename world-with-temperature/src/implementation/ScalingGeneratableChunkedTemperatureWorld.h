@@ -6,10 +6,10 @@
 #define RECAST_SCALABLESYNCHRONIZEDLISTCHUNKEDTEMPERATUREWORLD_H
 
 
-#include "BoundTemperatureWorldOnSynchronizedVector.h"
+#include "BoundTemperatureWorld.h"
 #include "../interfaces/ITemperatureWorldChunkable.h"
-#include "GenericChunkedTemperatureWorldOnSynchronizedList.h"
-#include "OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList.h"
+#include "GenericChunkedTemperatureWorld.h"
+#include "GeneratableGenericChunkedTemperatureWorld.h"
 #include "../interfaces/ITemperatureWorldPointPrioritizable.h"
 #include "../types/Point.h"
 #include "annotations/ScaledTemperatureWorldAnnotations.h"
@@ -23,11 +23,11 @@
  * @tparam Chunk Temperature world type for chunks.
  */
 template<typename Chunk>
-class ScalingOnDemandGeneratableChunkedTemperatureWorldOnSynchronizedList : public ITemperatureWorldPointPrioritizable<OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList<Chunk>> {
+class ScalingGeneratableChunkedTemperatureWorld : public ITemperatureWorldPointPrioritizable<GeneratableGenericChunkedTemperatureWorld<Chunk>> {
 public:
-    INJECT_F(ScalingOnDemandGeneratableChunkedTemperatureWorldOnSynchronizedList(
-            ANNOTATED(OnDemandGeneratableChunkedTemperatureWorldAnnotations::NeedFuncFn, NeedChunkFn) needChunkFn,
-            ANNOTATED(OnDemandGeneratableChunkedTemperatureWorldAnnotations::MakeFuncFn, MakeChunkFn) makeChunkFn,
+    INJECT_F(ScalingGeneratableChunkedTemperatureWorld(
+            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::NeedFuncFn, NeedChunkFn) needChunkFn,
+            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::MakeFuncFn, MakeChunkFn) makeChunkFn,
             ANNOTATED(ScaledTemperatureWorldAnnotations::CellScale, Parallelepiped) baseChunkSize));
 
     void addPriorityPoint(Coord x, Coord y, Coord z) override;
@@ -41,7 +41,7 @@ protected:
     std::mutex _priorityPointMutex;
 };
 
-#include "ScalingOnDemandChunkedTemperatureWorldOnSynchronizedList.inc.h"
+#include "ScalingChunkedTemperatureWorld.inc.h"
 
 
 #endif //RECAST_SCALABLESYNCHRONIZEDLISTCHUNKEDTEMPERATUREWORLD_H

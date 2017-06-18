@@ -2,27 +2,27 @@
 // Created by Oleg Morozenkov on 18.06.17.
 //
 
-#include "ScalableBoundTemperatureWorldOnSynchronizedVector.h"
+#include "ScalableBoundTemperatureWorld.h"
 #include <algorithm>
 
 using namespace std;
 
-ScalableBoundTemperatureWorldOnSynchronizedVector::ScalableBoundTemperatureWorldOnSynchronizedVector(
+ScalableBoundTemperatureWorld::ScalableBoundTemperatureWorld(
         Parallelepiped bounds, IntScaleParallelepiped cellScale)
-        : BoundTemperatureWorldOnSynchronizedVector(bounds), _cellScale(cellScale)
+        : BoundTemperatureWorld(bounds), _cellScale(cellScale)
 {
     assert(_cellScale.x().isUpscale() && _cellScale.y().isUpscale() && _cellScale.z().isUpscale());
 }
 
-IntScaleParallelepiped ScalableBoundTemperatureWorldOnSynchronizedVector::cellScale() const noexcept {
+IntScaleParallelepiped ScalableBoundTemperatureWorld::cellScale() const noexcept {
     return _cellScale;
 }
 
-void ScalableBoundTemperatureWorldOnSynchronizedVector::setCellScale(IntScaleParallelepiped scale) {
+void ScalableBoundTemperatureWorld::setCellScale(IntScaleParallelepiped scale) {
     _cellScale = scale;
 }
 
-void ScalableBoundTemperatureWorldOnSynchronizedVector::set(Coord x_, Coord y_, Coord z_, Temperature temperature) {
+void ScalableBoundTemperatureWorld::set(Coord x_, Coord y_, Coord z_, Temperature temperature) {
     lock_guard<mutex> guard(_dataMutex);
     Parallelepiped area = _findScaledArea(x_, y_, z_);
     for (Coord x = area.minX(); x <= area.maxX(); x++) {
@@ -35,7 +35,7 @@ void ScalableBoundTemperatureWorldOnSynchronizedVector::set(Coord x_, Coord y_, 
     }
 }
 
-void ScalableBoundTemperatureWorldOnSynchronizedVector::amplify(Coord x_, Coord y_, Coord z_, Temperature temperature) {
+void ScalableBoundTemperatureWorld::amplify(Coord x_, Coord y_, Coord z_, Temperature temperature) {
     lock_guard<mutex> guard(_dataMutex);
     Parallelepiped area = _findScaledArea(x_, y_, z_);
     for (Coord x = area.minX(); x <= area.maxX(); x++) {
@@ -48,7 +48,7 @@ void ScalableBoundTemperatureWorldOnSynchronizedVector::amplify(Coord x_, Coord 
     }
 }
 
-void ScalableBoundTemperatureWorldOnSynchronizedVector::foreach(ScalableBoundTemperatureWorldOnSynchronizedVector::ForeachCellFn func) const {
+void ScalableBoundTemperatureWorld::foreach(ScalableBoundTemperatureWorld::ForeachCellFn func) const {
     const int dx = _cellScale.x().scale();
     const int dy = _cellScale.y().scale();
     const int dz = _cellScale.z().scale();
@@ -61,7 +61,7 @@ void ScalableBoundTemperatureWorldOnSynchronizedVector::foreach(ScalableBoundTem
     }
 }
 
-Coord ScalableBoundTemperatureWorldOnSynchronizedVector::_findScaledAreaMinByAxis(Coord initialCoord, IntScale scale, Coord minCoord) const noexcept {
+Coord ScalableBoundTemperatureWorld::_findScaledAreaMinByAxis(Coord initialCoord, IntScale scale, Coord minCoord) const noexcept {
     const Coord initialScaledCoord = scale.invertApply(initialCoord);
     for (Coord min = initialCoord - 1; ; min--) {
         if (scale.invertApply(min) != initialScaledCoord) {
@@ -71,7 +71,7 @@ Coord ScalableBoundTemperatureWorldOnSynchronizedVector::_findScaledAreaMinByAxi
     }
 }
 
-Coord ScalableBoundTemperatureWorldOnSynchronizedVector::_findScaledAreaMaxByAxis(Coord initialCoord, IntScale scale, Coord maxCoord) const noexcept {
+Coord ScalableBoundTemperatureWorld::_findScaledAreaMaxByAxis(Coord initialCoord, IntScale scale, Coord maxCoord) const noexcept {
     const Coord initialScaledCoord = scale.invertApply(initialCoord);
     for (Coord max = initialCoord + 1; ; max++) {
         if (scale.invertApply(max) != initialScaledCoord) {
@@ -81,11 +81,11 @@ Coord ScalableBoundTemperatureWorldOnSynchronizedVector::_findScaledAreaMaxByAxi
     }
 }
 
-std::pair<Coord, Coord> ScalableBoundTemperatureWorldOnSynchronizedVector::_findScaledAreaByAxis(Coord initialCoord, IntScale scale, Coord minCoord, Coord maxCoord) const noexcept {
+std::pair<Coord, Coord> ScalableBoundTemperatureWorld::_findScaledAreaByAxis(Coord initialCoord, IntScale scale, Coord minCoord, Coord maxCoord) const noexcept {
     return make_pair(_findScaledAreaMinByAxis(initialCoord, scale, minCoord), _findScaledAreaMaxByAxis(initialCoord, scale, maxCoord));
 }
 
-Parallelepiped ScalableBoundTemperatureWorldOnSynchronizedVector::_findScaledArea(Coord x, Coord y, Coord z) const noexcept {
+Parallelepiped ScalableBoundTemperatureWorld::_findScaledArea(Coord x, Coord y, Coord z) const noexcept {
     return Parallelepiped(_findScaledAreaMinByAxis(x, _cellScale.x(), _bounds.minX()),
                           _findScaledAreaMaxByAxis(x, _cellScale.x(), _bounds.maxX()),
                           _findScaledAreaMinByAxis(y, _cellScale.y(), _bounds.minY()),

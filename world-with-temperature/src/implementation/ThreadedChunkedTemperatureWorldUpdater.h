@@ -13,14 +13,14 @@
 #include "../interfaces/IUpdater.h"
 #include "../interfaces/ITemperatureWorld.h"
 #include "../interfaces/ITemperatureWorldChunkable.h"
-#include "../interfaces/ITemperatureWorldChunkableOnDemandGeneratableObservable.h"
+#include "../interfaces/ITemperatureWorldChunkableGeneratableObservable.h"
 #include "../fixes/fruit.h"
 #include "annotations/ThreadedChunkedTemperatureWorldUpdaterAnnotations.h"
 
 template<typename ChunkUpdater>
 class ThreadedChunkedTemperatureWorldUpdater : public IUpdater {
 public:
-    using WorldPtr = std::shared_ptr<ITemperatureWorldChunkableOnDemandGeneratableObservable<ITemperatureWorldChunkable<ITemperatureWorld>>>;
+    using WorldPtr = std::shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkable<ITemperatureWorld>>>;
     using ChunkUpdaterFactoryFn = std::function<ChunkUpdater()>;
 
     INJECT_F(ThreadedChunkedTemperatureWorldUpdater(

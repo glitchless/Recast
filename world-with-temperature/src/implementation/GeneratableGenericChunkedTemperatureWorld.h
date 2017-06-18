@@ -6,9 +6,9 @@
 #define RECAST_ONDEMANDGENERETABLESYNCHRONIZEDLISTGENERICCHUNKEDTEMPERATUREWORLD_H
 
 
-#include "GenericChunkedTemperatureWorldOnSynchronizedList.h"
-#include "annotations/OnDemandGeneratableChunkedTemperatureWorldAnnotations.h"
-#include "../interfaces/ITemperatureWorldChunkableOnDemandGeneratableObservable.h"
+#include "GenericChunkedTemperatureWorld.h"
+#include "annotations/GeneratableChunkedTemperatureWorldAnnotations.h"
+#include "../interfaces/ITemperatureWorldChunkableGeneratableObservable.h"
 
 /**
  * Template to chunked temperature world. It's backed by `std::list`.
@@ -18,14 +18,14 @@
  * @tparam Chunk Temperature world type for chunks.
  */
 template<typename Chunk>
-class OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList : public ITemperatureWorldChunkableOnDemandGeneratableObservable<GenericChunkedTemperatureWorldOnSynchronizedList<Chunk>> {
+class GeneratableGenericChunkedTemperatureWorld : public ITemperatureWorldChunkableGeneratableObservable<GenericChunkedTemperatureWorld<Chunk>> {
 public:
     using NeedChunkFn = std::function<bool(Coord, Coord, Coord)>;
     using MakeChunkFn = std::function<Chunk(Coord, Coord, Coord)>;
 
-    INJECT_F(OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList(
-            ANNOTATED(OnDemandGeneratableChunkedTemperatureWorldAnnotations::NeedFuncFn, NeedChunkFn) needChunkFn,
-            ANNOTATED(OnDemandGeneratableChunkedTemperatureWorldAnnotations::MakeFuncFn, MakeChunkFn) makeChunkFn));
+    INJECT_F(GeneratableGenericChunkedTemperatureWorld(
+            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::NeedChunkFn, NeedChunkFn) needChunkFn,
+            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::MakeChunkFn, MakeChunkFn) makeChunkFn));
 
     bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
     std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> getChunk(Coord x, Coord y, Coord z) const override;
@@ -41,7 +41,7 @@ protected:
     std::mutex _onNewChunkListenersMutex;
 };
 
-#include "OnDemandGeneratableGenericChunkedTemperatureWorldOnSynchronizedList.inc.h"
+#include "GeneratableGenericChunkedTemperatureWorld.inc.h"
 
 
 #endif //RECAST_ONDEMANDGENERETABLESYNCHRONIZEDLISTGENERICCHUNKEDTEMPERATUREWORLD_H
