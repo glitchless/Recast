@@ -13,7 +13,6 @@ GeneratableGenericChunkedTemperatureWorld<Chunk>::GeneratableGenericChunkedTempe
 
 template<typename Chunk>
 bool GeneratableGenericChunkedTemperatureWorld<Chunk>::hasChunk(Coord x, Coord y, Coord z) const noexcept {
-    std::lock_guard<std::mutex> guard(this->_chunksMutex);
     for (const std::shared_ptr<Chunk>& chunk : this->_chunks) {
         if (chunk->has(x, y, z)) {
             return true;
@@ -24,7 +23,6 @@ bool GeneratableGenericChunkedTemperatureWorld<Chunk>::hasChunk(Coord x, Coord y
 
 template<typename Chunk>
 std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> GeneratableGenericChunkedTemperatureWorld<Chunk>::getChunk(Coord x, Coord y, Coord z) const {
-    std::lock_guard<std::mutex> guard(this->_chunksMutex);
     for (const std::shared_ptr<Chunk>& chunk : this->_chunks) {
         if (chunk->has(x, y, z)) {
             return chunk;
@@ -34,7 +32,6 @@ std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> GeneratableGeneri
         auto newChunk = std::make_shared<Chunk>(_makeChunkFn(x, y, z));
         _chunks.push_back(newChunk);
 
-        std::lock_guard<std::mutex> guard1(_onNewChunkListenersMutex);
         for (OnNewChunkFn& func : _onNewChunkListeners) {
             func(newChunk);
         }
@@ -45,7 +42,6 @@ std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> GeneratableGeneri
 
 template<typename Chunk>
 void GeneratableGenericChunkedTemperatureWorld<Chunk>::onNewChunk(ITemperatureWorldChunkableGeneratableObservable::OnNewChunkFn func) {
-    std::lock_guard<std::mutex> guard(_onNewChunkListenersMutex);
     _onNewChunkListeners.push_back(func);
 }
 

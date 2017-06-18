@@ -14,7 +14,6 @@
 
 /**
  * Implementation of blocking timer.
- * This class is thread-safe.
  */
 class SynchronizedBlockingTimer : public ITimerBlockable<ITimer> {
 public:

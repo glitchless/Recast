@@ -18,7 +18,6 @@
  * Template to chunked temperature world. It's backed by `std::list`.
  * It will create new chunk if client accesses temperature of point in non-existing chunk.
  * Also it will automatically upscale cell size in far chunks for optimization.
- * Chunk collection access is thread-safe. Priority points collection access is thread-safe.
  *
  * @tparam Chunk Temperature world type for chunks.
  */
@@ -26,8 +25,8 @@ template<typename Chunk>
 class ScalingGeneratableChunkedTemperatureWorld : public ITemperatureWorldPointPrioritizable<GeneratableGenericChunkedTemperatureWorld<Chunk>> {
 public:
     INJECT_F(ScalingGeneratableChunkedTemperatureWorld(
-            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::NeedFuncFn, NeedChunkFn) needChunkFn,
-            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::MakeFuncFn, MakeChunkFn) makeChunkFn,
+            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::NeedChunkFn, NeedChunkFn) needChunkFn,
+            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::MakeChunkFn, MakeChunkFn) makeChunkFn,
             ANNOTATED(ScaledTemperatureWorldAnnotations::CellScale, Parallelepiped) baseChunkSize));
 
     void addPriorityPoint(Coord x, Coord y, Coord z) override;
@@ -38,7 +37,6 @@ protected:
 
     Parallelepiped _baseChunkSize;
     std::list<Point> _priorityPoints;
-    std::mutex _priorityPointMutex;
 };
 
 #include "ScalingChunkedTemperatureWorld.inc.h"

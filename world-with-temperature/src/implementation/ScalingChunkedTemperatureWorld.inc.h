@@ -18,7 +18,6 @@ ScalingGeneratableChunkedTemperatureWorld<Chunk>::ScalingGeneratableChunkedTempe
 
 template<typename Chunk>
 void ScalingGeneratableChunkedTemperatureWorld<Chunk>::addPriorityPoint(Coord x, Coord y, Coord z) {
-    std::lock_guard<std::mutex> guard(_priorityPointMutex);
     _priorityPoints.push_back(Point(x, y, z));
     _updateScales();
 }
@@ -31,7 +30,6 @@ void ScalingGeneratableChunkedTemperatureWorld<Chunk>::removePriorityPoint(Coord
 
 template<typename Chunk>
 void ScalingGeneratableChunkedTemperatureWorld<Chunk>::_updateScales() {
-    std::lock_guard<std::mutex> guard(_priorityPointMutex);
     if (_priorityPoints.empty()) {
         return;
     }

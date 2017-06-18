@@ -10,7 +10,6 @@ GenericChunkedTemperatureWorld<Chunk>::GenericChunkedTemperatureWorld() {
 
 template<typename Chunk>
 bool GenericChunkedTemperatureWorld<Chunk>::hasChunk(Coord x, Coord y, Coord z) const noexcept {
-    std::lock_guard<std::mutex> guard(_chunksMutex);
     for (const std::shared_ptr<Chunk>& chunk : _chunks) {
         if (chunk->has(x, y, z)) {
             return true;
@@ -21,7 +20,6 @@ bool GenericChunkedTemperatureWorld<Chunk>::hasChunk(Coord x, Coord y, Coord z) 
 
 template<typename Chunk>
 std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> GenericChunkedTemperatureWorld<Chunk>::getChunk(Coord x, Coord y, Coord z) const {
-    std::lock_guard<std::mutex> guard(_chunksMutex);
     for (const std::shared_ptr<Chunk>& chunk : _chunks) {
         if (chunk->has(x, y, z)) {
             return chunk;
@@ -32,12 +30,7 @@ std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> GenericChunkedTem
 
 template<typename Chunk>
 void GenericChunkedTemperatureWorld<Chunk>::foreachChunk(GenericChunkedTemperatureWorld<Chunk>::ForeachChunkFn func) const {
-    std::list<std::shared_ptr<Chunk>> chunksShallowCopy;
-    {
-        std::lock_guard<std::mutex> guard(_chunksMutex);
-        chunksShallowCopy = _chunks;
-    }
-    for (const std::shared_ptr<Chunk>& chunk : chunksShallowCopy) {
+    for (const std::shared_ptr<Chunk>& chunk : _chunks) {
         func(*chunk);
     }
 }
@@ -64,12 +57,10 @@ void GenericChunkedTemperatureWorld<Chunk>::amplify(Coord x, Coord y, Coord z, T
 
 template<typename Chunk>
 void GenericChunkedTemperatureWorld<Chunk>::addChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
-    std::lock_guard<std::mutex> guard(_chunksMutex);
     _chunks.push_back(std::static_pointer_cast<Chunk>(chunk));
 }
 
 template<typename Chunk>
 void GenericChunkedTemperatureWorld<Chunk>::removeChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
-    std::lock_guard<std::mutex> guard(_chunksMutex);
     _chunks.remove(std::static_pointer_cast<Chunk>(chunk));
 }

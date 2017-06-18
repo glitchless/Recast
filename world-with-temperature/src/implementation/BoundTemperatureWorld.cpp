@@ -16,17 +16,14 @@ bool BoundTemperatureWorld::has(Coord x, Coord y, Coord z) const noexcept {
 }
 
 Temperature BoundTemperatureWorld::get(Coord x, Coord y, Coord z) const {
-    lock_guard<mutex> guard(_dataMutex);
     return _data[_getIndexInData(x, y, z)];
 }
 
 void BoundTemperatureWorld::set(Coord x, Coord y, Coord z, Temperature temperature) {
-    lock_guard<mutex> guard(_dataMutex);
     _data[_getIndexInData(x, y, z)] = temperature;
 }
 
 void BoundTemperatureWorld::amplify(Coord x, Coord y, Coord z, Temperature temperature) {
-    lock_guard<mutex> guard(_dataMutex);
     _data[_getIndexInData(x, y, z)] += temperature;
 }
 
@@ -55,21 +52,11 @@ size_t BoundTemperatureWorld::_getIndexInData(Coord x, Coord y, Coord z) const {
 }
 
 BoundTemperatureWorld::BoundTemperatureWorld(const BoundTemperatureWorld& other)
-        : BoundTemperatureWorld(other, lock_guard<mutex>(other._dataMutex))
-{
-}
-
-BoundTemperatureWorld::BoundTemperatureWorld(BoundTemperatureWorld&& other)
-        : BoundTemperatureWorld(move(other), lock_guard<mutex>(other._dataMutex))
-{
-}
-
-BoundTemperatureWorld::BoundTemperatureWorld(const BoundTemperatureWorld& other, const std::lock_guard<std::mutex>&)
         : _bounds(other._bounds), _data(other._data)
 {
 }
 
-BoundTemperatureWorld::BoundTemperatureWorld(BoundTemperatureWorld&& other, const std::lock_guard<std::mutex>&)
+BoundTemperatureWorld::BoundTemperatureWorld(BoundTemperatureWorld&& other)
         : _bounds(move(other._bounds)), _data(move(other._data))
 {
 }

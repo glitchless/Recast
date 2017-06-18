@@ -7,7 +7,6 @@
 
 
 #include <vector>
-#include <mutex>
 #include <fruit/fruit.h>
 #include "../interfaces/ITemperatureWorldBoundable.h"
 #include "annotations/BoundTemperatureWorldAnnotations.h"
@@ -16,7 +15,6 @@
 
 /**
  * Bound temperature world backed by `std::vector`.
- * Cell data access is thread-safe.
  */
 class BoundTemperatureWorld : public ITemperatureWorldBoundable<ITemperatureWorld> {
 public:
@@ -39,14 +37,10 @@ public:
     Parallelepiped bounds() const noexcept override;
 
 protected:
-    BoundTemperatureWorld(const BoundTemperatureWorld& other, const std::lock_guard<std::mutex>&);
-    BoundTemperatureWorld(BoundTemperatureWorld&& other, const std::lock_guard<std::mutex>&);
-
     virtual size_t _getIndexInData(Coord x, Coord y, Coord z) const;
 
     Parallelepiped _bounds;
     std::vector<Temperature> _data;
-    mutable std::mutex _dataMutex;
 };
 
 #include "BoundTemperatureWorld.inc.h"

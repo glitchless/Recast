@@ -6,7 +6,6 @@
 #define RECAST_SYNCHRONIZEDVECTORCHUNKEDTEMPERATUREWORLD_H
 
 
-#include <mutex>
 #include <list>
 #include <fruit/fruit.h>
 #include "../interfaces/ITemperatureWorldChunkable.h"
@@ -15,7 +14,6 @@
 
 /**
  * Template to chunked temperature world. It's backed by `std::list`.
- * Chunk collection access is thread-safe.
  *
  * @tparam Chunk Temperature world type for chunks.
  */
@@ -37,8 +35,7 @@ public:
     void removeChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) override ;
 
 protected:
-    mutable std::list<std::shared_ptr<Chunk>> _chunks;
-    mutable std::mutex _chunksMutex;
+    std::list<std::shared_ptr<Chunk>> _chunks;
 };
 
 #include "GenericChunkedTemperatureWorld.inc.h"

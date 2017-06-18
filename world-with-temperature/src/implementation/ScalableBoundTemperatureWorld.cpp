@@ -23,7 +23,6 @@ void ScalableBoundTemperatureWorld::setCellScale(IntScaleParallelepiped scale) {
 }
 
 void ScalableBoundTemperatureWorld::set(Coord x_, Coord y_, Coord z_, Temperature temperature) {
-    lock_guard<mutex> guard(_dataMutex);
     Parallelepiped area = _findScaledArea(x_, y_, z_);
     for (Coord x = area.minX(); x <= area.maxX(); x++) {
         for (Coord y = area.minY(); y <= area.maxY(); y++) {
@@ -36,7 +35,6 @@ void ScalableBoundTemperatureWorld::set(Coord x_, Coord y_, Coord z_, Temperatur
 }
 
 void ScalableBoundTemperatureWorld::amplify(Coord x_, Coord y_, Coord z_, Temperature temperature) {
-    lock_guard<mutex> guard(_dataMutex);
     Parallelepiped area = _findScaledArea(x_, y_, z_);
     for (Coord x = area.minX(); x <= area.maxX(); x++) {
         for (Coord y = area.minY(); y <= area.maxY(); y++) {

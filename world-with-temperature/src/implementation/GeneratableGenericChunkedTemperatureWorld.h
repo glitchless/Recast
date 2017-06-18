@@ -13,7 +13,6 @@
 /**
  * Template to chunked temperature world. It's backed by `std::list`.
  * It will create new chunk if client accesses temperature of point in non-existing chunk.
- * Chunk collection access is thread-safe.
  *
  * @tparam Chunk Temperature world type for chunks.
  */
@@ -38,7 +37,6 @@ protected:
     MakeChunkFn _makeChunkFn;
 
     std::list<OnNewChunkFn> _onNewChunkListeners;
-    std::mutex _onNewChunkListenersMutex;
 };
 
 #include "GeneratableGenericChunkedTemperatureWorld.inc.h"
