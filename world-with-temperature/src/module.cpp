@@ -61,7 +61,7 @@ WorldWithTemperatureModule::chunkedTemperatureWorldComponent(
                         return f;
                     })
             .registerProvider<Annotated<GCTWAnnotations::MakeChunkFn, GCTWTypedefs::MakeChunkFn>>(
-                    [](ANNOTATED(BoundTemperatureWorldAnnotations::Bounds, Parallelepiped) baseChunkSize_)
+                    [](Annotated<BoundTemperatureWorldAnnotations::Bounds, Parallelepiped> baseChunkSize_)
                     {
                         GCTWTypedefs::MakeChunkFn f = [&](Coord x, Coord y, Coord z) {
                             return make_shared<ScalableBoundTemperatureWorld>(baseChunkSize_);
@@ -71,7 +71,7 @@ WorldWithTemperatureModule::chunkedTemperatureWorldComponent(
             .bindInstance<Annotated<BoundTemperatureWorldAnnotations::Bounds, Parallelepiped>>(baseChunkSize)
             .bind<IUpdater, ThreadedChunkedTemperatureWorldUpdater>()
             .registerProvider<Annotated<ThreadedChunkedTemperatureWorldUpdaterAnnotations::ChunkUpdaterFactoryFn, function<shared_ptr<IUpdater>()>>>(
-                    [](ANNOTATED(TemperatureWorldUpdaterAnnotations::TemperatureExchangeCoefficient, double) temperatureExchangeCoefficient_,
+                    [](Annotated<TemperatureWorldUpdaterAnnotations::TemperatureExchangeCoefficient, double> temperatureExchangeCoefficient_,
                        std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> world,
                        std::shared_ptr<ITimer> timer)
                     {
