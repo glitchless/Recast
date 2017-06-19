@@ -7,11 +7,11 @@
  * It't Point. James Point.
  */
 struct Point {
-    float x;
-    float y;
-    float z;
+    double x;
+    double y;
+    double z;
 
-    Point(float x, float y, float z) : x(x), y(y), z(z) {}
+    Point(double x, double y, double z) : x(x), y(y), z(z) {}
 };
 
 
