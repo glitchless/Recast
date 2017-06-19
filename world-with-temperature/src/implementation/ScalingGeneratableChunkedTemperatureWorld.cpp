@@ -35,7 +35,7 @@ void ScalingGeneratableChunkedTemperatureWorld::_updateScales() {
     }
 
     for (shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>& chunk_ : _chunks) {
-        auto chunk = static_pointer_cast<ITemperatureWorldScalableMutable<ITemperatureWorldScalable<ITemperatureWorldBoundable<ITemperatureWorld>>>>(chunk_);
+        auto chunk = dynamic_pointer_cast<ITemperatureWorldScalableMutable<ITemperatureWorldScalable<ITemperatureWorldBoundable<ITemperatureWorld>>>>(chunk_);
 
         int minDistanceXSq = 0;
         int minDistanceYSq = 0;

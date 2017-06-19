@@ -50,9 +50,9 @@ void ChunkedTemperatureWorld::amplify(Coord x, Coord y, Coord z, Temperature tem
 }
 
 void ChunkedTemperatureWorld::addChunk(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
-    _chunks.push_back(static_pointer_cast<ITemperatureWorldBoundable<ITemperatureWorld>>(chunk));
+    _chunks.push_back(dynamic_pointer_cast<ITemperatureWorldBoundable<ITemperatureWorld>>(chunk));
 }
 
 void ChunkedTemperatureWorld::removeChunk(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
-    _chunks.remove(static_pointer_cast<ITemperatureWorldBoundable<ITemperatureWorld>>(chunk));
+    _chunks.remove(dynamic_pointer_cast<ITemperatureWorldBoundable<ITemperatureWorld>>(chunk));
 }

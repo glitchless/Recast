@@ -78,6 +78,7 @@ WorldWithTemperatureModule::chunkedTemperatureWorldComponent(
                         function<shared_ptr<IUpdater>()> f = [&]() {
                             return AverageShareTemperatureWorldUpdater(temperatureExchangeCoefficient_, world, timer);
                         };
+                        return f;
                     })
             .bindInstance<Annotated<TemperatureExchangeCoefficient, double>>(temperatureExchangeCoefficient)
             .bind<ITimer, SynchronizedBlockingTimer>()
