@@ -12,7 +12,6 @@
 #include "GeneratableChunkedTemperatureWorld.h"
 #include "../interfaces/ITemperatureWorldPointPrioritizable.h"
 #include "../types/Point.h"
-#include "annotations/ScaledTemperatureWorldAnnotations.h"
 
 /**
  * Template to chunked temperature world. It's backed by `std::list`.

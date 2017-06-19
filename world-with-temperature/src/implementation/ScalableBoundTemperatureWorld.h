@@ -11,7 +11,6 @@
 #include "../interfaces/ITemperatureWorldScalable.h"
 #include "../interfaces/ITemperatureWorldScalableMutable.h"
 #include "../types/Point.h"
-#include "annotations/ScaledTemperatureWorldAnnotations.h"
 
 /**
  * Bound temperature world backed by `std::vector`.
