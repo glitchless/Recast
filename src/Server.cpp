@@ -66,6 +66,7 @@ Server::Server() {
 
 bool Server::shutdown() {
     networkServer->shutdown();
+    delete networkServer;
     return isLaunching ? !(isLaunching = false) : false; // Return true if isLaunching equals true
 }
 

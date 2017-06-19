@@ -89,7 +89,7 @@ void Socket::setReuseAddr(int sd) throw (exception) {
 void Socket::connect(const string &host, int port) throw (exception) {
     struct sockaddr_in address = resolve(host.data(), port);
 
-    int sd = socket(/*Protocol Family*/PF_INET, SOCK_STREAM, IPPROTO_TCP);
+    int sd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sd <= 0) {
         throw runtime_error("error to create socket: " + string(strerror(errno)));
     }
@@ -106,7 +106,7 @@ void Socket::connect(const string &host, int port) throw (exception) {
 void Socket::connect(const string &host, int port, int timeout) throw (exception) {
     struct sockaddr_in address = resolve(host.data(), port);
 
-    int sd = socket(/*Protocol Family*/PF_INET, SOCK_STREAM, IPPROTO_TCP);
+    int sd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sd <= 0) {
         throw runtime_error("error to create socket: " + string(strerror(errno)));
     }

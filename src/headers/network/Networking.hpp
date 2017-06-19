@@ -11,13 +11,13 @@
 #ifndef RECAST_NETWORKING_H
 #define RECAST_NETWORKING_H
 
-#define DEFAULT_PORT 1337
-
 #include <string>
 #include <unistd.h>     // close()
 #include <memory>
 
 using namespace std;
+
+const int DEFAULT_PORT = 1337;
 
 string int2ipv4(uint32_t ip);
 
