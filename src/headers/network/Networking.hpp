@@ -28,8 +28,6 @@ public:
     ~Socket()                 { if (m_Sd > 0) ::close(m_Sd); }
 
     int  sd() const noexcept { return m_Sd; }
-    void connect(const string &host, int port)                  throw (exception);
-    void connect(const string &host, int port, int timeout)     throw (exception);
     void send(const string &s)                                  throw (exception);
     bool hasData()                                              throw (exception);
     string recv()                                               throw (exception);
@@ -41,12 +39,6 @@ public:
     void createServerSocket(uint32_t port, uint32_t queue_size) throw (exception);
     shared_ptr<Socket> accept()                                 throw (exception);
     void close()                     { ::close(m_Sd); }
-
-    void httpQuery(const string &query, function<void(const std::string &s)> cb) throw (exception) {
-        send(query);
-        string res = recv();
-        cb(res);
-    }
 
 private:
     int m_Sd;

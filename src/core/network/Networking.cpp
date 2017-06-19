@@ -18,13 +18,11 @@
 
 #include "network/Networking.hpp"
 
-// Global
 string int2ipv4(uint32_t ip) {
     char buffer[128];
     snprintf(buffer, sizeof(buffer), "%u.%u.%u.%u", ip&0xFF, (ip&0xFF00) >> 8, (ip&0xFF0000) >> 16, (ip&0xFF000000) >> 24);
     return buffer;
 }
-
 
 namespace {
     struct sockaddr_in resolve(const char* host, int port) {
@@ -85,57 +83,6 @@ void Socket::setReuseAddr(int sd) throw (exception) {
     }
 }
 
-
-void Socket::connect(const string &host, int port) throw (exception) {
-    struct sockaddr_in address = resolve(host.data(), port);
-
-    int sd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
-    if (sd <= 0) {
-        throw runtime_error("error to create socket: " + string(strerror(errno)));
-    }
-
-    int connected = ::connect(sd, (struct sockaddr*)&address, sizeof(address));
-    if (connected == -1) {
-        ::close(sd);
-        throw runtime_error("connect error: " + string(strerror(errno)));
-    }
-
-    m_Sd = sd;
-}
-
-void Socket::connect(const string &host, int port, int timeout) throw (exception) {
-    struct sockaddr_in address = resolve(host.data(), port);
-
-    int sd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
-    if (sd <= 0) {
-        throw runtime_error("error to create socket: " + string(strerror(errno)));
-    }
-
-    setNonBlockedImpl(sd, true);
-
-    int connected = ::connect(sd, (struct sockaddr*)&address, sizeof(address));
-    if (connected == -1 && errno != EINPROGRESS) {
-        ::close(sd);
-        throw runtime_error("connect error: " + string(strerror(errno)));
-    }
-
-    fd_set write_fds;
-    FD_ZERO(&write_fds);
-    FD_SET(sd, &write_fds);
-    struct timeval tm;
-    tm.tv_sec = timeout;
-    tm.tv_usec = 0;
-    int sel = select(sd + 1, /*read*/NULL, /*write*/&write_fds, /*exceptions*/NULL, &tm);
-
-    if (sel != 1) {
-        ::close(sd);
-        throw runtime_error("connect timeout");
-    }
-
-    m_Sd = sd;
-}
-
-
 void Socket::send(const string &str) throw (exception) {
     size_t left = str.size();
     ssize_t sent = 0;
@@ -169,26 +116,6 @@ string Socket::recv(size_t bytes) throw (exception) {
     return ret;
 }
 
-namespace {
-    bool parseProtocol(const string &buf, size_t &bytesLeft) {
-        string::size_type hdr_end_pos = buf.find("\r\n\r\n");
-        if (hdr_end_pos == string::npos) { return false; }
-
-        string body = buf.substr(hdr_end_pos + 4, string::npos);
-
-        string::size_type pos = buf.find("Content-Length: ");
-        if (pos == string::npos) {
-            throw runtime_error("http broken");
-        }
-
-        string::size_type length_pos = pos + strlen("Content-Length: ");
-        size_t contentLength = stoi(buf.substr(length_pos, buf.find("\r\n", length_pos)));
-
-        bytesLeft = contentLength - body.size();
-        return true;
-    }
-} // namespace end //
-
 string Socket::recv() throw (exception) {
     char buffer[256];
 #ifdef __APPLE__
@@ -216,7 +143,6 @@ string Socket::recv() throw (exception) {
     return ret;
 }
 
-
 string Socket::recvTimed(int timeout) throw (exception) {
     fd_set read_fds;
     FD_ZERO(&read_fds);
@@ -231,7 +157,6 @@ string Socket::recvTimed(int timeout) throw (exception) {
 
     return recv();
 }
-
 
 bool Socket::hasData() throw (exception) {
     char buf[1];
