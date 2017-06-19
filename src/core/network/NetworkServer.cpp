@@ -10,20 +10,28 @@
 
 #include <iostream>
 #include <thread>
+#include <memory>
+#include <sys/socket.h>
 
 #include "network/Networking.hpp"
 #include "network/NetworkServer.hpp"
 
-NetworkServer::NetworkServer(uint32_t Port) : port(Port) { };
+NetworkServer::NetworkServer(uint32_t PortTCP, uint32_t PortUDP) : portTCP(PortTCP), portUDP(PortUDP) { };
 
 void NetworkServer::run() {
     try {
-        Socket s;
-        s.createServerSocket(port, 25);
+        Socket sockTCP;
+        sockTCP.createServerSocketTCP(portTCP, 25);
+        cerr << "Server is running on port " << portTCP << " for TCP connections" << endl;
+
+        Socket sockUDP;
+        sockUDP.createServerSocketUDP(portUDP);
+        cerr << "Server is running on port " << portUDP << " for UDP connections" << endl;
 
         // Creating serving processes
+
         pid_t pid = fork();
-        cerr << "Server is running on port " << port << endl;
+
         if (pid > 0) {
             cerr << "Parent pid: " << getpid() << endl;
         } else {
@@ -33,8 +41,10 @@ void NetworkServer::run() {
         // Endless loop listening to connections
         isRunning = true;
         while(isRunning) {
-            shared_ptr<Socket> client = s.accept();
-            clientWork(client);
+            shared_ptr<Socket> clientTCP = sockTCP.accept();
+            clientWork(clientTCP);
+            shared_ptr<Socket> clientUDP = make_shared<Socket>(sockUDP);
+            clientWork(clientUDP);
         }
     } catch(const exception &e) {
         cerr << e.what() << endl;

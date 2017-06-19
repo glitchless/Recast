@@ -17,7 +17,8 @@
 
 using namespace std;
 
-const int DEFAULT_PORT = 1337;
+const int DEFAULT_PORT_TCP = 1337;
+const int DEFAULT_PORT_UDP = 1338;
 
 string int2ipv4(uint32_t ip);
 
@@ -29,19 +30,20 @@ public:
 
 public:
     int  getSocketDescr() const noexcept { return socketDescr; }
-    void setNonBlocked(bool option)                             throw (exception);
-    void send(const string &s)                                  throw (exception);
-    string recv()                                               throw (exception);
-    string recv(size_t bytes)                                   throw (exception);
-    string recvTimed(int timeout)                               throw (exception);
-    void setRecvTimeout(int seconds, int microseconds)          throw (exception);
-    bool hasData()                                              throw (exception);
-    void createServerSocket(uint32_t port, uint32_t queue_size) throw (exception);
-    shared_ptr<Socket> accept()                                 throw (exception);
+    void setNonBlocked(bool option)                                           throw (exception);
+    void send(const string &s)                                                throw (exception);
+    string recv()                                                             throw (exception);
+    string recv(size_t bytes)                                                 throw (exception);
+    string recvTimed(int timeout)                                             throw (exception);
+    void setRecvTimeout(int seconds, int microseconds)                        throw (exception);
+    bool hasData()                                                            throw (exception);
+    void createServerSocketUDP(uint32_t port)                                    throw (exception);
+    void createServerSocketTCP(uint32_t port, uint32_t queueSize)                throw (exception);
+    shared_ptr<Socket> accept()                                               throw (exception);
     void close() { ::close(socketDescr); }
 
 private:
-    void setReuseAddress(int sd)                                throw (exception);
+    void setReuseAddress(int sd)                                              throw (exception);
     int socketDescr;
 };
 

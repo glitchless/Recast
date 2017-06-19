@@ -17,11 +17,12 @@ using namespace std;
 
 class NetworkServer {
 public:
-    NetworkServer(uint32_t Port);
+    NetworkServer(uint32_t PortTCP, uint32_t PortUDP);
     void run();
     void shutdown();
 private:
-    uint32_t port;
+    uint32_t portTCP;
+    uint32_t portUDP;
     bool isRunning;
 
     void clientWork(shared_ptr<Socket> client);

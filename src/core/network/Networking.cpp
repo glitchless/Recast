@@ -71,9 +71,9 @@ void Socket::setRecvTimeout(int seconds, int microseconds) throw (exception) {
     tv.tv_sec = seconds;
     tv.tv_usec = microseconds;
 
-    if (setsockopt(socketDescr, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) != 0) {
-        throw runtime_error("set rcvtimeout: " + string(strerror(errno)));
-    }
+//    if (setsockopt(socketDescr, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) != 0) {
+//        throw runtime_error("set rcvtimeout: " + string(strerror(errno)));
+//    }
 }
 
 void Socket::setReuseAddress(int sd) throw (exception) {
@@ -164,7 +164,30 @@ bool Socket::hasData() throw (exception) {
     return false;
 }
 
-void Socket::createServerSocket(uint32_t port, uint32_t listenQueueSize) throw (exception) {
+void Socket::createServerSocketUDP(uint32_t port) throw (exception) {
+    int sd = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);
+    if (sd <= 0) {
+        throw runtime_error("socket: " + string(strerror(errno)));
+    }
+
+    setReuseAddress(sd);
+
+    struct sockaddr_in servAddr;
+    memset(&servAddr, 0, sizeof(servAddr));
+
+    servAddr.sin_family = AF_INET;
+    servAddr.sin_addr.s_addr = htonl(INADDR_ANY);
+    servAddr.sin_port = htons(port);
+
+    if (::bind(sd, (struct sockaddr*)&servAddr, sizeof(servAddr)) < 0) {
+        ::close(sd);
+        throw runtime_error("bind: " + string(strerror(errno)));
+    }
+
+    socketDescr = sd;
+}
+
+void Socket::createServerSocketTCP(uint32_t port, uint32_t queueSize) throw (exception) {
     int sd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sd <= 0) {
         throw runtime_error("socket: " + string(strerror(errno)));
@@ -184,7 +207,7 @@ void Socket::createServerSocket(uint32_t port, uint32_t listenQueueSize) throw (
         throw runtime_error("bind: " + string(strerror(errno)));
     }
 
-    ::listen(sd, listenQueueSize);
+    ::listen(sd, queueSize);
     socketDescr = sd;
 }
 
@@ -194,8 +217,7 @@ shared_ptr<Socket> Socket::accept() throw (exception) {
     socklen_t cli_len = sizeof(client);
 
     int cli_sd = ::accept(socketDescr, (struct sockaddr*)&client, &cli_len);
-    if (-1 == cli_sd)
-        return shared_ptr<Socket>();
+    if (-1 == cli_sd) { return shared_ptr<Socket>(); }
     cerr << "new client: " << cli_sd << ", from: " << int2ipv4(client.sin_addr.s_addr) << endl;
 
     return make_shared<Socket>(cli_sd);

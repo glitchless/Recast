@@ -58,8 +58,10 @@ void Server::initServer() {
 Server::Server() {
     isLaunching = false;
 
-    uint32_t port = static_cast<uint32_t>(Config::instance()->get("general.server.port", DEFAULT_PORT));
-    networkServer = new NetworkServer(port);
+    uint32_t portTCP = static_cast<uint32_t>(Config::instance()->get("general.server.port.tcp", DEFAULT_PORT_TCP));
+    uint32_t portUDP = static_cast<uint32_t>(Config::instance()->get("general.server.port.udp", DEFAULT_PORT_UDP));
+
+    networkServer = new NetworkServer(portTCP, portUDP);
 
     players = new PlayersOnline(Config::instance()->get("server.max_players", 20));
 }
