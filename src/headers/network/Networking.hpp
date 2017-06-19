@@ -8,16 +8,18 @@
  *
  **/
 
+#ifndef RECAST_NETWORKING_H
+#define RECAST_NETWORKING_H
+
+#define DEFAULT_PORT 1337
+
 #include <string>
 #include <unistd.h>     // close()
 #include <memory>
 
-
 std::string int2ipv4(uint32_t ip);
 
-
-class Socket
-{
+class Socket {
 public:
     Socket()       : m_Sd(-1) {}
     Socket(int sd) : m_Sd(sd) {}
@@ -48,3 +50,5 @@ public:
 private:
     int m_Sd;
 };
+
+#endif //RECAST_NETWORKING_H

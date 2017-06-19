@@ -16,7 +16,7 @@
 #include <netdb.h>      // gethostbyname
 #include <fcntl.h>
 
-#include "networking.hpp"
+#include "network/Networking.hpp"
 
 // Global
 std::string int2ipv4(uint32_t ip) {

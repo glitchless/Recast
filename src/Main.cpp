@@ -7,7 +7,7 @@
  * Init config class @see Config.
  **/
 #include <sqlite/src/sqlite3.h>
-#include "Server.h"
+#include "Server.hpp"
 
 /**
  * @brief Main method :)

@@ -14,7 +14,7 @@
 #include <iostream>
 #include <boost/log/trivial.hpp>
 #include "threads/InputThread.hpp"
-#include "Server.h"
+#include "Server.hpp"
 
 using namespace std;
 

@@ -16,6 +16,7 @@
 #include <thread>
 #include "commands/ICommandSender.hpp"
 #include "commands/CommandManager.hpp"
+#include "network/NetworkServer.hpp"
 
 class Player;
 
@@ -53,6 +54,7 @@ private:
     volatile bool isLaunching;
     std::thread inputThread;
     PlayersOnline *players;
+    NetworkServer *networkServer;
 };
 
 

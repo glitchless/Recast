@@ -19,13 +19,13 @@
 #include <boost/log/utility/setup/common_attributes.hpp>
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
-#include <exceptions/InvalidLoginOrPassword.h>
+#include <exceptions/InvalidLoginOrPassword.hpp>
 
-#include "io/SQLite.h"
-#include "configs/Config.h"
-#include "Server.h"
-#include "threads/InputThread.h"
-#include "models/collections/PlayersOnline.h"
+#include "io/SQLite.hpp"
+#include "configs/Config.hpp"
+#include "Server.hpp"
+#include "threads/InputThread.hpp"
+#include "models/collections/PlayersOnline.hpp"
 
 using namespace std;
 using namespace boost;
@@ -50,15 +50,22 @@ void Server::initServer() {
     isLaunching = true;
     inputThread = thread(&InputThread::init, InputThread(this));
     inputThread.detach();
-    while (isRunning());
+
+    BOOST_LOG_TRIVIAL(info) << "Initializing network...";
+    networkServer->run();
 }
 
 Server::Server() {
     isLaunching = false;
+
+    uint32_t port = static_cast<uint32_t>(Config::instance()->get("general.server.port", DEFAULT_PORT));
+    networkServer = new NetworkServer(port);
+
     players = new PlayersOnline(Config::instance()->get("server.max_players", 20));
 }
 
 bool Server::shutdown() {
+    networkServer->shutdown();
     return isLaunching ? !(isLaunching = false) : false; // Return true if isLaunching equals true
 }
 

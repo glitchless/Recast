@@ -10,26 +10,13 @@
 
 #include <iostream>
 #include <thread>
-#include "networking.hpp"
 
-void runServer(uint32_t &port);
-void directProvide(int argc, char *argv[], uint32_t &port);
-void clientWork(std::shared_ptr<Socket> client);
-std::string exchange(const std::string action);
-std::string check(const std::string action);
+#include "network/Networking.hpp"
+#include "network/NetworkServer.hpp"
 
-int main(int argc, char *argv[]) {
-    // Getting port somehow (defaults?)
-    uint32_t port = 8888;
-    // External terminal usage to set the port manually
-    if (argc == 2) { directProvide(argc, argv, port); }
-    // Server initialization
-    runServer(port);
+NetworkServer::NetworkServer(uint32_t Port) : port(Port) { };
 
-    return 0;
-}
-
-void runServer(uint32_t &port) {
+void NetworkServer::run() {
     try {
         Socket s;
         s.createServerSocket(port, 25);
@@ -44,8 +31,8 @@ void runServer(uint32_t &port) {
         }
 
         // Endless loop listening to connections
-        bool trigger = true;
-        while(trigger) {
+        isRunning = true;
+        while(isRunning) {
             std::shared_ptr<Socket> client = s.accept();
             clientWork(client);
         }
@@ -54,19 +41,7 @@ void runServer(uint32_t &port) {
     }
 }
 
-
-void directProvide(int argc, char *argv[], uint32_t &port) {
-    if (argc == 2) {
-        try {
-            port = static_cast<uint32_t >(std::stoi(std::string(argv[1])));
-        } catch (const std::exception &e) {
-            std::cerr << e.what() << std::endl;
-        }
-    }
-}
-
-
-void clientWork(std::shared_ptr<Socket> client) {
+void NetworkServer::clientWork(std::shared_ptr<Socket> client) {
     client->setRcvTimeout(30, 0); // s, ms
     while (true) try {
             std::string request = client->recv();
@@ -78,7 +53,11 @@ void clientWork(std::shared_ptr<Socket> client) {
         }
 }
 
-std::string exchange(const std::string action) {
+void NetworkServer::shutdown() {
+    isRunning = false;
+}
+
+std::string NetworkServer::exchange(const std::string action) {
     // Game logic goes here
 
     // Answer to client (difference snapshots? yes/no answer?)
@@ -87,7 +66,7 @@ std::string exchange(const std::string action) {
     return state;
 }
 
-std::string check(const std::string action) {
+std::string NetworkServer::check(const std::string action) {
     // Example
     std::string result = "DENIED";
     if (action.find("CAST") != -1) {
