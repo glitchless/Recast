@@ -19,33 +19,35 @@
 namespace WorldWithTemperatureModule {
     namespace Defaults {
         static double temperatureExchangeCoefficient = 0.1;
-        static std::chrono::milliseconds minDelta(20);
+        static std::chrono::milliseconds minUpdateDelta(20);
+        static Parallelepiped baseChunkSize(64, 64, 64);
     }
-
-    /**
-     * Makes component which can create temperature world updater.
-     * Requires to configure temperature world.
-     *
-     * @param temperatureExchangeCoefficient Means speed of temperature exchange.
-     * @param minDelta Minimum time duration between temperature world updates.
-     * @return Component.
-     */
-    fruit::Component<fruit::Required<ITemperatureWorldBoundable<ITemperatureWorld>>, IUpdater>
-    updaterComponent(
-            double& temperatureExchangeCoefficient = Defaults::temperatureExchangeCoefficient,
-            std::chrono::milliseconds& minDelta = Defaults::minDelta);
 
     /**
      * Makes component which can create temperature world and its updater.
      *
      * @param bounds Bounds of the temperature world.
-     * @param updaterComponent_ Component which creates temperature world updater.
+     * @param updaterComponent Component which creates temperature world updater.
      * @return Component.
      */
     fruit::Component<ITemperatureWorld, ITemperatureWorldBoundable<ITemperatureWorld>, IUpdater>
     boundTemperatureWorldComponent(
             Parallelepiped& bounds,
-            fruit::Component<fruit::Required<ITemperatureWorldBoundable<ITemperatureWorld>>, IUpdater> updaterComponent_ = updaterComponent());
+            double& temperatureExchangeCoefficient = Defaults::temperatureExchangeCoefficient,
+            std::chrono::milliseconds minDelta = Defaults::minUpdateDelta);
+
+    /**
+     * Makes component which can create scaling chunked temperature world and its updater.
+     *
+     * @param baseChunkSize Size of each chunk.
+     * @param updaterComponent_ Component which creates temperature world updater.
+     * @return Component.
+     */
+    fruit::Component<ITemperatureWorld, IUpdater>
+    chunkedTemperatureWorldComponent(
+            Parallelepiped& baseChunkSize = Defaults::baseChunkSize,
+            double& temperatureExchangeCoefficient = Defaults::temperatureExchangeCoefficient
+            std::chrono::milliseconds minDelta = Defaults::minUpdateDelta);
 }
 
 

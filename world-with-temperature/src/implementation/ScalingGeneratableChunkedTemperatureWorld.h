@@ -25,8 +25,8 @@ template<typename Chunk>
 class ScalingGeneratableChunkedTemperatureWorld : public ITemperatureWorldPointPrioritizable<GeneratableGenericChunkedTemperatureWorld<Chunk>> {
 public:
     INJECT_F(ScalingGeneratableChunkedTemperatureWorld(
-            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::NeedChunkFn, NeedChunkFn) needChunkFn,
-            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::MakeChunkFn, MakeChunkFn) makeChunkFn,
+            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::NeedChunkFn, GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn) needChunkFn,
+            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::MakeChunkFn, GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn) makeChunkFn,
             ANNOTATED(ScaledTemperatureWorldAnnotations::CellScale, Parallelepiped) baseChunkSize));
 
     void addPriorityPoint(Coord x, Coord y, Coord z) override;
@@ -39,7 +39,7 @@ protected:
     std::list<Point> _priorityPoints;
 };
 
-#include "ScalingChunkedTemperatureWorld.inc.h"
+#include "ScalingGeneratableChunkedTemperatureWorld.inc.h"
 
 
 #endif //RECAST_SCALABLESYNCHRONIZEDLISTCHUNKEDTEMPERATUREWORLD_H

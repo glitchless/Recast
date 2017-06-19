@@ -36,7 +36,7 @@ set(SOURCE_FILES
         src/interfaces/ITemperatureWorldChunkable.h
         src/implementation/GenericChunkedTemperatureWorld.inc.h
         src/implementation/GenericChunkedTemperatureWorld.h
-        src/implementation/ScalingChunkedTemperatureWorld.inc.h
+        src/implementation/ScalingGeneratableChunkedTemperatureWorld.inc.h
         src/implementation/ScalingGeneratableChunkedTemperatureWorld.h
         src/types/Parallelepiped.h
         src/types/IntScaleParallelepiped.h
@@ -57,7 +57,8 @@ set(SOURCE_FILES
         src/implementation/ThreadedChunkedTemperatureWorldUpdater.inc.h
         src/implementation/ThreadedChunkedTemperatureWorldUpdater.h
         src/interfaces/ITemperatureWorldChunkableGeneratableObservable.h
-        src/implementation/annotations/ThreadedChunkedTemperatureWorldUpdaterAnnotations.h)
+        src/implementation/annotations/ThreadedChunkedTemperatureWorldUpdaterAnnotations.h
+        src/types/GeneratableChunkedTemperatureWorldTypedefs.h)
 
 # unittest
 add_executable(world-with-temperature-unittest test/unittest.cpp test/lib/catch.hpp ${SOURCE_FILES})

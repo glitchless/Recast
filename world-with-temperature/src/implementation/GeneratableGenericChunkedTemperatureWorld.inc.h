@@ -6,7 +6,7 @@
 
 template<typename Chunk>
 GeneratableGenericChunkedTemperatureWorld<Chunk>::GeneratableGenericChunkedTemperatureWorld(
-        GeneratableGenericChunkedTemperatureWorld<Chunk>::NeedChunkFn needChunkFn, GeneratableGenericChunkedTemperatureWorld<Chunk>::MakeChunkFn makeChunkFn)
+        GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn needChunkFn, GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn makeChunkFn)
         : _needChunkFn(needChunkFn), _makeChunkFn(makeChunkFn)
 {
 }
@@ -29,7 +29,7 @@ std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> GeneratableGeneri
         }
     }
     if (_needChunkFn(x, y, z)) {
-        auto newChunk = std::make_shared<Chunk>(_makeChunkFn(x, y, z));
+        std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> newChunk = _makeChunkFn(x, y, z);
         _chunks.push_back(newChunk);
 
         for (OnNewChunkFn& func : _onNewChunkListeners) {
@@ -41,7 +41,7 @@ std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> GeneratableGeneri
 }
 
 template<typename Chunk>
-void GeneratableGenericChunkedTemperatureWorld<Chunk>::onNewChunk(ITemperatureWorldChunkableGeneratableObservable::OnNewChunkFn func) {
+void GeneratableGenericChunkedTemperatureWorld<Chunk>::onNewChunk(GeneratableGenericChunkedTemperatureWorld::OnNewChunkFn func) {
     _onNewChunkListeners.push_back(func);
 }
 

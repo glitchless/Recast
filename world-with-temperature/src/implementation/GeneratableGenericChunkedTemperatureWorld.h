@@ -9,6 +9,7 @@
 #include "GenericChunkedTemperatureWorld.h"
 #include "annotations/GeneratableChunkedTemperatureWorldAnnotations.h"
 #include "../interfaces/ITemperatureWorldChunkableGeneratableObservable.h"
+#include "../types/GeneratableChunkedTemperatureWorldTypedefs.h"
 
 /**
  * Template to chunked temperature world. It's backed by `std::list`.
@@ -19,12 +20,9 @@
 template<typename Chunk>
 class GeneratableGenericChunkedTemperatureWorld : public ITemperatureWorldChunkableGeneratableObservable<GenericChunkedTemperatureWorld<Chunk>> {
 public:
-    using NeedChunkFn = std::function<bool(Coord, Coord, Coord)>;
-    using MakeChunkFn = std::function<Chunk(Coord, Coord, Coord)>;
-
     INJECT_F(GeneratableGenericChunkedTemperatureWorld(
-            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::NeedChunkFn, NeedChunkFn) needChunkFn,
-            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::MakeChunkFn, MakeChunkFn) makeChunkFn));
+            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::NeedChunkFn, GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn) needChunkFn,
+            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::MakeChunkFn, GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn) makeChunkFn));
 
     bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
     std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> getChunk(Coord x, Coord y, Coord z) const override;
@@ -32,9 +30,8 @@ public:
     void onNewChunk(OnNewChunkFn func) override;
 
 protected:
-
-    NeedChunkFn _needChunkFn;
-    MakeChunkFn _makeChunkFn;
+    GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn _needChunkFn;
+    GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn _makeChunkFn;
 
     std::list<OnNewChunkFn> _onNewChunkListeners;
 };

@@ -8,8 +8,8 @@
 
 template<typename Chunk>
 ScalingGeneratableChunkedTemperatureWorld<Chunk>::ScalingGeneratableChunkedTemperatureWorld(
-        GeneratableGenericChunkedTemperatureWorld<Chunk>::NeedChunkFn needChunkFn,
-        GeneratableGenericChunkedTemperatureWorld<Chunk>::MakeChunkFn makeChunkFn,
+        GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn needChunkFn,
+        GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn makeChunkFn,
         Parallelepiped baseChunkSize)
         : GeneratableGenericChunkedTemperatureWorld(needChunkFn, makeChunkFn)
         , _baseChunkSize(baseChunkSize)
