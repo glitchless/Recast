@@ -42,7 +42,7 @@ void NetworkServer::run() {
 }
 
 void NetworkServer::clientWork(shared_ptr<Socket> client) {
-    client->setRcvTimeout(30, 0); // s, ms
+    client->setRecvTimeout(30, 0); // s, ms
     while (true) try {
             string request = client->recv();
             string response = exchange(request);

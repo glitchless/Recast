@@ -53,33 +53,34 @@ namespace {
         return address;
     }
 
-    void setNonBlockedImpl(int sd, bool opt) throw (exception) {
+    void setNonBlockedImpl(int sd, bool option) throw (exception) {
         int flags = fcntl(sd, F_GETFL, 0);
-        int new_flags = (opt)? (flags | O_NONBLOCK) : (flags & ~O_NONBLOCK);
-        if (fcntl(sd, F_SETFL, new_flags) == -1)
+        int new_flags = (option)? (flags | O_NONBLOCK) : (flags & ~O_NONBLOCK);
+        if (fcntl(sd, F_SETFL, new_flags) == -1) {
             throw runtime_error("An exception occurred (make non-blocked): " + string(strerror(errno)));
+        }
     }
 } // namespace end //
 
-void Socket::setNonBlocked(bool opt) throw (exception) {
-    setNonBlockedImpl(m_Sd, opt);
+void Socket::setNonBlocked(bool option) throw (exception) {
+    setNonBlockedImpl(socketDescr, option);
 }
 
-void Socket::setRcvTimeout(int sec, int microsec) throw (exception) {
+void Socket::setRecvTimeout(int seconds, int microseconds) throw (exception) {
     struct timeval tv;
-    tv.tv_sec = sec;
-    tv.tv_usec = microsec;
+    tv.tv_sec = seconds;
+    tv.tv_usec = microseconds;
 
-    if (setsockopt(m_Sd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) != 0) {
+    if (setsockopt(socketDescr, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) != 0) {
         throw runtime_error("set rcvtimeout: " + string(strerror(errno)));
     }
 }
 
-void Socket::setReuseAddr(int sd) throw (exception) {
+void Socket::setReuseAddress(int sd) throw (exception) {
     int yes = 1;
     if (setsockopt(sd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1) {
         ::close(sd);
-        throw runtime_error("An exception occurred (setopt): " + string(strerror(errno)));
+        throw runtime_error("An exception occurred (setopt reuse): " + string(strerror(errno)));
     }
 }
 
@@ -89,7 +90,7 @@ void Socket::send(const string &str) throw (exception) {
     int flags = 0;
 
     while (left > 0) {
-        sent = ::send(m_Sd, str.data() + sent, str.size() - sent, flags);
+        sent = ::send(socketDescr, str.data() + sent, str.size() - sent, flags);
         if (-1 == sent) {
             throw runtime_error("write failed: " + string(strerror(errno)));
         }
@@ -102,7 +103,7 @@ string Socket::recv(size_t bytes) throw (exception) {
     char *buf = new char[bytes];
     size_t r = 0;
     while (r != bytes) {
-        ssize_t rc = ::recv(m_Sd, buf + r, bytes - r, 0);
+        ssize_t rc = ::recv(socketDescr, buf + r, bytes - r, 0);
         cerr << "recv_ex: " << rc << " bytes\n";
 
         if (rc == -1 || rc == 0) {
@@ -120,48 +121,46 @@ string Socket::recv() throw (exception) {
     char buffer[256];
 #ifdef __APPLE__
     // mac os x doesn't define MSG_NOSIGNAL
-    int n = ::recv(m_Sd, buffer, sizeof(buffer), 0);
+    int n = ::recv(socketDescr, buffer, sizeof(buffer), 0);
 #else
-    int n = ::recv(m_Sd, buffer, sizeof(buffer), MSG_NOSIGNAL);
+    int n = ::recv(socketDescr, buffer, sizeof(buffer), MSG_NOSIGNAL);
 #endif
 
     if (-1 == n && errno != EAGAIN) {
         throw runtime_error("read failed: " + string(strerror(errno)));
     }
     if (0 == n) {
-        throw runtime_error("client: " + to_string(m_Sd) + " disconnected");
+        throw runtime_error("client: " + to_string(socketDescr) + " disconnected");
     }
     if (-1 == n) {
-        throw runtime_error("client: " + to_string(m_Sd) + " timeouted");
+        throw runtime_error("client: " + to_string(socketDescr) + " timeouted");
     }
 
     string ret(buffer, buffer + n);
     while (ret.back() == '\r' || ret.back() == '\n') {
         ret.pop_back();
     }
-    cerr << "client: " << m_Sd << ", recv: " << ret << " [" << n << " bytes]" << endl;
+    cerr << "client: " << socketDescr << ", recv: " << ret << " [" << n << " bytes]" << endl;
     return ret;
 }
 
 string Socket::recvTimed(int timeout) throw (exception) {
     fd_set read_fds;
     FD_ZERO(&read_fds);
-    FD_SET(m_Sd, &read_fds);
+    FD_SET(socketDescr, &read_fds);
     struct timeval tm;
     tm.tv_sec = timeout;
     tm.tv_usec = 0;
-    int sel = select(m_Sd + 1, &read_fds, NULL, NULL, &tm); // read, write, exceptions
-    if (sel != 1) {
-        throw runtime_error("read timeout");
-    }
+    int sel = select(socketDescr + 1, &read_fds, NULL, NULL, &tm); // read, write, exceptions
+    if (sel != 1) { throw runtime_error("read timeout"); }
 
     return recv();
 }
 
 bool Socket::hasData() throw (exception) {
     char buf[1];
-    int n = ::recv(m_Sd, buf, sizeof(buf), MSG_PEEK);
-    if (n > 0) return true;
+    int n = ::recv(socketDescr, buf, sizeof(buf), MSG_PEEK);
+    if (n > 0) { return true; }
     return false;
 }
 
@@ -171,7 +170,7 @@ void Socket::createServerSocket(uint32_t port, uint32_t listenQueueSize) throw (
         throw runtime_error("socket: " + string(strerror(errno)));
     }
 
-    setReuseAddr(sd);
+    setReuseAddress(sd);
 
     struct sockaddr_in servAddr;
     memset(&servAddr, 0, sizeof(servAddr));
@@ -186,7 +185,7 @@ void Socket::createServerSocket(uint32_t port, uint32_t listenQueueSize) throw (
     }
 
     ::listen(sd, listenQueueSize);
-    m_Sd = sd;
+    socketDescr = sd;
 }
 
 shared_ptr<Socket> Socket::accept() throw (exception) {
@@ -194,7 +193,7 @@ shared_ptr<Socket> Socket::accept() throw (exception) {
     memset(&client, 0, sizeof(client));
     socklen_t cli_len = sizeof(client);
 
-    int cli_sd = ::accept(m_Sd, (struct sockaddr*)&client, &cli_len);
+    int cli_sd = ::accept(socketDescr, (struct sockaddr*)&client, &cli_len);
     if (-1 == cli_sd)
         return shared_ptr<Socket>();
     cerr << "new client: " << cli_sd << ", from: " << int2ipv4(client.sin_addr.s_addr) << endl;

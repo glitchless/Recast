@@ -12,7 +12,7 @@
 #define RECAST_NETWORKING_H
 
 #include <string>
-#include <unistd.h>     // close()
+#include <unistd.h>
 #include <memory>
 
 using namespace std;
@@ -23,25 +23,26 @@ string int2ipv4(uint32_t ip);
 
 class Socket {
 public:
-    Socket()       : m_Sd(-1) {}
-    Socket(int sd) : m_Sd(sd) {}
-    ~Socket()                 { if (m_Sd > 0) ::close(m_Sd); }
+    Socket()       : socketDescr(-1) {}
+    Socket(int sd) : socketDescr(sd) {}
+    ~Socket() { if (socketDescr > 0) ::close(socketDescr); }
 
-    int  sd() const noexcept { return m_Sd; }
+public:
+    int  getSocketDescr() const noexcept { return socketDescr; }
+    void setNonBlocked(bool option)                             throw (exception);
     void send(const string &s)                                  throw (exception);
-    bool hasData()                                              throw (exception);
     string recv()                                               throw (exception);
     string recv(size_t bytes)                                   throw (exception);
     string recvTimed(int timeout)                               throw (exception);
-    void setRcvTimeout(int sec, int microsec)                   throw (exception);
-    void setNonBlocked(bool opt)                                throw (exception);
-    void setReuseAddr(int sd)                                   throw (exception);
+    void setRecvTimeout(int seconds, int microseconds)          throw (exception);
+    bool hasData()                                              throw (exception);
     void createServerSocket(uint32_t port, uint32_t queue_size) throw (exception);
     shared_ptr<Socket> accept()                                 throw (exception);
-    void close()                     { ::close(m_Sd); }
+    void close() { ::close(socketDescr); }
 
 private:
-    int m_Sd;
+    void setReuseAddress(int sd)                                throw (exception);
+    int socketDescr;
 };
 
 #endif //RECAST_NETWORKING_H
