@@ -6,10 +6,11 @@
 #define RECAST_ONDEMANDGENERETABLESYNCHRONIZEDLISTGENERICCHUNKEDTEMPERATUREWORLD_H
 
 
-#include "GenericChunkedTemperatureWorld.h"
+#include "ChunkedTemperatureWorld.h"
 #include "annotations/GeneratableChunkedTemperatureWorldAnnotations.h"
+#include "../interfaces/ITemperatureWorldChunkableGeneratable.h"
 #include "../interfaces/ITemperatureWorldChunkableGeneratableObservable.h"
-#include "../types/GeneratableChunkedTemperatureWorldTypedefs.h"
+#include "typedefs/GeneratableChunkedTemperatureWorldTypedefs.h"
 
 /**
  * Template to chunked temperature world. It's backed by `std::list`.
@@ -17,26 +18,28 @@
  *
  * @tparam Chunk Temperature world type for chunks.
  */
-template<typename Chunk>
-class GeneratableGenericChunkedTemperatureWorld : public ITemperatureWorldChunkableGeneratableObservable<GenericChunkedTemperatureWorld<Chunk>> {
+class GeneratableChunkedTemperatureWorld : public ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkableGeneratable<ChunkedTemperatureWorld>> {
 public:
-    INJECT_F(GeneratableGenericChunkedTemperatureWorld(
+    INJECT_F(GeneratableChunkedTemperatureWorld(
             ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::NeedChunkFn, GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn) needChunkFn,
             ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::MakeChunkFn, GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn) makeChunkFn));
 
-    bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
-    std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> getChunk(Coord x, Coord y, Coord z) const override;
+    bool hasOrIsGeneratableChunk(Coord x, Coord y, Coord z) const noexcept override;
+    std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> getOrGenerateChunk(Coord x, Coord y, Coord z) override;
 
-    void onNewChunk(OnNewChunkFn func) override;
+    void addChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) override;
+    void removeChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) override;
+
+    void onChunkAdd(OnChunkEventFn func) override;
+    void onChunkRemove(OnChunkEventFn func) override;
 
 protected:
     GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn _needChunkFn;
     GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn _makeChunkFn;
 
-    std::list<OnNewChunkFn> _onNewChunkListeners;
+    std::list<OnChunkEventFn> _onChunkAddListeners;
+    std::list<OnChunkEventFn> _onChunkRemoveListeners;
 };
-
-#include "GeneratableGenericChunkedTemperatureWorld.inc.h"
 
 
 #endif //RECAST_ONDEMANDGENERETABLESYNCHRONIZEDLISTGENERICCHUNKEDTEMPERATUREWORLD_H

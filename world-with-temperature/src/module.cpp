@@ -10,15 +10,13 @@
 #include "implementation/AverageShareTemperatureWorldUpdater.h"
 #include "implementation/SynchronizedBlockingTimer.h"
 #include "implementation/ScalableBoundTemperatureWorld.h"
-#include "implementation/GeneratableGenericChunkedTemperatureWorld.h"
+#include "implementation/GeneratableChunkedTemperatureWorld.h"
+#include "implementation/ScalingGeneratableChunkedTemperatureWorld.h"
+#include "implementation/ThreadedChunkedTemperatureWorldUpdater.h"
 
 using namespace std;
-using namespace std::chrono;
+using namespace chrono;
 using namespace fruit;
-using namespace BoundTemperatureWorldAnnotations;
-using namespace TemperatureWorldUpdaterAnnotations;
-using namespace BlockingTimerAnnotations;
-using namespace GeneratableChunkedTemperatureWorldAnnotations;
 
 Component<ITemperatureWorld, ITemperatureWorldBoundable<ITemperatureWorld>, IUpdater>
 WorldWithTemperatureModule::boundTemperatureWorldComponent(
@@ -26,6 +24,10 @@ WorldWithTemperatureModule::boundTemperatureWorldComponent(
         double& temperatureExchangeCoefficient,
         milliseconds& minDelta)
 {
+    using namespace BoundTemperatureWorldAnnotations;
+    using namespace TemperatureWorldUpdaterAnnotations;
+    using namespace BlockingTimerAnnotations;
+
     return fruit::createComponent()
             .bind<ITemperatureWorld, BoundTemperatureWorld>()
             .bind<ITemperatureWorldBoundable<ITemperatureWorld>, BoundTemperatureWorld>()
@@ -39,18 +41,44 @@ WorldWithTemperatureModule::boundTemperatureWorldComponent(
 Component<ITemperatureWorld, IUpdater>
 WorldWithTemperatureModule::chunkedTemperatureWorldComponent(
         Parallelepiped& baseChunkSize,
-        GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn& needChunkFn,
-        GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn& makeChunkFn,
         double& temperatureExchangeCoefficient,
         milliseconds& minDelta)
 {
+    using namespace BoundTemperatureWorldAnnotations;
+    using namespace TemperatureWorldUpdaterAnnotations;
+    using namespace BlockingTimerAnnotations;
+    namespace GCTWAnnotations = GeneratableChunkedTemperatureWorldAnnotations;
+    namespace GCTWTypedefs = GeneratableChunkedTemperatureWorldTypedefs;
+
     return fruit::createComponent()
-            .bind<ITemperatureWorld, GeneratableGenericChunkedTemperatureWorld<ScalableBoundTemperatureWorld>>()
-            // TODO: default needChunkFn, makeChunkFn
-            .bindInstance<Annotated<NeedChunkFn, GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn>>(needChunkFn)
-            .bindInstance<Annotated<MakeChunkFn, GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn>>(makeChunkFn)
-            // TODO: ScalableBoundTemperatureWorld factory
-            .bind<IUpdater, AverageShareTemperatureWorldUpdater>()
+            .bind<ITemperatureWorld, ScalingGeneratableChunkedTemperatureWorld>()
+            .bind<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkable<ITemperatureWorld>>, ScalingGeneratableChunkedTemperatureWorld>()
+            .registerProvider<Annotated<GCTWAnnotations::NeedChunkFn, GCTWTypedefs::NeedChunkFn>>(
+                    []() {
+                        GCTWTypedefs::NeedChunkFn f = [](Coord x, Coord y, Coord z) {
+                            return true;
+                        };
+                        return f;
+                    })
+            .registerProvider<Annotated<GCTWAnnotations::MakeChunkFn, GCTWTypedefs::MakeChunkFn>>(
+                    [](ANNOTATED(BoundTemperatureWorldAnnotations::Bounds, Parallelepiped) baseChunkSize_)
+                    {
+                        GCTWTypedefs::MakeChunkFn f = [&](Coord x, Coord y, Coord z) {
+                            return make_shared<ScalableBoundTemperatureWorld>(baseChunkSize_);
+                        };
+                        return f;
+                    })
+            .bindInstance<Annotated<BoundTemperatureWorldAnnotations::Bounds, Parallelepiped>>(baseChunkSize)
+            .bind<IUpdater, ThreadedChunkedTemperatureWorldUpdater>()
+            .registerProvider<Annotated<ThreadedChunkedTemperatureWorldUpdaterAnnotations::ChunkUpdaterFactoryFn, function<shared_ptr<IUpdater>()>>>(
+                    [](ANNOTATED(TemperatureWorldUpdaterAnnotations::TemperatureExchangeCoefficient, double) temperatureExchangeCoefficient_,
+                       std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> world,
+                       std::shared_ptr<ITimer> timer)
+                    {
+                        function<shared_ptr<IUpdater>()> f = [&]() {
+                            return AverageShareTemperatureWorldUpdater(temperatureExchangeCoefficient_, world, timer);
+                        };
+                    })
             .bindInstance<Annotated<TemperatureExchangeCoefficient, double>>(temperatureExchangeCoefficient)
             .bind<ITimer, SynchronizedBlockingTimer>()
             .bindInstance<Annotated<MinDelta, milliseconds>>(minDelta);

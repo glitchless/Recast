@@ -6,12 +6,12 @@
 #define RECAST_GENERATABLECHUNKEDTEMPERATUREWORLDTYPEDEFS_H
 
 #include <functional>
-#include "Coord.h"
-#include "../interfaces/ITemperatureWorldBoundable.h"
+#include "../../types/Coord.h"
+#include "../../interfaces/ITemperatureWorldBoundable.h"
 
 namespace GeneratableChunkedTemperatureWorldTypedefs {
     using NeedChunkFn = std::function<bool(Coord, Coord, Coord)>;
-    using MakeChunkFn = std::function<std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>(Coord, Coord,
+    using MakeChunkFn = std::function<std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>(Coord, Coord, Coord)>;
 };
 
 

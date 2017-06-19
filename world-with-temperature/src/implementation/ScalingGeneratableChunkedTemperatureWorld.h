@@ -8,8 +8,8 @@
 
 #include "BoundTemperatureWorld.h"
 #include "../interfaces/ITemperatureWorldChunkable.h"
-#include "GenericChunkedTemperatureWorld.h"
-#include "GeneratableGenericChunkedTemperatureWorld.h"
+#include "ChunkedTemperatureWorld.h"
+#include "GeneratableChunkedTemperatureWorld.h"
 #include "../interfaces/ITemperatureWorldPointPrioritizable.h"
 #include "../types/Point.h"
 #include "annotations/ScaledTemperatureWorldAnnotations.h"
@@ -21,16 +21,18 @@
  *
  * @tparam Chunk Temperature world type for chunks.
  */
-template<typename Chunk>
-class ScalingGeneratableChunkedTemperatureWorld : public ITemperatureWorldPointPrioritizable<GeneratableGenericChunkedTemperatureWorld<Chunk>> {
+class ScalingGeneratableChunkedTemperatureWorld : public ITemperatureWorldPointPrioritizable<GeneratableChunkedTemperatureWorld> {
 public:
     INJECT_F(ScalingGeneratableChunkedTemperatureWorld(
             ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::NeedChunkFn, GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn) needChunkFn,
             ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::MakeChunkFn, GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn) makeChunkFn,
-            ANNOTATED(ScaledTemperatureWorldAnnotations::CellScale, Parallelepiped) baseChunkSize));
+            ANNOTATED(BoundTemperatureWorldAnnotations::Bounds, Parallelepiped) baseChunkSize));
 
     void addPriorityPoint(Coord x, Coord y, Coord z) override;
     void removePriorityPoint(Coord x, Coord y, Coord z) override;
+
+    void addChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) override;
+    void removeChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) override;
 
 protected:
     virtual void _updateScales();
@@ -38,8 +40,6 @@ protected:
     Parallelepiped _baseChunkSize;
     std::list<Point> _priorityPoints;
 };
-
-#include "ScalingGeneratableChunkedTemperatureWorld.inc.h"
 
 
 #endif //RECAST_SCALABLESYNCHRONIZEDLISTCHUNKEDTEMPERATUREWORLD_H

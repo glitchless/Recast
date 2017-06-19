@@ -34,16 +34,16 @@ set(SOURCE_FILES
         src/implementation/BasicTimer.cpp
         src/implementation/BasicTimer.h
         src/interfaces/ITemperatureWorldChunkable.h
-        src/implementation/GenericChunkedTemperatureWorld.inc.h
-        src/implementation/GenericChunkedTemperatureWorld.h
-        src/implementation/ScalingGeneratableChunkedTemperatureWorld.inc.h
+        src/implementation/ChunkedTemperatureWorld.cpp
+        src/implementation/ChunkedTemperatureWorld.h
+        src/implementation/ScalingGeneratableChunkedTemperatureWorld.cpp
         src/implementation/ScalingGeneratableChunkedTemperatureWorld.h
         src/types/Parallelepiped.h
         src/types/IntScaleParallelepiped.h
         src/types/GenericScalar.h
         src/implementation/BoundTemperatureWorld.inc.h
-        src/implementation/GeneratableGenericChunkedTemperatureWorld.inc.h
-        src/implementation/GeneratableGenericChunkedTemperatureWorld.h
+        src/implementation/GeneratableChunkedTemperatureWorld.cpp
+        src/implementation/GeneratableChunkedTemperatureWorld.h
         src/implementation/ScalableBoundTemperatureWorld.cpp
         src/implementation/ScalableBoundTemperatureWorld.h
         src/interfaces/ITemperatureWorldScalable.h
@@ -52,13 +52,12 @@ set(SOURCE_FILES
         src/interfaces/ITemperatureWorldPointPrioritizable.h
         src/types/Point.h
         src/implementation/annotations/GeneratableChunkedTemperatureWorldAnnotations.h
-        src/implementation/annotations/ScaledTemperatureWorldAnnotations.h
         src/fixes/fruit.h
-        src/implementation/ThreadedChunkedTemperatureWorldUpdater.inc.h
+        src/implementation/ThreadedChunkedTemperatureWorldUpdater.cpp
         src/implementation/ThreadedChunkedTemperatureWorldUpdater.h
         src/interfaces/ITemperatureWorldChunkableGeneratableObservable.h
         src/implementation/annotations/ThreadedChunkedTemperatureWorldUpdaterAnnotations.h
-        src/types/GeneratableChunkedTemperatureWorldTypedefs.h)
+        src/implementation/typedefs/GeneratableChunkedTemperatureWorldTypedefs.h src/interfaces/ITemperatureWorldChunkableGeneratable.h)
 
 # unittest
 add_executable(world-with-temperature-unittest test/unittest.cpp test/lib/catch.hpp ${SOURCE_FILES})

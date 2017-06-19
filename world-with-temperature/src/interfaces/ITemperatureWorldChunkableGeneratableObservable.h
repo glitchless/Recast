@@ -9,9 +9,10 @@
 template<typename T>
 class ITemperatureWorldChunkableGeneratableObservable : public virtual T {
 public:
-    using OnNewChunkFn = std::function<void(ITemperatureWorldBoundable<ITemperatureWorld>&)>;
+    using OnChunkEventFn = std::function<void(ITemperatureWorldBoundable<ITemperatureWorld>&)>;
 
-    virtual void onNewChunk(OnNewChunkFn func) = 0;
+    virtual void onChunkAdd(OnChunkEventFn func) = 0;
+    virtual void onChunkRemove(OnChunkEventFn func) = 0;
 };
 
 

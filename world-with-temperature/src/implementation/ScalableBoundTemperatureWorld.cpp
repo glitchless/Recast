@@ -7,11 +7,9 @@
 
 using namespace std;
 
-ScalableBoundTemperatureWorld::ScalableBoundTemperatureWorld(
-        Parallelepiped bounds, IntScaleParallelepiped cellScale)
-        : BoundTemperatureWorld(bounds), _cellScale(cellScale)
+ScalableBoundTemperatureWorld::ScalableBoundTemperatureWorld(Parallelepiped bounds)
+        : BoundTemperatureWorld(bounds), _cellScale(IntScaleParallelepiped(1, 1, 1, IntScale::Upscale))
 {
-    assert(_cellScale.x().isUpscale() && _cellScale.y().isUpscale() && _cellScale.z().isUpscale());
 }
 
 IntScaleParallelepiped ScalableBoundTemperatureWorld::cellScale() const noexcept {
@@ -19,6 +17,7 @@ IntScaleParallelepiped ScalableBoundTemperatureWorld::cellScale() const noexcept
 }
 
 void ScalableBoundTemperatureWorld::setCellScale(IntScaleParallelepiped scale) {
+    assert(scale.x().isUpscale() && scale.y().isUpscale() && scale.z().isUpscale());
     _cellScale = scale;
 }
 
@@ -64,7 +63,7 @@ Coord ScalableBoundTemperatureWorld::_findScaledAreaMinByAxis(Coord initialCoord
     for (Coord min = initialCoord - 1; ; min--) {
         if (scale.invertApply(min) != initialScaledCoord) {
             const Coord result = min + 1;
-            return std::max(result, minCoord);
+            return max(result, minCoord);
         }
     }
 }
@@ -74,12 +73,12 @@ Coord ScalableBoundTemperatureWorld::_findScaledAreaMaxByAxis(Coord initialCoord
     for (Coord max = initialCoord + 1; ; max++) {
         if (scale.invertApply(max) != initialScaledCoord) {
             const Coord result = max + 1;
-            return std::min(result, maxCoord);
+            return min(result, maxCoord);
         }
     }
 }
 
-std::pair<Coord, Coord> ScalableBoundTemperatureWorld::_findScaledAreaByAxis(Coord initialCoord, IntScale scale, Coord minCoord, Coord maxCoord) const noexcept {
+pair<Coord, Coord> ScalableBoundTemperatureWorld::_findScaledAreaByAxis(Coord initialCoord, IntScale scale, Coord minCoord, Coord maxCoord) const noexcept {
     return make_pair(_findScaledAreaMinByAxis(initialCoord, scale, minCoord), _findScaledAreaMaxByAxis(initialCoord, scale, maxCoord));
 }
 

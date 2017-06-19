@@ -10,7 +10,7 @@ using namespace std::chrono;
 BasicTimer::BasicTimer() : _lastUpdateTime(system_clock::now()) {
 }
 
-std::chrono::milliseconds BasicTimer::delta() const {
+chrono::milliseconds BasicTimer::delta() const {
     return duration_cast<milliseconds>(system_clock::now() - _lastUpdateTime);
 }
 

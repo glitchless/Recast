@@ -8,8 +8,8 @@
 using namespace std;
 
 AverageShareTemperatureWorldUpdater::AverageShareTemperatureWorldUpdater(double temperatureExchangeCoefficient,
-                                                                         std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> world,
-                                                                         std::shared_ptr<ITimer> timer)
+                                                                         shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> world,
+                                                                         shared_ptr<ITimer> timer)
         : _temperatureExchangeCoefficient(temperatureExchangeCoefficient)
         , _world(world)
         , _timer(timer)

@@ -34,7 +34,7 @@ namespace WorldWithTemperatureModule {
     boundTemperatureWorldComponent(
             Parallelepiped& bounds,
             double& temperatureExchangeCoefficient = Defaults::temperatureExchangeCoefficient,
-            std::chrono::milliseconds minDelta = Defaults::minUpdateDelta);
+            std::chrono::milliseconds& minDelta = Defaults::minUpdateDelta);
 
     /**
      * Makes component which can create scaling chunked temperature world and its updater.
@@ -46,8 +46,8 @@ namespace WorldWithTemperatureModule {
     fruit::Component<ITemperatureWorld, IUpdater>
     chunkedTemperatureWorldComponent(
             Parallelepiped& baseChunkSize = Defaults::baseChunkSize,
-            double& temperatureExchangeCoefficient = Defaults::temperatureExchangeCoefficient
-            std::chrono::milliseconds minDelta = Defaults::minUpdateDelta);
+            double& temperatureExchangeCoefficient = Defaults::temperatureExchangeCoefficient,
+            std::chrono::milliseconds& minDelta = Defaults::minUpdateDelta);
 }
 
 
