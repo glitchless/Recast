@@ -9,7 +9,7 @@
  **/
 #include <list>
 #include "exceptions/InvalidLoginOrPassword.hpp"
-#include "io/SQLite.hpp"
+#include "io/SQLite.h"
 
 using namespace sqlite_orm;
 using namespace std;

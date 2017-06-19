@@ -11,7 +11,7 @@
 #ifndef RECAST_SERVER_PLAYER_H
 #define RECAST_SERVER_PLAYER_H
 
-#include "Point.hpp"
+#include "Point.h"
 
 /**
  * @brief Player class. XP, Life points and other

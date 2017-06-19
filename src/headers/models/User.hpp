@@ -10,7 +10,7 @@
 
 #include <string>
 #include <boost/shared_ptr.hpp>
-#include "Player.hpp"
+#include "Player.h"
 
 /**
  * @brief User - technical data of a player (login, password and other)

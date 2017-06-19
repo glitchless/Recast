@@ -21,7 +21,7 @@
 #include <boost/filesystem.hpp>
 #include <exceptions/InvalidLoginOrPassword.hpp>
 
-#include "io/SQLite.hpp"
+#include "io/SQLite.h"
 #include "configs/Config.hpp"
 #include "Server.hpp"
 #include "threads/InputThread.hpp"

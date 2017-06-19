@@ -13,7 +13,7 @@
 #define RECAST_SERVER_SQLITE_H
 
 #include <sqlite_orm/sqlite_orm.h>
-#include "models/Player.hpp"
+#include "models/Player.h"
 #include "models/User.hpp"
 
 inline auto create_db() {
