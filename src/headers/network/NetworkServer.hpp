@@ -13,6 +13,8 @@
 
 #include "network/Networking.hpp"
 
+using namespace std;
+
 class NetworkServer {
 public:
     NetworkServer(uint32_t Port);
@@ -22,9 +24,9 @@ private:
     uint32_t port;
     bool isRunning;
 
-    void clientWork(std::shared_ptr<Socket> client);
-    std::string exchange(const std::string action);
-    std::string check(const std::string action);
+    void clientWork(shared_ptr<Socket> client);
+    string exchange(const string action);
+    string check(const string action);
 };
 
 #endif //RECAST_NETWORKINGSERVER_H

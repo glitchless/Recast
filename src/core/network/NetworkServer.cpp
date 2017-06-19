@@ -23,32 +23,32 @@ void NetworkServer::run() {
 
         // Creating serving processes
         pid_t pid = fork();
-        std::cerr << "Server is running on port " << port << std::endl;
+        cerr << "Server is running on port " << port << endl;
         if (pid > 0) {
-            std::cerr << "Parent pid: " << getpid() << std::endl;
+            cerr << "Parent pid: " << getpid() << endl;
         } else {
-            std::cerr << "Child pid: " << getpid() << std::endl;
+            cerr << "Child pid: " << getpid() << endl;
         }
 
         // Endless loop listening to connections
         isRunning = true;
         while(isRunning) {
-            std::shared_ptr<Socket> client = s.accept();
+            shared_ptr<Socket> client = s.accept();
             clientWork(client);
         }
-    } catch(const std::exception &e) {
-        std::cerr << e.what() << std::endl;
+    } catch(const exception &e) {
+        cerr << e.what() << endl;
     }
 }
 
-void NetworkServer::clientWork(std::shared_ptr<Socket> client) {
+void NetworkServer::clientWork(shared_ptr<Socket> client) {
     client->setRcvTimeout(30, 0); // s, ms
     while (true) try {
-            std::string request = client->recv();
-            std::string response = exchange(request);
+            string request = client->recv();
+            string response = exchange(request);
             client->send(response);
-        } catch(const std::exception &e) {
-            std::cerr << "An exception occurred: " << e.what() << std::endl;
+        } catch(const exception &e) {
+            cerr << "An exception occurred: " << e.what() << endl;
             return;
         }
 }
@@ -57,18 +57,18 @@ void NetworkServer::shutdown() {
     isRunning = false;
 }
 
-std::string NetworkServer::exchange(const std::string action) {
+string NetworkServer::exchange(const string action) {
     // Game logic goes here
 
     // Answer to client (difference snapshots? yes/no answer?)
-    std::string state = check(action);
+    string state = check(action);
 
     return state;
 }
 
-std::string NetworkServer::check(const std::string action) {
+string NetworkServer::check(const string action) {
     // Example
-    std::string result = "DENIED";
+    string result = "DENIED";
     if (action.find("CAST") != -1) {
         // Checking appliability
         result = "APPLIED";

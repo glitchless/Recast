@@ -19,7 +19,7 @@
 #include "network/Networking.hpp"
 
 // Global
-std::string int2ipv4(uint32_t ip) {
+string int2ipv4(uint32_t ip) {
     char buffer[128];
     snprintf(buffer, sizeof(buffer), "%u.%u.%u.%u", ip&0xFF, (ip&0xFF00) >> 8, (ip&0xFF0000) >> 16, (ip&0xFF000000) >> 24);
     return buffer;
@@ -30,7 +30,7 @@ namespace {
     struct sockaddr_in resolve(const char* host, int port) {
         struct hostent* hp = gethostbyname(host);
         if (NULL == hp) {
-            throw std::runtime_error("An exception occurred (resolve error): " + std::string(strerror(errno)));
+            throw runtime_error("An exception occurred (resolve error): " + string(strerror(errno)));
         }
 
         char** pAddress = hp->h_addr_list;
@@ -42,7 +42,7 @@ namespace {
             rimap_local_ip_ptr[1] = ipf[1];
             rimap_local_ip_ptr[2] = ipf[2];
             rimap_local_ip_ptr[3] = ipf[3];
-            std::cerr << "Resolved successfully: " << int2ipv4(cur_interface_ip) << std::endl;
+            cerr << "Resolved successfully: " << int2ipv4(cur_interface_ip) << endl;
             ++pAddress;
         }
 
@@ -55,60 +55,60 @@ namespace {
         return address;
     }
 
-    void setNonBlockedImpl(int sd, bool opt) throw (std::exception) {
+    void setNonBlockedImpl(int sd, bool opt) throw (exception) {
         int flags = fcntl(sd, F_GETFL, 0);
         int new_flags = (opt)? (flags | O_NONBLOCK) : (flags & ~O_NONBLOCK);
         if (fcntl(sd, F_SETFL, new_flags) == -1)
-            throw std::runtime_error("An exception occurred (make non-blocked): " + std::string(strerror(errno)));
+            throw runtime_error("An exception occurred (make non-blocked): " + string(strerror(errno)));
     }
 } // namespace end //
 
-void Socket::setNonBlocked(bool opt) throw (std::exception) {
+void Socket::setNonBlocked(bool opt) throw (exception) {
     setNonBlockedImpl(m_Sd, opt);
 }
 
-void Socket::setRcvTimeout(int sec, int microsec) throw (std::exception) {
+void Socket::setRcvTimeout(int sec, int microsec) throw (exception) {
     struct timeval tv;
     tv.tv_sec = sec;
     tv.tv_usec = microsec;
 
     if (setsockopt(m_Sd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) != 0) {
-        throw std::runtime_error("set rcvtimeout: " + std::string(strerror(errno)));
+        throw runtime_error("set rcvtimeout: " + string(strerror(errno)));
     }
 }
 
-void Socket::setReuseAddr(int sd) throw (std::exception) {
+void Socket::setReuseAddr(int sd) throw (exception) {
     int yes = 1;
     if (setsockopt(sd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1) {
         ::close(sd);
-        throw std::runtime_error("An exception occurred (setopt): " + std::string(strerror(errno)));
+        throw runtime_error("An exception occurred (setopt): " + string(strerror(errno)));
     }
 }
 
 
-void Socket::connect(const std::string &host, int port) throw (std::exception) {
+void Socket::connect(const string &host, int port) throw (exception) {
     struct sockaddr_in address = resolve(host.data(), port);
 
     int sd = socket(/*Protocol Family*/PF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sd <= 0) {
-        throw std::runtime_error("error to create socket: " + std::string(strerror(errno)));
+        throw runtime_error("error to create socket: " + string(strerror(errno)));
     }
 
     int connected = ::connect(sd, (struct sockaddr*)&address, sizeof(address));
     if (connected == -1) {
         ::close(sd);
-        throw std::runtime_error("connect error: " + std::string(strerror(errno)));
+        throw runtime_error("connect error: " + string(strerror(errno)));
     }
 
     m_Sd = sd;
 }
 
-void Socket::connect(const std::string &host, int port, int timeout) throw (std::exception) {
+void Socket::connect(const string &host, int port, int timeout) throw (exception) {
     struct sockaddr_in address = resolve(host.data(), port);
 
     int sd = socket(/*Protocol Family*/PF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sd <= 0) {
-        throw std::runtime_error("error to create socket: " + std::string(strerror(errno)));
+        throw runtime_error("error to create socket: " + string(strerror(errno)));
     }
 
     setNonBlockedImpl(sd, true);
@@ -116,7 +116,7 @@ void Socket::connect(const std::string &host, int port, int timeout) throw (std:
     int connected = ::connect(sd, (struct sockaddr*)&address, sizeof(address));
     if (connected == -1 && errno != EINPROGRESS) {
         ::close(sd);
-        throw std::runtime_error("connect error: " + std::string(strerror(errno)));
+        throw runtime_error("connect error: " + string(strerror(errno)));
     }
 
     fd_set write_fds;
@@ -129,14 +129,14 @@ void Socket::connect(const std::string &host, int port, int timeout) throw (std:
 
     if (sel != 1) {
         ::close(sd);
-        throw std::runtime_error("connect timeout");
+        throw runtime_error("connect timeout");
     }
 
     m_Sd = sd;
 }
 
 
-void Socket::send(const std::string &str) throw (std::exception) {
+void Socket::send(const string &str) throw (exception) {
     size_t left = str.size();
     ssize_t sent = 0;
     int flags = 0;
@@ -144,52 +144,52 @@ void Socket::send(const std::string &str) throw (std::exception) {
     while (left > 0) {
         sent = ::send(m_Sd, str.data() + sent, str.size() - sent, flags);
         if (-1 == sent) {
-            throw std::runtime_error("write failed: " + std::string(strerror(errno)));
+            throw runtime_error("write failed: " + string(strerror(errno)));
         }
 
         left -= sent;
     }
 }
 
-std::string Socket::recv(size_t bytes) throw (std::exception) {
+string Socket::recv(size_t bytes) throw (exception) {
     char *buf = new char[bytes];
     size_t r = 0;
     while (r != bytes) {
         ssize_t rc = ::recv(m_Sd, buf + r, bytes - r, 0);
-        std::cerr << "recv_ex: " << rc << " bytes\n";
+        cerr << "recv_ex: " << rc << " bytes\n";
 
         if (rc == -1 || rc == 0) {
             delete [] buf;
-            throw std::runtime_error("read failed: " + std::string(strerror(errno)));
+            throw runtime_error("read failed: " + string(strerror(errno)));
         }
         r += rc;
     }
-    std::string ret(buf, buf + bytes);
+    string ret(buf, buf + bytes);
     delete [] buf;
     return ret;
 }
 
 namespace {
-    bool parseProtocol(const std::string &buf, size_t &bytesLeft) {
-        std::string::size_type hdr_end_pos = buf.find("\r\n\r\n");
-        if (hdr_end_pos == std::string::npos) { return false; }
+    bool parseProtocol(const string &buf, size_t &bytesLeft) {
+        string::size_type hdr_end_pos = buf.find("\r\n\r\n");
+        if (hdr_end_pos == string::npos) { return false; }
 
-        std::string body = buf.substr(hdr_end_pos + 4, std::string::npos);
+        string body = buf.substr(hdr_end_pos + 4, string::npos);
 
-        std::string::size_type pos = buf.find("Content-Length: ");
-        if (pos == std::string::npos) {
-            throw std::runtime_error("http broken");
+        string::size_type pos = buf.find("Content-Length: ");
+        if (pos == string::npos) {
+            throw runtime_error("http broken");
         }
 
-        std::string::size_type length_pos = pos + strlen("Content-Length: ");
-        size_t contentLength = std::stoi(buf.substr(length_pos, buf.find("\r\n", length_pos)));
+        string::size_type length_pos = pos + strlen("Content-Length: ");
+        size_t contentLength = stoi(buf.substr(length_pos, buf.find("\r\n", length_pos)));
 
         bytesLeft = contentLength - body.size();
         return true;
     }
 } // namespace end //
 
-std::string Socket::recv() throw (std::exception) {
+string Socket::recv() throw (exception) {
     char buffer[256];
 #ifdef __APPLE__
     // mac os x doesn't define MSG_NOSIGNAL
@@ -199,25 +199,25 @@ std::string Socket::recv() throw (std::exception) {
 #endif
 
     if (-1 == n && errno != EAGAIN) {
-        throw std::runtime_error("read failed: " + std::string(strerror(errno)));
+        throw runtime_error("read failed: " + string(strerror(errno)));
     }
     if (0 == n) {
-        throw std::runtime_error("client: " + std::to_string(m_Sd) + " disconnected");
+        throw runtime_error("client: " + to_string(m_Sd) + " disconnected");
     }
     if (-1 == n) {
-        throw std::runtime_error("client: " + std::to_string(m_Sd) + " timeouted");
+        throw runtime_error("client: " + to_string(m_Sd) + " timeouted");
     }
 
-    std::string ret(buffer, buffer + n);
+    string ret(buffer, buffer + n);
     while (ret.back() == '\r' || ret.back() == '\n') {
         ret.pop_back();
     }
-    std::cerr << "client: " << m_Sd << ", recv: " << ret << " [" << n << " bytes]" << std::endl;
+    cerr << "client: " << m_Sd << ", recv: " << ret << " [" << n << " bytes]" << endl;
     return ret;
 }
 
 
-std::string Socket::recvTimed(int timeout) throw (std::exception) {
+string Socket::recvTimed(int timeout) throw (exception) {
     fd_set read_fds;
     FD_ZERO(&read_fds);
     FD_SET(m_Sd, &read_fds);
@@ -226,24 +226,24 @@ std::string Socket::recvTimed(int timeout) throw (std::exception) {
     tm.tv_usec = 0;
     int sel = select(m_Sd + 1, &read_fds, NULL, NULL, &tm); // read, write, exceptions
     if (sel != 1) {
-        throw std::runtime_error("read timeout");
+        throw runtime_error("read timeout");
     }
 
     return recv();
 }
 
 
-bool Socket::hasData() throw (std::exception) {
+bool Socket::hasData() throw (exception) {
     char buf[1];
     int n = ::recv(m_Sd, buf, sizeof(buf), MSG_PEEK);
     if (n > 0) return true;
     return false;
 }
 
-void Socket::createServerSocket(uint32_t port, uint32_t listenQueueSize) throw (std::exception) {
+void Socket::createServerSocket(uint32_t port, uint32_t listenQueueSize) throw (exception) {
     int sd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sd <= 0) {
-        throw std::runtime_error("socket: " + std::string(strerror(errno)));
+        throw runtime_error("socket: " + string(strerror(errno)));
     }
 
     setReuseAddr(sd);
@@ -257,22 +257,22 @@ void Socket::createServerSocket(uint32_t port, uint32_t listenQueueSize) throw (
 
     if (::bind(sd, (struct sockaddr*)&servAddr, sizeof(servAddr)) < 0) {
         ::close(sd);
-        throw std::runtime_error("bind: " + std::string(strerror(errno)));
+        throw runtime_error("bind: " + string(strerror(errno)));
     }
 
     ::listen(sd, listenQueueSize);
     m_Sd = sd;
 }
 
-std::shared_ptr<Socket> Socket::accept() throw (std::exception) {
+shared_ptr<Socket> Socket::accept() throw (exception) {
     struct sockaddr_in client;
     memset(&client, 0, sizeof(client));
     socklen_t cli_len = sizeof(client);
 
     int cli_sd = ::accept(m_Sd, (struct sockaddr*)&client, &cli_len);
     if (-1 == cli_sd)
-        return std::shared_ptr<Socket>();
-    std::cerr << "new client: " << cli_sd << ", from: " << int2ipv4(client.sin_addr.s_addr) << std::endl;
+        return shared_ptr<Socket>();
+    cerr << "new client: " << cli_sd << ", from: " << int2ipv4(client.sin_addr.s_addr) << endl;
 
-    return std::make_shared<Socket>(cli_sd);
+    return make_shared<Socket>(cli_sd);
 }
