@@ -14,6 +14,7 @@
 #include "../interfaces/IUpdater.h"
 #include "../interfaces/ITemperatureWorld.h"
 #include "../interfaces/ITemperatureWorldChunkable.h"
+#include "../interfaces/ITemperatureWorldChunkableGeneratable.h"
 #include "../interfaces/ITemperatureWorldChunkableGeneratableObservable.h"
 
 /**
@@ -26,8 +27,8 @@
 class ThreadedChunkedTemperatureWorldUpdater : public IUpdater {
 public:
     ThreadedChunkedTemperatureWorldUpdater(
-            std::shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkable<ITemperatureWorld>>> world,
-            std::function<std::shared_ptr<IUpdater>()> chunkUpdaterFactoryFn);
+            std::shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> world,
+            std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn);
 
     ~ThreadedChunkedTemperatureWorldUpdater();
 
@@ -35,10 +36,10 @@ public:
 
 protected:
     void _work();
-    void _watchChunk(ITemperatureWorldBoundable<ITemperatureWorld>& chunk);
+    void _watchChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk);
 
-    std::shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkable<ITemperatureWorld>>> _world;
-    std::function<std::shared_ptr<IUpdater>()> _chunkUpdaterFactoryFn;
+    std::shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> _world;
+    std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> _makeChunkUpdaterFn;
 
     std::atomic<bool> _isRunning;
     std::vector<std::thread> _workers;

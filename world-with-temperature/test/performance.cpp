@@ -2,24 +2,24 @@
 // Created by Oleg Morozenkov on 30.03.17.
 //
 
-#include "../src/module.h"
 #include "../src/implementation/BasicTimer.h"
+#include "../src/types/Parallelepiped.h"
+#include "../src/injectors/BoundTemperatureWorldInjector.h"
 
 #include <memory>
 #include <iostream>
 
 using namespace std;
-using namespace fruit;
 
 int main() {
-    static Size n = 99;
-    static Parallelepiped worldBounds(n, n, n);
-    Component<ITemperatureWorldBoundable<ITemperatureWorld>, IUpdater> component =
-                    WorldWithTemperatureModule::boundTemperatureWorldComponent(worldBounds);
-    Injector<ITemperatureWorldBoundable<ITemperatureWorld>, IUpdater> injector(component);
+    Size n = 99;
+    Parallelepiped worldBounds(n, n, n);
 
-    auto world = injector.get<shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>>();
-    auto updater = injector.get<shared_ptr<IUpdater>>();
+    BoundTemperatureWorldInjector injector;
+    injector.setWorldBounds(worldBounds);
+
+    auto world = injector.world();
+    auto updater = injector.updater();
 
     BasicTimer benchmarkTimer;
     cout << "Number of blocks: " << world->bounds().volume() << endl;

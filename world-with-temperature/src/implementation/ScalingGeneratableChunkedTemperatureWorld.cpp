@@ -2,6 +2,7 @@
 // Created by Oleg Morozenkov on 14.06.17.
 //
 
+#include <cmath>
 #include "ScalingGeneratableChunkedTemperatureWorld.h"
 #include "../types/IntScale.h"
 #include "../types/IntScaleParallelepiped.h"
@@ -27,6 +28,17 @@ void ScalingGeneratableChunkedTemperatureWorld::addPriorityPoint(Coord x, Coord 
 void ScalingGeneratableChunkedTemperatureWorld::removePriorityPoint(Coord x, Coord y, Coord z) {
     _priorityPoints.remove(Point(x, y, z));
     _updateScales();
+}
+
+void ScalingGeneratableChunkedTemperatureWorld::addChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
+    assert(dynamic_pointer_cast<ITemperatureWorldScalableMutable<ITemperatureWorldScalable<ITemperatureWorldBoundable<ITemperatureWorld>>>>(chunk));
+    assert(chunk->bounds() == _baseChunkSize);
+    GeneratableChunkedTemperatureWorld::addChunk(chunk);
+}
+
+void ScalingGeneratableChunkedTemperatureWorld::removeChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
+    assert(dynamic_pointer_cast<ITemperatureWorldScalableMutable<ITemperatureWorldScalable<ITemperatureWorldBoundable<ITemperatureWorld>>>>(chunk));
+    GeneratableChunkedTemperatureWorld::removeChunk(chunk);
 }
 
 void ScalingGeneratableChunkedTemperatureWorld::_updateScales() {
@@ -62,14 +74,4 @@ void ScalingGeneratableChunkedTemperatureWorld::_updateScales() {
                 max(minDistanceZSq / _baseChunkSize.sizeZ(), 1),
                 IntScale::Upscale));
     }
-}
-
-void ScalingGeneratableChunkedTemperatureWorld::addChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
-    assert(dynamic_pointer_cast<ITemperatureWorldScalableMutable<ITemperatureWorldScalable<ITemperatureWorldBoundable<ITemperatureWorld>>>>(chunk));
-    GeneratableChunkedTemperatureWorld::addChunk(chunk);
-}
-
-void ScalingGeneratableChunkedTemperatureWorld::removeChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
-    assert(dynamic_pointer_cast<ITemperatureWorldScalableMutable<ITemperatureWorldScalable<ITemperatureWorldBoundable<ITemperatureWorld>>>>(chunk));
-    GeneratableChunkedTemperatureWorld::removeChunk(chunk);
 }

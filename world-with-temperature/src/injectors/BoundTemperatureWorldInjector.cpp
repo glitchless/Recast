@@ -8,6 +8,12 @@
 #include "../implementation/SynchronizedBlockingTimer.h"
 
 using namespace std;
+using namespace std::chrono;
+
+BoundTemperatureWorldInjector::BoundTemperatureWorldInjector() {
+    setMinUpdateDelta(milliseconds(20));
+    setTemperatureExchangeCoefficient(0.1);
+}
 
 bool BoundTemperatureWorldInjector::hasWorldBounds() const noexcept {
     return (bool) _worldBounds;
@@ -18,10 +24,10 @@ Parallelepiped BoundTemperatureWorldInjector::worldBounds() const {
 }
 
 void BoundTemperatureWorldInjector::setWorldBounds(Parallelepiped worldBounds) {
-    _worldBounds = make_unique(worldBounds);
+    _worldBounds = make_unique<Parallelepiped>(worldBounds);
 }
 
-bool BoundTemperatureWorldInjector::hasTemperatureExchangeCoefficient() const {
+bool BoundTemperatureWorldInjector::hasTemperatureExchangeCoefficient() const noexcept {
     return (bool) _temperatureExchangeCoefficient;
 }
 
@@ -30,36 +36,36 @@ double BoundTemperatureWorldInjector::temperatureExchangeCoefficient() const {
 }
 
 void BoundTemperatureWorldInjector::setTemperatureExchangeCoefficient(double temperatureExchangeCoefficient) {
-    _temperatureExchangeCoefficient = make_unique(temperatureExchangeCoefficient);
+    _temperatureExchangeCoefficient = make_unique<double>(temperatureExchangeCoefficient);
 }
 
-bool BoundTemperatureWorldInjector::hasMinUpdateDelta() const {
+bool BoundTemperatureWorldInjector::hasMinUpdateDelta() const noexcept {
     return (bool) _minUpdateDelta;
 }
 
-std::chrono::milliseconds BoundTemperatureWorldInjector::minUpdateDelta() const {
+milliseconds BoundTemperatureWorldInjector::minUpdateDelta() const {
     return *_minUpdateDelta;
 }
 
-void BoundTemperatureWorldInjector::setMinUpdateDelta(std::chrono::milliseconds minUpdateDelta) {
-    _minUpdateDelta = make_unique(minUpdateDelta);
+void BoundTemperatureWorldInjector::setMinUpdateDelta(milliseconds minUpdateDelta) {
+    _minUpdateDelta = make_unique<milliseconds>(minUpdateDelta);
 }
 
-std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> BoundTemperatureWorldInjector::world() {
+shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> BoundTemperatureWorldInjector::world() {
     if (!_world) {
         _makeWorld();
     }
     return _world;
 }
 
-std::shared_ptr<IUpdater> BoundTemperatureWorldInjector::updater() {
+shared_ptr<IUpdater> BoundTemperatureWorldInjector::updater() {
     if (!_updater) {
         _makeUpdater();
     }
     return _updater;
 }
 
-std::shared_ptr<ITimer> BoundTemperatureWorldInjector::timer() {
+shared_ptr<ITimer> BoundTemperatureWorldInjector::timer() {
     if (!_timer) {
         _makeTimer();
     }

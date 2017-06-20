@@ -13,6 +13,8 @@
 
 class BoundTemperatureWorldInjector {
 public:
+    BoundTemperatureWorldInjector();
+
     bool hasWorldBounds() const noexcept;
     Parallelepiped worldBounds() const;
     void setWorldBounds(Parallelepiped worldBounds);

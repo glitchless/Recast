@@ -2,6 +2,7 @@
 // Created by Oleg Morozenkov on 13.06.17.
 //
 
+#include <stdexcept>
 #include "ChunkedTemperatureWorld.h"
 
 using namespace std;

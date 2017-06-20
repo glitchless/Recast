@@ -2,6 +2,7 @@
 // Created by Oleg Morozenkov on 15.06.17.
 //
 
+#include <stdexcept>
 #include "GeneratableChunkedTemperatureWorld.h"
 
 using namespace std;
@@ -40,7 +41,7 @@ void GeneratableChunkedTemperatureWorld::addChunk(std::shared_ptr<ITemperatureWo
     ChunkedTemperatureWorld::addChunk(chunk);
 
     for (const OnChunkEventFn& func : _onChunkAddListeners) {
-        func(*chunk);
+        func(chunk);
     }
 }
 
@@ -48,7 +49,7 @@ void GeneratableChunkedTemperatureWorld::removeChunk(std::shared_ptr<ITemperatur
     ChunkedTemperatureWorld::removeChunk(chunk);
 
     for (const OnChunkEventFn& func : _onChunkRemoveListeners) {
-        func(*chunk);
+        func(chunk);
     }
 }
 

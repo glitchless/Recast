@@ -8,9 +8,9 @@
 using namespace std;
 
 ThreadedChunkedTemperatureWorldUpdater::ThreadedChunkedTemperatureWorldUpdater(
-        shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkable<ITemperatureWorld>>> world,
-        function<shared_ptr<IUpdater>()> chunkUpdaterFactoryFn)
-        : _world(world), _chunkUpdaterFactoryFn(chunkUpdaterFactoryFn)
+        shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> world,
+        function<shared_ptr<IUpdater>(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn)
+        : _world(world), _makeChunkUpdaterFn(makeChunkUpdaterFn)
 {
     _isRunning.store(true);
 
@@ -18,7 +18,7 @@ ThreadedChunkedTemperatureWorldUpdater::ThreadedChunkedTemperatureWorldUpdater(
         _workers.push_back(move(thread(&ThreadedChunkedTemperatureWorldUpdater::_work, this)));
     }
 
-    _world->onChunkAdd([&](ITemperatureWorldBoundable<ITemperatureWorld>& chunk) { this->_watchChunk(chunk); });
+    _world->onChunkAdd([&](shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) { this->_watchChunk(chunk); });
 }
 
 ThreadedChunkedTemperatureWorldUpdater::~ThreadedChunkedTemperatureWorldUpdater() {
@@ -77,7 +77,7 @@ void ThreadedChunkedTemperatureWorldUpdater::_work() {
     }
 }
 
-void ThreadedChunkedTemperatureWorldUpdater::_watchChunk(ITemperatureWorldBoundable<ITemperatureWorld>& chunk) {
+void ThreadedChunkedTemperatureWorldUpdater::_watchChunk(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
     lock_guard<mutex> guard(_updatersMutex);
-    _updaters.push_back(move(_chunkUpdaterFactoryFn()));
+    _updaters.push_back(move(_makeChunkUpdaterFn(chunk)));
 }
