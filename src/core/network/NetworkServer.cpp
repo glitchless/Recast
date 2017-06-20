@@ -16,20 +16,20 @@
 #include "network/Networking.hpp"
 #include "network/NetworkServer.hpp"
 
-NetworkServer::NetworkServer(uint32_t PortTCP, uint32_t PortUDP) : portTCP(PortTCP), portUDP(PortUDP) { };
+NetworkServer::NetworkServer(uint32_t port, bool isTCP = false) : port(port), isTCP(isTCP) { };
 
 void NetworkServer::run() {
     try {
-        Socket sockTCP;
-        sockTCP.createServerSocketTCP(portTCP, 25);
-        cerr << "Server is running on port " << portTCP << " for TCP connections" << endl;
-
-        Socket sockUDP;
-        sockUDP.createServerSocketUDP(portUDP);
-        cerr << "Server is running on port " << portUDP << " for UDP connections" << endl;
+        Socket sock;
+        if (isTCP) {
+            sock.createServerSocketTCP(port, 25);
+            cerr << "Server is running on port " << port << " for TCP connections" << endl;
+        } else {
+            sock.createServerSocketUDP(port);
+            cerr << "Server is running on port " << port << " for UDP connections" << endl;
+        }
 
         // Creating serving processes
-
         pid_t pid = fork();
 
         if (pid > 0) {
@@ -41,10 +41,13 @@ void NetworkServer::run() {
         // Endless loop listening to connections
         isRunning = true;
         while(isRunning) {
-            shared_ptr<Socket> clientTCP = sockTCP.accept();
-            clientWork(clientTCP);
-            shared_ptr<Socket> clientUDP = make_shared<Socket>(sockUDP);
-            clientWork(clientUDP);
+            if (isTCP) {
+                shared_ptr<Socket> clientTCP = sock.accept();
+                clientWork(clientTCP);
+            } else {
+                shared_ptr<Socket> clientUDP = make_shared<Socket>(sock);
+                clientWork(clientUDP);
+            }
         }
     } catch(const exception &e) {
         cerr << e.what() << endl;

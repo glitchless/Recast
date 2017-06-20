@@ -52,7 +52,8 @@ void Server::initServer() {
     inputThread.detach();
 
     BOOST_LOG_TRIVIAL(info) << "Initializing network...";
-    networkServer->run();
+    tcp->run();
+    udp->run();
 }
 
 Server::Server() {
@@ -61,14 +62,17 @@ Server::Server() {
     uint32_t portTCP = static_cast<uint32_t>(Config::instance()->get("general.server.port.tcp", DEFAULT_PORT_TCP));
     uint32_t portUDP = static_cast<uint32_t>(Config::instance()->get("general.server.port.udp", DEFAULT_PORT_UDP));
 
-    networkServer = new NetworkServer(portTCP, portUDP);
+    tcp = new NetworkServer(portTCP, true);
+    udp = new NetworkServer(portUDP, false);
 
     players = new PlayersOnline(Config::instance()->get("server.max_players", 20));
 }
 
 bool Server::shutdown() {
-    networkServer->shutdown();
-    delete networkServer;
+    tcp->shutdown();
+    delete tcp;
+    udp->shutdown();
+    delete udp;
     return isLaunching ? !(isLaunching = false) : false; // Return true if isLaunching equals true
 }
 
