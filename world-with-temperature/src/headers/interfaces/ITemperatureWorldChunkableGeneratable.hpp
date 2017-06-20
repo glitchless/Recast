@@ -6,6 +6,12 @@
 #define RECAST_ITEMPERATUREWORLDCHUNKABLEGENERATABLE_H
 
 
+/**
+ * Mixin to temperature world.
+ * Makes temperature world which can be divided by chunks to be generatable on demand.
+ *
+ * @tparam T Base temperature world class.
+ */
 template<typename T>
 class ITemperatureWorldChunkableGeneratable : public virtual T {
 public:

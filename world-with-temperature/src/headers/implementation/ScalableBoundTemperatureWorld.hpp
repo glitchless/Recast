@@ -14,7 +14,7 @@
 #include "types/Point.hpp"
 
 /**
- * Bound temperature world backed by `std::vector`.
+ * Implementation of temperature world with bounds. It's backed by `std::vector`.
  * You can make cell size bigger for `set`, `amplify` and `foreach` methods. It's useful for optimization.
  */
 class ScalableBoundTemperatureWorld : public ITemperatureWorldScalableMutable<ITemperatureWorldScalable<BoundTemperatureWorld>> {

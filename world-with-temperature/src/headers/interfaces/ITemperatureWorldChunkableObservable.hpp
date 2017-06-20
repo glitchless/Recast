@@ -6,8 +6,15 @@
 #define RECAST_ITEMPERATUREWORLDCHUNKABLEONDEMANDGENERATABLE_H
 
 
+/**
+ * Mixin to temperature world.
+ * Makes temperature world which can be divided by chunks and which can be generatable on demand to be observed.
+ * Class will emit events on both chunk adding and chunk removing.
+ *
+ * @tparam T Base temperature world class.
+ */
 template<typename T>
-class ITemperatureWorldChunkableGeneratableObservable : public virtual T {
+class ITemperatureWorldChunkableObservable : public virtual T {
 public:
     using OnChunkEventFn = std::function<void(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)>;
 

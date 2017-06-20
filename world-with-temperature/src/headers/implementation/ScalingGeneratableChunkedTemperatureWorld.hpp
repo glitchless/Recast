@@ -15,11 +15,9 @@
 #include "types/Point.hpp"
 
 /**
- * Template to chunked temperature world. It's backed by `std::list`.
+ * Implementation of temperature world divided by chunks. It's backed by `std::list`.
  * It will create new chunk if client accesses temperature of point in non-existing chunk.
  * Also it will automatically upscale cell size in far chunks for optimization.
- *
- * @tparam Chunk Temperature world type for chunks.
  */
 class ScalingGeneratableChunkedTemperatureWorld : public ITemperatureWorldPointPrioritizable<GeneratableChunkedTemperatureWorld> {
 public:

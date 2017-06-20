@@ -53,10 +53,10 @@ void GeneratableChunkedTemperatureWorld::removeChunk(std::shared_ptr<ITemperatur
     }
 }
 
-void GeneratableChunkedTemperatureWorld::onChunkAdd(ITemperatureWorldChunkableGeneratableObservable::OnChunkEventFn func) {
+void GeneratableChunkedTemperatureWorld::onChunkAdd(ITemperatureWorldChunkableObservable::OnChunkEventFn func) {
     _onChunkAddListeners.push_back(func);
 }
 
-void GeneratableChunkedTemperatureWorld::onChunkRemove(ITemperatureWorldChunkableGeneratableObservable::OnChunkEventFn func) {
+void GeneratableChunkedTemperatureWorld::onChunkRemove(ITemperatureWorldChunkableObservable::OnChunkEventFn func) {
     _onChunkRemoveListeners.push_back(func);
 }

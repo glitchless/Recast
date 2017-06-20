@@ -8,7 +8,7 @@
 using namespace std;
 
 ThreadedChunkedTemperatureWorldUpdater::ThreadedChunkedTemperatureWorldUpdater(
-        shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> world,
+        shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> world,
         function<shared_ptr<IUpdater>(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn)
         : _world(world), _makeChunkUpdaterFn(makeChunkUpdaterFn)
 {

@@ -55,7 +55,7 @@ void ScalingGeneratableChunkedTemperatureWorldInjector::setMinUpdateDelta(millis
     _minUpdateDelta = make_unique<milliseconds>(minUpdateDelta);
 }
 
-shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> ScalingGeneratableChunkedTemperatureWorldInjector::world() {
+shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> ScalingGeneratableChunkedTemperatureWorldInjector::world() {
     if (!_world) {
         _makeWorld();
     }
@@ -77,8 +77,8 @@ shared_ptr<ITimer> ScalingGeneratableChunkedTemperatureWorldInjector::timer() {
 }
 
 void ScalingGeneratableChunkedTemperatureWorldInjector::_makeWorld() {
-    _world = shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>>(
-            (ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>*) new ScalingGeneratableChunkedTemperatureWorld(
+    _world = shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>>(
+            (ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>*) new ScalingGeneratableChunkedTemperatureWorld(
                     [&](Coord x, Coord y, Coord z) { return this->_needChunkFn(x, y, z); },
                     [&](Coord x, Coord y, Coord z) { return this->_makeChunkFn(x, y, z); },
                     chunkBounds()));

@@ -15,19 +15,17 @@
 #include "../interfaces/ITemperatureWorld.hpp"
 #include "interfaces/ITemperatureWorldChunkable.hpp"
 #include "interfaces/ITemperatureWorldChunkableGeneratable.hpp"
-#include "interfaces/ITemperatureWorldChunkableGeneratableObservable.hpp"
+#include "interfaces/ITemperatureWorldChunkableObservable.hpp"
 
 /**
  * Implementation of chunked temperature world updater.
  * It updates every chunk asynchronously in a thread pool.
  * This class is thread-safe.
- *
- * @tparam ChunkUpdater Bound temperature world updater.
  */
 class ThreadedChunkedTemperatureWorldUpdater : public IUpdater {
 public:
     ThreadedChunkedTemperatureWorldUpdater(
-            std::shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> world,
+            std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> world,
             std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn);
 
     ~ThreadedChunkedTemperatureWorldUpdater();
@@ -38,7 +36,7 @@ protected:
     void _work();
     void _watchChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk);
 
-    std::shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> _world;
+    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> _world;
     std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> _makeChunkUpdaterFn;
 
     std::atomic<bool> _isRunning;

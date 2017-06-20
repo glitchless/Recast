@@ -13,9 +13,7 @@
 #include "interfaces/ITemperatureWorldChunkable.hpp"
 
 /**
- * Template to chunked temperature world. It's backed by `std::list`.
- *
- * @tparam Chunk Temperature world type for chunks.
+ * Implementation of temperature world divided by chunks. It's backed by `std::list`.
  */
 class ChunkedTemperatureWorld : public ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>> {
 public:

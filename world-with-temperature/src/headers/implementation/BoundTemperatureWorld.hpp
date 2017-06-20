@@ -10,7 +10,7 @@
 #include "interfaces/ITemperatureWorldBoundable.hpp"
 
 /**
- * Bound temperature world backed by `std::vector`.
+ * Implementation of temperature world with bounds. It's backed by `std::vector`.
  */
 class BoundTemperatureWorld : public ITemperatureWorldBoundable<ITemperatureWorld> {
 public:

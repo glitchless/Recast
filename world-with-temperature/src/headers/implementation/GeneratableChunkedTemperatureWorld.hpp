@@ -8,16 +8,14 @@
 
 #include "ChunkedTemperatureWorld.hpp"
 #include "interfaces/ITemperatureWorldChunkableGeneratable.hpp"
-#include "interfaces/ITemperatureWorldChunkableGeneratableObservable.hpp"
+#include "interfaces/ITemperatureWorldChunkableObservable.hpp"
 #include "typedefs/GeneratableChunkedTemperatureWorldTypedefs.hpp"
 
 /**
- * Template to chunked temperature world. It's backed by `std::list`.
+ * Implementation of temperature world divided by chunks. It's backed by `std::list`.
  * It will create new chunk if client accesses temperature of point in non-existing chunk.
- *
- * @tparam Chunk Temperature world type for chunks.
  */
-class GeneratableChunkedTemperatureWorld : public ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkableGeneratable<ChunkedTemperatureWorld>> {
+class GeneratableChunkedTemperatureWorld : public ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ChunkedTemperatureWorld>> {
 public:
     GeneratableChunkedTemperatureWorld(
             GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn needChunkFn,
