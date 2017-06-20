@@ -2,7 +2,7 @@
 // Created by Oleg Morozenkov on 18.06.17.
 //
 
-#include "implementation/ScalableBoundTemperatureWorld.hpp"
+#include "temperature-world/implementation/ScalableBoundTemperatureWorld.hpp"
 #include <algorithm>
 
 using namespace std;

@@ -3,7 +3,7 @@
 //
 
 #include <stdexcept>
-#include "implementation/ChunkedTemperatureWorld.hpp"
+#include "temperature-world/implementation/ChunkedTemperatureWorld.hpp"
 
 using namespace std;
 

@@ -3,7 +3,7 @@
 //
 
 #include <thread>
-#include "implementation/SynchronizedBlockingTimer.hpp"
+#include "temperature-world/implementation/SynchronizedBlockingTimer.hpp"
 
 using namespace std;
 using namespace std::chrono;

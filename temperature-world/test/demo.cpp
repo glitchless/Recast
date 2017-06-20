@@ -3,12 +3,12 @@
 //
 
 #include <iostream>
-#include <interfaces/ITemperatureWorldBoundable.hpp>
+#include "temperature-world/interfaces/ITemperatureWorldBoundable.hpp"
 #include "lib/crow_all.h"
-#include "interfaces/ITemperatureWorld.hpp"
-#include "interfaces/IUpdater.hpp"
-#include "injectors/BoundTemperatureWorldInjector.hpp"
-#include "utils/FileUtils.hpp"
+#include "temperature-world/interfaces/ITemperatureWorld.hpp"
+#include "temperature-world/interfaces/IUpdater.hpp"
+#include "temperature-world/injectors/BoundTemperatureWorldInjector.hpp"
+#include "temperature-world/utils/FileUtils.hpp"
 
 using namespace std;
 
@@ -25,16 +25,16 @@ void startServer(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> world
     crow::SimpleApp app;
 
     CROW_ROUTE(app, "/")([](){
-        return FileUtils::readFile("world-with-temperature/test/demo-web/index.html");
+        return FileUtils::readFile("temperature-world/test/demo-web/index.html");
     });
     CROW_ROUTE(app, "/script.js")([](){
-        return FileUtils::readFile("world-with-temperature/test/demo-web/script.js");
+        return FileUtils::readFile("temperature-world/test/demo-web/script.js");
     });
     CROW_ROUTE(app, "/KeyboardState.js")([](){
-        return FileUtils::readFile("world-with-temperature/test/demo-web/KeyboardState.js");
+        return FileUtils::readFile("temperature-world/test/demo-web/KeyboardState.js");
     });
     CROW_ROUTE(app, "/three.min.js")([](){
-        return FileUtils::readFile("world-with-temperature/test/demo-web/three.min.js");
+        return FileUtils::readFile("temperature-world/test/demo-web/three.min.js");
     });
 
     CROW_ROUTE(app, "/get_world")([&](){

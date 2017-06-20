@@ -2,10 +2,10 @@
 // Created by Oleg Morozenkov on 31.05.17.
 //
 
-#include "interfaces/ITimer.hpp"
-#include "types/Temperature.hpp"
-#include "implementation/AverageShareTemperatureWorldUpdater.hpp"
-#include "utils/MathUtils.hpp"
+#include "temperature-world/interfaces/ITimer.hpp"
+#include "temperature-world/types/Temperature.hpp"
+#include "temperature-world/implementation/AverageShareTemperatureWorldUpdater.hpp"
+#include "temperature-world/utils/MathUtils.hpp"
 
 using namespace std;
 

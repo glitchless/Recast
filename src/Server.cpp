@@ -19,13 +19,15 @@
 #include <boost/log/utility/setup/common_attributes.hpp>
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
-#include <exceptions/InvalidLoginOrPassword.h>
 
 #include "io/SQLite.h"
 #include "configs/Config.h"
 #include "Server.h"
 #include "threads/InputThread.h"
 #include "models/collections/PlayersOnline.h"
+#include "exceptions/InvalidLoginOrPassword.h"
+#include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
+#include "temperature-world/implementation/BasicTimer.hpp"
 
 using namespace std;
 using namespace boost;
@@ -44,13 +46,31 @@ void initLogger() {
     log::add_console_log(std::cout);
 }
 
+void Server::initTemperatureWorld() {
+    ScalingGeneratableChunkedTemperatureWorldInjector injector;
+    temperatureWorld = injector.world();
+    temperatureWorldUpdater = injector.updater();
+
+    temperatureWorld->getOrGenerateChunk(0, 0, 0);
+}
+
 void Server::initServer() {
     initLogger();
+    initTemperatureWorld();
     BOOST_LOG_TRIVIAL(info) << "Initializing server...";
     isLaunching = true;
     inputThread = thread(&InputThread::init, InputThread(this));
     inputThread.detach();
-    while (isRunning());
+    BasicTimer benchmarkTimer;
+    while (isRunning()) {
+        benchmarkTimer.update();
+        update();
+        BOOST_LOG_TRIVIAL(info) << "Update delta: " << benchmarkTimer.deltaFloatSeconds() << "s";
+    }
+}
+
+void Server::update() {
+    temperatureWorldUpdater->update();
 }
 
 Server::Server() {

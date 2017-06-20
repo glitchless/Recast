@@ -3,7 +3,7 @@
 //
 
 #include <future>
-#include "implementation/ThreadedChunkedTemperatureWorldUpdater.hpp"
+#include "temperature-world/implementation/ThreadedChunkedTemperatureWorldUpdater.hpp"
 
 using namespace std;
 

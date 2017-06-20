@@ -3,11 +3,11 @@
 //
 
 #include <cmath>
-#include "implementation/ScalingGeneratableChunkedTemperatureWorld.hpp"
-#include "types/IntScale.hpp"
-#include "types/IntScaleParallelepiped.hpp"
-#include "interfaces/ITemperatureWorldScalable.hpp"
-#include "interfaces/ITemperatureWorldScalableMutable.hpp"
+#include "temperature-world/implementation/ScalingGeneratableChunkedTemperatureWorld.hpp"
+#include "temperature-world/types/IntScale.hpp"
+#include "temperature-world/types/IntScaleParallelepiped.hpp"
+#include "temperature-world/interfaces/ITemperatureWorldScalable.hpp"
+#include "temperature-world/interfaces/ITemperatureWorldScalableMutable.hpp"
 
 using namespace std;
 
