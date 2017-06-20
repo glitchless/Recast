@@ -1,0 +1,43 @@
+language: cpp
+
+sudo: true
+
+# Blacklist
+branches:
+  only: 
+    - master
+  except:
+    - gh-pages
+
+# Environment variables
+env:
+  global:
+    - GH_REPO_NAME: Recast
+    - DOXYFILE: $TRAVIS_BUILD_DIR/doxyfile
+    - GH_REPO_REF: github.com/LionZXY/Recast.git
+
+# Install dependencies
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports # cmake 3.2.3 / doxygen 1.8.3
+    packages:
+      - doxygen
+      - doxygen-doc
+      - doxygen-latex
+      - doxygen-gui
+      - graphviz
+      - cmake
+      - cmake-data
+
+services:
+  - docker
+script:
+  - docker build -t lionzxy/recast .
+  - docker run lionzxy/recast
+
+# Generate and deploy documentation
+after_success:
+  - cd $TRAVIS_BUILD_DIR
+  - chmod +x generateDocumentationAndDeploy.sh
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./generateDocumentationAndDeploy.sh; fi'

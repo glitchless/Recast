@@ -1,14 +1,9 @@
-FROM gcc:7.1
+FROM ubuntu:latest
 
-# build tools
-RUN apt-get update -qq && \
-    apt-get install -qq -y cmake
+RUN apt-get -qq update && apt-get -qq upgrade && apt-get -qqy install g++ libboost-all-dev cmake cmake-data libc6 libc6-dev sqlite3
 
-# libs
-RUN apt-get update -qq && \
-    apt-get install -qq -y libboost-all-dev
-
-# src
 WORKDIR /tmp/recast
+RUN rm -rf /tmp/recast/*
 COPY . .
-RUN cmake . && make -j$(nproc)
+
+RUN mkdir build && cd build && cmake .. && make -j$(nproc)
