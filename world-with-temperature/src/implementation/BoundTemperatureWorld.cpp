@@ -3,7 +3,9 @@
 //
 
 #include <cassert>
-#include "BoundTemperatureWorld.h"
+#include "types/Temperature.hpp"
+#include "types/Parallelepiped.hpp"
+#include "implementation/BoundTemperatureWorld.hpp"
 
 using namespace std;
 

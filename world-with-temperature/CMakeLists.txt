@@ -11,6 +11,8 @@ file(GLOB_RECURSE SOURCE_FILES
         "src/*.c"
         "src/*.cpp")
 
+include_directories(src/headers/)
+
 # unittest
 add_executable(world-with-temperature-unittest test/unittest.cpp test/lib/catch.hpp ${SOURCE_FILES})
 target_link_libraries(world-with-temperature-unittest ${LIBRARIES})

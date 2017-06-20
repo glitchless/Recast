@@ -4,7 +4,7 @@
 
 #define CATCH_CONFIG_MAIN
 #include "lib/catch.hpp"
-#include "../src/implementation/BoundTemperatureWorld.h"
+#include "../src/headers/implementation/BoundTemperatureWorld.hpp"
 
 SCENARIO("BoundTemperatureWorld data can be accessed") {
     GIVEN("small BoundTemperatureWorld") {

@@ -2,10 +2,10 @@
 // Created by Oleg Morozenkov on 20.06.17.
 //
 
-#include "BoundTemperatureWorldInjector.h"
-#include "../implementation/BoundTemperatureWorld.h"
-#include "../implementation/AverageShareTemperatureWorldUpdater.h"
-#include "../implementation/SynchronizedBlockingTimer.h"
+#include "injectors/BoundTemperatureWorldInjector.hpp"
+#include "implementation/BoundTemperatureWorld.hpp"
+#include "implementation/AverageShareTemperatureWorldUpdater.hpp"
+#include "implementation/SynchronizedBlockingTimer.hpp"
 
 using namespace std;
 using namespace std::chrono;

@@ -2,9 +2,9 @@
 // Created by Oleg Morozenkov on 30.03.17.
 //
 
-#include "../src/implementation/BasicTimer.h"
-#include "../src/types/Parallelepiped.h"
-#include "../src/injectors/BoundTemperatureWorldInjector.h"
+#include "../src/headers/implementation/BasicTimer.hpp"
+#include "../src/headers/types/Parallelepiped.hpp"
+#include "../src/headers/injectors/BoundTemperatureWorldInjector.hpp"
 
 #include <memory>
 #include <iostream>

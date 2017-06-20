@@ -3,11 +3,11 @@
 //
 
 #include <iostream>
+#include <interfaces/ITemperatureWorldBoundable.hpp>
 #include "lib/crow_all.h"
-#include "../src/interfaces/ITemperatureWorld.h"
-#include "../src/interfaces/IUpdater.h"
-#include "../src/module.h"
-#include "../src/utils/FileUtils.h"
+#include "interfaces/ITemperatureWorld.hpp"
+#include "interfaces/IUpdater.hpp"
+#include "utils/FileUtils.hpp"
 
 using namespace std;
 using namespace fruit;

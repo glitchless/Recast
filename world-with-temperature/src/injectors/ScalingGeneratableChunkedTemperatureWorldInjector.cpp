@@ -2,13 +2,13 @@
 // Created by Oleg Morozenkov on 20.06.17.
 //
 
-#include "ScalingGeneratableChunkedTemperatureWorldInjector.h"
-#include "../implementation/BoundTemperatureWorld.h"
-#include "../implementation/AverageShareTemperatureWorldUpdater.h"
-#include "../implementation/SynchronizedBlockingTimer.h"
-#include "../implementation/ScalingGeneratableChunkedTemperatureWorld.h"
-#include "../implementation/ScalableBoundTemperatureWorld.h"
-#include "../implementation/ThreadedChunkedTemperatureWorldUpdater.h"
+#include "injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
+#include "implementation/BoundTemperatureWorld.hpp"
+#include "implementation/AverageShareTemperatureWorldUpdater.hpp"
+#include "implementation/SynchronizedBlockingTimer.hpp"
+#include "implementation/ScalingGeneratableChunkedTemperatureWorld.hpp"
+#include "implementation/ScalableBoundTemperatureWorld.hpp"
+#include "implementation/ThreadedChunkedTemperatureWorldUpdater.hpp"
 
 using namespace std;
 using namespace std::chrono;
