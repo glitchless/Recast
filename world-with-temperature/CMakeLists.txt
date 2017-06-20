@@ -24,9 +24,6 @@ set(SOURCE_FILES
         src/implementation/AverageShareTemperatureWorldUpdater.cpp
         src/implementation/AverageShareTemperatureWorldUpdater.h
         src/utils/FileUtils.h
-        src/implementation/annotations/TemperatureWorldUpdaterAnnotations.h
-        src/implementation/annotations/BoundTemperatureWorldAnnotations.h
-        src/implementation/annotations/BlockingTimerAnnotations.h
         src/implementation/BasicTimer.cpp
         src/implementation/BasicTimer.h
         src/interfaces/ITemperatureWorldChunkable.h
@@ -47,12 +44,15 @@ set(SOURCE_FILES
         src/interfaces/ITemperatureWorldChunkableMutable.h
         src/interfaces/ITemperatureWorldPointPrioritizable.h
         src/types/Point.h
-        src/implementation/annotations/GeneratableChunkedTemperatureWorldAnnotations.h
         src/implementation/ThreadedChunkedTemperatureWorldUpdater.cpp
         src/implementation/ThreadedChunkedTemperatureWorldUpdater.h
         src/interfaces/ITemperatureWorldChunkableGeneratableObservable.h
-        src/implementation/annotations/ThreadedChunkedTemperatureWorldUpdaterAnnotations.h
-        src/implementation/typedefs/GeneratableChunkedTemperatureWorldTypedefs.h src/interfaces/ITemperatureWorldChunkableGeneratable.h src/injectors/BoundTemperatureWorldInjector.cpp src/injectors/BoundTemperatureWorldInjector.h)
+        src/implementation/typedefs/GeneratableChunkedTemperatureWorldTypedefs.h
+        src/interfaces/ITemperatureWorldChunkableGeneratable.h
+        src/injectors/BoundTemperatureWorldInjector.cpp
+        src/injectors/BoundTemperatureWorldInjector.h
+        src/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.cpp
+        src/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.h)
 
 # unittest
 add_executable(world-with-temperature-unittest test/unittest.cpp test/lib/catch.hpp ${SOURCE_FILES})

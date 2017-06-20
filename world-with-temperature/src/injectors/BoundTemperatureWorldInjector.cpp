@@ -5,6 +5,7 @@
 #include "BoundTemperatureWorldInjector.h"
 #include "../implementation/BoundTemperatureWorld.h"
 #include "../implementation/AverageShareTemperatureWorldUpdater.h"
+#include "../implementation/SynchronizedBlockingTimer.h"
 
 using namespace std;
 
