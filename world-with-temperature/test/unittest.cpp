@@ -4,22 +4,22 @@
 
 #define CATCH_CONFIG_MAIN
 #include "lib/catch.hpp"
-#include "../src/headers/implementation/BoundTemperatureWorld.hpp"
+#include "implementation/BoundTemperatureWorld.hpp"
 
 SCENARIO("BoundTemperatureWorld data can be accessed") {
     GIVEN("small BoundTemperatureWorld") {
-        BoundTemperatureWorld world(101, 55, 4);
+        BoundTemperatureWorld world(Parallelepiped(101, 55, 4));
 
-        REQUIRE(world.minX() < 0);
-        REQUIRE(world.minY() < 0);
-        REQUIRE(world.minZ() < 0);
-        REQUIRE(world.maxX() > 0);
-        REQUIRE(world.maxY() > 0);
-        REQUIRE(world.maxZ() > 0);
+        REQUIRE(world.bounds().minX() < 0);
+        REQUIRE(world.bounds().minY() < 0);
+        REQUIRE(world.bounds().minZ() < 0);
+        REQUIRE(world.bounds().maxX() > 0);
+        REQUIRE(world.bounds().maxY() > 0);
+        REQUIRE(world.bounds().maxZ() > 0);
 
-        REQUIRE(world.maxX() - world.minX() < 101);
-        REQUIRE(world.maxY() - world.minY() < 55);
-        REQUIRE(world.maxZ() - world.minZ() < 4);
+        REQUIRE(world.bounds().maxX() - world.bounds().minX() < 101);
+        REQUIRE(world.bounds().maxY() - world.bounds().minY() < 55);
+        REQUIRE(world.bounds().maxZ() - world.bounds().minZ() < 4);
 
         WHEN("getting non-accessed cell") {
             THEN("temperature is zero") {

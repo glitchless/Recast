@@ -7,13 +7,13 @@
 #include "lib/crow_all.h"
 #include "interfaces/ITemperatureWorld.hpp"
 #include "interfaces/IUpdater.hpp"
+#include "injectors/BoundTemperatureWorldInjector.hpp"
 #include "utils/FileUtils.hpp"
 
 using namespace std;
-using namespace fruit;
 
 void startUpdater(shared_ptr<IUpdater> updater) {
-    thread t([&updater]() {
+    thread t([&]() {
         while (true) {
             updater->update();
         }
@@ -21,7 +21,7 @@ void startUpdater(shared_ptr<IUpdater> updater) {
     t.detach();
 }
 
-void startServer(shared_ptr<ITemperatureWorldBoundable> world, shared_ptr<IUpdater> updater) {
+void startServer(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> world, shared_ptr<IUpdater> updater) {
     crow::SimpleApp app;
 
     CROW_ROUTE(app, "/")([](){
@@ -54,19 +54,17 @@ void startServer(shared_ptr<ITemperatureWorldBoundable> world, shared_ptr<IUpdat
 }
 
 int main() {
-    static Size worldWidth = 10;
-    static Size worldHeight = 10;
-    static Size worldDepth = 10;
-    Component<ITemperatureWorldBoundable, IUpdater> component =
-                    WorldWithTemperatureModule::boundTemperatureWorldComponent(worldWidth, worldHeight, worldDepth);
-    Injector<ITemperatureWorldBoundable, IUpdater> injector(component);
+    Parallelepiped worldBounds(10, 10, 10);
 
-    auto world = injector.get<shared_ptr<ITemperatureWorldBoundable>>();
-    auto updater = injector.get<shared_ptr<IUpdater>>();
+    BoundTemperatureWorldInjector injector;
+    injector.setWorldBounds(worldBounds);
+
+    auto world = injector.world();
+    auto updater = injector.updater();
 
     for (Coord x = -2; x <= 2; x++) {
         for (Coord z = -2; z <= 2; z++) {
-            world->set(x, world->maxY(), z, 750);
+            world->set(x, world->bounds().maxY(), z, 750);
         }
     }
 
