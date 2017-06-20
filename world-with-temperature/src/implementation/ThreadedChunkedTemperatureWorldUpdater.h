@@ -8,7 +8,6 @@
 
 #include <list>
 #include <queue>
-#include <fruit/macro.h>
 #include <condition_variable>
 #include <thread>
 #include <future>
@@ -16,8 +15,6 @@
 #include "../interfaces/ITemperatureWorld.h"
 #include "../interfaces/ITemperatureWorldChunkable.h"
 #include "../interfaces/ITemperatureWorldChunkableGeneratableObservable.h"
-#include "../fixes/fruit.h"
-#include "annotations/ThreadedChunkedTemperatureWorldUpdaterAnnotations.h"
 
 /**
  * Implementation of chunked temperature world updater.
@@ -28,9 +25,9 @@
  */
 class ThreadedChunkedTemperatureWorldUpdater : public IUpdater {
 public:
-    INJECT_F(ThreadedChunkedTemperatureWorldUpdater(
+    ThreadedChunkedTemperatureWorldUpdater(
             std::shared_ptr<ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkable<ITemperatureWorld>>> world,
-            ANNOTATED(ThreadedChunkedTemperatureWorldUpdaterAnnotations::ChunkUpdaterFactoryFn, std::function<std::shared_ptr<IUpdater>()>) chunkUpdaterFactoryFn));
+            std::function<std::shared_ptr<IUpdater>()> chunkUpdaterFactoryFn);
 
     ~ThreadedChunkedTemperatureWorldUpdater();
 

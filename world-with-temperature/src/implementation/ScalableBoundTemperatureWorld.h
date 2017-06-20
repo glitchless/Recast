@@ -18,8 +18,7 @@
  */
 class ScalableBoundTemperatureWorld : public ITemperatureWorldScalableMutable<ITemperatureWorldScalable<BoundTemperatureWorld>> {
 public:
-    INJECT_F(ScalableBoundTemperatureWorld(
-            ANNOTATED(BoundTemperatureWorldAnnotations::Bounds, Parallelepiped) bounds));
+    ScalableBoundTemperatureWorld(Parallelepiped bounds);
 
     IntScaleParallelepiped cellScale() const noexcept override;
     void setCellScale(IntScaleParallelepiped cellScale) override;

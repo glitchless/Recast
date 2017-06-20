@@ -7,19 +7,15 @@
 
 
 #include <vector>
-#include <fruit/fruit.h>
 #include "../interfaces/ITemperatureWorldBoundable.h"
-#include "annotations/BoundTemperatureWorldAnnotations.h"
 #include "../types/Parallelepiped.h"
-#include "../fixes/fruit.h"
 
 /**
  * Bound temperature world backed by `std::vector`.
  */
 class BoundTemperatureWorld : public ITemperatureWorldBoundable<ITemperatureWorld> {
 public:
-    INJECT_F(BoundTemperatureWorld(
-            ANNOTATED(BoundTemperatureWorldAnnotations::Bounds, Parallelepiped) bounds));
+    BoundTemperatureWorld(Parallelepiped bounds);
 
     BoundTemperatureWorld(const BoundTemperatureWorld& other);
     BoundTemperatureWorld(BoundTemperatureWorld&& other);

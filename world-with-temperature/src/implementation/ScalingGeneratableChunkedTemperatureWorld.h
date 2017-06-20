@@ -22,10 +22,10 @@
  */
 class ScalingGeneratableChunkedTemperatureWorld : public ITemperatureWorldPointPrioritizable<GeneratableChunkedTemperatureWorld> {
 public:
-    INJECT_F(ScalingGeneratableChunkedTemperatureWorld(
-            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::NeedChunkFn, GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn) needChunkFn,
-            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::MakeChunkFn, GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn) makeChunkFn,
-            ANNOTATED(BoundTemperatureWorldAnnotations::Bounds, Parallelepiped) baseChunkSize));
+    ScalingGeneratableChunkedTemperatureWorld(
+            GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn needChunkFn,
+            GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn makeChunkFn,
+            Parallelepiped baseChunkSize);
 
     void addPriorityPoint(Coord x, Coord y, Coord z) override;
     void removePriorityPoint(Coord x, Coord y, Coord z) override;

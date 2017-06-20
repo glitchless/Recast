@@ -7,7 +7,6 @@
 
 
 #include "ChunkedTemperatureWorld.h"
-#include "annotations/GeneratableChunkedTemperatureWorldAnnotations.h"
 #include "../interfaces/ITemperatureWorldChunkableGeneratable.h"
 #include "../interfaces/ITemperatureWorldChunkableGeneratableObservable.h"
 #include "typedefs/GeneratableChunkedTemperatureWorldTypedefs.h"
@@ -20,9 +19,9 @@
  */
 class GeneratableChunkedTemperatureWorld : public ITemperatureWorldChunkableGeneratableObservable<ITemperatureWorldChunkableGeneratable<ChunkedTemperatureWorld>> {
 public:
-    INJECT_F(GeneratableChunkedTemperatureWorld(
-            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::NeedChunkFn, GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn) needChunkFn,
-            ANNOTATED(GeneratableChunkedTemperatureWorldAnnotations::MakeChunkFn, GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn) makeChunkFn));
+    GeneratableChunkedTemperatureWorld(
+            GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn needChunkFn,
+            GeneratableChunkedTemperatureWorldTypedefs::MakeChunkFn makeChunkFn);
 
     bool hasOrIsGeneratableChunk(Coord x, Coord y, Coord z) const noexcept override;
     std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> getOrGenerateChunk(Coord x, Coord y, Coord z) override;

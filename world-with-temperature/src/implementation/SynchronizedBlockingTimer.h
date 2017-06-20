@@ -7,18 +7,14 @@
 
 
 #include <mutex>
-#include <fruit/fruit.h>
 #include "../interfaces/ITimerBlockable.h"
-#include "annotations/BlockingTimerAnnotations.h"
-#include "../fixes/fruit.h"
 
 /**
  * Implementation of blocking timer.
  */
 class SynchronizedBlockingTimer : public ITimerBlockable<ITimer> {
 public:
-    INJECT_F(SynchronizedBlockingTimer(
-            ANNOTATED(BlockingTimerAnnotations::MinDelta, std::chrono::milliseconds) minDelta));
+    SynchronizedBlockingTimer(std::chrono::milliseconds minDelta);
 
     std::chrono::milliseconds delta() const override;
     std::chrono::milliseconds minDelta() const override;

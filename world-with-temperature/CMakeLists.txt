@@ -2,9 +2,7 @@
 find_package(Boost COMPONENTS system thread serialization REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
-find_library(FRUIT_LIBRARY NAMES fruit)
-
-set(LIBRARIES ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${FRUIT_LIBRARY})
+set(LIBRARIES ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 
 # main
 set(SOURCE_FILES
@@ -26,10 +24,8 @@ set(SOURCE_FILES
         src/implementation/AverageShareTemperatureWorldUpdater.cpp
         src/implementation/AverageShareTemperatureWorldUpdater.h
         src/utils/FileUtils.h
-        src/module.h
         src/implementation/annotations/TemperatureWorldUpdaterAnnotations.h
         src/implementation/annotations/BoundTemperatureWorldAnnotations.h
-        src/module.cpp
         src/implementation/annotations/BlockingTimerAnnotations.h
         src/implementation/BasicTimer.cpp
         src/implementation/BasicTimer.h
@@ -52,12 +48,11 @@ set(SOURCE_FILES
         src/interfaces/ITemperatureWorldPointPrioritizable.h
         src/types/Point.h
         src/implementation/annotations/GeneratableChunkedTemperatureWorldAnnotations.h
-        src/fixes/fruit.h
         src/implementation/ThreadedChunkedTemperatureWorldUpdater.cpp
         src/implementation/ThreadedChunkedTemperatureWorldUpdater.h
         src/interfaces/ITemperatureWorldChunkableGeneratableObservable.h
         src/implementation/annotations/ThreadedChunkedTemperatureWorldUpdaterAnnotations.h
-        src/implementation/typedefs/GeneratableChunkedTemperatureWorldTypedefs.h src/interfaces/ITemperatureWorldChunkableGeneratable.h)
+        src/implementation/typedefs/GeneratableChunkedTemperatureWorldTypedefs.h src/interfaces/ITemperatureWorldChunkableGeneratable.h src/injectors/BoundTemperatureWorldInjector.cpp src/injectors/BoundTemperatureWorldInjector.h)
 
 # unittest
 add_executable(world-with-temperature-unittest test/unittest.cpp test/lib/catch.hpp ${SOURCE_FILES})

@@ -7,10 +7,8 @@
 
 
 #include <list>
-#include <fruit/fruit.h>
 #include "../interfaces/ITemperatureWorldChunkable.h"
 #include "../interfaces/ITemperatureWorldChunkableMutable.h"
-#include "../fixes/fruit.h"
 
 /**
  * Template to chunked temperature world. It's backed by `std::list`.
@@ -19,7 +17,7 @@
  */
 class ChunkedTemperatureWorld : public ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>> {
 public:
-    INJECT_F(ChunkedTemperatureWorld());
+    ChunkedTemperatureWorld();
 
     bool hasChunk(Coord x, Coord y, Coord z) const noexcept override;
     std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> getChunk(Coord x, Coord y, Coord z) const override;

@@ -6,16 +6,14 @@
 #define RECAST_BASICTIMER_H
 
 
-#include <fruit/fruit.h>
 #include "../interfaces/ITimer.h"
-#include "../fixes/fruit.h"
 
 /**
  * Timer that measures time duration between two updates.
  */
 class BasicTimer : public ITimer {
 public:
-    INJECT_F(BasicTimer());
+    BasicTimer();
 
     std::chrono::milliseconds delta() const;
     double deltaFloatSeconds() const;

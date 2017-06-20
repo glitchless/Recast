@@ -7,12 +7,9 @@
 
 
 #include <memory>
-#include <fruit/fruit.h>
 #include "../interfaces/IUpdater.h"
 #include "../interfaces/ITemperatureWorldBoundable.h"
 #include "../interfaces/ITimer.h"
-#include "annotations/TemperatureWorldUpdaterAnnotations.h"
-#include "../fixes/fruit.h"
 
 /**
  * Implementation of temperature world updater.
@@ -23,10 +20,10 @@
  */
 class AverageShareTemperatureWorldUpdater : public IUpdater {
 public:
-    INJECT_F(AverageShareTemperatureWorldUpdater(
-            ANNOTATED(TemperatureWorldUpdaterAnnotations::TemperatureExchangeCoefficient, double) temperatureExchangeCoefficient,
+    AverageShareTemperatureWorldUpdater(
+            double temperatureExchangeCoefficient,
             std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> world,
-            std::shared_ptr<ITimer> timer));
+            std::shared_ptr<ITimer> timer);
 
     void update() override;
 

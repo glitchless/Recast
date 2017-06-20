@@ -5,9 +5,8 @@ RUN apt-get update -qq && \
     apt-get install -qq -y cmake
 
 # libs
-RUN echo 'deb http://download.opensuse.org/repositories/home:/poletti_marco/Debian_8.0/ /' > /etc/apt/sources.list.d/libfruit.list && \
-    apt-get update -qq && \
-    apt-get install -qq --allow-unauthenticated -y libboost-all-dev libfruit fruit-dev
+RUN apt-get update -qq && \
+    apt-get install -qq -y libboost-all-dev
 
 # src
 WORKDIR /tmp/recast
