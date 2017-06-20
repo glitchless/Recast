@@ -23,4 +23,4 @@ add_executable(Recast-server ${SOURCE_FILES})
 
 target_link_libraries(Recast-server ${Boost_LIBRARIES})
 target_link_libraries(Recast-server ${CMAKE_THREAD_LIBS_INIT})
-target_link_libraries(Recast-server sqlite3
+target_link_libraries(Recast-server sqlite3)
