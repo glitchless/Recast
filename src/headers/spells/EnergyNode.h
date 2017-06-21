@@ -9,10 +9,8 @@
 #define RECAST_SERVER_ENERGYNODE_H
 
 #include "Node.h"
-
-const static float MAX_TRANSFER = 0.1;
-const static int DEFAULT_MAX_CAPACITY = 1000;
-const static float TAX_ENERGY_TRANSACTION_PER_COORD = 0.001;
+const static float MAX_TRANSFER = 0.1; //// Node throughput (pressure simulation) energyTransfer = (oldEnergy - tmp->getEnergy()) * MAX_TRANSFER
+const static float TAX_ENERGY_TRANSACTION_PER_COORD = 0.001; //// Transmission expense. Can go to a useful job (heating and stuff)
 
 class EnergyNode : public Node {
 public:
@@ -22,13 +20,10 @@ public:
 
     inline float getEnergy() const { return energy; }
 
-    inline float getMaxCapacity() const { return maxCapacity; }
-
     virtual float transferEnergy(Node *from, float count);
 
 private:
     float energy = 0;
-    float maxCapacity = DEFAULT_MAX_CAPACITY;
 
     void onTick(Node *callable);
 };

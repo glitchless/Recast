@@ -14,9 +14,9 @@
  * @brief Main method :)
  **/
 int main() {
-    EnergyNode node(0, 0, 0, 10);
-    EnergyNode node2(0, 0, 1, 100);
-    EnergyNode node3(0, 0, 2, 70);
+    EnergyNode node(0, 0, 0, -100);
+    EnergyNode node2(0, 0, 1, 0);
+    EnergyNode node3(0, 0, 2, 0);
     EnergyNode node4(0, 0, 3, 0);
     node.connectNode(&node2);
     node.connectNode(&node3);
