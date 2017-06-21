@@ -8,9 +8,11 @@
 #ifndef RECAST_SERVER_ENERGYNODE_H
 #define RECAST_SERVER_ENERGYNODE_H
 
+#include "io/configs/Config.h"
 #include "Node.h"
-const static float MAX_TRANSFER = 0.1; //// Node throughput (pressure simulation) energyTransfer = (oldEnergy - tmp->getEnergy()) * MAX_TRANSFER
-const static float TAX_ENERGY_TRANSACTION_PER_COORD = 0.001; //// Transmission expense. Can go to a useful job (heating and stuff)
+
+static float MAX_TRANSFER = 0.1; //// Node throughput (pressure simulation) energyTransfer = (oldEnergy - tmp->getEnergy()) * MAX_TRANSFER
+static float TAX_ENERGY_TRANSACTION_PER_COORD = 0.001; //// Transmission expense. Can go to a useful job (heating and stuff)
 
 class EnergyNode : public Node {
 public:

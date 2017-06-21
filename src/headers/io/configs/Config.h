@@ -54,6 +54,13 @@ public:
             return defaultVar;
         }
     }
+
+
+    template<class T>
+    static T g(const std::string &key, T defaultVar) {
+        return instance()->get(key, defaultVar);
+    }
+
 private:
     std::string filename;
     boost::property_tree::ptree pt;

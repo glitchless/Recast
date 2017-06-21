@@ -19,10 +19,9 @@
 #include <boost/log/utility/setup/common_attributes.hpp>
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
-#include <exceptions/InvalidLoginOrPassword.h>
 
 #include "io/SQLite.h"
-#include "configs/Config.h"
+#include "io/configs/Config.h"
 #include "Server.h"
 #include "threads/InputThread.h"
 #include "models/collections/PlayersOnline.h"

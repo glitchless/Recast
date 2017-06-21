@@ -14,6 +14,11 @@
  * @brief Main method :)
  **/
 int main() {
+    Config::g("spell.general.tax",
+                            0.001F);
+    Config::g("spell.general.max_transfer",
+                            0.1F);
+    Config::instance()->save();
     EnergyNode node(0, 0, 0, -100);
     EnergyNode node2(0, 0, 1, 0);
     EnergyNode node3(0, 0, 2, 0);
