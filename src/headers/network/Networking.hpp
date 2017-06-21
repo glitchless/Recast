@@ -31,14 +31,16 @@ public:
 public:
     int  getSocketDescr() const noexcept { return socketDescr; }
     void setNonBlocked(bool option)                                           throw (exception);
-    void send(const string &s)                                                throw (exception);
+    void send(const string &str)                                              throw (exception);
+    void sendTo(struct sockaddr_in &sendToAddr, const string &str)            throw (exception);
+    string recvFrom(struct sockaddr_in &recvFromAddr)                         throw (exception);
     string recv()                                                             throw (exception);
     string recv(size_t bytes)                                                 throw (exception);
     string recvTimed(int timeout)                                             throw (exception);
     void setRecvTimeout(int seconds, int microseconds)                        throw (exception);
     bool hasData()                                                            throw (exception);
-    void createServerSocketUDP(uint32_t port)                                    throw (exception);
-    void createServerSocketTCP(uint32_t port, uint32_t queueSize)                throw (exception);
+    void createServerSocketUDP(uint32_t port)                                 throw (exception);
+    void createServerSocketTCP(uint32_t port, uint32_t queueSize)             throw (exception);
     shared_ptr<Socket> accept()                                               throw (exception);
     void close() { ::close(socketDescr); }
 

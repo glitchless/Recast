@@ -12,11 +12,13 @@
 #include <thread>
 #include <memory>
 #include <sys/socket.h>
+#include <netinet/in.h> // struct sockaddr_in
+#include <thread>
 
 #include "network/Networking.hpp"
 #include "network/NetworkServer.hpp"
 
-NetworkServer::NetworkServer(uint32_t port, bool isTCP = false) : port(port), isTCP(isTCP) { };
+NetworkServer::NetworkServer(uint32_t port, bool isTCP) : port(port), isTCP(isTCP) { };
 
 void NetworkServer::run() {
     try {
@@ -55,15 +57,29 @@ void NetworkServer::run() {
 }
 
 void NetworkServer::clientWork(shared_ptr<Socket> client) {
-    client->setRecvTimeout(30, 0); // s, ms
-    while (true) try {
-            string request = client->recv();
-            string response = exchange(request);
-            client->send(response);
-        } catch(const exception &e) {
-            cerr << "An exception occurred: " << e.what() << endl;
-            return;
-        }
+    if (isTCP) {
+        // TCP
+        client->setRecvTimeout(30, 0); // s, ms
+        while (true) try {
+                string request = client->recv();
+                string response = exchange(request);
+                client->send(response);
+            } catch(const exception &e) {
+                cerr << "[ERR] An exception occurred: " << e.what() << endl;
+                return;
+            }
+    } else {
+        // UDP
+        while(true) try {
+                struct sockaddr_in senderAddr;
+                string request = client->recvFrom(senderAddr);
+                string response = exchange(request);
+                client->sendTo(senderAddr, response);
+            } catch(const exception &e) {
+                cerr << "[ERR] An exception occurred: " << e.what() << endl;
+                return;
+            }
+    }
 }
 
 void NetworkServer::shutdown() {

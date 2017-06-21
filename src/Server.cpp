@@ -52,6 +52,8 @@ void Server::initServer() {
     inputThread.detach();
 
     BOOST_LOG_TRIVIAL(info) << "Initializing network...";
+
+    // Needs to be resolved (blocking udp!)
     tcp->run();
     udp->run();
 }

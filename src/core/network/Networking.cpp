@@ -99,6 +99,25 @@ void Socket::send(const string &str) throw (exception) {
     }
 }
 
+void Socket::sendTo(struct sockaddr_in &sendToAddr, const string &str) throw (exception) {
+    // UDP
+    sendto(socketDescr, str.data(), str.size(), 0, (struct sockaddr *) &sendToAddr, sizeof(sendToAddr));
+}
+
+string Socket::recvFrom(struct sockaddr_in &recvFromAddr) throw (exception) {
+    // UDP
+    size_t BUFFER_SIZE = 1024;
+    ssize_t numBytes;
+    socklen_t socketSize = sizeof(struct sockaddr_in);
+    char *buffer = new char[BUFFER_SIZE];
+    if ((numBytes = recvfrom(socketDescr, buffer, BUFFER_SIZE, 0, (struct sockaddr*) &recvFromAddr, &socketSize) == - 1)) {
+        cerr << "[INFO] Recieved " << numBytes << " bytes. Data: " << buffer << endl;
+    }
+    string result = string(buffer);
+    delete[] buffer;
+    return result;
+}
+
 string Socket::recv(size_t bytes) throw (exception) {
     char *buf = new char[bytes];
     size_t r = 0;
