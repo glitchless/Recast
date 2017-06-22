@@ -1,0 +1,12 @@
+<map id="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/commands/ICommandSender.hpp" name="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/commands/ICommandSender.hpp">
+<area shape="rect" id="node2" href="$_i_command_sender_8cpp.html" title="ICommandSender file for other method. " alt="" coords="5,125,280,181"/>
+<area shape="rect" id="node3" href="$_stop_command_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/core/commands/StopCommand.cpp" alt="" coords="469,333,725,389"/>
+<area shape="rect" id="node4" href="$_i_command_8hpp.html" title="Command file. " alt="" coords="305,125,559,181"/>
+<area shape="rect" id="node8" href="$_server_8hpp.html" title="Server file. " alt="" coords="685,125,853,181"/>
+<area shape="rect" id="node5" href="$_i_command_8cpp.html" title="ICommand some method. " alt="" coords="325,229,559,285"/>
+<area shape="rect" id="node6" href="$_stop_command_8hpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/headers/commands/StopCommand.hpp" alt="" coords="22,229,300,285"/>
+<area shape="rect" id="node7" href="$_command_manager_8cpp.html" title="CommandManager description. " alt="" coords="21,333,301,389"/>
+<area shape="rect" id="node9" href="$_main_8cpp.html" title="Starting point. " alt="" coords="1091,229,1259,285"/>
+<area shape="rect" id="node10" href="$_server_8cpp.html" title="Config file. " alt="" coords="685,229,853,285"/>
+<area shape="rect" id="node11" href="$_input_thread_8cpp.html" title="Input thread for execution of terminal command. " alt="" coords="877,229,1067,285"/>
+</map>

@@ -34,6 +34,7 @@ var searchData=
   ['has',['has',['../class_bound_temperature_world.html#a75d2d3c631fb355de63dea3961ecd32b',1,'BoundTemperatureWorld::has()'],['../class_chunked_temperature_world.html#a05f4ce24ff44a6f4f17a8aac71f78af0',1,'ChunkedTemperatureWorld::has()'],['../class_i_temperature_world.html#a6c498247ed71d9ad037dd0c1b4779f81',1,'ITemperatureWorld::has()'],['../classcrow_1_1json_1_1rvalue.html#a44362ba33e3b182898d1e799996bbd16',1,'crow::json::rvalue::has(const char *str) const '],['../classcrow_1_1json_1_1rvalue.html#a800de59a0558733f64924d075bc2e65c',1,'crow::json::rvalue::has(const std::string &amp;str) const ']]],
   ['haschunk',['hasChunk',['../class_chunked_temperature_world.html#aa06bb1517a6ba6537a89992a8a2f4d8e',1,'ChunkedTemperatureWorld::hasChunk()'],['../class_i_temperature_world_chunkable_mixin.html#a4694b473f4e20976b8a538d16656943d',1,'ITemperatureWorldChunkableMixin::hasChunk()']]],
   ['haschunkbounds',['hasChunkBounds',['../class_scaling_generatable_chunked_temperature_world_injector.html#a55538a7bd833a485f7eb6700561d1e60',1,'ScalingGeneratableChunkedTemperatureWorldInjector']]],
+  ['hasdata',['hasData',['../class_socket_t_c_p.html#a0ef19d204316995c6e1943f6894f82c3',1,'SocketTCP']]],
   ['hasexpandedexpression',['hasExpandedExpression',['../class_catch_1_1_assertion_result.html#a122c369bd49430a304e3eaebdf184f36',1,'Catch::AssertionResult']]],
   ['hasexpression',['hasExpression',['../class_catch_1_1_assertion_result.html#a45551f4f092c640ffce0cdd8a94f4b62',1,'Catch::AssertionResult']]],
   ['hasmessage',['hasMessage',['../class_catch_1_1_assertion_result.html#ab22a1c9baa182aeb2549fffeb8294d9e',1,'Catch::AssertionResult']]],
@@ -76,7 +77,7 @@ var searchData=
   ['http_5fresponse',['HTTP_RESPONSE',['../crow__all_8h.html#af9d6d304f8c255158175951b434cfa7aa132597b93208763e8e81c4a4a0e8a642',1,'crow_all.h']]],
   ['http_5fshould_5fkeep_5falive',['http_should_keep_alive',['../crow__all_8h.html#abefaa63b2505a6d38f96fc782c41d111',1,'crow_all.h']]],
   ['httpmethod',['HTTPMethod',['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1',1,'crow']]],
-  ['httpparser',['HTTPParser',['../structcrow_1_1_h_t_t_p_parser.html#a3659702ad1b853735ae6871f57bc2229',1,'crow::HTTPParser']]],
   ['httpparser',['HTTPParser',['../structcrow_1_1_h_t_t_p_parser.html',1,'crow']]],
+  ['httpparser',['HTTPParser',['../structcrow_1_1_h_t_t_p_parser.html#a3659702ad1b853735ae6871f57bc2229',1,'crow::HTTPParser']]],
   ['httpparser_3c_20crow_3a_3aconnection_20_3e',['HTTPParser&lt; crow::Connection &gt;',['../structcrow_1_1_h_t_t_p_parser.html',1,'crow']]]
 ];

@@ -1,0 +1,99 @@
+\hypertarget{class_socket_u_d_p}{\section{Socket\-U\-D\-P Class Reference}
+\label{class_socket_u_d_p}\index{Socket\-U\-D\-P@{Socket\-U\-D\-P}}
+}
+
+
+{\ttfamily \#include $<$Networking.\-hpp$>$}
+
+
+
+Inheritance diagram for Socket\-U\-D\-P\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{class_socket_u_d_p__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Socket\-U\-D\-P\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{class_socket_u_d_p__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_socket_u_d_p_aa41096c8eecdf55a7557549e8f6a5d4a}{Socket\-U\-D\-P} (uint32\-\_\-t port)
+\item 
+void \hyperlink{class_socket_u_d_p_a48b2c650565eba38d9654ac16d21c60c}{create\-Server\-Socket} (uint32\-\_\-t port)  throw (exception)
+\item 
+void \hyperlink{class_socket_u_d_p_a207c3d7c2b854b140dcb4ca9a9c81292}{send\-To} (struct sockaddr\-\_\-in \&send\-To\-Addr, const string \&str)  throw (exception)
+\item 
+string \hyperlink{class_socket_u_d_p_ad5a3b81f16a9db0db80a92f69c811fe1}{recv\-From} (struct sockaddr\-\_\-in \&recv\-From\-Addr)  throw (exception)
+\item 
+void \hyperlink{class_socket_u_d_p_a69cce05867435fb471a50319855e34fc}{send\-Bytes\-To} (struct sockaddr\-\_\-in \&send\-To\-Addr, const char $\ast$data, size\-\_\-t num)  throw (exception)
+\item 
+char $\ast$ \hyperlink{class_socket_u_d_p_a4c3ff487d034850ad2096339cfa06707}{recv\-Bytes\-From} (struct sockaddr\-\_\-in \&recv\-From\-Addr)  throw (exception)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_socket_u_d_p_aa41096c8eecdf55a7557549e8f6a5d4a}{\index{Socket\-U\-D\-P@{Socket\-U\-D\-P}!Socket\-U\-D\-P@{Socket\-U\-D\-P}}
+\index{Socket\-U\-D\-P@{Socket\-U\-D\-P}!SocketUDP@{Socket\-U\-D\-P}}
+\subsubsection[{Socket\-U\-D\-P}]{\setlength{\rightskip}{0pt plus 5cm}Socket\-U\-D\-P\-::\-Socket\-U\-D\-P (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_socket_u_d_p_aa41096c8eecdf55a7557549e8f6a5d4a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_socket_u_d_p_a48b2c650565eba38d9654ac16d21c60c}{\index{Socket\-U\-D\-P@{Socket\-U\-D\-P}!create\-Server\-Socket@{create\-Server\-Socket}}
+\index{create\-Server\-Socket@{create\-Server\-Socket}!SocketUDP@{Socket\-U\-D\-P}}
+\subsubsection[{create\-Server\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-U\-D\-P\-::create\-Server\-Socket (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{port}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_u_d_p_a48b2c650565eba38d9654ac16d21c60c}
+\hypertarget{class_socket_u_d_p_a4c3ff487d034850ad2096339cfa06707}{\index{Socket\-U\-D\-P@{Socket\-U\-D\-P}!recv\-Bytes\-From@{recv\-Bytes\-From}}
+\index{recv\-Bytes\-From@{recv\-Bytes\-From}!SocketUDP@{Socket\-U\-D\-P}}
+\subsubsection[{recv\-Bytes\-From}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Socket\-U\-D\-P\-::recv\-Bytes\-From (
+\begin{DoxyParamCaption}
+\item[{struct sockaddr\-\_\-in \&}]{recv\-From\-Addr}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_u_d_p_a4c3ff487d034850ad2096339cfa06707}
+\hypertarget{class_socket_u_d_p_ad5a3b81f16a9db0db80a92f69c811fe1}{\index{Socket\-U\-D\-P@{Socket\-U\-D\-P}!recv\-From@{recv\-From}}
+\index{recv\-From@{recv\-From}!SocketUDP@{Socket\-U\-D\-P}}
+\subsubsection[{recv\-From}]{\setlength{\rightskip}{0pt plus 5cm}string Socket\-U\-D\-P\-::recv\-From (
+\begin{DoxyParamCaption}
+\item[{struct sockaddr\-\_\-in \&}]{recv\-From\-Addr}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_u_d_p_ad5a3b81f16a9db0db80a92f69c811fe1}
+\hypertarget{class_socket_u_d_p_a69cce05867435fb471a50319855e34fc}{\index{Socket\-U\-D\-P@{Socket\-U\-D\-P}!send\-Bytes\-To@{send\-Bytes\-To}}
+\index{send\-Bytes\-To@{send\-Bytes\-To}!SocketUDP@{Socket\-U\-D\-P}}
+\subsubsection[{send\-Bytes\-To}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-U\-D\-P\-::send\-Bytes\-To (
+\begin{DoxyParamCaption}
+\item[{struct sockaddr\-\_\-in \&}]{send\-To\-Addr, }
+\item[{const char $\ast$}]{data, }
+\item[{size\-\_\-t}]{num}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_u_d_p_a69cce05867435fb471a50319855e34fc}
+\hypertarget{class_socket_u_d_p_a207c3d7c2b854b140dcb4ca9a9c81292}{\index{Socket\-U\-D\-P@{Socket\-U\-D\-P}!send\-To@{send\-To}}
+\index{send\-To@{send\-To}!SocketUDP@{Socket\-U\-D\-P}}
+\subsubsection[{send\-To}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-U\-D\-P\-::send\-To (
+\begin{DoxyParamCaption}
+\item[{struct sockaddr\-\_\-in \&}]{send\-To\-Addr, }
+\item[{const string \&}]{str}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_u_d_p_a207c3d7c2b854b140dcb4ca9a9c81292}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/network/\hyperlink{_networking_8hpp}{Networking.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/core/network/\hyperlink{_networking_8cpp}{Networking.\-cpp}\end{DoxyCompactItemize}

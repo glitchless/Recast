@@ -5,7 +5,7 @@ var searchData=
   ['_7ebaserule',['~BaseRule',['../classcrow_1_1_base_rule.html#a270efe3d144ed2cc638e78758d08b0d8',1,'crow::BaseRule']]],
   ['_7ecompositegenerator',['~CompositeGenerator',['../class_catch_1_1_composite_generator.html#a5766205abd7004c508c20ddbb5e5555e',1,'Catch::CompositeGenerator']]],
   ['_7econfig',['~Config',['../class_config.html#a543dce59b66475c5108088ee4ce1cdfc',1,'Config']]],
-  ['_7econnection',['~connection',['../structcrow_1_1websocket_1_1connection.html#a138eb577cfd1405f91d710dae9309e8c',1,'crow::websocket::connection::~connection()'],['../classcrow_1_1_connection.html#a4800edf5f2600ecdefd7d792d237b945',1,'crow::Connection::~Connection()']]],
+  ['_7econnection',['~Connection',['../classcrow_1_1_connection.html#a4800edf5f2600ecdefd7d792d237b945',1,'crow::Connection::~Connection()'],['../structcrow_1_1websocket_1_1connection.html#a138eb577cfd1405f91d710dae9309e8c',1,'crow::websocket::connection::~connection()']]],
   ['_7edecomposedexpression',['~DecomposedExpression',['../struct_catch_1_1_decomposed_expression.html#aa627c69bd83582c33a4d4dcac403936c',1,'Catch::DecomposedExpression']]],
   ['_7eicontext',['~IContext',['../struct_catch_1_1_i_context.html#aeb17355c1be6c2ced5407cad7202628d',1,'Catch::IContext']]],
   ['_7eiexceptiontranslator',['~IExceptionTranslator',['../struct_catch_1_1_i_exception_translator.html#afa00bb6258c07591df472aadae05783f',1,'Catch::IExceptionTranslator']]],
@@ -37,5 +37,6 @@ var searchData=
   ['_7esection',['~Section',['../class_catch_1_1_section.html#aa1422edd68a77aa578b5cc6b8b69f86f',1,'Catch::Section']]],
   ['_7eserver',['~Server',['../class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6',1,'Server']]],
   ['_7esha1',['~SHA1',['../classsha1_1_1_s_h_a1.html#a7103b57eb1f51a498a92c095b9c21392',1,'sha1::SHA1']]],
+  ['_7esocket',['~Socket',['../class_socket.html#aeac4eb6379a543d38ed88977d3b6630a',1,'Socket']]],
   ['_7ethreadedchunkedtemperatureworldupdater',['~ThreadedChunkedTemperatureWorldUpdater',['../class_threaded_chunked_temperature_world_updater.html#a43882f9d6af677633e51f9058d5fee16',1,'ThreadedChunkedTemperatureWorldUpdater']]]
 ];

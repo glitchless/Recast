@@ -10,6 +10,11 @@ var searchData=
   ['react',['react',['../class_catch_1_1_result_builder.html#a3085cdc46533d45bed6f652a2ac295c0',1,'Catch::ResultBuilder']]],
   ['readfile',['readFile',['../namespace_file_utils.html#ac71822c5146913486f67a3a1e7646155',1,'FileUtils']]],
   ['reconstructexpression',['reconstructExpression',['../struct_catch_1_1_decomposed_expression.html#a9ce7f356dc96f11f80e40c82f5aa7e55',1,'Catch::DecomposedExpression::reconstructExpression()'],['../struct_catch_1_1_assertion_result_data.html#ac45208e1a464864f4112ac72c6938b4f',1,'Catch::AssertionResultData::reconstructExpression()'],['../class_catch_1_1_result_builder.html#a7d94b15cf04301a8617e7b16158b5d82',1,'Catch::ResultBuilder::reconstructExpression()'],['../class_catch_1_1_expression_lhs.html#a7684a053e8e88a4be475a536252630da',1,'Catch::ExpressionLhs::reconstructExpression()'],['../class_catch_1_1_binary_expression.html#a6ed73ff9af9c229f9fa3d35d019f9e37',1,'Catch::BinaryExpression::reconstructExpression()'],['../class_catch_1_1_match_expression.html#a4410a93bc5b8241eb2502f400fce7ec4',1,'Catch::MatchExpression::reconstructExpression()']]],
+  ['recv',['recv',['../class_socket_t_c_p.html#af0fcc6b415f4395f4d45db073f898319',1,'SocketTCP::recv()'],['../class_socket_t_c_p.html#a8b18cd843ab049c46cba3d6a6d2a0de8',1,'SocketTCP::recv(size_t bytes)']]],
+  ['recvbytes',['recvBytes',['../class_socket_t_c_p.html#a429d26df00424eb1776cce33207b6b47',1,'SocketTCP']]],
+  ['recvbytesfrom',['recvBytesFrom',['../class_socket_u_d_p.html#a4c3ff487d034850ad2096339cfa06707',1,'SocketUDP']]],
+  ['recvfrom',['recvFrom',['../class_socket_u_d_p.html#ad5a3b81f16a9db0db80a92f69c811fe1',1,'SocketUDP']]],
+  ['recvtimed',['recvTimed',['../class_socket_t_c_p.html#ad0488313f286b1583e300fc39004db97',1,'SocketTCP']]],
   ['registerlistener',['registerListener',['../struct_catch_1_1_i_mutable_registry_hub.html#ae06fcb90ba3f2b389d450cd81e229276',1,'Catch::IMutableRegistryHub']]],
   ['registerplayer',['registerPlayer',['../class_players_online.html#a26463b293d6c3c38ff600f4b363283cc',1,'PlayersOnline']]],
   ['registerreporter',['registerReporter',['../struct_catch_1_1_i_mutable_registry_hub.html#aab72d0aa1fa14627f1a6a4c893ae0a12',1,'Catch::IMutableRegistryHub']]],
@@ -35,6 +40,7 @@ var searchData=
   ['route',['route',['../classcrow_1_1_crow.html#af221cb25926e5dabc2da21a7a1c9713c',1,'crow::Crow']]],
   ['route_5fdynamic',['route_dynamic',['../classcrow_1_1_crow.html#a0f408e47d261ad55ccfd8eb5f351c22e',1,'crow::Crow']]],
   ['router',['Router',['../classcrow_1_1_router.html#ae5c4c84e7b66b23c20a893bf320137de',1,'crow::Router']]],
-  ['run',['run',['../classcrow_1_1_server.html#a90b072e9143f9417ce9dd30510a07495',1,'crow::Server::run()'],['../classcrow_1_1_crow.html#a193d8b03f717234a841cd92f72c6b4b5',1,'crow::Crow::run()']]],
+  ['run',['run',['../class_network_server.html#ae9a3ec5c90111aa30caa44dfe4e653fb',1,'NetworkServer::run()'],['../classcrow_1_1_server.html#a90b072e9143f9417ce9dd30510a07495',1,'crow::Server::run()'],['../classcrow_1_1_crow.html#a193d8b03f717234a841cd92f72c6b4b5',1,'crow::Crow::run()']]],
+  ['running',['running',['../class_network_server.html#a34695eaa70558f1c150bb9b6e1fa715a',1,'NetworkServer']]],
   ['rvalue',['rvalue',['../classcrow_1_1json_1_1rvalue.html#aa2db11774ac831fe243a0e3511946a40',1,'crow::json::rvalue::rvalue() noexcept'],['../classcrow_1_1json_1_1rvalue.html#a8b4e22b077d735b29aafc1c1a7e01366',1,'crow::json::rvalue::rvalue(type t) noexcept'],['../classcrow_1_1json_1_1rvalue.html#a9eb58f152c08db64e400ebf90df2889e',1,'crow::json::rvalue::rvalue(type t, char *s, char *e) noexcept'],['../classcrow_1_1json_1_1rvalue.html#a834f64380b3479a4497b2ca212559320',1,'crow::json::rvalue::rvalue(const rvalue &amp;r)'],['../classcrow_1_1json_1_1rvalue.html#ab37b37402eb83aed531868b6a1763f66',1,'crow::json::rvalue::rvalue(rvalue &amp;&amp;r) noexcept']]]
 ];

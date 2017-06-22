@@ -1,6 +1,6 @@
 <map id="/home/travis/build/bender&#45;wardrobe/Recast/src/core/commands/CommandManager.cpp" name="/home/travis/build/bender&#45;wardrobe/Recast/src/core/commands/CommandManager.cpp">
-<area shape="rect" id="node6" href="$_command_manager_8h.html" title="CommandManager file. " alt="" coords="96,184,305,211"/>
-<area shape="rect" id="node9" href="$_stop_command_8h.html" title="commands/StopCommand.h" alt="" coords="382,109,569,136"/>
-<area shape="rect" id="node10" href="$_i_command_8h.html" title="Command file. " alt="" coords="405,184,501,211"/>
-<area shape="rect" id="node11" href="$_i_command_sender_8h.html" title="ICommandSender.h" alt="" coords="448,259,587,285"/>
+<area shape="rect" id="node6" href="$_command_manager_8hpp.html" title="CommandManager file. " alt="" coords="82,184,307,211"/>
+<area shape="rect" id="node9" href="$_stop_command_8hpp.html" title="commands/StopCommand.hpp" alt="" coords="381,109,584,136"/>
+<area shape="rect" id="node10" href="$_i_command_8hpp.html" title="Command file. " alt="" coords="405,184,515,211"/>
+<area shape="rect" id="node11" href="$_i_command_sender_8hpp.html" title="ICommandSender.hpp" alt="" coords="448,259,600,285"/>
 </map>

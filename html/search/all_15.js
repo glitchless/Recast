@@ -26,9 +26,9 @@ var searchData=
   ['url_5fparams',['url_params',['../structcrow_1_1request.html#a745d5a94e9e9ae1fed64674aae0194b0',1,'crow::request::url_params()'],['../structcrow_1_1_h_t_t_p_parser.html#aa00ec7a2a2b475ec0b2cfe3d946c9b87',1,'crow::HTTPParser::url_params()']]],
   ['useactiveexception',['useActiveException',['../class_catch_1_1_result_builder.html#a5bbd2f14a678f3e8d0f791ac6d233d65',1,'Catch::ResultBuilder']]],
   ['user',['User',['../struct_user.html',1,'User'],['../struct_user.html#a4a0137053e591fbb79d9057dd7d2283d',1,'User::User()'],['../struct_user.html#a074cc382f1a4178c6af5b8d7fdc505e7',1,'User::User(std::string login, std::string password)']]],
-  ['user_2eh',['User.h',['../_user_8h.html',1,'']]],
+  ['user_2ehpp',['User.hpp',['../_user_8hpp.html',1,'']]],
   ['userdata',['userdata',['../structcrow_1_1websocket_1_1connection.html#a75b25cfa1f5f8fd3bbae01b5637097f6',1,'crow::websocket::connection::userdata(void *u)'],['../structcrow_1_1websocket_1_1connection.html#a301af57187b6d7419d1825c8a15c22f6',1,'crow::websocket::connection::userdata()']]],
   ['userid',['userId',['../struct_player.html#a5c801c5fa6666baddd65a2863cc6e7f2',1,'Player']]],
   ['utils_2ecpp',['Utils.cpp',['../_utils_8cpp.html',1,'']]],
-  ['utils_2eh',['Utils.h',['../_utils_8h.html',1,'']]]
+  ['utils_2ehpp',['Utils.hpp',['../_utils_8hpp.html',1,'']]]
 ];

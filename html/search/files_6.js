@@ -1,14 +1,14 @@
 var searchData=
 [
   ['icommand_2ecpp',['ICommand.cpp',['../_i_command_8cpp.html',1,'']]],
-  ['icommand_2eh',['ICommand.h',['../_i_command_8h.html',1,'']]],
+  ['icommand_2ehpp',['ICommand.hpp',['../_i_command_8hpp.html',1,'']]],
   ['icommandsender_2ecpp',['ICommandSender.cpp',['../_i_command_sender_8cpp.html',1,'']]],
-  ['icommandsender_2eh',['ICommandSender.h',['../_i_command_sender_8h.html',1,'']]],
+  ['icommandsender_2ehpp',['ICommandSender.hpp',['../_i_command_sender_8hpp.html',1,'']]],
   ['inputthread_2ecpp',['InputThread.cpp',['../_input_thread_8cpp.html',1,'']]],
-  ['inputthread_2eh',['InputThread.h',['../_input_thread_8h.html',1,'']]],
+  ['inputthread_2ehpp',['InputThread.hpp',['../_input_thread_8hpp.html',1,'']]],
   ['intscale_2ehpp',['IntScale.hpp',['../_int_scale_8hpp.html',1,'']]],
   ['intscaleparallelepiped_2ehpp',['IntScaleParallelepiped.hpp',['../_int_scale_parallelepiped_8hpp.html',1,'']]],
-  ['invalidloginorpassword_2eh',['InvalidLoginOrPassword.h',['../_invalid_login_or_password_8h.html',1,'']]],
+  ['invalidloginorpassword_2ehpp',['InvalidLoginOrPassword.hpp',['../_invalid_login_or_password_8hpp.html',1,'']]],
   ['itemperatureworld_2ehpp',['ITemperatureWorld.hpp',['../_i_temperature_world_8hpp.html',1,'']]],
   ['itemperatureworldboundable_2ehpp',['ITemperatureWorldBoundable.hpp',['../_i_temperature_world_boundable_8hpp.html',1,'']]],
   ['itemperatureworldchunkable_2ehpp',['ITemperatureWorldChunkable.hpp',['../_i_temperature_world_chunkable_8hpp.html',1,'']]],

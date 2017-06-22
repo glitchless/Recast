@@ -1,0 +1,193 @@
+\hypertarget{class_socket_t_c_p}{\section{Socket\-T\-C\-P Class Reference}
+\label{class_socket_t_c_p}\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}}
+}
+
+
+{\ttfamily \#include $<$Networking.\-hpp$>$}
+
+
+
+Inheritance diagram for Socket\-T\-C\-P\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{class_socket_t_c_p__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Socket\-T\-C\-P\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{class_socket_t_c_p__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_socket_t_c_p_a03fa65da98287c442592f6602087703f}{Socket\-T\-C\-P} (uint32\-\_\-t port, uint32\-\_\-t queue\-Size)
+\item 
+void \hyperlink{class_socket_t_c_p_a473fa103469c9b83720b4f8ecfde1298}{set\-Recv\-Timeout} (int seconds, int microseconds)  throw (exception)
+\item 
+void \hyperlink{class_socket_t_c_p_a51b9d8a8c461f357ec72244570c69e5c}{create\-Server\-Socket} (uint32\-\_\-t port, uint32\-\_\-t queue\-Size)  throw (exception)
+\item 
+void \hyperlink{class_socket_t_c_p_a853ec6fc95a21f49186829a72321cdc8}{send} (const string \&str)  throw (exception)
+\item 
+void \hyperlink{class_socket_t_c_p_a1e0a19b3511099febd41579d578efd9b}{send\-Bytes} (const char $\ast$data, size\-\_\-t num)  throw (exception)
+\item 
+string \hyperlink{class_socket_t_c_p_af0fcc6b415f4395f4d45db073f898319}{recv} ()  throw (exception)
+\item 
+string \hyperlink{class_socket_t_c_p_a8b18cd843ab049c46cba3d6a6d2a0de8}{recv} (size\-\_\-t bytes)  throw (exception)
+\item 
+string \hyperlink{class_socket_t_c_p_ad0488313f286b1583e300fc39004db97}{recv\-Timed} (int timeout)  throw (exception)
+\item 
+char $\ast$ \hyperlink{class_socket_t_c_p_a429d26df00424eb1776cce33207b6b47}{recv\-Bytes} (size\-\_\-t num)  throw (exception)
+\item 
+bool \hyperlink{class_socket_t_c_p_a0ef19d204316995c6e1943f6894f82c3}{has\-Data} ()  throw (exception)
+\item 
+shared\-\_\-ptr$<$ \hyperlink{class_socket_t_c_p}{Socket\-T\-C\-P} $>$ \hyperlink{class_socket_t_c_p_a4a895bc95518aa10f02d476e88465809}{accept} ()  throw (exception)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_socket_t_c_p_a03fa65da98287c442592f6602087703f}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!Socket\-T\-C\-P@{Socket\-T\-C\-P}}
+\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!SocketTCP@{Socket\-T\-C\-P}}
+\subsubsection[{Socket\-T\-C\-P}]{\setlength{\rightskip}{0pt plus 5cm}Socket\-T\-C\-P\-::\-Socket\-T\-C\-P (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{port, }
+\item[{uint32\-\_\-t}]{queue\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_socket_t_c_p_a03fa65da98287c442592f6602087703f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_socket_t_c_p_a4a895bc95518aa10f02d476e88465809}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!accept@{accept}}
+\index{accept@{accept}!SocketTCP@{Socket\-T\-C\-P}}
+\subsubsection[{accept}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-ptr$<$ {\bf Socket\-T\-C\-P} $>$ Socket\-T\-C\-P\-::accept (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_t_c_p_a4a895bc95518aa10f02d476e88465809}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_socket_t_c_p_a4a895bc95518aa10f02d476e88465809_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_socket_t_c_p_a4a895bc95518aa10f02d476e88465809_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_socket_t_c_p_a51b9d8a8c461f357ec72244570c69e5c}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!create\-Server\-Socket@{create\-Server\-Socket}}
+\index{create\-Server\-Socket@{create\-Server\-Socket}!SocketTCP@{Socket\-T\-C\-P}}
+\subsubsection[{create\-Server\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-T\-C\-P\-::create\-Server\-Socket (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{port, }
+\item[{uint32\-\_\-t}]{queue\-Size}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_t_c_p_a51b9d8a8c461f357ec72244570c69e5c}
+\hypertarget{class_socket_t_c_p_a0ef19d204316995c6e1943f6894f82c3}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!has\-Data@{has\-Data}}
+\index{has\-Data@{has\-Data}!SocketTCP@{Socket\-T\-C\-P}}
+\subsubsection[{has\-Data}]{\setlength{\rightskip}{0pt plus 5cm}bool Socket\-T\-C\-P\-::has\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_t_c_p_a0ef19d204316995c6e1943f6894f82c3}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_socket_t_c_p_a0ef19d204316995c6e1943f6894f82c3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_socket_t_c_p_af0fcc6b415f4395f4d45db073f898319}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!recv@{recv}}
+\index{recv@{recv}!SocketTCP@{Socket\-T\-C\-P}}
+\subsubsection[{recv}]{\setlength{\rightskip}{0pt plus 5cm}string Socket\-T\-C\-P\-::recv (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_t_c_p_af0fcc6b415f4395f4d45db073f898319}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_socket_t_c_p_af0fcc6b415f4395f4d45db073f898319_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_socket_t_c_p_a8b18cd843ab049c46cba3d6a6d2a0de8}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!recv@{recv}}
+\index{recv@{recv}!SocketTCP@{Socket\-T\-C\-P}}
+\subsubsection[{recv}]{\setlength{\rightskip}{0pt plus 5cm}string Socket\-T\-C\-P\-::recv (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{bytes}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_t_c_p_a8b18cd843ab049c46cba3d6a6d2a0de8}
+\hypertarget{class_socket_t_c_p_a429d26df00424eb1776cce33207b6b47}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!recv\-Bytes@{recv\-Bytes}}
+\index{recv\-Bytes@{recv\-Bytes}!SocketTCP@{Socket\-T\-C\-P}}
+\subsubsection[{recv\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Socket\-T\-C\-P\-::recv\-Bytes (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{num}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_t_c_p_a429d26df00424eb1776cce33207b6b47}
+\hypertarget{class_socket_t_c_p_ad0488313f286b1583e300fc39004db97}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!recv\-Timed@{recv\-Timed}}
+\index{recv\-Timed@{recv\-Timed}!SocketTCP@{Socket\-T\-C\-P}}
+\subsubsection[{recv\-Timed}]{\setlength{\rightskip}{0pt plus 5cm}string Socket\-T\-C\-P\-::recv\-Timed (
+\begin{DoxyParamCaption}
+\item[{int}]{timeout}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_t_c_p_ad0488313f286b1583e300fc39004db97}
+\hypertarget{class_socket_t_c_p_a853ec6fc95a21f49186829a72321cdc8}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!send@{send}}
+\index{send@{send}!SocketTCP@{Socket\-T\-C\-P}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-T\-C\-P\-::send (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{str}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_t_c_p_a853ec6fc95a21f49186829a72321cdc8}
+\hypertarget{class_socket_t_c_p_a1e0a19b3511099febd41579d578efd9b}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!send\-Bytes@{send\-Bytes}}
+\index{send\-Bytes@{send\-Bytes}!SocketTCP@{Socket\-T\-C\-P}}
+\subsubsection[{send\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-T\-C\-P\-::send\-Bytes (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{size\-\_\-t}]{num}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_t_c_p_a1e0a19b3511099febd41579d578efd9b}
+\hypertarget{class_socket_t_c_p_a473fa103469c9b83720b4f8ecfde1298}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!set\-Recv\-Timeout@{set\-Recv\-Timeout}}
+\index{set\-Recv\-Timeout@{set\-Recv\-Timeout}!SocketTCP@{Socket\-T\-C\-P}}
+\subsubsection[{set\-Recv\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-T\-C\-P\-::set\-Recv\-Timeout (
+\begin{DoxyParamCaption}
+\item[{int}]{seconds, }
+\item[{int}]{microseconds}
+\end{DoxyParamCaption}
+) throw  exception) }}\label{class_socket_t_c_p_a473fa103469c9b83720b4f8ecfde1298}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/network/\hyperlink{_networking_8hpp}{Networking.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/core/network/\hyperlink{_networking_8cpp}{Networking.\-cpp}\end{DoxyCompactItemize}

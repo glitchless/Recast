@@ -2,13 +2,15 @@ var searchData=
 [
   ['d',['d',['../classcrow_1_1json_1_1rvalue.html#a29172ace3a8cf89841096e2e964cde59',1,'crow::json::rvalue']]],
   ['data',['data',['../structhttp__parser.html#a7e87ce57b97f60f1fdb7039a8ecb0bca',1,'http_parser']]],
-  ['debug',['Debug',['../namespacecrow.html#ad07dc32e163caa516aa1225a1ec4afe4aa603905470e2a5b8c13e96b579ef0dba',1,'crow::Debug()'],['../namespacecrow.html#ad07dc32e163caa516aa1225a1ec4afe4adc30ec20708ef7b0f641ef78b7880a15',1,'crow::DEBUG()']]],
+  ['debug',['DEBUG',['../namespacecrow.html#ad07dc32e163caa516aa1225a1ec4afe4adc30ec20708ef7b0f641ef78b7880a15',1,'crow::DEBUG()'],['../namespacecrow.html#ad07dc32e163caa516aa1225a1ec4afe4aa603905470e2a5b8c13e96b579ef0dba',1,'crow::Debug()']]],
   ['debug_5fprint',['debug_print',['../structcrow_1_1routing__params.html#af2e694039be3d508c3f8be5369158359',1,'crow::routing_params::debug_print()'],['../classcrow_1_1_trie.html#a9ac17b6ae0f96dc94b595bb704a89101',1,'crow::Trie::debug_print()'],['../classcrow_1_1_router.html#a61157adad80f901413a4023d8fb0fd9d',1,'crow::Router::debug_print()'],['../classcrow_1_1_crow.html#a839c1e6f82d577308eb6f0d4948a4fbb',1,'crow::Crow::debug_print()']]],
   ['decomposedexpression',['DecomposedExpression',['../struct_catch_1_1_decomposed_expression.html',1,'Catch']]],
   ['decomposedexpression',['decomposedExpression',['../struct_catch_1_1_assertion_result_data.html#a45b2bf2ed11da83d09dd78a2b7a44cd4',1,'Catch::AssertionResultData']]],
   ['default_5fconfig',['DEFAULT_CONFIG',['../_config_8cpp.html#ab330b966aa1026a8014370d5732fae26',1,'Config.cpp']]],
   ['default_5ffolder',['DEFAULT_FOLDER',['../_config_8cpp.html#a26d7091acfa5c363d348bbe5043b5c39',1,'Config.cpp']]],
   ['default_5floader',['default_loader',['../namespacecrow_1_1mustache.html#a7e8660fbdeeb994a1f00c704b469c792',1,'crow::mustache']]],
+  ['default_5fport_5ftcp',['DEFAULT_PORT_TCP',['../_networking_8hpp.html#a08503b9a325023d1ac88c0b89de3236c',1,'Networking.hpp']]],
+  ['default_5fport_5fudp',['DEFAULT_PORT_UDP',['../_networking_8hpp.html#aa69183107def82b9a64b8166816f6ab3',1,'Networking.hpp']]],
   ['delete',['DELETE',['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1a32f68a60cef40faedbc6af20298c1a1e',1,'crow::DELETE()'],['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1af2a6c498fb90ee345d997f888fce3b18',1,'crow::Delete()']]],
   ['deleteall',['deleteAll',['../namespace_catch.html#aadf9786550a462740ec355f8219863a9',1,'Catch']]],
   ['deleteallvalues',['deleteAllValues',['../namespace_catch.html#af2fcec1d4bd984fe19ff8b9a432c36a8',1,'Catch']]],
@@ -28,12 +30,12 @@ var searchData=
   ['double',['DOUBLE',['../namespacecrow.html#ab3c83b2f7f161d992dcc38da41a8bf44afd3e4ece78a7d422280d5ed379482229',1,'crow']]],
   ['double_5fparams',['double_params',['../structcrow_1_1routing__params.html#a090754b18f2bec903ae3db739a2b15c3',1,'crow::routing_params']]],
   ['downscale',['Downscale',['../struct_int_scale.html#ab7d4e812b60cd562ddc4fb120ff1f0ccabc4c88fd06b273007bdb99fb0d7900d1',1,'IntScale']]],
-  ['dumb_5ftimer_5fqueue',['dumb_timer_queue',['../classcrow_1_1detail_1_1dumb__timer__queue.html',1,'crow::detail']]],
   ['dumb_5ftimer_5fqueue',['dumb_timer_queue',['../classcrow_1_1detail_1_1dumb__timer__queue.html#a9f3f50bc318d1668a4955b3211a70374',1,'crow::detail::dumb_timer_queue']]],
+  ['dumb_5ftimer_5fqueue',['dumb_timer_queue',['../classcrow_1_1detail_1_1dumb__timer__queue.html',1,'crow::detail']]],
   ['dump',['dump',['../classcrow_1_1json_1_1wvalue.html#a5ba6a4a466e9612dd301090293ec439d',1,'crow::json::wvalue::dump()'],['../namespacecrow_1_1json.html#ad28648d5c8e4d7eaea2777692e5ffec2',1,'crow::json::dump()']]],
   ['dump_5finternal',['dump_internal',['../classcrow_1_1json_1_1wvalue.html#ae0b02e7e067c9c3e602f94d070229748',1,'crow::json::wvalue::dump_internal()'],['../namespacecrow_1_1json.html#a89aba215e22bb1186515fe0db09d04d8',1,'crow::json::dump_internal()']]],
   ['dump_5fstring',['dump_string',['../namespacecrow_1_1json.html#af1b84b949166845e81f327e5e43cabee',1,'crow::json']]],
   ['durationinseconds',['durationInSeconds',['../struct_catch_1_1_section_end_info.html#a7c262f2dab9cff166b8eca620c47eea5',1,'Catch::SectionEndInfo']]],
-  ['dynamicrule',['DynamicRule',['../classcrow_1_1_dynamic_rule.html#ae34a9eac492ec9ed8e7c7ef036afcfec',1,'crow::DynamicRule']]],
-  ['dynamicrule',['DynamicRule',['../classcrow_1_1_dynamic_rule.html',1,'crow']]]
+  ['dynamicrule',['DynamicRule',['../classcrow_1_1_dynamic_rule.html',1,'crow']]],
+  ['dynamicrule',['DynamicRule',['../classcrow_1_1_dynamic_rule.html#ae34a9eac492ec9ed8e7c7ef036afcfec',1,'crow::DynamicRule']]]
 ];
