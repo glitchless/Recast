@@ -14,6 +14,7 @@
 #include "temperature-world/interfaces/IUpdater.hpp"
 #include "temperature-world/interfaces/ITemperatureWorld.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkable.hpp"
+#include "temperature-world/interfaces/ITemperatureWorldChunkableMutable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkableGeneratable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkableObservable.hpp"
 #include "temperature-world/interfaces/ITimer.hpp"
@@ -27,7 +28,7 @@
 class ThreadedChunkedTemperatureWorldUpdater : public virtual IUpdater {
 public:
     ThreadedChunkedTemperatureWorldUpdater(
-            std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> world,
+            std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> world,
             std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn,
             std::shared_ptr<ITimerBlockable<ITimer>> timer);
 
@@ -38,7 +39,7 @@ public:
 protected:
     struct ThreadData {
     public:
-        std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> world;
+        std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> world;
         std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn;
 
         std::atomic<bool> isRunning;

@@ -18,6 +18,7 @@
 #include "temperature-world/interfaces/IUpdater.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkableObservable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkableGeneratable.hpp"
+#include "temperature-world/interfaces/ITemperatureWorldChunkableMutable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorld.hpp"
 
@@ -53,7 +54,7 @@ public:
 
     PlayersOnline *getPlayers() const { return players; }
 
-    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>>
+    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>>
     getTemperatureWorld() const { return temperatureWorld; }
 
 private:
@@ -64,7 +65,7 @@ private:
     volatile bool isLaunching;
     std::thread inputThread;
     PlayersOnline *players;
-    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> temperatureWorld;
+    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> temperatureWorld;
     std::shared_ptr<IUpdater> temperatureWorldUpdater;
 };
 
