@@ -1,4 +1,5 @@
 <map id="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/Server.h" name="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/Server.h">
-<area shape="rect" id="node4" href="$_i_command_sender_8h.html" title="commands/ICommandSender.h" alt="" coords="112,117,318,144"/>
-<area shape="rect" id="node5" href="$_command_manager_8h.html" title="CommandManager file. " alt="" coords="343,117,553,144"/>
+<area shape="rect" id="node4" href="$_input_thread_8h.html" title="Thread for command file. " alt="" coords="256,117,404,144"/>
+<area shape="rect" id="node5" href="$_command_manager_8h.html" title="CommandManager file. " alt="" coords="261,200,471,227"/>
+<area shape="rect" id="node8" href="$_i_command_sender_8h.html" title="commands/ICommandSender.h" alt="" coords="30,200,236,227"/>
 </map>

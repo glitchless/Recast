@@ -1,9 +1,9 @@
 <map id="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/commands/CommandManager.h" name="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/commands/CommandManager.h">
-<area shape="rect" id="node2" href="$_command_manager_8cpp.html" title="CommandManager description. " alt="" coords="69,109,349,165"/>
-<area shape="rect" id="node3" href="$_server_8h.html" title="Server file. " alt="" coords="373,109,541,165"/>
-<area shape="rect" id="node8" href="$_input_thread_8h.html" title="Thread for command file. " alt="" coords="566,109,791,165"/>
-<area shape="rect" id="node4" href="$_stop_command_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/core/commands/StopCommand.cpp" alt="" coords="5,213,261,269"/>
-<area shape="rect" id="node5" href="$_main_8cpp.html" title="Starting point. " alt="" coords="287,213,455,269"/>
-<area shape="rect" id="node6" href="$_server_8cpp.html" title="Config file. " alt="" coords="479,213,647,269"/>
-<area shape="rect" id="node7" href="$_input_thread_8cpp.html" title="Input thread for execution of terminal command. " alt="" coords="671,213,860,269"/>
+<area shape="rect" id="node2" href="$_command_manager_8cpp.html" title="CommandManager description. " alt="" coords="195,109,475,165"/>
+<area shape="rect" id="node3" href="$_server_8h.html" title="Server file. " alt="" coords="435,213,603,269"/>
+<area shape="rect" id="node8" href="$_input_thread_8h.html" title="Thread for command file. " alt="" coords="549,109,773,165"/>
+<area shape="rect" id="node4" href="$_stop_command_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/core/commands/StopCommand.cpp" alt="" coords="5,317,261,373"/>
+<area shape="rect" id="node5" href="$_main_8cpp.html" title="Starting point. " alt="" coords="287,317,455,373"/>
+<area shape="rect" id="node6" href="$_server_8cpp.html" title="Config file. " alt="" coords="692,317,860,373"/>
+<area shape="rect" id="node7" href="$_input_thread_8cpp.html" title="Input thread for execution of terminal command. " alt="" coords="479,317,668,373"/>
 </map>
