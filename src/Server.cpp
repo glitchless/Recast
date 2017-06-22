@@ -109,9 +109,7 @@ void Server::onMessage(const std::string &msg) {
 }
 
 Server::~Server() {
-    while (serverTCP->running());
     delete serverTCP;
-    while (serverUDP->running());
     delete serverUDP;
     delete inputObject;
     delete Config::instance();
