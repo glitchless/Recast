@@ -25,7 +25,8 @@ private:
     bool isTCP;
     bool isRunning;
 
-    void clientWork(shared_ptr<Socket> client);
+    void listenFor(shared_ptr<SocketTCP> client);
+    void listenFor(shared_ptr<SocketUDP> client);
     string exchange(const string action);
     string check(const string action);
 };

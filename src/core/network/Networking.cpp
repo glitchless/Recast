@@ -15,6 +15,7 @@
 #include <arpa/inet.h>  // inet_aton()
 #include <netdb.h>      // gethostbyname
 #include <fcntl.h>
+#include <boost/log/trivial.hpp>
 
 #include "network/Networking.hpp"
 
@@ -66,16 +67,6 @@ void Socket::setNonBlocked(bool option) throw (exception) {
     setNonBlockedImpl(socketDescr, option);
 }
 
-void Socket::setRecvTimeout(int seconds, int microseconds) throw (exception) {
-    struct timeval tv;
-    tv.tv_sec = seconds;
-    tv.tv_usec = microseconds;
-
-//    if (setsockopt(socketDescr, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) != 0) {
-//        throw runtime_error("set rcvtimeout: " + string(strerror(errno)));
-//    }
-}
-
 void Socket::setReuseAddress(int sd) throw (exception) {
     int yes = 1;
     if (setsockopt(sd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1) {
@@ -84,7 +75,17 @@ void Socket::setReuseAddress(int sd) throw (exception) {
     }
 }
 
-void Socket::send(const string &str) throw (exception) {
+void SocketTCP::setRecvTimeout(int seconds, int microseconds) throw (exception) {
+    struct timeval tv;
+    tv.tv_sec = seconds;
+    tv.tv_usec = microseconds;
+
+    if (setsockopt(socketDescr, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) != 0) {
+        throw runtime_error("set rcvtimeout: " + string(strerror(errno)));
+    }
+}
+
+void SocketTCP::send(const string &str) throw (exception) {
     size_t left = str.size();
     ssize_t sent = 0;
     int flags = 0;
@@ -99,26 +100,7 @@ void Socket::send(const string &str) throw (exception) {
     }
 }
 
-void Socket::sendTo(struct sockaddr_in &sendToAddr, const string &str) throw (exception) {
-    // UDP
-    sendto(socketDescr, str.data(), str.size(), 0, (struct sockaddr *) &sendToAddr, sizeof(sendToAddr));
-}
-
-string Socket::recvFrom(struct sockaddr_in &recvFromAddr) throw (exception) {
-    // UDP
-    size_t BUFFER_SIZE = 1024;
-    ssize_t numBytes;
-    socklen_t socketSize = sizeof(struct sockaddr_in);
-    char *buffer = new char[BUFFER_SIZE];
-    if ((numBytes = recvfrom(socketDescr, buffer, BUFFER_SIZE, 0, (struct sockaddr*) &recvFromAddr, &socketSize) == - 1)) {
-        cerr << "[INFO] Recieved " << numBytes << " bytes. Data: " << buffer << endl;
-    }
-    string result = string(buffer);
-    delete[] buffer;
-    return result;
-}
-
-string Socket::recv(size_t bytes) throw (exception) {
+string SocketTCP::recv(size_t bytes) throw (exception) {
     char *buf = new char[bytes];
     size_t r = 0;
     while (r != bytes) {
@@ -136,7 +118,7 @@ string Socket::recv(size_t bytes) throw (exception) {
     return ret;
 }
 
-string Socket::recv() throw (exception) {
+string SocketTCP::recv() throw (exception) {
     char buffer[256];
 #ifdef __APPLE__
     // mac os x doesn't define MSG_NOSIGNAL
@@ -163,7 +145,7 @@ string Socket::recv() throw (exception) {
     return ret;
 }
 
-string Socket::recvTimed(int timeout) throw (exception) {
+string SocketTCP::recvTimed(int timeout) throw (exception) {
     fd_set read_fds;
     FD_ZERO(&read_fds);
     FD_SET(socketDescr, &read_fds);
@@ -176,38 +158,14 @@ string Socket::recvTimed(int timeout) throw (exception) {
     return recv();
 }
 
-bool Socket::hasData() throw (exception) {
+bool SocketTCP::hasData() throw (exception) {
     char buf[1];
     int n = ::recv(socketDescr, buf, sizeof(buf), MSG_PEEK);
     if (n > 0) { return true; }
     return false;
 }
 
-void Socket::createServerSocketUDP(uint32_t port) throw (exception) {
-    int sd = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);
-    if (sd <= 0) {
-        throw runtime_error("socket: " + string(strerror(errno)));
-    }
-
-    setReuseAddress(sd);
-
-    struct sockaddr_in servAddr;
-    memset(&servAddr, 0, sizeof(servAddr));
-
-    servAddr.sin_family = AF_INET;
-    servAddr.sin_addr.s_addr = htonl(INADDR_ANY);
-    servAddr.sin_port = htons(port);
-
-    if (::bind(sd, (struct sockaddr*)&servAddr, sizeof(servAddr)) < 0) {
-        ::close(sd);
-        throw runtime_error("bind: " + string(strerror(errno)));
-    }
-
-    socketDescr = sd;
-    // setNonBlocked(true);
-}
-
-void Socket::createServerSocketTCP(uint32_t port, uint32_t queueSize) throw (exception) {
+void SocketTCP::createServerSocket(uint32_t port, uint32_t queueSize) throw (exception) {
     int sd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sd <= 0) {
         throw runtime_error("socket: " + string(strerror(errno)));
@@ -232,14 +190,59 @@ void Socket::createServerSocketTCP(uint32_t port, uint32_t queueSize) throw (exc
     // setNonBlocked(true);
 }
 
-shared_ptr<Socket> Socket::accept() throw (exception) {
+shared_ptr<SocketTCP> SocketTCP::accept() throw (exception) {
     struct sockaddr_in client;
     memset(&client, 0, sizeof(client));
     socklen_t cli_len = sizeof(client);
 
     int cli_sd = ::accept(socketDescr, (struct sockaddr*)&client, &cli_len);
-    if (-1 == cli_sd) { return shared_ptr<Socket>(); }
+    if (-1 == cli_sd) { return shared_ptr<SocketTCP>(); }
     cerr << "new client: " << cli_sd << ", from: " << int2ipv4(client.sin_addr.s_addr) << endl;
 
-    return make_shared<Socket>(cli_sd);
+    return make_shared<SocketTCP>(cli_sd);
+}
+
+
+void SocketUDP::sendTo(struct sockaddr_in &sendToAddr, const string &str) throw (exception) {
+    sendto(socketDescr, str.data(), str.size(), 0, (struct sockaddr *) &sendToAddr, sizeof(sendToAddr));
+}
+
+string SocketUDP::recvFrom(struct sockaddr_in &recvFromAddr) throw (exception) {
+    const size_t BUFFER_SIZE = 1024;
+    ssize_t numBytes;
+    socklen_t socketSize = sizeof(struct sockaddr_in);
+    char *buffer = new char[BUFFER_SIZE];
+    if ((numBytes = recvfrom(socketDescr, buffer, BUFFER_SIZE - 1, 0, (struct sockaddr*) &recvFromAddr, &socketSize) == - 1)) {
+        cerr << "[INFO] Recieved " << numBytes << " bytes. Data: " << buffer << endl;
+    }
+    BOOST_LOG_TRIVIAL(info) << "[INFO] Recieved " << numBytes << " bytes. Data: " << buffer;
+
+    string result = string(buffer);
+    delete[] buffer;
+    return result;
+}
+
+
+void SocketUDP::createServerSocket(uint32_t port) throw (exception) {
+    int sd = socket(PF_INET, SOCK_DGRAM, 0);
+    if (sd <= 0) {
+        throw runtime_error("socket: " + string(strerror(errno)));
+    }
+
+    setReuseAddress(sd);
+
+    struct sockaddr_in servAddr;
+    memset(&servAddr, 0, sizeof(servAddr));
+
+    servAddr.sin_family = AF_INET;
+    servAddr.sin_addr.s_addr = htonl(INADDR_ANY);
+    servAddr.sin_port = htons(port);
+
+    if (::bind(sd, (struct sockaddr*)&servAddr, sizeof(servAddr)) < 0) {
+        ::close(sd);
+        throw runtime_error("bind: " + string(strerror(errno)));
+    }
+
+    socketDescr = sd;
+    // setNonBlocked(true);
 }
