@@ -10,5 +10,6 @@ var searchData=
   ['getposx',['getPosX',['../struct_player.html#a34371ed01e0f407e8b3dd47d5eb6a248',1,'Player']]],
   ['getposy',['getPosY',['../struct_player.html#a79192b1280def72414767ed9cb15f9ce',1,'Player']]],
   ['getposz',['getPosZ',['../struct_player.html#a08fa9b861a53c027a49e709c32577fe7',1,'Player']]],
-  ['getserver',['getServer',['../class_i_command_sender.html#afe665fdd44daefad719049b540fc14b9',1,'ICommandSender::getServer()'],['../class_server.html#a8af940772beedcc0b1243adf3f5aec0c',1,'Server::getServer()']]]
+  ['getserver',['getServer',['../class_i_command_sender.html#afe665fdd44daefad719049b540fc14b9',1,'ICommandSender::getServer()'],['../class_server.html#a8af940772beedcc0b1243adf3f5aec0c',1,'Server::getServer()']]],
+  ['gettemperatureworld',['getTemperatureWorld',['../class_server.html#adea320b40e941db6ab354c63de9128e3',1,'Server']]]
 ];

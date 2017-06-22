@@ -100,42 +100,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_q_lite_8h.html">io/SQLite.h</a>&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_player_8h.html">models/Player.h</a>&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_server_full_exception_8h.html">exceptions/ServerFullException.h</a>&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_players_online_8h.html#a691e4bc5ad1d481487a1c16f953a7adc">   23</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="_players_online_8h.html#a691e4bc5ad1d481487a1c16f953a7adc">SESSION_LENGTH</a> = 128; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_players_online.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_players_online.html">PlayersOnline</a> {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_players_online.html#a8496d232e48655c31e1f74539f11c985">   27</a></span>&#160;    <a class="code" href="class_players_online.html#a8496d232e48655c31e1f74539f11c985">PlayersOnline</a>(<span class="keywordtype">int</span> playerCount) : maxPlayers(playerCount), currentPlayers(0) {};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_players_online.html#a2446f8f355a04a40b06ce17032b9c7a1">~PlayersOnline</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::vector&lt;Player *&gt; <a class="code" href="class_players_online.html#ab68bbbd25086eb09f875c7773cc784e6">getOnlinePlayers</a>() <span class="keyword">const</span>; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="struct_player.html">Player</a> *<a class="code" href="class_players_online.html#a12d773bb368cdcb3fb6137fc19805281">getPlayerBySession</a>(<span class="keyword">const</span> std::string &amp;session) <span class="keyword">const</span>; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::string <a class="code" href="class_players_online.html#a5b778414970f89fa01e999c9200c7001">authPlayer</a>(std::string login, std::string password) <span class="keywordflow">throw</span>(<a class="code" href="class_invalid_login_or_password.html">InvalidLoginOrPassword</a>, <a class="code" href="class_server_full_exception.html">ServerFullException</a>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_players_online.html#a26463b293d6c3c38ff600f4b363283cc">registerPlayer</a>(std::string login, std::string password) <span class="keywordflow">throw</span>(<a class="code" href="class_invalid_login_or_password.html">InvalidLoginOrPassword</a>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_players_online.html#a3469d271cd5b7ff8f5e7cbab8ff31b6d">logout</a>(<span class="keyword">const</span> std::string &amp;session);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_players_online.html#acace980a0794f56eecab5ddf01ff51c7">   62</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_players_online.html#acace980a0794f56eecab5ddf01ff51c7">playersOnline</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> currentPlayers; }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    std::unordered_map&lt;std::string, Player *&gt; players; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">mutable</span> std::mutex lock_writing;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> maxPlayers;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">int</span> currentPlayers;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="class_s_q_lite.html">SQLite</a> sqLite;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_invalid_login_or_password_8h.html">exceptions/InvalidLoginOrPassword.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_server_full_exception_8h.html">exceptions/ServerFullException.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_players_online_8h.html#a691e4bc5ad1d481487a1c16f953a7adc">   24</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="_players_online_8h.html#a691e4bc5ad1d481487a1c16f953a7adc">SESSION_LENGTH</a> = 128; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_players_online.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_players_online.html">PlayersOnline</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_players_online.html#a8496d232e48655c31e1f74539f11c985">   28</a></span>&#160;    <a class="code" href="class_players_online.html#a8496d232e48655c31e1f74539f11c985">PlayersOnline</a>(<span class="keywordtype">int</span> playerCount) : maxPlayers(playerCount), currentPlayers(0) {};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_players_online.html#a2446f8f355a04a40b06ce17032b9c7a1">~PlayersOnline</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::vector&lt;Player *&gt; <a class="code" href="class_players_online.html#ab68bbbd25086eb09f875c7773cc784e6">getOnlinePlayers</a>() <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="struct_player.html">Player</a> *<a class="code" href="class_players_online.html#a12d773bb368cdcb3fb6137fc19805281">getPlayerBySession</a>(<span class="keyword">const</span> std::string &amp;session) <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::string <a class="code" href="class_players_online.html#a5b778414970f89fa01e999c9200c7001">authPlayer</a>(std::string login, std::string password) <span class="keywordflow">throw</span>(<a class="code" href="class_invalid_login_or_password.html">InvalidLoginOrPassword</a>, <a class="code" href="class_server_full_exception.html">ServerFullException</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_players_online.html#a26463b293d6c3c38ff600f4b363283cc">registerPlayer</a>(std::string login, std::string password) <span class="keywordflow">throw</span>(<a class="code" href="class_invalid_login_or_password.html">InvalidLoginOrPassword</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_players_online.html#a3469d271cd5b7ff8f5e7cbab8ff31b6d">logout</a>(<span class="keyword">const</span> std::string &amp;session);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_players_online.html#acace980a0794f56eecab5ddf01ff51c7">   63</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_players_online.html#acace980a0794f56eecab5ddf01ff51c7">playersOnline</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> currentPlayers; }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    std::unordered_map&lt;std::string, Player *&gt; players; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">mutable</span> std::mutex lock_writing;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> maxPlayers;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">int</span> currentPlayers;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="class_s_q_lite.html">SQLite</a> sqLite;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_PLAYERSONLINE_H</span></div>
-<div class="ttc" id="_players_online_8h_html_a691e4bc5ad1d481487a1c16f953a7adc"><div class="ttname"><a href="_players_online_8h.html#a691e4bc5ad1d481487a1c16f953a7adc">SESSION_LENGTH</a></div><div class="ttdeci">const int SESSION_LENGTH</div><div class="ttdef"><b>Definition:</b> PlayersOnline.h:23</div></div>
-<div class="ttc" id="class_players_online_html_a8496d232e48655c31e1f74539f11c985"><div class="ttname"><a href="class_players_online.html#a8496d232e48655c31e1f74539f11c985">PlayersOnline::PlayersOnline</a></div><div class="ttdeci">PlayersOnline(int playerCount)</div><div class="ttdef"><b>Definition:</b> PlayersOnline.h:27</div></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_PLAYERSONLINE_H</span></div>
+<div class="ttc" id="_players_online_8h_html_a691e4bc5ad1d481487a1c16f953a7adc"><div class="ttname"><a href="_players_online_8h.html#a691e4bc5ad1d481487a1c16f953a7adc">SESSION_LENGTH</a></div><div class="ttdeci">const int SESSION_LENGTH</div><div class="ttdef"><b>Definition:</b> PlayersOnline.h:24</div></div>
+<div class="ttc" id="class_players_online_html_a8496d232e48655c31e1f74539f11c985"><div class="ttname"><a href="class_players_online.html#a8496d232e48655c31e1f74539f11c985">PlayersOnline::PlayersOnline</a></div><div class="ttdeci">PlayersOnline(int playerCount)</div><div class="ttdef"><b>Definition:</b> PlayersOnline.h:28</div></div>
 <div class="ttc" id="_player_8h_html"><div class="ttname"><a href="_player_8h.html">Player.h</a></div><div class="ttdoc">Player file. </div></div>
-<div class="ttc" id="class_players_online_html_acace980a0794f56eecab5ddf01ff51c7"><div class="ttname"><a href="class_players_online.html#acace980a0794f56eecab5ddf01ff51c7">PlayersOnline::playersOnline</a></div><div class="ttdeci">int playersOnline() const </div><div class="ttdef"><b>Definition:</b> PlayersOnline.h:62</div></div>
+<div class="ttc" id="class_players_online_html_acace980a0794f56eecab5ddf01ff51c7"><div class="ttname"><a href="class_players_online.html#acace980a0794f56eecab5ddf01ff51c7">PlayersOnline::playersOnline</a></div><div class="ttdeci">int playersOnline() const </div><div class="ttdef"><b>Definition:</b> PlayersOnline.h:63</div></div>
 <div class="ttc" id="class_invalid_login_or_password_html"><div class="ttname"><a href="class_invalid_login_or_password.html">InvalidLoginOrPassword</a></div><div class="ttdef"><b>Definition:</b> InvalidLoginOrPassword.h:17</div></div>
 <div class="ttc" id="class_players_online_html_a12d773bb368cdcb3fb6137fc19805281"><div class="ttname"><a href="class_players_online.html#a12d773bb368cdcb3fb6137fc19805281">PlayersOnline::getPlayerBySession</a></div><div class="ttdeci">Player * getPlayerBySession(const std::string &amp;session) const </div><div class="ttdef"><b>Definition:</b> PlayersOnline.cpp:36</div></div>
 <div class="ttc" id="_s_q_lite_8h_html"><div class="ttname"><a href="_s_q_lite_8h.html">SQLite.h</a></div><div class="ttdoc">Class-helper for DB vars. </div></div>
@@ -146,8 +147,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_players_online_html_a26463b293d6c3c38ff600f4b363283cc"><div class="ttname"><a href="class_players_online.html#a26463b293d6c3c38ff600f4b363283cc">PlayersOnline::registerPlayer</a></div><div class="ttdeci">void registerPlayer(std::string login, std::string password)</div><div class="ttdef"><b>Definition:</b> PlayersOnline.cpp:63</div></div>
 <div class="ttc" id="class_s_q_lite_html"><div class="ttname"><a href="class_s_q_lite.html">SQLite</a></div><div class="ttdoc">This class helps to easily put or get var from DB. Using sqlite_orm and sqlite. </div><div class="ttdef"><b>Definition:</b> SQLite.h:55</div></div>
 <div class="ttc" id="class_players_online_html_a5b778414970f89fa01e999c9200c7001"><div class="ttname"><a href="class_players_online.html#a5b778414970f89fa01e999c9200c7001">PlayersOnline::authPlayer</a></div><div class="ttdeci">std::string authPlayer(std::string login, std::string password)</div><div class="ttdef"><b>Definition:</b> PlayersOnline.cpp:72</div></div>
-<div class="ttc" id="class_players_online_html"><div class="ttname"><a href="class_players_online.html">PlayersOnline</a></div><div class="ttdef"><b>Definition:</b> PlayersOnline.h:25</div></div>
+<div class="ttc" id="class_players_online_html"><div class="ttname"><a href="class_players_online.html">PlayersOnline</a></div><div class="ttdef"><b>Definition:</b> PlayersOnline.h:26</div></div>
 <div class="ttc" id="class_server_full_exception_html"><div class="ttname"><a href="class_server_full_exception.html">ServerFullException</a></div><div class="ttdef"><b>Definition:</b> ServerFullException.h:18</div></div>
+<div class="ttc" id="_invalid_login_or_password_8h_html"><div class="ttname"><a href="_invalid_login_or_password_8h.html">InvalidLoginOrPassword.h</a></div><div class="ttdoc">Exception - auth failed. </div></div>
 <div class="ttc" id="struct_player_html"><div class="ttname"><a href="struct_player.html">Player</a></div><div class="ttdoc">Player class. XP, Life points and other. </div><div class="ttdef"><b>Definition:</b> Player.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

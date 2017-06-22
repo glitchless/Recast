@@ -673,5 +673,5 @@ Patching output file 114/117
 Patching output file 115/117
 Patching output file 116/117
 Patching output file 117/117
-lookup cache used 299/65536 hits=1132 misses=308
+lookup cache used 311/65536 hits=1190 misses=320
 finished...

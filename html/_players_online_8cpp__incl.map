@@ -1,10 +1,10 @@
 <map id="/home/travis/build/bender&#45;wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp" name="/home/travis/build/bender&#45;wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp">
-<area shape="rect" id="node3" href="$_server_full_exception_8h.html" title="Exception &#45; server is full. " alt="" coords="181,216,397,243"/>
-<area shape="rect" id="node5" href="$_invalid_login_or_password_8h.html" title="Exception &#45; auth failed. " alt="" coords="163,126,335,167"/>
-<area shape="rect" id="node6" href="$_players_online_8h.html" title="PlayerOnline class. " alt="" coords="495,126,624,167"/>
-<area shape="rect" id="node17" href="$_utils_8h.html" title="Utils file. " alt="" coords="937,291,1025,317"/>
-<area shape="rect" id="node11" href="$_s_q_lite_8h.html" title="Class&#45;helper for DB vars. " alt="" coords="557,216,643,243"/>
-<area shape="rect" id="node13" href="$_player_8h.html" title="Player file. " alt="" coords="597,365,712,392"/>
-<area shape="rect" id="node15" href="$_user_8h.html" title="models/User.h" alt="" coords="756,291,863,317"/>
-<area shape="rect" id="node14" href="$_point_8h.html" title="Point.h" alt="" coords="623,440,685,467"/>
+<area shape="rect" id="node3" href="$_server_full_exception_8h.html" title="Exception &#45; server is full. " alt="" coords="201,224,417,251"/>
+<area shape="rect" id="node5" href="$_invalid_login_or_password_8h.html" title="Exception &#45; auth failed. " alt="" coords="5,217,176,258"/>
+<area shape="rect" id="node6" href="$_players_online_8h.html" title="PlayerOnline class. " alt="" coords="473,126,603,167"/>
+<area shape="rect" id="node17" href="$_utils_8h.html" title="Utils file. " alt="" coords="793,133,881,160"/>
+<area shape="rect" id="node11" href="$_s_q_lite_8h.html" title="Class&#45;helper for DB vars. " alt="" coords="577,224,663,251"/>
+<area shape="rect" id="node13" href="$_player_8h.html" title="Player file. " alt="" coords="531,381,647,408"/>
+<area shape="rect" id="node15" href="$_user_8h.html" title="models/User.h" alt="" coords="808,307,915,333"/>
+<area shape="rect" id="node14" href="$_point_8h.html" title="Point.h" alt="" coords="558,456,620,483"/>
 </map>
