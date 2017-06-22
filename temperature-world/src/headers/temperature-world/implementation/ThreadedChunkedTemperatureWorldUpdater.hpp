@@ -33,23 +33,28 @@ public:
     void update() override;
 
 protected:
+    struct ThreadData {
+    public:
+        std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> world;
+        std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn;
+
+        std::atomic<bool> isRunning;
+        std::vector<std::thread> workers;
+
+        std::vector<std::shared_ptr<IUpdater>> updaters;
+        std::mutex updatersMutex;
+
+        std::vector<std::future<void>> tasks;
+        std::queue<std::pair<std::shared_ptr<IUpdater>, std::promise<void>>> tasksQueue;
+        std::mutex tasksQueueMutex;
+        std::condition_variable tasksQueueWait;
+        std::mutex tasksQueueWaitMutex;
+    };
+
     void _work();
     void _watchChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk);
 
-    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> _world;
-    std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> _makeChunkUpdaterFn;
-
-    std::atomic<bool> _isRunning;
-    std::vector<std::thread> _workers;
-
-    std::vector<std::shared_ptr<IUpdater>> _updaters;
-    std::mutex _updatersMutex;
-
-    std::vector<std::future<void>> _tasks;
-    std::queue<std::pair<std::shared_ptr<IUpdater>, std::promise<void>>> _tasksQueue;
-    std::mutex _tasksQueueMutex;
-    std::condition_variable _tasksQueueWait;
-    std::mutex _tasksQueueWaitMutex;
+    std::shared_ptr<ThreadData> _data;
 };
 
 
