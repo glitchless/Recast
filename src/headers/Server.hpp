@@ -59,7 +59,7 @@ private:
     NetworkServer *serverTCP;
     NetworkServer *serverUDP;
 
-    void runNetworkServer(NetworkServer *server);
+    void runNetworkServer(NetworkServer *tcp, NetworkServer *udp);
 };
 
 

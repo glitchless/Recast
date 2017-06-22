@@ -50,12 +50,8 @@ void Server::initServer() {
     isLaunching = true;
     inputThread = thread(&InputThread::init, InputThread(this));
 
-
     BOOST_LOG_TRIVIAL(info) << "Initializing network...";
-    listenUDPThread = thread(&Server::runNetworkServer, this, serverUDP);
-    listenUDPThread.detach();
-    listenTCPThread = thread(&Server::runNetworkServer, this, serverTCP);
-    listenTCPThread.detach();
+    runNetworkServer(serverTCP, serverUDP);
 
     BOOST_LOG_TRIVIAL(info) << "Initialization finished. All systems go. Waiting for commands.";
     inputThread.join();
@@ -73,15 +69,16 @@ Server::Server() {
     players = new PlayersOnline(Config::instance()->get("server.max_players", 20));
 }
 
-void Server::runNetworkServer(NetworkServer *server) {
-    server->run();
+void Server::runNetworkServer(NetworkServer *tcp, NetworkServer *udp) {
+    listenUDPThread = thread(&NetworkServer::run, tcp);
+    listenUDPThread.detach();
+    listenTCPThread = thread(&NetworkServer::run, udp);
+    listenTCPThread.detach();
 }
 
 bool Server::shutdown() {
     serverTCP->shutdown();
-    delete serverTCP;
     serverUDP->shutdown();
-    delete serverUDP;
     return isLaunching ? !(isLaunching = false) : false; // Return true if isLaunching equals true
 }
 
@@ -90,5 +87,9 @@ void Server::onMessage(const std::string &msg) {
 }
 
 Server::~Server() {
+    while (serverTCP->running());
+    delete serverTCP;
+    while (serverUDP->running());
+    delete serverUDP;
     delete Config::instance();
 }

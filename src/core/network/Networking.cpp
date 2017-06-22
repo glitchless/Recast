@@ -100,22 +100,53 @@ void SocketTCP::send(const string &str) throw (exception) {
     }
 }
 
+void SocketTCP::sendBytes(const char *data, size_t num) throw (exception) {
+    size_t left = num;
+    ssize_t sent = 0;
+    int flags = 0;
+
+    while (left > 0) {
+        sent = ::send(socketDescr, data + sent, num - sent, flags);
+        if (-1 == sent) {
+            throw runtime_error("write failed: " + string(strerror(errno)));
+        }
+
+        left -= sent;
+    }
+}
+
 string SocketTCP::recv(size_t bytes) throw (exception) {
-    char *buf = new char[bytes];
+    char *buffer = new char[bytes];
     size_t r = 0;
     while (r != bytes) {
-        ssize_t rc = ::recv(socketDescr, buf + r, bytes - r, 0);
+        ssize_t rc = ::recv(socketDescr, buffer + r, bytes - r, 0);
         cerr << "recv_ex: " << rc << " bytes\n";
 
         if (rc == -1 || rc == 0) {
-            delete [] buf;
+            delete [] buffer;
             throw runtime_error("read failed: " + string(strerror(errno)));
         }
         r += rc;
     }
-    string ret(buf, buf + bytes);
-    delete [] buf;
+    string ret(buffer, buffer + bytes);
+    delete [] buffer;
     return ret;
+}
+
+char* SocketTCP::recvBytes(size_t bytes) throw (exception) {
+    char *buffer = new char[bytes];
+    size_t r = 0;
+    while (r != bytes) {
+        ssize_t rc = ::recv(socketDescr, buffer + r, bytes - r, 0);
+        cerr << "recv_ex: " << rc << " bytes\n";
+
+        if (rc == -1 || rc == 0) {
+            delete [] buffer;
+            throw runtime_error("read failed: " + string(strerror(errno)));
+        }
+        r += rc;
+    }
+    return buffer;
 }
 
 string SocketTCP::recv() throw (exception) {
@@ -207,19 +238,36 @@ void SocketUDP::sendTo(struct sockaddr_in &sendToAddr, const string &str) throw 
     sendto(socketDescr, str.data(), str.size(), 0, (struct sockaddr *) &sendToAddr, sizeof(sendToAddr));
 }
 
+void SocketUDP::sendBytesTo(struct sockaddr_in &sendToAddr, const char *data, size_t num) throw (exception) {
+    sendto(socketDescr, data, num, 0, (struct sockaddr *) &sendToAddr, sizeof(sendToAddr));
+}
+
 string SocketUDP::recvFrom(struct sockaddr_in &recvFromAddr) throw (exception) {
     const size_t BUFFER_SIZE = 1024;
     ssize_t numBytes;
     socklen_t socketSize = sizeof(struct sockaddr_in);
     char *buffer = new char[BUFFER_SIZE];
     if ((numBytes = recvfrom(socketDescr, buffer, BUFFER_SIZE - 1, 0, (struct sockaddr*) &recvFromAddr, &socketSize) == - 1)) {
-        cerr << "[INFO] Recieved " << numBytes << " bytes. Data: " << buffer << endl;
+        cerr << "[ERR] Recieve failed (recvfrom): " + string(strerror(errno)) << endl;
     }
-    BOOST_LOG_TRIVIAL(info) << "[INFO] Recieved " << numBytes << " bytes. Data: " << buffer;
+    BOOST_LOG_TRIVIAL(info) << "[INFO] Recieved message. Data: " << buffer;
 
     string result = string(buffer);
     delete[] buffer;
     return result;
+}
+
+char* SocketUDP::recvBytesFrom(struct sockaddr_in &recvFromAddr) throw (exception) {
+    const size_t BUFFER_SIZE = 1024;
+    ssize_t numBytes;
+    socklen_t socketSize = sizeof(struct sockaddr_in);
+    char *buffer = new char[BUFFER_SIZE];
+    if ((numBytes = recvfrom(socketDescr, buffer, BUFFER_SIZE - 1, 0, (struct sockaddr*) &recvFromAddr, &socketSize) == - 1)) {
+        cerr << "[ERR] Recieve failed (recvfrom): " + string(strerror(errno)) << endl;
+    }
+    BOOST_LOG_TRIVIAL(info) << "[INFO] Recieved message. Data: " << buffer;
+
+    return buffer;
 }
 
 

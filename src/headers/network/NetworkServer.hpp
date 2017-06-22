@@ -20,10 +20,11 @@ public:
     NetworkServer(uint32_t port, bool isTCP = false);
     void run();
     void shutdown();
+    bool running() { return isRunning; }
 private:
     uint32_t port;
     bool isTCP;
-    bool isRunning;
+    volatile bool isRunning;
 
     void listenFor(shared_ptr<SocketTCP> client);
     void listenFor(shared_ptr<SocketUDP> client);
