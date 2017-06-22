@@ -20,7 +20,7 @@ public:
             : _minX(minX), _maxX(maxX), _minY(minY), _maxY(maxY), _minZ(minZ), _maxZ(maxZ)
             , _sizeX(maxX - minX + 1), _sizeY(maxY - minY + 1), _sizeZ(maxY - minY + 1)
     {
-        assert(_minX < _maxX && _minY < _maxY && _minZ < _maxZ);
+        assert(_minX <= _maxX && _minY <= _maxY && _minZ <= _maxZ);
     }
 
     Parallelepiped(Size sizeX, Size sizeY, Size sizeZ)
