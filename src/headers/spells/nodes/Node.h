@@ -9,10 +9,13 @@
 #define RECAST_SERVER_NODE_H
 
 #include <set>
+#include <spells/events/IEventListener.h>
 
 class Node {
 public:
     Node(float x, float y, float z) : x(x), y(y), z(z), nowInTick(false) {}
+
+    ~Node();
 
     virtual bool isEnergyNode() { return false; }
 
@@ -24,7 +27,7 @@ public:
      */
     void connectNode(Node *otherNode);
 
-    void tick(Node *callable);
+    void tick(IEventListener &listener, Node *callable);
 
     bool inTick() const { return nowInTick; }
 
@@ -36,7 +39,7 @@ protected:
     bool nowInTick;
 
 
-    virtual inline void onTick(Node *callable) {};
+    virtual inline void onTick(IEventListener &listener, Node *callable) {};
 };
 
 #endif //RECAST_SERVER_NODE_H

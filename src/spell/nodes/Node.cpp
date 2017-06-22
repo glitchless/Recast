@@ -6,7 +6,7 @@
  * @email nikita@kulikof.ru
  **/
 #include <cmath>
-#include "spells/Node.h"
+#include "spells/nodes/Node.h"
 
 using namespace std;
 
@@ -17,13 +17,13 @@ void Node::connectNode(Node *otherNode) {
     }
 }
 
-void Node::tick(Node *callable) {
+void Node::tick(IEventListener &listener, Node *callable) {
     if (nowInTick)
         return;
     nowInTick = true;
-    onTick(callable);
+    onTick(listener, callable);
     for (Node *node : connectedNodes)
-        node->tick(this);
+        node->tick(listener, this);
     nowInTick = false;
 }
 
@@ -33,4 +33,12 @@ float pSq(float var) { // Squaring
 
 float Node::getDistance(const Node *otherNode) const {
     return sqrt(pSq(otherNode->x - x) + pSq(otherNode->y - y) + pSq(otherNode->z - z));
+}
+
+Node::~Node() {
+    nowInTick = true;
+    for (Node *node : connectedNodes)
+        if (!node->nowInTick)
+            delete node;
+    nowInTick = false;
 }

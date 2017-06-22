@@ -6,26 +6,17 @@
  * Starting point for Recast server. Initializing @see Server and @see MainThread.
  * Init config class @see Config.
  **/
-#include <spells/EnergyNode.h>
-#include <iostream>
+#include <spells/nodes/EnergyNode.h>
 #include <boost/log/trivial.hpp>
+#include <spells/Spell.h>
 
 /**
  * @brief Main method :)
  **/
 int main() {
-    Config::g("spell.general.tax",
-                            0.001F);
-    Config::g("spell.general.max_transfer",
-                            0.1F);
-    Config::instance()->save();
-    EnergyNode node(0, 0, 0, -100);
-    EnergyNode node2(0, 0, 1, 0);
-    EnergyNode node3(0, 0, 2, 0);
-    EnergyNode node4(0, 0, 3, 0);
-    node.connectNode(&node2);
-    node.connectNode(&node3);
-    node.connectNode(&node4);
+    Spell spell;
+    spell.getRootNode()->connectNode(new EnergyNode(1, 1, 1, 100));
+
     while (true) {
         node.tick(NULL);
     }

@@ -5,11 +5,11 @@
  * @date 20.06.17
  * @email nikita@kulikof.ru
  **/
-#include "spells/EnergyNode.h"
+#include "spells/nodes/EnergyNode.h"
 
 using namespace std;
 
-void EnergyNode::onTick(Node *callable) {
+void EnergyNode::onTick(IEventListener &listener, Node *callable) {
     float oldEnergy = energy;
     EnergyNode *tmp;
     for (Node *node : connectedNodes) {
@@ -17,7 +17,7 @@ void EnergyNode::onTick(Node *callable) {
             tmp = (EnergyNode *) node;
             if (tmp->getEnergy() < oldEnergy) {
                 float energyTransfer = ((oldEnergy - tmp->getEnergy()) *
-                                        MAX_TRANSFER);
+                                        Config::g("spell.general.max_transfer", 0.1F));
 
                 energy -= tmp->transferEnergy(this, energyTransfer);
             }
@@ -26,7 +26,8 @@ void EnergyNode::onTick(Node *callable) {
 }
 
 float EnergyNode::transferEnergy(Node *from, float count) {
-    float transactionTax = getDistance(from) * TAX_ENERGY_TRANSACTION_PER_COORD;
+    float transactionTax = getDistance(from) * Config::g("spell.general.tax",
+                                                         0.001F);
     if (transactionTax >= count) {
         return count;
     }
