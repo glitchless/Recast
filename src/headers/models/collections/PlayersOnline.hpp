@@ -18,6 +18,7 @@
 #include <mutex>
 #include "io/SQLite.hpp"
 #include "models/Player.hpp"
+#include "exceptions/InvalidLoginOrPassword.hpp"
 #include "exceptions/ServerFullException.hpp"
 
 const int SESSION_LENGTH = 128; //// Length of session string

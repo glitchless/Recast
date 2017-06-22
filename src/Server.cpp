@@ -19,13 +19,15 @@
 #include <boost/log/utility/setup/common_attributes.hpp>
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
-#include <exceptions/InvalidLoginOrPassword.hpp>
 
+#include "Server.hpp"
 #include "io/SQLite.hpp"
 #include "configs/Config.hpp"
-#include "Server.hpp"
+#include "exceptions/InvalidLoginOrPassword.hpp"
 #include "threads/InputThread.hpp"
 #include "models/collections/PlayersOnline.hpp"
+#include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
+#include "temperature-world/implementation/BasicTimer.hpp"
 
 using namespace std;
 using namespace boost;
@@ -44,17 +46,37 @@ void initLogger() {
     log::add_console_log(std::cout);
 }
 
+void Server::initTemperatureWorld() {
+    ScalingGeneratableChunkedTemperatureWorldInjector injector;
+    temperatureWorld = injector.world();
+    temperatureWorldUpdater = injector.updater();
+
+    temperatureWorld->getOrGenerateChunk(0, 0, 0);
+}
+
 void Server::initServer() {
     initLogger();
+    initTemperatureWorld();
+
     BOOST_LOG_TRIVIAL(info) << "Initializing server...";
     isLaunching = true;
-    inputThread = thread(&InputThread::init, InputThread(this));
+    inputObject = new InputThread(this);
+    inputThread = thread(&InputThread::init, inputObject);
+    inputThread.detach();
 
     BOOST_LOG_TRIVIAL(info) << "Initializing network...";
     runNetworkServer(serverTCP, serverUDP);
 
-    BOOST_LOG_TRIVIAL(info) << "Initialization finished. All systems go. Waiting for commands.";
-    inputThread.join();
+    BasicTimer benchmarkTimer;
+    while (isRunning()) {
+        benchmarkTimer.update();
+        update();
+        BOOST_LOG_TRIVIAL(info) << "Update delta: " << benchmarkTimer.deltaFloatSeconds() << "s";
+    }
+}
+
+void Server::update() {
+    temperatureWorldUpdater->update();
 }
 
 Server::Server() {
@@ -91,5 +113,6 @@ Server::~Server() {
     delete serverTCP;
     while (serverUDP->running());
     delete serverUDP;
+    delete inputObject;
     delete Config::instance();
 }

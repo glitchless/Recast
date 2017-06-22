@@ -10,6 +10,7 @@
  * 
  **/
 #include "utils/Utils.hpp"
+#include <cstdlib>
 
 using namespace std;
 
