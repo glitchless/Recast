@@ -19,7 +19,7 @@ ThreadedChunkedTemperatureWorldUpdater::ThreadedChunkedTemperatureWorldUpdater(
     _data->isRunning.store(true);
 
     for (size_t i = 0; i < thread::hardware_concurrency(); i++) {
-        _data->workers.push_back(move(thread(&ThreadedChunkedTemperatureWorldUpdater::_work, this)));
+        _data->workers.push_back(move(thread(bind(&_work, _data))));
     }
 
     _data->world->onChunkAdd(bind(&_watchChunk, _data, _1));
