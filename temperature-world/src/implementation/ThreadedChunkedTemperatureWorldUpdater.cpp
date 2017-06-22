@@ -10,13 +10,11 @@ using namespace std::placeholders;
 
 ThreadedChunkedTemperatureWorldUpdater::ThreadedChunkedTemperatureWorldUpdater(
         shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> world,
-        function<shared_ptr<IUpdater>(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn,
-        shared_ptr<ITimerBlockable<ITimer>> timer)
+        function<shared_ptr<IUpdater>(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn)
         : _data(new ThreadedChunkedTemperatureWorldUpdater::ThreadData())
 {
     _data->world = world;
     _data->makeChunkUpdaterFn = makeChunkUpdaterFn;
-    _data->timer = timer;
 
     _data->isRunning.store(true);
 
@@ -42,8 +40,6 @@ ThreadedChunkedTemperatureWorldUpdater::~ThreadedChunkedTemperatureWorldUpdater(
 }
 
 void ThreadedChunkedTemperatureWorldUpdater::update() {
-    _data->timer->update();
-
     {
         unique_lock<mutex> firstGuard(_data->tasksQueueMutex, defer_lock);
         unique_lock<mutex> secondGuard(_data->updatersMutex, defer_lock);

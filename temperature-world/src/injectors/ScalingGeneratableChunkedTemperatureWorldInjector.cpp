@@ -17,7 +17,7 @@ using namespace std::placeholders;
 ScalingGeneratableChunkedTemperatureWorldInjector::ScalingGeneratableChunkedTemperatureWorldInjector() {
     setMinUpdateDelta(milliseconds(20));
     setTemperatureExchangeCoefficient(0.1);
-    setChunkBounds(Parallelepiped(64, 64, 64));
+    setChunkBounds(Parallelepiped(32, 32, 8));
 }
 
 bool ScalingGeneratableChunkedTemperatureWorldInjector::hasChunkBounds() const noexcept {
@@ -103,8 +103,7 @@ void ScalingGeneratableChunkedTemperatureWorldInjector::_makeUpdater() {
     using T = remove_reference_t<decltype(*_updater)>;
     _updater = dynamic_pointer_cast<T>(make_shared<ThreadedChunkedTemperatureWorldUpdater>(
             world(),
-            bind(&_makeChunkUpdaterFn, temperatureExchangeCoefficient(), timer(), _1),
-            timer()));
+            bind(&_makeChunkUpdaterFn, temperatureExchangeCoefficient(), timer(), _1)));
     assert(_updater != nullptr);
 }
 

@@ -29,8 +29,7 @@ class ThreadedChunkedTemperatureWorldUpdater : public virtual IUpdater {
 public:
     ThreadedChunkedTemperatureWorldUpdater(
             std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> world,
-            std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn,
-            std::shared_ptr<ITimerBlockable<ITimer>> timer);
+            std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn);
 
     ~ThreadedChunkedTemperatureWorldUpdater();
 
@@ -43,7 +42,6 @@ protected:
         std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn;
 
         std::atomic<bool> isRunning;
-        std::shared_ptr<ITimerBlockable<ITimer>> timer;
         std::vector<std::thread> workers;
 
         std::vector<std::shared_ptr<IUpdater>> updaters;
