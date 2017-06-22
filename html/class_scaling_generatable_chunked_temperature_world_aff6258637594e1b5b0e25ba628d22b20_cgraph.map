@@ -1,0 +1,7 @@
+<map id="ScalingGeneratableChunkedTemperatureWorld::removePriorityPoint" name="ScalingGeneratableChunkedTemperatureWorld::removePriorityPoint">
+<area shape="rect" id="node2" href="$class_scaling_generatable_chunked_temperature_world.html#aabf0380970fd95dfa8d88298f0ae07e9" title="ScalingGeneratableChunked\lTemperatureWorld::_updateScales" alt="" coords="305,89,527,130"/>
+<area shape="rect" id="node3" href="$class_i_temperature_world_scalable_mutable_mixin.html#a570d17e46a6b97d7ab6c0b7512603a4d" title="ITemperatureWorldScalable\lMutableMixin::setCellScale" alt="" coords="577,5,759,46"/>
+<area shape="rect" id="node4" href="$struct_parallelepiped.html#ae2e897abcd5d59d01fbb13ee43d8a915" title="Parallelepiped::sizeX" alt="" coords="596,71,740,97"/>
+<area shape="rect" id="node5" href="$struct_parallelepiped.html#a4dd40c102d8f16473ce2de8a5a93e102" title="Parallelepiped::sizeY" alt="" coords="596,121,740,148"/>
+<area shape="rect" id="node6" href="$struct_parallelepiped.html#ab259bb38f5743f1f33738f4774b33848" title="Parallelepiped::sizeZ" alt="" coords="597,172,739,199"/>
+</map>

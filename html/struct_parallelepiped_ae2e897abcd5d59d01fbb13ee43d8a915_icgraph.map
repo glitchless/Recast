@@ -1,0 +1,6 @@
+<map id="Parallelepiped::sizeX" name="Parallelepiped::sizeX">
+<area shape="rect" id="node2" href="$class_bound_temperature_world.html#ab1843b429dc37c0c09ef0b454b9ea908" title="BoundTemperatureWorld\l::BoundTemperatureWorld" alt="" coords="222,5,397,46"/>
+<area shape="rect" id="node3" href="$class_scaling_generatable_chunked_temperature_world.html#aabf0380970fd95dfa8d88298f0ae07e9" title="ScalingGeneratableChunked\lTemperatureWorld::_updateScales" alt="" coords="198,70,421,111"/>
+<area shape="rect" id="node4" href="$class_scaling_generatable_chunked_temperature_world.html#ac8135352da17faeb9c41f1273630aa41" title="ScalingGeneratableChunked\lTemperatureWorld::addPriorityPoint" alt="" coords="480,37,709,78"/>
+<area shape="rect" id="node5" href="$class_scaling_generatable_chunked_temperature_world.html#aff6258637594e1b5b0e25ba628d22b20" title="ScalingGeneratableChunked\lTemperatureWorld::removePriorityPoint" alt="" coords="469,102,720,143"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="crow::websocket::Connection::send_pong" name="crow::websocket::Connection::send_pong">
+<area shape="rect" id="node2" href="$classcrow_1_1websocket_1_1_connection.html#a7a11996bd55dcc65c1c376cea1dd7b00" title="crow::websocket::Connection\l::dispatch" alt="" coords="248,5,443,46"/>
+<area shape="rect" id="node3" href="$classcrow_1_1websocket_1_1_connection.html#a7089a3814af7e3c6e6a82c22865ee852" title="crow::websocket::Connection\l::do_write" alt="" coords="248,70,443,111"/>
+<area shape="rect" id="node4" href="$classcrow_1_1websocket_1_1_connection.html#a1f3552060d7e93a3a0d0f2ea9d84a8df" title="crow::websocket::Connection\l::check_destroy" alt="" coords="491,70,685,111"/>
+</map>

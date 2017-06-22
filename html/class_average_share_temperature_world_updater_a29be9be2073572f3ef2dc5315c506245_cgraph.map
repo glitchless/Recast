@@ -1,0 +1,5 @@
+<map id="AverageShareTemperatureWorldUpdater::update" name="AverageShareTemperatureWorldUpdater::update">
+<area shape="rect" id="node2" href="$class_average_share_temperature_world_updater.html#a70a05789b5cfa32fc7bcdf8ceb94e66f" title="AverageShareTemperatureWorld\lUpdater::_checkThenShareTemperature" alt="" coords="265,5,519,46"/>
+<area shape="rect" id="node3" href="$class_average_share_temperature_world_updater.html#aaf03625100ff7cd459c32bbd33956e33" title="AverageShareTemperatureWorld\lUpdater::_shareTemperature" alt="" coords="568,5,779,46"/>
+<area shape="rect" id="node4" href="$namespace_math_utils.html#a32614fb8a04c557b66019693617ac7d5" title="MathUtils::lerp" alt="" coords="827,12,933,39"/>
+</map>

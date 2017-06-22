@@ -1,0 +1,7 @@
+<map id="Catch::Matchers::Impl::MatcherUntypedBase" name="Catch::Matchers::Impl::MatcherUntypedBase">
+<area shape="rect" id="node2" href="$struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base.html" title="{Catch::Matchers::Impl\l::MatcherBase\&lt; ObjectT,\l ComparatorT \&gt;\n||+ operator&amp;&amp;()\l+ operator\|\|()\l+ operator!()\l}" alt="" coords="5,176,173,312"/>
+<area shape="rect" id="node3" href="$struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base.html" title="{Catch::Matchers::Impl\l::MatcherBase\&lt; ArgT \&gt;\n||+ operator&amp;&amp;()\l+ operator\|\|()\l+ operator!()\l}" alt="" coords="198,183,356,305"/>
+<area shape="rect" id="node4" href="$struct_catch_1_1_matchers_1_1_impl_1_1_match_all_of.html" title="{Catch::Matchers::Impl\l::MatchAllOf\&lt; ArgT \&gt;\n|+ m_matchers\l|+ match()\l+ describe()\l+ operator&amp;&amp;()\l}" alt="" coords="24,361,176,482"/>
+<area shape="rect" id="node5" href="$struct_catch_1_1_matchers_1_1_impl_1_1_match_any_of.html" title="{Catch::Matchers::Impl\l::MatchAnyOf\&lt; ArgT \&gt;\n|+ m_matchers\l|+ match()\l+ describe()\l+ operator\|\|()\l}" alt="" coords="200,361,353,482"/>
+<area shape="rect" id="node6" href="$struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of.html" title="{Catch::Matchers::Impl\l::MatchNotOf\&lt; ArgT \&gt;\n|+ m_underlyingMatcher\l|+ MatchNotOf()\l+ match()\l+ describe()\l}" alt="" coords="379,361,537,482"/>
+</map>

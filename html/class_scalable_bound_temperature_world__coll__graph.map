@@ -1,0 +1,16 @@
+<map id="ScalableBoundTemperatureWorld" name="ScalableBoundTemperatureWorld">
+<area shape="rect" id="node2" href="$class_i_temperature_world_scalable_mutable.html" title="{ITemperatureWorldScalable\lMutable\&lt; ITemperatureWorldScalable\l\&lt; BoundTemperatureWorld \&gt; \&gt;\n||}" alt="" coords="549,1376,789,1483"/>
+<area shape="rect" id="node3" href="$class_i_temperature_world_scalable.html" title="{ITemperatureWorldScalable\l\&lt; BoundTemperatureWorld \&gt;\n||}" alt="" coords="391,1102,581,1194"/>
+<area shape="rect" id="node4" href="$class_bound_temperature_world.html" title="{BoundTemperatureWorld\n|# _data\l|+ BoundTemperatureWorld()\l+ BoundTemperatureWorld()\l+ BoundTemperatureWorld()\l+ operator=()\l+ has()\l+ get()\l+ set()\l+ amplify()\l+ foreach()\l+ bounds()\l# _getIndexInData()\l}" alt="" coords="237,768,424,992"/>
+<area shape="rect" id="node5" href="$class_i_temperature_world_boundable.html" title="{ITemperatureWorldBoundable\l\&lt; ITemperatureWorld \&gt;\n||}" alt="" coords="177,523,372,615"/>
+<area shape="rect" id="node6" href="$class_i_temperature_world.html" title="{ITemperatureWorld\n||+ ~ITemperatureWorld()\l+ has()\l+ get()\l+ set()\l+ amplify()\l}" alt="" coords="5,163,165,299"/>
+<area shape="rect" id="node7" href="$class_i_temperature_world_boundable_mixin.html" title="{ITemperatureWorldBoundable\lMixin\n||+ foreach()\l+ bounds()\l}" alt="" coords="191,177,385,284"/>
+<area shape="rect" id="node8" href="$struct_parallelepiped.html" title="{Parallelepiped\n||+ Parallelepiped()\l+ Parallelepiped()\l+ minX()\l+ maxX()\l+ minY()\l+ maxY()\l+ minZ()\l+ maxZ()\l+ sizeX()\l+ sizeY()\l+ sizeZ()\l+ volume()\l+ operator==()\l+ operator!=()\l}" alt="" coords="396,435,519,703"/>
+<area shape="rect" id="node9" href="$struct_size.html" title="{Size\n||+ Size()\l}" alt="" coords="414,192,481,269"/>
+<area shape="rect" id="node10" href="$struct_generic_scalar.html" title="{GenericScalar\&lt; int \&gt;\n|# _value\l|+ GenericScalar()\l+ operator int()\l+ operator int &amp;()\l}" alt="" coords="433,5,575,112"/>
+<area shape="rect" id="node11" href="$struct_coord.html" title="{Coord\n||+ Coord()\l}" alt="" coords="507,192,583,269"/>
+<area shape="rect" id="node12" href="$class_i_temperature_world_scalable_mixin.html" title="{ITemperatureWorldScalable\lMixin\n||+ cellScale()\l}" alt="" coords="449,834,631,926"/>
+<area shape="rect" id="node13" href="$class_i_temperature_world_scalable_mutable_mixin.html" title="{ITemperatureWorldScalable\lMutableMixin\n||+ setCellScale()\l}" alt="" coords="606,1102,788,1194"/>
+<area shape="rect" id="node14" href="$struct_int_scale_parallelepiped.html" title="{IntScaleParallelepiped\n||+ IntScaleParallelepiped()\l+ IntScaleParallelepiped()\l+ x()\l+ y()\l+ z()\l+ operator==()\l+ operator!=()\l}" alt="" coords="815,1347,985,1512"/>
+<area shape="rect" id="node15" href="$struct_int_scale.html" title="{IntScale\n|# _scale\l# _mode\l|+ IntScale()\l+ scale()\l+ mode()\l+ isUpscale()\l+ isDownscale()\l+ apply()\l+ invertApply()\l+ operator==()\l+ operator!=()\l}" alt="" coords="841,1043,957,1253"/>
+</map>

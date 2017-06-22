@@ -1,0 +1,336 @@
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector}{\section{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector Class Reference}
+\label{class_scaling_generatable_chunked_temperature_world_injector}\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+}
+
+
+{\ttfamily \#include $<$Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector.\-hpp$>$}
+
+
+
+Collaboration diagram for Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{class_scaling_generatable_chunked_temperature_world_injector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a14567261e979156ce64a7b045ad54742}{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector} ()
+\item 
+bool \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a55538a7bd833a485f7eb6700561d1e60}{has\-Chunk\-Bounds} () const noexcept
+\item 
+\hyperlink{struct_parallelepiped}{Parallelepiped} \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_abc8b653a1857cf0cc9f1ab0321b40eef}{chunk\-Bounds} () const 
+\item 
+void \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a786fc4d04bd556c4b27645903cbfb77c}{set\-Chunk\-Bounds} (\hyperlink{struct_parallelepiped}{Parallelepiped} \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_abc8b653a1857cf0cc9f1ab0321b40eef}{chunk\-Bounds})
+\item 
+bool \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a836ed2923893be64f7b8e785b2da6d83}{has\-Temperature\-Exchange\-Coefficient} () const noexcept
+\item 
+double \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a30555824cf848c809aceea16d01fc661}{temperature\-Exchange\-Coefficient} () const 
+\item 
+void \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_ab06a2b915012e60d41b2db4cc77abbc4}{set\-Temperature\-Exchange\-Coefficient} (double \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a30555824cf848c809aceea16d01fc661}{temperature\-Exchange\-Coefficient})
+\item 
+bool \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_ad49339454b5ace32d85ee7fd712548dd}{has\-Min\-Update\-Delta} () const noexcept
+\item 
+std\-::chrono\-::milliseconds \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_ae9eb0a801e8a05dd7b8970f2c7677abe}{min\-Update\-Delta} () const 
+\item 
+void \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_af495ed097d3ea85642df7702e6ae565e}{set\-Min\-Update\-Delta} (std\-::chrono\-::milliseconds \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_ae9eb0a801e8a05dd7b8970f2c7677abe}{min\-Update\-Delta})
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_chunkable_observable}{I\-Temperature\-World\-Chunkable\-Observable}\\*
+$<$ \hyperlink{class_i_temperature_world_chunkable_generatable}{I\-Temperature\-World\-Chunkable\-Generatable}\\*
+$<$ \hyperlink{class_i_temperature_world_chunkable_mutable}{I\-Temperature\-World\-Chunkable\-Mutable}\\*
+$<$ \hyperlink{class_i_temperature_world_chunkable}{I\-Temperature\-World\-Chunkable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ $>$ $>$ $>$ \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a370a3290c83d357760662b5c63183d5b}{world} ()
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_updater}{I\-Updater} $>$ \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a75cd417c40bef43ead32acd6b4527770}{updater} ()
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_timer_blockable}{I\-Timer\-Blockable}$<$ \hyperlink{class_i_timer}{I\-Timer} $>$ $>$ \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a9ad4c32579a542181f67aedc8bd664e2}{timer} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_ad912439ee80b88cd6e879940be8d59d1}{\-\_\-make\-World} ()
+\item 
+void \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_afb89e6cd1af2754864ff17f2b21f1e97}{\-\_\-make\-Updater} ()
+\item 
+void \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a25fb5d4991bba7dc59a9134225761827}{\-\_\-make\-Timer} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_ab0567d5d108069282d34c8c729081b15}{\-\_\-need\-Chunk\-Fn} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) noexcept
+\item 
+static std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a43cfebfe79c0ec033087e8dfc7508473}{\-\_\-make\-Chunk\-Fn} (\hyperlink{struct_parallelepiped}{Parallelepiped} \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_abc8b653a1857cf0cc9f1ab0321b40eef}{chunk\-Bounds}, \hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z)
+\item 
+static std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_updater}{I\-Updater} $>$ \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_af42b84fbcce9dc6a95d052a156cdefb9}{\-\_\-make\-Chunk\-Updater\-Fn} (double \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a30555824cf848c809aceea16d01fc661}{temperature\-Exchange\-Coefficient}, std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_timer_blockable}{I\-Timer\-Blockable}$<$ \hyperlink{class_i_timer}{I\-Timer} $>$$>$ \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a9ad4c32579a542181f67aedc8bd664e2}{timer}, std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ chunk)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::unique\-\_\-ptr$<$ \hyperlink{struct_parallelepiped}{Parallelepiped} $>$ \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a511f1fe9ca03a0a986a2c5fef635ffac}{\-\_\-chunk\-Bounds}
+\item 
+std\-::unique\-\_\-ptr$<$ double $>$ \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a53d05cc0f6fc96e9c8e78fcfc2255f63}{\-\_\-temperature\-Exchange\-Coefficient}
+\item 
+std\-::unique\-\_\-ptr\\*
+$<$ std\-::chrono\-::milliseconds $>$ \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_aed21ecf6e5237f4a0fd9cea9112c2f03}{\-\_\-min\-Update\-Delta}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_chunkable_observable}{I\-Temperature\-World\-Chunkable\-Observable}\\*
+$<$ \hyperlink{class_i_temperature_world_chunkable_generatable}{I\-Temperature\-World\-Chunkable\-Generatable}\\*
+$<$ \hyperlink{class_i_temperature_world_chunkable_mutable}{I\-Temperature\-World\-Chunkable\-Mutable}\\*
+$<$ \hyperlink{class_i_temperature_world_chunkable}{I\-Temperature\-World\-Chunkable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ $>$ $>$ $>$ \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a8af169452d94765c5bdd6302f5420ebb}{\-\_\-world}
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_updater}{I\-Updater} $>$ \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_aa94745f5caba594ed9dcfbfc21685358}{\-\_\-updater}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_timer_blockable}{I\-Timer\-Blockable}$<$ \hyperlink{class_i_timer}{I\-Timer} $>$ $>$ \hyperlink{class_scaling_generatable_chunked_temperature_world_injector_a4b12d32e1931d08dd426bd28165d8194}{\-\_\-timer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Injector. This class builds scaling chunked temperature world and its updater. You must set chunk bounds via {\ttfamily set\-Chunk\-Bounds} method. These chunk bounds will be the same for all chunks. \hyperlink{struct_temperature}{Temperature} exchange coefficient and minimum update delta are set to defaults. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a14567261e979156ce64a7b045ad54742}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}]{\setlength{\rightskip}{0pt plus 5cm}Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_scaling_generatable_chunked_temperature_world_injector_a14567261e979156ce64a7b045ad54742}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a43cfebfe79c0ec033087e8dfc7508473}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!\-\_\-make\-Chunk\-Fn@{\-\_\-make\-Chunk\-Fn}}
+\index{\-\_\-make\-Chunk\-Fn@{\-\_\-make\-Chunk\-Fn}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-make\-Chunk\-Fn}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$ $>$ Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-\_\-make\-Chunk\-Fn (
+\begin{DoxyParamCaption}
+\item[{{\bf Parallelepiped}}]{chunk\-Bounds, }
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_a43cfebfe79c0ec033087e8dfc7508473}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_af42b84fbcce9dc6a95d052a156cdefb9}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!\-\_\-make\-Chunk\-Updater\-Fn@{\-\_\-make\-Chunk\-Updater\-Fn}}
+\index{\-\_\-make\-Chunk\-Updater\-Fn@{\-\_\-make\-Chunk\-Updater\-Fn}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-make\-Chunk\-Updater\-Fn}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-ptr$<$ {\bf I\-Updater} $>$ Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-\_\-make\-Chunk\-Updater\-Fn (
+\begin{DoxyParamCaption}
+\item[{double}]{temperature\-Exchange\-Coefficient, }
+\item[{std\-::shared\-\_\-ptr$<$ {\bf I\-Timer\-Blockable}$<$ {\bf I\-Timer} $>$$>$}]{timer, }
+\item[{std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$}]{chunk}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_af42b84fbcce9dc6a95d052a156cdefb9}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a25fb5d4991bba7dc59a9134225761827}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!\-\_\-make\-Timer@{\-\_\-make\-Timer}}
+\index{\-\_\-make\-Timer@{\-\_\-make\-Timer}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-make\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}void Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-\_\-make\-Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_a25fb5d4991bba7dc59a9134225761827}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_afb89e6cd1af2754864ff17f2b21f1e97}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!\-\_\-make\-Updater@{\-\_\-make\-Updater}}
+\index{\-\_\-make\-Updater@{\-\_\-make\-Updater}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-make\-Updater}]{\setlength{\rightskip}{0pt plus 5cm}void Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-\_\-make\-Updater (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_afb89e6cd1af2754864ff17f2b21f1e97}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_ad912439ee80b88cd6e879940be8d59d1}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!\-\_\-make\-World@{\-\_\-make\-World}}
+\index{\-\_\-make\-World@{\-\_\-make\-World}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-make\-World}]{\setlength{\rightskip}{0pt plus 5cm}void Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-\_\-make\-World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_ad912439ee80b88cd6e879940be8d59d1}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_ab0567d5d108069282d34c8c729081b15}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!\-\_\-need\-Chunk\-Fn@{\-\_\-need\-Chunk\-Fn}}
+\index{\-\_\-need\-Chunk\-Fn@{\-\_\-need\-Chunk\-Fn}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-need\-Chunk\-Fn}]{\setlength{\rightskip}{0pt plus 5cm}bool Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-\_\-need\-Chunk\-Fn (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}, {\ttfamily [noexcept]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_ab0567d5d108069282d34c8c729081b15}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_abc8b653a1857cf0cc9f1ab0321b40eef}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!chunk\-Bounds@{chunk\-Bounds}}
+\index{chunk\-Bounds@{chunk\-Bounds}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{chunk\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parallelepiped} Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::chunk\-Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_scaling_generatable_chunked_temperature_world_injector_abc8b653a1857cf0cc9f1ab0321b40eef}
+This method can throw an exception if chunk bounds are not set.
+
+\begin{DoxyReturn}{Returns}
+Chunk bounds. 
+\end{DoxyReturn}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a55538a7bd833a485f7eb6700561d1e60}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!has\-Chunk\-Bounds@{has\-Chunk\-Bounds}}
+\index{has\-Chunk\-Bounds@{has\-Chunk\-Bounds}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{has\-Chunk\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}bool Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::has\-Chunk\-Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_a55538a7bd833a485f7eb6700561d1e60}
+This method is exception-\/safe.
+
+\begin{DoxyReturn}{Returns}
+True if chunk bounds have been set. 
+\end{DoxyReturn}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_ad49339454b5ace32d85ee7fd712548dd}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!has\-Min\-Update\-Delta@{has\-Min\-Update\-Delta}}
+\index{has\-Min\-Update\-Delta@{has\-Min\-Update\-Delta}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{has\-Min\-Update\-Delta}]{\setlength{\rightskip}{0pt plus 5cm}bool Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::has\-Min\-Update\-Delta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_ad49339454b5ace32d85ee7fd712548dd}
+This method is exception-\/safe.
+
+\begin{DoxyReturn}{Returns}
+True if minimum update delta have been set. 
+\end{DoxyReturn}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a836ed2923893be64f7b8e785b2da6d83}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!has\-Temperature\-Exchange\-Coefficient@{has\-Temperature\-Exchange\-Coefficient}}
+\index{has\-Temperature\-Exchange\-Coefficient@{has\-Temperature\-Exchange\-Coefficient}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{has\-Temperature\-Exchange\-Coefficient}]{\setlength{\rightskip}{0pt plus 5cm}bool Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::has\-Temperature\-Exchange\-Coefficient (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_a836ed2923893be64f7b8e785b2da6d83}
+This method is exception-\/safe.
+
+\begin{DoxyReturn}{Returns}
+True if temperature exchange coefficient have been set. 
+\end{DoxyReturn}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_ae9eb0a801e8a05dd7b8970f2c7677abe}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!min\-Update\-Delta@{min\-Update\-Delta}}
+\index{min\-Update\-Delta@{min\-Update\-Delta}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{min\-Update\-Delta}]{\setlength{\rightskip}{0pt plus 5cm}milliseconds Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::min\-Update\-Delta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_scaling_generatable_chunked_temperature_world_injector_ae9eb0a801e8a05dd7b8970f2c7677abe}
+Minimum time between world updates is the minimum update delta. This method can throw an exception if minimum update delta is not set.
+
+\begin{DoxyReturn}{Returns}
+Minimum update delta. 
+\end{DoxyReturn}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a786fc4d04bd556c4b27645903cbfb77c}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!set\-Chunk\-Bounds@{set\-Chunk\-Bounds}}
+\index{set\-Chunk\-Bounds@{set\-Chunk\-Bounds}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{set\-Chunk\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}void Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::set\-Chunk\-Bounds (
+\begin{DoxyParamCaption}
+\item[{{\bf Parallelepiped}}]{chunk\-Bounds}
+\end{DoxyParamCaption}
+)}}\label{class_scaling_generatable_chunked_temperature_world_injector_a786fc4d04bd556c4b27645903cbfb77c}
+Sets chunk bounds.
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\-Bounds} & Chunk bounds. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_af495ed097d3ea85642df7702e6ae565e}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!set\-Min\-Update\-Delta@{set\-Min\-Update\-Delta}}
+\index{set\-Min\-Update\-Delta@{set\-Min\-Update\-Delta}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{set\-Min\-Update\-Delta}]{\setlength{\rightskip}{0pt plus 5cm}void Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::set\-Min\-Update\-Delta (
+\begin{DoxyParamCaption}
+\item[{std\-::chrono\-::milliseconds}]{min\-Update\-Delta}
+\end{DoxyParamCaption}
+)}}\label{class_scaling_generatable_chunked_temperature_world_injector_af495ed097d3ea85642df7702e6ae565e}
+Sets minimum update delta. Minimum time between world updates is minimum update delta.
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\-Update\-Delta} & Minimum update delta. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_ab06a2b915012e60d41b2db4cc77abbc4}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!set\-Temperature\-Exchange\-Coefficient@{set\-Temperature\-Exchange\-Coefficient}}
+\index{set\-Temperature\-Exchange\-Coefficient@{set\-Temperature\-Exchange\-Coefficient}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{set\-Temperature\-Exchange\-Coefficient}]{\setlength{\rightskip}{0pt plus 5cm}void Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::set\-Temperature\-Exchange\-Coefficient (
+\begin{DoxyParamCaption}
+\item[{double}]{temperature\-Exchange\-Coefficient}
+\end{DoxyParamCaption}
+)}}\label{class_scaling_generatable_chunked_temperature_world_injector_ab06a2b915012e60d41b2db4cc77abbc4}
+Sets temperature exchange coefficient. The more temperature exchange coefficient is, the faster temperature exchange will be.
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature\-Exchange\-Coefficient} & \hyperlink{struct_temperature}{Temperature} exchange coefficient. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a30555824cf848c809aceea16d01fc661}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!temperature\-Exchange\-Coefficient@{temperature\-Exchange\-Coefficient}}
+\index{temperature\-Exchange\-Coefficient@{temperature\-Exchange\-Coefficient}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{temperature\-Exchange\-Coefficient}]{\setlength{\rightskip}{0pt plus 5cm}double Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::temperature\-Exchange\-Coefficient (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_scaling_generatable_chunked_temperature_world_injector_a30555824cf848c809aceea16d01fc661}
+The more temperature exchange coefficient is, the faster temperature exchange will be. This method can throw an exception if temperature exchange coefficient is not set.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_temperature}{Temperature} exchange coefficient. 
+\end{DoxyReturn}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a9ad4c32579a542181f67aedc8bd664e2}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!timer@{timer}}
+\index{timer@{timer}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-ptr$<$ {\bf I\-Timer\-Blockable}$<$ {\bf I\-Timer} $>$ $>$ Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_scaling_generatable_chunked_temperature_world_injector_a9ad4c32579a542181f67aedc8bd664e2}
+Timer will be built only once for an injector instance.
+
+\begin{DoxyReturn}{Returns}
+Built blocking timer which is used in the world updater. 
+\end{DoxyReturn}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a75cd417c40bef43ead32acd6b4527770}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!updater@{updater}}
+\index{updater@{updater}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{updater}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-ptr$<$ {\bf I\-Updater} $>$ Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::updater (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_scaling_generatable_chunked_temperature_world_injector_a75cd417c40bef43ead32acd6b4527770}
+\hyperlink{struct_temperature}{Temperature} world updater will be built only once for an injector instance. You can get the world via {\ttfamily world} getter.
+
+\begin{DoxyReturn}{Returns}
+Built chunked temperature world updater. 
+\end{DoxyReturn}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a370a3290c83d357760662b5c63183d5b}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!world@{world}}
+\index{world@{world}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{world}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Chunkable\-Observable}$<$ {\bf I\-Temperature\-World\-Chunkable\-Generatable}$<$ {\bf I\-Temperature\-World\-Chunkable\-Mutable}$<$ {\bf I\-Temperature\-World\-Chunkable}$<$ {\bf I\-Temperature\-World} $>$ $>$ $>$ $>$ $>$ Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::world (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_scaling_generatable_chunked_temperature_world_injector_a370a3290c83d357760662b5c63183d5b}
+\hyperlink{struct_temperature}{Temperature} world will be built only once for an injector instance. {\ttfamily updater} getter uses the same world instance.
+
+\begin{DoxyReturn}{Returns}
+Built chunked temperature world. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a511f1fe9ca03a0a986a2c5fef635ffac}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!\-\_\-chunk\-Bounds@{\-\_\-chunk\-Bounds}}
+\index{\-\_\-chunk\-Bounds@{\-\_\-chunk\-Bounds}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-chunk\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf Parallelepiped}$>$ Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-\_\-chunk\-Bounds\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_a511f1fe9ca03a0a986a2c5fef635ffac}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_aed21ecf6e5237f4a0fd9cea9112c2f03}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!\-\_\-min\-Update\-Delta@{\-\_\-min\-Update\-Delta}}
+\index{\-\_\-min\-Update\-Delta@{\-\_\-min\-Update\-Delta}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-min\-Update\-Delta}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<$std\-::chrono\-::milliseconds$>$ Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-\_\-min\-Update\-Delta\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_aed21ecf6e5237f4a0fd9cea9112c2f03}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a53d05cc0f6fc96e9c8e78fcfc2255f63}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!\-\_\-temperature\-Exchange\-Coefficient@{\-\_\-temperature\-Exchange\-Coefficient}}
+\index{\-\_\-temperature\-Exchange\-Coefficient@{\-\_\-temperature\-Exchange\-Coefficient}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-temperature\-Exchange\-Coefficient}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<$double$>$ Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-\_\-temperature\-Exchange\-Coefficient\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_a53d05cc0f6fc96e9c8e78fcfc2255f63}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a4b12d32e1931d08dd426bd28165d8194}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!\-\_\-timer@{\-\_\-timer}}
+\index{\-\_\-timer@{\-\_\-timer}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf I\-Timer\-Blockable}$<${\bf I\-Timer}$>$ $>$ Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-\_\-timer\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_a4b12d32e1931d08dd426bd28165d8194}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_aa94745f5caba594ed9dcfbfc21685358}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!\-\_\-updater@{\-\_\-updater}}
+\index{\-\_\-updater@{\-\_\-updater}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-updater}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf I\-Updater}$>$ Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-\_\-updater\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_aa94745f5caba594ed9dcfbfc21685358}
+\hypertarget{class_scaling_generatable_chunked_temperature_world_injector_a8af169452d94765c5bdd6302f5420ebb}{\index{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}!\-\_\-world@{\-\_\-world}}
+\index{\-\_\-world@{\-\_\-world}!ScalingGeneratableChunkedTemperatureWorldInjector@{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-world}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Chunkable\-Observable}$<${\bf I\-Temperature\-World\-Chunkable\-Generatable}$<${\bf I\-Temperature\-World\-Chunkable\-Mutable}$<${\bf I\-Temperature\-World\-Chunkable}$<${\bf I\-Temperature\-World}$>$ $>$ $>$ $>$ $>$ Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector\-::\-\_\-world\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scaling_generatable_chunked_temperature_world_injector_a8af169452d94765c5bdd6302f5420ebb}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/injectors/\hyperlink{_scaling_generatable_chunked_temperature_world_injector_8hpp}{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/injectors/\hyperlink{_scaling_generatable_chunked_temperature_world_injector_8cpp}{Scaling\-Generatable\-Chunked\-Temperature\-World\-Injector.\-cpp}\end{DoxyCompactItemize}

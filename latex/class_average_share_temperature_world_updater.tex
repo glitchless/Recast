@@ -1,0 +1,192 @@
+\hypertarget{class_average_share_temperature_world_updater}{\section{Average\-Share\-Temperature\-World\-Updater Class Reference}
+\label{class_average_share_temperature_world_updater}\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}}
+}
+
+
+{\ttfamily \#include $<$Average\-Share\-Temperature\-World\-Updater.\-hpp$>$}
+
+
+
+Inheritance diagram for Average\-Share\-Temperature\-World\-Updater\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{class_average_share_temperature_world_updater__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Average\-Share\-Temperature\-World\-Updater\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{class_average_share_temperature_world_updater__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_average_share_temperature_world_updater_a0031a5c20f9b717f0eb099f1d69e5ced}{Average\-Share\-Temperature\-World\-Updater} (double temperature\-Exchange\-Coefficient, std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ world, std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_timer_blockable}{I\-Timer\-Blockable}$<$ \hyperlink{class_i_timer}{I\-Timer} $>$$>$ timer)
+\item 
+void \hyperlink{class_average_share_temperature_world_updater_a29be9be2073572f3ef2dc5315c506245}{update} () override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_average_share_temperature_world_updater_a70a05789b5cfa32fc7bcdf8ceb94e66f}{\-\_\-check\-Then\-Share\-Temperature} (double dt, \hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, \hyperlink{struct_coord}{Coord} next\-X, \hyperlink{struct_coord}{Coord} next\-Y, \hyperlink{struct_coord}{Coord} next\-Z)
+\item 
+void \hyperlink{class_average_share_temperature_world_updater_aaf03625100ff7cd459c32bbd33956e33}{\-\_\-share\-Temperature} (double dt, \hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, \hyperlink{struct_coord}{Coord} next\-X, \hyperlink{struct_coord}{Coord} next\-Y, \hyperlink{struct_coord}{Coord} next\-Z)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_average_share_temperature_world_updater_a37ebe90d538e148a8da4efa0845d334c}{\-\_\-temperature\-Exchange\-Coefficient}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ \hyperlink{class_average_share_temperature_world_updater_a7327a9c0043f7fd278edcc1e7b7ecf78}{\-\_\-world}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_timer_blockable}{I\-Timer\-Blockable}$<$ \hyperlink{class_i_timer}{I\-Timer} $>$ $>$ \hyperlink{class_average_share_temperature_world_updater_acc17234a8b1f33e1be9c7806e4973be3}{\-\_\-timer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of temperature world updater.
+
+How it works for every two cells\-:
+\begin{DoxyEnumerate}
+\item Computes average of temperatures of two cells.
+\item Brings temperature of each cell to this average world. Speed is determined by temperature exchange coefficient. 
+\end{DoxyEnumerate}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_average_share_temperature_world_updater_a0031a5c20f9b717f0eb099f1d69e5ced}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}}
+\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
+\subsubsection[{Average\-Share\-Temperature\-World\-Updater}]{\setlength{\rightskip}{0pt plus 5cm}Average\-Share\-Temperature\-World\-Updater\-::\-Average\-Share\-Temperature\-World\-Updater (
+\begin{DoxyParamCaption}
+\item[{double}]{temperature\-Exchange\-Coefficient, }
+\item[{std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$}]{world, }
+\item[{std\-::shared\-\_\-ptr$<$ {\bf I\-Timer\-Blockable}$<$ {\bf I\-Timer} $>$$>$}]{timer}
+\end{DoxyParamCaption}
+)}}\label{class_average_share_temperature_world_updater_a0031a5c20f9b717f0eb099f1d69e5ced}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_average_share_temperature_world_updater_a70a05789b5cfa32fc7bcdf8ceb94e66f}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-check\-Then\-Share\-Temperature@{\-\_\-check\-Then\-Share\-Temperature}}
+\index{\-\_\-check\-Then\-Share\-Temperature@{\-\_\-check\-Then\-Share\-Temperature}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
+\subsubsection[{\-\_\-check\-Then\-Share\-Temperature}]{\setlength{\rightskip}{0pt plus 5cm}void Average\-Share\-Temperature\-World\-Updater\-::\-\_\-check\-Then\-Share\-Temperature (
+\begin{DoxyParamCaption}
+\item[{double}]{dt, }
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z, }
+\item[{{\bf Coord}}]{next\-X, }
+\item[{{\bf Coord}}]{next\-Y, }
+\item[{{\bf Coord}}]{next\-Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_a70a05789b5cfa32fc7bcdf8ceb94e66f}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_average_share_temperature_world_updater_a70a05789b5cfa32fc7bcdf8ceb94e66f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_average_share_temperature_world_updater_a70a05789b5cfa32fc7bcdf8ceb94e66f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_average_share_temperature_world_updater_aaf03625100ff7cd459c32bbd33956e33}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-share\-Temperature@{\-\_\-share\-Temperature}}
+\index{\-\_\-share\-Temperature@{\-\_\-share\-Temperature}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
+\subsubsection[{\-\_\-share\-Temperature}]{\setlength{\rightskip}{0pt plus 5cm}void Average\-Share\-Temperature\-World\-Updater\-::\-\_\-share\-Temperature (
+\begin{DoxyParamCaption}
+\item[{double}]{dt, }
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z, }
+\item[{{\bf Coord}}]{next\-X, }
+\item[{{\bf Coord}}]{next\-Y, }
+\item[{{\bf Coord}}]{next\-Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_aaf03625100ff7cd459c32bbd33956e33}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_average_share_temperature_world_updater_aaf03625100ff7cd459c32bbd33956e33_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_average_share_temperature_world_updater_aaf03625100ff7cd459c32bbd33956e33_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_average_share_temperature_world_updater_a29be9be2073572f3ef2dc5315c506245}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!update@{update}}
+\index{update@{update}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Average\-Share\-Temperature\-World\-Updater\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_average_share_temperature_world_updater_a29be9be2073572f3ef2dc5315c506245}
+Updates. 
+
+Implements \hyperlink{class_i_updater_a08a8af34922a2320f5ab5617e6e31276}{I\-Updater}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_average_share_temperature_world_updater_a29be9be2073572f3ef2dc5315c506245_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_average_share_temperature_world_updater_a37ebe90d538e148a8da4efa0845d334c}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-temperature\-Exchange\-Coefficient@{\-\_\-temperature\-Exchange\-Coefficient}}
+\index{\-\_\-temperature\-Exchange\-Coefficient@{\-\_\-temperature\-Exchange\-Coefficient}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
+\subsubsection[{\-\_\-temperature\-Exchange\-Coefficient}]{\setlength{\rightskip}{0pt plus 5cm}double Average\-Share\-Temperature\-World\-Updater\-::\-\_\-temperature\-Exchange\-Coefficient\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_a37ebe90d538e148a8da4efa0845d334c}
+\hypertarget{class_average_share_temperature_world_updater_acc17234a8b1f33e1be9c7806e4973be3}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-timer@{\-\_\-timer}}
+\index{\-\_\-timer@{\-\_\-timer}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
+\subsubsection[{\-\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf I\-Timer\-Blockable}$<${\bf I\-Timer}$>$ $>$ Average\-Share\-Temperature\-World\-Updater\-::\-\_\-timer\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_acc17234a8b1f33e1be9c7806e4973be3}
+\hypertarget{class_average_share_temperature_world_updater_a7327a9c0043f7fd278edcc1e7b7ecf78}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-world@{\-\_\-world}}
+\index{\-\_\-world@{\-\_\-world}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
+\subsubsection[{\-\_\-world}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Boundable}$<${\bf I\-Temperature\-World}$>$ $>$ Average\-Share\-Temperature\-World\-Updater\-::\-\_\-world\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_a7327a9c0043f7fd278edcc1e7b7ecf78}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/implementation/\hyperlink{_average_share_temperature_world_updater_8hpp}{Average\-Share\-Temperature\-World\-Updater.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/implementation/\hyperlink{_average_share_temperature_world_updater_8cpp}{Average\-Share\-Temperature\-World\-Updater.\-cpp}\end{DoxyCompactItemize}

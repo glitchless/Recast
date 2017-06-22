@@ -1,0 +1,132 @@
+\hypertarget{class_i_temperature_world_chunkable_mixin}{\section{I\-Temperature\-World\-Chunkable\-Mixin Class Reference}
+\label{class_i_temperature_world_chunkable_mixin}\index{I\-Temperature\-World\-Chunkable\-Mixin@{I\-Temperature\-World\-Chunkable\-Mixin}}
+}
+
+
+{\ttfamily \#include $<$I\-Temperature\-World\-Chunkable.\-hpp$>$}
+
+
+
+Inheritance diagram for I\-Temperature\-World\-Chunkable\-Mixin\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_i_temperature_world_chunkable_mixin__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for I\-Temperature\-World\-Chunkable\-Mixin\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_i_temperature_world_chunkable_mixin__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{class_i_temperature_world_chunkable_mixin_a9454e8c3813367f13da22c894c1052ed}{Foreach\-Chunk\-Fn} = std\-::function$<$ void(\hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ \&)$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_i_temperature_world_chunkable_mixin_a4694b473f4e20976b8a538d16656943d}{has\-Chunk} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) const noexcept=0
+\item 
+virtual std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ \hyperlink{class_i_temperature_world_chunkable_mixin_aacb0fa709dbd3cb5d630dde64afec5b6}{get\-Chunk} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) const =0
+\item 
+virtual void \hyperlink{class_i_temperature_world_chunkable_mixin_a2ded37900a83bdac968ff0f07f315225}{foreach\-Chunk} (\hyperlink{class_i_temperature_world_chunkable_mixin_a9454e8c3813367f13da22c894c1052ed}{Foreach\-Chunk\-Fn} func) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Should not be derived directly. Use {\ttfamily \hyperlink{class_i_temperature_world_chunkable}{I\-Temperature\-World\-Chunkable}}. This class is useful for {\ttfamily dynamic\-\_\-cast}. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_i_temperature_world_chunkable_mixin_a9454e8c3813367f13da22c894c1052ed}{\index{I\-Temperature\-World\-Chunkable\-Mixin@{I\-Temperature\-World\-Chunkable\-Mixin}!Foreach\-Chunk\-Fn@{Foreach\-Chunk\-Fn}}
+\index{Foreach\-Chunk\-Fn@{Foreach\-Chunk\-Fn}!ITemperatureWorldChunkableMixin@{I\-Temperature\-World\-Chunkable\-Mixin}}
+\subsubsection[{Foreach\-Chunk\-Fn}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf I\-Temperature\-World\-Chunkable\-Mixin\-::\-Foreach\-Chunk\-Fn} =  std\-::function$<$void({\bf I\-Temperature\-World\-Boundable}$<${\bf I\-Temperature\-World}$>$\&)$>$}}\label{class_i_temperature_world_chunkable_mixin_a9454e8c3813367f13da22c894c1052ed}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i_temperature_world_chunkable_mixin_a2ded37900a83bdac968ff0f07f315225}{\index{I\-Temperature\-World\-Chunkable\-Mixin@{I\-Temperature\-World\-Chunkable\-Mixin}!foreach\-Chunk@{foreach\-Chunk}}
+\index{foreach\-Chunk@{foreach\-Chunk}!ITemperatureWorldChunkableMixin@{I\-Temperature\-World\-Chunkable\-Mixin}}
+\subsubsection[{foreach\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Temperature\-World\-Chunkable\-Mixin\-::foreach\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Foreach\-Chunk\-Fn}}]{func}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_temperature_world_chunkable_mixin_a2ded37900a83bdac968ff0f07f315225}
+Loops over each chunk.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Function to execute at each chunk. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_chunked_temperature_world_ab737084e5879c35044c34012fd2281b3}{Chunked\-Temperature\-World}.
+
+\hypertarget{class_i_temperature_world_chunkable_mixin_aacb0fa709dbd3cb5d630dde64afec5b6}{\index{I\-Temperature\-World\-Chunkable\-Mixin@{I\-Temperature\-World\-Chunkable\-Mixin}!get\-Chunk@{get\-Chunk}}
+\index{get\-Chunk@{get\-Chunk}!ITemperatureWorldChunkableMixin@{I\-Temperature\-World\-Chunkable\-Mixin}}
+\subsubsection[{get\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Boundable}$<${\bf I\-Temperature\-World}$>$ $>$ I\-Temperature\-World\-Chunkable\-Mixin\-::get\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_temperature_world_chunkable_mixin_aacb0fa709dbd3cb5d630dde64afec5b6}
+Retrieves chunk which holds this point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Chunk at the point. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_chunked_temperature_world_a9b925259d18aecbde683048ee0422d72}{Chunked\-Temperature\-World}.
+
+\hypertarget{class_i_temperature_world_chunkable_mixin_a4694b473f4e20976b8a538d16656943d}{\index{I\-Temperature\-World\-Chunkable\-Mixin@{I\-Temperature\-World\-Chunkable\-Mixin}!has\-Chunk@{has\-Chunk}}
+\index{has\-Chunk@{has\-Chunk}!ITemperatureWorldChunkableMixin@{I\-Temperature\-World\-Chunkable\-Mixin}}
+\subsubsection[{has\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool I\-Temperature\-World\-Chunkable\-Mixin\-::has\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}}\label{class_i_temperature_world_chunkable_mixin_a4694b473f4e20976b8a538d16656943d}
+Tells whether the chunk which holds this point exists. This method doesn't throw exceptions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if chunk exists. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_chunked_temperature_world_aa06bb1517a6ba6537a89992a8a2f4d8e}{Chunked\-Temperature\-World}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/interfaces/\hyperlink{_i_temperature_world_chunkable_8hpp}{I\-Temperature\-World\-Chunkable.\-hpp}\end{DoxyCompactItemize}

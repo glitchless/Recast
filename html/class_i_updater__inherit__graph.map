@@ -1,0 +1,4 @@
+<map id="IUpdater" name="IUpdater">
+<area shape="rect" id="node2" href="$class_average_share_temperature_world_updater.html" title="{AverageShareTemperatureWorld\lUpdater\n|# _temperatureExchangeCoefficient\l# _world\l# _timer\l|+ AverageShareTemperatureWorld\lUpdater()\l+ update()\l# _checkThenShareTemperature()\l# _shareTemperature()\l}" alt="" coords="5,147,235,327"/>
+<area shape="rect" id="node3" href="$class_threaded_chunked_temperature_world_updater.html" title="{ThreadedChunkedTemperature\lWorldUpdater\n|# _data\l|+ ThreadedChunkedTemperature\lWorldUpdater()\l+ ~ThreadedChunkedTemperature\lWorldUpdater()\l+ update()\l# _work()\l# _watchChunk()\l}" alt="" coords="260,147,481,327"/>
+</map>

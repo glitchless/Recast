@@ -1,0 +1,100 @@
+\hypertarget{structcrow_1_1detail_1_1context}{\section{crow\-:\-:detail\-:\-:context$<$ Middlewares $>$ Struct Template Reference}
+\label{structcrow_1_1detail_1_1context}\index{crow\-::detail\-::context$<$ Middlewares $>$@{crow\-::detail\-::context$<$ Middlewares $>$}}
+}
+
+
+{\ttfamily \#include $<$crow\-\_\-all.\-h$>$}
+
+
+
+Inheritance diagram for crow\-:\-:detail\-:\-:context$<$ Middlewares $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1detail_1_1context__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for crow\-:\-:detail\-:\-:context$<$ Middlewares $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1detail_1_1context__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$int N$>$ }\\using \hyperlink{structcrow_1_1detail_1_1context_aed24bba34e07bac2e533be71003ce1f1}{partial} = typename \hyperlink{structcrow_1_1detail_1_1partial__context}{partial\-\_\-context}$<$ Middlewares...$>$\-::template \hyperlink{structcrow_1_1detail_1_1context_aed24bba34e07bac2e533be71003ce1f1}{partial}$<$ N $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T\-::context \& \hyperlink{structcrow_1_1detail_1_1context_a836ff37a47e92e44b7f937687bfb06e5}{get} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$int N, typename Context , typename Container $>$ }\\std\-::enable\-\_\-if$<$(N==0)$>$\-::type \hyperlink{structcrow_1_1detail_1_1context_a3d1ca546527852d0e74ba2a9f9d35a58}{after\-\_\-handlers\-\_\-call\-\_\-helper} (Container \&middlewares, Context \&ctx, \hyperlink{structcrow_1_1request}{request} \&req, \hyperlink{structcrow_1_1response}{response} \&res)
+\item 
+{\footnotesize template$<$int N, typename Context , typename Container $>$ }\\std\-::enable\-\_\-if$<$(N $>$0)$>$\-::type \hyperlink{structcrow_1_1detail_1_1context_a6ebdbe8f68d3d687f4935d14c68b576b}{after\-\_\-handlers\-\_\-call\-\_\-helper} (Container \&middlewares, Context \&ctx, \hyperlink{structcrow_1_1request}{request} \&req, \hyperlink{structcrow_1_1response}{response} \&res)
+\item 
+{\footnotesize template$<$int N, typename Context , typename Container , typename Current\-M\-W , typename... Middlewares2$>$ }\\bool \hyperlink{structcrow_1_1detail_1_1context_ac4a2d03a6f52cba172f8d6b7e0bf0230}{middleware\-\_\-call\-\_\-helper} (Container \&middlewares, \hyperlink{structcrow_1_1request}{request} \&req, \hyperlink{structcrow_1_1response}{response} \&res, Context \&ctx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{structcrow_1_1detail_1_1context_aed24bba34e07bac2e533be71003ce1f1}{\index{crow\-::detail\-::context@{crow\-::detail\-::context}!partial@{partial}}
+\index{partial@{partial}!crow::detail::context@{crow\-::detail\-::context}}
+\subsubsection[{partial}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Middlewares$>$ template$<$int N$>$ using {\bf crow\-::detail\-::context}$<$ Middlewares $>$\-::{\bf partial} =  typename {\bf partial\-\_\-context}$<$Middlewares...$>$\-::template {\bf partial}$<$N$>$}}\label{structcrow_1_1detail_1_1context_aed24bba34e07bac2e533be71003ce1f1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structcrow_1_1detail_1_1context_a836ff37a47e92e44b7f937687bfb06e5}{\index{crow\-::detail\-::context@{crow\-::detail\-::context}!get@{get}}
+\index{get@{get}!crow::detail::context@{crow\-::detail\-::context}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Middlewares$>$ template$<$typename T $>$ T\-::context\& {\bf crow\-::detail\-::context}$<$ Middlewares $>$\-::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1detail_1_1context_a836ff37a47e92e44b7f937687bfb06e5}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{structcrow_1_1detail_1_1context_a3d1ca546527852d0e74ba2a9f9d35a58}{\index{crow\-::detail\-::context@{crow\-::detail\-::context}!after\-\_\-handlers\-\_\-call\-\_\-helper@{after\-\_\-handlers\-\_\-call\-\_\-helper}}
+\index{after\-\_\-handlers\-\_\-call\-\_\-helper@{after\-\_\-handlers\-\_\-call\-\_\-helper}!crow::detail::context@{crow\-::detail\-::context}}
+\subsubsection[{after\-\_\-handlers\-\_\-call\-\_\-helper}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Middlewares$>$ template$<$int N, typename Context , typename Container $>$ std\-::enable\-\_\-if$<$(N==0)$>$\-::type after\-\_\-handlers\-\_\-call\-\_\-helper (
+\begin{DoxyParamCaption}
+\item[{Container \&}]{middlewares, }
+\item[{Context \&}]{ctx, }
+\item[{{\bf request} \&}]{req, }
+\item[{{\bf response} \&}]{res}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{structcrow_1_1detail_1_1context_a3d1ca546527852d0e74ba2a9f9d35a58}
+\hypertarget{structcrow_1_1detail_1_1context_a6ebdbe8f68d3d687f4935d14c68b576b}{\index{crow\-::detail\-::context@{crow\-::detail\-::context}!after\-\_\-handlers\-\_\-call\-\_\-helper@{after\-\_\-handlers\-\_\-call\-\_\-helper}}
+\index{after\-\_\-handlers\-\_\-call\-\_\-helper@{after\-\_\-handlers\-\_\-call\-\_\-helper}!crow::detail::context@{crow\-::detail\-::context}}
+\subsubsection[{after\-\_\-handlers\-\_\-call\-\_\-helper}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Middlewares$>$ template$<$int N, typename Context , typename Container $>$ std\-::enable\-\_\-if$<$(N$>$0)$>$\-::type after\-\_\-handlers\-\_\-call\-\_\-helper (
+\begin{DoxyParamCaption}
+\item[{Container \&}]{middlewares, }
+\item[{Context \&}]{ctx, }
+\item[{{\bf request} \&}]{req, }
+\item[{{\bf response} \&}]{res}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{structcrow_1_1detail_1_1context_a6ebdbe8f68d3d687f4935d14c68b576b}
+\hypertarget{structcrow_1_1detail_1_1context_ac4a2d03a6f52cba172f8d6b7e0bf0230}{\index{crow\-::detail\-::context@{crow\-::detail\-::context}!middleware\-\_\-call\-\_\-helper@{middleware\-\_\-call\-\_\-helper}}
+\index{middleware\-\_\-call\-\_\-helper@{middleware\-\_\-call\-\_\-helper}!crow::detail::context@{crow\-::detail\-::context}}
+\subsubsection[{middleware\-\_\-call\-\_\-helper}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Middlewares$>$ template$<$int N, typename Context , typename Container , typename Current\-M\-W , typename... Middlewares2$>$ bool middleware\-\_\-call\-\_\-helper (
+\begin{DoxyParamCaption}
+\item[{Container \&}]{middlewares, }
+\item[{{\bf request} \&}]{req, }
+\item[{{\bf response} \&}]{res, }
+\item[{Context \&}]{ctx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{structcrow_1_1detail_1_1context_ac4a2d03a6f52cba172f8d6b7e0bf0230}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/lib/\hyperlink{crow__all_8h}{crow\-\_\-all.\-h}\end{DoxyCompactItemize}

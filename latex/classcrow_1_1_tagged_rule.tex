@@ -1,0 +1,145 @@
+\hypertarget{classcrow_1_1_tagged_rule}{\section{crow\-:\-:Tagged\-Rule$<$ Args $>$ Class Template Reference}
+\label{classcrow_1_1_tagged_rule}\index{crow\-::\-Tagged\-Rule$<$ Args $>$@{crow\-::\-Tagged\-Rule$<$ Args $>$}}
+}
+
+
+{\ttfamily \#include $<$crow\-\_\-all.\-h$>$}
+
+
+
+Inheritance diagram for crow\-:\-:Tagged\-Rule$<$ Args $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classcrow_1_1_tagged_rule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for crow\-:\-:Tagged\-Rule$<$ Args $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classcrow_1_1_tagged_rule__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classcrow_1_1_tagged_rule_aae5d1683e30a8d4e058666b7d12dea14}{self\-\_\-t} = \hyperlink{classcrow_1_1_tagged_rule}{Tagged\-Rule}$<$ Args...$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrow_1_1_tagged_rule_a058a079101cee2bcc5936c785c6c76f6}{Tagged\-Rule} (std\-::string rule)
+\item 
+void \hyperlink{classcrow_1_1_tagged_rule_aafb046bbb0f1b47c1d56bfae72ef390a}{validate} () override
+\item 
+{\footnotesize template$<$typename Func $>$ }\\std\-::enable\-\_\-if\\*
+$<$ \hyperlink{structcrow_1_1black__magic_1_1_call_helper}{black\-\_\-magic\-::\-Call\-Helper}\\*
+$<$ Func, \hyperlink{structcrow_1_1black__magic_1_1_s}{black\-\_\-magic\-::\-S}\\*
+$<$ Args...$>$ $>$\-::value, void $>$\\*
+\-::type \hyperlink{classcrow_1_1_tagged_rule_a578c5809e9b533b496a6a6eab0d1929c}{operator()} (Func \&\&f)
+\item 
+{\footnotesize template$<$typename Func $>$ }\\std\-::enable\-\_\-if\\*
+$<$ !\hyperlink{structcrow_1_1black__magic_1_1_call_helper}{black\-\_\-magic\-::\-Call\-Helper}\\*
+$<$ Func, \hyperlink{structcrow_1_1black__magic_1_1_s}{black\-\_\-magic\-::\-S}\\*
+$<$ Args...$>$ $>$\-::value \\*
+\&\&\hyperlink{structcrow_1_1black__magic_1_1_call_helper}{black\-\_\-magic\-::\-Call\-Helper}\\*
+$<$ Func, \hyperlink{structcrow_1_1black__magic_1_1_s}{black\-\_\-magic\-::\-S}\\*
+$<$ \hyperlink{structcrow_1_1request}{crow\-::request}, Args...$>$\\*
+ $>$\-::value, void $>$\-::type \hyperlink{classcrow_1_1_tagged_rule_a9d799cbc205754526437946405794712}{operator()} (Func \&\&f)
+\item 
+{\footnotesize template$<$typename Func $>$ }\\std\-::enable\-\_\-if\\*
+$<$ !\hyperlink{structcrow_1_1black__magic_1_1_call_helper}{black\-\_\-magic\-::\-Call\-Helper}\\*
+$<$ Func, \hyperlink{structcrow_1_1black__magic_1_1_s}{black\-\_\-magic\-::\-S}\\*
+$<$ Args...$>$ $>$\-::value \\*
+\&\&!\hyperlink{structcrow_1_1black__magic_1_1_call_helper}{black\-\_\-magic\-::\-Call\-Helper}\\*
+$<$ Func, \hyperlink{structcrow_1_1black__magic_1_1_s}{black\-\_\-magic\-::\-S}\\*
+$<$ \hyperlink{structcrow_1_1request}{crow\-::request}, Args...$>$\\*
+ $>$\-::value, void $>$\-::type \hyperlink{classcrow_1_1_tagged_rule_a811244dd43b7a5bfa536f5eab1955a7e}{operator()} (Func \&\&f)
+\item 
+{\footnotesize template$<$typename Func $>$ }\\void \hyperlink{classcrow_1_1_tagged_rule_aeed24311bbc5faa60e5c07ffcad2a5de}{operator()} (std\-::string \hyperlink{structcrow_1_1_rule_parameter_traits_aa330efc6368bb7b66901122f1e8e4943}{name}, Func \&\&f)
+\item 
+void \hyperlink{classcrow_1_1_tagged_rule_a919704d5a12bfebb209c866d2726c855}{handle} (const \hyperlink{structcrow_1_1request}{request} \&req, \hyperlink{structcrow_1_1response}{response} \&res, const \hyperlink{structcrow_1_1routing__params}{routing\-\_\-params} \&params) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classcrow_1_1_tagged_rule_aae5d1683e30a8d4e058666b7d12dea14}{\index{crow\-::\-Tagged\-Rule@{crow\-::\-Tagged\-Rule}!self\-\_\-t@{self\-\_\-t}}
+\index{self\-\_\-t@{self\-\_\-t}!crow::TaggedRule@{crow\-::\-Tagged\-Rule}}
+\subsubsection[{self\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ using {\bf crow\-::\-Tagged\-Rule}$<$ Args $>$\-::{\bf self\-\_\-t} =  {\bf Tagged\-Rule}$<$Args...$>$}}\label{classcrow_1_1_tagged_rule_aae5d1683e30a8d4e058666b7d12dea14}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrow_1_1_tagged_rule_a058a079101cee2bcc5936c785c6c76f6}{\index{crow\-::\-Tagged\-Rule@{crow\-::\-Tagged\-Rule}!Tagged\-Rule@{Tagged\-Rule}}
+\index{Tagged\-Rule@{Tagged\-Rule}!crow::TaggedRule@{crow\-::\-Tagged\-Rule}}
+\subsubsection[{Tagged\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ {\bf crow\-::\-Tagged\-Rule}$<$ Args $>$\-::{\bf Tagged\-Rule} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{rule}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_tagged_rule_a058a079101cee2bcc5936c785c6c76f6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrow_1_1_tagged_rule_a919704d5a12bfebb209c866d2726c855}{\index{crow\-::\-Tagged\-Rule@{crow\-::\-Tagged\-Rule}!handle@{handle}}
+\index{handle@{handle}!crow::TaggedRule@{crow\-::\-Tagged\-Rule}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ void {\bf crow\-::\-Tagged\-Rule}$<$ Args $>$\-::handle (
+\begin{DoxyParamCaption}
+\item[{const {\bf request} \&}]{req, }
+\item[{{\bf response} \&}]{res, }
+\item[{const {\bf routing\-\_\-params} \&}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classcrow_1_1_tagged_rule_a919704d5a12bfebb209c866d2726c855}
+
+
+Implements \hyperlink{classcrow_1_1_base_rule_ac8cad63944971ba3ee77b4091cf88a02}{crow\-::\-Base\-Rule}.
+
+\hypertarget{classcrow_1_1_tagged_rule_a578c5809e9b533b496a6a6eab0d1929c}{\index{crow\-::\-Tagged\-Rule@{crow\-::\-Tagged\-Rule}!operator()@{operator()}}
+\index{operator()@{operator()}!crow::TaggedRule@{crow\-::\-Tagged\-Rule}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ template$<$typename Func $>$ std\-::enable\-\_\-if$<${\bf black\-\_\-magic\-::\-Call\-Helper}$<$Func, {\bf black\-\_\-magic\-::\-S}$<$Args...$>$ $>$\-::value, void$>$\-::type {\bf crow\-::\-Tagged\-Rule}$<$ Args $>$\-::operator() (
+\begin{DoxyParamCaption}
+\item[{Func \&\&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_tagged_rule_a578c5809e9b533b496a6a6eab0d1929c}
+\hypertarget{classcrow_1_1_tagged_rule_a9d799cbc205754526437946405794712}{\index{crow\-::\-Tagged\-Rule@{crow\-::\-Tagged\-Rule}!operator()@{operator()}}
+\index{operator()@{operator()}!crow::TaggedRule@{crow\-::\-Tagged\-Rule}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ template$<$typename Func $>$ std\-::enable\-\_\-if$<$ !{\bf black\-\_\-magic\-::\-Call\-Helper}$<$Func, {\bf black\-\_\-magic\-::\-S}$<$Args...$>$ $>$\-::value \&\& {\bf black\-\_\-magic\-::\-Call\-Helper}$<$Func, {\bf black\-\_\-magic\-::\-S}$<${\bf crow\-::request}, Args...$>$ $>$\-::value, void$>$\-::type {\bf crow\-::\-Tagged\-Rule}$<$ Args $>$\-::operator() (
+\begin{DoxyParamCaption}
+\item[{Func \&\&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_tagged_rule_a9d799cbc205754526437946405794712}
+\hypertarget{classcrow_1_1_tagged_rule_a811244dd43b7a5bfa536f5eab1955a7e}{\index{crow\-::\-Tagged\-Rule@{crow\-::\-Tagged\-Rule}!operator()@{operator()}}
+\index{operator()@{operator()}!crow::TaggedRule@{crow\-::\-Tagged\-Rule}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ template$<$typename Func $>$ std\-::enable\-\_\-if$<$ !{\bf black\-\_\-magic\-::\-Call\-Helper}$<$Func, {\bf black\-\_\-magic\-::\-S}$<$Args...$>$ $>$\-::value \&\& !{\bf black\-\_\-magic\-::\-Call\-Helper}$<$Func, {\bf black\-\_\-magic\-::\-S}$<${\bf crow\-::request}, Args...$>$ $>$\-::value, void$>$\-::type {\bf crow\-::\-Tagged\-Rule}$<$ Args $>$\-::operator() (
+\begin{DoxyParamCaption}
+\item[{Func \&\&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_tagged_rule_a811244dd43b7a5bfa536f5eab1955a7e}
+\hypertarget{classcrow_1_1_tagged_rule_aeed24311bbc5faa60e5c07ffcad2a5de}{\index{crow\-::\-Tagged\-Rule@{crow\-::\-Tagged\-Rule}!operator()@{operator()}}
+\index{operator()@{operator()}!crow::TaggedRule@{crow\-::\-Tagged\-Rule}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ template$<$typename Func $>$ void {\bf crow\-::\-Tagged\-Rule}$<$ Args $>$\-::operator() (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name, }
+\item[{Func \&\&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_tagged_rule_aeed24311bbc5faa60e5c07ffcad2a5de}
+\hypertarget{classcrow_1_1_tagged_rule_aafb046bbb0f1b47c1d56bfae72ef390a}{\index{crow\-::\-Tagged\-Rule@{crow\-::\-Tagged\-Rule}!validate@{validate}}
+\index{validate@{validate}!crow::TaggedRule@{crow\-::\-Tagged\-Rule}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ void {\bf crow\-::\-Tagged\-Rule}$<$ Args $>$\-::validate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classcrow_1_1_tagged_rule_aafb046bbb0f1b47c1d56bfae72ef390a}
+
+
+Implements \hyperlink{classcrow_1_1_base_rule_a895d85332340788206cee0b1555ac8c2}{crow\-::\-Base\-Rule}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/lib/\hyperlink{crow__all_8h}{crow\-\_\-all.\-h}\end{DoxyCompactItemize}

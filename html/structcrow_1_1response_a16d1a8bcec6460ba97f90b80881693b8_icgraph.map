@@ -1,0 +1,7 @@
+<map id="crow::response::add_header" name="crow::response::add_header">
+<area shape="rect" id="node2" href="$structcrow_1_1_cookie_parser.html#af9b029207147ece8c18a28dd4b1d8f2c" title="crow::CookieParser\l::after_handle" alt="" coords="198,5,335,46"/>
+<area shape="rect" id="node3" href="$classcrow_1_1_router.html#a2b37f05675d075c3de79f6a4de42320d" title="crow::Router::handle\l_upgrade" alt="" coords="195,70,338,111"/>
+<area shape="rect" id="node5" href="$classcrow_1_1_router.html#a6b7a5a19c6aa65f229eecaf47bda4dde" title="crow::Router::handle" alt="" coords="195,136,338,163"/>
+<area shape="rect" id="node4" href="$classcrow_1_1_crow.html#a6e435bf5275735effd32647772bdbd04" title="crow::Crow::handle\l_upgrade" alt="" coords="387,70,522,111"/>
+<area shape="rect" id="node6" href="$classcrow_1_1_crow.html#a9e0d9a96cd8be5374758f538cc057f26" title="crow::Crow::handle" alt="" coords="387,136,522,163"/>
+</map>

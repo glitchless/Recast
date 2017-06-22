@@ -1,0 +1,290 @@
+\hypertarget{class_generatable_chunked_temperature_world}{\section{Generatable\-Chunked\-Temperature\-World Class Reference}
+\label{class_generatable_chunked_temperature_world}\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}}
+}
+
+
+{\ttfamily \#include $<$Generatable\-Chunked\-Temperature\-World.\-hpp$>$}
+
+
+
+Inheritance diagram for Generatable\-Chunked\-Temperature\-World\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_generatable_chunked_temperature_world__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Generatable\-Chunked\-Temperature\-World\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_generatable_chunked_temperature_world__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_generatable_chunked_temperature_world_ac452b01dbd1b3d78b265007a96b2d1f0}{Generatable\-Chunked\-Temperature\-World} (\hyperlink{namespace_generatable_chunked_temperature_world_typedefs_a07d38658571f8f09839bc1bc8b105107}{Generatable\-Chunked\-Temperature\-World\-Typedefs\-::\-Need\-Chunk\-Fn} need\-Chunk\-Fn, \hyperlink{namespace_generatable_chunked_temperature_world_typedefs_a719e4469a105a21a76ed22274639c03a}{Generatable\-Chunked\-Temperature\-World\-Typedefs\-::\-Make\-Chunk\-Fn} make\-Chunk\-Fn)
+\item 
+bool \hyperlink{class_generatable_chunked_temperature_world_ad8ebd44d64067e9920d76d46af1b83e2}{has\-Or\-Is\-Generatable\-Chunk} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) const noexceptoverride
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ \hyperlink{class_generatable_chunked_temperature_world_ad5455846504972898e622f9437846f8c}{get\-Or\-Generate\-Chunk} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) override
+\item 
+void \hyperlink{class_generatable_chunked_temperature_world_af1a6752db0e722e8649ddb4c7e1ea8fa}{add\-Chunk} (std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ chunk) override
+\item 
+void \hyperlink{class_generatable_chunked_temperature_world_a42c646343bb79dcdeb9f96e6aa06cbec}{remove\-Chunk} (std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ chunk) override
+\item 
+void \hyperlink{class_generatable_chunked_temperature_world_aa0b55baf21d9605af04d8fef99f9fbd8}{on\-Chunk\-Add} (\hyperlink{class_i_temperature_world_chunkable_observable_mixin_a777c50f4a4ca0b3f7cd6bc02b87bb883}{On\-Chunk\-Event\-Fn} func) override
+\item 
+void \hyperlink{class_generatable_chunked_temperature_world_a4416f9f9ea400e540b1214b053692760}{on\-Chunk\-Remove} (\hyperlink{class_i_temperature_world_chunkable_observable_mixin_a777c50f4a4ca0b3f7cd6bc02b87bb883}{On\-Chunk\-Event\-Fn} func) override
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_generatable_chunked_temperature_world_typedefs_a07d38658571f8f09839bc1bc8b105107}{Generatable\-Chunked\-Temperature\-World\-Typedefs\-::\-Need\-Chunk\-Fn} \hyperlink{class_generatable_chunked_temperature_world_a9159830777efdcfab20bd6f1e84eda42}{\-\_\-need\-Chunk\-Fn}
+\item 
+\hyperlink{namespace_generatable_chunked_temperature_world_typedefs_a719e4469a105a21a76ed22274639c03a}{Generatable\-Chunked\-Temperature\-World\-Typedefs\-::\-Make\-Chunk\-Fn} \hyperlink{class_generatable_chunked_temperature_world_ad1573a4224ea6bbe88843ed82f26e107}{\-\_\-make\-Chunk\-Fn}
+\item 
+std\-::list$<$ \hyperlink{class_i_temperature_world_chunkable_observable_mixin_a777c50f4a4ca0b3f7cd6bc02b87bb883}{On\-Chunk\-Event\-Fn} $>$ \hyperlink{class_generatable_chunked_temperature_world_a4d8bd2602e4563b1f347e967bc1d3f23}{\-\_\-on\-Chunk\-Add\-Listeners}
+\item 
+std\-::list$<$ \hyperlink{class_i_temperature_world_chunkable_observable_mixin_a777c50f4a4ca0b3f7cd6bc02b87bb883}{On\-Chunk\-Event\-Fn} $>$ \hyperlink{class_generatable_chunked_temperature_world_a4f5ce92a800ce903982033724d025e09}{\-\_\-on\-Chunk\-Remove\-Listeners}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of temperature world divided by chunks. It's backed by {\ttfamily std\-::list}. It will create new chunk if client accesses temperature of point in non-\/existing chunk. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_generatable_chunked_temperature_world_ac452b01dbd1b3d78b265007a96b2d1f0}{\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}!Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}}
+\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}!GeneratableChunkedTemperatureWorld@{Generatable\-Chunked\-Temperature\-World}}
+\subsubsection[{Generatable\-Chunked\-Temperature\-World}]{\setlength{\rightskip}{0pt plus 5cm}Generatable\-Chunked\-Temperature\-World\-::\-Generatable\-Chunked\-Temperature\-World (
+\begin{DoxyParamCaption}
+\item[{{\bf Generatable\-Chunked\-Temperature\-World\-Typedefs\-::\-Need\-Chunk\-Fn}}]{need\-Chunk\-Fn, }
+\item[{{\bf Generatable\-Chunked\-Temperature\-World\-Typedefs\-::\-Make\-Chunk\-Fn}}]{make\-Chunk\-Fn}
+\end{DoxyParamCaption}
+)}}\label{class_generatable_chunked_temperature_world_ac452b01dbd1b3d78b265007a96b2d1f0}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_generatable_chunked_temperature_world_af1a6752db0e722e8649ddb4c7e1ea8fa}{\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}!add\-Chunk@{add\-Chunk}}
+\index{add\-Chunk@{add\-Chunk}!GeneratableChunkedTemperatureWorld@{Generatable\-Chunked\-Temperature\-World}}
+\subsubsection[{add\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}void Generatable\-Chunked\-Temperature\-World\-::add\-Chunk (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$}]{chunk}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_generatable_chunked_temperature_world_af1a6752db0e722e8649ddb4c7e1ea8fa}
+Adds a chunk to this temperature world.
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk} & Chunk to add. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_chunked_temperature_world_a5f9a3a143baf0c0238427926aef77f65}{Chunked\-Temperature\-World}.
+
+
+
+Reimplemented in \hyperlink{class_scaling_generatable_chunked_temperature_world_a5ec1b1a2a5e058bf57bd7918fcc5a35b}{Scaling\-Generatable\-Chunked\-Temperature\-World}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_generatable_chunked_temperature_world_af1a6752db0e722e8649ddb4c7e1ea8fa_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_generatable_chunked_temperature_world_af1a6752db0e722e8649ddb4c7e1ea8fa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_generatable_chunked_temperature_world_ad5455846504972898e622f9437846f8c}{\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}!get\-Or\-Generate\-Chunk@{get\-Or\-Generate\-Chunk}}
+\index{get\-Or\-Generate\-Chunk@{get\-Or\-Generate\-Chunk}!GeneratableChunkedTemperatureWorld@{Generatable\-Chunked\-Temperature\-World}}
+\subsubsection[{get\-Or\-Generate\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$ $>$ Generatable\-Chunked\-Temperature\-World\-::get\-Or\-Generate\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_generatable_chunked_temperature_world_ad5455846504972898e622f9437846f8c}
+Retrieves chunk which holds this point. If chunk doesn't exist, the method will generate chunk if it's possible.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Chunk at the point. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_temperature_world_chunkable_generatable_mixin_a1144edcb06ba318422be96ee5f8b139d}{I\-Temperature\-World\-Chunkable\-Generatable\-Mixin}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_generatable_chunked_temperature_world_ad5455846504972898e622f9437846f8c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_generatable_chunked_temperature_world_ad8ebd44d64067e9920d76d46af1b83e2}{\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}!has\-Or\-Is\-Generatable\-Chunk@{has\-Or\-Is\-Generatable\-Chunk}}
+\index{has\-Or\-Is\-Generatable\-Chunk@{has\-Or\-Is\-Generatable\-Chunk}!GeneratableChunkedTemperatureWorld@{Generatable\-Chunked\-Temperature\-World}}
+\subsubsection[{has\-Or\-Is\-Generatable\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}bool Generatable\-Chunked\-Temperature\-World\-::has\-Or\-Is\-Generatable\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_generatable_chunked_temperature_world_ad8ebd44d64067e9920d76d46af1b83e2}
+Tells whether the chunk which holds this point exists. If chunk doesn't exist, the method will tell whether it will generated on {\ttfamily get\-Or\-Generate\-Chunk} call. This method doesn't throw exceptions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if chunk exists. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_temperature_world_chunkable_generatable_mixin_a015be90684c10d61cc962439b3ed71ef}{I\-Temperature\-World\-Chunkable\-Generatable\-Mixin}.
+
+\hypertarget{class_generatable_chunked_temperature_world_aa0b55baf21d9605af04d8fef99f9fbd8}{\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}!on\-Chunk\-Add@{on\-Chunk\-Add}}
+\index{on\-Chunk\-Add@{on\-Chunk\-Add}!GeneratableChunkedTemperatureWorld@{Generatable\-Chunked\-Temperature\-World}}
+\subsubsection[{on\-Chunk\-Add}]{\setlength{\rightskip}{0pt plus 5cm}void Generatable\-Chunked\-Temperature\-World\-::on\-Chunk\-Add (
+\begin{DoxyParamCaption}
+\item[{{\bf On\-Chunk\-Event\-Fn}}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_generatable_chunked_temperature_world_aa0b55baf21d9605af04d8fef99f9fbd8}
+Subscribes listener to chunk add events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Listener. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_temperature_world_chunkable_observable_mixin_a5bafba4f885aa5ae4cab3133d75d45d1}{I\-Temperature\-World\-Chunkable\-Observable\-Mixin}.
+
+\hypertarget{class_generatable_chunked_temperature_world_a4416f9f9ea400e540b1214b053692760}{\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}!on\-Chunk\-Remove@{on\-Chunk\-Remove}}
+\index{on\-Chunk\-Remove@{on\-Chunk\-Remove}!GeneratableChunkedTemperatureWorld@{Generatable\-Chunked\-Temperature\-World}}
+\subsubsection[{on\-Chunk\-Remove}]{\setlength{\rightskip}{0pt plus 5cm}void Generatable\-Chunked\-Temperature\-World\-::on\-Chunk\-Remove (
+\begin{DoxyParamCaption}
+\item[{{\bf On\-Chunk\-Event\-Fn}}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_generatable_chunked_temperature_world_a4416f9f9ea400e540b1214b053692760}
+Subscribes listener to chunk remove events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Listener. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_temperature_world_chunkable_observable_mixin_a85cfb47d07c70183d1c4da81a91da599}{I\-Temperature\-World\-Chunkable\-Observable\-Mixin}.
+
+\hypertarget{class_generatable_chunked_temperature_world_a42c646343bb79dcdeb9f96e6aa06cbec}{\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}!remove\-Chunk@{remove\-Chunk}}
+\index{remove\-Chunk@{remove\-Chunk}!GeneratableChunkedTemperatureWorld@{Generatable\-Chunked\-Temperature\-World}}
+\subsubsection[{remove\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}void Generatable\-Chunked\-Temperature\-World\-::remove\-Chunk (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$}]{chunk}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_generatable_chunked_temperature_world_a42c646343bb79dcdeb9f96e6aa06cbec}
+Removes chunk from this temperature world.
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk} & Chunk to remove. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_chunked_temperature_world_a623c1f5efe7aa84d428ba58365ee775a}{Chunked\-Temperature\-World}.
+
+
+
+Reimplemented in \hyperlink{class_scaling_generatable_chunked_temperature_world_ac3ae4d696d934b925076eeab88658978}{Scaling\-Generatable\-Chunked\-Temperature\-World}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_generatable_chunked_temperature_world_a42c646343bb79dcdeb9f96e6aa06cbec_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_generatable_chunked_temperature_world_a42c646343bb79dcdeb9f96e6aa06cbec_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_generatable_chunked_temperature_world_ad1573a4224ea6bbe88843ed82f26e107}{\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}!\-\_\-make\-Chunk\-Fn@{\-\_\-make\-Chunk\-Fn}}
+\index{\-\_\-make\-Chunk\-Fn@{\-\_\-make\-Chunk\-Fn}!GeneratableChunkedTemperatureWorld@{Generatable\-Chunked\-Temperature\-World}}
+\subsubsection[{\-\_\-make\-Chunk\-Fn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Generatable\-Chunked\-Temperature\-World\-Typedefs\-::\-Make\-Chunk\-Fn} Generatable\-Chunked\-Temperature\-World\-::\-\_\-make\-Chunk\-Fn\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_generatable_chunked_temperature_world_ad1573a4224ea6bbe88843ed82f26e107}
+\hypertarget{class_generatable_chunked_temperature_world_a9159830777efdcfab20bd6f1e84eda42}{\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}!\-\_\-need\-Chunk\-Fn@{\-\_\-need\-Chunk\-Fn}}
+\index{\-\_\-need\-Chunk\-Fn@{\-\_\-need\-Chunk\-Fn}!GeneratableChunkedTemperatureWorld@{Generatable\-Chunked\-Temperature\-World}}
+\subsubsection[{\-\_\-need\-Chunk\-Fn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Generatable\-Chunked\-Temperature\-World\-Typedefs\-::\-Need\-Chunk\-Fn} Generatable\-Chunked\-Temperature\-World\-::\-\_\-need\-Chunk\-Fn\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_generatable_chunked_temperature_world_a9159830777efdcfab20bd6f1e84eda42}
+\hypertarget{class_generatable_chunked_temperature_world_a4d8bd2602e4563b1f347e967bc1d3f23}{\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}!\-\_\-on\-Chunk\-Add\-Listeners@{\-\_\-on\-Chunk\-Add\-Listeners}}
+\index{\-\_\-on\-Chunk\-Add\-Listeners@{\-\_\-on\-Chunk\-Add\-Listeners}!GeneratableChunkedTemperatureWorld@{Generatable\-Chunked\-Temperature\-World}}
+\subsubsection[{\-\_\-on\-Chunk\-Add\-Listeners}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<${\bf On\-Chunk\-Event\-Fn}$>$ Generatable\-Chunked\-Temperature\-World\-::\-\_\-on\-Chunk\-Add\-Listeners\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_generatable_chunked_temperature_world_a4d8bd2602e4563b1f347e967bc1d3f23}
+\hypertarget{class_generatable_chunked_temperature_world_a4f5ce92a800ce903982033724d025e09}{\index{Generatable\-Chunked\-Temperature\-World@{Generatable\-Chunked\-Temperature\-World}!\-\_\-on\-Chunk\-Remove\-Listeners@{\-\_\-on\-Chunk\-Remove\-Listeners}}
+\index{\-\_\-on\-Chunk\-Remove\-Listeners@{\-\_\-on\-Chunk\-Remove\-Listeners}!GeneratableChunkedTemperatureWorld@{Generatable\-Chunked\-Temperature\-World}}
+\subsubsection[{\-\_\-on\-Chunk\-Remove\-Listeners}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<${\bf On\-Chunk\-Event\-Fn}$>$ Generatable\-Chunked\-Temperature\-World\-::\-\_\-on\-Chunk\-Remove\-Listeners\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_generatable_chunked_temperature_world_a4f5ce92a800ce903982033724d025e09}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/implementation/\hyperlink{_generatable_chunked_temperature_world_8hpp}{Generatable\-Chunked\-Temperature\-World.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/implementation/\hyperlink{_generatable_chunked_temperature_world_8cpp}{Generatable\-Chunked\-Temperature\-World.\-cpp}\end{DoxyCompactItemize}

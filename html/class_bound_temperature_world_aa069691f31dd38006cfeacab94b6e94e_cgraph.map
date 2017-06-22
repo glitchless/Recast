@@ -1,0 +1,9 @@
+<map id="BoundTemperatureWorld::set" name="BoundTemperatureWorld::set">
+<area shape="rect" id="node2" href="$class_bound_temperature_world.html#a6be6a48b1a29f0b1cc4a01b5e0369f9e" title="BoundTemperatureWorld\l::_getIndexInData" alt="" coords="246,125,413,166"/>
+<area shape="rect" id="node3" href="$class_bound_temperature_world.html#a75d2d3c631fb355de63dea3961ecd32b" title="BoundTemperatureWorld::has" alt="" coords="461,5,656,32"/>
+<area shape="rect" id="node4" href="$struct_parallelepiped.html#a8a429bb76e04899bbae19122281a7eb3" title="Parallelepiped::minX" alt="" coords="488,56,629,83"/>
+<area shape="rect" id="node5" href="$struct_parallelepiped.html#a4dd40c102d8f16473ce2de8a5a93e102" title="Parallelepiped::sizeY" alt="" coords="487,107,631,133"/>
+<area shape="rect" id="node6" href="$struct_parallelepiped.html#ab259bb38f5743f1f33738f4774b33848" title="Parallelepiped::sizeZ" alt="" coords="487,157,630,184"/>
+<area shape="rect" id="node7" href="$struct_parallelepiped.html#a901d57db13b000cbf7dcfb9e48bcdee2" title="Parallelepiped::minY" alt="" coords="488,208,629,235"/>
+<area shape="rect" id="node8" href="$struct_parallelepiped.html#aa2c6232df9facd31ecad0aad05697668" title="Parallelepiped::minZ" alt="" coords="489,259,629,285"/>
+</map>

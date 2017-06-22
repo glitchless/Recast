@@ -1,0 +1,6 @@
+<map id="Catch::AssertionResult" name="Catch::AssertionResult">
+<area shape="rect" id="node2" href="$struct_catch_1_1_assertion_result_data.html" title="{Catch::AssertionResultData\n|+ reconstructedExpression\l+ message\l+ resultType\l+ negated\l+ parenthesized\l|+ AssertionResultData()\l+ negate()\l+ reconstructExpression()\l}" alt="" coords="19,280,205,445"/>
+<area shape="rect" id="node3" href="$struct_catch_1_1_decomposed_expression.html" title="{Catch::DecomposedExpression\n||+ ~DecomposedExpression()\l+ isBinaryExpression()\l+ reconstructExpression()\l+ operator+()\l+ operator&#45;()\l+ operator*()\l+ operator/()\l+ operator%()\l+ operator&amp;&amp;()\l+ operator\|\|()\l}" alt="" coords="5,6,211,215"/>
+<area shape="rect" id="node4" href="$struct_catch_1_1_assertion_info.html" title="{Catch::AssertionInfo\n|+ macroName\l+ capturedExpression\l+ resultDisposition\l|+ AssertionInfo()\l+ AssertionInfo()\l}" alt="" coords="235,302,383,423"/>
+<area shape="rect" id="node5" href="$struct_catch_1_1_source_line_info.html" title="{Catch::SourceLineInfo\n|+ file\l+ line\l|+ SourceLineInfo()\l+ SourceLineInfo()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l}" alt="" coords="236,35,388,186"/>
+</map>

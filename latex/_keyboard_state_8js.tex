@@ -1,0 +1,44 @@
+\hypertarget{_keyboard_state_8js}{\section{/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/demo-\/web/\-Keyboard\-State.js File Reference}
+\label{_keyboard_state_8js}\index{/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/demo-\/web/\-Keyboard\-State.\-js@{/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/demo-\/web/\-Keyboard\-State.\-js}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_keyboard_state_8js_aa45fda05d3607810c6db30b1af3caac9}{Keyboard\-State}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_keyboard_state_8js_aa45fda05d3607810c6db30b1af3caac9}{\index{Keyboard\-State.\-js@{Keyboard\-State.\-js}!Keyboard\-State@{Keyboard\-State}}
+\index{Keyboard\-State@{Keyboard\-State}!KeyboardState.js@{Keyboard\-State.\-js}}
+\subsubsection[{Keyboard\-State}]{\setlength{\rightskip}{0pt plus 5cm}Keyboard\-State}}\label{_keyboard_state_8js_aa45fda05d3607810c6db30b1af3caac9}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \textcolor{keyword}{function}()
+\{   
+    
+    document.addEventListener(\textcolor{stringliteral}{"keydown"}, \hyperlink{_keyboard_state_8js_aa45fda05d3607810c6db30b1af3caac9}{KeyboardState}.onKeyDown, \textcolor{keyword}{false});
+    document.addEventListener(\textcolor{stringliteral}{"keyup"},   \hyperlink{_keyboard_state_8js_aa45fda05d3607810c6db30b1af3caac9}{KeyboardState}.onKeyUp,   \textcolor{keyword}{false});  
+\}
+
+
+
+\hyperlink{_keyboard_state_8js_aa45fda05d3607810c6db30b1af3caac9}{KeyboardState}.k = 
+\{  
+    8: \textcolor{stringliteral}{"backspace"},  9: \textcolor{stringliteral}{"tab"},       13: \textcolor{stringliteral}{"enter"},    16: \textcolor{stringliteral}{"shift"}, 
+    17: \textcolor{stringliteral}{"ctrl"},     18: \textcolor{stringliteral}{"alt"},       27: \textcolor{stringliteral}{"esc"},      32: \textcolor{stringliteral}{"space"},
+    33: \textcolor{stringliteral}{"pageup"},   34: \textcolor{stringliteral}{"pagedown"},  35: \textcolor{stringliteral}{"end"},      36: \textcolor{stringliteral}{"home"},
+    37: \textcolor{stringliteral}{"left"},     38: \textcolor{stringliteral}{"up"},        39: \textcolor{stringliteral}{"right"},    40: \textcolor{stringliteral}{"down"},
+    45: \textcolor{stringliteral}{"insert"},   46: \textcolor{stringliteral}{"delete"},   186: \textcolor{stringliteral}{";"},       187: \textcolor{stringliteral}{"="},
+    188: \textcolor{stringliteral}{","},      189: \textcolor{stringliteral}{"-"},        190: \textcolor{stringliteral}{"."},       191: \textcolor{stringliteral}{"/"},
+    219: \textcolor{stringliteral}{"["},      220: \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)"},       221: \textcolor{stringliteral}{"]"},       222: \textcolor{stringliteral}{"'"}
+\}
+
+\hyperlink{_keyboard_state_8js_aa45fda05d3607810c6db30b1af3caac9}{KeyboardState}.status = \{\}
+\end{DoxyCode}
+\begin{DoxyAuthor}{Author}
+Lee Stemkoski
+\end{DoxyAuthor}
+Usage\-: (1) create a global variable\-: var keyboard = new \hyperlink{_keyboard_state_8js_aa45fda05d3607810c6db30b1af3caac9}{Keyboard\-State()}; (2) during main loop\-: keyboard.\-update(); (3) check state of keys\-: keyboard.\-down(\char`\"{}\-A\char`\"{}) -- true for one update cycle after key is pressed keyboard.\-pressed(\char`\"{}\-A\char`\"{}) -- true as long as key is being pressed keyboard.\-up(\char`\"{}\-A\char`\"{}) -- true for one update cycle after key is released
+
+See Keyboard\-State.\-k object data below for names of keys whose state can be polled 

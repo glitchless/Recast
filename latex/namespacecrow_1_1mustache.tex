@@ -1,0 +1,211 @@
+\hypertarget{namespacecrow_1_1mustache}{\section{crow\-:\-:mustache Namespace Reference}
+\label{namespacecrow_1_1mustache}\index{crow\-::mustache@{crow\-::mustache}}
+}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacecrow_1_1mustache_1_1detail}{detail}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcrow_1_1mustache_1_1invalid__template__exception}{invalid\-\_\-template\-\_\-exception}
+\item 
+struct \hyperlink{structcrow_1_1mustache_1_1_action}{Action}
+\item 
+class \hyperlink{classcrow_1_1mustache_1_1template__t}{template\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{namespacecrow_1_1mustache_ae1f8ebbbcd4c41b97a2aebb247a123f9}{context} = \hyperlink{classcrow_1_1json_1_1wvalue}{json\-::wvalue}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667}{Action\-Type} \{ \\*
+\hyperlink{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667afd038fc7f319e48f3115d92bf5bdbef9}{Action\-Type\-::\-Ignore}, 
+\hyperlink{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667ac101058e7ea21bbbf2a5ac893088e90b}{Action\-Type\-::\-Tag}, 
+\hyperlink{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667a6a92aa81e0cd0b1c2f77a84226ad4777}{Action\-Type\-::\-Unescape\-Tag}, 
+\hyperlink{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667a047e46a0bc852354acb31de6a507a3fe}{Action\-Type\-::\-Open\-Block}, 
+\\*
+\hyperlink{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667a470529d743a17635308c52dc50efccd8}{Action\-Type\-::\-Close\-Block}, 
+\hyperlink{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667ab82f53ea35520be1175d4764c22d2b30}{Action\-Type\-::\-Else\-Block}, 
+\hyperlink{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667a44ffd38a6dea695cbe2b34efdcc6cf27}{Action\-Type\-::\-Partial}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrow_1_1mustache_1_1template__t}{template\-\_\-t} \hyperlink{namespacecrow_1_1mustache_abe44de50c382e0d39e7ef5b7d5057ca6}{load} (const std\-::string \&filename)
+\item 
+\hyperlink{classcrow_1_1mustache_1_1template__t}{template\-\_\-t} \hyperlink{namespacecrow_1_1mustache_a5823e2be647059121cc4f0329e44741a}{compile} (const std\-::string \&body)
+\item 
+std\-::string \hyperlink{namespacecrow_1_1mustache_a7e8660fbdeeb994a1f00c704b469c792}{default\-\_\-loader} (const std\-::string \&filename)
+\item 
+void \hyperlink{namespacecrow_1_1mustache_a88cf75099968de883a8e2bf14ce6d1cb}{set\-\_\-base} (const std\-::string \&path)
+\item 
+void \hyperlink{namespacecrow_1_1mustache_a064911bc597a2a849f008b50cdead53e}{set\-\_\-loader} (std\-::function$<$ std\-::string(std\-::string)$>$ loader)
+\item 
+std\-::string \hyperlink{namespacecrow_1_1mustache_a8db3aff497ff60b32321fc0a16274576}{load\-\_\-text} (const std\-::string \&filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacecrow_1_1mustache_ae1f8ebbbcd4c41b97a2aebb247a123f9}{\index{crow\-::mustache@{crow\-::mustache}!context@{context}}
+\index{context@{context}!crow::mustache@{crow\-::mustache}}
+\subsubsection[{context}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf crow\-::mustache\-::context} = typedef {\bf json\-::wvalue}}}\label{namespacecrow_1_1mustache_ae1f8ebbbcd4c41b97a2aebb247a123f9}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667}{\index{crow\-::mustache@{crow\-::mustache}!Action\-Type@{Action\-Type}}
+\index{Action\-Type@{Action\-Type}!crow::mustache@{crow\-::mustache}}
+\subsubsection[{Action\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf crow\-::mustache\-::\-Action\-Type}\hspace{0.3cm}{\ttfamily [strong]}}}\label{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Ignore@{Ignore}!crow\-::mustache@{crow\-::mustache}}\index{crow\-::mustache@{crow\-::mustache}!Ignore@{Ignore}}\item[{\em 
+\hypertarget{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667afd038fc7f319e48f3115d92bf5bdbef9}{Ignore}\label{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667afd038fc7f319e48f3115d92bf5bdbef9}
+}]\index{Tag@{Tag}!crow\-::mustache@{crow\-::mustache}}\index{crow\-::mustache@{crow\-::mustache}!Tag@{Tag}}\item[{\em 
+\hypertarget{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667ac101058e7ea21bbbf2a5ac893088e90b}{Tag}\label{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667ac101058e7ea21bbbf2a5ac893088e90b}
+}]\index{Unescape\-Tag@{Unescape\-Tag}!crow\-::mustache@{crow\-::mustache}}\index{crow\-::mustache@{crow\-::mustache}!Unescape\-Tag@{Unescape\-Tag}}\item[{\em 
+\hypertarget{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667a6a92aa81e0cd0b1c2f77a84226ad4777}{Unescape\-Tag}\label{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667a6a92aa81e0cd0b1c2f77a84226ad4777}
+}]\index{Open\-Block@{Open\-Block}!crow\-::mustache@{crow\-::mustache}}\index{crow\-::mustache@{crow\-::mustache}!Open\-Block@{Open\-Block}}\item[{\em 
+\hypertarget{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667a047e46a0bc852354acb31de6a507a3fe}{Open\-Block}\label{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667a047e46a0bc852354acb31de6a507a3fe}
+}]\index{Close\-Block@{Close\-Block}!crow\-::mustache@{crow\-::mustache}}\index{crow\-::mustache@{crow\-::mustache}!Close\-Block@{Close\-Block}}\item[{\em 
+\hypertarget{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667a470529d743a17635308c52dc50efccd8}{Close\-Block}\label{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667a470529d743a17635308c52dc50efccd8}
+}]\index{Else\-Block@{Else\-Block}!crow\-::mustache@{crow\-::mustache}}\index{crow\-::mustache@{crow\-::mustache}!Else\-Block@{Else\-Block}}\item[{\em 
+\hypertarget{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667ab82f53ea35520be1175d4764c22d2b30}{Else\-Block}\label{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667ab82f53ea35520be1175d4764c22d2b30}
+}]\index{Partial@{Partial}!crow\-::mustache@{crow\-::mustache}}\index{crow\-::mustache@{crow\-::mustache}!Partial@{Partial}}\item[{\em 
+\hypertarget{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667a44ffd38a6dea695cbe2b34efdcc6cf27}{Partial}\label{namespacecrow_1_1mustache_aeb8da2ae9d8d9fe55f6ab0a7455dd667a44ffd38a6dea695cbe2b34efdcc6cf27}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacecrow_1_1mustache_a5823e2be647059121cc4f0329e44741a}{\index{crow\-::mustache@{crow\-::mustache}!compile@{compile}}
+\index{compile@{compile}!crow::mustache@{crow\-::mustache}}
+\subsubsection[{compile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf template\-\_\-t} crow\-::mustache\-::compile (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{body}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacecrow_1_1mustache_a5823e2be647059121cc4f0329e44741a}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecrow_1_1mustache_a5823e2be647059121cc4f0329e44741a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacecrow_1_1mustache_a7e8660fbdeeb994a1f00c704b469c792}{\index{crow\-::mustache@{crow\-::mustache}!default\-\_\-loader@{default\-\_\-loader}}
+\index{default\-\_\-loader@{default\-\_\-loader}!crow::mustache@{crow\-::mustache}}
+\subsubsection[{default\-\_\-loader}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string crow\-::mustache\-::default\-\_\-loader (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacecrow_1_1mustache_a7e8660fbdeeb994a1f00c704b469c792}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecrow_1_1mustache_a7e8660fbdeeb994a1f00c704b469c792_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecrow_1_1mustache_a7e8660fbdeeb994a1f00c704b469c792_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacecrow_1_1mustache_abe44de50c382e0d39e7ef5b7d5057ca6}{\index{crow\-::mustache@{crow\-::mustache}!load@{load}}
+\index{load@{load}!crow::mustache@{crow\-::mustache}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf template\-\_\-t} crow\-::mustache\-::load (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacecrow_1_1mustache_abe44de50c382e0d39e7ef5b7d5057ca6}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecrow_1_1mustache_abe44de50c382e0d39e7ef5b7d5057ca6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacecrow_1_1mustache_a8db3aff497ff60b32321fc0a16274576}{\index{crow\-::mustache@{crow\-::mustache}!load\-\_\-text@{load\-\_\-text}}
+\index{load\-\_\-text@{load\-\_\-text}!crow::mustache@{crow\-::mustache}}
+\subsubsection[{load\-\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string crow\-::mustache\-::load\-\_\-text (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacecrow_1_1mustache_a8db3aff497ff60b32321fc0a16274576}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecrow_1_1mustache_a8db3aff497ff60b32321fc0a16274576_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacecrow_1_1mustache_a88cf75099968de883a8e2bf14ce6d1cb}{\index{crow\-::mustache@{crow\-::mustache}!set\-\_\-base@{set\-\_\-base}}
+\index{set\-\_\-base@{set\-\_\-base}!crow::mustache@{crow\-::mustache}}
+\subsubsection[{set\-\_\-base}]{\setlength{\rightskip}{0pt plus 5cm}void crow\-::mustache\-::set\-\_\-base (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacecrow_1_1mustache_a88cf75099968de883a8e2bf14ce6d1cb}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecrow_1_1mustache_a88cf75099968de883a8e2bf14ce6d1cb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacecrow_1_1mustache_a064911bc597a2a849f008b50cdead53e}{\index{crow\-::mustache@{crow\-::mustache}!set\-\_\-loader@{set\-\_\-loader}}
+\index{set\-\_\-loader@{set\-\_\-loader}!crow::mustache@{crow\-::mustache}}
+\subsubsection[{set\-\_\-loader}]{\setlength{\rightskip}{0pt plus 5cm}void crow\-::mustache\-::set\-\_\-loader (
+\begin{DoxyParamCaption}
+\item[{std\-::function$<$ std\-::string(std\-::string)$>$}]{loader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacecrow_1_1mustache_a064911bc597a2a849f008b50cdead53e}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecrow_1_1mustache_a064911bc597a2a849f008b50cdead53e_cgraph}
+\end{center}
+\end{figure}
+
+

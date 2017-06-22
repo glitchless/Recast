@@ -1,0 +1,5 @@
+<map id="ITemperatureWorldScalableMutableMixin" name="ITemperatureWorldScalableMutableMixin">
+<area shape="rect" id="node2" href="$class_i_temperature_world_scalable_mutable.html" title="{ITemperatureWorldScalable\lMutable\&lt; T \&gt;\n||}" alt="" coords="5,154,187,246"/>
+<area shape="rect" id="node3" href="$class_i_temperature_world_scalable_mutable.html" title="{ITemperatureWorldScalable\lMutable\&lt; ITemperatureWorldScalable\l\&lt; BoundTemperatureWorld \&gt; \&gt;\n||}" alt="" coords="211,147,452,253"/>
+<area shape="rect" id="node4" href="$class_scalable_bound_temperature_world.html" title="{ScalableBoundTemperature\lWorld\n|# _cellScale\l|+ ScalableBoundTemperature\lWorld()\l+ cellScale()\l+ setCellScale()\l+ set()\l+ amplify()\l+ foreach()\l# _findScaledAreaMinByAxis()\l# _findScaledAreaMaxByAxis()\l# _findScaledAreaByAxis()\l# _findScaledArea()\l}" alt="" coords="231,302,433,541"/>
+</map>

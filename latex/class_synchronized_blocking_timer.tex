@@ -1,0 +1,160 @@
+\hypertarget{class_synchronized_blocking_timer}{\section{Synchronized\-Blocking\-Timer Class Reference}
+\label{class_synchronized_blocking_timer}\index{Synchronized\-Blocking\-Timer@{Synchronized\-Blocking\-Timer}}
+}
+
+
+{\ttfamily \#include $<$Synchronized\-Blocking\-Timer.\-hpp$>$}
+
+
+
+Inheritance diagram for Synchronized\-Blocking\-Timer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{class_synchronized_blocking_timer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Synchronized\-Blocking\-Timer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{class_synchronized_blocking_timer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_synchronized_blocking_timer_a574e962e33397f3ad630f071ebe1b00d}{Synchronized\-Blocking\-Timer} (std\-::chrono\-::milliseconds \hyperlink{class_synchronized_blocking_timer_a42156631ff9193cdfffb60b10c40da05}{min\-Delta})
+\item 
+std\-::chrono\-::milliseconds \hyperlink{class_synchronized_blocking_timer_a41956960b15f14341f6018e2f5377f4b}{delta} () const override
+\item 
+std\-::chrono\-::milliseconds \hyperlink{class_synchronized_blocking_timer_a42156631ff9193cdfffb60b10c40da05}{min\-Delta} () const override
+\item 
+double \hyperlink{class_synchronized_blocking_timer_a0a6306ec32b43c92965b5597c60d51fa}{delta\-Float\-Seconds} () const override
+\item 
+void \hyperlink{class_synchronized_blocking_timer_aa6e10fdb7eafa40d99f65756bd0d2e63}{update} () override
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::chrono\-::milliseconds \hyperlink{class_synchronized_blocking_timer_a61a45cf02dfe6a18392f493459d98790}{\-\_\-min\-Delta}
+\item 
+std\-::chrono\-::system\-\_\-clock\-::time\-\_\-point \hyperlink{class_synchronized_blocking_timer_af62f107591c594d9dd0d02ae1704e837}{\-\_\-last\-Update\-Time}
+\item 
+std\-::mutex \hyperlink{class_synchronized_blocking_timer_a58be1f30a605ac30c54590965bbe5ddb}{\-\_\-last\-Update\-Time\-Mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of blocking timer. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_synchronized_blocking_timer_a574e962e33397f3ad630f071ebe1b00d}{\index{Synchronized\-Blocking\-Timer@{Synchronized\-Blocking\-Timer}!Synchronized\-Blocking\-Timer@{Synchronized\-Blocking\-Timer}}
+\index{Synchronized\-Blocking\-Timer@{Synchronized\-Blocking\-Timer}!SynchronizedBlockingTimer@{Synchronized\-Blocking\-Timer}}
+\subsubsection[{Synchronized\-Blocking\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}Synchronized\-Blocking\-Timer\-::\-Synchronized\-Blocking\-Timer (
+\begin{DoxyParamCaption}
+\item[{std\-::chrono\-::milliseconds}]{min\-Delta}
+\end{DoxyParamCaption}
+)}}\label{class_synchronized_blocking_timer_a574e962e33397f3ad630f071ebe1b00d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_synchronized_blocking_timer_a41956960b15f14341f6018e2f5377f4b}{\index{Synchronized\-Blocking\-Timer@{Synchronized\-Blocking\-Timer}!delta@{delta}}
+\index{delta@{delta}!SynchronizedBlockingTimer@{Synchronized\-Blocking\-Timer}}
+\subsubsection[{delta}]{\setlength{\rightskip}{0pt plus 5cm}milliseconds Synchronized\-Blocking\-Timer\-::delta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_synchronized_blocking_timer_a41956960b15f14341f6018e2f5377f4b}
+\begin{DoxyReturn}{Returns}
+Time from last update in milliseconds. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_timer_a32af08e57dcb4f4ecf0651e97422dbde}{I\-Timer}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synchronized_blocking_timer_a41956960b15f14341f6018e2f5377f4b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_synchronized_blocking_timer_a0a6306ec32b43c92965b5597c60d51fa}{\index{Synchronized\-Blocking\-Timer@{Synchronized\-Blocking\-Timer}!delta\-Float\-Seconds@{delta\-Float\-Seconds}}
+\index{delta\-Float\-Seconds@{delta\-Float\-Seconds}!SynchronizedBlockingTimer@{Synchronized\-Blocking\-Timer}}
+\subsubsection[{delta\-Float\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}double Synchronized\-Blocking\-Timer\-::delta\-Float\-Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_synchronized_blocking_timer_a0a6306ec32b43c92965b5597c60d51fa}
+\begin{DoxyReturn}{Returns}
+Time from last update in float-\/number seconds. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_timer_a495a1de5043065f9097c5d3a8b32998a}{I\-Timer}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_synchronized_blocking_timer_a0a6306ec32b43c92965b5597c60d51fa_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_synchronized_blocking_timer_a42156631ff9193cdfffb60b10c40da05}{\index{Synchronized\-Blocking\-Timer@{Synchronized\-Blocking\-Timer}!min\-Delta@{min\-Delta}}
+\index{min\-Delta@{min\-Delta}!SynchronizedBlockingTimer@{Synchronized\-Blocking\-Timer}}
+\subsubsection[{min\-Delta}]{\setlength{\rightskip}{0pt plus 5cm}milliseconds Synchronized\-Blocking\-Timer\-::min\-Delta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_synchronized_blocking_timer_a42156631ff9193cdfffb60b10c40da05}
+\begin{DoxyReturn}{Returns}
+Minimum possible value of {\ttfamily delta}. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_timer_blockable_mixin_a9480f79463ced5d05c05bd0dff939442}{I\-Timer\-Blockable\-Mixin}.
+
+\hypertarget{class_synchronized_blocking_timer_aa6e10fdb7eafa40d99f65756bd0d2e63}{\index{Synchronized\-Blocking\-Timer@{Synchronized\-Blocking\-Timer}!update@{update}}
+\index{update@{update}!SynchronizedBlockingTimer@{Synchronized\-Blocking\-Timer}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Synchronized\-Blocking\-Timer\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_synchronized_blocking_timer_aa6e10fdb7eafa40d99f65756bd0d2e63}
+Saves update, saves the \char`\"{}tick\char`\"{}. It will influence value of {\ttfamily delta}. 
+
+Implements \hyperlink{class_i_timer_afa6c0d962817423715ce9f944f1b6a2c}{I\-Timer}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_synchronized_blocking_timer_af62f107591c594d9dd0d02ae1704e837}{\index{Synchronized\-Blocking\-Timer@{Synchronized\-Blocking\-Timer}!\-\_\-last\-Update\-Time@{\-\_\-last\-Update\-Time}}
+\index{\-\_\-last\-Update\-Time@{\-\_\-last\-Update\-Time}!SynchronizedBlockingTimer@{Synchronized\-Blocking\-Timer}}
+\subsubsection[{\-\_\-last\-Update\-Time}]{\setlength{\rightskip}{0pt plus 5cm}std\-::chrono\-::system\-\_\-clock\-::time\-\_\-point Synchronized\-Blocking\-Timer\-::\-\_\-last\-Update\-Time\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_synchronized_blocking_timer_af62f107591c594d9dd0d02ae1704e837}
+\hypertarget{class_synchronized_blocking_timer_a58be1f30a605ac30c54590965bbe5ddb}{\index{Synchronized\-Blocking\-Timer@{Synchronized\-Blocking\-Timer}!\-\_\-last\-Update\-Time\-Mutex@{\-\_\-last\-Update\-Time\-Mutex}}
+\index{\-\_\-last\-Update\-Time\-Mutex@{\-\_\-last\-Update\-Time\-Mutex}!SynchronizedBlockingTimer@{Synchronized\-Blocking\-Timer}}
+\subsubsection[{\-\_\-last\-Update\-Time\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex Synchronized\-Blocking\-Timer\-::\-\_\-last\-Update\-Time\-Mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}}\label{class_synchronized_blocking_timer_a58be1f30a605ac30c54590965bbe5ddb}
+\hypertarget{class_synchronized_blocking_timer_a61a45cf02dfe6a18392f493459d98790}{\index{Synchronized\-Blocking\-Timer@{Synchronized\-Blocking\-Timer}!\-\_\-min\-Delta@{\-\_\-min\-Delta}}
+\index{\-\_\-min\-Delta@{\-\_\-min\-Delta}!SynchronizedBlockingTimer@{Synchronized\-Blocking\-Timer}}
+\subsubsection[{\-\_\-min\-Delta}]{\setlength{\rightskip}{0pt plus 5cm}std\-::chrono\-::milliseconds Synchronized\-Blocking\-Timer\-::\-\_\-min\-Delta\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_synchronized_blocking_timer_a61a45cf02dfe6a18392f493459d98790}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/implementation/\hyperlink{_synchronized_blocking_timer_8hpp}{Synchronized\-Blocking\-Timer.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/implementation/\hyperlink{_synchronized_blocking_timer_8cpp}{Synchronized\-Blocking\-Timer.\-cpp}\end{DoxyCompactItemize}

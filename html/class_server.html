@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -73,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -136,11 +137,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab103cde2777536fa63b2746b6e0a98d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_players_online.html">PlayersOnline</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#ab103cde2777536fa63b2746b6e0a98d4">getPlayers</a> () const </td></tr>
 <tr class="separator:ab103cde2777536fa63b2746b6e0a98d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adea320b40e941db6ab354c63de9128e3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr<br class="typebreak"/>
-&lt; ITemperatureWorldChunkableObservable<br class="typebreak"/>
-&lt; ITemperatureWorldChunkableGeneratable<br class="typebreak"/>
-&lt; ITemperatureWorldChunkableMutable<br class="typebreak"/>
-&lt; ITemperatureWorldChunkable<br class="typebreak"/>
-&lt; ITemperatureWorld &gt; &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#adea320b40e941db6ab354c63de9128e3">getTemperatureWorld</a> () const </td></tr>
+&lt; <a class="el" href="class_i_temperature_world_chunkable_observable.html">ITemperatureWorldChunkableObservable</a><br class="typebreak"/>
+&lt; <a class="el" href="class_i_temperature_world_chunkable_generatable.html">ITemperatureWorldChunkableGeneratable</a><br class="typebreak"/>
+&lt; <a class="el" href="class_i_temperature_world_chunkable_mutable.html">ITemperatureWorldChunkableMutable</a><br class="typebreak"/>
+&lt; <a class="el" href="class_i_temperature_world_chunkable.html">ITemperatureWorldChunkable</a><br class="typebreak"/>
+&lt; <a class="el" href="class_i_temperature_world.html">ITemperatureWorld</a> &gt; &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#adea320b40e941db6ab354c63de9128e3">getTemperatureWorld</a> () const </td></tr>
 <tr class="separator:adea320b40e941db6ab354c63de9128e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -300,7 +301,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;ITemperatureWorldChunkableObservable&lt;ITemperatureWorldChunkableGeneratable&lt;ITemperatureWorldChunkableMutable&lt;ITemperatureWorldChunkable&lt;ITemperatureWorld&gt; &gt; &gt; &gt; &gt; Server::getTemperatureWorld </td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_i_temperature_world_chunkable_observable.html">ITemperatureWorldChunkableObservable</a>&lt;<a class="el" href="class_i_temperature_world_chunkable_generatable.html">ITemperatureWorldChunkableGeneratable</a>&lt;<a class="el" href="class_i_temperature_world_chunkable_mutable.html">ITemperatureWorldChunkableMutable</a>&lt;<a class="el" href="class_i_temperature_world_chunkable.html">ITemperatureWorldChunkable</a>&lt;<a class="el" href="class_i_temperature_world.html">ITemperatureWorld</a>&gt; &gt; &gt; &gt; &gt; Server::getTemperatureWorld </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -333,7 +334,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph.png" border="0" usemap="#class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph" alt=""/></div>
 <map name="class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph" id="class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph">
-<area shape="rect" id="node2" href="_server_8cpp.html#a4fa9798662b6f85f704142579620acd0" title="initLogger" alt="" coords="195,5,274,32"/><area shape="rect" id="node3" href="class_input_thread.html#ac33f0f934c6dc40c7747b96e8b60a736" title="InputThread::init" alt="" coords="177,56,293,83"/></map>
+<area shape="rect" id="node2" href="_server_8cpp.html#a4fa9798662b6f85f704142579620acd0" title="initLogger" alt="" coords="239,5,318,32"/><area shape="rect" id="node3" href="class_input_thread.html#ac33f0f934c6dc40c7747b96e8b60a736" title="InputThread::init" alt="" coords="221,56,337,83"/><area shape="rect" id="node4" href="class_basic_timer.html#abf76823ef1c782a0c6d49af2652b5271" title="BasicTimer::update" alt="" coords="211,107,346,133"/><area shape="rect" id="node5" href="class_basic_timer.html#afbe3d01b15f26573eb12c04ae7c28684" title="BasicTimer::deltaFloatSeconds" alt="" coords="177,157,381,184"/><area shape="rect" id="node6" href="class_basic_timer.html#a49bc91a549323a1a7fc6b7d9ec727174" title="BasicTimer::delta" alt="" coords="430,157,554,184"/></map>
 </div>
 </p>
 

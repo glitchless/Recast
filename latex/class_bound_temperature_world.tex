@@ -1,0 +1,436 @@
+\hypertarget{class_bound_temperature_world}{\section{Bound\-Temperature\-World Class Reference}
+\label{class_bound_temperature_world}\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}}
+}
+
+
+{\ttfamily \#include $<$Bound\-Temperature\-World.\-hpp$>$}
+
+
+
+Inheritance diagram for Bound\-Temperature\-World\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_bound_temperature_world__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bound\-Temperature\-World\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_bound_temperature_world__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bound_temperature_world_ab1843b429dc37c0c09ef0b454b9ea908}{Bound\-Temperature\-World} (\hyperlink{struct_parallelepiped}{Parallelepiped} \hyperlink{class_bound_temperature_world_a3351693a7d184365da5dfb5d833a0cb6}{bounds})
+\item 
+\hyperlink{class_bound_temperature_world_ae022092cb3feca841a569a1be7ab650a}{Bound\-Temperature\-World} (const \hyperlink{class_bound_temperature_world}{Bound\-Temperature\-World} \&other)
+\item 
+\hyperlink{class_bound_temperature_world_ae8406206a559d955ce53d18f4e2ec45b}{Bound\-Temperature\-World} (\hyperlink{class_bound_temperature_world}{Bound\-Temperature\-World} \&\&other)
+\item 
+\hyperlink{class_bound_temperature_world}{Bound\-Temperature\-World} \& \hyperlink{class_bound_temperature_world_a0501d4803249b0724ee87cd125f81481}{operator=} (\hyperlink{class_bound_temperature_world}{Bound\-Temperature\-World} other)
+\item 
+bool \hyperlink{class_bound_temperature_world_a75d2d3c631fb355de63dea3961ecd32b}{has} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) const noexceptoverride
+\item 
+\hyperlink{struct_temperature}{Temperature} \hyperlink{class_bound_temperature_world_a1a668e9632e4179029cabad5052428fc}{get} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) const override
+\item 
+void \hyperlink{class_bound_temperature_world_aa069691f31dd38006cfeacab94b6e94e}{set} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, \hyperlink{struct_temperature}{Temperature} temperature) override
+\item 
+void \hyperlink{class_bound_temperature_world_a7b49bd6e07cc78f3c7a3a722d0ec5bac}{amplify} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, \hyperlink{struct_temperature}{Temperature} temperature) override
+\item 
+void \hyperlink{class_bound_temperature_world_afac2a24af176488487ef7aaa62936ee7}{foreach} (\hyperlink{class_i_temperature_world_boundable_mixin_a370c20d79642d15e97843da972d87ba9}{Foreach\-Cell\-Fn} func) const override
+\item 
+\hyperlink{struct_parallelepiped}{Parallelepiped} \hyperlink{class_bound_temperature_world_a3351693a7d184365da5dfb5d833a0cb6}{bounds} () const noexceptoverride
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual size\-\_\-t \hyperlink{class_bound_temperature_world_a6be6a48b1a29f0b1cc4a01b5e0369f9e}{\-\_\-get\-Index\-In\-Data} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_parallelepiped}{Parallelepiped} \hyperlink{class_bound_temperature_world_a4e460fde774b68cb821e6b263e71448b}{\-\_\-bounds}
+\item 
+std\-::vector$<$ \hyperlink{struct_temperature}{Temperature} $>$ \hyperlink{class_bound_temperature_world_a7c0722e68bbe02de068ccb6244522c7a}{\-\_\-data}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_bound_temperature_world_a684a1f2310369a9bcf86e6c8e4384e51}{swap} (\hyperlink{class_bound_temperature_world}{Bound\-Temperature\-World} \&first, \hyperlink{class_bound_temperature_world}{Bound\-Temperature\-World} \&second)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of temperature world with bounds. It's backed by {\ttfamily std\-::vector}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_bound_temperature_world_ab1843b429dc37c0c09ef0b454b9ea908}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!Bound\-Temperature\-World@{Bound\-Temperature\-World}}
+\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{Bound\-Temperature\-World}]{\setlength{\rightskip}{0pt plus 5cm}Bound\-Temperature\-World\-::\-Bound\-Temperature\-World (
+\begin{DoxyParamCaption}
+\item[{{\bf Parallelepiped}}]{bounds}
+\end{DoxyParamCaption}
+)}}\label{class_bound_temperature_world_ab1843b429dc37c0c09ef0b454b9ea908}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bound_temperature_world_ab1843b429dc37c0c09ef0b454b9ea908_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_bound_temperature_world_ae022092cb3feca841a569a1be7ab650a}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!Bound\-Temperature\-World@{Bound\-Temperature\-World}}
+\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{Bound\-Temperature\-World}]{\setlength{\rightskip}{0pt plus 5cm}Bound\-Temperature\-World\-::\-Bound\-Temperature\-World (
+\begin{DoxyParamCaption}
+\item[{const {\bf Bound\-Temperature\-World} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_bound_temperature_world_ae022092cb3feca841a569a1be7ab650a}
+\hypertarget{class_bound_temperature_world_ae8406206a559d955ce53d18f4e2ec45b}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!Bound\-Temperature\-World@{Bound\-Temperature\-World}}
+\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{Bound\-Temperature\-World}]{\setlength{\rightskip}{0pt plus 5cm}Bound\-Temperature\-World\-::\-Bound\-Temperature\-World (
+\begin{DoxyParamCaption}
+\item[{{\bf Bound\-Temperature\-World} \&\&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_bound_temperature_world_ae8406206a559d955ce53d18f4e2ec45b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_bound_temperature_world_a6be6a48b1a29f0b1cc4a01b5e0369f9e}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!\-\_\-get\-Index\-In\-Data@{\-\_\-get\-Index\-In\-Data}}
+\index{\-\_\-get\-Index\-In\-Data@{\-\_\-get\-Index\-In\-Data}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{\-\_\-get\-Index\-In\-Data}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Bound\-Temperature\-World\-::\-\_\-get\-Index\-In\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_bound_temperature_world_a6be6a48b1a29f0b1cc4a01b5e0369f9e}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bound_temperature_world_a6be6a48b1a29f0b1cc4a01b5e0369f9e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bound_temperature_world_a6be6a48b1a29f0b1cc4a01b5e0369f9e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_bound_temperature_world_a7b49bd6e07cc78f3c7a3a722d0ec5bac}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!amplify@{amplify}}
+\index{amplify@{amplify}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{amplify}]{\setlength{\rightskip}{0pt plus 5cm}void Bound\-Temperature\-World\-::amplify (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z, }
+\item[{{\bf Temperature}}]{temperature}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bound_temperature_world_a7b49bd6e07cc78f3c7a3a722d0ec5bac}
+Adds or substracts temperature value from existing temperature value at the point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+{\em temperature} & \hyperlink{struct_temperature}{Temperature} difference. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_temperature_world_ac5a8a92e7141b2e2c2e3d66ba73b7c1e}{I\-Temperature\-World}.
+
+
+
+Reimplemented in \hyperlink{class_scalable_bound_temperature_world_ab9602b36759aa857910e03856344759d}{Scalable\-Bound\-Temperature\-World}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bound_temperature_world_a7b49bd6e07cc78f3c7a3a722d0ec5bac_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{class_bound_temperature_world_a7b49bd6e07cc78f3c7a3a722d0ec5bac_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_bound_temperature_world_a3351693a7d184365da5dfb5d833a0cb6}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!bounds@{bounds}}
+\index{bounds@{bounds}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{bounds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parallelepiped} Bound\-Temperature\-World\-::bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_bound_temperature_world_a3351693a7d184365da5dfb5d833a0cb6}
+\begin{DoxyReturn}{Returns}
+Bounds of this temperature world. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_temperature_world_boundable_mixin_a4811acd7f2bade56752c6326b0860f0c}{I\-Temperature\-World\-Boundable\-Mixin}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{class_bound_temperature_world_a3351693a7d184365da5dfb5d833a0cb6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_bound_temperature_world_afac2a24af176488487ef7aaa62936ee7}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!foreach@{foreach}}
+\index{foreach@{foreach}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{foreach}]{\setlength{\rightskip}{0pt plus 5cm}void Bound\-Temperature\-World\-::foreach (
+\begin{DoxyParamCaption}
+\item[{{\bf Foreach\-Cell\-Fn}}]{func}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bound_temperature_world_afac2a24af176488487ef7aaa62936ee7}
+Loops over each point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Function to execute at each point. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_temperature_world_boundable_mixin_ac350b2e2ea22a229e6543d55e3217317}{I\-Temperature\-World\-Boundable\-Mixin}.
+
+
+
+Reimplemented in \hyperlink{class_scalable_bound_temperature_world_a57f60178c88b2cffca11a7f21c5c11c7}{Scalable\-Bound\-Temperature\-World}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bound_temperature_world_afac2a24af176488487ef7aaa62936ee7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_bound_temperature_world_a1a668e9632e4179029cabad5052428fc}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!get@{get}}
+\index{get@{get}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Temperature} Bound\-Temperature\-World\-::get (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bound_temperature_world_a1a668e9632e4179029cabad5052428fc}
+Returns temperature at the point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_temperature}{Temperature} at the point. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_temperature_world_a9993df60754c2c89597bd8137568c12f}{I\-Temperature\-World}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bound_temperature_world_a1a668e9632e4179029cabad5052428fc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_bound_temperature_world_a1a668e9632e4179029cabad5052428fc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_bound_temperature_world_a75d2d3c631fb355de63dea3961ecd32b}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!has@{has}}
+\index{has@{has}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{has}]{\setlength{\rightskip}{0pt plus 5cm}bool Bound\-Temperature\-World\-::has (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_bound_temperature_world_a75d2d3c631fb355de63dea3961ecd32b}
+Tells whether temperature at the point is accessible. This method doesn't throw exceptions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the point is accessible. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_temperature_world_a6c498247ed71d9ad037dd0c1b4779f81}{I\-Temperature\-World}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bound_temperature_world_a75d2d3c631fb355de63dea3961ecd32b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_bound_temperature_world_a0501d4803249b0724ee87cd125f81481}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!operator=@{operator=}}
+\index{operator=@{operator=}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bound\-Temperature\-World} \& Bound\-Temperature\-World\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Bound\-Temperature\-World}}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_bound_temperature_world_a0501d4803249b0724ee87cd125f81481}
+\hypertarget{class_bound_temperature_world_aa069691f31dd38006cfeacab94b6e94e}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!set@{set}}
+\index{set@{set}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void Bound\-Temperature\-World\-::set (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z, }
+\item[{{\bf Temperature}}]{temperature}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bound_temperature_world_aa069691f31dd38006cfeacab94b6e94e}
+Sets temperature at the point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+{\em temperature} & \hyperlink{struct_temperature}{Temperature} to set. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_temperature_world_ab23db7ec9a890d6dbb172b26c2fd3d00}{I\-Temperature\-World}.
+
+
+
+Reimplemented in \hyperlink{class_scalable_bound_temperature_world_ade4ecf303ae025e824c0bd5ecd2e2ca7}{Scalable\-Bound\-Temperature\-World}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bound_temperature_world_aa069691f31dd38006cfeacab94b6e94e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_bound_temperature_world_aa069691f31dd38006cfeacab94b6e94e_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_bound_temperature_world_a684a1f2310369a9bcf86e6c8e4384e51}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!swap@{swap}}
+\index{swap@{swap}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}void swap (
+\begin{DoxyParamCaption}
+\item[{{\bf Bound\-Temperature\-World} \&}]{first, }
+\item[{{\bf Bound\-Temperature\-World} \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_bound_temperature_world_a684a1f2310369a9bcf86e6c8e4384e51}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_bound_temperature_world_a4e460fde774b68cb821e6b263e71448b}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!\-\_\-bounds@{\-\_\-bounds}}
+\index{\-\_\-bounds@{\-\_\-bounds}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{\-\_\-bounds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parallelepiped} Bound\-Temperature\-World\-::\-\_\-bounds\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bound_temperature_world_a4e460fde774b68cb821e6b263e71448b}
+\hypertarget{class_bound_temperature_world_a7c0722e68bbe02de068ccb6244522c7a}{\index{Bound\-Temperature\-World@{Bound\-Temperature\-World}!\-\_\-data@{\-\_\-data}}
+\index{\-\_\-data@{\-\_\-data}!BoundTemperatureWorld@{Bound\-Temperature\-World}}
+\subsubsection[{\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf Temperature}$>$ Bound\-Temperature\-World\-::\-\_\-data\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bound_temperature_world_a7c0722e68bbe02de068ccb6244522c7a}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/implementation/\hyperlink{_bound_temperature_world_8hpp}{Bound\-Temperature\-World.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/implementation/\hyperlink{_bound_temperature_world_8cpp}{Bound\-Temperature\-World.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{classcrow_1_1_server}{\section{crow\-:\-:Server$<$ Handler, Adaptor, Middlewares $>$ Class Template Reference}
+\label{classcrow_1_1_server}\index{crow\-::\-Server$<$ Handler, Adaptor, Middlewares $>$@{crow\-::\-Server$<$ Handler, Adaptor, Middlewares $>$}}
+}
+
+
+{\ttfamily \#include $<$crow\-\_\-all.\-h$>$}
+
+
+
+Collaboration diagram for crow\-:\-:Server$<$ Handler, Adaptor, Middlewares $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classcrow_1_1_server__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrow_1_1_server_a6f297dc21678925d2b78143f33cbb4f4}{Server} (Handler $\ast$handler, std\-::string bindaddr, uint16\-\_\-t port, std\-::tuple$<$ Middlewares...$>$ $\ast$middlewares=nullptr, uint16\-\_\-t concurrency=1, typename Adaptor\-::context $\ast$adaptor\-\_\-ctx=nullptr)
+\item 
+void \hyperlink{classcrow_1_1_server_abcd3d2395e5ca2a44fd58eacfbb1ed65}{set\-\_\-tick\-\_\-function} (std\-::chrono\-::milliseconds d, std\-::function$<$ void()$>$ f)
+\item 
+void \hyperlink{classcrow_1_1_server_a932e5790236d8f2dc4c973e357c6bd43}{on\-\_\-tick} ()
+\item 
+void \hyperlink{classcrow_1_1_server_a90b072e9143f9417ce9dd30510a07495}{run} ()
+\item 
+void \hyperlink{classcrow_1_1_server_aff2067a94286dd5a584a187cbce369f5}{stop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrow_1_1_server_a6f297dc21678925d2b78143f33cbb4f4}{\index{crow\-::\-Server@{crow\-::\-Server}!Server@{Server}}
+\index{Server@{Server}!crow::Server@{crow\-::\-Server}}
+\subsubsection[{Server}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler , typename Adaptor  = Socket\-Adaptor, typename... Middlewares$>$ {\bf crow\-::\-Server}$<$ Handler, Adaptor, Middlewares $>$\-::{\bf Server} (
+\begin{DoxyParamCaption}
+\item[{Handler $\ast$}]{handler, }
+\item[{std\-::string}]{bindaddr, }
+\item[{uint16\-\_\-t}]{port, }
+\item[{std\-::tuple$<$ Middlewares...$>$ $\ast$}]{middlewares = {\ttfamily nullptr}, }
+\item[{uint16\-\_\-t}]{concurrency = {\ttfamily 1}, }
+\item[{typename Adaptor\-::context $\ast$}]{adaptor\-\_\-ctx = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_server_a6f297dc21678925d2b78143f33cbb4f4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrow_1_1_server_a932e5790236d8f2dc4c973e357c6bd43}{\index{crow\-::\-Server@{crow\-::\-Server}!on\-\_\-tick@{on\-\_\-tick}}
+\index{on\-\_\-tick@{on\-\_\-tick}!crow::Server@{crow\-::\-Server}}
+\subsubsection[{on\-\_\-tick}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler , typename Adaptor  = Socket\-Adaptor, typename... Middlewares$>$ void {\bf crow\-::\-Server}$<$ Handler, Adaptor, Middlewares $>$\-::on\-\_\-tick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_server_a932e5790236d8f2dc4c973e357c6bd43}
+\hypertarget{classcrow_1_1_server_a90b072e9143f9417ce9dd30510a07495}{\index{crow\-::\-Server@{crow\-::\-Server}!run@{run}}
+\index{run@{run}!crow::Server@{crow\-::\-Server}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler , typename Adaptor  = Socket\-Adaptor, typename... Middlewares$>$ void {\bf crow\-::\-Server}$<$ Handler, Adaptor, Middlewares $>$\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_server_a90b072e9143f9417ce9dd30510a07495}
+\hypertarget{classcrow_1_1_server_abcd3d2395e5ca2a44fd58eacfbb1ed65}{\index{crow\-::\-Server@{crow\-::\-Server}!set\-\_\-tick\-\_\-function@{set\-\_\-tick\-\_\-function}}
+\index{set\-\_\-tick\-\_\-function@{set\-\_\-tick\-\_\-function}!crow::Server@{crow\-::\-Server}}
+\subsubsection[{set\-\_\-tick\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler , typename Adaptor  = Socket\-Adaptor, typename... Middlewares$>$ void {\bf crow\-::\-Server}$<$ Handler, Adaptor, Middlewares $>$\-::set\-\_\-tick\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{std\-::chrono\-::milliseconds}]{d, }
+\item[{std\-::function$<$ void()$>$}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_server_abcd3d2395e5ca2a44fd58eacfbb1ed65}
+\hypertarget{classcrow_1_1_server_aff2067a94286dd5a584a187cbce369f5}{\index{crow\-::\-Server@{crow\-::\-Server}!stop@{stop}}
+\index{stop@{stop}!crow::Server@{crow\-::\-Server}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler , typename Adaptor  = Socket\-Adaptor, typename... Middlewares$>$ void {\bf crow\-::\-Server}$<$ Handler, Adaptor, Middlewares $>$\-::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_server_aff2067a94286dd5a584a187cbce369f5}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/lib/\hyperlink{crow__all_8h}{crow\-\_\-all.\-h}\end{DoxyCompactItemize}

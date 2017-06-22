@@ -1,0 +1,6 @@
+<map id="ScalableBoundTemperatureWorld::setCellScale" name="ScalableBoundTemperatureWorld::setCellScale">
+<area shape="rect" id="node2" href="$struct_int_scale_parallelepiped.html#ad6a3f505f9f24e4cbd160767935dbc8f" title="IntScaleParallelepiped::x" alt="" coords="238,5,405,32"/>
+<area shape="rect" id="node3" href="$struct_int_scale.html#a8e29056cca4118d125a425a9380d9260" title="IntScale::isUpscale" alt="" coords="253,56,389,83"/>
+<area shape="rect" id="node4" href="$struct_int_scale_parallelepiped.html#a417b098653c51f84fcb2b330f3a835a2" title="IntScaleParallelepiped::y" alt="" coords="238,107,405,133"/>
+<area shape="rect" id="node5" href="$struct_int_scale_parallelepiped.html#a464fa29bb3540786b028ec12c954c6f4" title="IntScaleParallelepiped::z" alt="" coords="238,157,405,184"/>
+</map>

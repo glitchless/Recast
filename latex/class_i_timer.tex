@@ -1,0 +1,98 @@
+\hypertarget{class_i_timer}{\section{I\-Timer Class Reference}
+\label{class_i_timer}\index{I\-Timer@{I\-Timer}}
+}
+
+
+{\ttfamily \#include $<$I\-Timer.\-hpp$>$}
+
+
+
+Inheritance diagram for I\-Timer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_timer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for I\-Timer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{class_i_timer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_i_timer_abf747b6dee9ec16fa5594696dbbb77e6}{$\sim$\-I\-Timer} () noexcept=default
+\item 
+virtual std\-::chrono\-::milliseconds \hyperlink{class_i_timer_a32af08e57dcb4f4ecf0651e97422dbde}{delta} () const =0
+\item 
+virtual double \hyperlink{class_i_timer_a495a1de5043065f9097c5d3a8b32998a}{delta\-Float\-Seconds} () const =0
+\item 
+virtual void \hyperlink{class_i_timer_afa6c0d962817423715ce9f944f1b6a2c}{update} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface. Measures time. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_i_timer_abf747b6dee9ec16fa5594696dbbb77e6}{\index{I\-Timer@{I\-Timer}!$\sim$\-I\-Timer@{$\sim$\-I\-Timer}}
+\index{$\sim$\-I\-Timer@{$\sim$\-I\-Timer}!ITimer@{I\-Timer}}
+\subsubsection[{$\sim$\-I\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}virtual I\-Timer\-::$\sim$\-I\-Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}, {\ttfamily [noexcept]}}}\label{class_i_timer_abf747b6dee9ec16fa5594696dbbb77e6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i_timer_a32af08e57dcb4f4ecf0651e97422dbde}{\index{I\-Timer@{I\-Timer}!delta@{delta}}
+\index{delta@{delta}!ITimer@{I\-Timer}}
+\subsubsection[{delta}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::chrono\-::milliseconds I\-Timer\-::delta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_timer_a32af08e57dcb4f4ecf0651e97422dbde}
+\begin{DoxyReturn}{Returns}
+Time from last update in milliseconds. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_synchronized_blocking_timer_a41956960b15f14341f6018e2f5377f4b}{Synchronized\-Blocking\-Timer}, and \hyperlink{class_basic_timer_a49bc91a549323a1a7fc6b7d9ec727174}{Basic\-Timer}.
+
+\hypertarget{class_i_timer_a495a1de5043065f9097c5d3a8b32998a}{\index{I\-Timer@{I\-Timer}!delta\-Float\-Seconds@{delta\-Float\-Seconds}}
+\index{delta\-Float\-Seconds@{delta\-Float\-Seconds}!ITimer@{I\-Timer}}
+\subsubsection[{delta\-Float\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}virtual double I\-Timer\-::delta\-Float\-Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_timer_a495a1de5043065f9097c5d3a8b32998a}
+\begin{DoxyReturn}{Returns}
+Time from last update in float-\/number seconds. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_synchronized_blocking_timer_a0a6306ec32b43c92965b5597c60d51fa}{Synchronized\-Blocking\-Timer}, and \hyperlink{class_basic_timer_afbe3d01b15f26573eb12c04ae7c28684}{Basic\-Timer}.
+
+\hypertarget{class_i_timer_afa6c0d962817423715ce9f944f1b6a2c}{\index{I\-Timer@{I\-Timer}!update@{update}}
+\index{update@{update}!ITimer@{I\-Timer}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Timer\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_timer_afa6c0d962817423715ce9f944f1b6a2c}
+Saves update, saves the \char`\"{}tick\char`\"{}. It will influence value of {\ttfamily delta}. 
+
+Implemented in \hyperlink{class_synchronized_blocking_timer_aa6e10fdb7eafa40d99f65756bd0d2e63}{Synchronized\-Blocking\-Timer}, and \hyperlink{class_basic_timer_abf76823ef1c782a0c6d49af2652b5271}{Basic\-Timer}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/interfaces/\hyperlink{_i_timer_8hpp}{I\-Timer.\-hpp}\end{DoxyCompactItemize}

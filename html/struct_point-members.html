@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -73,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,10 +92,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="struct_point.html">Point</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="struct_point.html#a4d43f5247afe8c85c6da1aa39dbcc738">Point</a>(double x, double y, double z)</td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_point.html#a74492d96f1b1efe6813f748809a3679a">_x</a></td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_point.html#a98147cc10663ee1581decea4c8c0ba3d">_y</a></td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_point.html#a9ae6adfd6a9d2dc2269326b9857611a5">_z</a></td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_point.html#ace1f99f1c41319502f2377569a67c3ca">operator!=</a>(const Point &amp;other) const noexcept</td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_point.html#a4fcabfb4a4f656779cc2ea87d1564a37">operator==</a>(const Point &amp;other) const noexcept</td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_point.html#a4d43f5247afe8c85c6da1aa39dbcc738">Point</a>(double x, double y, double z)</td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_point.html#abcbc44cd825a9fc26fc9027256cf4cb4">Point</a>(Coord x, Coord y, Coord z)</td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="struct_point.html#ab99c56589bc8ad5fa5071387110a5bc7">x</a></td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="struct_point.html#afa38be143ae800e6ad69ce8ed4df62d8">y</a></td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_point.html#add97959f26c755fb67ca78ebfb616aaa">x</a>() const noexcept</td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_point.html#afa38be143ae800e6ad69ce8ed4df62d8">y</a></td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_point.html#a5c9b4a820e0b6cde951c68a0244ee39e">y</a>() const noexcept</td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="struct_point.html#a05ba3b1dfcb19430582ae953cbbfbded">z</a></td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_point.html#a848473c2345430a5bcd4d87a8e46f264">z</a>() const noexcept</td><td class="entry"><a class="el" href="struct_point.html">Point</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

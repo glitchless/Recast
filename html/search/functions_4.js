@@ -1,12 +1,23 @@
 var searchData=
 [
-  ['icommand',['ICommand',['../class_i_command.html#acf142bc073aaf829663ba395bacd34cc',1,'ICommand::ICommand()'],['../class_i_command.html#a1a3e297aea5c94d785060e49801860dc',1,'ICommand::ICommand(const ICommand &amp;other)']]],
-  ['init',['init',['../class_input_thread.html#ac33f0f934c6dc40c7747b96e8b60a736',1,'InputThread']]],
-  ['initlogger',['initLogger',['../_server_8cpp.html#a4fa9798662b6f85f704142579620acd0',1,'Server.cpp']]],
-  ['initserver',['initServer',['../class_server.html#a7bc5c00fa3ae1ddfae71274ee7d025ea',1,'Server']]],
-  ['inputthread',['InputThread',['../class_input_thread.html#a79ba754c063684c11485a951fac84e8b',1,'InputThread::InputThread(InputThread &amp;&amp;thr1)'],['../class_input_thread.html#a486139cd9105ce017bcf930dc3e0747b',1,'InputThread::InputThread(Server *srv)']]],
-  ['instance',['instance',['../class_config.html#abf1d4539011ef83cac0fef2ac864a3a9',1,'Config']]],
-  ['isop',['isOP',['../class_i_command_sender.html#afe930466c485c8d9a67f624dc1dcac5e',1,'ICommandSender::isOP()'],['../class_server.html#a7b6439f1e85af364215c544d675ea972',1,'Server::isOP()']]],
-  ['isrunning',['isRunning',['../class_server.html#ab8c22a0d6809e9aa84bebce478ba7bc5',1,'Server']]],
-  ['isvalid',['isValid',['../class_i_command.html#acb0beea12bd5ec963884dc35d4d48014',1,'ICommand::isValid()'],['../class_stop_command.html#a0f9a9fd9bb238524e1be3ea25b9bbb79',1,'StopCommand::isValid()']]]
+  ['d',['d',['../classcrow_1_1json_1_1rvalue.html#a29172ace3a8cf89841096e2e964cde59',1,'crow::json::rvalue']]],
+  ['debug_5fprint',['debug_print',['../structcrow_1_1routing__params.html#af2e694039be3d508c3f8be5369158359',1,'crow::routing_params::debug_print()'],['../classcrow_1_1_trie.html#a9ac17b6ae0f96dc94b595bb704a89101',1,'crow::Trie::debug_print()'],['../classcrow_1_1_router.html#a61157adad80f901413a4023d8fb0fd9d',1,'crow::Router::debug_print()'],['../classcrow_1_1_crow.html#a839c1e6f82d577308eb6f0d4948a4fbb',1,'crow::Crow::debug_print()']]],
+  ['default_5fconfig',['DEFAULT_CONFIG',['../_config_8cpp.html#ab330b966aa1026a8014370d5732fae26',1,'Config.cpp']]],
+  ['default_5ffolder',['DEFAULT_FOLDER',['../_config_8cpp.html#a26d7091acfa5c363d348bbe5043b5c39',1,'Config.cpp']]],
+  ['default_5floader',['default_loader',['../namespacecrow_1_1mustache.html#a7e8660fbdeeb994a1f00c704b469c792',1,'crow::mustache']]],
+  ['deleteall',['deleteAll',['../namespace_catch.html#aadf9786550a462740ec355f8219863a9',1,'Catch']]],
+  ['deleteallvalues',['deleteAllValues',['../namespace_catch.html#af2fcec1d4bd984fe19ff8b9a432c36a8',1,'Catch']]],
+  ['delta',['delta',['../class_basic_timer.html#a49bc91a549323a1a7fc6b7d9ec727174',1,'BasicTimer::delta()'],['../class_synchronized_blocking_timer.html#a41956960b15f14341f6018e2f5377f4b',1,'SynchronizedBlockingTimer::delta()'],['../class_i_timer.html#a32af08e57dcb4f4ecf0651e97422dbde',1,'ITimer::delta()'],['../struct_catch_1_1_totals.html#a3dee0f599c081a8360c0112fb1dafe8f',1,'Catch::Totals::delta()']]],
+  ['deltafloatseconds',['deltaFloatSeconds',['../class_basic_timer.html#afbe3d01b15f26573eb12c04ae7c28684',1,'BasicTimer::deltaFloatSeconds()'],['../class_synchronized_blocking_timer.html#a0a6306ec32b43c92965b5597c60d51fa',1,'SynchronizedBlockingTimer::deltaFloatSeconds()'],['../class_i_timer.html#a495a1de5043065f9097c5d3a8b32998a',1,'ITimer::deltaFloatSeconds()']]],
+  ['describe',['describe',['../class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base.html#a91d3a907dbfcbb596077df24f6e11fe2',1,'Catch::Matchers::Impl::MatcherUntypedBase::describe()'],['../struct_catch_1_1_matchers_1_1_impl_1_1_match_all_of.html#aaefeba99a0b35425203468a65bff544b',1,'Catch::Matchers::Impl::MatchAllOf::describe()'],['../struct_catch_1_1_matchers_1_1_impl_1_1_match_any_of.html#a020f5d7889d8cd8be9ad309c690147b6',1,'Catch::Matchers::Impl::MatchAnyOf::describe()'],['../struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of.html#a62bdc7dcb9ff000438a4ed3d5483a248',1,'Catch::Matchers::Impl::MatchNotOf::describe()'],['../struct_catch_1_1_matchers_1_1_std_string_1_1_string_matcher_base.html#a9d15cfb882efbea778b2ed29e7f48f37',1,'Catch::Matchers::StdString::StringMatcherBase::describe()'],['../struct_catch_1_1_matchers_1_1_vector_1_1_contains_element_matcher.html#a5a869772714dd045816707b74b217664',1,'Catch::Matchers::Vector::ContainsElementMatcher::describe()'],['../struct_catch_1_1_matchers_1_1_vector_1_1_contains_matcher.html#add1a31f049cec89f980424ecdb7027ac',1,'Catch::Matchers::Vector::ContainsMatcher::describe()'],['../struct_catch_1_1_matchers_1_1_vector_1_1_equals_matcher.html#aca79ade26f4a75b2a57005067e086e35',1,'Catch::Matchers::Vector::EqualsMatcher::describe()']]],
+  ['discarddecomposedexpression',['discardDecomposedExpression',['../class_catch_1_1_assertion_result.html#a99ab3067eb758c3fecdee8d8ff2beae6',1,'Catch::AssertionResult']]],
+  ['dispatch',['dispatch',['../structcrow_1_1request.html#ac3e72e3fe415c68618dee999e3984160',1,'crow::request::dispatch()'],['../classcrow_1_1websocket_1_1_connection.html#a7a11996bd55dcc65c1c376cea1dd7b00',1,'crow::websocket::Connection::dispatch()']]],
+  ['do_5fread',['do_read',['../classcrow_1_1websocket_1_1_connection.html#addd1692463d34ff141c02c48f0b46431',1,'crow::websocket::Connection']]],
+  ['do_5fwrite',['do_write',['../classcrow_1_1websocket_1_1_connection.html#a7089a3814af7e3c6e6a82c22865ee852',1,'crow::websocket::Connection']]],
+  ['done',['done',['../structcrow_1_1_h_t_t_p_parser.html#af0421fefc211d39c6ee676c5ba0083a5',1,'crow::HTTPParser']]],
+  ['dumb_5ftimer_5fqueue',['dumb_timer_queue',['../classcrow_1_1detail_1_1dumb__timer__queue.html#a9f3f50bc318d1668a4955b3211a70374',1,'crow::detail::dumb_timer_queue']]],
+  ['dump',['dump',['../namespacecrow_1_1json.html#ad28648d5c8e4d7eaea2777692e5ffec2',1,'crow::json']]],
+  ['dump_5finternal',['dump_internal',['../namespacecrow_1_1json.html#a89aba215e22bb1186515fe0db09d04d8',1,'crow::json']]],
+  ['dump_5fstring',['dump_string',['../namespacecrow_1_1json.html#af1b84b949166845e81f327e5e43cabee',1,'crow::json']]],
+  ['dynamicrule',['DynamicRule',['../classcrow_1_1_dynamic_rule.html#ae34a9eac492ec9ed8e7c7ef036afcfec',1,'crow::DynamicRule']]]
 ];

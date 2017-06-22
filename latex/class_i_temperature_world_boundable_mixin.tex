@@ -1,0 +1,100 @@
+\hypertarget{class_i_temperature_world_boundable_mixin}{\section{I\-Temperature\-World\-Boundable\-Mixin Class Reference}
+\label{class_i_temperature_world_boundable_mixin}\index{I\-Temperature\-World\-Boundable\-Mixin@{I\-Temperature\-World\-Boundable\-Mixin}}
+}
+
+
+{\ttfamily \#include $<$I\-Temperature\-World\-Boundable.\-hpp$>$}
+
+
+
+Inheritance diagram for I\-Temperature\-World\-Boundable\-Mixin\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_i_temperature_world_boundable_mixin__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for I\-Temperature\-World\-Boundable\-Mixin\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_i_temperature_world_boundable_mixin__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{class_i_temperature_world_boundable_mixin_a370c20d79642d15e97843da972d87ba9}{Foreach\-Cell\-Fn} = std\-::function$<$ void(\hyperlink{struct_coord}{Coord}, \hyperlink{struct_coord}{Coord}, \hyperlink{struct_coord}{Coord})$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_i_temperature_world_boundable_mixin_ac350b2e2ea22a229e6543d55e3217317}{foreach} (\hyperlink{class_i_temperature_world_boundable_mixin_a370c20d79642d15e97843da972d87ba9}{Foreach\-Cell\-Fn} func) const =0
+\item 
+virtual \hyperlink{struct_parallelepiped}{Parallelepiped} \hyperlink{class_i_temperature_world_boundable_mixin_a4811acd7f2bade56752c6326b0860f0c}{bounds} () const noexcept=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Should not be derived directly. Use {\ttfamily \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}}. This class is useful for {\ttfamily dynamic\-\_\-cast}. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_i_temperature_world_boundable_mixin_a370c20d79642d15e97843da972d87ba9}{\index{I\-Temperature\-World\-Boundable\-Mixin@{I\-Temperature\-World\-Boundable\-Mixin}!Foreach\-Cell\-Fn@{Foreach\-Cell\-Fn}}
+\index{Foreach\-Cell\-Fn@{Foreach\-Cell\-Fn}!ITemperatureWorldBoundableMixin@{I\-Temperature\-World\-Boundable\-Mixin}}
+\subsubsection[{Foreach\-Cell\-Fn}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf I\-Temperature\-World\-Boundable\-Mixin\-::\-Foreach\-Cell\-Fn} =  std\-::function$<$void({\bf Coord}, {\bf Coord}, {\bf Coord})$>$}}\label{class_i_temperature_world_boundable_mixin_a370c20d79642d15e97843da972d87ba9}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i_temperature_world_boundable_mixin_a4811acd7f2bade56752c6326b0860f0c}{\index{I\-Temperature\-World\-Boundable\-Mixin@{I\-Temperature\-World\-Boundable\-Mixin}!bounds@{bounds}}
+\index{bounds@{bounds}!ITemperatureWorldBoundableMixin@{I\-Temperature\-World\-Boundable\-Mixin}}
+\subsubsection[{bounds}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Parallelepiped} I\-Temperature\-World\-Boundable\-Mixin\-::bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}}\label{class_i_temperature_world_boundable_mixin_a4811acd7f2bade56752c6326b0860f0c}
+\begin{DoxyReturn}{Returns}
+Bounds of this temperature world. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_bound_temperature_world_a3351693a7d184365da5dfb5d833a0cb6}{Bound\-Temperature\-World}.
+
+\hypertarget{class_i_temperature_world_boundable_mixin_ac350b2e2ea22a229e6543d55e3217317}{\index{I\-Temperature\-World\-Boundable\-Mixin@{I\-Temperature\-World\-Boundable\-Mixin}!foreach@{foreach}}
+\index{foreach@{foreach}!ITemperatureWorldBoundableMixin@{I\-Temperature\-World\-Boundable\-Mixin}}
+\subsubsection[{foreach}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Temperature\-World\-Boundable\-Mixin\-::foreach (
+\begin{DoxyParamCaption}
+\item[{{\bf Foreach\-Cell\-Fn}}]{func}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_temperature_world_boundable_mixin_ac350b2e2ea22a229e6543d55e3217317}
+Loops over each point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Function to execute at each point. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_bound_temperature_world_afac2a24af176488487ef7aaa62936ee7}{Bound\-Temperature\-World}, and \hyperlink{class_scalable_bound_temperature_world_a57f60178c88b2cffca11a7f21c5c11c7}{Scalable\-Bound\-Temperature\-World}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_temperature_world_boundable_mixin_ac350b2e2ea22a229e6543d55e3217317_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/interfaces/\hyperlink{_i_temperature_world_boundable_8hpp}{I\-Temperature\-World\-Boundable.\-hpp}\end{DoxyCompactItemize}

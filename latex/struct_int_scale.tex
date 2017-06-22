@@ -1,0 +1,178 @@
+\hypertarget{struct_int_scale}{\section{Int\-Scale Struct Reference}
+\label{struct_int_scale}\index{Int\-Scale@{Int\-Scale}}
+}
+
+
+{\ttfamily \#include $<$Int\-Scale.\-hpp$>$}
+
+
+
+Collaboration diagram for Int\-Scale\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{struct_int_scale__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{struct_int_scale_ab7d4e812b60cd562ddc4fb120ff1f0cc}{Mode} \{ \hyperlink{struct_int_scale_ab7d4e812b60cd562ddc4fb120ff1f0cca2438a8014fcf179200678d989f41d3ac}{Upscale}, 
+\hyperlink{struct_int_scale_ab7d4e812b60cd562ddc4fb120ff1f0ccabc4c88fd06b273007bdb99fb0d7900d1}{Downscale}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_int_scale_aee812b511115dda01d34407d0576c8d4}{Int\-Scale} (int \hyperlink{struct_int_scale_acde6987ea678e2f5e4c94ee39047318f}{scale}, \hyperlink{struct_int_scale_ab7d4e812b60cd562ddc4fb120ff1f0cc}{Mode} \hyperlink{struct_int_scale_aa7bcbfec0954e48d295d9fcf1bbe58e0}{mode})
+\item 
+int \hyperlink{struct_int_scale_acde6987ea678e2f5e4c94ee39047318f}{scale} () const noexcept
+\item 
+\hyperlink{struct_int_scale_ab7d4e812b60cd562ddc4fb120ff1f0cc}{Mode} \hyperlink{struct_int_scale_aa7bcbfec0954e48d295d9fcf1bbe58e0}{mode} () const noexcept
+\item 
+bool \hyperlink{struct_int_scale_a8e29056cca4118d125a425a9380d9260}{is\-Upscale} () const noexcept
+\item 
+bool \hyperlink{struct_int_scale_af516c13864dcbf3e493d2a9e0fff1e01}{is\-Downscale} () const noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{struct_int_scale_a00edcfc4c371f9afe30dcaaf1e50bc33}{apply} (T value) const noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{struct_int_scale_a546cfc193c8f4319f892a5bf9fd0bd51}{invert\-Apply} (T value) const noexcept
+\item 
+bool \hyperlink{struct_int_scale_ac90865888b00e0512ceaf42b4be2f13a}{operator==} (const \hyperlink{struct_int_scale}{Int\-Scale} \&other) const noexcept
+\item 
+bool \hyperlink{struct_int_scale_a8324ea4d602b5ca0fc42df0b7407fb27}{operator!=} (const \hyperlink{struct_int_scale}{Int\-Scale} \&other) const noexcept
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{struct_int_scale_a7a6e2ffcdc9704a56b73c8d9abc5c483}{\-\_\-scale}
+\item 
+\hyperlink{struct_int_scale_ab7d4e812b60cd562ddc4fb120ff1f0cc}{Mode} \hyperlink{struct_int_scale_a767fd6ee9b544d8f465298d651c56468}{\-\_\-mode}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Type. Represents scale. It can be either upscale or downscale. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{struct_int_scale_ab7d4e812b60cd562ddc4fb120ff1f0cc}{\index{Int\-Scale@{Int\-Scale}!Mode@{Mode}}
+\index{Mode@{Mode}!IntScale@{Int\-Scale}}
+\subsubsection[{Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Int\-Scale\-::\-Mode}}}\label{struct_int_scale_ab7d4e812b60cd562ddc4fb120ff1f0cc}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Upscale@{Upscale}!Int\-Scale@{Int\-Scale}}\index{Int\-Scale@{Int\-Scale}!Upscale@{Upscale}}\item[{\em 
+\hypertarget{struct_int_scale_ab7d4e812b60cd562ddc4fb120ff1f0cca2438a8014fcf179200678d989f41d3ac}{Upscale}\label{struct_int_scale_ab7d4e812b60cd562ddc4fb120ff1f0cca2438a8014fcf179200678d989f41d3ac}
+}]\index{Downscale@{Downscale}!Int\-Scale@{Int\-Scale}}\index{Int\-Scale@{Int\-Scale}!Downscale@{Downscale}}\item[{\em 
+\hypertarget{struct_int_scale_ab7d4e812b60cd562ddc4fb120ff1f0ccabc4c88fd06b273007bdb99fb0d7900d1}{Downscale}\label{struct_int_scale_ab7d4e812b60cd562ddc4fb120ff1f0ccabc4c88fd06b273007bdb99fb0d7900d1}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_int_scale_aee812b511115dda01d34407d0576c8d4}{\index{Int\-Scale@{Int\-Scale}!Int\-Scale@{Int\-Scale}}
+\index{Int\-Scale@{Int\-Scale}!IntScale@{Int\-Scale}}
+\subsubsection[{Int\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}Int\-Scale\-::\-Int\-Scale (
+\begin{DoxyParamCaption}
+\item[{int}]{scale, }
+\item[{{\bf Mode}}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_int_scale_aee812b511115dda01d34407d0576c8d4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_int_scale_a00edcfc4c371f9afe30dcaaf1e50bc33}{\index{Int\-Scale@{Int\-Scale}!apply@{apply}}
+\index{apply@{apply}!IntScale@{Int\-Scale}}
+\subsubsection[{apply}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Int\-Scale\-::apply (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_int_scale_a00edcfc4c371f9afe30dcaaf1e50bc33}
+\hypertarget{struct_int_scale_a546cfc193c8f4319f892a5bf9fd0bd51}{\index{Int\-Scale@{Int\-Scale}!invert\-Apply@{invert\-Apply}}
+\index{invert\-Apply@{invert\-Apply}!IntScale@{Int\-Scale}}
+\subsubsection[{invert\-Apply}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Int\-Scale\-::invert\-Apply (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_int_scale_a546cfc193c8f4319f892a5bf9fd0bd51}
+\hypertarget{struct_int_scale_af516c13864dcbf3e493d2a9e0fff1e01}{\index{Int\-Scale@{Int\-Scale}!is\-Downscale@{is\-Downscale}}
+\index{is\-Downscale@{is\-Downscale}!IntScale@{Int\-Scale}}
+\subsubsection[{is\-Downscale}]{\setlength{\rightskip}{0pt plus 5cm}bool Int\-Scale\-::is\-Downscale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_int_scale_af516c13864dcbf3e493d2a9e0fff1e01}
+\hypertarget{struct_int_scale_a8e29056cca4118d125a425a9380d9260}{\index{Int\-Scale@{Int\-Scale}!is\-Upscale@{is\-Upscale}}
+\index{is\-Upscale@{is\-Upscale}!IntScale@{Int\-Scale}}
+\subsubsection[{is\-Upscale}]{\setlength{\rightskip}{0pt plus 5cm}bool Int\-Scale\-::is\-Upscale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_int_scale_a8e29056cca4118d125a425a9380d9260}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_int_scale_a8e29056cca4118d125a425a9380d9260_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{struct_int_scale_aa7bcbfec0954e48d295d9fcf1bbe58e0}{\index{Int\-Scale@{Int\-Scale}!mode@{mode}}
+\index{mode@{mode}!IntScale@{Int\-Scale}}
+\subsubsection[{mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mode} Int\-Scale\-::mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_int_scale_aa7bcbfec0954e48d295d9fcf1bbe58e0}
+\hypertarget{struct_int_scale_a8324ea4d602b5ca0fc42df0b7407fb27}{\index{Int\-Scale@{Int\-Scale}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!IntScale@{Int\-Scale}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool Int\-Scale\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Int\-Scale} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_int_scale_a8324ea4d602b5ca0fc42df0b7407fb27}
+\hypertarget{struct_int_scale_ac90865888b00e0512ceaf42b4be2f13a}{\index{Int\-Scale@{Int\-Scale}!operator==@{operator==}}
+\index{operator==@{operator==}!IntScale@{Int\-Scale}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Int\-Scale\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Int\-Scale} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_int_scale_ac90865888b00e0512ceaf42b4be2f13a}
+\hypertarget{struct_int_scale_acde6987ea678e2f5e4c94ee39047318f}{\index{Int\-Scale@{Int\-Scale}!scale@{scale}}
+\index{scale@{scale}!IntScale@{Int\-Scale}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}int Int\-Scale\-::scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_int_scale_acde6987ea678e2f5e4c94ee39047318f}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{struct_int_scale_acde6987ea678e2f5e4c94ee39047318f_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_int_scale_a767fd6ee9b544d8f465298d651c56468}{\index{Int\-Scale@{Int\-Scale}!\-\_\-mode@{\-\_\-mode}}
+\index{\-\_\-mode@{\-\_\-mode}!IntScale@{Int\-Scale}}
+\subsubsection[{\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mode} Int\-Scale\-::\-\_\-mode\hspace{0.3cm}{\ttfamily [protected]}}}\label{struct_int_scale_a767fd6ee9b544d8f465298d651c56468}
+\hypertarget{struct_int_scale_a7a6e2ffcdc9704a56b73c8d9abc5c483}{\index{Int\-Scale@{Int\-Scale}!\-\_\-scale@{\-\_\-scale}}
+\index{\-\_\-scale@{\-\_\-scale}!IntScale@{Int\-Scale}}
+\subsubsection[{\-\_\-scale}]{\setlength{\rightskip}{0pt plus 5cm}int Int\-Scale\-::\-\_\-scale\hspace{0.3cm}{\ttfamily [protected]}}}\label{struct_int_scale_a7a6e2ffcdc9704a56b73c8d9abc5c483}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/types/\hyperlink{_int_scale_8hpp}{Int\-Scale.\-hpp}\end{DoxyCompactItemize}

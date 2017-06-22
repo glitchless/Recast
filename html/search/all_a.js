@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['registerplayer',['registerPlayer',['../class_players_online.html#a26463b293d6c3c38ff600f4b363283cc',1,'PlayersOnline']]],
-  ['registeruser',['registerUser',['../class_s_q_lite.html#a0603da23858970214de63b0cbef55bcc',1,'SQLite']]]
+  ['jar',['jar',['../structcrow_1_1_cookie_parser_1_1context.html#a65674550c5ee9ade652a4785c6b9b30c',1,'crow::CookieParser::context']]],
+  ['json_5fvalue',['json_value',['../structcrow_1_1response.html#ad21c0b65173426d51eca46ef4d3f1106',1,'crow::response']]]
 ];

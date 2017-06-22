@@ -1,0 +1,9 @@
+<map id="BoundTemperatureWorld" name="BoundTemperatureWorld">
+<area shape="rect" id="node2" href="$class_i_temperature_world_boundable.html" title="{ITemperatureWorldBoundable\l\&lt; ITemperatureWorld \&gt;\n||}" alt="" coords="187,523,381,615"/>
+<area shape="rect" id="node3" href="$class_i_temperature_world.html" title="{ITemperatureWorld\n||+ ~ITemperatureWorld()\l+ has()\l+ get()\l+ set()\l+ amplify()\l}" alt="" coords="5,163,165,299"/>
+<area shape="rect" id="node4" href="$class_i_temperature_world_boundable_mixin.html" title="{ITemperatureWorldBoundable\lMixin\n||+ foreach()\l+ bounds()\l}" alt="" coords="191,177,385,284"/>
+<area shape="rect" id="node5" href="$struct_parallelepiped.html" title="{Parallelepiped\n||+ Parallelepiped()\l+ Parallelepiped()\l+ minX()\l+ maxX()\l+ minY()\l+ maxY()\l+ minZ()\l+ maxZ()\l+ sizeX()\l+ sizeY()\l+ sizeZ()\l+ volume()\l+ operator==()\l+ operator!=()\l}" alt="" coords="405,435,528,703"/>
+<area shape="rect" id="node6" href="$struct_size.html" title="{Size\n||+ Size()\l}" alt="" coords="417,192,484,269"/>
+<area shape="rect" id="node7" href="$struct_generic_scalar.html" title="{GenericScalar\&lt; int \&gt;\n|# _value\l|+ GenericScalar()\l+ operator int()\l+ operator int &amp;()\l}" alt="" coords="435,5,577,112"/>
+<area shape="rect" id="node8" href="$struct_coord.html" title="{Coord\n||+ Coord()\l}" alt="" coords="509,192,585,269"/>
+</map>

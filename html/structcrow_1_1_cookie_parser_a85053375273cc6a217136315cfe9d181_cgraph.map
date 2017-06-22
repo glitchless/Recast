@@ -1,0 +1,6 @@
+<map id="crow::CookieParser::before_handle" name="crow::CookieParser::before_handle">
+<area shape="rect" id="node2" href="$structcrow_1_1response.html#abef42200eca49c70dc1f5140ee3603ab" title="crow::response::end" alt="" coords="193,5,333,32"/>
+<area shape="rect" id="node3" href="$structcrow_1_1request.html#ab7b219512fa6db3bffa6c102ad4b6044" title="crow::request::get\l_header_value" alt="" coords="199,57,326,98"/>
+<area shape="rect" id="node5" href="$namespace_catch.html#a084108b47f37d8bfd5db51c50c7451b3" title="Catch::trim" alt="" coords="219,123,306,149"/>
+<area shape="rect" id="node4" href="$namespacecrow.html#ac0940ae1e094df6107d3a2604537279a" title="crow::get_header_value" alt="" coords="381,64,541,91"/>
+</map>

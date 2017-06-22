@@ -1,0 +1,357 @@
+\hypertarget{structcrow_1_1_h_t_t_p_parser}{\section{crow\-:\-:H\-T\-T\-P\-Parser$<$ Handler $>$ Struct Template Reference}
+\label{structcrow_1_1_h_t_t_p_parser}\index{crow\-::\-H\-T\-T\-P\-Parser$<$ Handler $>$@{crow\-::\-H\-T\-T\-P\-Parser$<$ Handler $>$}}
+}
+
+
+{\ttfamily \#include $<$crow\-\_\-all.\-h$>$}
+
+
+
+Inheritance diagram for crow\-:\-:H\-T\-T\-P\-Parser$<$ Handler $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{structcrow_1_1_h_t_t_p_parser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for crow\-:\-:H\-T\-T\-P\-Parser$<$ Handler $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{structcrow_1_1_h_t_t_p_parser__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structcrow_1_1_h_t_t_p_parser_a3659702ad1b853735ae6871f57bc2229}{H\-T\-T\-P\-Parser} (Handler $\ast$handler)
+\item 
+bool \hyperlink{structcrow_1_1_h_t_t_p_parser_a9ca5bdc64f7ce0ffa836c6263da0da45}{feed} (const char $\ast$buffer, int length)
+\item 
+bool \hyperlink{structcrow_1_1_h_t_t_p_parser_af0421fefc211d39c6ee676c5ba0083a5}{done} ()
+\item 
+void \hyperlink{structcrow_1_1_h_t_t_p_parser_abc4649eacc92efe28b8c41c1d434e749}{clear} ()
+\item 
+void \hyperlink{structcrow_1_1_h_t_t_p_parser_ae074619da72a866f764821a981444404}{process\-\_\-header} ()
+\item 
+void \hyperlink{structcrow_1_1_h_t_t_p_parser_a6aaafa15ad10e3165b547edecd66f174}{process\-\_\-message} ()
+\item 
+\hyperlink{structcrow_1_1request}{request} \hyperlink{structcrow_1_1_h_t_t_p_parser_a6ef156470083d0796108fb9d40ba9379}{to\-\_\-request} () const 
+\item 
+bool \hyperlink{structcrow_1_1_h_t_t_p_parser_abd1836a9e379b48f2d9cd004ae8ac299}{is\-\_\-upgrade} () const 
+\item 
+bool \hyperlink{structcrow_1_1_h_t_t_p_parser_ad25e62d7f2aaa7f3a4259f0edf049538}{check\-\_\-version} (int major, int minor) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{structcrow_1_1_h_t_t_p_parser_a44a23f77710b845a920384d8c186be4e}{on\-\_\-message\-\_\-begin} (\hyperlink{structhttp__parser}{http\-\_\-parser} $\ast$self\-\_\-)
+\item 
+static int \hyperlink{structcrow_1_1_h_t_t_p_parser_a1045990cfa9a0be0a0e6cf3cdf533636}{on\-\_\-url} (\hyperlink{structhttp__parser}{http\-\_\-parser} $\ast$self\-\_\-, const char $\ast$at, size\-\_\-t length)
+\item 
+static int \hyperlink{structcrow_1_1_h_t_t_p_parser_a1b0ee8db3529fb27e5a29fb89749128d}{on\-\_\-header\-\_\-field} (\hyperlink{structhttp__parser}{http\-\_\-parser} $\ast$self\-\_\-, const char $\ast$at, size\-\_\-t length)
+\item 
+static int \hyperlink{structcrow_1_1_h_t_t_p_parser_aa19462e925e68cf5525eba239491ae77}{on\-\_\-header\-\_\-value} (\hyperlink{structhttp__parser}{http\-\_\-parser} $\ast$self\-\_\-, const char $\ast$at, size\-\_\-t length)
+\item 
+static int \hyperlink{structcrow_1_1_h_t_t_p_parser_a33dc43c79b00bc6dad4c317a42ee09a2}{on\-\_\-headers\-\_\-complete} (\hyperlink{structhttp__parser}{http\-\_\-parser} $\ast$self\-\_\-)
+\item 
+static int \hyperlink{structcrow_1_1_h_t_t_p_parser_ae02056c2811a0008bb4e3851a48791c3}{on\-\_\-body} (\hyperlink{structhttp__parser}{http\-\_\-parser} $\ast$self\-\_\-, const char $\ast$at, size\-\_\-t length)
+\item 
+static int \hyperlink{structcrow_1_1_h_t_t_p_parser_a614c34dd524540e4853496c386a0100c}{on\-\_\-message\-\_\-complete} (\hyperlink{structhttp__parser}{http\-\_\-parser} $\ast$self\-\_\-)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{structcrow_1_1_h_t_t_p_parser_ad9397de66fb97512420a50a4239057c4}{raw\-\_\-url}
+\item 
+std\-::string \hyperlink{structcrow_1_1_h_t_t_p_parser_ad1ce74545377b48d5003c9a20bbe7106}{url}
+\item 
+int \hyperlink{structcrow_1_1_h_t_t_p_parser_af66d21628557efe1b854e05bb2512c84}{header\-\_\-building\-\_\-state} = 0
+\item 
+std\-::string \hyperlink{structcrow_1_1_h_t_t_p_parser_ac30b845f7195341f9c2892e0fd428c31}{header\-\_\-field}
+\item 
+std\-::string \hyperlink{structcrow_1_1_h_t_t_p_parser_a17aebcf52cf5b5dc41508e7c707197c9}{header\-\_\-value}
+\item 
+\hyperlink{namespacecrow_a9090432313cd58380727a6c4384ee792}{ci\-\_\-map} \hyperlink{structcrow_1_1_h_t_t_p_parser_ad27f225ecbf23f01b429646d76a1a886}{headers}
+\item 
+\hyperlink{classcrow_1_1query__string}{query\-\_\-string} \hyperlink{structcrow_1_1_h_t_t_p_parser_aa00ec7a2a2b475ec0b2cfe3d946c9b87}{url\-\_\-params}
+\item 
+std\-::string \hyperlink{structcrow_1_1_h_t_t_p_parser_a38b29e8668db22997d92a2040a40eb69}{body}
+\item 
+Handler $\ast$ \hyperlink{structcrow_1_1_h_t_t_p_parser_a8c9ef70473ed6548872bcb217965203e}{handler\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_a3659702ad1b853735ae6871f57bc2229}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!H\-T\-T\-P\-Parser@{H\-T\-T\-P\-Parser}}
+\index{H\-T\-T\-P\-Parser@{H\-T\-T\-P\-Parser}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{H\-T\-T\-P\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::{\bf H\-T\-T\-P\-Parser} (
+\begin{DoxyParamCaption}
+\item[{Handler $\ast$}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_h_t_t_p_parser_a3659702ad1b853735ae6871f57bc2229}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_ad25e62d7f2aaa7f3a4259f0edf049538}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!check\-\_\-version@{check\-\_\-version}}
+\index{check\-\_\-version@{check\-\_\-version}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{check\-\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ bool {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::check\-\_\-version (
+\begin{DoxyParamCaption}
+\item[{int}]{major, }
+\item[{int}]{minor}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_h_t_t_p_parser_ad25e62d7f2aaa7f3a4259f0edf049538}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_abc4649eacc92efe28b8c41c1d434e749}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!clear@{clear}}
+\index{clear@{clear}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ void {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_h_t_t_p_parser_abc4649eacc92efe28b8c41c1d434e749}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1_h_t_t_p_parser_abc4649eacc92efe28b8c41c1d434e749_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structcrow_1_1_h_t_t_p_parser_af0421fefc211d39c6ee676c5ba0083a5}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!done@{done}}
+\index{done@{done}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{done}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ bool {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::done (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_h_t_t_p_parser_af0421fefc211d39c6ee676c5ba0083a5}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_a9ca5bdc64f7ce0ffa836c6263da0da45}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!feed@{feed}}
+\index{feed@{feed}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{feed}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ bool {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::feed (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buffer, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_h_t_t_p_parser_a9ca5bdc64f7ce0ffa836c6263da0da45}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1_h_t_t_p_parser_a9ca5bdc64f7ce0ffa836c6263da0da45_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structcrow_1_1_h_t_t_p_parser_abd1836a9e379b48f2d9cd004ae8ac299}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!is\-\_\-upgrade@{is\-\_\-upgrade}}
+\index{is\-\_\-upgrade@{is\-\_\-upgrade}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{is\-\_\-upgrade}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ bool {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::is\-\_\-upgrade (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_h_t_t_p_parser_abd1836a9e379b48f2d9cd004ae8ac299}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_ae02056c2811a0008bb4e3851a48791c3}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!on\-\_\-body@{on\-\_\-body}}
+\index{on\-\_\-body@{on\-\_\-body}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{on\-\_\-body}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ static int {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::on\-\_\-body (
+\begin{DoxyParamCaption}
+\item[{{\bf http\-\_\-parser} $\ast$}]{self\-\_\-, }
+\item[{const char $\ast$}]{at, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structcrow_1_1_h_t_t_p_parser_ae02056c2811a0008bb4e3851a48791c3}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1_h_t_t_p_parser_ae02056c2811a0008bb4e3851a48791c3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structcrow_1_1_h_t_t_p_parser_a1b0ee8db3529fb27e5a29fb89749128d}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!on\-\_\-header\-\_\-field@{on\-\_\-header\-\_\-field}}
+\index{on\-\_\-header\-\_\-field@{on\-\_\-header\-\_\-field}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{on\-\_\-header\-\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ static int {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::on\-\_\-header\-\_\-field (
+\begin{DoxyParamCaption}
+\item[{{\bf http\-\_\-parser} $\ast$}]{self\-\_\-, }
+\item[{const char $\ast$}]{at, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structcrow_1_1_h_t_t_p_parser_a1b0ee8db3529fb27e5a29fb89749128d}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1_h_t_t_p_parser_a1b0ee8db3529fb27e5a29fb89749128d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structcrow_1_1_h_t_t_p_parser_aa19462e925e68cf5525eba239491ae77}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!on\-\_\-header\-\_\-value@{on\-\_\-header\-\_\-value}}
+\index{on\-\_\-header\-\_\-value@{on\-\_\-header\-\_\-value}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{on\-\_\-header\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ static int {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::on\-\_\-header\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{{\bf http\-\_\-parser} $\ast$}]{self\-\_\-, }
+\item[{const char $\ast$}]{at, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structcrow_1_1_h_t_t_p_parser_aa19462e925e68cf5525eba239491ae77}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1_h_t_t_p_parser_aa19462e925e68cf5525eba239491ae77_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structcrow_1_1_h_t_t_p_parser_a33dc43c79b00bc6dad4c317a42ee09a2}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!on\-\_\-headers\-\_\-complete@{on\-\_\-headers\-\_\-complete}}
+\index{on\-\_\-headers\-\_\-complete@{on\-\_\-headers\-\_\-complete}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{on\-\_\-headers\-\_\-complete}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ static int {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::on\-\_\-headers\-\_\-complete (
+\begin{DoxyParamCaption}
+\item[{{\bf http\-\_\-parser} $\ast$}]{self\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structcrow_1_1_h_t_t_p_parser_a33dc43c79b00bc6dad4c317a42ee09a2}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1_h_t_t_p_parser_a33dc43c79b00bc6dad4c317a42ee09a2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structcrow_1_1_h_t_t_p_parser_a44a23f77710b845a920384d8c186be4e}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!on\-\_\-message\-\_\-begin@{on\-\_\-message\-\_\-begin}}
+\index{on\-\_\-message\-\_\-begin@{on\-\_\-message\-\_\-begin}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{on\-\_\-message\-\_\-begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ static int {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::on\-\_\-message\-\_\-begin (
+\begin{DoxyParamCaption}
+\item[{{\bf http\-\_\-parser} $\ast$}]{self\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structcrow_1_1_h_t_t_p_parser_a44a23f77710b845a920384d8c186be4e}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1_h_t_t_p_parser_a44a23f77710b845a920384d8c186be4e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structcrow_1_1_h_t_t_p_parser_a614c34dd524540e4853496c386a0100c}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!on\-\_\-message\-\_\-complete@{on\-\_\-message\-\_\-complete}}
+\index{on\-\_\-message\-\_\-complete@{on\-\_\-message\-\_\-complete}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{on\-\_\-message\-\_\-complete}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ static int {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::on\-\_\-message\-\_\-complete (
+\begin{DoxyParamCaption}
+\item[{{\bf http\-\_\-parser} $\ast$}]{self\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structcrow_1_1_h_t_t_p_parser_a614c34dd524540e4853496c386a0100c}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1_h_t_t_p_parser_a614c34dd524540e4853496c386a0100c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structcrow_1_1_h_t_t_p_parser_a1045990cfa9a0be0a0e6cf3cdf533636}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!on\-\_\-url@{on\-\_\-url}}
+\index{on\-\_\-url@{on\-\_\-url}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{on\-\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ static int {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::on\-\_\-url (
+\begin{DoxyParamCaption}
+\item[{{\bf http\-\_\-parser} $\ast$}]{self\-\_\-, }
+\item[{const char $\ast$}]{at, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structcrow_1_1_h_t_t_p_parser_a1045990cfa9a0be0a0e6cf3cdf533636}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1_h_t_t_p_parser_a1045990cfa9a0be0a0e6cf3cdf533636_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structcrow_1_1_h_t_t_p_parser_ae074619da72a866f764821a981444404}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!process\-\_\-header@{process\-\_\-header}}
+\index{process\-\_\-header@{process\-\_\-header}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{process\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ void {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::process\-\_\-header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_h_t_t_p_parser_ae074619da72a866f764821a981444404}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_a6aaafa15ad10e3165b547edecd66f174}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!process\-\_\-message@{process\-\_\-message}}
+\index{process\-\_\-message@{process\-\_\-message}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{process\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ void {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::process\-\_\-message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_h_t_t_p_parser_a6aaafa15ad10e3165b547edecd66f174}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_a6ef156470083d0796108fb9d40ba9379}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!to\-\_\-request@{to\-\_\-request}}
+\index{to\-\_\-request@{to\-\_\-request}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{to\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ {\bf request} {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::to\-\_\-request (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_h_t_t_p_parser_a6ef156470083d0796108fb9d40ba9379}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_a38b29e8668db22997d92a2040a40eb69}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!body@{body}}
+\index{body@{body}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{body}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ std\-::string {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::body}}\label{structcrow_1_1_h_t_t_p_parser_a38b29e8668db22997d92a2040a40eb69}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_a8c9ef70473ed6548872bcb217965203e}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!handler\-\_\-@{handler\-\_\-}}
+\index{handler\-\_\-@{handler\-\_\-}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{handler\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ Handler$\ast$ {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::handler\-\_\-}}\label{structcrow_1_1_h_t_t_p_parser_a8c9ef70473ed6548872bcb217965203e}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_af66d21628557efe1b854e05bb2512c84}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!header\-\_\-building\-\_\-state@{header\-\_\-building\-\_\-state}}
+\index{header\-\_\-building\-\_\-state@{header\-\_\-building\-\_\-state}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{header\-\_\-building\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ int {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::header\-\_\-building\-\_\-state = 0}}\label{structcrow_1_1_h_t_t_p_parser_af66d21628557efe1b854e05bb2512c84}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_ac30b845f7195341f9c2892e0fd428c31}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!header\-\_\-field@{header\-\_\-field}}
+\index{header\-\_\-field@{header\-\_\-field}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{header\-\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ std\-::string {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::header\-\_\-field}}\label{structcrow_1_1_h_t_t_p_parser_ac30b845f7195341f9c2892e0fd428c31}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_a17aebcf52cf5b5dc41508e7c707197c9}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!header\-\_\-value@{header\-\_\-value}}
+\index{header\-\_\-value@{header\-\_\-value}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{header\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ std\-::string {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::header\-\_\-value}}\label{structcrow_1_1_h_t_t_p_parser_a17aebcf52cf5b5dc41508e7c707197c9}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_ad27f225ecbf23f01b429646d76a1a886}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!headers@{headers}}
+\index{headers@{headers}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{headers}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ {\bf ci\-\_\-map} {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::headers}}\label{structcrow_1_1_h_t_t_p_parser_ad27f225ecbf23f01b429646d76a1a886}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_ad9397de66fb97512420a50a4239057c4}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!raw\-\_\-url@{raw\-\_\-url}}
+\index{raw\-\_\-url@{raw\-\_\-url}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{raw\-\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ std\-::string {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::raw\-\_\-url}}\label{structcrow_1_1_h_t_t_p_parser_ad9397de66fb97512420a50a4239057c4}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_ad1ce74545377b48d5003c9a20bbe7106}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!url@{url}}
+\index{url@{url}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{url}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ std\-::string {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::url}}\label{structcrow_1_1_h_t_t_p_parser_ad1ce74545377b48d5003c9a20bbe7106}
+\hypertarget{structcrow_1_1_h_t_t_p_parser_aa00ec7a2a2b475ec0b2cfe3d946c9b87}{\index{crow\-::\-H\-T\-T\-P\-Parser@{crow\-::\-H\-T\-T\-P\-Parser}!url\-\_\-params@{url\-\_\-params}}
+\index{url\-\_\-params@{url\-\_\-params}!crow::HTTPParser@{crow\-::\-H\-T\-T\-P\-Parser}}
+\subsubsection[{url\-\_\-params}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Handler$>$ {\bf query\-\_\-string} {\bf crow\-::\-H\-T\-T\-P\-Parser}$<$ Handler $>$\-::url\-\_\-params}}\label{structcrow_1_1_h_t_t_p_parser_aa00ec7a2a2b475ec0b2cfe3d946c9b87}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/lib/\hyperlink{crow__all_8h}{crow\-\_\-all.\-h}\end{DoxyCompactItemize}

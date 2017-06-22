@@ -1,0 +1,110 @@
+\hypertarget{classcrow_1_1_dynamic_rule}{\section{crow\-:\-:Dynamic\-Rule Class Reference}
+\label{classcrow_1_1_dynamic_rule}\index{crow\-::\-Dynamic\-Rule@{crow\-::\-Dynamic\-Rule}}
+}
+
+
+{\ttfamily \#include $<$crow\-\_\-all.\-h$>$}
+
+
+
+Inheritance diagram for crow\-:\-:Dynamic\-Rule\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classcrow_1_1_dynamic_rule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for crow\-:\-:Dynamic\-Rule\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classcrow_1_1_dynamic_rule__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrow_1_1_dynamic_rule_ae34a9eac492ec9ed8e7c7ef036afcfec}{Dynamic\-Rule} (std\-::string rule)
+\item 
+void \hyperlink{classcrow_1_1_dynamic_rule_ad044e4cacd82591b1d9b1115f0d0bea1}{validate} () override
+\item 
+void \hyperlink{classcrow_1_1_dynamic_rule_ae36fa601f18c2c181804132528443c9f}{handle} (const \hyperlink{structcrow_1_1request}{request} \&req, \hyperlink{structcrow_1_1response}{response} \&res, const \hyperlink{structcrow_1_1routing__params}{routing\-\_\-params} \&params) override
+\item 
+{\footnotesize template$<$typename Func $>$ }\\void \hyperlink{classcrow_1_1_dynamic_rule_a482a85c52b9815f5e0715e0840ab7024}{operator()} (Func f)
+\item 
+{\footnotesize template$<$typename Func , unsigned... Indices$>$ }\\std\-::function$<$ void(const \\*
+\hyperlink{structcrow_1_1request}{request} \&, \hyperlink{structcrow_1_1response}{response} \&, const \\*
+\hyperlink{structcrow_1_1routing__params}{routing\-\_\-params} \&)$>$ \hyperlink{classcrow_1_1_dynamic_rule_af9bdb952a3688fb2c127104962243a9f}{wrap} (Func f, \hyperlink{structcrow_1_1black__magic_1_1seq}{black\-\_\-magic\-::seq}$<$ Indices...$>$)
+\item 
+{\footnotesize template$<$typename Func $>$ }\\void \hyperlink{classcrow_1_1_dynamic_rule_a8c18b9fad80fd47934051f41286a4a9e}{operator()} (std\-::string \hyperlink{structcrow_1_1_rule_parameter_traits_aa330efc6368bb7b66901122f1e8e4943}{name}, Func \&\&f)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrow_1_1_dynamic_rule_ae34a9eac492ec9ed8e7c7ef036afcfec}{\index{crow\-::\-Dynamic\-Rule@{crow\-::\-Dynamic\-Rule}!Dynamic\-Rule@{Dynamic\-Rule}}
+\index{Dynamic\-Rule@{Dynamic\-Rule}!crow::DynamicRule@{crow\-::\-Dynamic\-Rule}}
+\subsubsection[{Dynamic\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}crow\-::\-Dynamic\-Rule\-::\-Dynamic\-Rule (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{rule}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_dynamic_rule_ae34a9eac492ec9ed8e7c7ef036afcfec}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrow_1_1_dynamic_rule_ae36fa601f18c2c181804132528443c9f}{\index{crow\-::\-Dynamic\-Rule@{crow\-::\-Dynamic\-Rule}!handle@{handle}}
+\index{handle@{handle}!crow::DynamicRule@{crow\-::\-Dynamic\-Rule}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void crow\-::\-Dynamic\-Rule\-::handle (
+\begin{DoxyParamCaption}
+\item[{const {\bf request} \&}]{req, }
+\item[{{\bf response} \&}]{res, }
+\item[{const {\bf routing\-\_\-params} \&}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classcrow_1_1_dynamic_rule_ae36fa601f18c2c181804132528443c9f}
+
+
+Implements \hyperlink{classcrow_1_1_base_rule_ac8cad63944971ba3ee77b4091cf88a02}{crow\-::\-Base\-Rule}.
+
+\hypertarget{classcrow_1_1_dynamic_rule_a482a85c52b9815f5e0715e0840ab7024}{\index{crow\-::\-Dynamic\-Rule@{crow\-::\-Dynamic\-Rule}!operator()@{operator()}}
+\index{operator()@{operator()}!crow::DynamicRule@{crow\-::\-Dynamic\-Rule}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Func $>$ void crow\-::\-Dynamic\-Rule\-::operator() (
+\begin{DoxyParamCaption}
+\item[{Func}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_dynamic_rule_a482a85c52b9815f5e0715e0840ab7024}
+\hypertarget{classcrow_1_1_dynamic_rule_a8c18b9fad80fd47934051f41286a4a9e}{\index{crow\-::\-Dynamic\-Rule@{crow\-::\-Dynamic\-Rule}!operator()@{operator()}}
+\index{operator()@{operator()}!crow::DynamicRule@{crow\-::\-Dynamic\-Rule}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Func $>$ void crow\-::\-Dynamic\-Rule\-::operator() (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name, }
+\item[{Func \&\&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_dynamic_rule_a8c18b9fad80fd47934051f41286a4a9e}
+\hypertarget{classcrow_1_1_dynamic_rule_ad044e4cacd82591b1d9b1115f0d0bea1}{\index{crow\-::\-Dynamic\-Rule@{crow\-::\-Dynamic\-Rule}!validate@{validate}}
+\index{validate@{validate}!crow::DynamicRule@{crow\-::\-Dynamic\-Rule}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}void crow\-::\-Dynamic\-Rule\-::validate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classcrow_1_1_dynamic_rule_ad044e4cacd82591b1d9b1115f0d0bea1}
+
+
+Implements \hyperlink{classcrow_1_1_base_rule_a895d85332340788206cee0b1555ac8c2}{crow\-::\-Base\-Rule}.
+
+\hypertarget{classcrow_1_1_dynamic_rule_af9bdb952a3688fb2c127104962243a9f}{\index{crow\-::\-Dynamic\-Rule@{crow\-::\-Dynamic\-Rule}!wrap@{wrap}}
+\index{wrap@{wrap}!crow::DynamicRule@{crow\-::\-Dynamic\-Rule}}
+\subsubsection[{wrap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Func , unsigned... Indices$>$ std\-::function$<$void(const {\bf request}\&, {\bf response}\&, const {\bf routing\-\_\-params}\&)$>$ crow\-::\-Dynamic\-Rule\-::wrap (
+\begin{DoxyParamCaption}
+\item[{Func}]{f, }
+\item[{{\bf black\-\_\-magic\-::seq}$<$ Indices...$>$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_dynamic_rule_af9bdb952a3688fb2c127104962243a9f}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/lib/\hyperlink{crow__all_8h}{crow\-\_\-all.\-h}\end{DoxyCompactItemize}

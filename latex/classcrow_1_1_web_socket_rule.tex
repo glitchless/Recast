@@ -1,0 +1,169 @@
+\hypertarget{classcrow_1_1_web_socket_rule}{\section{crow\-:\-:Web\-Socket\-Rule Class Reference}
+\label{classcrow_1_1_web_socket_rule}\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}}
+}
+
+
+{\ttfamily \#include $<$crow\-\_\-all.\-h$>$}
+
+
+
+Inheritance diagram for crow\-:\-:Web\-Socket\-Rule\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classcrow_1_1_web_socket_rule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for crow\-:\-:Web\-Socket\-Rule\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classcrow_1_1_web_socket_rule__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrow_1_1_web_socket_rule_a06deaa752206ca131e28b9b4cbb025ab}{Web\-Socket\-Rule} (std\-::string rule)
+\item 
+void \hyperlink{classcrow_1_1_web_socket_rule_a516f498b440273f183e2af266092469c}{validate} () override
+\item 
+void \hyperlink{classcrow_1_1_web_socket_rule_a685d7cce7873eb389114df18f7f2c416}{handle} (const \hyperlink{structcrow_1_1request}{request} \&, \hyperlink{structcrow_1_1response}{response} \&res, const \hyperlink{structcrow_1_1routing__params}{routing\-\_\-params} \&) override
+\item 
+void \hyperlink{classcrow_1_1_web_socket_rule_ae8f210dcc1c8e8a309ce24d97d549445}{handle\-\_\-upgrade} (const \hyperlink{structcrow_1_1request}{request} \&req, \hyperlink{structcrow_1_1response}{response} \&, \hyperlink{structcrow_1_1_socket_adaptor}{Socket\-Adaptor} \&\&adaptor) override
+\item 
+{\footnotesize template$<$typename Func $>$ }\\\hyperlink{classcrow_1_1_web_socket_rule}{self\-\_\-t} \& \hyperlink{classcrow_1_1_web_socket_rule_a8a37c7e29ef137b02cb2d48af5241bad}{onopen} (Func f)
+\item 
+{\footnotesize template$<$typename Func $>$ }\\\hyperlink{classcrow_1_1_web_socket_rule}{self\-\_\-t} \& \hyperlink{classcrow_1_1_web_socket_rule_ab74486cbe36cb5e6f70362998e55b0e0}{onmessage} (Func f)
+\item 
+{\footnotesize template$<$typename Func $>$ }\\\hyperlink{classcrow_1_1_web_socket_rule}{self\-\_\-t} \& \hyperlink{classcrow_1_1_web_socket_rule_abdca486bb9ef580878510ed8359741c2}{onclose} (Func f)
+\item 
+{\footnotesize template$<$typename Func $>$ }\\\hyperlink{classcrow_1_1_web_socket_rule}{self\-\_\-t} \& \hyperlink{classcrow_1_1_web_socket_rule_ae1d0168e7fcee3664b672d1a346ba54d}{onerror} (Func f)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::function$<$ void(\hyperlink{structcrow_1_1websocket_1_1connection}{crow\-::websocket\-::connection} \&)$>$ \hyperlink{classcrow_1_1_web_socket_rule_ad47b29bdeac8e96f0f3b582fbc86b05e}{open\-\_\-handler\-\_\-}
+\item 
+std\-::function$<$ void(\hyperlink{structcrow_1_1websocket_1_1connection}{crow\-::websocket\-::connection} \\*
+\&, const std\-::string \&, bool)$>$ \hyperlink{classcrow_1_1_web_socket_rule_af9ce04bc88244ed4fb733dd9e52fc955}{message\-\_\-handler\-\_\-}
+\item 
+std\-::function$<$ void(\hyperlink{structcrow_1_1websocket_1_1connection}{crow\-::websocket\-::connection} \\*
+\&, const std\-::string \&)$>$ \hyperlink{classcrow_1_1_web_socket_rule_a52beafa459eb950ed8976442a6513b6b}{close\-\_\-handler\-\_\-}
+\item 
+std\-::function$<$ void(\hyperlink{structcrow_1_1websocket_1_1connection}{crow\-::websocket\-::connection} \&)$>$ \hyperlink{classcrow_1_1_web_socket_rule_adaefbea10b7188ca0ae763b3c345d4f2}{error\-\_\-handler\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrow_1_1_web_socket_rule_a06deaa752206ca131e28b9b4cbb025ab}{\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}!Web\-Socket\-Rule@{Web\-Socket\-Rule}}
+\index{Web\-Socket\-Rule@{Web\-Socket\-Rule}!crow::WebSocketRule@{crow\-::\-Web\-Socket\-Rule}}
+\subsubsection[{Web\-Socket\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}crow\-::\-Web\-Socket\-Rule\-::\-Web\-Socket\-Rule (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{rule}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_web_socket_rule_a06deaa752206ca131e28b9b4cbb025ab}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrow_1_1_web_socket_rule_a685d7cce7873eb389114df18f7f2c416}{\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}!handle@{handle}}
+\index{handle@{handle}!crow::WebSocketRule@{crow\-::\-Web\-Socket\-Rule}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void crow\-::\-Web\-Socket\-Rule\-::handle (
+\begin{DoxyParamCaption}
+\item[{const {\bf request} \&}]{, }
+\item[{{\bf response} \&}]{res, }
+\item[{const {\bf routing\-\_\-params} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classcrow_1_1_web_socket_rule_a685d7cce7873eb389114df18f7f2c416}
+
+
+Implements \hyperlink{classcrow_1_1_base_rule_ac8cad63944971ba3ee77b4091cf88a02}{crow\-::\-Base\-Rule}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classcrow_1_1_web_socket_rule_a685d7cce7873eb389114df18f7f2c416_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1_web_socket_rule_ae8f210dcc1c8e8a309ce24d97d549445}{\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}!handle\-\_\-upgrade@{handle\-\_\-upgrade}}
+\index{handle\-\_\-upgrade@{handle\-\_\-upgrade}!crow::WebSocketRule@{crow\-::\-Web\-Socket\-Rule}}
+\subsubsection[{handle\-\_\-upgrade}]{\setlength{\rightskip}{0pt plus 5cm}void crow\-::\-Web\-Socket\-Rule\-::handle\-\_\-upgrade (
+\begin{DoxyParamCaption}
+\item[{const {\bf request} \&}]{req, }
+\item[{{\bf response} \&}]{, }
+\item[{{\bf Socket\-Adaptor} \&\&}]{adaptor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classcrow_1_1_web_socket_rule_ae8f210dcc1c8e8a309ce24d97d549445}
+
+
+Reimplemented from \hyperlink{classcrow_1_1_base_rule_acf37339742cfca68b60b9d872382a43d}{crow\-::\-Base\-Rule}.
+
+\hypertarget{classcrow_1_1_web_socket_rule_abdca486bb9ef580878510ed8359741c2}{\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}!onclose@{onclose}}
+\index{onclose@{onclose}!crow::WebSocketRule@{crow\-::\-Web\-Socket\-Rule}}
+\subsubsection[{onclose}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Func $>$ {\bf self\-\_\-t}\& crow\-::\-Web\-Socket\-Rule\-::onclose (
+\begin{DoxyParamCaption}
+\item[{Func}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_web_socket_rule_abdca486bb9ef580878510ed8359741c2}
+\hypertarget{classcrow_1_1_web_socket_rule_ae1d0168e7fcee3664b672d1a346ba54d}{\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}!onerror@{onerror}}
+\index{onerror@{onerror}!crow::WebSocketRule@{crow\-::\-Web\-Socket\-Rule}}
+\subsubsection[{onerror}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Func $>$ {\bf self\-\_\-t}\& crow\-::\-Web\-Socket\-Rule\-::onerror (
+\begin{DoxyParamCaption}
+\item[{Func}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_web_socket_rule_ae1d0168e7fcee3664b672d1a346ba54d}
+\hypertarget{classcrow_1_1_web_socket_rule_ab74486cbe36cb5e6f70362998e55b0e0}{\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}!onmessage@{onmessage}}
+\index{onmessage@{onmessage}!crow::WebSocketRule@{crow\-::\-Web\-Socket\-Rule}}
+\subsubsection[{onmessage}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Func $>$ {\bf self\-\_\-t}\& crow\-::\-Web\-Socket\-Rule\-::onmessage (
+\begin{DoxyParamCaption}
+\item[{Func}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_web_socket_rule_ab74486cbe36cb5e6f70362998e55b0e0}
+\hypertarget{classcrow_1_1_web_socket_rule_a8a37c7e29ef137b02cb2d48af5241bad}{\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}!onopen@{onopen}}
+\index{onopen@{onopen}!crow::WebSocketRule@{crow\-::\-Web\-Socket\-Rule}}
+\subsubsection[{onopen}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Func $>$ {\bf self\-\_\-t}\& crow\-::\-Web\-Socket\-Rule\-::onopen (
+\begin{DoxyParamCaption}
+\item[{Func}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1_web_socket_rule_a8a37c7e29ef137b02cb2d48af5241bad}
+\hypertarget{classcrow_1_1_web_socket_rule_a516f498b440273f183e2af266092469c}{\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}!validate@{validate}}
+\index{validate@{validate}!crow::WebSocketRule@{crow\-::\-Web\-Socket\-Rule}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}void crow\-::\-Web\-Socket\-Rule\-::validate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classcrow_1_1_web_socket_rule_a516f498b440273f183e2af266092469c}
+
+
+Implements \hyperlink{classcrow_1_1_base_rule_a895d85332340788206cee0b1555ac8c2}{crow\-::\-Base\-Rule}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classcrow_1_1_web_socket_rule_a52beafa459eb950ed8976442a6513b6b}{\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}!close\-\_\-handler\-\_\-@{close\-\_\-handler\-\_\-}}
+\index{close\-\_\-handler\-\_\-@{close\-\_\-handler\-\_\-}!crow::WebSocketRule@{crow\-::\-Web\-Socket\-Rule}}
+\subsubsection[{close\-\_\-handler\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::function$<$void({\bf crow\-::websocket\-::connection}\&, const std\-::string\&)$>$ crow\-::\-Web\-Socket\-Rule\-::close\-\_\-handler\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classcrow_1_1_web_socket_rule_a52beafa459eb950ed8976442a6513b6b}
+\hypertarget{classcrow_1_1_web_socket_rule_adaefbea10b7188ca0ae763b3c345d4f2}{\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}!error\-\_\-handler\-\_\-@{error\-\_\-handler\-\_\-}}
+\index{error\-\_\-handler\-\_\-@{error\-\_\-handler\-\_\-}!crow::WebSocketRule@{crow\-::\-Web\-Socket\-Rule}}
+\subsubsection[{error\-\_\-handler\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::function$<$void({\bf crow\-::websocket\-::connection}\&)$>$ crow\-::\-Web\-Socket\-Rule\-::error\-\_\-handler\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classcrow_1_1_web_socket_rule_adaefbea10b7188ca0ae763b3c345d4f2}
+\hypertarget{classcrow_1_1_web_socket_rule_af9ce04bc88244ed4fb733dd9e52fc955}{\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}!message\-\_\-handler\-\_\-@{message\-\_\-handler\-\_\-}}
+\index{message\-\_\-handler\-\_\-@{message\-\_\-handler\-\_\-}!crow::WebSocketRule@{crow\-::\-Web\-Socket\-Rule}}
+\subsubsection[{message\-\_\-handler\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::function$<$void({\bf crow\-::websocket\-::connection}\&, const std\-::string\&, bool)$>$ crow\-::\-Web\-Socket\-Rule\-::message\-\_\-handler\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classcrow_1_1_web_socket_rule_af9ce04bc88244ed4fb733dd9e52fc955}
+\hypertarget{classcrow_1_1_web_socket_rule_ad47b29bdeac8e96f0f3b582fbc86b05e}{\index{crow\-::\-Web\-Socket\-Rule@{crow\-::\-Web\-Socket\-Rule}!open\-\_\-handler\-\_\-@{open\-\_\-handler\-\_\-}}
+\index{open\-\_\-handler\-\_\-@{open\-\_\-handler\-\_\-}!crow::WebSocketRule@{crow\-::\-Web\-Socket\-Rule}}
+\subsubsection[{open\-\_\-handler\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::function$<$void({\bf crow\-::websocket\-::connection}\&)$>$ crow\-::\-Web\-Socket\-Rule\-::open\-\_\-handler\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classcrow_1_1_web_socket_rule_ad47b29bdeac8e96f0f3b582fbc86b05e}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/lib/\hyperlink{crow__all_8h}{crow\-\_\-all.\-h}\end{DoxyCompactItemize}

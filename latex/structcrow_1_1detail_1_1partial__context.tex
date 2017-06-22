@@ -1,0 +1,63 @@
+\hypertarget{structcrow_1_1detail_1_1partial__context}{\section{crow\-:\-:detail\-:\-:partial\-\_\-context$<$ Middlewares $>$ Struct Template Reference}
+\label{structcrow_1_1detail_1_1partial__context}\index{crow\-::detail\-::partial\-\_\-context$<$ Middlewares $>$@{crow\-::detail\-::partial\-\_\-context$<$ Middlewares $>$}}
+}
+
+
+{\ttfamily \#include $<$crow\-\_\-all.\-h$>$}
+
+
+
+Inheritance diagram for crow\-:\-:detail\-:\-:partial\-\_\-context$<$ Middlewares $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1detail_1_1partial__context__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for crow\-:\-:detail\-:\-:partial\-\_\-context$<$ Middlewares $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcrow_1_1detail_1_1partial__context__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{structcrow_1_1detail_1_1partial__context_a96e8bff131568e0e6ecffd75b5b29e09}{parent\-\_\-context} = typename \hyperlink{structcrow_1_1black__magic_1_1pop__back}{black\-\_\-magic\-::pop\-\_\-back}$<$ Middlewares...$>$\-::template rebind$<$\-::\hyperlink{structcrow_1_1detail_1_1partial__context}{crow\-::detail\-::partial\-\_\-context} $>$
+\item 
+{\footnotesize template$<$int N$>$ }\\using \hyperlink{structcrow_1_1detail_1_1partial__context_ae7b6d83d169cdaa5d611da8796f9634c}{partial} = typename std\-::conditional$<$ N==sizeof...(Middlewares)-\/1, \hyperlink{structcrow_1_1detail_1_1partial__context}{partial\-\_\-context}, typename parent\-\_\-context\-::template \hyperlink{structcrow_1_1detail_1_1partial__context_ae7b6d83d169cdaa5d611da8796f9634c}{partial}$<$ N $>$$>$\-::type
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T\-::context \& \hyperlink{structcrow_1_1detail_1_1partial__context_ac787877fdf379960d15067f2bc526850}{get} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{structcrow_1_1detail_1_1partial__context_a96e8bff131568e0e6ecffd75b5b29e09}{\index{crow\-::detail\-::partial\-\_\-context@{crow\-::detail\-::partial\-\_\-context}!parent\-\_\-context@{parent\-\_\-context}}
+\index{parent\-\_\-context@{parent\-\_\-context}!crow::detail::partial_context@{crow\-::detail\-::partial\-\_\-context}}
+\subsubsection[{parent\-\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Middlewares$>$ using {\bf crow\-::detail\-::partial\-\_\-context}$<$ Middlewares $>$\-::{\bf parent\-\_\-context} =  typename {\bf black\-\_\-magic\-::pop\-\_\-back}$<$Middlewares...$>$\-::template rebind$<$\-::{\bf crow\-::detail\-::partial\-\_\-context}$>$}}\label{structcrow_1_1detail_1_1partial__context_a96e8bff131568e0e6ecffd75b5b29e09}
+\hypertarget{structcrow_1_1detail_1_1partial__context_ae7b6d83d169cdaa5d611da8796f9634c}{\index{crow\-::detail\-::partial\-\_\-context@{crow\-::detail\-::partial\-\_\-context}!partial@{partial}}
+\index{partial@{partial}!crow::detail::partial_context@{crow\-::detail\-::partial\-\_\-context}}
+\subsubsection[{partial}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Middlewares$>$ template$<$int N$>$ using {\bf crow\-::detail\-::partial\-\_\-context}$<$ Middlewares $>$\-::{\bf partial} =  typename std\-::conditional$<$N == sizeof...(Middlewares)-\/1, {\bf partial\-\_\-context}, typename parent\-\_\-context\-::template {\bf partial}$<$N$>$$>$\-::type}}\label{structcrow_1_1detail_1_1partial__context_ae7b6d83d169cdaa5d611da8796f9634c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structcrow_1_1detail_1_1partial__context_ac787877fdf379960d15067f2bc526850}{\index{crow\-::detail\-::partial\-\_\-context@{crow\-::detail\-::partial\-\_\-context}!get@{get}}
+\index{get@{get}!crow::detail::partial_context@{crow\-::detail\-::partial\-\_\-context}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Middlewares$>$ template$<$typename T $>$ T\-::context\& {\bf crow\-::detail\-::partial\-\_\-context}$<$ Middlewares $>$\-::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1detail_1_1partial__context_ac787877fdf379960d15067f2bc526850}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/lib/\hyperlink{crow__all_8h}{crow\-\_\-all.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,336 @@
+\hypertarget{class_chunked_temperature_world}{\section{Chunked\-Temperature\-World Class Reference}
+\label{class_chunked_temperature_world}\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}}
+}
+
+
+{\ttfamily \#include $<$Chunked\-Temperature\-World.\-hpp$>$}
+
+
+
+Inheritance diagram for Chunked\-Temperature\-World\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_chunked_temperature_world__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Chunked\-Temperature\-World\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_chunked_temperature_world__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_chunked_temperature_world_a9c60a8c8964e67556cc51a046f0cb42f}{Chunked\-Temperature\-World} ()
+\item 
+bool \hyperlink{class_chunked_temperature_world_aa06bb1517a6ba6537a89992a8a2f4d8e}{has\-Chunk} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) const noexceptoverride
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ \hyperlink{class_chunked_temperature_world_a9b925259d18aecbde683048ee0422d72}{get\-Chunk} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) const override
+\item 
+void \hyperlink{class_chunked_temperature_world_ab737084e5879c35044c34012fd2281b3}{foreach\-Chunk} (\hyperlink{class_i_temperature_world_chunkable_mixin_a9454e8c3813367f13da22c894c1052ed}{Foreach\-Chunk\-Fn} func) const override
+\item 
+bool \hyperlink{class_chunked_temperature_world_a05f4ce24ff44a6f4f17a8aac71f78af0}{has} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) const noexceptoverride
+\item 
+\hyperlink{struct_temperature}{Temperature} \hyperlink{class_chunked_temperature_world_a9b57de410490bd8f5d6bc69d09d6b97c}{get} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) const override
+\item 
+void \hyperlink{class_chunked_temperature_world_a97210f06e70f9ea07a4b284963e610e1}{set} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, \hyperlink{struct_temperature}{Temperature} temperature) override
+\item 
+void \hyperlink{class_chunked_temperature_world_af4d90e4910f2197691f2c08f11cbc657}{amplify} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, \hyperlink{struct_temperature}{Temperature} temperature) override
+\item 
+void \hyperlink{class_chunked_temperature_world_a5f9a3a143baf0c0238427926aef77f65}{add\-Chunk} (std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ chunk) override
+\item 
+void \hyperlink{class_chunked_temperature_world_a623c1f5efe7aa84d428ba58365ee775a}{remove\-Chunk} (std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ chunk) override
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::list$<$ std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ $>$ \hyperlink{class_chunked_temperature_world_ac1ba488f612261643d130c060eb4611f}{\-\_\-chunks}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of temperature world divided by chunks. It's backed by {\ttfamily std\-::list}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_chunked_temperature_world_a9c60a8c8964e67556cc51a046f0cb42f}{\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}!Chunked\-Temperature\-World@{Chunked\-Temperature\-World}}
+\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}!ChunkedTemperatureWorld@{Chunked\-Temperature\-World}}
+\subsubsection[{Chunked\-Temperature\-World}]{\setlength{\rightskip}{0pt plus 5cm}Chunked\-Temperature\-World\-::\-Chunked\-Temperature\-World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_chunked_temperature_world_a9c60a8c8964e67556cc51a046f0cb42f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_chunked_temperature_world_a5f9a3a143baf0c0238427926aef77f65}{\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}!add\-Chunk@{add\-Chunk}}
+\index{add\-Chunk@{add\-Chunk}!ChunkedTemperatureWorld@{Chunked\-Temperature\-World}}
+\subsubsection[{add\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}void Chunked\-Temperature\-World\-::add\-Chunk (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$}]{chunk}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_chunked_temperature_world_a5f9a3a143baf0c0238427926aef77f65}
+Adds a chunk to this temperature world.
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk} & Chunk to add. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_temperature_world_chunkable_mutable_mixin_aad86bd1196ed595bcdd9025b9076085f}{I\-Temperature\-World\-Chunkable\-Mutable\-Mixin}.
+
+
+
+Reimplemented in \hyperlink{class_scaling_generatable_chunked_temperature_world_a5ec1b1a2a5e058bf57bd7918fcc5a35b}{Scaling\-Generatable\-Chunked\-Temperature\-World}, and \hyperlink{class_generatable_chunked_temperature_world_af1a6752db0e722e8649ddb4c7e1ea8fa}{Generatable\-Chunked\-Temperature\-World}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_chunked_temperature_world_a5f9a3a143baf0c0238427926aef77f65_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_chunked_temperature_world_af4d90e4910f2197691f2c08f11cbc657}{\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}!amplify@{amplify}}
+\index{amplify@{amplify}!ChunkedTemperatureWorld@{Chunked\-Temperature\-World}}
+\subsubsection[{amplify}]{\setlength{\rightskip}{0pt plus 5cm}void Chunked\-Temperature\-World\-::amplify (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z, }
+\item[{{\bf Temperature}}]{temperature}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_chunked_temperature_world_af4d90e4910f2197691f2c08f11cbc657}
+Adds or substracts temperature value from existing temperature value at the point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+{\em temperature} & \hyperlink{struct_temperature}{Temperature} difference. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_temperature_world_ac5a8a92e7141b2e2c2e3d66ba73b7c1e}{I\-Temperature\-World}.
+
+\hypertarget{class_chunked_temperature_world_ab737084e5879c35044c34012fd2281b3}{\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}!foreach\-Chunk@{foreach\-Chunk}}
+\index{foreach\-Chunk@{foreach\-Chunk}!ChunkedTemperatureWorld@{Chunked\-Temperature\-World}}
+\subsubsection[{foreach\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}void Chunked\-Temperature\-World\-::foreach\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Foreach\-Chunk\-Fn}}]{func}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_chunked_temperature_world_ab737084e5879c35044c34012fd2281b3}
+Loops over each chunk.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Function to execute at each chunk. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_temperature_world_chunkable_mixin_a2ded37900a83bdac968ff0f07f315225}{I\-Temperature\-World\-Chunkable\-Mixin}.
+
+\hypertarget{class_chunked_temperature_world_a9b57de410490bd8f5d6bc69d09d6b97c}{\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}!get@{get}}
+\index{get@{get}!ChunkedTemperatureWorld@{Chunked\-Temperature\-World}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Temperature} Chunked\-Temperature\-World\-::get (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_chunked_temperature_world_a9b57de410490bd8f5d6bc69d09d6b97c}
+Returns temperature at the point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_temperature}{Temperature} at the point. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_temperature_world_a9993df60754c2c89597bd8137568c12f}{I\-Temperature\-World}.
+
+\hypertarget{class_chunked_temperature_world_a9b925259d18aecbde683048ee0422d72}{\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}!get\-Chunk@{get\-Chunk}}
+\index{get\-Chunk@{get\-Chunk}!ChunkedTemperatureWorld@{Chunked\-Temperature\-World}}
+\subsubsection[{get\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$ $>$ Chunked\-Temperature\-World\-::get\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_chunked_temperature_world_a9b925259d18aecbde683048ee0422d72}
+Retrieves chunk which holds this point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Chunk at the point. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_temperature_world_chunkable_mixin_aacb0fa709dbd3cb5d630dde64afec5b6}{I\-Temperature\-World\-Chunkable\-Mixin}.
+
+\hypertarget{class_chunked_temperature_world_a05f4ce24ff44a6f4f17a8aac71f78af0}{\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}!has@{has}}
+\index{has@{has}!ChunkedTemperatureWorld@{Chunked\-Temperature\-World}}
+\subsubsection[{has}]{\setlength{\rightskip}{0pt plus 5cm}bool Chunked\-Temperature\-World\-::has (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_chunked_temperature_world_a05f4ce24ff44a6f4f17a8aac71f78af0}
+Tells whether temperature at the point is accessible. This method doesn't throw exceptions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the point is accessible. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_temperature_world_a6c498247ed71d9ad037dd0c1b4779f81}{I\-Temperature\-World}.
+
+\hypertarget{class_chunked_temperature_world_aa06bb1517a6ba6537a89992a8a2f4d8e}{\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}!has\-Chunk@{has\-Chunk}}
+\index{has\-Chunk@{has\-Chunk}!ChunkedTemperatureWorld@{Chunked\-Temperature\-World}}
+\subsubsection[{has\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}bool Chunked\-Temperature\-World\-::has\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_chunked_temperature_world_aa06bb1517a6ba6537a89992a8a2f4d8e}
+Tells whether the chunk which holds this point exists. This method doesn't throw exceptions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if chunk exists. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_temperature_world_chunkable_mixin_a4694b473f4e20976b8a538d16656943d}{I\-Temperature\-World\-Chunkable\-Mixin}.
+
+\hypertarget{class_chunked_temperature_world_a623c1f5efe7aa84d428ba58365ee775a}{\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}!remove\-Chunk@{remove\-Chunk}}
+\index{remove\-Chunk@{remove\-Chunk}!ChunkedTemperatureWorld@{Chunked\-Temperature\-World}}
+\subsubsection[{remove\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}void Chunked\-Temperature\-World\-::remove\-Chunk (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$}]{chunk}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_chunked_temperature_world_a623c1f5efe7aa84d428ba58365ee775a}
+Removes chunk from this temperature world.
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk} & Chunk to remove. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_temperature_world_chunkable_mutable_mixin_a52a6ebbd24162b00566f8e5b535878f8}{I\-Temperature\-World\-Chunkable\-Mutable\-Mixin}.
+
+
+
+Reimplemented in \hyperlink{class_scaling_generatable_chunked_temperature_world_ac3ae4d696d934b925076eeab88658978}{Scaling\-Generatable\-Chunked\-Temperature\-World}, and \hyperlink{class_generatable_chunked_temperature_world_a42c646343bb79dcdeb9f96e6aa06cbec}{Generatable\-Chunked\-Temperature\-World}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_chunked_temperature_world_a623c1f5efe7aa84d428ba58365ee775a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_chunked_temperature_world_a97210f06e70f9ea07a4b284963e610e1}{\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}!set@{set}}
+\index{set@{set}!ChunkedTemperatureWorld@{Chunked\-Temperature\-World}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void Chunked\-Temperature\-World\-::set (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z, }
+\item[{{\bf Temperature}}]{temperature}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_chunked_temperature_world_a97210f06e70f9ea07a4b284963e610e1}
+Sets temperature at the point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+{\em temperature} & \hyperlink{struct_temperature}{Temperature} to set. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_temperature_world_ab23db7ec9a890d6dbb172b26c2fd3d00}{I\-Temperature\-World}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_chunked_temperature_world_ac1ba488f612261643d130c060eb4611f}{\index{Chunked\-Temperature\-World@{Chunked\-Temperature\-World}!\-\_\-chunks@{\-\_\-chunks}}
+\index{\-\_\-chunks@{\-\_\-chunks}!ChunkedTemperatureWorld@{Chunked\-Temperature\-World}}
+\subsubsection[{\-\_\-chunks}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<$std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Boundable}$<${\bf I\-Temperature\-World}$>$ $>$ $>$ Chunked\-Temperature\-World\-::\-\_\-chunks\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_chunked_temperature_world_ac1ba488f612261643d130c060eb4611f}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/implementation/\hyperlink{_chunked_temperature_world_8hpp}{Chunked\-Temperature\-World.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/implementation/\hyperlink{_chunked_temperature_world_8cpp}{Chunked\-Temperature\-World.\-cpp}\end{DoxyCompactItemize}

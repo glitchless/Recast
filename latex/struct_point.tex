@@ -17,13 +17,25 @@ Collaboration diagram for Point\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=134pt]{struct_point__coll__graph}
+\includegraphics[width=186pt]{struct_point__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{struct_point_a4d43f5247afe8c85c6da1aa39dbcc738}{Point} (double \hyperlink{struct_point_ab99c56589bc8ad5fa5071387110a5bc7}{x}, double \hyperlink{struct_point_afa38be143ae800e6ad69ce8ed4df62d8}{y}, double \hyperlink{struct_point_a05ba3b1dfcb19430582ae953cbbfbded}{z})
+\item 
+\hyperlink{struct_point_abcbc44cd825a9fc26fc9027256cf4cb4}{Point} (\hyperlink{struct_coord}{Coord} \hyperlink{struct_point_ab99c56589bc8ad5fa5071387110a5bc7}{x}, \hyperlink{struct_coord}{Coord} \hyperlink{struct_point_afa38be143ae800e6ad69ce8ed4df62d8}{y}, \hyperlink{struct_coord}{Coord} \hyperlink{struct_point_a05ba3b1dfcb19430582ae953cbbfbded}{z})
+\item 
+\hyperlink{struct_coord}{Coord} \hyperlink{struct_point_add97959f26c755fb67ca78ebfb616aaa}{x} () const noexcept
+\item 
+\hyperlink{struct_coord}{Coord} \hyperlink{struct_point_a5c9b4a820e0b6cde951c68a0244ee39e}{y} () const noexcept
+\item 
+\hyperlink{struct_coord}{Coord} \hyperlink{struct_point_a848473c2345430a5bcd4d87a8e46f264}{z} () const noexcept
+\item 
+bool \hyperlink{struct_point_a4fcabfb4a4f656779cc2ea87d1564a37}{operator==} (const \hyperlink{struct_point}{Point} \&other) const noexcept
+\item 
+bool \hyperlink{struct_point_ace1f99f1c41319502f2377569a67c3ca}{operator!=} (const \hyperlink{struct_point}{Point} \&other) const noexcept
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -34,12 +46,23 @@ double \hyperlink{struct_point_afa38be143ae800e6ad69ce8ed4df62d8}{y}
 \item 
 double \hyperlink{struct_point_a05ba3b1dfcb19430582ae953cbbfbded}{z}
 \end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_coord}{Coord} \hyperlink{struct_point_a74492d96f1b1efe6813f748809a3679a}{\-\_\-x}
+\item 
+\hyperlink{struct_coord}{Coord} \hyperlink{struct_point_a98147cc10663ee1581decea4c8c0ba3d}{\-\_\-y}
+\item 
+\hyperlink{struct_coord}{Coord} \hyperlink{struct_point_a9ae6adfd6a9d2dc2269326b9857611a5}{\-\_\-z}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Just point. 
 
-It't \hyperlink{struct_point}{Point}. James \hyperlink{struct_point}{Point}. 
+It't \hyperlink{struct_point}{Point}. James \hyperlink{struct_point}{Point}.
+
+Type. Represents point in three-\/dimensional space. 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{struct_point_a4d43f5247afe8c85c6da1aa39dbcc738}{\index{Point@{Point}!Point@{Point}}
@@ -51,9 +74,65 @@ It't \hyperlink{struct_point}{Point}. James \hyperlink{struct_point}{Point}.
 \item[{double}]{z}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_point_a4d43f5247afe8c85c6da1aa39dbcc738}
+\hypertarget{struct_point_abcbc44cd825a9fc26fc9027256cf4cb4}{\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{Point}]{\setlength{\rightskip}{0pt plus 5cm}Point\-::\-Point (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_point_abcbc44cd825a9fc26fc9027256cf4cb4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_point_ace1f99f1c41319502f2377569a67c3ca}{\index{Point@{Point}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!Point@{Point}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool Point\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Point} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_point_ace1f99f1c41319502f2377569a67c3ca}
+\hypertarget{struct_point_a4fcabfb4a4f656779cc2ea87d1564a37}{\index{Point@{Point}!operator==@{operator==}}
+\index{operator==@{operator==}!Point@{Point}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Point\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Point} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_point_a4fcabfb4a4f656779cc2ea87d1564a37}
+\hypertarget{struct_point_add97959f26c755fb67ca78ebfb616aaa}{\index{Point@{Point}!x@{x}}
+\index{x@{x}!Point@{Point}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coord} Point\-::x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_point_add97959f26c755fb67ca78ebfb616aaa}
+\hypertarget{struct_point_a5c9b4a820e0b6cde951c68a0244ee39e}{\index{Point@{Point}!y@{y}}
+\index{y@{y}!Point@{Point}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coord} Point\-::y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_point_a5c9b4a820e0b6cde951c68a0244ee39e}
+\hypertarget{struct_point_a848473c2345430a5bcd4d87a8e46f264}{\index{Point@{Point}!z@{z}}
+\index{z@{z}!Point@{Point}}
+\subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coord} Point\-::z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_point_a848473c2345430a5bcd4d87a8e46f264}
 
 
 \subsection{Member Data Documentation}
+\hypertarget{struct_point_a74492d96f1b1efe6813f748809a3679a}{\index{Point@{Point}!\-\_\-x@{\-\_\-x}}
+\index{\-\_\-x@{\-\_\-x}!Point@{Point}}
+\subsubsection[{\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coord} Point\-::\-\_\-x\hspace{0.3cm}{\ttfamily [protected]}}}\label{struct_point_a74492d96f1b1efe6813f748809a3679a}
+\hypertarget{struct_point_a98147cc10663ee1581decea4c8c0ba3d}{\index{Point@{Point}!\-\_\-y@{\-\_\-y}}
+\index{\-\_\-y@{\-\_\-y}!Point@{Point}}
+\subsubsection[{\-\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coord} Point\-::\-\_\-y\hspace{0.3cm}{\ttfamily [protected]}}}\label{struct_point_a98147cc10663ee1581decea4c8c0ba3d}
+\hypertarget{struct_point_a9ae6adfd6a9d2dc2269326b9857611a5}{\index{Point@{Point}!\-\_\-z@{\-\_\-z}}
+\index{\-\_\-z@{\-\_\-z}!Point@{Point}}
+\subsubsection[{\-\_\-z}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coord} Point\-::\-\_\-z\hspace{0.3cm}{\ttfamily [protected]}}}\label{struct_point_a9ae6adfd6a9d2dc2269326b9857611a5}
 \hypertarget{struct_point_ab99c56589bc8ad5fa5071387110a5bc7}{\index{Point@{Point}!x@{x}}
 \index{x@{x}!Point@{Point}}
 \subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}double Point\-::x}}\label{struct_point_ab99c56589bc8ad5fa5071387110a5bc7}
@@ -65,6 +144,7 @@ It't \hyperlink{struct_point}{Point}. James \hyperlink{struct_point}{Point}.
 \subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}double Point\-::z}}\label{struct_point_a05ba3b1dfcb19430582ae953cbbfbded}
 
 
-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/models/\hyperlink{_point_8h}{Point.\-h}\end{DoxyCompactItemize}
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/models/\hyperlink{_point_8h}{Point.\-h}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/types/\hyperlink{_point_8hpp}{Point.\-hpp}\end{DoxyCompactItemize}

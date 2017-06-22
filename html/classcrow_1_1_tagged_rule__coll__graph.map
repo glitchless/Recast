@@ -1,0 +1,4 @@
+<map id="crow::TaggedRule&lt; Args &gt;" name="crow::TaggedRule&lt; Args &gt;">
+<area shape="rect" id="node2" href="$classcrow_1_1_base_rule.html" title="{crow::BaseRule\n|# methods_\l# rule_\l# name_\l# rule_to_upgrade_\l|+ BaseRule()\l+ ~BaseRule()\l+ validate()\l+ upgrade()\l+ handle()\l+ handle_upgrade()\l+ get_methods()\l}" alt="" coords="5,6,139,215"/>
+<area shape="rect" id="node3" href="$structcrow_1_1_rule_parameter_traits.html" title="{crow::RuleParameterTraits\l\&lt; TaggedRule\&lt; Args...\&gt; \&gt;\n||+ websocket()\l+ name()\l+ methods()\l+ methods()\l}" alt="" coords="163,43,341,179"/>
+</map>

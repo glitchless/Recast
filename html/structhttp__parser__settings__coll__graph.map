@@ -1,0 +1,3 @@
+<map id="http_parser_settings" name="http_parser_settings">
+<area shape="rect" id="node2" href="$structhttp__parser.html" title="{http_parser\n|+ type\l+ flags\l+ state\l+ header_state\l+ index\l+ nread\l+ content_length\l+ http_major\l+ http_minor\l+ status_code\l+ method\l+ http_errno\l+ upgrade\l+ data\l|}" alt="" coords="15,6,133,274"/>
+</map>

@@ -1,0 +1,197 @@
+\hypertarget{struct_catch_1_1_test_case_info}{\section{Catch\-:\-:Test\-Case\-Info Struct Reference}
+\label{struct_catch_1_1_test_case_info}\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}}
+}
+
+
+{\ttfamily \#include $<$catch.\-hpp$>$}
+
+
+
+Inheritance diagram for Catch\-:\-:Test\-Case\-Info\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{struct_catch_1_1_test_case_info__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Catch\-:\-:Test\-Case\-Info\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{struct_catch_1_1_test_case_info__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eac}{Special\-Properties} \{ \\*
+\hyperlink{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eacaf94e9de5f8ec1e53b1aa761ec564b31a}{None} = 0, 
+\hyperlink{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eacaeda53906c14c3973e0980900c132b8f7}{Is\-Hidden} = 1 $<$$<$ 1, 
+\hyperlink{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eacaf9002285bccfc343935958f3953f4c01}{Should\-Fail} = 1 $<$$<$ 2, 
+\hyperlink{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eacadf1873d3271121cb9f52d7df45b416ca}{May\-Fail} = 1 $<$$<$ 3, 
+\\*
+\hyperlink{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eaca4704adf89ed7f7ad653d08f99813a974}{Throws} = 1 $<$$<$ 4, 
+\hyperlink{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eaca06472887b53fda9eb8015d74e7fd2cf1}{Non\-Portable} = 1 $<$$<$ 5
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_catch_1_1_test_case_info_a35ec65315e0d1f178491b5a59f3f3123}{Test\-Case\-Info} (std\-::string const \&\-\_\-name, std\-::string const \&\-\_\-class\-Name, std\-::string const \&\-\_\-description, std\-::set$<$ std\-::string $>$ const \&\-\_\-tags, \hyperlink{struct_catch_1_1_source_line_info}{Source\-Line\-Info} const \&\-\_\-line\-Info)
+\item 
+\hyperlink{struct_catch_1_1_test_case_info_ac338adb4e38f4bf3977fb45b2b1fe447}{Test\-Case\-Info} (\hyperlink{struct_catch_1_1_test_case_info}{Test\-Case\-Info} const \&other)
+\item 
+bool \hyperlink{struct_catch_1_1_test_case_info_a01ac8b11d8c105e5278a239ab5214257}{is\-Hidden} () const 
+\item 
+bool \hyperlink{struct_catch_1_1_test_case_info_a19fb4f0b755956eee8a1fecf713fb7ca}{throws} () const 
+\item 
+bool \hyperlink{struct_catch_1_1_test_case_info_a64586336bb49bd6e9ef8a089b072a712}{ok\-To\-Fail} () const 
+\item 
+bool \hyperlink{struct_catch_1_1_test_case_info_a1ed1c3689c2874c421466945bd3cb75c}{expected\-To\-Fail} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{struct_catch_1_1_test_case_info_a463794e2f5cfead307c93efd134ade36}{name}
+\item 
+std\-::string \hyperlink{struct_catch_1_1_test_case_info_a1a5e0825132a38d091defdebbf2f8ce9}{class\-Name}
+\item 
+std\-::string \hyperlink{struct_catch_1_1_test_case_info_a37fe2db9425bc45f6a33893eac31198e}{description}
+\item 
+std\-::set$<$ std\-::string $>$ \hyperlink{struct_catch_1_1_test_case_info_a045f62e7719a8760a5b456f7fd2dc97c}{tags}
+\item 
+std\-::set$<$ std\-::string $>$ \hyperlink{struct_catch_1_1_test_case_info_a0ed3864a313e8ddc3ae38431be5be9ae}{lcase\-Tags}
+\item 
+std\-::string \hyperlink{struct_catch_1_1_test_case_info_ac65c2d36fd36f71e9bf782b2ea245c64}{tags\-As\-String}
+\item 
+\hyperlink{struct_catch_1_1_source_line_info}{Source\-Line\-Info} \hyperlink{struct_catch_1_1_test_case_info_aa9407b7f442655b51a2aad24b3fa2fd3}{line\-Info}
+\item 
+\hyperlink{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eac}{Special\-Properties} \hyperlink{struct_catch_1_1_test_case_info_afc1e84bd7a2e180895a06d9131302af0}{properties}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_catch_1_1_test_case_info_addc10c770e56f49da5baa0c76cf25bd5}{set\-Tags} (\hyperlink{struct_catch_1_1_test_case_info}{Test\-Case\-Info} \&test\-Case\-Info, std\-::set$<$ std\-::string $>$ const \&\hyperlink{struct_catch_1_1_test_case_info_a045f62e7719a8760a5b456f7fd2dc97c}{tags})
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eac}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!Special\-Properties@{Special\-Properties}}
+\index{Special\-Properties@{Special\-Properties}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{Special\-Properties}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Catch\-::\-Test\-Case\-Info\-::\-Special\-Properties}}}\label{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eac}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{None@{None}!Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}}\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!None@{None}}\item[{\em 
+\hypertarget{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eacaf94e9de5f8ec1e53b1aa761ec564b31a}{None}\label{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eacaf94e9de5f8ec1e53b1aa761ec564b31a}
+}]\index{Is\-Hidden@{Is\-Hidden}!Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}}\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!Is\-Hidden@{Is\-Hidden}}\item[{\em 
+\hypertarget{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eacaeda53906c14c3973e0980900c132b8f7}{Is\-Hidden}\label{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eacaeda53906c14c3973e0980900c132b8f7}
+}]\index{Should\-Fail@{Should\-Fail}!Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}}\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!Should\-Fail@{Should\-Fail}}\item[{\em 
+\hypertarget{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eacaf9002285bccfc343935958f3953f4c01}{Should\-Fail}\label{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eacaf9002285bccfc343935958f3953f4c01}
+}]\index{May\-Fail@{May\-Fail}!Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}}\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!May\-Fail@{May\-Fail}}\item[{\em 
+\hypertarget{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eacadf1873d3271121cb9f52d7df45b416ca}{May\-Fail}\label{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eacadf1873d3271121cb9f52d7df45b416ca}
+}]\index{Throws@{Throws}!Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}}\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!Throws@{Throws}}\item[{\em 
+\hypertarget{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eaca4704adf89ed7f7ad653d08f99813a974}{Throws}\label{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eaca4704adf89ed7f7ad653d08f99813a974}
+}]\index{Non\-Portable@{Non\-Portable}!Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}}\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!Non\-Portable@{Non\-Portable}}\item[{\em 
+\hypertarget{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eaca06472887b53fda9eb8015d74e7fd2cf1}{Non\-Portable}\label{struct_catch_1_1_test_case_info_a39b232f74b4a7a6f2183b96759027eaca06472887b53fda9eb8015d74e7fd2cf1}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_catch_1_1_test_case_info_a35ec65315e0d1f178491b5a59f3f3123}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!Test\-Case\-Info@{Test\-Case\-Info}}
+\index{Test\-Case\-Info@{Test\-Case\-Info}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{Test\-Case\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Test\-Case\-Info\-::\-Test\-Case\-Info (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{\-\_\-name, }
+\item[{std\-::string const \&}]{\-\_\-class\-Name, }
+\item[{std\-::string const \&}]{\-\_\-description, }
+\item[{std\-::set$<$ std\-::string $>$ const \&}]{\-\_\-tags, }
+\item[{{\bf Source\-Line\-Info} const \&}]{\-\_\-line\-Info}
+\end{DoxyParamCaption}
+)}}\label{struct_catch_1_1_test_case_info_a35ec65315e0d1f178491b5a59f3f3123}
+\hypertarget{struct_catch_1_1_test_case_info_ac338adb4e38f4bf3977fb45b2b1fe447}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!Test\-Case\-Info@{Test\-Case\-Info}}
+\index{Test\-Case\-Info@{Test\-Case\-Info}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{Test\-Case\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Catch\-::\-Test\-Case\-Info\-::\-Test\-Case\-Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Test\-Case\-Info} const \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{struct_catch_1_1_test_case_info_ac338adb4e38f4bf3977fb45b2b1fe447}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_catch_1_1_test_case_info_a1ed1c3689c2874c421466945bd3cb75c}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!expected\-To\-Fail@{expected\-To\-Fail}}
+\index{expected\-To\-Fail@{expected\-To\-Fail}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{expected\-To\-Fail}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Test\-Case\-Info\-::expected\-To\-Fail (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{struct_catch_1_1_test_case_info_a1ed1c3689c2874c421466945bd3cb75c}
+\hypertarget{struct_catch_1_1_test_case_info_a01ac8b11d8c105e5278a239ab5214257}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!is\-Hidden@{is\-Hidden}}
+\index{is\-Hidden@{is\-Hidden}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{is\-Hidden}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Test\-Case\-Info\-::is\-Hidden (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{struct_catch_1_1_test_case_info_a01ac8b11d8c105e5278a239ab5214257}
+\hypertarget{struct_catch_1_1_test_case_info_a64586336bb49bd6e9ef8a089b072a712}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!ok\-To\-Fail@{ok\-To\-Fail}}
+\index{ok\-To\-Fail@{ok\-To\-Fail}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{ok\-To\-Fail}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Test\-Case\-Info\-::ok\-To\-Fail (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{struct_catch_1_1_test_case_info_a64586336bb49bd6e9ef8a089b072a712}
+\hypertarget{struct_catch_1_1_test_case_info_a19fb4f0b755956eee8a1fecf713fb7ca}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!throws@{throws}}
+\index{throws@{throws}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{throws}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\-::\-Test\-Case\-Info\-::throws (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{struct_catch_1_1_test_case_info_a19fb4f0b755956eee8a1fecf713fb7ca}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{struct_catch_1_1_test_case_info_addc10c770e56f49da5baa0c76cf25bd5}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!set\-Tags@{set\-Tags}}
+\index{set\-Tags@{set\-Tags}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{set\-Tags}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Tags (
+\begin{DoxyParamCaption}
+\item[{{\bf Test\-Case\-Info} \&}]{test\-Case\-Info, }
+\item[{std\-::set$<$ std\-::string $>$ const \&}]{tags}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{struct_catch_1_1_test_case_info_addc10c770e56f49da5baa0c76cf25bd5}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_catch_1_1_test_case_info_a1a5e0825132a38d091defdebbf2f8ce9}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!class\-Name@{class\-Name}}
+\index{class\-Name@{class\-Name}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{class\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Test\-Case\-Info\-::class\-Name}}\label{struct_catch_1_1_test_case_info_a1a5e0825132a38d091defdebbf2f8ce9}
+\hypertarget{struct_catch_1_1_test_case_info_a37fe2db9425bc45f6a33893eac31198e}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!description@{description}}
+\index{description@{description}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{description}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Test\-Case\-Info\-::description}}\label{struct_catch_1_1_test_case_info_a37fe2db9425bc45f6a33893eac31198e}
+\hypertarget{struct_catch_1_1_test_case_info_a0ed3864a313e8ddc3ae38431be5be9ae}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!lcase\-Tags@{lcase\-Tags}}
+\index{lcase\-Tags@{lcase\-Tags}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{lcase\-Tags}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$std\-::string$>$ Catch\-::\-Test\-Case\-Info\-::lcase\-Tags}}\label{struct_catch_1_1_test_case_info_a0ed3864a313e8ddc3ae38431be5be9ae}
+\hypertarget{struct_catch_1_1_test_case_info_aa9407b7f442655b51a2aad24b3fa2fd3}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!line\-Info@{line\-Info}}
+\index{line\-Info@{line\-Info}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{line\-Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Source\-Line\-Info} Catch\-::\-Test\-Case\-Info\-::line\-Info}}\label{struct_catch_1_1_test_case_info_aa9407b7f442655b51a2aad24b3fa2fd3}
+\hypertarget{struct_catch_1_1_test_case_info_a463794e2f5cfead307c93efd134ade36}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!name@{name}}
+\index{name@{name}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Test\-Case\-Info\-::name}}\label{struct_catch_1_1_test_case_info_a463794e2f5cfead307c93efd134ade36}
+\hypertarget{struct_catch_1_1_test_case_info_afc1e84bd7a2e180895a06d9131302af0}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!properties@{properties}}
+\index{properties@{properties}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Special\-Properties} Catch\-::\-Test\-Case\-Info\-::properties}}\label{struct_catch_1_1_test_case_info_afc1e84bd7a2e180895a06d9131302af0}
+\hypertarget{struct_catch_1_1_test_case_info_a045f62e7719a8760a5b456f7fd2dc97c}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!tags@{tags}}
+\index{tags@{tags}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{tags}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$std\-::string$>$ Catch\-::\-Test\-Case\-Info\-::tags}}\label{struct_catch_1_1_test_case_info_a045f62e7719a8760a5b456f7fd2dc97c}
+\hypertarget{struct_catch_1_1_test_case_info_ac65c2d36fd36f71e9bf782b2ea245c64}{\index{Catch\-::\-Test\-Case\-Info@{Catch\-::\-Test\-Case\-Info}!tags\-As\-String@{tags\-As\-String}}
+\index{tags\-As\-String@{tags\-As\-String}!Catch::TestCaseInfo@{Catch\-::\-Test\-Case\-Info}}
+\subsubsection[{tags\-As\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Catch\-::\-Test\-Case\-Info\-::tags\-As\-String}}\label{struct_catch_1_1_test_case_info_ac65c2d36fd36f71e9bf782b2ea245c64}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/lib/\hyperlink{catch_8hpp}{catch.\-hpp}\end{DoxyCompactItemize}

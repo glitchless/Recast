@@ -1,0 +1,8 @@
+<map id="BoundTemperatureWorld::_getIndexInData" name="BoundTemperatureWorld::_getIndexInData">
+<area shape="rect" id="node2" href="$class_bound_temperature_world.html#a1a668e9632e4179029cabad5052428fc" title="BoundTemperatureWorld::get" alt="" coords="221,5,413,32"/>
+<area shape="rect" id="node4" href="$class_bound_temperature_world.html#aa069691f31dd38006cfeacab94b6e94e" title="BoundTemperatureWorld::set" alt="" coords="221,56,413,83"/>
+<area shape="rect" id="node5" href="$class_bound_temperature_world.html#a7b49bd6e07cc78f3c7a3a722d0ec5bac" title="BoundTemperatureWorld\l::amplify" alt="" coords="234,107,401,149"/>
+<area shape="rect" id="node6" href="$class_scalable_bound_temperature_world.html#ade4ecf303ae025e824c0bd5ecd2e2ca7" title="ScalableBoundTemperature\lWorld::set" alt="" coords="226,173,409,214"/>
+<area shape="rect" id="node7" href="$class_scalable_bound_temperature_world.html#ab9602b36759aa857910e03856344759d" title="ScalableBoundTemperature\lWorld::amplify" alt="" coords="226,238,409,279"/>
+<area shape="rect" id="node3" href="$unittest_8cpp.html#afc1d4dae6cf44b56e5e984f30b5942f2" title="SCENARIO" alt="" coords="461,56,555,83"/>
+</map>

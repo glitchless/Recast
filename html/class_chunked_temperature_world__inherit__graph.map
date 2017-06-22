@@ -1,0 +1,9 @@
+<map id="ChunkedTemperatureWorld" name="ChunkedTemperatureWorld">
+<area shape="rect" id="node7" href="$class_generatable_chunked_temperature_world.html" title="{GeneratableChunkedTemperature\lWorld\n|# _needChunkFn\l# _makeChunkFn\l# _onChunkAddListeners\l# _onChunkRemoveListeners\l|+ GeneratableChunkedTemperature\lWorld()\l+ hasOrIsGeneratableChunk()\l+ getOrGenerateChunk()\l+ addChunk()\l+ removeChunk()\l+ onChunkAdd()\l+ onChunkRemove()\l}" alt="" coords="181,758,411,997"/>
+<area shape="rect" id="node2" href="$class_i_temperature_world_chunkable_mutable.html" title="{ITemperatureWorldChunkable\lMutable\&lt; ITemperatureWorldChunkable\l\&lt; ITemperatureWorld \&gt; \&gt;\n||}" alt="" coords="169,344,423,451"/>
+<area shape="rect" id="node3" href="$class_i_temperature_world_chunkable.html" title="{ITemperatureWorldChunkable\l\&lt; ITemperatureWorld \&gt;\n||}" alt="" coords="89,197,284,289"/>
+<area shape="rect" id="node4" href="$class_i_temperature_world.html" title="{ITemperatureWorld\n||+ ~ITemperatureWorld()\l+ has()\l+ get()\l+ set()\l+ amplify()\l}" alt="" coords="5,5,165,141"/>
+<area shape="rect" id="node5" href="$class_i_temperature_world_chunkable_mixin.html" title="{ITemperatureWorldChunkable\lMixin\n||+ hasChunk()\l+ getChunk()\l+ foreachChunk()\l}" alt="" coords="191,13,385,134"/>
+<area shape="rect" id="node6" href="$class_i_temperature_world_chunkable_mutable_mixin.html" title="{ITemperatureWorldChunkable\lMutableMixin\n||+ addChunk()\l+ removeChunk()\l}" alt="" coords="308,189,503,296"/>
+<area shape="rect" id="node8" href="$class_scaling_generatable_chunked_temperature_world.html" title="{ScalingGeneratableChunked\lTemperatureWorld\n|# _baseChunkSize\l# _priorityPoints\l|+ ScalingGeneratableChunked\lTemperatureWorld()\l+ addPriorityPoint()\l+ removePriorityPoint()\l+ addChunk()\l+ removeChunk()\l# _updateScales()\l}" alt="" coords="197,1045,395,1240"/>
+</map>

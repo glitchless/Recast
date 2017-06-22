@@ -1,0 +1,5 @@
+<map id="Parallelepiped" name="Parallelepiped">
+<area shape="rect" id="node2" href="$struct_size.html" title="{Size\n||+ Size()\l}" alt="" coords="5,163,72,240"/>
+<area shape="rect" id="node3" href="$struct_generic_scalar.html" title="{GenericScalar\&lt; int \&gt;\n|# _value\l|+ GenericScalar()\l+ operator int()\l+ operator int &amp;()\l}" alt="" coords="23,5,165,112"/>
+<area shape="rect" id="node4" href="$struct_coord.html" title="{Coord\n||+ Coord()\l}" alt="" coords="97,163,173,240"/>
+</map>

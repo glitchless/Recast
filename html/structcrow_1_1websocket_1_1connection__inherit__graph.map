@@ -1,0 +1,3 @@
+<map id="crow::websocket::connection" name="crow::websocket::connection">
+<area shape="rect" id="node2" href="$classcrow_1_1websocket_1_1_connection.html" title="{crow::websocket::Connection\l\&lt; Adaptor \&gt;\n||+ Connection()\l+ dispatch()\l+ post()\l+ send_pong()\l+ send_binary()\l+ send_text()\l+ close()\l# build_header()\l# start()\l# do_read()\l# is_FIN()\l# opcode()\l# handle_fragment()\l# do_write()\l# check_destroy()\l}" alt="" coords="5,206,200,503"/>
+</map>

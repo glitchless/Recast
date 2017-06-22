@@ -1,0 +1,126 @@
+\hypertarget{structcrow_1_1_socket_adaptor}{\section{crow\-:\-:Socket\-Adaptor Struct Reference}
+\label{structcrow_1_1_socket_adaptor}\index{crow\-::\-Socket\-Adaptor@{crow\-::\-Socket\-Adaptor}}
+}
+
+
+{\ttfamily \#include $<$crow\-\_\-all.\-h$>$}
+
+
+
+Collaboration diagram for crow\-:\-:Socket\-Adaptor\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{structcrow_1_1_socket_adaptor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{structcrow_1_1_socket_adaptor_aca8c861d9a672785e17e127042d2f721}{context} = void
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structcrow_1_1_socket_adaptor_ae86b04665391cb1fb36ec15e49787348}{Socket\-Adaptor} (boost\-::asio\-::io\-\_\-service \&io\-\_\-service, \hyperlink{structcrow_1_1_socket_adaptor_aca8c861d9a672785e17e127042d2f721}{context} $\ast$)
+\item 
+boost\-::asio\-::io\-\_\-service \& \hyperlink{structcrow_1_1_socket_adaptor_a0510de3c3c993cfd8a36950b69a6700e}{get\-\_\-io\-\_\-service} ()
+\item 
+tcp\-::socket \& \hyperlink{structcrow_1_1_socket_adaptor_a6c1efabfc9bf922308027f3d35c1f2c7}{raw\-\_\-socket} ()
+\item 
+tcp\-::socket \& \hyperlink{structcrow_1_1_socket_adaptor_a70c413ce6d8f9e2fe1e4852fc07f0928}{socket} ()
+\item 
+tcp\-::endpoint \hyperlink{structcrow_1_1_socket_adaptor_a23fb23ae334da14488199fe04d5ea066}{remote\-\_\-endpoint} ()
+\item 
+bool \hyperlink{structcrow_1_1_socket_adaptor_a2630c4db0c3065e7c7b396515571941a}{is\-\_\-open} ()
+\item 
+void \hyperlink{structcrow_1_1_socket_adaptor_af925b4f600663b2293741947297d730e}{close} ()
+\item 
+{\footnotesize template$<$typename F $>$ }\\void \hyperlink{structcrow_1_1_socket_adaptor_a074e679e5abd86af6bcd3f505accfb4e}{start} (F f)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tcp\-::socket \hyperlink{structcrow_1_1_socket_adaptor_adfae304955845303cee26c31910b1f2c}{socket\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{structcrow_1_1_socket_adaptor_aca8c861d9a672785e17e127042d2f721}{\index{crow\-::\-Socket\-Adaptor@{crow\-::\-Socket\-Adaptor}!context@{context}}
+\index{context@{context}!crow::SocketAdaptor@{crow\-::\-Socket\-Adaptor}}
+\subsubsection[{context}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf crow\-::\-Socket\-Adaptor\-::context} =  void}}\label{structcrow_1_1_socket_adaptor_aca8c861d9a672785e17e127042d2f721}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structcrow_1_1_socket_adaptor_ae86b04665391cb1fb36ec15e49787348}{\index{crow\-::\-Socket\-Adaptor@{crow\-::\-Socket\-Adaptor}!Socket\-Adaptor@{Socket\-Adaptor}}
+\index{Socket\-Adaptor@{Socket\-Adaptor}!crow::SocketAdaptor@{crow\-::\-Socket\-Adaptor}}
+\subsubsection[{Socket\-Adaptor}]{\setlength{\rightskip}{0pt plus 5cm}crow\-::\-Socket\-Adaptor\-::\-Socket\-Adaptor (
+\begin{DoxyParamCaption}
+\item[{boost\-::asio\-::io\-\_\-service \&}]{io\-\_\-service, }
+\item[{{\bf context} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_socket_adaptor_ae86b04665391cb1fb36ec15e49787348}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structcrow_1_1_socket_adaptor_af925b4f600663b2293741947297d730e}{\index{crow\-::\-Socket\-Adaptor@{crow\-::\-Socket\-Adaptor}!close@{close}}
+\index{close@{close}!crow::SocketAdaptor@{crow\-::\-Socket\-Adaptor}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void crow\-::\-Socket\-Adaptor\-::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_socket_adaptor_af925b4f600663b2293741947297d730e}
+\hypertarget{structcrow_1_1_socket_adaptor_a0510de3c3c993cfd8a36950b69a6700e}{\index{crow\-::\-Socket\-Adaptor@{crow\-::\-Socket\-Adaptor}!get\-\_\-io\-\_\-service@{get\-\_\-io\-\_\-service}}
+\index{get\-\_\-io\-\_\-service@{get\-\_\-io\-\_\-service}!crow::SocketAdaptor@{crow\-::\-Socket\-Adaptor}}
+\subsubsection[{get\-\_\-io\-\_\-service}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::asio\-::io\-\_\-service\& crow\-::\-Socket\-Adaptor\-::get\-\_\-io\-\_\-service (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_socket_adaptor_a0510de3c3c993cfd8a36950b69a6700e}
+\hypertarget{structcrow_1_1_socket_adaptor_a2630c4db0c3065e7c7b396515571941a}{\index{crow\-::\-Socket\-Adaptor@{crow\-::\-Socket\-Adaptor}!is\-\_\-open@{is\-\_\-open}}
+\index{is\-\_\-open@{is\-\_\-open}!crow::SocketAdaptor@{crow\-::\-Socket\-Adaptor}}
+\subsubsection[{is\-\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}bool crow\-::\-Socket\-Adaptor\-::is\-\_\-open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_socket_adaptor_a2630c4db0c3065e7c7b396515571941a}
+\hypertarget{structcrow_1_1_socket_adaptor_a6c1efabfc9bf922308027f3d35c1f2c7}{\index{crow\-::\-Socket\-Adaptor@{crow\-::\-Socket\-Adaptor}!raw\-\_\-socket@{raw\-\_\-socket}}
+\index{raw\-\_\-socket@{raw\-\_\-socket}!crow::SocketAdaptor@{crow\-::\-Socket\-Adaptor}}
+\subsubsection[{raw\-\_\-socket}]{\setlength{\rightskip}{0pt plus 5cm}tcp\-::socket\& crow\-::\-Socket\-Adaptor\-::raw\-\_\-socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_socket_adaptor_a6c1efabfc9bf922308027f3d35c1f2c7}
+\hypertarget{structcrow_1_1_socket_adaptor_a23fb23ae334da14488199fe04d5ea066}{\index{crow\-::\-Socket\-Adaptor@{crow\-::\-Socket\-Adaptor}!remote\-\_\-endpoint@{remote\-\_\-endpoint}}
+\index{remote\-\_\-endpoint@{remote\-\_\-endpoint}!crow::SocketAdaptor@{crow\-::\-Socket\-Adaptor}}
+\subsubsection[{remote\-\_\-endpoint}]{\setlength{\rightskip}{0pt plus 5cm}tcp\-::endpoint crow\-::\-Socket\-Adaptor\-::remote\-\_\-endpoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_socket_adaptor_a23fb23ae334da14488199fe04d5ea066}
+\hypertarget{structcrow_1_1_socket_adaptor_a70c413ce6d8f9e2fe1e4852fc07f0928}{\index{crow\-::\-Socket\-Adaptor@{crow\-::\-Socket\-Adaptor}!socket@{socket}}
+\index{socket@{socket}!crow::SocketAdaptor@{crow\-::\-Socket\-Adaptor}}
+\subsubsection[{socket}]{\setlength{\rightskip}{0pt plus 5cm}tcp\-::socket\& crow\-::\-Socket\-Adaptor\-::socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_socket_adaptor_a70c413ce6d8f9e2fe1e4852fc07f0928}
+\hypertarget{structcrow_1_1_socket_adaptor_a074e679e5abd86af6bcd3f505accfb4e}{\index{crow\-::\-Socket\-Adaptor@{crow\-::\-Socket\-Adaptor}!start@{start}}
+\index{start@{start}!crow::SocketAdaptor@{crow\-::\-Socket\-Adaptor}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F $>$ void crow\-::\-Socket\-Adaptor\-::start (
+\begin{DoxyParamCaption}
+\item[{F}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcrow_1_1_socket_adaptor_a074e679e5abd86af6bcd3f505accfb4e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structcrow_1_1_socket_adaptor_adfae304955845303cee26c31910b1f2c}{\index{crow\-::\-Socket\-Adaptor@{crow\-::\-Socket\-Adaptor}!socket\-\_\-@{socket\-\_\-}}
+\index{socket\-\_\-@{socket\-\_\-}!crow::SocketAdaptor@{crow\-::\-Socket\-Adaptor}}
+\subsubsection[{socket\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}tcp\-::socket crow\-::\-Socket\-Adaptor\-::socket\-\_\-}}\label{structcrow_1_1_socket_adaptor_adfae304955845303cee26c31910b1f2c}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/lib/\hyperlink{crow__all_8h}{crow\-\_\-all.\-h}\end{DoxyCompactItemize}

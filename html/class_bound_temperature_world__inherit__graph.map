@@ -1,0 +1,8 @@
+<map id="BoundTemperatureWorld" name="BoundTemperatureWorld">
+<area shape="rect" id="node5" href="$class_i_temperature_world_scalable.html" title="{ITemperatureWorldScalable\l\&lt; BoundTemperatureWorld \&gt;\n||}" alt="" coords="91,619,281,711"/>
+<area shape="rect" id="node2" href="$class_i_temperature_world_boundable.html" title="{ITemperatureWorldBoundable\l\&lt; ITemperatureWorld \&gt;\n||}" alt="" coords="89,190,284,282"/>
+<area shape="rect" id="node3" href="$class_i_temperature_world.html" title="{ITemperatureWorld\n||+ ~ITemperatureWorld()\l+ has()\l+ get()\l+ set()\l+ amplify()\l}" alt="" coords="5,5,165,141"/>
+<area shape="rect" id="node4" href="$class_i_temperature_world_boundable_mixin.html" title="{ITemperatureWorldBoundable\lMixin\n||+ foreach()\l+ bounds()\l}" alt="" coords="191,20,385,127"/>
+<area shape="rect" id="node6" href="$class_i_temperature_world_scalable_mutable.html" title="{ITemperatureWorldScalable\lMutable\&lt; ITemperatureWorldScalable\l\&lt; BoundTemperatureWorld \&gt; \&gt;\n||}" alt="" coords="66,760,307,867"/>
+<area shape="rect" id="node7" href="$class_scalable_bound_temperature_world.html" title="{ScalableBoundTemperature\lWorld\n|# _cellScale\l|+ ScalableBoundTemperature\lWorld()\l+ cellScale()\l+ setCellScale()\l+ set()\l+ amplify()\l+ foreach()\l# _findScaledAreaMinByAxis()\l# _findScaledAreaMaxByAxis()\l# _findScaledAreaByAxis()\l# _findScaledArea()\l}" alt="" coords="85,915,288,1154"/>
+</map>

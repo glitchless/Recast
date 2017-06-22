@@ -1,0 +1,449 @@
+\hypertarget{classcrow_1_1websocket_1_1_connection}{\section{crow\-:\-:websocket\-:\-:Connection$<$ Adaptor $>$ Class Template Reference}
+\label{classcrow_1_1websocket_1_1_connection}\index{crow\-::websocket\-::\-Connection$<$ Adaptor $>$@{crow\-::websocket\-::\-Connection$<$ Adaptor $>$}}
+}
+
+
+{\ttfamily \#include $<$crow\-\_\-all.\-h$>$}
+
+
+
+Inheritance diagram for crow\-:\-:websocket\-:\-:Connection$<$ Adaptor $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classcrow_1_1websocket_1_1_connection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for crow\-:\-:websocket\-:\-:Connection$<$ Adaptor $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classcrow_1_1websocket_1_1_connection__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcrow_1_1websocket_1_1_connection_a0dc63c6029b95a412bcc7388e1385ad9}{Connection} (const \hyperlink{structcrow_1_1request}{crow\-::request} \&req, Adaptor \&\&adaptor, std\-::function$<$ void(\hyperlink{structcrow_1_1websocket_1_1connection}{crow\-::websocket\-::connection} \&)$>$ open\-\_\-handler, std\-::function$<$ void(\hyperlink{structcrow_1_1websocket_1_1connection}{crow\-::websocket\-::connection} \&, const std\-::string \&, bool)$>$ message\-\_\-handler, std\-::function$<$ void(\hyperlink{structcrow_1_1websocket_1_1connection}{crow\-::websocket\-::connection} \&, const std\-::string \&)$>$ close\-\_\-handler, std\-::function$<$ void(\hyperlink{structcrow_1_1websocket_1_1connection}{crow\-::websocket\-::connection} \&)$>$ error\-\_\-handler)
+\item 
+{\footnotesize template$<$typename Completion\-Handler $>$ }\\void \hyperlink{classcrow_1_1websocket_1_1_connection_a7a11996bd55dcc65c1c376cea1dd7b00}{dispatch} (Completion\-Handler handler)
+\item 
+{\footnotesize template$<$typename Completion\-Handler $>$ }\\void \hyperlink{classcrow_1_1websocket_1_1_connection_ac3d4cebfc05076982ff002b7c3186ade}{post} (Completion\-Handler handler)
+\item 
+void \hyperlink{classcrow_1_1websocket_1_1_connection_ab8ed4f1eba00fc2f2d9e4547391e99f5}{send\-\_\-pong} (const std\-::string \&msg)
+\item 
+void \hyperlink{classcrow_1_1websocket_1_1_connection_ae28e1265b68dfe0f4f99a68a52a57979}{send\-\_\-binary} (const std\-::string \&msg) override
+\item 
+void \hyperlink{classcrow_1_1websocket_1_1_connection_aa60e803417bb2d13cda3f0da7d68459f}{send\-\_\-text} (const std\-::string \&msg) override
+\item 
+void \hyperlink{classcrow_1_1websocket_1_1_connection_a210e06034d286e82a3fd090b9a239c86}{close} (const std\-::string \&msg) override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classcrow_1_1websocket_1_1_connection_acb61dbbdd467860fcb3b3026374dc85a}{build\-\_\-header} (int \hyperlink{classcrow_1_1websocket_1_1_connection_a47a804e0269c7e70f45434f7618c6e7b}{opcode}, size\-\_\-t size)
+\item 
+void \hyperlink{classcrow_1_1websocket_1_1_connection_a24f90aa6961994abef482699e7ffe037}{start} (std\-::string \&\&hello)
+\item 
+void \hyperlink{classcrow_1_1websocket_1_1_connection_addd1692463d34ff141c02c48f0b46431}{do\-\_\-read} ()
+\item 
+bool \hyperlink{classcrow_1_1websocket_1_1_connection_aff28834d3434b6d24a01830667247111}{is\-\_\-\-F\-I\-N} ()
+\item 
+int \hyperlink{classcrow_1_1websocket_1_1_connection_a47a804e0269c7e70f45434f7618c6e7b}{opcode} ()
+\item 
+void \hyperlink{classcrow_1_1websocket_1_1_connection_a41c1d8a6f57071a43edcb532d528780c}{handle\-\_\-fragment} ()
+\item 
+void \hyperlink{classcrow_1_1websocket_1_1_connection_a7089a3814af7e3c6e6a82c22865ee852}{do\-\_\-write} ()
+\item 
+void \hyperlink{classcrow_1_1websocket_1_1_connection_a1f3552060d7e93a3a0d0f2ea9d84a8df}{check\-\_\-destroy} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrow_1_1websocket_1_1_connection_a0dc63c6029b95a412bcc7388e1385ad9}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!Connection@{Connection}}
+\index{Connection@{Connection}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{Connection}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::{\bf Connection} (
+\begin{DoxyParamCaption}
+\item[{const {\bf crow\-::request} \&}]{req, }
+\item[{Adaptor \&\&}]{adaptor, }
+\item[{std\-::function$<$ void({\bf crow\-::websocket\-::connection} \&)$>$}]{open\-\_\-handler, }
+\item[{std\-::function$<$ void({\bf crow\-::websocket\-::connection} \&, const std\-::string \&, bool)$>$}]{message\-\_\-handler, }
+\item[{std\-::function$<$ void({\bf crow\-::websocket\-::connection} \&, const std\-::string \&)$>$}]{close\-\_\-handler, }
+\item[{std\-::function$<$ void({\bf crow\-::websocket\-::connection} \&)$>$}]{error\-\_\-handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1websocket_1_1_connection_a0dc63c6029b95a412bcc7388e1385ad9}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_a0dc63c6029b95a412bcc7388e1385ad9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrow_1_1websocket_1_1_connection_acb61dbbdd467860fcb3b3026374dc85a}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!build\-\_\-header@{build\-\_\-header}}
+\index{build\-\_\-header@{build\-\_\-header}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{build\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ std\-::string {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::build\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{int}]{opcode, }
+\item[{size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classcrow_1_1websocket_1_1_connection_acb61dbbdd467860fcb3b3026374dc85a}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_acb61dbbdd467860fcb3b3026374dc85a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_acb61dbbdd467860fcb3b3026374dc85a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1websocket_1_1_connection_a1f3552060d7e93a3a0d0f2ea9d84a8df}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!check\-\_\-destroy@{check\-\_\-destroy}}
+\index{check\-\_\-destroy@{check\-\_\-destroy}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{check\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ void {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::check\-\_\-destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classcrow_1_1websocket_1_1_connection_a1f3552060d7e93a3a0d0f2ea9d84a8df}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_a1f3552060d7e93a3a0d0f2ea9d84a8df_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1websocket_1_1_connection_a210e06034d286e82a3fd090b9a239c86}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!close@{close}}
+\index{close@{close}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ void {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::close (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classcrow_1_1websocket_1_1_connection_a210e06034d286e82a3fd090b9a239c86}
+
+
+Implements \hyperlink{structcrow_1_1websocket_1_1connection_a0166bd544dfe0e24343328838a556e07}{crow\-::websocket\-::connection}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_a210e06034d286e82a3fd090b9a239c86_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_a210e06034d286e82a3fd090b9a239c86_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1websocket_1_1_connection_a7a11996bd55dcc65c1c376cea1dd7b00}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{dispatch}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ template$<$typename Completion\-Handler $>$ void {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::dispatch (
+\begin{DoxyParamCaption}
+\item[{Completion\-Handler}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1websocket_1_1_connection_a7a11996bd55dcc65c1c376cea1dd7b00}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_a7a11996bd55dcc65c1c376cea1dd7b00_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1websocket_1_1_connection_addd1692463d34ff141c02c48f0b46431}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!do\-\_\-read@{do\-\_\-read}}
+\index{do\-\_\-read@{do\-\_\-read}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{do\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ void {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::do\-\_\-read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classcrow_1_1websocket_1_1_connection_addd1692463d34ff141c02c48f0b46431}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_addd1692463d34ff141c02c48f0b46431_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_addd1692463d34ff141c02c48f0b46431_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1websocket_1_1_connection_a7089a3814af7e3c6e6a82c22865ee852}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!do\-\_\-write@{do\-\_\-write}}
+\index{do\-\_\-write@{do\-\_\-write}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{do\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ void {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::do\-\_\-write (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classcrow_1_1websocket_1_1_connection_a7089a3814af7e3c6e6a82c22865ee852}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_a7089a3814af7e3c6e6a82c22865ee852_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_a7089a3814af7e3c6e6a82c22865ee852_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1websocket_1_1_connection_a41c1d8a6f57071a43edcb532d528780c}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!handle\-\_\-fragment@{handle\-\_\-fragment}}
+\index{handle\-\_\-fragment@{handle\-\_\-fragment}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{handle\-\_\-fragment}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ void {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::handle\-\_\-fragment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classcrow_1_1websocket_1_1_connection_a41c1d8a6f57071a43edcb532d528780c}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_a41c1d8a6f57071a43edcb532d528780c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_a41c1d8a6f57071a43edcb532d528780c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1websocket_1_1_connection_aff28834d3434b6d24a01830667247111}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!is\-\_\-\-F\-I\-N@{is\-\_\-\-F\-I\-N}}
+\index{is\-\_\-\-F\-I\-N@{is\-\_\-\-F\-I\-N}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{is\-\_\-\-F\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ bool {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::is\-\_\-\-F\-I\-N (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classcrow_1_1websocket_1_1_connection_aff28834d3434b6d24a01830667247111}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_aff28834d3434b6d24a01830667247111_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1websocket_1_1_connection_a47a804e0269c7e70f45434f7618c6e7b}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!opcode@{opcode}}
+\index{opcode@{opcode}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{opcode}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ int {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::opcode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classcrow_1_1websocket_1_1_connection_a47a804e0269c7e70f45434f7618c6e7b}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_a47a804e0269c7e70f45434f7618c6e7b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1websocket_1_1_connection_ac3d4cebfc05076982ff002b7c3186ade}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!post@{post}}
+\index{post@{post}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{post}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ template$<$typename Completion\-Handler $>$ void {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::post (
+\begin{DoxyParamCaption}
+\item[{Completion\-Handler}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1websocket_1_1_connection_ac3d4cebfc05076982ff002b7c3186ade}
+\hypertarget{classcrow_1_1websocket_1_1_connection_ae28e1265b68dfe0f4f99a68a52a57979}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!send\-\_\-binary@{send\-\_\-binary}}
+\index{send\-\_\-binary@{send\-\_\-binary}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{send\-\_\-binary}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ void {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::send\-\_\-binary (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classcrow_1_1websocket_1_1_connection_ae28e1265b68dfe0f4f99a68a52a57979}
+
+
+Implements \hyperlink{structcrow_1_1websocket_1_1connection_a508f3f8dcb0ce467c82d383317c35dae}{crow\-::websocket\-::connection}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_ae28e1265b68dfe0f4f99a68a52a57979_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1websocket_1_1_connection_ab8ed4f1eba00fc2f2d9e4547391e99f5}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!send\-\_\-pong@{send\-\_\-pong}}
+\index{send\-\_\-pong@{send\-\_\-pong}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{send\-\_\-pong}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ void {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::send\-\_\-pong (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcrow_1_1websocket_1_1_connection_ab8ed4f1eba00fc2f2d9e4547391e99f5}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_ab8ed4f1eba00fc2f2d9e4547391e99f5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_ab8ed4f1eba00fc2f2d9e4547391e99f5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1websocket_1_1_connection_aa60e803417bb2d13cda3f0da7d68459f}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!send\-\_\-text@{send\-\_\-text}}
+\index{send\-\_\-text@{send\-\_\-text}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{send\-\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ void {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::send\-\_\-text (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classcrow_1_1websocket_1_1_connection_aa60e803417bb2d13cda3f0da7d68459f}
+
+
+Implements \hyperlink{structcrow_1_1websocket_1_1connection_a6328a5e17af38a367e4f1c9e904900bc}{crow\-::websocket\-::connection}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_aa60e803417bb2d13cda3f0da7d68459f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classcrow_1_1websocket_1_1_connection_a24f90aa6961994abef482699e7ffe037}{\index{crow\-::websocket\-::\-Connection@{crow\-::websocket\-::\-Connection}!start@{start}}
+\index{start@{start}!crow::websocket::Connection@{crow\-::websocket\-::\-Connection}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Adaptor$>$ void {\bf crow\-::websocket\-::\-Connection}$<$ Adaptor $>$\-::start (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&\&}]{hello}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classcrow_1_1websocket_1_1_connection_a24f90aa6961994abef482699e7ffe037}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_a24f90aa6961994abef482699e7ffe037_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcrow_1_1websocket_1_1_connection_a24f90aa6961994abef482699e7ffe037_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/lib/\hyperlink{crow__all_8h}{crow\-\_\-all.\-h}\end{DoxyCompactItemize}

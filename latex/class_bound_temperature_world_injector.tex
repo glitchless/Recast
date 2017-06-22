@@ -1,0 +1,327 @@
+\hypertarget{class_bound_temperature_world_injector}{\section{Bound\-Temperature\-World\-Injector Class Reference}
+\label{class_bound_temperature_world_injector}\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}}
+}
+
+
+{\ttfamily \#include $<$Bound\-Temperature\-World\-Injector.\-hpp$>$}
+
+
+
+Collaboration diagram for Bound\-Temperature\-World\-Injector\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{class_bound_temperature_world_injector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bound_temperature_world_injector_a8c9341a5ced28d934273c3fc265b1bf1}{Bound\-Temperature\-World\-Injector} ()
+\item 
+bool \hyperlink{class_bound_temperature_world_injector_a71c03ba809495eed2b09318343ded2d2}{has\-World\-Bounds} () const noexcept
+\item 
+\hyperlink{struct_parallelepiped}{Parallelepiped} \hyperlink{class_bound_temperature_world_injector_a33e6c7646ca32618e8d073fdaba33065}{world\-Bounds} () const 
+\item 
+void \hyperlink{class_bound_temperature_world_injector_aa3c6c0c782869509238b83774434347c}{set\-World\-Bounds} (\hyperlink{struct_parallelepiped}{Parallelepiped} \hyperlink{class_bound_temperature_world_injector_a33e6c7646ca32618e8d073fdaba33065}{world\-Bounds})
+\item 
+bool \hyperlink{class_bound_temperature_world_injector_a1274c81082b7ce2ce2bc433d7e93c17b}{has\-Temperature\-Exchange\-Coefficient} () const noexcept
+\item 
+double \hyperlink{class_bound_temperature_world_injector_a27e7b6a6da5015cadbbe7f21ad503287}{temperature\-Exchange\-Coefficient} () const 
+\item 
+void \hyperlink{class_bound_temperature_world_injector_a1e71c5d4a8397b9c8f87bccfe5cf5328}{set\-Temperature\-Exchange\-Coefficient} (double \hyperlink{class_bound_temperature_world_injector_a27e7b6a6da5015cadbbe7f21ad503287}{temperature\-Exchange\-Coefficient})
+\item 
+bool \hyperlink{class_bound_temperature_world_injector_a1a1a9e8c8ee2ef48cffbcdcbc2e947e5}{has\-Min\-Update\-Delta} () const noexcept
+\item 
+std\-::chrono\-::milliseconds \hyperlink{class_bound_temperature_world_injector_ad064e87615066662fe67ba8b41c44959}{min\-Update\-Delta} () const 
+\item 
+void \hyperlink{class_bound_temperature_world_injector_a3017672c819fd74e17fb79d69aa7beae}{set\-Min\-Update\-Delta} (std\-::chrono\-::milliseconds \hyperlink{class_bound_temperature_world_injector_ad064e87615066662fe67ba8b41c44959}{min\-Update\-Delta})
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ \hyperlink{class_bound_temperature_world_injector_a94a6c343fa6f0a8aa7640ba4338de3e4}{world} ()
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_updater}{I\-Updater} $>$ \hyperlink{class_bound_temperature_world_injector_ab14750f84b51f9fc1b1a4d1c19b03c19}{updater} ()
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_timer_blockable}{I\-Timer\-Blockable}$<$ \hyperlink{class_i_timer}{I\-Timer} $>$ $>$ \hyperlink{class_bound_temperature_world_injector_a9e26e356da13bae69d852c5b44d14bee}{timer} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_bound_temperature_world_injector_a91a04f4aef416fdb0d2351d67073ca7d}{\-\_\-make\-World} ()
+\item 
+void \hyperlink{class_bound_temperature_world_injector_a1500a30682f3fdf02b79d48a6d493586}{\-\_\-make\-Updater} ()
+\item 
+void \hyperlink{class_bound_temperature_world_injector_a5d11cb09bec8a8b026b900601d6dce73}{\-\_\-make\-Timer} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::unique\-\_\-ptr$<$ \hyperlink{struct_parallelepiped}{Parallelepiped} $>$ \hyperlink{class_bound_temperature_world_injector_a99e1aa88a9e38bddb58c22b030a126c3}{\-\_\-world\-Bounds}
+\item 
+std\-::unique\-\_\-ptr$<$ double $>$ \hyperlink{class_bound_temperature_world_injector_ab9a509b3b413ac1ac3825413c8d5d61f}{\-\_\-temperature\-Exchange\-Coefficient}
+\item 
+std\-::unique\-\_\-ptr\\*
+$<$ std\-::chrono\-::milliseconds $>$ \hyperlink{class_bound_temperature_world_injector_a30845955fe87ca6cb33993e98b222aa4}{\-\_\-min\-Update\-Delta}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ \hyperlink{class_bound_temperature_world_injector_a5917901f6697587dd6dd05b3f1fd0549}{\-\_\-world}
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_updater}{I\-Updater} $>$ \hyperlink{class_bound_temperature_world_injector_a1e6c06b5c8ecafe011f27fa69072751e}{\-\_\-updater}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_timer_blockable}{I\-Timer\-Blockable}$<$ \hyperlink{class_i_timer}{I\-Timer} $>$ $>$ \hyperlink{class_bound_temperature_world_injector_aabf0e33720ede845f154e57f7cd7edfb}{\-\_\-timer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Injector. This class builds bound temperature world and its updater. You must set world bounds via {\ttfamily set\-World\-Bounds} method. \hyperlink{struct_temperature}{Temperature} exchange coefficient and minimum update delta are set to defaults. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_bound_temperature_world_injector_a8c9341a5ced28d934273c3fc265b1bf1}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}}
+\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{Bound\-Temperature\-World\-Injector}]{\setlength{\rightskip}{0pt plus 5cm}Bound\-Temperature\-World\-Injector\-::\-Bound\-Temperature\-World\-Injector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bound_temperature_world_injector_a8c9341a5ced28d934273c3fc265b1bf1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_bound_temperature_world_injector_a5d11cb09bec8a8b026b900601d6dce73}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!\-\_\-make\-Timer@{\-\_\-make\-Timer}}
+\index{\-\_\-make\-Timer@{\-\_\-make\-Timer}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-make\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}void Bound\-Temperature\-World\-Injector\-::\-\_\-make\-Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bound_temperature_world_injector_a5d11cb09bec8a8b026b900601d6dce73}
+\hypertarget{class_bound_temperature_world_injector_a1500a30682f3fdf02b79d48a6d493586}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!\-\_\-make\-Updater@{\-\_\-make\-Updater}}
+\index{\-\_\-make\-Updater@{\-\_\-make\-Updater}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-make\-Updater}]{\setlength{\rightskip}{0pt plus 5cm}void Bound\-Temperature\-World\-Injector\-::\-\_\-make\-Updater (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bound_temperature_world_injector_a1500a30682f3fdf02b79d48a6d493586}
+\hypertarget{class_bound_temperature_world_injector_a91a04f4aef416fdb0d2351d67073ca7d}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!\-\_\-make\-World@{\-\_\-make\-World}}
+\index{\-\_\-make\-World@{\-\_\-make\-World}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-make\-World}]{\setlength{\rightskip}{0pt plus 5cm}void Bound\-Temperature\-World\-Injector\-::\-\_\-make\-World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bound_temperature_world_injector_a91a04f4aef416fdb0d2351d67073ca7d}
+\hypertarget{class_bound_temperature_world_injector_a1a1a9e8c8ee2ef48cffbcdcbc2e947e5}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!has\-Min\-Update\-Delta@{has\-Min\-Update\-Delta}}
+\index{has\-Min\-Update\-Delta@{has\-Min\-Update\-Delta}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{has\-Min\-Update\-Delta}]{\setlength{\rightskip}{0pt plus 5cm}bool Bound\-Temperature\-World\-Injector\-::has\-Min\-Update\-Delta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{class_bound_temperature_world_injector_a1a1a9e8c8ee2ef48cffbcdcbc2e947e5}
+This method is exception-\/safe.
+
+\begin{DoxyReturn}{Returns}
+True if minimum update delta have been set. 
+\end{DoxyReturn}
+\hypertarget{class_bound_temperature_world_injector_a1274c81082b7ce2ce2bc433d7e93c17b}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!has\-Temperature\-Exchange\-Coefficient@{has\-Temperature\-Exchange\-Coefficient}}
+\index{has\-Temperature\-Exchange\-Coefficient@{has\-Temperature\-Exchange\-Coefficient}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{has\-Temperature\-Exchange\-Coefficient}]{\setlength{\rightskip}{0pt plus 5cm}bool Bound\-Temperature\-World\-Injector\-::has\-Temperature\-Exchange\-Coefficient (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{class_bound_temperature_world_injector_a1274c81082b7ce2ce2bc433d7e93c17b}
+This method is exception-\/safe.
+
+\begin{DoxyReturn}{Returns}
+True if temperature exchange coefficient have been set. 
+\end{DoxyReturn}
+\hypertarget{class_bound_temperature_world_injector_a71c03ba809495eed2b09318343ded2d2}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!has\-World\-Bounds@{has\-World\-Bounds}}
+\index{has\-World\-Bounds@{has\-World\-Bounds}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{has\-World\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}bool Bound\-Temperature\-World\-Injector\-::has\-World\-Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{class_bound_temperature_world_injector_a71c03ba809495eed2b09318343ded2d2}
+This method is exception-\/safe.
+
+\begin{DoxyReturn}{Returns}
+True if world bounds have been set. 
+\end{DoxyReturn}
+\hypertarget{class_bound_temperature_world_injector_ad064e87615066662fe67ba8b41c44959}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!min\-Update\-Delta@{min\-Update\-Delta}}
+\index{min\-Update\-Delta@{min\-Update\-Delta}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{min\-Update\-Delta}]{\setlength{\rightskip}{0pt plus 5cm}milliseconds Bound\-Temperature\-World\-Injector\-::min\-Update\-Delta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_bound_temperature_world_injector_ad064e87615066662fe67ba8b41c44959}
+Minimum time between world updates is the minimum update delta. This method can throw an exception if minimum update delta is not set.
+
+\begin{DoxyReturn}{Returns}
+Minimum update delta. 
+\end{DoxyReturn}
+\hypertarget{class_bound_temperature_world_injector_a3017672c819fd74e17fb79d69aa7beae}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!set\-Min\-Update\-Delta@{set\-Min\-Update\-Delta}}
+\index{set\-Min\-Update\-Delta@{set\-Min\-Update\-Delta}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{set\-Min\-Update\-Delta}]{\setlength{\rightskip}{0pt plus 5cm}void Bound\-Temperature\-World\-Injector\-::set\-Min\-Update\-Delta (
+\begin{DoxyParamCaption}
+\item[{std\-::chrono\-::milliseconds}]{min\-Update\-Delta}
+\end{DoxyParamCaption}
+)}}\label{class_bound_temperature_world_injector_a3017672c819fd74e17fb79d69aa7beae}
+Sets minimum update delta. Minimum time between world updates is minimum update delta.
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\-Update\-Delta} & Minimum update delta. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bound_temperature_world_injector_a1e71c5d4a8397b9c8f87bccfe5cf5328}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!set\-Temperature\-Exchange\-Coefficient@{set\-Temperature\-Exchange\-Coefficient}}
+\index{set\-Temperature\-Exchange\-Coefficient@{set\-Temperature\-Exchange\-Coefficient}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{set\-Temperature\-Exchange\-Coefficient}]{\setlength{\rightskip}{0pt plus 5cm}void Bound\-Temperature\-World\-Injector\-::set\-Temperature\-Exchange\-Coefficient (
+\begin{DoxyParamCaption}
+\item[{double}]{temperature\-Exchange\-Coefficient}
+\end{DoxyParamCaption}
+)}}\label{class_bound_temperature_world_injector_a1e71c5d4a8397b9c8f87bccfe5cf5328}
+Sets temperature exchange coefficient. The more temperature exchange coefficient is, the faster temperature exchange will be.
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature\-Exchange\-Coefficient} & \hyperlink{struct_temperature}{Temperature} exchange coefficient. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bound_temperature_world_injector_aa3c6c0c782869509238b83774434347c}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!set\-World\-Bounds@{set\-World\-Bounds}}
+\index{set\-World\-Bounds@{set\-World\-Bounds}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{set\-World\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}void Bound\-Temperature\-World\-Injector\-::set\-World\-Bounds (
+\begin{DoxyParamCaption}
+\item[{{\bf Parallelepiped}}]{world\-Bounds}
+\end{DoxyParamCaption}
+)}}\label{class_bound_temperature_world_injector_aa3c6c0c782869509238b83774434347c}
+Sets world bounds.
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\-Bounds} & World bounds. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{class_bound_temperature_world_injector_aa3c6c0c782869509238b83774434347c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_bound_temperature_world_injector_a27e7b6a6da5015cadbbe7f21ad503287}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!temperature\-Exchange\-Coefficient@{temperature\-Exchange\-Coefficient}}
+\index{temperature\-Exchange\-Coefficient@{temperature\-Exchange\-Coefficient}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{temperature\-Exchange\-Coefficient}]{\setlength{\rightskip}{0pt plus 5cm}double Bound\-Temperature\-World\-Injector\-::temperature\-Exchange\-Coefficient (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_bound_temperature_world_injector_a27e7b6a6da5015cadbbe7f21ad503287}
+The more temperature exchange coefficient is, the faster temperature exchange will be. This method can throw an exception if temperature exchange coefficient is not set.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_temperature}{Temperature} exchange coefficient. 
+\end{DoxyReturn}
+\hypertarget{class_bound_temperature_world_injector_a9e26e356da13bae69d852c5b44d14bee}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!timer@{timer}}
+\index{timer@{timer}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-ptr$<$ {\bf I\-Timer\-Blockable}$<$ {\bf I\-Timer} $>$ $>$ Bound\-Temperature\-World\-Injector\-::timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bound_temperature_world_injector_a9e26e356da13bae69d852c5b44d14bee}
+Timer will be built only once for an injector instance.
+
+\begin{DoxyReturn}{Returns}
+Built blocking timer which is used in world updater. 
+\end{DoxyReturn}
+\hypertarget{class_bound_temperature_world_injector_ab14750f84b51f9fc1b1a4d1c19b03c19}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!updater@{updater}}
+\index{updater@{updater}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{updater}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-ptr$<$ {\bf I\-Updater} $>$ Bound\-Temperature\-World\-Injector\-::updater (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bound_temperature_world_injector_ab14750f84b51f9fc1b1a4d1c19b03c19}
+\hyperlink{struct_temperature}{Temperature} world updater will be built only once for an injector instance. You can get the world via {\ttfamily world} getter.
+
+\begin{DoxyReturn}{Returns}
+Built bound temperature world updater. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{class_bound_temperature_world_injector_ab14750f84b51f9fc1b1a4d1c19b03c19_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_bound_temperature_world_injector_a94a6c343fa6f0a8aa7640ba4338de3e4}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!world@{world}}
+\index{world@{world}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{world}]{\setlength{\rightskip}{0pt plus 5cm}shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$ $>$ Bound\-Temperature\-World\-Injector\-::world (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bound_temperature_world_injector_a94a6c343fa6f0a8aa7640ba4338de3e4}
+\hyperlink{struct_temperature}{Temperature} world will be built only once for an injector instance. {\ttfamily updater} getter uses the same world instance.
+
+\begin{DoxyReturn}{Returns}
+Built bound temperature world. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{class_bound_temperature_world_injector_a94a6c343fa6f0a8aa7640ba4338de3e4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_bound_temperature_world_injector_a33e6c7646ca32618e8d073fdaba33065}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!world\-Bounds@{world\-Bounds}}
+\index{world\-Bounds@{world\-Bounds}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{world\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parallelepiped} Bound\-Temperature\-World\-Injector\-::world\-Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_bound_temperature_world_injector_a33e6c7646ca32618e8d073fdaba33065}
+This method can throw an exception if world bounds are not set.
+
+\begin{DoxyReturn}{Returns}
+World bounds. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_bound_temperature_world_injector_a30845955fe87ca6cb33993e98b222aa4}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!\-\_\-min\-Update\-Delta@{\-\_\-min\-Update\-Delta}}
+\index{\-\_\-min\-Update\-Delta@{\-\_\-min\-Update\-Delta}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-min\-Update\-Delta}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<$std\-::chrono\-::milliseconds$>$ Bound\-Temperature\-World\-Injector\-::\-\_\-min\-Update\-Delta\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bound_temperature_world_injector_a30845955fe87ca6cb33993e98b222aa4}
+\hypertarget{class_bound_temperature_world_injector_ab9a509b3b413ac1ac3825413c8d5d61f}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!\-\_\-temperature\-Exchange\-Coefficient@{\-\_\-temperature\-Exchange\-Coefficient}}
+\index{\-\_\-temperature\-Exchange\-Coefficient@{\-\_\-temperature\-Exchange\-Coefficient}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-temperature\-Exchange\-Coefficient}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<$double$>$ Bound\-Temperature\-World\-Injector\-::\-\_\-temperature\-Exchange\-Coefficient\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bound_temperature_world_injector_ab9a509b3b413ac1ac3825413c8d5d61f}
+\hypertarget{class_bound_temperature_world_injector_aabf0e33720ede845f154e57f7cd7edfb}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!\-\_\-timer@{\-\_\-timer}}
+\index{\-\_\-timer@{\-\_\-timer}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf I\-Timer\-Blockable}$<${\bf I\-Timer}$>$ $>$ Bound\-Temperature\-World\-Injector\-::\-\_\-timer\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bound_temperature_world_injector_aabf0e33720ede845f154e57f7cd7edfb}
+\hypertarget{class_bound_temperature_world_injector_a1e6c06b5c8ecafe011f27fa69072751e}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!\-\_\-updater@{\-\_\-updater}}
+\index{\-\_\-updater@{\-\_\-updater}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-updater}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf I\-Updater}$>$ Bound\-Temperature\-World\-Injector\-::\-\_\-updater\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bound_temperature_world_injector_a1e6c06b5c8ecafe011f27fa69072751e}
+\hypertarget{class_bound_temperature_world_injector_a5917901f6697587dd6dd05b3f1fd0549}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!\-\_\-world@{\-\_\-world}}
+\index{\-\_\-world@{\-\_\-world}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-world}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Boundable}$<${\bf I\-Temperature\-World}$>$ $>$ Bound\-Temperature\-World\-Injector\-::\-\_\-world\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bound_temperature_world_injector_a5917901f6697587dd6dd05b3f1fd0549}
+\hypertarget{class_bound_temperature_world_injector_a99e1aa88a9e38bddb58c22b030a126c3}{\index{Bound\-Temperature\-World\-Injector@{Bound\-Temperature\-World\-Injector}!\-\_\-world\-Bounds@{\-\_\-world\-Bounds}}
+\index{\-\_\-world\-Bounds@{\-\_\-world\-Bounds}!BoundTemperatureWorldInjector@{Bound\-Temperature\-World\-Injector}}
+\subsubsection[{\-\_\-world\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf Parallelepiped}$>$ Bound\-Temperature\-World\-Injector\-::\-\_\-world\-Bounds\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bound_temperature_world_injector_a99e1aa88a9e38bddb58c22b030a126c3}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/injectors/\hyperlink{_bound_temperature_world_injector_8hpp}{Bound\-Temperature\-World\-Injector.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/injectors/\hyperlink{_bound_temperature_world_injector_8cpp}{Bound\-Temperature\-World\-Injector.\-cpp}\end{DoxyCompactItemize}

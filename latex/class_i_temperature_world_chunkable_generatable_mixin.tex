@@ -1,0 +1,101 @@
+\hypertarget{class_i_temperature_world_chunkable_generatable_mixin}{\section{I\-Temperature\-World\-Chunkable\-Generatable\-Mixin Class Reference}
+\label{class_i_temperature_world_chunkable_generatable_mixin}\index{I\-Temperature\-World\-Chunkable\-Generatable\-Mixin@{I\-Temperature\-World\-Chunkable\-Generatable\-Mixin}}
+}
+
+
+{\ttfamily \#include $<$I\-Temperature\-World\-Chunkable\-Generatable.\-hpp$>$}
+
+
+
+Inheritance diagram for I\-Temperature\-World\-Chunkable\-Generatable\-Mixin\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_temperature_world_chunkable_generatable_mixin__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for I\-Temperature\-World\-Chunkable\-Generatable\-Mixin\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_i_temperature_world_chunkable_generatable_mixin__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_i_temperature_world_chunkable_generatable_mixin_a015be90684c10d61cc962439b3ed71ef}{has\-Or\-Is\-Generatable\-Chunk} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) const noexcept=0
+\item 
+virtual std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ \hyperlink{class_i_temperature_world_chunkable_generatable_mixin_a1144edcb06ba318422be96ee5f8b139d}{get\-Or\-Generate\-Chunk} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Should not be derived directly. Use {\ttfamily \hyperlink{class_i_temperature_world_chunkable_generatable}{I\-Temperature\-World\-Chunkable\-Generatable}}. This class is useful for {\ttfamily dynamic\-\_\-cast}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i_temperature_world_chunkable_generatable_mixin_a1144edcb06ba318422be96ee5f8b139d}{\index{I\-Temperature\-World\-Chunkable\-Generatable\-Mixin@{I\-Temperature\-World\-Chunkable\-Generatable\-Mixin}!get\-Or\-Generate\-Chunk@{get\-Or\-Generate\-Chunk}}
+\index{get\-Or\-Generate\-Chunk@{get\-Or\-Generate\-Chunk}!ITemperatureWorldChunkableGeneratableMixin@{I\-Temperature\-World\-Chunkable\-Generatable\-Mixin}}
+\subsubsection[{get\-Or\-Generate\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Boundable}$<${\bf I\-Temperature\-World}$>$ $>$ I\-Temperature\-World\-Chunkable\-Generatable\-Mixin\-::get\-Or\-Generate\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_temperature_world_chunkable_generatable_mixin_a1144edcb06ba318422be96ee5f8b139d}
+Retrieves chunk which holds this point. If chunk doesn't exist, the method will generate chunk if it's possible.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Chunk at the point. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_generatable_chunked_temperature_world_ad5455846504972898e622f9437846f8c}{Generatable\-Chunked\-Temperature\-World}.
+
+\hypertarget{class_i_temperature_world_chunkable_generatable_mixin_a015be90684c10d61cc962439b3ed71ef}{\index{I\-Temperature\-World\-Chunkable\-Generatable\-Mixin@{I\-Temperature\-World\-Chunkable\-Generatable\-Mixin}!has\-Or\-Is\-Generatable\-Chunk@{has\-Or\-Is\-Generatable\-Chunk}}
+\index{has\-Or\-Is\-Generatable\-Chunk@{has\-Or\-Is\-Generatable\-Chunk}!ITemperatureWorldChunkableGeneratableMixin@{I\-Temperature\-World\-Chunkable\-Generatable\-Mixin}}
+\subsubsection[{has\-Or\-Is\-Generatable\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool I\-Temperature\-World\-Chunkable\-Generatable\-Mixin\-::has\-Or\-Is\-Generatable\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}}\label{class_i_temperature_world_chunkable_generatable_mixin_a015be90684c10d61cc962439b3ed71ef}
+Tells whether the chunk which holds this point exists. If chunk doesn't exist, the method will tell whether it will generated on {\ttfamily get\-Or\-Generate\-Chunk} call. This method doesn't throw exceptions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if chunk exists. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_generatable_chunked_temperature_world_ad8ebd44d64067e9920d76d46af1b83e2}{Generatable\-Chunked\-Temperature\-World}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/interfaces/\hyperlink{_i_temperature_world_chunkable_generatable_8hpp}{I\-Temperature\-World\-Chunkable\-Generatable.\-hpp}\end{DoxyCompactItemize}

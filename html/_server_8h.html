@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -100,18 +101,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;<a class="el" href="_input_thread_8h_source.html">threads/InputThread.h</a>&gt;</code><br/>
 <code>#include &quot;<a class="el" href="_i_command_sender_8h_source.html">commands/ICommandSender.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="_command_manager_8h_source.html">commands/CommandManager.h</a>&quot;</code><br/>
-<code>#include &quot;temperature-world/interfaces/IUpdater.hpp&quot;</code><br/>
-<code>#include &quot;temperature-world/interfaces/ITemperatureWorldChunkableObservable.hpp&quot;</code><br/>
-<code>#include &quot;temperature-world/interfaces/ITemperatureWorldChunkableGeneratable.hpp&quot;</code><br/>
-<code>#include &quot;temperature-world/interfaces/ITemperatureWorldChunkableMutable.hpp&quot;</code><br/>
-<code>#include &quot;temperature-world/interfaces/ITemperatureWorldChunkable.hpp&quot;</code><br/>
-<code>#include &quot;temperature-world/interfaces/ITemperatureWorld.hpp&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_i_updater_8hpp_source.html">temperature-world/interfaces/IUpdater.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_i_temperature_world_chunkable_observable_8hpp_source.html">temperature-world/interfaces/ITemperatureWorldChunkableObservable.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_i_temperature_world_chunkable_generatable_8hpp_source.html">temperature-world/interfaces/ITemperatureWorldChunkableGeneratable.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_i_temperature_world_chunkable_mutable_8hpp_source.html">temperature-world/interfaces/ITemperatureWorldChunkableMutable.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_i_temperature_world_chunkable_8hpp_source.html">temperature-world/interfaces/ITemperatureWorldChunkable.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_i_temperature_world_8hpp_source.html">temperature-world/interfaces/ITemperatureWorld.hpp</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Server.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_server_8h__incl.png" border="0" usemap="#_2home_2travis_2build_2bender-wardrobe_2_recast_2src_2headers_2_server_8h" alt=""/></div>
 <map name="_2home_2travis_2build_2bender-wardrobe_2_recast_2src_2headers_2_server_8h" id="_2home_2travis_2build_2bender-wardrobe_2_recast_2src_2headers_2_server_8h">
-<area shape="rect" id="node4" href="_input_thread_8h.html" title="Thread for command file. " alt="" coords="256,117,404,144"/><area shape="rect" id="node5" href="_command_manager_8h.html" title="CommandManager file. " alt="" coords="261,200,471,227"/><area shape="rect" id="node8" href="_i_command_sender_8h.html" title="commands/ICommandSender.h" alt="" coords="30,200,236,227"/></map>
+<area shape="rect" id="node4" href="_input_thread_8h.html" title="Thread for command file. " alt="" coords="56,117,204,144"/><area shape="rect" id="node5" href="_command_manager_8h.html" title="CommandManager file. " alt="" coords="45,208,255,235"/><area shape="rect" id="node8" href="_i_command_sender_8h.html" title="commands/ICommandSender.h" alt="" coords="331,208,537,235"/><area shape="rect" id="node9" href="_i_updater_8hpp.html" title="temperature&#45;world/interfaces\l/IUpdater.hpp" alt="" coords="464,110,651,151"/><area shape="rect" id="node10" href="_i_temperature_world_chunkable_observable_8hpp.html" title="temperature&#45;world/interfaces\l/ITemperatureWorldChunkableObservable.hpp" alt="" coords="923,110,1213,151"/><area shape="rect" id="node18" href="_i_temperature_world_8hpp.html" title="ITemperatureWorld.hpp" alt="" coords="1181,299,1339,325"/><area shape="rect" id="node21" href="_i_temperature_world_chunkable_generatable_8hpp.html" title="temperature&#45;world/interfaces\l/ITemperatureWorldChunkableGeneratable.hpp" alt="" coords="1585,110,1879,151"/><area shape="rect" id="node22" href="_i_temperature_world_chunkable_mutable_8hpp.html" title="temperature&#45;world/interfaces\l/ITemperatureWorldChunkableMutable.hpp" alt="" coords="1238,110,1508,151"/><area shape="rect" id="node23" href="_i_temperature_world_chunkable_8hpp.html" title="temperature&#45;world/interfaces\l/ITemperatureWorldChunkable.hpp" alt="" coords="675,110,897,151"/><area shape="rect" id="node11" href="_i_temperature_world_boundable_8hpp.html" title="temperature&#45;world/interfaces\l/ITemperatureWorldBoundable.hpp" alt="" coords="954,201,1176,242"/><area shape="rect" id="node13" href="_coord_8hpp.html" title="temperature&#45;world/types\l/Coord.hpp" alt="" coords="1133,382,1296,423"/><area shape="rect" id="node16" href="_size_8hpp.html" title="temperature&#45;world/types\l/Size.hpp" alt="" coords="669,382,832,423"/><area shape="rect" id="node17" href="_temperature_8hpp.html" title="temperature&#45;world/types\l/Temperature.hpp" alt="" coords="947,382,1109,423"/><area shape="rect" id="node19" href="_parallelepiped_8hpp.html" title="temperature&#45;world/types\l/Parallelepiped.hpp" alt="" coords="788,291,951,333"/><area shape="rect" id="node15" href="_generic_scalar_8hpp.html" title="GenericScalar.hpp" alt="" coords="963,480,1092,507"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>

@@ -1,0 +1,288 @@
+\hypertarget{class_scalable_bound_temperature_world}{\section{Scalable\-Bound\-Temperature\-World Class Reference}
+\label{class_scalable_bound_temperature_world}\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}}
+}
+
+
+{\ttfamily \#include $<$Scalable\-Bound\-Temperature\-World.\-hpp$>$}
+
+
+
+Inheritance diagram for Scalable\-Bound\-Temperature\-World\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_scalable_bound_temperature_world__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Scalable\-Bound\-Temperature\-World\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_scalable_bound_temperature_world__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scalable_bound_temperature_world_a70e95f32bc19f298649ac99d0b69068c}{Scalable\-Bound\-Temperature\-World} (\hyperlink{struct_parallelepiped}{Parallelepiped} \hyperlink{class_bound_temperature_world_a3351693a7d184365da5dfb5d833a0cb6}{bounds})
+\item 
+\hyperlink{struct_int_scale_parallelepiped}{Int\-Scale\-Parallelepiped} \hyperlink{class_scalable_bound_temperature_world_a9ac7291c4a2ff3d60042c518f1ae2858}{cell\-Scale} () const noexceptoverride
+\item 
+void \hyperlink{class_scalable_bound_temperature_world_addf3187d106391375b4453614a84563b}{set\-Cell\-Scale} (\hyperlink{struct_int_scale_parallelepiped}{Int\-Scale\-Parallelepiped} \hyperlink{class_scalable_bound_temperature_world_a9ac7291c4a2ff3d60042c518f1ae2858}{cell\-Scale}) override
+\item 
+void \hyperlink{class_scalable_bound_temperature_world_ade4ecf303ae025e824c0bd5ecd2e2ca7}{set} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, \hyperlink{struct_temperature}{Temperature} temperature) override
+\item 
+void \hyperlink{class_scalable_bound_temperature_world_ab9602b36759aa857910e03856344759d}{amplify} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, \hyperlink{struct_temperature}{Temperature} temperature) override
+\item 
+void \hyperlink{class_scalable_bound_temperature_world_a57f60178c88b2cffca11a7f21c5c11c7}{foreach} (\hyperlink{class_i_temperature_world_boundable_mixin_a370c20d79642d15e97843da972d87ba9}{Foreach\-Cell\-Fn} func) const override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{struct_coord}{Coord} \hyperlink{class_scalable_bound_temperature_world_ae8c72b04365794622707fa1a0101c73a}{\-\_\-find\-Scaled\-Area\-Min\-By\-Axis} (\hyperlink{struct_coord}{Coord} initial\-Coord, \hyperlink{struct_int_scale}{Int\-Scale} scale, \hyperlink{struct_coord}{Coord} min\-Coord) const noexcept
+\item 
+virtual \hyperlink{struct_coord}{Coord} \hyperlink{class_scalable_bound_temperature_world_ac77d4cc1f6df5ec994311915a5e92095}{\-\_\-find\-Scaled\-Area\-Max\-By\-Axis} (\hyperlink{struct_coord}{Coord} initial\-Coord, \hyperlink{struct_int_scale}{Int\-Scale} scale, \hyperlink{struct_coord}{Coord} max\-Coord) const noexcept
+\item 
+virtual std\-::pair$<$ \hyperlink{struct_coord}{Coord}, \hyperlink{struct_coord}{Coord} $>$ \hyperlink{class_scalable_bound_temperature_world_af4905396b44aec6b7d4efa46afda6919}{\-\_\-find\-Scaled\-Area\-By\-Axis} (\hyperlink{struct_coord}{Coord} initial\-Coord, \hyperlink{struct_int_scale}{Int\-Scale} scale, \hyperlink{struct_coord}{Coord} min\-Coord, \hyperlink{struct_coord}{Coord} max\-Coord) const noexcept
+\item 
+virtual \hyperlink{struct_parallelepiped}{Parallelepiped} \hyperlink{class_scalable_bound_temperature_world_a418f5c5ca361cea3cfc189ae22b35130}{\-\_\-find\-Scaled\-Area} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z) const noexcept
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_int_scale_parallelepiped}{Int\-Scale\-Parallelepiped} \hyperlink{class_scalable_bound_temperature_world_a3ad7a326006a4abbb1c7b64b4bf4d791}{\-\_\-cell\-Scale}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of temperature world with bounds. It's backed by {\ttfamily std\-::vector}. You can make cell size bigger for {\ttfamily set}, {\ttfamily amplify} and {\ttfamily foreach} methods. It's useful for optimization. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_scalable_bound_temperature_world_a70e95f32bc19f298649ac99d0b69068c}{\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}!Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}}
+\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}!ScalableBoundTemperatureWorld@{Scalable\-Bound\-Temperature\-World}}
+\subsubsection[{Scalable\-Bound\-Temperature\-World}]{\setlength{\rightskip}{0pt plus 5cm}Scalable\-Bound\-Temperature\-World\-::\-Scalable\-Bound\-Temperature\-World (
+\begin{DoxyParamCaption}
+\item[{{\bf Parallelepiped}}]{bounds}
+\end{DoxyParamCaption}
+)}}\label{class_scalable_bound_temperature_world_a70e95f32bc19f298649ac99d0b69068c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_scalable_bound_temperature_world_a418f5c5ca361cea3cfc189ae22b35130}{\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}!\-\_\-find\-Scaled\-Area@{\-\_\-find\-Scaled\-Area}}
+\index{\-\_\-find\-Scaled\-Area@{\-\_\-find\-Scaled\-Area}!ScalableBoundTemperatureWorld@{Scalable\-Bound\-Temperature\-World}}
+\subsubsection[{\-\_\-find\-Scaled\-Area}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parallelepiped} Scalable\-Bound\-Temperature\-World\-::\-\_\-find\-Scaled\-Area (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_scalable_bound_temperature_world_a418f5c5ca361cea3cfc189ae22b35130}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scalable_bound_temperature_world_a418f5c5ca361cea3cfc189ae22b35130_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_scalable_bound_temperature_world_af4905396b44aec6b7d4efa46afda6919}{\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}!\-\_\-find\-Scaled\-Area\-By\-Axis@{\-\_\-find\-Scaled\-Area\-By\-Axis}}
+\index{\-\_\-find\-Scaled\-Area\-By\-Axis@{\-\_\-find\-Scaled\-Area\-By\-Axis}!ScalableBoundTemperatureWorld@{Scalable\-Bound\-Temperature\-World}}
+\subsubsection[{\-\_\-find\-Scaled\-Area\-By\-Axis}]{\setlength{\rightskip}{0pt plus 5cm}pair$<$ {\bf Coord}, {\bf Coord} $>$ Scalable\-Bound\-Temperature\-World\-::\-\_\-find\-Scaled\-Area\-By\-Axis (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{initial\-Coord, }
+\item[{{\bf Int\-Scale}}]{scale, }
+\item[{{\bf Coord}}]{min\-Coord, }
+\item[{{\bf Coord}}]{max\-Coord}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_scalable_bound_temperature_world_af4905396b44aec6b7d4efa46afda6919}
+\hypertarget{class_scalable_bound_temperature_world_ac77d4cc1f6df5ec994311915a5e92095}{\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}!\-\_\-find\-Scaled\-Area\-Max\-By\-Axis@{\-\_\-find\-Scaled\-Area\-Max\-By\-Axis}}
+\index{\-\_\-find\-Scaled\-Area\-Max\-By\-Axis@{\-\_\-find\-Scaled\-Area\-Max\-By\-Axis}!ScalableBoundTemperatureWorld@{Scalable\-Bound\-Temperature\-World}}
+\subsubsection[{\-\_\-find\-Scaled\-Area\-Max\-By\-Axis}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coord} Scalable\-Bound\-Temperature\-World\-::\-\_\-find\-Scaled\-Area\-Max\-By\-Axis (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{initial\-Coord, }
+\item[{{\bf Int\-Scale}}]{scale, }
+\item[{{\bf Coord}}]{max\-Coord}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_scalable_bound_temperature_world_ac77d4cc1f6df5ec994311915a5e92095}
+\hypertarget{class_scalable_bound_temperature_world_ae8c72b04365794622707fa1a0101c73a}{\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}!\-\_\-find\-Scaled\-Area\-Min\-By\-Axis@{\-\_\-find\-Scaled\-Area\-Min\-By\-Axis}}
+\index{\-\_\-find\-Scaled\-Area\-Min\-By\-Axis@{\-\_\-find\-Scaled\-Area\-Min\-By\-Axis}!ScalableBoundTemperatureWorld@{Scalable\-Bound\-Temperature\-World}}
+\subsubsection[{\-\_\-find\-Scaled\-Area\-Min\-By\-Axis}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coord} Scalable\-Bound\-Temperature\-World\-::\-\_\-find\-Scaled\-Area\-Min\-By\-Axis (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{initial\-Coord, }
+\item[{{\bf Int\-Scale}}]{scale, }
+\item[{{\bf Coord}}]{min\-Coord}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_scalable_bound_temperature_world_ae8c72b04365794622707fa1a0101c73a}
+\hypertarget{class_scalable_bound_temperature_world_ab9602b36759aa857910e03856344759d}{\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}!amplify@{amplify}}
+\index{amplify@{amplify}!ScalableBoundTemperatureWorld@{Scalable\-Bound\-Temperature\-World}}
+\subsubsection[{amplify}]{\setlength{\rightskip}{0pt plus 5cm}void Scalable\-Bound\-Temperature\-World\-::amplify (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z, }
+\item[{{\bf Temperature}}]{temperature}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_scalable_bound_temperature_world_ab9602b36759aa857910e03856344759d}
+Adds or substracts temperature value from existing temperature value at the point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+{\em temperature} & \hyperlink{struct_temperature}{Temperature} difference. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_bound_temperature_world_a7b49bd6e07cc78f3c7a3a722d0ec5bac}{Bound\-Temperature\-World}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scalable_bound_temperature_world_ab9602b36759aa857910e03856344759d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_scalable_bound_temperature_world_a9ac7291c4a2ff3d60042c518f1ae2858}{\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}!cell\-Scale@{cell\-Scale}}
+\index{cell\-Scale@{cell\-Scale}!ScalableBoundTemperatureWorld@{Scalable\-Bound\-Temperature\-World}}
+\subsubsection[{cell\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int\-Scale\-Parallelepiped} Scalable\-Bound\-Temperature\-World\-::cell\-Scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_scalable_bound_temperature_world_a9ac7291c4a2ff3d60042c518f1ae2858}
+\begin{DoxyReturn}{Returns}
+Scale of each cell in three dimensions. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_temperature_world_scalable_mixin_a6e634c366f99d5fd6de868a94780acd9}{I\-Temperature\-World\-Scalable\-Mixin}.
+
+\hypertarget{class_scalable_bound_temperature_world_a57f60178c88b2cffca11a7f21c5c11c7}{\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}!foreach@{foreach}}
+\index{foreach@{foreach}!ScalableBoundTemperatureWorld@{Scalable\-Bound\-Temperature\-World}}
+\subsubsection[{foreach}]{\setlength{\rightskip}{0pt plus 5cm}void Scalable\-Bound\-Temperature\-World\-::foreach (
+\begin{DoxyParamCaption}
+\item[{{\bf Foreach\-Cell\-Fn}}]{func}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_scalable_bound_temperature_world_a57f60178c88b2cffca11a7f21c5c11c7}
+Loops over each point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Function to execute at each point. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_bound_temperature_world_afac2a24af176488487ef7aaa62936ee7}{Bound\-Temperature\-World}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scalable_bound_temperature_world_a57f60178c88b2cffca11a7f21c5c11c7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_scalable_bound_temperature_world_ade4ecf303ae025e824c0bd5ecd2e2ca7}{\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}!set@{set}}
+\index{set@{set}!ScalableBoundTemperatureWorld@{Scalable\-Bound\-Temperature\-World}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void Scalable\-Bound\-Temperature\-World\-::set (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x, }
+\item[{{\bf Coord}}]{y, }
+\item[{{\bf Coord}}]{z, }
+\item[{{\bf Temperature}}]{temperature}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_scalable_bound_temperature_world_ade4ecf303ae025e824c0bd5ecd2e2ca7}
+Sets temperature at the point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em z} & Z coordinate. \\
+\hline
+{\em temperature} & \hyperlink{struct_temperature}{Temperature} to set. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_bound_temperature_world_aa069691f31dd38006cfeacab94b6e94e}{Bound\-Temperature\-World}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scalable_bound_temperature_world_ade4ecf303ae025e824c0bd5ecd2e2ca7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_scalable_bound_temperature_world_addf3187d106391375b4453614a84563b}{\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}!set\-Cell\-Scale@{set\-Cell\-Scale}}
+\index{set\-Cell\-Scale@{set\-Cell\-Scale}!ScalableBoundTemperatureWorld@{Scalable\-Bound\-Temperature\-World}}
+\subsubsection[{set\-Cell\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}void Scalable\-Bound\-Temperature\-World\-::set\-Cell\-Scale (
+\begin{DoxyParamCaption}
+\item[{{\bf Int\-Scale\-Parallelepiped}}]{scale}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_scalable_bound_temperature_world_addf3187d106391375b4453614a84563b}
+Sets scale of each cell.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & Scale in three dimensions. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_temperature_world_scalable_mutable_mixin_a570d17e46a6b97d7ab6c0b7512603a4d}{I\-Temperature\-World\-Scalable\-Mutable\-Mixin}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scalable_bound_temperature_world_addf3187d106391375b4453614a84563b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_scalable_bound_temperature_world_a3ad7a326006a4abbb1c7b64b4bf4d791}{\index{Scalable\-Bound\-Temperature\-World@{Scalable\-Bound\-Temperature\-World}!\-\_\-cell\-Scale@{\-\_\-cell\-Scale}}
+\index{\-\_\-cell\-Scale@{\-\_\-cell\-Scale}!ScalableBoundTemperatureWorld@{Scalable\-Bound\-Temperature\-World}}
+\subsubsection[{\-\_\-cell\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int\-Scale\-Parallelepiped} Scalable\-Bound\-Temperature\-World\-::\-\_\-cell\-Scale\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scalable_bound_temperature_world_a3ad7a326006a4abbb1c7b64b4bf4d791}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/implementation/\hyperlink{_scalable_bound_temperature_world_8hpp}{Scalable\-Bound\-Temperature\-World.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/implementation/\hyperlink{_scalable_bound_temperature_world_8cpp}{Scalable\-Bound\-Temperature\-World.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="Catch::DecomposedExpression" name="Catch::DecomposedExpression">
+<area shape="rect" id="node2" href="$class_catch_1_1_binary_expression.html" title="{Catch::BinaryExpression\l\&lt; LhsT, Op, RhsT \&gt;\n||+ BinaryExpression()\l+ operator=()\l+ endExpression()\l+ isBinaryExpression()\l+ reconstructExpression()\l}" alt="" coords="5,309,176,459"/>
+<area shape="rect" id="node3" href="$class_catch_1_1_expression_lhs.html" title="{Catch::ExpressionLhs\&lt; T \&gt;\n||+ ExpressionLhs()\l+ operator=()\l+ operator==()\l+ operator!=()\l+ operator\&lt;()\l+ operator\&gt;()\l+ operator\&lt;=()\l+ operator\&gt;=()\l+ operator==()\l+ operator!=()\l+ endExpression()\l+ reconstructExpression()\l}" alt="" coords="201,265,383,503"/>
+<area shape="rect" id="node4" href="$class_catch_1_1_match_expression.html" title="{Catch::MatchExpression\l\&lt; ArgT, MatcherT \&gt;\n||+ MatchExpression()\l+ isBinaryExpression()\l+ reconstructExpression()\l}" alt="" coords="407,323,579,445"/>
+<area shape="rect" id="node5" href="$class_catch_1_1_result_builder.html" title="{Catch::ResultBuilder\n||+ ResultBuilder()\l+ operator\&lt;=()\l+ operator\&lt;=()\l+ operator\&lt;\&lt;()\l+ setResultType()\l+ setResultType()\l+ endExpression()\l+ reconstructExpression()\l+ build()\l+ build()\land 10 more...\l}" alt="" coords="603,272,775,496"/>
+</map>

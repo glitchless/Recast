@@ -1,0 +1,332 @@
+\hypertarget{classsha1_1_1_s_h_a1}{\section{sha1\-:\-:S\-H\-A1 Class Reference}
+\label{classsha1_1_1_s_h_a1}\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}}
+}
+
+
+{\ttfamily \#include $<$crow\-\_\-all.\-h$>$}
+
+
+
+Collaboration diagram for sha1\-:\-:S\-H\-A1\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classsha1_1_1_s_h_a1__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\-\_\-t \hyperlink{classsha1_1_1_s_h_a1_a15f384f39d235a8912d5042dc920595f}{digest32\-\_\-t} \mbox{[}5\mbox{]}
+\item 
+typedef uint8\-\_\-t \hyperlink{classsha1_1_1_s_h_a1_a62b6c7838c4cdcb81700a6cc64fde994}{digest8\-\_\-t} \mbox{[}20\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsha1_1_1_s_h_a1_a440d0c3f17da510418b678f4c9dcbdf2}{S\-H\-A1} ()
+\item 
+virtual \hyperlink{classsha1_1_1_s_h_a1_a7103b57eb1f51a498a92c095b9c21392}{$\sim$\-S\-H\-A1} ()
+\item 
+\hyperlink{classsha1_1_1_s_h_a1_a1d63d04a7f146a42000e0a2a35314c6f}{S\-H\-A1} (const \hyperlink{classsha1_1_1_s_h_a1}{S\-H\-A1} \&s)
+\item 
+const \hyperlink{classsha1_1_1_s_h_a1}{S\-H\-A1} \& \hyperlink{classsha1_1_1_s_h_a1_ae8f2ccbee9a15968482057e0d03a4247}{operator=} (const \hyperlink{classsha1_1_1_s_h_a1}{S\-H\-A1} \&s)
+\item 
+\hyperlink{classsha1_1_1_s_h_a1}{S\-H\-A1} \& \hyperlink{classsha1_1_1_s_h_a1_ae2f5530e5be0837e6a222a1f244cbe6d}{reset} ()
+\item 
+\hyperlink{classsha1_1_1_s_h_a1}{S\-H\-A1} \& \hyperlink{classsha1_1_1_s_h_a1_a8f7edf8ccfea07f988d5f40c4b5c768b}{process\-Byte} (uint8\-\_\-t octet)
+\item 
+\hyperlink{classsha1_1_1_s_h_a1}{S\-H\-A1} \& \hyperlink{classsha1_1_1_s_h_a1_af5e58568ad3bcaf91640c7fd5e448d85}{process\-Block} (const void $\ast$const start, const void $\ast$const end)
+\item 
+\hyperlink{classsha1_1_1_s_h_a1}{S\-H\-A1} \& \hyperlink{classsha1_1_1_s_h_a1_abf8a680503b98b8f773f98752e34dbca}{process\-Bytes} (const void $\ast$const data, size\-\_\-t len)
+\item 
+const uint32\-\_\-t $\ast$ \hyperlink{classsha1_1_1_s_h_a1_a7a097712264451da60aa0f30096dd516}{get\-Digest} (\hyperlink{classsha1_1_1_s_h_a1_a15f384f39d235a8912d5042dc920595f}{digest32\-\_\-t} digest)
+\item 
+const uint8\-\_\-t $\ast$ \hyperlink{classsha1_1_1_s_h_a1_a4fd38b624cba611b65730a9e747c584e}{get\-Digest\-Bytes} (\hyperlink{classsha1_1_1_s_h_a1_a62b6c7838c4cdcb81700a6cc64fde994}{digest8\-\_\-t} digest)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\-\_\-t \hyperlink{classsha1_1_1_s_h_a1_a88fa19fad6a3b06522b2826a5966f355}{Left\-Rotate} (uint32\-\_\-t value, size\-\_\-t count)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classsha1_1_1_s_h_a1_af00112a350d5f1f67a9ac00a0fee6793}{process\-Block} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classsha1_1_1_s_h_a1_a15f384f39d235a8912d5042dc920595f}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!digest32\-\_\-t@{digest32\-\_\-t}}
+\index{digest32\-\_\-t@{digest32\-\_\-t}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{digest32\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint32\-\_\-t sha1\-::\-S\-H\-A1\-::digest32\-\_\-t\mbox{[}5\mbox{]}}}\label{classsha1_1_1_s_h_a1_a15f384f39d235a8912d5042dc920595f}
+\hypertarget{classsha1_1_1_s_h_a1_a62b6c7838c4cdcb81700a6cc64fde994}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!digest8\-\_\-t@{digest8\-\_\-t}}
+\index{digest8\-\_\-t@{digest8\-\_\-t}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{digest8\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint8\-\_\-t sha1\-::\-S\-H\-A1\-::digest8\-\_\-t\mbox{[}20\mbox{]}}}\label{classsha1_1_1_s_h_a1_a62b6c7838c4cdcb81700a6cc64fde994}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsha1_1_1_s_h_a1_a440d0c3f17da510418b678f4c9dcbdf2}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!S\-H\-A1@{S\-H\-A1}}
+\index{S\-H\-A1@{S\-H\-A1}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{S\-H\-A1}]{\setlength{\rightskip}{0pt plus 5cm}sha1\-::\-S\-H\-A1\-::\-S\-H\-A1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsha1_1_1_s_h_a1_a440d0c3f17da510418b678f4c9dcbdf2}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classsha1_1_1_s_h_a1_a440d0c3f17da510418b678f4c9dcbdf2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsha1_1_1_s_h_a1_a7103b57eb1f51a498a92c095b9c21392}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!$\sim$\-S\-H\-A1@{$\sim$\-S\-H\-A1}}
+\index{$\sim$\-S\-H\-A1@{$\sim$\-S\-H\-A1}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{$\sim$\-S\-H\-A1}]{\setlength{\rightskip}{0pt plus 5cm}virtual sha1\-::\-S\-H\-A1\-::$\sim$\-S\-H\-A1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classsha1_1_1_s_h_a1_a7103b57eb1f51a498a92c095b9c21392}
+\hypertarget{classsha1_1_1_s_h_a1_a1d63d04a7f146a42000e0a2a35314c6f}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!S\-H\-A1@{S\-H\-A1}}
+\index{S\-H\-A1@{S\-H\-A1}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{S\-H\-A1}]{\setlength{\rightskip}{0pt plus 5cm}sha1\-::\-S\-H\-A1\-::\-S\-H\-A1 (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\-H\-A1} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsha1_1_1_s_h_a1_a1d63d04a7f146a42000e0a2a35314c6f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsha1_1_1_s_h_a1_a7a097712264451da60aa0f30096dd516}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!get\-Digest@{get\-Digest}}
+\index{get\-Digest@{get\-Digest}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{get\-Digest}]{\setlength{\rightskip}{0pt plus 5cm}const uint32\-\_\-t$\ast$ sha1\-::\-S\-H\-A1\-::get\-Digest (
+\begin{DoxyParamCaption}
+\item[{{\bf digest32\-\_\-t}}]{digest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsha1_1_1_s_h_a1_a7a097712264451da60aa0f30096dd516}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsha1_1_1_s_h_a1_a7a097712264451da60aa0f30096dd516_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsha1_1_1_s_h_a1_a7a097712264451da60aa0f30096dd516_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsha1_1_1_s_h_a1_a4fd38b624cba611b65730a9e747c584e}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!get\-Digest\-Bytes@{get\-Digest\-Bytes}}
+\index{get\-Digest\-Bytes@{get\-Digest\-Bytes}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{get\-Digest\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\-\_\-t$\ast$ sha1\-::\-S\-H\-A1\-::get\-Digest\-Bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf digest8\-\_\-t}}]{digest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsha1_1_1_s_h_a1_a4fd38b624cba611b65730a9e747c584e}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsha1_1_1_s_h_a1_a4fd38b624cba611b65730a9e747c584e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsha1_1_1_s_h_a1_a4fd38b624cba611b65730a9e747c584e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsha1_1_1_s_h_a1_a88fa19fad6a3b06522b2826a5966f355}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!Left\-Rotate@{Left\-Rotate}}
+\index{Left\-Rotate@{Left\-Rotate}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{Left\-Rotate}]{\setlength{\rightskip}{0pt plus 5cm}static uint32\-\_\-t sha1\-::\-S\-H\-A1\-::\-Left\-Rotate (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{value, }
+\item[{size\-\_\-t}]{count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classsha1_1_1_s_h_a1_a88fa19fad6a3b06522b2826a5966f355}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsha1_1_1_s_h_a1_a88fa19fad6a3b06522b2826a5966f355_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsha1_1_1_s_h_a1_ae8f2ccbee9a15968482057e0d03a4247}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!operator=@{operator=}}
+\index{operator=@{operator=}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\-H\-A1}\& sha1\-::\-S\-H\-A1\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\-H\-A1} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsha1_1_1_s_h_a1_ae8f2ccbee9a15968482057e0d03a4247}
+\hypertarget{classsha1_1_1_s_h_a1_af5e58568ad3bcaf91640c7fd5e448d85}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!process\-Block@{process\-Block}}
+\index{process\-Block@{process\-Block}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{process\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-H\-A1}\& sha1\-::\-S\-H\-A1\-::process\-Block (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$const}]{start, }
+\item[{const void $\ast$const}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsha1_1_1_s_h_a1_af5e58568ad3bcaf91640c7fd5e448d85}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsha1_1_1_s_h_a1_af5e58568ad3bcaf91640c7fd5e448d85_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsha1_1_1_s_h_a1_af00112a350d5f1f67a9ac00a0fee6793}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!process\-Block@{process\-Block}}
+\index{process\-Block@{process\-Block}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{process\-Block}]{\setlength{\rightskip}{0pt plus 5cm}void sha1\-::\-S\-H\-A1\-::process\-Block (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classsha1_1_1_s_h_a1_af00112a350d5f1f67a9ac00a0fee6793}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsha1_1_1_s_h_a1_af00112a350d5f1f67a9ac00a0fee6793_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsha1_1_1_s_h_a1_af00112a350d5f1f67a9ac00a0fee6793_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsha1_1_1_s_h_a1_a8f7edf8ccfea07f988d5f40c4b5c768b}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!process\-Byte@{process\-Byte}}
+\index{process\-Byte@{process\-Byte}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{process\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-H\-A1}\& sha1\-::\-S\-H\-A1\-::process\-Byte (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{octet}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsha1_1_1_s_h_a1_a8f7edf8ccfea07f988d5f40c4b5c768b}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsha1_1_1_s_h_a1_a8f7edf8ccfea07f988d5f40c4b5c768b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsha1_1_1_s_h_a1_a8f7edf8ccfea07f988d5f40c4b5c768b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsha1_1_1_s_h_a1_abf8a680503b98b8f773f98752e34dbca}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!process\-Bytes@{process\-Bytes}}
+\index{process\-Bytes@{process\-Bytes}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{process\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-H\-A1}\& sha1\-::\-S\-H\-A1\-::process\-Bytes (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$const}]{data, }
+\item[{size\-\_\-t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsha1_1_1_s_h_a1_abf8a680503b98b8f773f98752e34dbca}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsha1_1_1_s_h_a1_abf8a680503b98b8f773f98752e34dbca_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsha1_1_1_s_h_a1_abf8a680503b98b8f773f98752e34dbca_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsha1_1_1_s_h_a1_ae2f5530e5be0837e6a222a1f244cbe6d}{\index{sha1\-::\-S\-H\-A1@{sha1\-::\-S\-H\-A1}!reset@{reset}}
+\index{reset@{reset}!sha1::SHA1@{sha1\-::\-S\-H\-A1}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-H\-A1}\& sha1\-::\-S\-H\-A1\-::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsha1_1_1_s_h_a1_ae2f5530e5be0837e6a222a1f244cbe6d}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classsha1_1_1_s_h_a1_ae2f5530e5be0837e6a222a1f244cbe6d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/test/lib/\hyperlink{crow__all_8h}{crow\-\_\-all.\-h}\end{DoxyCompactItemize}

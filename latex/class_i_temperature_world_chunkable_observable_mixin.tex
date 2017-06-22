@@ -1,0 +1,92 @@
+\hypertarget{class_i_temperature_world_chunkable_observable_mixin}{\section{I\-Temperature\-World\-Chunkable\-Observable\-Mixin Class Reference}
+\label{class_i_temperature_world_chunkable_observable_mixin}\index{I\-Temperature\-World\-Chunkable\-Observable\-Mixin@{I\-Temperature\-World\-Chunkable\-Observable\-Mixin}}
+}
+
+
+{\ttfamily \#include $<$I\-Temperature\-World\-Chunkable\-Observable.\-hpp$>$}
+
+
+
+Inheritance diagram for I\-Temperature\-World\-Chunkable\-Observable\-Mixin\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_temperature_world_chunkable_observable_mixin__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for I\-Temperature\-World\-Chunkable\-Observable\-Mixin\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_i_temperature_world_chunkable_observable_mixin__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{class_i_temperature_world_chunkable_observable_mixin_a777c50f4a4ca0b3f7cd6bc02b87bb883}{On\-Chunk\-Event\-Fn} = std\-::function$<$ void(std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$)$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_i_temperature_world_chunkable_observable_mixin_a5bafba4f885aa5ae4cab3133d75d45d1}{on\-Chunk\-Add} (\hyperlink{class_i_temperature_world_chunkable_observable_mixin_a777c50f4a4ca0b3f7cd6bc02b87bb883}{On\-Chunk\-Event\-Fn} func)=0
+\item 
+virtual void \hyperlink{class_i_temperature_world_chunkable_observable_mixin_a85cfb47d07c70183d1c4da81a91da599}{on\-Chunk\-Remove} (\hyperlink{class_i_temperature_world_chunkable_observable_mixin_a777c50f4a4ca0b3f7cd6bc02b87bb883}{On\-Chunk\-Event\-Fn} func)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Should not be derived directly. Use {\ttfamily \hyperlink{class_i_temperature_world_chunkable_observable}{I\-Temperature\-World\-Chunkable\-Observable}}. This class is useful for {\ttfamily dynamic\-\_\-cast}. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_i_temperature_world_chunkable_observable_mixin_a777c50f4a4ca0b3f7cd6bc02b87bb883}{\index{I\-Temperature\-World\-Chunkable\-Observable\-Mixin@{I\-Temperature\-World\-Chunkable\-Observable\-Mixin}!On\-Chunk\-Event\-Fn@{On\-Chunk\-Event\-Fn}}
+\index{On\-Chunk\-Event\-Fn@{On\-Chunk\-Event\-Fn}!ITemperatureWorldChunkableObservableMixin@{I\-Temperature\-World\-Chunkable\-Observable\-Mixin}}
+\subsubsection[{On\-Chunk\-Event\-Fn}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf I\-Temperature\-World\-Chunkable\-Observable\-Mixin\-::\-On\-Chunk\-Event\-Fn} =  std\-::function$<$void(std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Boundable}$<${\bf I\-Temperature\-World}$>$$>$)$>$}}\label{class_i_temperature_world_chunkable_observable_mixin_a777c50f4a4ca0b3f7cd6bc02b87bb883}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i_temperature_world_chunkable_observable_mixin_a5bafba4f885aa5ae4cab3133d75d45d1}{\index{I\-Temperature\-World\-Chunkable\-Observable\-Mixin@{I\-Temperature\-World\-Chunkable\-Observable\-Mixin}!on\-Chunk\-Add@{on\-Chunk\-Add}}
+\index{on\-Chunk\-Add@{on\-Chunk\-Add}!ITemperatureWorldChunkableObservableMixin@{I\-Temperature\-World\-Chunkable\-Observable\-Mixin}}
+\subsubsection[{on\-Chunk\-Add}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Temperature\-World\-Chunkable\-Observable\-Mixin\-::on\-Chunk\-Add (
+\begin{DoxyParamCaption}
+\item[{{\bf On\-Chunk\-Event\-Fn}}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_temperature_world_chunkable_observable_mixin_a5bafba4f885aa5ae4cab3133d75d45d1}
+Subscribes listener to chunk add events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Listener. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_generatable_chunked_temperature_world_aa0b55baf21d9605af04d8fef99f9fbd8}{Generatable\-Chunked\-Temperature\-World}.
+
+\hypertarget{class_i_temperature_world_chunkable_observable_mixin_a85cfb47d07c70183d1c4da81a91da599}{\index{I\-Temperature\-World\-Chunkable\-Observable\-Mixin@{I\-Temperature\-World\-Chunkable\-Observable\-Mixin}!on\-Chunk\-Remove@{on\-Chunk\-Remove}}
+\index{on\-Chunk\-Remove@{on\-Chunk\-Remove}!ITemperatureWorldChunkableObservableMixin@{I\-Temperature\-World\-Chunkable\-Observable\-Mixin}}
+\subsubsection[{on\-Chunk\-Remove}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Temperature\-World\-Chunkable\-Observable\-Mixin\-::on\-Chunk\-Remove (
+\begin{DoxyParamCaption}
+\item[{{\bf On\-Chunk\-Event\-Fn}}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_temperature_world_chunkable_observable_mixin_a85cfb47d07c70183d1c4da81a91da599}
+Subscribes listener to chunk remove events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Listener. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_generatable_chunked_temperature_world_a4416f9f9ea400e540b1214b053692760}{Generatable\-Chunked\-Temperature\-World}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/interfaces/\hyperlink{_i_temperature_world_chunkable_observable_8hpp}{I\-Temperature\-World\-Chunkable\-Observable.\-hpp}\end{DoxyCompactItemize}

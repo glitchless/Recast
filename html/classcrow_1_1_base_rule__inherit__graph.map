@@ -1,0 +1,5 @@
+<map id="crow::BaseRule" name="crow::BaseRule">
+<area shape="rect" id="node2" href="$classcrow_1_1_dynamic_rule.html" title="{crow::DynamicRule\n||+ DynamicRule()\l+ validate()\l+ handle()\l+ operator()()\l+ wrap()\l+ operator()()\l}" alt="" coords="5,301,141,451"/>
+<area shape="rect" id="node3" href="$classcrow_1_1_tagged_rule.html" title="{crow::TaggedRule\&lt; Args \&gt;\n||+ TaggedRule()\l+ validate()\l+ operator()()\l+ operator()()\l+ operator()()\l+ operator()()\l+ handle()\l}" alt="" coords="167,293,345,459"/>
+<area shape="rect" id="node4" href="$classcrow_1_1_web_socket_rule.html" title="{crow::WebSocketRule\n|# open_handler_\l# message_handler_\l# close_handler_\l# error_handler_\l|+ WebSocketRule()\l+ validate()\l+ handle()\l+ handle_upgrade()\l+ onopen()\l+ onmessage()\l+ onclose()\l+ onerror()\l}" alt="" coords="370,264,523,488"/>
+</map>
