@@ -13,6 +13,7 @@
 
 #include <string>
 #include <thread>
+#include "threads/InputThread.hpp"
 #include "commands/ICommandSender.hpp"
 #include "commands/CommandManager.hpp"
 #include "network/NetworkServer.hpp"
