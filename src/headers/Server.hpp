@@ -53,9 +53,13 @@ public:
 private:
     volatile bool isLaunching;
     std::thread inputThread;
+    std::thread listenTCPThread;
+    std::thread listenUDPThread;
     PlayersOnline *players;
-    NetworkServer *tcp;
-    NetworkServer *udp;
+    NetworkServer *serverTCP;
+    NetworkServer *serverUDP;
+
+    void runNetworkServer(NetworkServer *server);
 };
 
 

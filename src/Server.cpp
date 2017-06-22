@@ -49,13 +49,16 @@ void Server::initServer() {
     BOOST_LOG_TRIVIAL(info) << "Initializing server...";
     isLaunching = true;
     inputThread = thread(&InputThread::init, InputThread(this));
-    inputThread.detach();
+
 
     BOOST_LOG_TRIVIAL(info) << "Initializing network...";
+    listenUDPThread = thread(&Server::runNetworkServer, this, serverUDP);
+    listenUDPThread.detach();
+    listenTCPThread = thread(&Server::runNetworkServer, this, serverTCP);
+    listenTCPThread.detach();
 
-    // Needs to be resolved (blocking udp!)
-    tcp->run();
-    udp->run();
+    BOOST_LOG_TRIVIAL(info) << "Initialization finished. All systems go. Waiting for commands.";
+    inputThread.join();
 }
 
 Server::Server() {
@@ -64,17 +67,21 @@ Server::Server() {
     uint32_t portTCP = static_cast<uint32_t>(Config::instance()->get("general.server.port.tcp", DEFAULT_PORT_TCP));
     uint32_t portUDP = static_cast<uint32_t>(Config::instance()->get("general.server.port.udp", DEFAULT_PORT_UDP));
 
-    tcp = new NetworkServer(portTCP, true);
-    udp = new NetworkServer(portUDP, false);
+    serverTCP = new NetworkServer(portTCP, true);
+    serverUDP = new NetworkServer(portUDP, false);
 
     players = new PlayersOnline(Config::instance()->get("server.max_players", 20));
 }
 
+void Server::runNetworkServer(NetworkServer *server) {
+    server->run();
+}
+
 bool Server::shutdown() {
-    tcp->shutdown();
-    delete tcp;
-    udp->shutdown();
-    delete udp;
+    serverTCP->shutdown();
+    delete serverTCP;
+    serverUDP->shutdown();
+    delete serverUDP;
     return isLaunching ? !(isLaunching = false) : false; // Return true if isLaunching equals true
 }
 

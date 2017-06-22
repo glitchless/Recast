@@ -204,6 +204,7 @@ void Socket::createServerSocketUDP(uint32_t port) throw (exception) {
     }
 
     socketDescr = sd;
+    // setNonBlocked(true);
 }
 
 void Socket::createServerSocketTCP(uint32_t port, uint32_t queueSize) throw (exception) {
@@ -228,6 +229,7 @@ void Socket::createServerSocketTCP(uint32_t port, uint32_t queueSize) throw (exc
 
     ::listen(sd, queueSize);
     socketDescr = sd;
+    // setNonBlocked(true);
 }
 
 shared_ptr<Socket> Socket::accept() throw (exception) {
