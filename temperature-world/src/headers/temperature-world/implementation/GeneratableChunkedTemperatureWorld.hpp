@@ -15,7 +15,10 @@
  * Implementation of temperature world divided by chunks. It's backed by `std::list`.
  * It will create new chunk if client accesses temperature of point in non-existing chunk.
  */
-class GeneratableChunkedTemperatureWorld : public ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ChunkedTemperatureWorld>> {
+class GeneratableChunkedTemperatureWorld
+        : public virtual ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>
+        , public virtual ChunkedTemperatureWorld
+{
 public:
     GeneratableChunkedTemperatureWorld(
             GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn needChunkFn,

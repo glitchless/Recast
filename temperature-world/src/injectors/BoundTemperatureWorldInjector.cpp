@@ -65,7 +65,7 @@ shared_ptr<IUpdater> BoundTemperatureWorldInjector::updater() {
     return _updater;
 }
 
-shared_ptr<ITimer> BoundTemperatureWorldInjector::timer() {
+shared_ptr<ITimerBlockable<ITimer>> BoundTemperatureWorldInjector::timer() {
     if (!_timer) {
         _makeTimer();
     }
@@ -73,13 +73,19 @@ shared_ptr<ITimer> BoundTemperatureWorldInjector::timer() {
 }
 
 void BoundTemperatureWorldInjector::_makeWorld() {
-    _world = make_shared<BoundTemperatureWorld>(worldBounds());
+    using T = remove_reference_t<decltype(*_world)>;
+    _world = dynamic_pointer_cast<T>(make_shared<BoundTemperatureWorld>(worldBounds()));
+    assert(_world != nullptr);
 }
 
 void BoundTemperatureWorldInjector::_makeUpdater() {
-    _updater = make_shared<AverageShareTemperatureWorldUpdater>(temperatureExchangeCoefficient(), world(), timer());
+    using T = remove_reference_t<decltype(*_updater)>;
+    _updater = dynamic_pointer_cast<T>(make_shared<AverageShareTemperatureWorldUpdater>(temperatureExchangeCoefficient(), world(), timer()));
+    assert(_updater != nullptr);
 }
 
 void BoundTemperatureWorldInjector::_makeTimer() {
-    _timer = make_shared<SynchronizedBlockingTimer>(minUpdateDelta());
+    using T = remove_reference_t<decltype(*_timer)>;
+    _timer = dynamic_pointer_cast<T>(make_shared<SynchronizedBlockingTimer>(minUpdateDelta()));
+    assert(_timer != nullptr);
 }

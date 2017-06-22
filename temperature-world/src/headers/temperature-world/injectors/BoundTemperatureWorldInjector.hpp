@@ -11,6 +11,7 @@
 #include "temperature-world/interfaces/ITemperatureWorldBoundable.hpp"
 #include "temperature-world/interfaces/IUpdater.hpp"
 #include "temperature-world/interfaces/ITimer.hpp"
+#include "temperature-world/interfaces/ITimerBlockable.hpp"
 
 /**
  * Injector.
@@ -107,7 +108,7 @@ public:
      *
      * @return Built blocking timer which is used in world updater.
      */
-    std::shared_ptr<ITimer> timer();
+    std::shared_ptr<ITimerBlockable<ITimer>> timer();
 
 protected:
     void _makeWorld();
@@ -120,7 +121,7 @@ protected:
 
     std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> _world;
     std::shared_ptr<IUpdater> _updater;
-    std::shared_ptr<ITimer> _timer;
+    std::shared_ptr<ITimerBlockable<ITimer>> _timer;
 };
 
 

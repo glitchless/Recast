@@ -38,7 +38,7 @@ public:
  * @tparam T Base temperature world class.
  */
 template<typename T>
-class ITemperatureWorldPointPrioritizable : public virtual T, public ITemperatureWorldPointPrioritizableMixin {
+class ITemperatureWorldPointPrioritizable : public virtual T, public virtual ITemperatureWorldPointPrioritizableMixin {
 };
 
 

@@ -10,6 +10,7 @@
 #include "temperature-world/interfaces/IUpdater.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldBoundable.hpp"
 #include "temperature-world/interfaces/ITimer.hpp"
+#include "temperature-world/interfaces/ITimerBlockable.hpp"
 
 /**
  * Implementation of temperature world updater.
@@ -18,12 +19,12 @@
  * 1. Computes average of temperatures of two cells.
  * 2. Brings temperature of each cell to this average world. Speed is determined by temperature exchange coefficient.
  */
-class AverageShareTemperatureWorldUpdater : public IUpdater {
+class AverageShareTemperatureWorldUpdater : public virtual IUpdater {
 public:
     AverageShareTemperatureWorldUpdater(
             double temperatureExchangeCoefficient,
             std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> world,
-            std::shared_ptr<ITimer> timer);
+            std::shared_ptr<ITimerBlockable<ITimer>> timer);
 
     void update() override;
 
@@ -33,7 +34,7 @@ protected:
 
     double _temperatureExchangeCoefficient;
     std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> _world;
-    std::shared_ptr<ITimer> _timer;
+    std::shared_ptr<ITimerBlockable<ITimer>> _timer;
 };
 
 

@@ -11,9 +11,11 @@
 #include "temperature-world/types/Parallelepiped.hpp"
 #include "temperature-world/interfaces/IUpdater.hpp"
 #include "temperature-world/interfaces/ITimer.hpp"
+#include "temperature-world/interfaces/ITimerBlockable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorld.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldBoundable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkable.hpp"
+#include "temperature-world/interfaces/ITemperatureWorldChunkableMutable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkableGeneratable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkableObservable.hpp"
 
@@ -98,7 +100,7 @@ public:
      *
      * @return Built chunked temperature world.
      */
-    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> world();
+    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> world();
 
     /**
      * Temperature world updater will be built only once for an injector instance. You can get the world via `world` getter.
@@ -112,25 +114,24 @@ public:
      *
      * @return Built blocking timer which is used in the world updater.
      */
-    std::shared_ptr<ITimer> timer();
+    std::shared_ptr<ITimerBlockable<ITimer>> timer();
 
 protected:
+    static bool _needChunkFn(Coord x, Coord y, Coord z) noexcept;
+    static std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> _makeChunkFn(Parallelepiped chunkBounds, Coord x, Coord y, Coord z);
+    static std::shared_ptr<IUpdater> _makeChunkUpdaterFn(double temperatureExchangeCoefficient, std::shared_ptr<ITimerBlockable<ITimer>> timer, std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk);
+
     void _makeWorld();
     void _makeUpdater();
     void _makeTimer();
-
-    bool _needChunkFn(Coord x, Coord y, Coord z) noexcept;
-    std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> _makeChunkFn(Coord x, Coord y, Coord z);
-
-    std::shared_ptr<IUpdater> _makeChunkUpdaterFn(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>);
 
     std::unique_ptr<Parallelepiped> _chunkBounds;
     std::unique_ptr<double> _temperatureExchangeCoefficient;
     std::unique_ptr<std::chrono::milliseconds> _minUpdateDelta;
 
-    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> _world;
+    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> _world;
     std::shared_ptr<IUpdater> _updater;
-    std::shared_ptr<ITimer> _timer;
+    std::shared_ptr<ITimerBlockable<ITimer>> _timer;
 };
 
 

@@ -27,7 +27,7 @@ public:
  * @tparam T Base temperature world class.
  */
 template<typename T>
-class ITemperatureWorldScalable : public virtual T, public ITemperatureWorldScalableMixin {
+class ITemperatureWorldScalable : public virtual T, public virtual ITemperatureWorldScalableMixin {
 };
 
 

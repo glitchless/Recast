@@ -12,6 +12,7 @@
 
 using namespace std;
 using namespace std::chrono;
+using namespace std::placeholders;
 
 ScalingGeneratableChunkedTemperatureWorldInjector::ScalingGeneratableChunkedTemperatureWorldInjector() {
     setMinUpdateDelta(milliseconds(20));
@@ -55,7 +56,8 @@ void ScalingGeneratableChunkedTemperatureWorldInjector::setMinUpdateDelta(millis
     _minUpdateDelta = make_unique<milliseconds>(minUpdateDelta);
 }
 
-shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> ScalingGeneratableChunkedTemperatureWorldInjector::world() {
+shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>>
+ScalingGeneratableChunkedTemperatureWorldInjector::world() {
     if (!_world) {
         _makeWorld();
     }
@@ -69,40 +71,45 @@ shared_ptr<IUpdater> ScalingGeneratableChunkedTemperatureWorldInjector::updater(
     return _updater;
 }
 
-shared_ptr<ITimer> ScalingGeneratableChunkedTemperatureWorldInjector::timer() {
+shared_ptr<ITimerBlockable<ITimer>> ScalingGeneratableChunkedTemperatureWorldInjector::timer() {
     if (!_timer) {
         _makeTimer();
     }
     return _timer;
 }
 
-void ScalingGeneratableChunkedTemperatureWorldInjector::_makeWorld() {
-    _world = shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>>(
-            (ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>*) new ScalingGeneratableChunkedTemperatureWorld(
-                    [&](Coord x, Coord y, Coord z) { return this->_needChunkFn(x, y, z); },
-                    [&](Coord x, Coord y, Coord z) { return this->_makeChunkFn(x, y, z); },
-                    chunkBounds()));
-}
-
-void ScalingGeneratableChunkedTemperatureWorldInjector::_makeUpdater() {
-    _updater = shared_ptr<IUpdater>(
-            (IUpdater*) new ThreadedChunkedTemperatureWorldUpdater(
-                    world(),
-                    [&](shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) { return this->_makeChunkUpdaterFn(chunk); }));
-}
-
-void ScalingGeneratableChunkedTemperatureWorldInjector::_makeTimer() {
-    _timer = make_shared<SynchronizedBlockingTimer>(minUpdateDelta());
-}
-
 bool ScalingGeneratableChunkedTemperatureWorldInjector::_needChunkFn(Coord x, Coord y, Coord z) noexcept {
     return true;
 }
 
-shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> ScalingGeneratableChunkedTemperatureWorldInjector::_makeChunkFn(Coord x, Coord y, Coord z) {
-    return make_shared<ScalableBoundTemperatureWorld>(chunkBounds());
+shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> ScalingGeneratableChunkedTemperatureWorldInjector::_makeChunkFn(Parallelepiped chunkBounds, Coord x, Coord y, Coord z) {
+    return make_shared<ScalableBoundTemperatureWorld>(chunkBounds);
 }
 
-shared_ptr<IUpdater> ScalingGeneratableChunkedTemperatureWorldInjector::_makeChunkUpdaterFn(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
-    return make_shared<AverageShareTemperatureWorldUpdater>(temperatureExchangeCoefficient(), chunk, timer());
+shared_ptr<IUpdater> ScalingGeneratableChunkedTemperatureWorldInjector::_makeChunkUpdaterFn(double temperatureExchangeCoefficient, shared_ptr<ITimerBlockable<ITimer>> timer, shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
+    return make_shared<AverageShareTemperatureWorldUpdater>(temperatureExchangeCoefficient, chunk, timer);
+}
+
+void ScalingGeneratableChunkedTemperatureWorldInjector::_makeWorld() {
+    using T = remove_reference_t<decltype(*_world)>;
+    _world = dynamic_pointer_cast<T>(make_shared<ScalingGeneratableChunkedTemperatureWorld>(
+            &_needChunkFn,
+            bind(&_makeChunkFn, chunkBounds(), _1, _2, _3),
+            chunkBounds()));
+    assert(_world != nullptr);
+}
+
+void ScalingGeneratableChunkedTemperatureWorldInjector::_makeUpdater() {
+    using T = remove_reference_t<decltype(*_updater)>;
+    _updater = dynamic_pointer_cast<T>(make_shared<ThreadedChunkedTemperatureWorldUpdater>(
+            world(),
+            bind(&_makeChunkUpdaterFn, temperatureExchangeCoefficient(), timer(), _1),
+            timer()));
+    assert(_updater != nullptr);
+}
+
+void ScalingGeneratableChunkedTemperatureWorldInjector::_makeTimer() {
+    using T = remove_reference_t<decltype(*_timer)>;
+    _timer = dynamic_pointer_cast<T>(make_shared<SynchronizedBlockingTimer>(minUpdateDelta()));
+    assert(_timer != nullptr);
 }

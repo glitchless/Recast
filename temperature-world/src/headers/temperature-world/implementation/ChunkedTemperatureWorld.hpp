@@ -15,7 +15,7 @@
 /**
  * Implementation of temperature world divided by chunks. It's backed by `std::list`.
  */
-class ChunkedTemperatureWorld : public ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>> {
+class ChunkedTemperatureWorld : public virtual ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>> {
 public:
     ChunkedTemperatureWorld();
 

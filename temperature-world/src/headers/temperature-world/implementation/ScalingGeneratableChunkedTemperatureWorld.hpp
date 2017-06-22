@@ -19,7 +19,10 @@
  * It will create new chunk if client accesses temperature of point in non-existing chunk.
  * Also it will automatically upscale cell size in far chunks for optimization.
  */
-class ScalingGeneratableChunkedTemperatureWorld : public ITemperatureWorldPointPrioritizable<GeneratableChunkedTemperatureWorld> {
+class ScalingGeneratableChunkedTemperatureWorld
+        : public virtual ITemperatureWorldPointPrioritizable<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>>
+        , public virtual GeneratableChunkedTemperatureWorld
+{
 public:
     ScalingGeneratableChunkedTemperatureWorld(
             GeneratableChunkedTemperatureWorldTypedefs::NeedChunkFn needChunkFn,

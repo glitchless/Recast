@@ -39,7 +39,7 @@ public:
  * @tparam T Base temperature world class.
  */
 template<typename T>
-class ITemperatureWorldChunkableObservable : public virtual T, public ITemperatureWorldChunkableObservableMixin {
+class ITemperatureWorldChunkableObservable : public virtual T, public virtual ITemperatureWorldChunkableObservableMixin {
 };
 
 

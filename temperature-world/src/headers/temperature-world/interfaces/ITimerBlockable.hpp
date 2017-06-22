@@ -25,7 +25,7 @@ public:
  * Makes timer to be able to ask client to wait in blocking way, so the `delta` won't be less than `minDelta`.
  */
 template<typename T>
-class ITimerBlockable : public virtual T, public ITimerBlockableMixin {
+class ITimerBlockable : public virtual T, public virtual ITimerBlockableMixin {
 };
 
 

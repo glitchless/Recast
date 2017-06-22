@@ -12,21 +12,24 @@
 #include <thread>
 #include <future>
 #include "temperature-world/interfaces/IUpdater.hpp"
-#include "../interfaces/ITemperatureWorld.hpp"
+#include "temperature-world/interfaces/ITemperatureWorld.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkableGeneratable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkableObservable.hpp"
+#include "temperature-world/interfaces/ITimer.hpp"
+#include "temperature-world/interfaces/ITimerBlockable.hpp"
 
 /**
  * Implementation of chunked temperature world updater.
  * It updates every chunk asynchronously in a thread pool.
  * This class is thread-safe.
  */
-class ThreadedChunkedTemperatureWorldUpdater : public IUpdater {
+class ThreadedChunkedTemperatureWorldUpdater : public virtual IUpdater {
 public:
     ThreadedChunkedTemperatureWorldUpdater(
             std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> world,
-            std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn);
+            std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn,
+            std::shared_ptr<ITimerBlockable<ITimer>> timer);
 
     ~ThreadedChunkedTemperatureWorldUpdater();
 
@@ -39,6 +42,7 @@ protected:
         std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn;
 
         std::atomic<bool> isRunning;
+        std::shared_ptr<ITimerBlockable<ITimer>> timer;
         std::vector<std::thread> workers;
 
         std::vector<std::shared_ptr<IUpdater>> updaters;
