@@ -14,6 +14,7 @@
 
 #include <string>
 #include <thread>
+#include <threads/InputThread.h>
 #include "commands/ICommandSender.h"
 #include "commands/CommandManager.h"
 
@@ -53,6 +54,7 @@ private:
     volatile bool isLaunching;
     std::thread inputThread;
     PlayersOnline *players;
+    InputThread *inputObject;
 };
 
 

@@ -48,7 +48,8 @@ void Server::initServer() {
     initLogger();
     BOOST_LOG_TRIVIAL(info) << "Initializing server...";
     isLaunching = true;
-    inputThread = thread(&InputThread::init, InputThread(this));
+    inputObject = new InputThread(this);
+    inputThread = thread(&InputThread::init, inputObject);
     inputThread.detach();
     while (isRunning());
 }
@@ -67,5 +68,6 @@ void Server::onMessage(const std::string &msg) {
 }
 
 Server::~Server() {
+    delete inputObject;
     delete Config::instance();
 }
