@@ -51,8 +51,8 @@ protected:
         std::mutex tasksQueueWaitMutex;
     };
 
-    void _work();
-    void _watchChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk);
+    static void _work(std::shared_ptr<ThreadData> data);
+    static void _watchChunk(std::shared_ptr<ThreadData> data, std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk);
 
     std::shared_ptr<ThreadData> _data;
 };

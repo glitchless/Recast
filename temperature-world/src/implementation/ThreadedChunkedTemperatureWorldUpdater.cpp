@@ -6,6 +6,7 @@
 #include "temperature-world/implementation/ThreadedChunkedTemperatureWorldUpdater.hpp"
 
 using namespace std;
+using namespace std::placeholders;
 
 ThreadedChunkedTemperatureWorldUpdater::ThreadedChunkedTemperatureWorldUpdater(
         shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkable<ITemperatureWorld>>>> world,
@@ -21,7 +22,7 @@ ThreadedChunkedTemperatureWorldUpdater::ThreadedChunkedTemperatureWorldUpdater(
         _data->workers.push_back(move(thread(&ThreadedChunkedTemperatureWorldUpdater::_work, this)));
     }
 
-    _data->world->onChunkAdd([&](shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) { this->_watchChunk(chunk); });
+    _data->world->onChunkAdd(bind(&_watchChunk, _data, _1));
 }
 
 ThreadedChunkedTemperatureWorldUpdater::~ThreadedChunkedTemperatureWorldUpdater() {
@@ -62,16 +63,16 @@ void ThreadedChunkedTemperatureWorldUpdater::update() {
     _data->tasks.clear();
 }
 
-void ThreadedChunkedTemperatureWorldUpdater::_work() {
-    while (_data->isRunning.load()) {
+void ThreadedChunkedTemperatureWorldUpdater::_work(shared_ptr<ThreadedChunkedTemperatureWorldUpdater::ThreadData> data) {
+    while (data->isRunning.load()) {
         shared_ptr<IUpdater> task;
         promise<void> promise;
         {
-            lock_guard<mutex> guard(_data->tasksQueueMutex);
-            if (!_data->tasksQueue.empty()) {
-                task = move(_data->tasksQueue.front().first);
-                promise = move(_data->tasksQueue.front().second);
-                _data->tasksQueue.pop();
+            lock_guard<mutex> guard(data->tasksQueueMutex);
+            if (!data->tasksQueue.empty()) {
+                task = move(data->tasksQueue.front().first);
+                promise = move(data->tasksQueue.front().second);
+                data->tasksQueue.pop();
             }
         }
 
@@ -79,13 +80,13 @@ void ThreadedChunkedTemperatureWorldUpdater::_work() {
             task->update();
             promise.set_value();
         } else {
-            unique_lock<mutex> lock(_data->tasksQueueWaitMutex);
-            _data->tasksQueueWait.wait(lock);
+            unique_lock<mutex> lock(data->tasksQueueWaitMutex);
+            data->tasksQueueWait.wait(lock);
         }
     }
 }
 
-void ThreadedChunkedTemperatureWorldUpdater::_watchChunk(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
-    lock_guard<mutex> guard(_data->updatersMutex);
-    _data->updaters.push_back(move(_data->makeChunkUpdaterFn(chunk)));
+void ThreadedChunkedTemperatureWorldUpdater::_watchChunk(shared_ptr<ThreadedChunkedTemperatureWorldUpdater::ThreadData> data, shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
+    lock_guard<mutex> guard(data->updatersMutex);
+    data->updaters.push_back(move(data->makeChunkUpdaterFn(chunk)));
 }
