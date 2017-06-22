@@ -13,9 +13,10 @@
 
 #include <string>
 #include <thread>
-#include <threads/InputThread.h>
-#include "commands/ICommandSender.h"
-#include "commands/CommandManager.h"
+#include "threads/InputThread.hpp"
+#include "commands/ICommandSender.hpp"
+#include "commands/CommandManager.hpp"
+#include "network/NetworkServer.hpp"
 #include "temperature-world/interfaces/IUpdater.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkableObservable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkableGeneratable.hpp"
@@ -63,9 +64,15 @@ private:
 
     void update();
 
+    void runNetworkServer(NetworkServer *tcp, NetworkServer *udp);
+
     volatile bool isLaunching;
     std::thread inputThread;
+    std::thread listenTCPThread;
+    std::thread listenUDPThread;
     PlayersOnline *players;
+    NetworkServer *serverTCP;
+    NetworkServer *serverUDP;
     InputThread *inputObject;
     std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> temperatureWorld;
     std::shared_ptr<IUpdater> temperatureWorldUpdater;

@@ -1,7 +1,7 @@
 
-#include "commands/ICommandSender.h"
-#include "commands/StopCommand.h"
-#include "Server.h"
+#include "commands/ICommandSender.hpp"
+#include "commands/StopCommand.hpp"
+#include "Server.hpp"
 
 using namespace std;
 

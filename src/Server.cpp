@@ -20,12 +20,12 @@
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
 
-#include "io/SQLite.h"
-#include "configs/Config.h"
-#include "Server.h"
-#include "threads/InputThread.h"
-#include "models/collections/PlayersOnline.h"
-#include "exceptions/InvalidLoginOrPassword.h"
+#include "Server.hpp"
+#include "io/SQLite.hpp"
+#include "configs/Config.hpp"
+#include "exceptions/InvalidLoginOrPassword.hpp"
+#include "threads/InputThread.hpp"
+#include "models/collections/PlayersOnline.hpp"
 #include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
 #include "temperature-world/implementation/BasicTimer.hpp"
 
@@ -57,11 +57,16 @@ void Server::initTemperatureWorld() {
 void Server::initServer() {
     initLogger();
     initTemperatureWorld();
+
     BOOST_LOG_TRIVIAL(info) << "Initializing server...";
     isLaunching = true;
     inputObject = new InputThread(this);
     inputThread = thread(&InputThread::init, inputObject);
     inputThread.detach();
+
+    BOOST_LOG_TRIVIAL(info) << "Initializing network...";
+    runNetworkServer(serverTCP, serverUDP);
+
     BasicTimer benchmarkTimer;
     while (isRunning()) {
         benchmarkTimer.update();
@@ -76,10 +81,26 @@ void Server::update() {
 
 Server::Server() {
     isLaunching = false;
+
+    uint32_t portTCP = static_cast<uint32_t>(Config::instance()->get("general.server.port.tcp", DEFAULT_PORT_TCP));
+    uint32_t portUDP = static_cast<uint32_t>(Config::instance()->get("general.server.port.udp", DEFAULT_PORT_UDP));
+
+    serverTCP = new NetworkServer(portTCP, true);
+    serverUDP = new NetworkServer(portUDP, false);
+
     players = new PlayersOnline(Config::instance()->get("server.max_players", 20));
 }
 
+void Server::runNetworkServer(NetworkServer *tcp, NetworkServer *udp) {
+    listenUDPThread = thread(&NetworkServer::run, tcp);
+    listenUDPThread.detach();
+    listenTCPThread = thread(&NetworkServer::run, udp);
+    listenTCPThread.detach();
+}
+
 bool Server::shutdown() {
+    serverTCP->shutdown();
+    serverUDP->shutdown();
     return isLaunching ? !(isLaunching = false) : false; // Return true if isLaunching equals true
 }
 
@@ -88,6 +109,8 @@ void Server::onMessage(const std::string &msg) {
 }
 
 Server::~Server() {
+    delete serverTCP;
+    delete serverUDP;
     delete inputObject;
     delete Config::instance();
 }

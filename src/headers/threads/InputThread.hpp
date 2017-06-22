@@ -12,7 +12,7 @@
 #ifndef RECAST_SERVER_INPUTTHREAD_H
 #define RECAST_SERVER_INPUTTHREAD_H
 
-#include "commands/CommandManager.h"
+#include "commands/CommandManager.hpp"
 
 class Server;
 
