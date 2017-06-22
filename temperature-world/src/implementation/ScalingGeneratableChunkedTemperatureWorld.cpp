@@ -31,16 +31,14 @@ void ScalingGeneratableChunkedTemperatureWorld::removePriorityPoint(Coord x, Coo
 
 void ScalingGeneratableChunkedTemperatureWorld::addChunk(
         std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
-    assert(dynamic_pointer_cast<ITemperatureWorldScalableMutable<ITemperatureWorldScalable<ITemperatureWorldBoundable<ITemperatureWorld>>>>(
-            chunk));
+    assert(dynamic_pointer_cast<ITemperatureWorldScalableMutableMixin>(chunk));
     assert(chunk->bounds() == _baseChunkSize);
     GeneratableChunkedTemperatureWorld::addChunk(chunk);
 }
 
 void ScalingGeneratableChunkedTemperatureWorld::removeChunk(
         std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
-    assert(dynamic_pointer_cast<ITemperatureWorldScalableMutable<ITemperatureWorldScalable<ITemperatureWorldBoundable<ITemperatureWorld>>>>(
-            chunk));
+    assert(dynamic_pointer_cast<ITemperatureWorldScalableMutableMixin>(chunk));
     GeneratableChunkedTemperatureWorld::removeChunk(chunk);
 }
 
@@ -49,10 +47,7 @@ void ScalingGeneratableChunkedTemperatureWorld::_updateScales() {
         return;
     }
 
-    for (shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> &chunk_ : _chunks) {
-        auto chunk = dynamic_pointer_cast<ITemperatureWorldScalableMutable<ITemperatureWorldScalable<ITemperatureWorldBoundable<ITemperatureWorld>>>>(
-                chunk_);
-
+    for (shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> &chunk : _chunks) {
         int minDistanceXSq = 0;
         int minDistanceYSq = 0;
         int minDistanceZSq = 0;
@@ -72,7 +67,8 @@ void ScalingGeneratableChunkedTemperatureWorld::_updateScales() {
             }
         }
 
-        chunk->setCellScale(IntScaleParallelepiped(
+        auto scalableMutableChunk = dynamic_pointer_cast<ITemperatureWorldScalableMutableMixin>(chunk);
+        scalableMutableChunk->setCellScale(IntScaleParallelepiped(
                 max(minDistanceXSq / _baseChunkSize.sizeX(), 1),
                 max(minDistanceYSq / _baseChunkSize.sizeY(), 1),
                 max(minDistanceZSq / _baseChunkSize.sizeZ(), 1),

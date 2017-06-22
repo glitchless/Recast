@@ -14,13 +14,10 @@
 #include "temperature-world/types/Parallelepiped.hpp"
 
 /**
- * Mixin to temperature world.
- * Makes temperature world not to be endless.
- *
- * @tparam T Base temperature world class.
+ * Should not be derived directly. Use `ITemperatureWorldBoundable`.
+ * This class is useful for `dynamic_cast`.
  */
-template<typename T>
-class ITemperatureWorldBoundable : public virtual T {
+class ITemperatureWorldBoundableMixin {
 public:
     using ForeachCellFn = std::function<void(Coord, Coord, Coord)>;
 
@@ -35,6 +32,16 @@ public:
      * @return Bounds of this temperature world.
      */
     virtual Parallelepiped bounds() const noexcept = 0;
+};
+
+/**
+ * Mixin to temperature world.
+ * Makes temperature world not to be endless.
+ *
+ * @tparam T Base temperature world class.
+ */
+template<typename T>
+class ITemperatureWorldBoundable : public virtual T, public ITemperatureWorldBoundableMixin {
 };
 
 

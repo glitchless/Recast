@@ -10,13 +10,10 @@
 #include "ITemperatureWorldBoundable.hpp"
 
 /**
- * Mixin to temperature world.
- * Makes temperature world to be divided by chunks.
- *
- * @tparam T Base temperature world class.
+ * Should not be derived directly. Use `ITemperatureWorldChunkable`.
+ * This class is useful for `dynamic_cast`.
  */
-template<typename T>
-class ITemperatureWorldChunkable : public virtual T {
+class ITemperatureWorldChunkableMixin {
 public:
     using ForeachChunkFn = std::function<void(ITemperatureWorldBoundable<ITemperatureWorld>&)>;
 
@@ -47,6 +44,16 @@ public:
      * @param func Function to execute at each chunk.
      */
     virtual void foreachChunk(ForeachChunkFn func) const = 0;
+};
+
+/**
+ * Mixin to temperature world.
+ * Makes temperature world to be divided by chunks.
+ *
+ * @tparam T Base temperature world class.
+ */
+template<typename T>
+class ITemperatureWorldChunkable : public virtual T, public ITemperatureWorldChunkableMixin {
 };
 
 

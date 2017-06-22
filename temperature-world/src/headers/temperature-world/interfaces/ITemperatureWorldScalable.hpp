@@ -9,18 +9,25 @@
 #include "../types/IntScaleParallelepiped.hpp"
 
 /**
+ * Should not be derived directly. Use `ITemperatureWorldScalableScalable`.
+ * This class is useful for `dynamic_cast`.
+ */
+class ITemperatureWorldScalableMixin {
+public:
+    /**
+     * @return Scale of each cell in three dimensions.
+     */
+    virtual IntScaleParallelepiped cellScale() const noexcept = 0;
+};
+
+/**
  * Mixin to temperature world.
  * Makes temperature world to have scale of cells.
  *
  * @tparam T Base temperature world class.
  */
 template<typename T>
-class ITemperatureWorldScalable : public virtual T {
-public:
-    /**
-     * @return Scale of each cell in three dimensions.
-     */
-    virtual IntScaleParallelepiped cellScale() const noexcept = 0;
+class ITemperatureWorldScalable : public virtual T, public ITemperatureWorldScalableMixin {
 };
 
 

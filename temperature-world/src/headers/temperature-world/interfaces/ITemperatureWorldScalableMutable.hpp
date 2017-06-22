@@ -9,13 +9,10 @@
 #include "../types/IntScale.hpp"
 
 /**
- * Mixin to temperature world.
- * Makes temperature world to set scale of cells.
- *
- * @tparam T Base temperature world class.
+ * Should not be derived directly. Use `ITemperatureWorldScalableMutable`.
+ * This class is useful for `dynamic_cast`.
  */
-template<typename T>
-class ITemperatureWorldScalableMutable : public virtual T {
+class ITemperatureWorldScalableMutableMixin {
 public:
     /**
      * Sets scale of each cell.
@@ -23,6 +20,16 @@ public:
      * @param scale Scale in three dimensions.
      */
     virtual void setCellScale(IntScaleParallelepiped scale) = 0;
+};
+
+/**
+ * Mixin to temperature world.
+ * Makes temperature world to set scale of cells.
+ *
+ * @tparam T Base temperature world class.
+ */
+template<typename T>
+class ITemperatureWorldScalableMutable : public virtual T, public ITemperatureWorldScalableMutableMixin {
 };
 
 
