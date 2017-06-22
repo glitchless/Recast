@@ -6,7 +6,6 @@
  * @date 08.06.17
  *
  * Main server file (aka Context)
- *
  **/
 
 #ifndef RECAST_SERVER_H
@@ -17,6 +16,12 @@
 #include <threads/InputThread.h>
 #include "commands/ICommandSender.h"
 #include "commands/CommandManager.h"
+#include "temperature-world/interfaces/IUpdater.hpp"
+#include "temperature-world/interfaces/ITemperatureWorldChunkableObservable.hpp"
+#include "temperature-world/interfaces/ITemperatureWorldChunkableGeneratable.hpp"
+#include "temperature-world/interfaces/ITemperatureWorldChunkableMutable.hpp"
+#include "temperature-world/interfaces/ITemperatureWorldChunkable.hpp"
+#include "temperature-world/interfaces/ITemperatureWorld.hpp"
 
 class Player;
 
@@ -50,11 +55,20 @@ public:
 
     PlayersOnline *getPlayers() const { return players; }
 
+    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>>
+    getTemperatureWorld() const { return temperatureWorld; }
+
 private:
+    void initTemperatureWorld();
+
+    void update();
+
     volatile bool isLaunching;
     std::thread inputThread;
     PlayersOnline *players;
     InputThread *inputObject;
+    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> temperatureWorld;
+    std::shared_ptr<IUpdater> temperatureWorldUpdater;
 };
 
 
