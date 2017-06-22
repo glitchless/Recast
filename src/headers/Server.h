@@ -13,6 +13,7 @@
 
 #include <string>
 #include <thread>
+#include <threads/InputThread.h>
 #include "commands/ICommandSender.h"
 #include "commands/CommandManager.h"
 #include "temperature-world/interfaces/IUpdater.hpp"
@@ -65,6 +66,7 @@ private:
     volatile bool isLaunching;
     std::thread inputThread;
     PlayersOnline *players;
+    InputThread *inputObject;
     std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> temperatureWorld;
     std::shared_ptr<IUpdater> temperatureWorldUpdater;
 };
