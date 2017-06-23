@@ -1,4 +1,4 @@
-FROM gcc:7.1
+FROM gcc:latest
 
 RUN apt-get -qq update && apt-get -qq upgrade && apt-get -qqy install cmake libboost-all-dev sqlite3
 

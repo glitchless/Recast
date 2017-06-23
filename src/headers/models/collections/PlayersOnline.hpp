@@ -43,14 +43,15 @@ public:
      * @param password user password
      * @return session string
      */
-    std::string authPlayer(std::string login, std::string password) throw(InvalidLoginOrPassword, ServerFullException);
+    std::string
+    authPlayer(std::string login, std::string password);
 
     /**
      * Register player in SQLite. Can throw InvalidLoginOrPassword when login already exists
      * @param login new login
      * @param password user password
      */
-    void registerPlayer(std::string login, std::string password) throw(InvalidLoginOrPassword);
+    void registerPlayer(std::string login, std::string password);
 
     /**
      * Remove user from user list and save that in SQLite
