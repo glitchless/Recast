@@ -1,7 +1,6 @@
 var searchData=
 [
   ['get_3c_20std_3a_3astring_20_3e',['get&lt; std::string &gt;',['../namespacecrow.html#a95142b051d7358769267df504e39a3b9',1,'crow']]],
-  ['recast_20_7c_20Концепция_20заклинаний',['Recast | Концепция заклинаний',['../md_custom-docs__nodes.html',1,'']]],
   ['r_5fstring',['r_string',['../structcrow_1_1json_1_1detail_1_1r__string.html',1,'crow::json::detail']]],
   ['r_5fstring',['r_string',['../structcrow_1_1json_1_1detail_1_1r__string.html#a2223afe7a9d4374a25b87495cc857eaa',1,'crow::json::detail::r_string::r_string()'],['../structcrow_1_1json_1_1detail_1_1r__string.html#a83781200bd2f4a7547e776f14e6a7568',1,'crow::json::detail::r_string::r_string(char *s, char *e)'],['../structcrow_1_1json_1_1detail_1_1r__string.html#a3d4f439775bf61521c661a96b647ff0b',1,'crow::json::detail::r_string::r_string(const r_string &amp;r)'],['../structcrow_1_1json_1_1detail_1_1r__string.html#a7b25d57ab7b1d9235ca113a67512af66',1,'crow::json::detail::r_string::r_string(r_string &amp;&amp;r)']]],
   ['randomfloat',['randomFloat',['../namespace_math_utils.html#ad3b1d371a12fa3df8240630445c2eaf9',1,'MathUtils']]],

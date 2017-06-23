@@ -17,8 +17,7 @@ var indexSectionsWithContent =
   7: "acfhlmopstw",
   8: "cdefghilmnopstuvwy",
   9: "acdlmors",
-  10: "_acfgimrstw",
-  11: "r"
+  10: "_acfgimrstw"
 };
 
 var indexSectionNames =
@@ -33,8 +32,7 @@ var indexSectionNames =
   7: "enums",
   8: "enumvalues",
   9: "related",
-  10: "defines",
-  11: "pages"
+  10: "defines"
 };
 
 function convertToId(search)
