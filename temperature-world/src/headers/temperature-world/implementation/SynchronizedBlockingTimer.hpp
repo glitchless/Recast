@@ -12,7 +12,7 @@
 /**
  * Implementation of blocking timer.
  */
-class SynchronizedBlockingTimer : public virtual ITimerBlockable<ITimer> {
+class SynchronizedBlockingTimer : public ITimerBlockable<ITimer> {
 public:
     SynchronizedBlockingTimer(std::chrono::milliseconds minDelta);
 

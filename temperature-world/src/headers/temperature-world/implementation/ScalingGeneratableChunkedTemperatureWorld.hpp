@@ -21,7 +21,7 @@
  */
 class ScalingGeneratableChunkedTemperatureWorld
         : public virtual ITemperatureWorldPointPrioritizable<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>>
-        , public virtual GeneratableChunkedTemperatureWorld
+        , public GeneratableChunkedTemperatureWorld
 {
 public:
     ScalingGeneratableChunkedTemperatureWorld(

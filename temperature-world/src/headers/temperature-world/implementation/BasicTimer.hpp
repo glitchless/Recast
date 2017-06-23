@@ -11,7 +11,7 @@
 /**
  * Timer that measures time duration between two updates.
  */
-class BasicTimer : public virtual ITimer {
+class BasicTimer : public ITimer {
 public:
     BasicTimer();
 
