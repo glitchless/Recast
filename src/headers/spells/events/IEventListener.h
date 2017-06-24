@@ -11,7 +11,8 @@
 #include "IEvent.h"
 
 class IEventListener {
-    virtual void onEvent(IEvent event) = 0;
+public:
+    virtual void onEvent(IEvent event) {};
 };
 
 

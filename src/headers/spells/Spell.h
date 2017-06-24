@@ -9,14 +9,15 @@
 #define RECAST_SERVER_SPELL_H
 
 
-#include <spells/events/IEventListener.h>
-#include <spells/nodes/Node.h>
+#include "spells/nodes/Node.h"
+#include "spells/events/SpellEventListener.h"
+
 
 class Spell {
 public:
-    Spell() : rootNode(new Node(0, 0, 0)) {};
+    Spell() : rootNode(new Node(0, 0, 0)), listener(SpellEventListener(this)) {};
 
-    Spell(Node *rootNode) : rootNode(rootNode) {};
+    Spell(Node *rootNode) : rootNode(rootNode), listener(SpellEventListener(this)) {};
 
     ~Spell();
 
@@ -26,6 +27,7 @@ public:
 
 private:
     Node *rootNode;
+    SpellEventListener listener;
 };
 
 

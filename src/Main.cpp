@@ -7,18 +7,15 @@
  * Init config class @see Config.
  **/
 #include <spells/nodes/EnergyNode.h>
-#include <boost/log/trivial.hpp>
 #include <spells/Spell.h>
+#include <spells/nodes/HeaterNode.h>
+#include <Server.h>
 
 /**
  * @brief Main method :)
  **/
 int main() {
-    Spell spell;
-    spell.getRootNode()->connectNode(new EnergyNode(1, 1, 1, 100));
-
-    while (true) {
-        node.tick(NULL);
-    }
+    Server server;
+    server.initServer();
     return EXIT_SUCCESS;
 }

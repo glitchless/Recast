@@ -24,10 +24,10 @@ public:
 
     virtual float transferEnergy(Node *from, float count);
 
-private:
+protected:
     float energy = 0;
 
-    void onTick(IEventListener &listener, Node *callable);
+    virtual void onTick(IEventListener &listener, Node *callable);
 };
 
 

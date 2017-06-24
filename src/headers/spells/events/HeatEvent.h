@@ -13,10 +13,10 @@
 
 class HeatEvent : public IEvent {
 public:
-    HeatEvent(float temp) : temp(temp) {};
+    HeatEvent(Node *node, float temp) : IEvent(node), temp(temp) {};
 
     static float getTempFromEnergy(float energyEjection) {
-        return Config::g("spell.general.temp_per_energy", 1) * energyEjection;
+        return Config::g("spell.heater.temp_per_energy", 1) * energyEjection;
     }
 
 private:

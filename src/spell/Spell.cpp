@@ -5,11 +5,11 @@
  * @date 21.06.17
  * @email nikita@kulikof.ru
  **/
-#include "spells/Spell.h"
-
+#include <boost/log/trivial.hpp>
+#include <spells/Spell.h>
 
 void Spell::tickSpell() {
-    //rootNode->tick()
+    rootNode->tick(listener, NULL);
 }
 
 Spell::~Spell() {
