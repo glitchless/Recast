@@ -12,7 +12,7 @@
 /**
  * Implementation of temperature world with bounds. It's backed by `std::vector`.
  */
-class BoundTemperatureWorld : public virtual ITemperatureWorldBoundable<ITemperatureWorld> {
+class BoundTemperatureWorld : public ITemperatureWorldBoundable<ITemperatureWorld> {
 public:
     BoundTemperatureWorld(Parallelepiped bounds);
 
