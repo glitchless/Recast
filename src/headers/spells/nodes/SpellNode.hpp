@@ -27,6 +27,12 @@ public:
      */
     void connectNode(SpellNode *otherNode);
 
+    /**
+     * Main tick method. Not execute tick on parent node
+     *
+     * @param listener
+     * @param callable
+     */
     void tick(IEventListener &listener, SpellNode *callable);
 
     bool inTick() const { return nowInTick; }
@@ -36,7 +42,7 @@ public:
 protected:
     float x, y, z; //// Relative coordinates from root node
     std::set<SpellNode *> connectedNodes;
-    bool nowInTick;
+    bool nowInTick; //// Inside var for iterrator between nodes
 
 
     virtual inline void onTick(IEventListener &listener, SpellNode *callable) {};
