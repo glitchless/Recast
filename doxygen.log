@@ -4123,5 +4123,5 @@ Patching output file 790/793
 Patching output file 791/793
 Patching output file 792/793
 Patching output file 793/793
-lookup cache used 6403/65536 hits=44000 misses=6719
+lookup cache used 6399/65536 hits=43962 misses=6715
 finished...

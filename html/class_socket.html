@@ -121,14 +121,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aeac4eb6379a543d38ed88977d3b6630a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae10384da04283e2a75b4cfbb8c6da59a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#ae10384da04283e2a75b4cfbb8c6da59a">getSocketDescr</a> () const noexcept</td></tr>
 <tr class="separator:ae10384da04283e2a75b4cfbb8c6da59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa264f52f830e5c1bea3cd92732df35f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aa264f52f830e5c1bea3cd92732df35f8">setNonBlocked</a> (bool option)  throw (exception)</td></tr>
+<tr class="memitem:aa264f52f830e5c1bea3cd92732df35f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aa264f52f830e5c1bea3cd92732df35f8">setNonBlocked</a> (bool option)</td></tr>
 <tr class="separator:aa264f52f830e5c1bea3cd92732df35f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75ee749264ccbcfc4dfbf5442e55dcb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a75ee749264ccbcfc4dfbf5442e55dcb8">close</a> ()</td></tr>
 <tr class="separator:a75ee749264ccbcfc4dfbf5442e55dcb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a51eb429ad7f6f6ab1adafe64d302ed55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a51eb429ad7f6f6ab1adafe64d302ed55">setReuseAddress</a> (int sd)  throw (exception)</td></tr>
+<tr class="memitem:a51eb429ad7f6f6ab1adafe64d302ed55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a51eb429ad7f6f6ab1adafe64d302ed55">setReuseAddress</a> (int sd)</td></tr>
 <tr class="separator:a51eb429ad7f6f6ab1adafe64d302ed55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -257,6 +257,9 @@ Protected Attributes</h2></td></tr>
 <a class="anchor" id="aa264f52f830e5c1bea3cd92732df35f8"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Socket::setNonBlocked </td>
@@ -265,13 +268,12 @@ Protected Attributes</h2></td></tr>
           <td class="paramname"><em>option</em></td><td>)</td>
           <td></td>
         </tr>
-        <tr>
-          <td align="right">throw </td><td>(</td><td colspan="2">exception</td>
-        </tr>
-        <tr>
-          <td align="right"></td><td>)</td><td></td><td></td>
-        </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -290,16 +292,10 @@ Protected Attributes</h2></td></tr>
           <td class="paramname"><em>sd</em></td><td>)</td>
           <td></td>
         </tr>
-        <tr>
-          <td align="right">throw </td><td>(</td><td colspan="2">exception</td>
-        </tr>
-        <tr>
-          <td align="right"></td><td>)</td><td></td><td></td>
-        </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

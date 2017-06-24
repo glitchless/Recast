@@ -26,9 +26,9 @@ std\-::vector$<$ \hyperlink{struct_player}{Player} $\ast$ $>$ \hyperlink{class_p
 \item 
 \hyperlink{struct_player}{Player} $\ast$ \hyperlink{class_players_online_a12d773bb368cdcb3fb6137fc19805281}{get\-Player\-By\-Session} (const std\-::string \&session) const 
 \item 
-std\-::string \hyperlink{class_players_online_a5b778414970f89fa01e999c9200c7001}{auth\-Player} (std\-::string login, std\-::string password)  throw (\-Invalid\-Login\-Or\-Password, Server\-Full\-Exception)
+std\-::string \hyperlink{class_players_online_a5b778414970f89fa01e999c9200c7001}{auth\-Player} (std\-::string login, std\-::string password)
 \item 
-void \hyperlink{class_players_online_a26463b293d6c3c38ff600f4b363283cc}{register\-Player} (std\-::string login, std\-::string password)  throw (\-Invalid\-Login\-Or\-Password)
+void \hyperlink{class_players_online_a26463b293d6c3c38ff600f4b363283cc}{register\-Player} (std\-::string login, std\-::string password)
 \item 
 bool \hyperlink{class_players_online_a3469d271cd5b7ff8f5e7cbab8ff31b6d}{logout} (const std\-::string \&session)
 \item 
@@ -61,7 +61,7 @@ int \hyperlink{class_players_online_acace980a0794f56eecab5ddf01ff51c7}{players\-
 \item[{std\-::string}]{login, }
 \item[{std\-::string}]{password}
 \end{DoxyParamCaption}
-) throw  {\bf Invalid\-Login\-Or\-Password}, {\bf Server\-Full\-Exception}) }}\label{class_players_online_a5b778414970f89fa01e999c9200c7001}
+)}}\label{class_players_online_a5b778414970f89fa01e999c9200c7001}
 Auth player on \hyperlink{class_server}{Server}. Get all game data from \hyperlink{class_s_q_lite}{S\-Q\-Lite} On failed auth (if user is not in a table) throw \hyperlink{class_invalid_login_or_password}{Invalid\-Login\-Or\-Password} On fulled server (max\-Players == current\-Players) throw \hyperlink{class_server_full_exception}{Server\-Full\-Exception}
 
 \begin{DoxyWarning}{Warning}
@@ -134,7 +134,7 @@ Remove user from user list and save that in \hyperlink{class_s_q_lite}{S\-Q\-Lit
 \item[{std\-::string}]{login, }
 \item[{std\-::string}]{password}
 \end{DoxyParamCaption}
-) throw  {\bf Invalid\-Login\-Or\-Password}) }}\label{class_players_online_a26463b293d6c3c38ff600f4b363283cc}
+)}}\label{class_players_online_a26463b293d6c3c38ff600f4b363283cc}
 Register player in \hyperlink{class_s_q_lite}{S\-Q\-Lite}. Can throw \hyperlink{class_invalid_login_or_password}{Invalid\-Login\-Or\-Password} when login already exists 
 \begin{DoxyParams}{Parameters}
 {\em login} & new login \\

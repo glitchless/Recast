@@ -113,15 +113,15 @@ Collaboration diagram for SocketUDP:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa41096c8eecdf55a7557549e8f6a5d4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#aa41096c8eecdf55a7557549e8f6a5d4a">SocketUDP</a> (uint32_t port)</td></tr>
 <tr class="separator:aa41096c8eecdf55a7557549e8f6a5d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48b2c650565eba38d9654ac16d21c60c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#a48b2c650565eba38d9654ac16d21c60c">createServerSocket</a> (uint32_t port)  throw (exception)</td></tr>
+<tr class="memitem:a48b2c650565eba38d9654ac16d21c60c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#a48b2c650565eba38d9654ac16d21c60c">createServerSocket</a> (uint32_t port)</td></tr>
 <tr class="separator:a48b2c650565eba38d9654ac16d21c60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a207c3d7c2b854b140dcb4ca9a9c81292"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#a207c3d7c2b854b140dcb4ca9a9c81292">sendTo</a> (struct sockaddr_in &amp;sendToAddr, const string &amp;str)  throw (exception)</td></tr>
+<tr class="memitem:a207c3d7c2b854b140dcb4ca9a9c81292"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#a207c3d7c2b854b140dcb4ca9a9c81292">sendTo</a> (struct sockaddr_in &amp;sendToAddr, const string &amp;str)</td></tr>
 <tr class="separator:a207c3d7c2b854b140dcb4ca9a9c81292"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5a3b81f16a9db0db80a92f69c811fe1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#ad5a3b81f16a9db0db80a92f69c811fe1">recvFrom</a> (struct sockaddr_in &amp;recvFromAddr)  throw (exception)</td></tr>
+<tr class="memitem:ad5a3b81f16a9db0db80a92f69c811fe1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#ad5a3b81f16a9db0db80a92f69c811fe1">recvFrom</a> (struct sockaddr_in &amp;recvFromAddr)</td></tr>
 <tr class="separator:ad5a3b81f16a9db0db80a92f69c811fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69cce05867435fb471a50319855e34fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#a69cce05867435fb471a50319855e34fc">sendBytesTo</a> (struct sockaddr_in &amp;sendToAddr, const char *data, size_t num)  throw (exception)</td></tr>
+<tr class="memitem:a69cce05867435fb471a50319855e34fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#a69cce05867435fb471a50319855e34fc">sendBytesTo</a> (struct sockaddr_in &amp;sendToAddr, const char *data, size_t num)</td></tr>
 <tr class="separator:a69cce05867435fb471a50319855e34fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c3ff487d034850ad2096339cfa06707"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#a4c3ff487d034850ad2096339cfa06707">recvBytesFrom</a> (struct sockaddr_in &amp;recvFromAddr)  throw (exception)</td></tr>
+<tr class="memitem:a4c3ff487d034850ad2096339cfa06707"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#a4c3ff487d034850ad2096339cfa06707">recvBytesFrom</a> (struct sockaddr_in &amp;recvFromAddr)</td></tr>
 <tr class="separator:a4c3ff487d034850ad2096339cfa06707"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -153,6 +153,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a48b2c650565eba38d9654ac16d21c60c"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SocketUDP::createServerSocket </td>
@@ -161,13 +164,12 @@ Public Member Functions</h2></td></tr>
           <td class="paramname"><em>port</em></td><td>)</td>
           <td></td>
         </tr>
-        <tr>
-          <td align="right">throw </td><td>(</td><td colspan="2">exception</td>
-        </tr>
-        <tr>
-          <td align="right"></td><td>)</td><td></td><td></td>
-        </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -175,6 +177,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a4c3ff487d034850ad2096339cfa06707"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">char * SocketUDP::recvBytesFrom </td>
@@ -183,13 +188,12 @@ Public Member Functions</h2></td></tr>
           <td class="paramname"><em>recvFromAddr</em></td><td>)</td>
           <td></td>
         </tr>
-        <tr>
-          <td align="right">throw </td><td>(</td><td colspan="2">exception</td>
-        </tr>
-        <tr>
-          <td align="right"></td><td>)</td><td></td><td></td>
-        </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -197,6 +201,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="ad5a3b81f16a9db0db80a92f69c811fe1"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">string SocketUDP::recvFrom </td>
@@ -205,13 +212,12 @@ Public Member Functions</h2></td></tr>
           <td class="paramname"><em>recvFromAddr</em></td><td>)</td>
           <td></td>
         </tr>
-        <tr>
-          <td align="right">throw </td><td>(</td><td colspan="2">exception</td>
-        </tr>
-        <tr>
-          <td align="right"></td><td>)</td><td></td><td></td>
-        </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -219,6 +225,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a69cce05867435fb471a50319855e34fc"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SocketUDP::sendBytesTo </td>
@@ -243,13 +252,12 @@ Public Member Functions</h2></td></tr>
           <td>)</td>
           <td></td><td></td>
         </tr>
-        <tr>
-          <td align="right">throw </td><td>(</td><td colspan="2">exception</td>
-        </tr>
-        <tr>
-          <td align="right"></td><td>)</td><td></td><td></td>
-        </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -257,6 +265,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a207c3d7c2b854b140dcb4ca9a9c81292"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SocketUDP::sendTo </td>
@@ -275,13 +286,12 @@ Public Member Functions</h2></td></tr>
           <td>)</td>
           <td></td><td></td>
         </tr>
-        <tr>
-          <td align="right">throw </td><td>(</td><td colspan="2">exception</td>
-        </tr>
-        <tr>
-          <td align="right"></td><td>)</td><td></td><td></td>
-        </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
