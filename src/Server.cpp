@@ -20,6 +20,7 @@
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
 #include <Box2D/Box2D.h>
+#include <Box2D/Dynamics/b2World.h>
 
 #include "Server.hpp"
 #include "io/SQLite.hpp"
@@ -66,6 +67,7 @@ void Server::initServer() {
     runNetworkServer(serverTCP, serverUDP);
 
     b2Vec2 gravity(0.0f, -10.0f);
+    b2World world(gravity);
 }
 
 void Server::update() {
