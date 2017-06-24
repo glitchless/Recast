@@ -22,9 +22,9 @@ void AverageShareTemperatureWorldUpdater::update() {
     const double dt = _timer->deltaFloatSeconds();
 
     _world->foreach([&](Coord x, Coord y, Coord z) {
-        _checkThenShareTemperature(dt, x, y, z, Coord(x + Coord(1)), y, z);
-        _checkThenShareTemperature(dt, x, y, z, x, Coord(y + Coord(1)), z);
-        _checkThenShareTemperature(dt, x, y, z, x, y, Coord(z + Coord(1)));
+        _checkThenShareTemperature(dt, x, y, z, _world->nextCoordX(x), y, z);
+        _checkThenShareTemperature(dt, x, y, z, x, _world->nextCoordY(y), z);
+        _checkThenShareTemperature(dt, x, y, z, x, y, _world->nextCoordZ(z));
     });
 
     _timer->update();

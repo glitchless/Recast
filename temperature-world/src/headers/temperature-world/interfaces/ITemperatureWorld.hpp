@@ -57,6 +57,42 @@ public:
      * @param temperature Temperature difference.
      */
     virtual void amplify(Coord x, Coord y, Coord z, Temperature temperature) = 0;
+
+    /**
+     * @param x Current coordinate by x axis.
+     * @return Previous coordinate by x axis.
+     */
+    virtual Coord previousCoordX(Coord x) const noexcept = 0;
+
+    /**
+     * @param y Current coordinate by y axis.
+     * @return Previous coordinate by y axis.
+     */
+    virtual Coord previousCoordY(Coord y) const noexcept = 0;
+
+    /**
+     * @param z Current coordinate by z axis.
+     * @return Previous coordinate by z axis.
+     */
+    virtual Coord previousCoordZ(Coord z) const noexcept = 0;
+
+    /**
+     * @param x Current coordinate by x axis.
+     * @return Next coordinate by x axis.
+     */
+    virtual Coord nextCoordX(Coord x) const noexcept = 0;
+
+    /**
+     * @param y Current coordinate by y axis.
+     * @return Next coordinate by y axis.
+     */
+    virtual Coord nextCoordY(Coord y) const noexcept = 0;
+
+    /**
+     * @param z Current coordinate by z axis.
+     * @return Next coordinate by z axis.
+     */
+    virtual Coord nextCoordZ(Coord z) const noexcept = 0;
 };
 
 

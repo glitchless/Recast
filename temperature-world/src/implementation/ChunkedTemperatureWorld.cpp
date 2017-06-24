@@ -57,3 +57,27 @@ void ChunkedTemperatureWorld::addChunk(shared_ptr<ITemperatureWorldBoundable<ITe
 void ChunkedTemperatureWorld::removeChunk(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
     _chunks.remove(dynamic_pointer_cast<ITemperatureWorldBoundable<ITemperatureWorld>>(chunk));
 }
+
+Coord ChunkedTemperatureWorld::previousCoordX(Coord x) const noexcept {
+    return x - 1;
+}
+
+Coord ChunkedTemperatureWorld::previousCoordY(Coord y) const noexcept {
+    return y - 1;
+}
+
+Coord ChunkedTemperatureWorld::previousCoordZ(Coord z) const noexcept {
+    return z - 1;
+}
+
+Coord ChunkedTemperatureWorld::nextCoordX(Coord x) const noexcept {
+    return x + 1;
+}
+
+Coord ChunkedTemperatureWorld::nextCoordY(Coord y) const noexcept {
+    return y + 1;
+}
+
+Coord ChunkedTemperatureWorld::nextCoordZ(Coord z) const noexcept {
+    return z + 1;
+}

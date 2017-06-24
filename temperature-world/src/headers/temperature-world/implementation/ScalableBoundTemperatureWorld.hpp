@@ -17,7 +17,10 @@
  * Implementation of temperature world with bounds. It's backed by `std::vector`.
  * You can make cell size bigger for `set`, `amplify` and `foreach` methods. It's useful for optimization.
  */
-class ScalableBoundTemperatureWorld : public virtual ITemperatureWorldScalableMutable<ITemperatureWorldScalable<BoundTemperatureWorld>> {
+class ScalableBoundTemperatureWorld
+        : public virtual ITemperatureWorldScalableMutable<ITemperatureWorldScalable<ITemperatureWorldBoundable<ITemperatureWorld>>>
+        , public virtual BoundTemperatureWorld
+{
 public:
     ScalableBoundTemperatureWorld(Parallelepiped bounds);
 
@@ -27,6 +30,13 @@ public:
     void set(Coord x, Coord y, Coord z, Temperature temperature) override;
     void amplify(Coord x, Coord y, Coord z, Temperature temperature) override;
     void foreach(ForeachCellFn func) const override;
+
+    Coord previousCoordX(Coord x) const noexcept override;
+    Coord previousCoordY(Coord y) const noexcept override;
+    Coord previousCoordZ(Coord z) const noexcept override;
+    Coord nextCoordX(Coord x) const noexcept override;
+    Coord nextCoordY(Coord y) const noexcept override;
+    Coord nextCoordZ(Coord z) const noexcept override;
 
 protected:
     virtual Coord _findScaledAreaMinByAxis(Coord initialCoord, IntScale scale, Coord minCoord) const noexcept;

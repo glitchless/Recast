@@ -31,6 +31,13 @@ public:
     void addChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) override;
     void removeChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) override ;
 
+    Coord previousCoordX(Coord x) const noexcept override;
+    Coord previousCoordY(Coord y) const noexcept override;
+    Coord previousCoordZ(Coord z) const noexcept override;
+    Coord nextCoordX(Coord x) const noexcept override;
+    Coord nextCoordY(Coord y) const noexcept override;
+    Coord nextCoordZ(Coord z) const noexcept override;
+
 protected:
     std::list<std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>> _chunks;
 };

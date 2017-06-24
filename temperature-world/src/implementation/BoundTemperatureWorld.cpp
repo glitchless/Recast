@@ -67,3 +67,27 @@ BoundTemperatureWorld& BoundTemperatureWorld::operator=(BoundTemperatureWorld ot
     swap(*this, other);
     return *this;
 }
+
+Coord BoundTemperatureWorld::previousCoordX(Coord x) const noexcept {
+    return x - 1;
+}
+
+Coord BoundTemperatureWorld::previousCoordY(Coord y) const noexcept {
+    return y - 1;
+}
+
+Coord BoundTemperatureWorld::previousCoordZ(Coord z) const noexcept {
+    return z - 1;
+}
+
+Coord BoundTemperatureWorld::nextCoordX(Coord x) const noexcept {
+    return x + 1;
+}
+
+Coord BoundTemperatureWorld::nextCoordY(Coord y) const noexcept {
+    return y + 1;
+}
+
+Coord BoundTemperatureWorld::nextCoordZ(Coord z) const noexcept {
+    return z + 1;
+}

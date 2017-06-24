@@ -31,6 +31,13 @@ public:
 
     Parallelepiped bounds() const noexcept override;
 
+    Coord previousCoordX(Coord x) const noexcept override;
+    Coord previousCoordY(Coord y) const noexcept override;
+    Coord previousCoordZ(Coord z) const noexcept override;
+    Coord nextCoordX(Coord x) const noexcept override;
+    Coord nextCoordY(Coord y) const noexcept override;
+    Coord nextCoordZ(Coord z) const noexcept override;
+
 protected:
     virtual size_t _getIndexInData(Coord x, Coord y, Coord z) const;
 

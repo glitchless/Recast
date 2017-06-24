@@ -90,3 +90,27 @@ Parallelepiped ScalableBoundTemperatureWorld::_findScaledArea(Coord x, Coord y, 
                           _findScaledAreaMinByAxis(z, _cellScale.z(), _bounds.minZ()),
                           _findScaledAreaMaxByAxis(z, _cellScale.z(), _bounds.maxZ()));
 }
+
+Coord ScalableBoundTemperatureWorld::previousCoordX(Coord x) const noexcept {
+    return x - _cellScale.x().scale();
+}
+
+Coord ScalableBoundTemperatureWorld::previousCoordY(Coord y) const noexcept {
+    return y - _cellScale.y().scale();
+}
+
+Coord ScalableBoundTemperatureWorld::previousCoordZ(Coord z) const noexcept {
+    return z - _cellScale.z().scale();
+}
+
+Coord ScalableBoundTemperatureWorld::nextCoordX(Coord x) const noexcept {
+    return x + _cellScale.x().scale();
+}
+
+Coord ScalableBoundTemperatureWorld::nextCoordY(Coord y) const noexcept {
+    return y + _cellScale.y().scale();
+}
+
+Coord ScalableBoundTemperatureWorld::nextCoordZ(Coord z) const noexcept {
+    return z + _cellScale.z().scale();
+}
