@@ -25,7 +25,7 @@
  * It updates every chunk asynchronously in a thread pool.
  * This class is thread-safe.
  */
-class ThreadedChunkedTemperatureWorldUpdater : public IUpdater {
+class ThreadedChunkedTemperatureWorldUpdater : public virtual IUpdater {
 public:
     ThreadedChunkedTemperatureWorldUpdater(
             std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> world,

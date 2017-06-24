@@ -19,7 +19,7 @@
  * 1. Computes average of temperatures of two cells.
  * 2. Brings temperature of each cell to this average world. Speed is determined by temperature exchange coefficient.
  */
-class AverageShareTemperatureWorldUpdater : public IUpdater {
+class AverageShareTemperatureWorldUpdater : public virtual IUpdater {
 public:
     AverageShareTemperatureWorldUpdater(
             double temperatureExchangeCoefficient,
