@@ -10,7 +10,7 @@
 
 HeaterNode::HeaterNode(float x, float y, float z, float energy) : EnergyNode(x, y, z, energy) {}
 
-void HeaterNode::onTick(IEventListener &listener, Node *callable) {
+void HeaterNode::onTick(IEventListener &listener, SpellNode *callable) {
     float energyPerTickHeater = Config::g("spell.heater.per_tick_consumer", 10);
     if (energy > energyPerTickHeater) {
         listener.onEvent(HeatEvent(this, HeatEvent::getTempFromEnergy(energyPerTickHeater)));

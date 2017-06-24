@@ -344,7 +344,7 @@ namespace crow
 
 
 /* merged revision: 5b951d74bd66ec9d38448e0a85b1cf8b85d97db3 */
-/* Copyright Joyent, Inc. and other Node contributors. All rights reserved.
+/* Copyright Joyent, Inc. and other SpellNode contributors. All rights reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -671,7 +671,7 @@ int http_body_is_final(const http_parser *parser);
 /* Based on src/http/ngx_http_parse.c from NGINX copyright Igor Sysoev
  *
  * Additional changes are licensed under the same terms as NGINX and
- * copyright Joyent, Inc. and other Node contributors. All rights reserved.
+ * copyright Joyent, Inc. and other SpellNode contributors. All rights reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to

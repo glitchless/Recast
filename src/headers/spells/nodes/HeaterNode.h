@@ -16,7 +16,7 @@ public:
     HeaterNode(float x, float y, float z, float energy);
 
 private:
-    virtual void onTick(IEventListener &listener, Node *callable);
+    virtual void onTick(IEventListener &listener, SpellNode *callable);
 };
 
 

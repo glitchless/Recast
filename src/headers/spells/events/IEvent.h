@@ -10,18 +10,18 @@
 
 #include <boost/log/trivial.hpp>
 
-class Node;
+class SpellNode;
 
 class IEvent {
 public:
-    IEvent(Node *node) : fromNode(node) {}
+    IEvent(SpellNode *node) : fromNode(node) {}
 
-    Node *getNode() const { return fromNode; }
+    SpellNode *getNode() const { return fromNode; }
 
     virtual void commit(/*Temperature and Entity*/) { BOOST_LOG_TRIVIAL(info) << "Calling event"; }
 
 private:
-    Node *fromNode;
+    SpellNode *fromNode;
 };
 
 

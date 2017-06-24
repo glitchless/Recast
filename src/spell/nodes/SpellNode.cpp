@@ -6,23 +6,23 @@
  * @email nikita@kulikof.ru
  **/
 #include <cmath>
-#include "spells/nodes/Node.h"
+#include "spells/nodes/SpellNode.h"
 
 using namespace std;
 
-void Node::connectNode(Node *otherNode) {
+void SpellNode::connectNode(SpellNode *otherNode) {
     if (connectedNodes.count(otherNode) == 0) {
         connectedNodes.insert(otherNode);
         otherNode->connectedNodes.insert(this);
     }
 }
 
-void Node::tick(IEventListener &listener, Node *callable) {
+void SpellNode::tick(IEventListener &listener, SpellNode *callable) {
     if (nowInTick)
         return;
     nowInTick = true;
     onTick(listener, callable);
-    for (Node *node : connectedNodes)
+    for (SpellNode *node : connectedNodes)
         node->tick(listener, this);
     nowInTick = false;
 }
@@ -31,13 +31,13 @@ float pSq(float var) { // Squaring
     return var * var;
 }
 
-float Node::getDistance(const Node *otherNode) const {
+float SpellNode::getDistance(const SpellNode *otherNode) const {
     return sqrt(pSq(otherNode->x - x) + pSq(otherNode->y - y) + pSq(otherNode->z - z));
 }
 
-Node::~Node() {
+SpellNode::~SpellNode() {
     nowInTick = true;
-    for (Node *node : connectedNodes)
+    for (SpellNode *node : connectedNodes)
         if (!node->nowInTick)
             delete node;
     nowInTick = false;

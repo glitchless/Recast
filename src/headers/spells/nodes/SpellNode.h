@@ -9,13 +9,13 @@
 #define RECAST_SERVER_NODE_H
 
 #include <set>
-#include <spells/events/IEventListener.h>
+#include "spells/events/IEventListener.h"
 
-class Node {
+class SpellNode {
 public:
-    Node(float x, float y, float z) : x(x), y(y), z(z), nowInTick(false) {}
+    SpellNode(float x, float y, float z) : x(x), y(y), z(z), nowInTick(false) {}
 
-    ~Node();
+    ~SpellNode();
 
     virtual bool isEnergyNode() { return false; }
 
@@ -25,21 +25,21 @@ public:
      *
      * @param otherNode
      */
-    void connectNode(Node *otherNode);
+    void connectNode(SpellNode *otherNode);
 
-    void tick(IEventListener &listener, Node *callable);
+    void tick(IEventListener &listener, SpellNode *callable);
 
     bool inTick() const { return nowInTick; }
 
-    float getDistance(const Node *otherNode) const;
+    float getDistance(const SpellNode *otherNode) const;
 
 protected:
     float x, y, z; //// Relative coordinates from root node
-    std::set<Node *> connectedNodes;
+    std::set<SpellNode *> connectedNodes;
     bool nowInTick;
 
 
-    virtual inline void onTick(IEventListener &listener, Node *callable) {};
+    virtual inline void onTick(IEventListener &listener, SpellNode *callable) {};
 };
 
 #endif //RECAST_SERVER_NODE_H

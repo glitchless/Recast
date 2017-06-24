@@ -9,24 +9,23 @@
 #define RECAST_SERVER_SPELL_H
 
 
-#include "spells/nodes/Node.h"
+#include "spells/nodes/SpellNode.h"
 #include "spells/events/SpellEventListener.h"
-
 
 class Spell {
 public:
-    Spell() : rootNode(new Node(0, 0, 0)), listener(SpellEventListener(this)) {};
+    Spell() : rootNode(new SpellNode(0, 0, 0)), listener(SpellEventListener(this)) {};
 
-    Spell(Node *rootNode) : rootNode(rootNode), listener(SpellEventListener(this)) {};
+    Spell(SpellNode *rootNode) : rootNode(rootNode), listener(SpellEventListener(this)) {};
 
     ~Spell();
 
-    Node *getRootNode() { return rootNode; }
+    SpellNode *getRootNode() { return rootNode; }
 
     void tickSpell(/*TODO EntityList and Temperature map*/);
 
 private:
-    Node *rootNode;
+    SpellNode *rootNode;
     SpellEventListener listener;
 };
 

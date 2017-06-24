@@ -9,10 +9,10 @@
 
 using namespace std;
 
-void EnergyNode::onTick(IEventListener &listener, Node *callable) {
+void EnergyNode::onTick(IEventListener &listener, SpellNode *callable) {
     float oldEnergy = energy;
     EnergyNode *tmp;
-    for (Node *node : connectedNodes) {
+    for (SpellNode *node : connectedNodes) {
         if (node->isEnergyNode()) {
             tmp = (EnergyNode *) node;
             if (tmp->getEnergy() < oldEnergy) {
@@ -25,7 +25,7 @@ void EnergyNode::onTick(IEventListener &listener, Node *callable) {
     }
 }
 
-float EnergyNode::transferEnergy(Node *from, float count) {
+float EnergyNode::transferEnergy(SpellNode *from, float count) {
     float transactionTax = getDistance(from) * Config::g("spell.general.tax",
                                                          0.001F);
     if (transactionTax >= count) {
