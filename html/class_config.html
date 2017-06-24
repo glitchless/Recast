@@ -129,6 +129,9 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:abf1d4539011ef83cac0fef2ac864a3a9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_config.html">Config</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9">instance</a> ()</td></tr>
 <tr class="separator:abf1d4539011ef83cac0fef2ac864a3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff6aaabead6b7486ec122f9dda807fd"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aaff6aaabead6b7486ec122f9dda807fd"><td class="memTemplItemLeft" align="right" valign="top">static T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_config.html#aaff6aaabead6b7486ec122f9dda807fd">g</a> (const std::string &amp;key, T defaultVar)</td></tr>
+<tr class="separator:aaff6aaabead6b7486ec122f9dda807fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_config.html" title="Config class. ">Config</a> class. </p>
@@ -190,6 +193,60 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aaff6aaabead6b7486ec122f9dda807fd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T Config::g </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>defaultVar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_config_aaff6aaabead6b7486ec122f9dda807fd_cgraph.png" border="0" usemap="#class_config_aaff6aaabead6b7486ec122f9dda807fd_cgraph" alt=""/></div>
+<map name="class_config_aaff6aaabead6b7486ec122f9dda807fd_cgraph" id="class_config_aaff6aaabead6b7486ec122f9dda807fd_cgraph">
+<area shape="rect" id="node2" href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9" title="Config::instance" alt="" coords="128,5,245,32"/><area shape="rect" id="node4" href="class_config.html#a1f8e429f853f20cac7cf128f2b71543e" title="Config::get" alt="" coords="143,56,230,83"/><area shape="rect" id="node3" href="_config_8cpp.html#ab330b966aa1026a8014370d5732fae26" title="DEFAULT_CONFIG" alt="" coords="294,5,437,32"/><area shape="rect" id="node5" href="class_config.html#a006701bd126aa5809b3a15e75c63bfb6" title="Config::tree" alt="" coords="320,56,411,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_config_aaff6aaabead6b7486ec122f9dda807fd_icgraph.png" border="0" usemap="#class_config_aaff6aaabead6b7486ec122f9dda807fd_icgraph" alt=""/></div>
+<map name="class_config_aaff6aaabead6b7486ec122f9dda807fd_icgraph" id="class_config_aaff6aaabead6b7486ec122f9dda807fd_icgraph">
+<area shape="rect" id="node2" href="class_heat_event.html#af2d9aa99e9b2a57d8e8778598ba1c8cc" title="HeatEvent::getTempFromEnergy" alt="" coords="129,5,343,32"/><area shape="rect" id="node3" href="class_energy_node.html#ab52474e2e15ff2af2d969b6a88a778f7" title="EnergyNode::onTick" alt="" coords="392,81,533,108"/><area shape="rect" id="node4" href="class_energy_node.html#a04b3fe7a8aa49157a5c66ee8e25cfb3b" title="EnergyNode::transferEnergy" alt="" coords="143,107,329,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a1f8e429f853f20cac7cf128f2b71543e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -253,7 +310,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_config_a1f8e429f853f20cac7cf128f2b71543e_icgraph.png" border="0" usemap="#class_config_a1f8e429f853f20cac7cf128f2b71543e_icgraph" alt=""/></div>
 <map name="class_config_a1f8e429f853f20cac7cf128f2b71543e_icgraph" id="class_config_a1f8e429f853f20cac7cf128f2b71543e_icgraph">
-<area shape="rect" id="node2" href="class_server.html#ad5ec9462b520e59f7ea831e157ee5e59" title="Server::Server" alt="" coords="141,5,248,32"/></map>
+<area shape="rect" id="node2" href="class_config.html#aaff6aaabead6b7486ec122f9dda807fd" title="Config::g" alt="" coords="157,56,232,83"/><area shape="rect" id="node6" href="class_server.html#ad5ec9462b520e59f7ea831e157ee5e59" title="Server::Server" alt="" coords="141,107,248,133"/><area shape="rect" id="node3" href="class_heat_event.html#af2d9aa99e9b2a57d8e8778598ba1c8cc" title="HeatEvent::getTempFromEnergy" alt="" coords="297,5,511,32"/><area shape="rect" id="node4" href="class_energy_node.html#ab52474e2e15ff2af2d969b6a88a778f7" title="EnergyNode::onTick" alt="" coords="560,81,701,108"/><area shape="rect" id="node5" href="class_energy_node.html#a04b3fe7a8aa49157a5c66ee8e25cfb3b" title="EnergyNode::transferEnergy" alt="" coords="311,107,497,133"/></map>
 </div>
 </p>
 
@@ -294,7 +351,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_config_abf1d4539011ef83cac0fef2ac864a3a9_icgraph.png" border="0" usemap="#class_config_abf1d4539011ef83cac0fef2ac864a3a9_icgraph" alt=""/></div>
 <map name="class_config_abf1d4539011ef83cac0fef2ac864a3a9_icgraph" id="class_config_abf1d4539011ef83cac0fef2ac864a3a9_icgraph">
-<area shape="rect" id="node2" href="class_server.html#ad5ec9462b520e59f7ea831e157ee5e59" title="Server::Server" alt="" coords="175,5,281,32"/><area shape="rect" id="node3" href="class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6" title="Server::~Server" alt="" coords="171,56,285,83"/></map>
+<area shape="rect" id="node2" href="class_config.html#aaff6aaabead6b7486ec122f9dda807fd" title="Config::g" alt="" coords="191,56,265,83"/><area shape="rect" id="node6" href="class_server.html#ad5ec9462b520e59f7ea831e157ee5e59" title="Server::Server" alt="" coords="175,107,281,133"/><area shape="rect" id="node7" href="class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6" title="Server::~Server" alt="" coords="171,157,285,184"/><area shape="rect" id="node3" href="class_heat_event.html#af2d9aa99e9b2a57d8e8778598ba1c8cc" title="HeatEvent::getTempFromEnergy" alt="" coords="334,5,549,32"/><area shape="rect" id="node4" href="class_energy_node.html#ab52474e2e15ff2af2d969b6a88a778f7" title="EnergyNode::onTick" alt="" coords="597,81,739,108"/><area shape="rect" id="node5" href="class_energy_node.html#a04b3fe7a8aa49157a5c66ee8e25cfb3b" title="EnergyNode::transferEnergy" alt="" coords="348,107,535,133"/></map>
 </div>
 </p>
 
@@ -357,15 +414,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_config_a006701bd126aa5809b3a15e75c63bfb6_icgraph.png" border="0" usemap="#class_config_a006701bd126aa5809b3a15e75c63bfb6_icgraph" alt=""/></div>
 <map name="class_config_a006701bd126aa5809b3a15e75c63bfb6_icgraph" id="class_config_a006701bd126aa5809b3a15e75c63bfb6_icgraph">
-<area shape="rect" id="node2" href="class_config.html#a1f8e429f853f20cac7cf128f2b71543e" title="Config::get" alt="" coords="145,5,231,32"/><area shape="rect" id="node3" href="class_server.html#ad5ec9462b520e59f7ea831e157ee5e59" title="Server::Server" alt="" coords="280,5,387,32"/></map>
+<area shape="rect" id="node2" href="class_config.html#a1f8e429f853f20cac7cf128f2b71543e" title="Config::get" alt="" coords="145,81,231,108"/><area shape="rect" id="node3" href="class_config.html#aaff6aaabead6b7486ec122f9dda807fd" title="Config::g" alt="" coords="296,56,371,83"/><area shape="rect" id="node7" href="class_server.html#ad5ec9462b520e59f7ea831e157ee5e59" title="Server::Server" alt="" coords="280,107,387,133"/><area shape="rect" id="node4" href="class_heat_event.html#af2d9aa99e9b2a57d8e8778598ba1c8cc" title="HeatEvent::getTempFromEnergy" alt="" coords="435,5,650,32"/><area shape="rect" id="node5" href="class_energy_node.html#ab52474e2e15ff2af2d969b6a88a778f7" title="EnergyNode::onTick" alt="" coords="699,81,840,108"/><area shape="rect" id="node6" href="class_energy_node.html#a04b3fe7a8aa49157a5c66ee8e25cfb3b" title="EnergyNode::transferEnergy" alt="" coords="449,107,636,133"/></map>
 </div>
 </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/bender-wardrobe/Recast/src/headers/configs/<a class="el" href="_config_8hpp_source.html">Config.hpp</a></li>
-<li>/home/travis/build/bender-wardrobe/Recast/src/core/configs/<a class="el" href="_config_8cpp.html">Config.cpp</a></li>
+<li>/home/travis/build/bender-wardrobe/Recast/src/headers/io/configs/<a class="el" href="_config_8hpp_source.html">Config.hpp</a></li>
+<li>/home/travis/build/bender-wardrobe/Recast/src/core/io/configs/<a class="el" href="_config_8cpp.html">Config.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -4,5 +4,6 @@ var searchData=
   ['name_5f',['name_',['../classcrow_1_1_base_rule.html#a34d579887fac170e179e9e69eac3d771',1,'crow::BaseRule']]],
   ['negated',['negated',['../struct_catch_1_1_assertion_result_data.html#a17773c6f999cfded12e470b0321694a1',1,'Catch::AssertionResultData']]],
   ['nothing',['NOTHING',['../_config_8cpp.html#a7609d9a81c0d8e5f318598fc94afdaf5',1,'Config.cpp']]],
+  ['nowintick',['nowInTick',['../class_spell_node.html#a334bcdb7648ffd704510a6b277057fa5',1,'SpellNode']]],
   ['nread',['nread',['../structhttp__parser.html#a78085ca896bb3b9aa1ecb0f6fddc039d',1,'http_parser']]]
 ];

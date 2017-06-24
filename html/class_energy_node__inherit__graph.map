@@ -1,0 +1,4 @@
+<map id="EnergyNode" name="EnergyNode">
+<area shape="rect" id="node3" href="$class_heater_node.html" title="{HeaterNode\n||+ HeaterNode()\l}" alt="" coords="13,477,124,555"/>
+<area shape="rect" id="node2" href="$class_spell_node.html" title="{SpellNode\n|# x\l# y\l# z\l# connectedNodes\l# nowInTick\l|+ SpellNode()\l+ ~SpellNode()\l+ isEnergyNode()\l+ connectNode()\l+ tick()\l+ inTick()\l+ getDistance()\l# onTick()\l}" alt="" coords="4,6,133,245"/>
+</map>

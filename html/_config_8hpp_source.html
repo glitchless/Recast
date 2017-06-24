@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Recast: /home/travis/build/bender-wardrobe/Recast/src/headers/configs/Config.hpp Source File</title>
+<title>Recast: /home/travis/build/bender-wardrobe/Recast/src/headers/io/configs/Config.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d0381950fc41278198232cb047ffc1f9.html">headers</a></li><li class="navelem"><a class="el" href="dir_30a0b6b1e4503efbbcd9807be48c710c.html">configs</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d0381950fc41278198232cb047ffc1f9.html">headers</a></li><li class="navelem"><a class="el" href="dir_f996bd10325d66699f52ba6a742e471d.html">io</a></li><li class="navelem"><a class="el" href="dir_0ed40872362dfdf836804167086125fb.html">configs</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -123,20 +123,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> defaultVar;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    std::string filename;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    boost::property_tree::ptree pt;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_config.html#aaff6aaabead6b7486ec122f9dda807fd">   59</a></span>&#160;    <span class="keyword">static</span> T <a class="code" href="class_config.html#aaff6aaabead6b7486ec122f9dda807fd">g</a>(<span class="keyword">const</span> std::string &amp;key, T defaultVar) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9">instance</a>()-&gt;<a class="code" href="class_config.html#a1f8e429f853f20cac7cf128f2b71543e">get</a>(key, defaultVar);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif //RECAST_CONFIG_H</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    std::string filename;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    boost::property_tree::ptree pt;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif //RECAST_CONFIG_H</span></div>
 <div class="ttc" id="class_config_html_add4ebd0c89505c9b5368f03264555606"><div class="ttname"><a href="class_config.html#add4ebd0c89505c9b5368f03264555606">Config::load</a></div><div class="ttdeci">void load()</div><div class="ttdef"><b>Definition:</b> Config.cpp:62</div></div>
 <div class="ttc" id="class_config_html_abc51a2c710c8666d27b53cc03597201d"><div class="ttname"><a href="class_config.html#abc51a2c710c8666d27b53cc03597201d">Config::Config</a></div><div class="ttdeci">Config(const std::string &amp;filename)</div></div>
 <div class="ttc" id="class_config_html_ae7e68962f22a2c965a61702de1c637db"><div class="ttname"><a href="class_config.html#ae7e68962f22a2c965a61702de1c637db">Config::save</a></div><div class="ttdeci">void save()</div><div class="ttdef"><b>Definition:</b> Config.cpp:50</div></div>
 <div class="ttc" id="class_config_html_a006701bd126aa5809b3a15e75c63bfb6"><div class="ttname"><a href="class_config.html#a006701bd126aa5809b3a15e75c63bfb6">Config::tree</a></div><div class="ttdeci">boost::property_tree::ptree &amp; tree()</div><div class="ttdef"><b>Definition:</b> Config.cpp:46</div></div>
 <div class="ttc" id="class_config_html"><div class="ttname"><a href="class_config.html">Config</a></div><div class="ttdoc">Config class. </div><div class="ttdef"><b>Definition:</b> Config.hpp:24</div></div>
 <div class="ttc" id="class_config_html_abf1d4539011ef83cac0fef2ac864a3a9"><div class="ttname"><a href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9">Config::instance</a></div><div class="ttdeci">static Config * instance()</div><div class="ttdef"><b>Definition:</b> Config.cpp:27</div></div>
+<div class="ttc" id="class_config_html_a1f8e429f853f20cac7cf128f2b71543e"><div class="ttname"><a href="class_config.html#a1f8e429f853f20cac7cf128f2b71543e">Config::get</a></div><div class="ttdeci">T get(const std::string &amp;key, T defaultVar)</div><div class="ttdef"><b>Definition:</b> Config.hpp:49</div></div>
 <div class="ttc" id="class_config_html_a543dce59b66475c5108088ee4ce1cdfc"><div class="ttname"><a href="class_config.html#a543dce59b66475c5108088ee4ce1cdfc">Config::~Config</a></div><div class="ttdeci">~Config()</div><div class="ttdef"><b>Definition:</b> Config.cpp:66</div></div>
+<div class="ttc" id="class_config_html_aaff6aaabead6b7486ec122f9dda807fd"><div class="ttname"><a href="class_config.html#aaff6aaabead6b7486ec122f9dda807fd">Config::g</a></div><div class="ttdeci">static T g(const std::string &amp;key, T defaultVar)</div><div class="ttdef"><b>Definition:</b> Config.hpp:59</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

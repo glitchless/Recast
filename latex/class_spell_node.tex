@@ -1,0 +1,210 @@
+\hypertarget{class_spell_node}{\section{Spell\-Node Class Reference}
+\label{class_spell_node}\index{Spell\-Node@{Spell\-Node}}
+}
+
+
+{\ttfamily \#include $<$Spell\-Node.\-hpp$>$}
+
+
+
+Inheritance diagram for Spell\-Node\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_spell_node__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Spell\-Node\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_spell_node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_spell_node_a494db54e25007a0a5a0f0fb69e4e0edf}{Spell\-Node} (float \hyperlink{class_spell_node_a916f2a709a674dd2a61530b6acc339cc}{x}, float \hyperlink{class_spell_node_a754d80fd0fd82dbc12443b5f277b9fb4}{y}, float \hyperlink{class_spell_node_aff090331ff1bd816a22e974a50c1a180}{z})
+\item 
+\hyperlink{class_spell_node_a30bca8b90baeb81361db17ed3f712f7a}{$\sim$\-Spell\-Node} ()
+\item 
+virtual bool \hyperlink{class_spell_node_aa697b780e010dea8deb78eae8f61e36f}{is\-Energy\-Node} ()
+\item 
+void \hyperlink{class_spell_node_a66ea41a0a12d0dd8a2ac4eb0c5b1e046}{connect\-Node} (\hyperlink{class_spell_node}{Spell\-Node} $\ast$other\-Node)
+\item 
+void \hyperlink{class_spell_node_a1286f427e4386e3524ce6914b22a94fb}{tick} (\hyperlink{class_i_event_listener}{I\-Event\-Listener} \&listener, \hyperlink{class_spell_node}{Spell\-Node} $\ast$callable)
+\item 
+bool \hyperlink{class_spell_node_a711b368a0e285c644737c6f53f641a6f}{in\-Tick} () const 
+\item 
+float \hyperlink{class_spell_node_ad5fb7d9576d5ea948cbb0451387df7aa}{get\-Distance} (const \hyperlink{class_spell_node}{Spell\-Node} $\ast$other\-Node) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_spell_node_a0e8d39e7ebc6c7bd9e52eaf1be213af8}{on\-Tick} (\hyperlink{class_i_event_listener}{I\-Event\-Listener} \&listener, \hyperlink{class_spell_node}{Spell\-Node} $\ast$callable)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_spell_node_a916f2a709a674dd2a61530b6acc339cc}{x}
+\item 
+float \hyperlink{class_spell_node_a754d80fd0fd82dbc12443b5f277b9fb4}{y}
+\item 
+float \hyperlink{class_spell_node_aff090331ff1bd816a22e974a50c1a180}{z}
+\item 
+std\-::set$<$ \hyperlink{class_spell_node}{Spell\-Node} $\ast$ $>$ \hyperlink{class_spell_node_a5073f68f588de6227430cb0abe3e161a}{connected\-Nodes}
+\item 
+bool \hyperlink{class_spell_node_a334bcdb7648ffd704510a6b277057fa5}{now\-In\-Tick}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_spell_node_a494db54e25007a0a5a0f0fb69e4e0edf}{\index{Spell\-Node@{Spell\-Node}!Spell\-Node@{Spell\-Node}}
+\index{Spell\-Node@{Spell\-Node}!SpellNode@{Spell\-Node}}
+\subsubsection[{Spell\-Node}]{\setlength{\rightskip}{0pt plus 5cm}Spell\-Node\-::\-Spell\-Node (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_spell_node_a494db54e25007a0a5a0f0fb69e4e0edf}
+\hypertarget{class_spell_node_a30bca8b90baeb81361db17ed3f712f7a}{\index{Spell\-Node@{Spell\-Node}!$\sim$\-Spell\-Node@{$\sim$\-Spell\-Node}}
+\index{$\sim$\-Spell\-Node@{$\sim$\-Spell\-Node}!SpellNode@{Spell\-Node}}
+\subsubsection[{$\sim$\-Spell\-Node}]{\setlength{\rightskip}{0pt plus 5cm}Spell\-Node\-::$\sim$\-Spell\-Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_spell_node_a30bca8b90baeb81361db17ed3f712f7a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_spell_node_a66ea41a0a12d0dd8a2ac4eb0c5b1e046}{\index{Spell\-Node@{Spell\-Node}!connect\-Node@{connect\-Node}}
+\index{connect\-Node@{connect\-Node}!SpellNode@{Spell\-Node}}
+\subsubsection[{connect\-Node}]{\setlength{\rightskip}{0pt plus 5cm}void Spell\-Node\-::connect\-Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Spell\-Node} $\ast$}]{other\-Node}
+\end{DoxyParamCaption}
+)}}\label{class_spell_node_a66ea41a0a12d0dd8a2ac4eb0c5b1e046}
+Link node if not already exist The contract involves adding the current node from the calling party
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\-Node} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_spell_node_ad5fb7d9576d5ea948cbb0451387df7aa}{\index{Spell\-Node@{Spell\-Node}!get\-Distance@{get\-Distance}}
+\index{get\-Distance@{get\-Distance}!SpellNode@{Spell\-Node}}
+\subsubsection[{get\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}float Spell\-Node\-::get\-Distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Spell\-Node} $\ast$}]{other\-Node}
+\end{DoxyParamCaption}
+) const}}\label{class_spell_node_ad5fb7d9576d5ea948cbb0451387df7aa}
+Получение расстояния от одной ноды до другой
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\-Node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_spell_node_ad5fb7d9576d5ea948cbb0451387df7aa_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_spell_node_a711b368a0e285c644737c6f53f641a6f}{\index{Spell\-Node@{Spell\-Node}!in\-Tick@{in\-Tick}}
+\index{in\-Tick@{in\-Tick}!SpellNode@{Spell\-Node}}
+\subsubsection[{in\-Tick}]{\setlength{\rightskip}{0pt plus 5cm}bool Spell\-Node\-::in\-Tick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_spell_node_a711b368a0e285c644737c6f53f641a6f}
+\hypertarget{class_spell_node_aa697b780e010dea8deb78eae8f61e36f}{\index{Spell\-Node@{Spell\-Node}!is\-Energy\-Node@{is\-Energy\-Node}}
+\index{is\-Energy\-Node@{is\-Energy\-Node}!SpellNode@{Spell\-Node}}
+\subsubsection[{is\-Energy\-Node}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Spell\-Node\-::is\-Energy\-Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_spell_node_aa697b780e010dea8deb78eae8f61e36f}
+
+
+Reimplemented in \hyperlink{class_energy_node_a3a215be078964713e490198ee311d70f}{Energy\-Node}.
+
+\hypertarget{class_spell_node_a0e8d39e7ebc6c7bd9e52eaf1be213af8}{\index{Spell\-Node@{Spell\-Node}!on\-Tick@{on\-Tick}}
+\index{on\-Tick@{on\-Tick}!SpellNode@{Spell\-Node}}
+\subsubsection[{on\-Tick}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Spell\-Node\-::on\-Tick (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Event\-Listener} \&}]{listener, }
+\item[{{\bf Spell\-Node} $\ast$}]{callable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_spell_node_a0e8d39e7ebc6c7bd9e52eaf1be213af8}
+
+
+Reimplemented in \hyperlink{class_energy_node_ab52474e2e15ff2af2d969b6a88a778f7}{Energy\-Node}.
+
+\hypertarget{class_spell_node_a1286f427e4386e3524ce6914b22a94fb}{\index{Spell\-Node@{Spell\-Node}!tick@{tick}}
+\index{tick@{tick}!SpellNode@{Spell\-Node}}
+\subsubsection[{tick}]{\setlength{\rightskip}{0pt plus 5cm}void Spell\-Node\-::tick (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Event\-Listener} \&}]{listener, }
+\item[{{\bf Spell\-Node} $\ast$}]{callable}
+\end{DoxyParamCaption}
+)}}\label{class_spell_node_a1286f427e4386e3524ce6914b22a94fb}
+Main tick method. Not execute tick on parent node
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & \\
+\hline
+{\em callable} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{class_spell_node_a1286f427e4386e3524ce6914b22a94fb_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_spell_node_a5073f68f588de6227430cb0abe3e161a}{\index{Spell\-Node@{Spell\-Node}!connected\-Nodes@{connected\-Nodes}}
+\index{connected\-Nodes@{connected\-Nodes}!SpellNode@{Spell\-Node}}
+\subsubsection[{connected\-Nodes}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<${\bf Spell\-Node} $\ast$$>$ Spell\-Node\-::connected\-Nodes\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_spell_node_a5073f68f588de6227430cb0abe3e161a}
+\hypertarget{class_spell_node_a334bcdb7648ffd704510a6b277057fa5}{\index{Spell\-Node@{Spell\-Node}!now\-In\-Tick@{now\-In\-Tick}}
+\index{now\-In\-Tick@{now\-In\-Tick}!SpellNode@{Spell\-Node}}
+\subsubsection[{now\-In\-Tick}]{\setlength{\rightskip}{0pt plus 5cm}bool Spell\-Node\-::now\-In\-Tick\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_spell_node_a334bcdb7648ffd704510a6b277057fa5}
+\hypertarget{class_spell_node_a916f2a709a674dd2a61530b6acc339cc}{\index{Spell\-Node@{Spell\-Node}!x@{x}}
+\index{x@{x}!SpellNode@{Spell\-Node}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}float Spell\-Node\-::x\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_spell_node_a916f2a709a674dd2a61530b6acc339cc}
+\hypertarget{class_spell_node_a754d80fd0fd82dbc12443b5f277b9fb4}{\index{Spell\-Node@{Spell\-Node}!y@{y}}
+\index{y@{y}!SpellNode@{Spell\-Node}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}float Spell\-Node\-::y\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_spell_node_a754d80fd0fd82dbc12443b5f277b9fb4}
+\hypertarget{class_spell_node_aff090331ff1bd816a22e974a50c1a180}{\index{Spell\-Node@{Spell\-Node}!z@{z}}
+\index{z@{z}!SpellNode@{Spell\-Node}}
+\subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}float Spell\-Node\-::z\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_spell_node_aff090331ff1bd816a22e974a50c1a180}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/spells/nodes/\hyperlink{_spell_node_8hpp}{Spell\-Node.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/spell/nodes/\hyperlink{_spell_node_8cpp}{Spell\-Node.\-cpp}\end{DoxyCompactItemize}

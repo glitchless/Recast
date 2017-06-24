@@ -1,0 +1,18 @@
+\hypertarget{node--example}{\section{node-\/}
+}
+Передавать энергию ноде можно ТОЛЬКО через этот метод!!! Ни в коем случае не передавать энергию через node-\/$>$energy+=10; Сам метод так же не высчитывает из родительской ноды энергию на передачу. Он возвращает сколько энергии ему удалось забрать
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Из какой ноды энергия \\
+\hline
+{\em count} & Количество передаваемой энергии \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Сколько энергии передалось фактически (нормальным считается$>$energy -\/= other\-Node-\/$>$transfer\-Energy(node,10);)
+\end{DoxyReturn}
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ 

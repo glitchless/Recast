@@ -8,6 +8,7 @@ var searchData=
   ['close_5fhandler_5f',['close_handler_',['../classcrow_1_1_web_socket_rule.html#a52beafa459eb950ed8976442a6513b6b',1,'crow::WebSocketRule']]],
   ['code',['code',['../structcrow_1_1response.html#aabc1f9b3264b8c5a2d05dcb409e8ff3f',1,'crow::response']]],
   ['config_5fversion',['CONFIG_VERSION',['../_config_8cpp.html#af80efdbf1a16321cb0fbb1e695a114bf',1,'Config.cpp']]],
+  ['connectednodes',['connectedNodes',['../class_spell_node.html#a5073f68f588de6227430cb0abe3e161a',1,'SpellNode']]],
   ['content_5flength',['content_length',['../structhttp__parser.html#a7fd5a194802b1206bb773e096d291f29',1,'http_parser']]],
   ['cookies_5fto_5fadd',['cookies_to_add',['../structcrow_1_1_cookie_parser_1_1context.html#a4ceb4f28367b1a38ed1decc355d701eb',1,'crow::CookieParser::context']]]
 ];

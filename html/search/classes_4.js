@@ -2,8 +2,9 @@ var searchData=
 [
   ['empty_5fcontext',['empty_context',['../structcrow_1_1black__magic_1_1empty__context.html',1,'crow::black_magic']]],
   ['endswithmatcher',['EndsWithMatcher',['../struct_catch_1_1_matchers_1_1_std_string_1_1_ends_with_matcher.html',1,'Catch::Matchers::StdString']]],
-  ['equalsmatcher',['EqualsMatcher',['../struct_catch_1_1_matchers_1_1_vector_1_1_equals_matcher.html',1,'Catch::Matchers::Vector']]],
+  ['energynode',['EnergyNode',['../class_energy_node.html',1,'']]],
   ['equalsmatcher',['EqualsMatcher',['../struct_catch_1_1_matchers_1_1_std_string_1_1_equals_matcher.html',1,'Catch::Matchers::StdString']]],
+  ['equalsmatcher',['EqualsMatcher',['../struct_catch_1_1_matchers_1_1_vector_1_1_equals_matcher.html',1,'Catch::Matchers::Vector']]],
   ['evaluator',['Evaluator',['../class_catch_1_1_internal_1_1_evaluator.html',1,'Catch::Internal']]],
   ['evaluator_3c_20t1_2c_20t2_2c_20isequalto_20_3e',['Evaluator&lt; T1, T2, IsEqualTo &gt;',['../struct_catch_1_1_internal_1_1_evaluator_3_01_t1_00_01_t2_00_01_is_equal_to_01_4.html',1,'Catch::Internal']]],
   ['evaluator_3c_20t1_2c_20t2_2c_20isgreaterthan_20_3e',['Evaluator&lt; T1, T2, IsGreaterThan &gt;',['../struct_catch_1_1_internal_1_1_evaluator_3_01_t1_00_01_t2_00_01_is_greater_than_01_4.html',1,'Catch::Internal']]],

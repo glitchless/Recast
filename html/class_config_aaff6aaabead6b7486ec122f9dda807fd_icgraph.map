@@ -1,0 +1,5 @@
+<map id="Config::g" name="Config::g">
+<area shape="rect" id="node2" href="$class_heat_event.html#af2d9aa99e9b2a57d8e8778598ba1c8cc" title="HeatEvent::getTempFromEnergy" alt="" coords="129,5,343,32"/>
+<area shape="rect" id="node3" href="$class_energy_node.html#ab52474e2e15ff2af2d969b6a88a778f7" title="EnergyNode::onTick" alt="" coords="392,81,533,108"/>
+<area shape="rect" id="node4" href="$class_energy_node.html#a04b3fe7a8aa49157a5c66ee8e25cfb3b" title="EnergyNode::transferEnergy" alt="" coords="143,107,329,133"/>
+</map>

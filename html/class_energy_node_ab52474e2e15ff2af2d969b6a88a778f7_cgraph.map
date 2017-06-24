@@ -1,0 +1,9 @@
+<map id="EnergyNode::onTick" name="EnergyNode::onTick">
+<area shape="rect" id="node2" href="$class_energy_node.html#aac6faa1fe6389c0f9ee63611cd322245" title="EnergyNode::getEnergy" alt="" coords="207,5,369,32"/>
+<area shape="rect" id="node3" href="$class_config.html#aaff6aaabead6b7486ec122f9dda807fd" title="Config::g" alt="" coords="429,81,504,108"/>
+<area shape="rect" id="node8" href="$class_energy_node.html#a04b3fe7a8aa49157a5c66ee8e25cfb3b" title="EnergyNode::transferEnergy" alt="" coords="195,107,381,133"/>
+<area shape="rect" id="node4" href="$class_config.html#abf1d4539011ef83cac0fef2ac864a3a9" title="Config::instance" alt="" coords="552,56,669,83"/>
+<area shape="rect" id="node6" href="$class_config.html#a1f8e429f853f20cac7cf128f2b71543e" title="Config::get" alt="" coords="567,107,654,133"/>
+<area shape="rect" id="node5" href="$_config_8cpp.html#ab330b966aa1026a8014370d5732fae26" title="DEFAULT_CONFIG" alt="" coords="718,56,861,83"/>
+<area shape="rect" id="node7" href="$class_config.html#a006701bd126aa5809b3a15e75c63bfb6" title="Config::tree" alt="" coords="744,107,835,133"/>
+</map>

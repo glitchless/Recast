@@ -3,6 +3,8 @@ var searchData=
   ['icommand',['ICommand',['../class_i_command.html',1,'']]],
   ['icommandsender',['ICommandSender',['../class_i_command_sender.html',1,'']]],
   ['icontext',['IContext',['../struct_catch_1_1_i_context.html',1,'Catch']]],
+  ['ievent',['IEvent',['../class_i_event.html',1,'']]],
+  ['ieventlistener',['IEventListener',['../class_i_event_listener.html',1,'']]],
   ['iexceptiontranslator',['IExceptionTranslator',['../struct_catch_1_1_i_exception_translator.html',1,'Catch']]],
   ['iexceptiontranslatorregistry',['IExceptionTranslatorRegistry',['../struct_catch_1_1_i_exception_translator_registry.html',1,'Catch']]],
   ['igenerator',['IGenerator',['../struct_catch_1_1_i_generator.html',1,'Catch']]],

@@ -1,0 +1,4 @@
+<map id="SpellNode" name="SpellNode">
+<area shape="rect" id="node2" href="$class_energy_node.html" title="{EnergyNode\n|# energy\l|+ EnergyNode()\l+ isEnergyNode()\l+ getEnergy()\l+ transferEnergy()\l# onTick()\l}" alt="" coords="6,293,132,429"/>
+<area shape="rect" id="node3" href="$class_heater_node.html" title="{HeaterNode\n||+ HeaterNode()\l}" alt="" coords="13,477,124,555"/>
+</map>

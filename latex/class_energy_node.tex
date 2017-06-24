@@ -1,0 +1,171 @@
+\hypertarget{class_energy_node}{\section{Energy\-Node Class Reference}
+\label{class_energy_node}\index{Energy\-Node@{Energy\-Node}}
+}
+
+
+{\ttfamily \#include $<$Energy\-Node.\-hpp$>$}
+
+
+
+Inheritance diagram for Energy\-Node\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_energy_node__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Energy\-Node\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_energy_node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_energy_node_a607a0f6e31ff16ff882440119739ad66}{Energy\-Node} (float \hyperlink{class_spell_node_a916f2a709a674dd2a61530b6acc339cc}{x}, float \hyperlink{class_spell_node_a754d80fd0fd82dbc12443b5f277b9fb4}{y}, float \hyperlink{class_spell_node_aff090331ff1bd816a22e974a50c1a180}{z}, float \hyperlink{class_energy_node_ac2cd46828178316e24f339489f553852}{energy})
+\item 
+virtual bool \hyperlink{class_energy_node_a3a215be078964713e490198ee311d70f}{is\-Energy\-Node} ()
+\item 
+float \hyperlink{class_energy_node_aac6faa1fe6389c0f9ee63611cd322245}{get\-Energy} () const 
+\item 
+virtual float \hyperlink{class_energy_node_a04b3fe7a8aa49157a5c66ee8e25cfb3b}{transfer\-Energy} (\hyperlink{class_spell_node}{Spell\-Node} $\ast$from, float count)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_energy_node_ab52474e2e15ff2af2d969b6a88a778f7}{on\-Tick} (\hyperlink{class_i_event_listener}{I\-Event\-Listener} \&listener, \hyperlink{class_spell_node}{Spell\-Node} $\ast$callable)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_energy_node_ac2cd46828178316e24f339489f553852}{energy} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_energy_node_a607a0f6e31ff16ff882440119739ad66}{\index{Energy\-Node@{Energy\-Node}!Energy\-Node@{Energy\-Node}}
+\index{Energy\-Node@{Energy\-Node}!EnergyNode@{Energy\-Node}}
+\subsubsection[{Energy\-Node}]{\setlength{\rightskip}{0pt plus 5cm}Energy\-Node\-::\-Energy\-Node (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z, }
+\item[{float}]{energy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_energy_node_a607a0f6e31ff16ff882440119739ad66}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_energy_node_aac6faa1fe6389c0f9ee63611cd322245}{\index{Energy\-Node@{Energy\-Node}!get\-Energy@{get\-Energy}}
+\index{get\-Energy@{get\-Energy}!EnergyNode@{Energy\-Node}}
+\subsubsection[{get\-Energy}]{\setlength{\rightskip}{0pt plus 5cm}float Energy\-Node\-::get\-Energy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_energy_node_aac6faa1fe6389c0f9ee63611cd322245}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_energy_node_aac6faa1fe6389c0f9ee63611cd322245_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_energy_node_a3a215be078964713e490198ee311d70f}{\index{Energy\-Node@{Energy\-Node}!is\-Energy\-Node@{is\-Energy\-Node}}
+\index{is\-Energy\-Node@{is\-Energy\-Node}!EnergyNode@{Energy\-Node}}
+\subsubsection[{is\-Energy\-Node}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Energy\-Node\-::is\-Energy\-Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_energy_node_a3a215be078964713e490198ee311d70f}
+
+
+Reimplemented from \hyperlink{class_spell_node_aa697b780e010dea8deb78eae8f61e36f}{Spell\-Node}.
+
+\hypertarget{class_energy_node_ab52474e2e15ff2af2d969b6a88a778f7}{\index{Energy\-Node@{Energy\-Node}!on\-Tick@{on\-Tick}}
+\index{on\-Tick@{on\-Tick}!EnergyNode@{Energy\-Node}}
+\subsubsection[{on\-Tick}]{\setlength{\rightskip}{0pt plus 5cm}void Energy\-Node\-::on\-Tick (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Event\-Listener} \&}]{listener, }
+\item[{{\bf Spell\-Node} $\ast$}]{callable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_energy_node_ab52474e2e15ff2af2d969b6a88a778f7}
+Каждый тик мы рапределяем почти равномерно энергию между всеми дочерними нодами. Энергия переливается только в том случае, если её где-\/то меньше чем в текущей ноде. По умолчанию размер пакета = (Энергия текущего пакета -\/ Энергия дочернего пакета) $\ast$ 0.\-1 (10\% от транзакции) Каждая передача энергии сопровождается потерей. В контексте проекта это называется налог на энергию (energy tax). Это приводит к тому, что энергия не вечна и рано или поздно пропадет из плетения.
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & Вся передача событий из заклинания наружу происходит с помощью Event'ов \\
+\hline
+{\em callable} & Вызывающая нода. Пока не пригождается, но мало ли. Может быть N\-U\-L\-L \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_spell_node_a0e8d39e7ebc6c7bd9e52eaf1be213af8}{Spell\-Node}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_energy_node_ab52474e2e15ff2af2d969b6a88a778f7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_energy_node_a04b3fe7a8aa49157a5c66ee8e25cfb3b}{\index{Energy\-Node@{Energy\-Node}!transfer\-Energy@{transfer\-Energy}}
+\index{transfer\-Energy@{transfer\-Energy}!EnergyNode@{Energy\-Node}}
+\subsubsection[{transfer\-Energy}]{\setlength{\rightskip}{0pt plus 5cm}float Energy\-Node\-::transfer\-Energy (
+\begin{DoxyParamCaption}
+\item[{{\bf Spell\-Node} $\ast$}]{from, }
+\item[{float}]{count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_energy_node_a04b3fe7a8aa49157a5c66ee8e25cfb3b}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_energy_node_a04b3fe7a8aa49157a5c66ee8e25cfb3b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_energy_node_a04b3fe7a8aa49157a5c66ee8e25cfb3b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_energy_node_ac2cd46828178316e24f339489f553852}{\index{Energy\-Node@{Energy\-Node}!energy@{energy}}
+\index{energy@{energy}!EnergyNode@{Energy\-Node}}
+\subsubsection[{energy}]{\setlength{\rightskip}{0pt plus 5cm}float Energy\-Node\-::energy = 0\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_energy_node_ac2cd46828178316e24f339489f553852}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/spells/nodes/\hyperlink{_energy_node_8hpp}{Energy\-Node.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/spell/nodes/\hyperlink{_energy_node_8cpp}{Energy\-Node.\-cpp}\end{DoxyCompactItemize}
