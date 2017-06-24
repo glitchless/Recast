@@ -17,6 +17,21 @@ bool BoundTemperatureWorld::has(Coord x, Coord y, Coord z) const noexcept {
     return (_bounds.minX() <= x && x <= _bounds.maxX()) && (_bounds.minY() <= y && y <= _bounds.maxY()) && (_bounds.minZ() <= z && z <= _bounds.maxZ());
 }
 
+BoundTemperatureWorld::BoundTemperatureWorld(const BoundTemperatureWorld& other)
+        : _bounds(other._bounds), _data(other._data)
+{
+}
+
+BoundTemperatureWorld::BoundTemperatureWorld(BoundTemperatureWorld&& other)
+        : _bounds(move(other._bounds)), _data(move(other._data))
+{
+}
+
+BoundTemperatureWorld& BoundTemperatureWorld::operator=(BoundTemperatureWorld other) {
+    swap(*this, other);
+    return *this;
+}
+
 Temperature BoundTemperatureWorld::get(Coord x, Coord y, Coord z) const {
     return _data[_getIndexInData(x, y, z)];
 }
@@ -39,6 +54,58 @@ void BoundTemperatureWorld::foreach(BoundTemperatureWorld::ForeachCellFn func) c
     }
 }
 
+void BoundTemperatureWorld::foreachCellOnEdge(Edge edge, ITemperatureWorldBoundableMixin::ForeachCellFn func) const {
+    switch (edge) {
+        case Edge::LEFT:
+            for (Coord y = _bounds.minY(); y <= _bounds.maxY(); y++) {
+                for (Coord z = _bounds.minZ(); z <= _bounds.maxZ(); z++) {
+                    func(_bounds.minX(), y, z);
+                }
+            }
+            break;
+
+        case Edge::RIGHT:
+            for (Coord y = _bounds.minY(); y <= _bounds.maxY(); y++) {
+                for (Coord z = _bounds.minZ(); z <= _bounds.maxZ(); z++) {
+                    func(_bounds.maxX(), y, z);
+                }
+            }
+            break;
+
+        case Edge::UP:
+            for (Coord x = _bounds.minX(); x <= _bounds.maxX(); x++) {
+                for (Coord z = _bounds.minZ(); z <= _bounds.maxZ(); z++) {
+                    func(x, _bounds.minY(), z);
+                }
+            }
+            break;
+
+        case Edge::DOWN:
+            for (Coord x = _bounds.minX(); x <= _bounds.maxX(); x++) {
+                for (Coord z = _bounds.minZ(); z <= _bounds.maxZ(); z++) {
+                    func(x, _bounds.maxY(), z);
+                }
+            }
+            break;
+
+        case Edge::NEAR:
+            for (Coord x = _bounds.minX(); x <= _bounds.maxX(); x++) {
+                for (Coord y = _bounds.minY(); y <= _bounds.maxY(); y++) {
+                    func(x, y, _bounds.minZ());
+                }
+            }
+            break;
+
+        case Edge::FAR:
+            for (Coord x = _bounds.minX(); x <= _bounds.maxX(); x++) {
+                for (Coord y = _bounds.minY(); y <= _bounds.maxY(); y++) {
+                    func(x, y, _bounds.maxZ());
+                }
+            }
+            break;
+    }
+}
+
 Parallelepiped BoundTemperatureWorld::bounds() const noexcept {
     return _bounds;
 }
@@ -51,21 +118,6 @@ size_t BoundTemperatureWorld::_getIndexInData(Coord x, Coord y, Coord z) const {
                    (size_t) (y - _bounds.minY()) * _bounds.sizeZ() +
                    (size_t) (z - _bounds.minZ());
     return index;
-}
-
-BoundTemperatureWorld::BoundTemperatureWorld(const BoundTemperatureWorld& other)
-        : _bounds(other._bounds), _data(other._data)
-{
-}
-
-BoundTemperatureWorld::BoundTemperatureWorld(BoundTemperatureWorld&& other)
-        : _bounds(move(other._bounds)), _data(move(other._data))
-{
-}
-
-BoundTemperatureWorld& BoundTemperatureWorld::operator=(BoundTemperatureWorld other) {
-    swap(*this, other);
-    return *this;
 }
 
 Coord BoundTemperatureWorld::previousCoordX(Coord x) const noexcept {

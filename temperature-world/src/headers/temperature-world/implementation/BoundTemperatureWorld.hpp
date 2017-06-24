@@ -28,6 +28,7 @@ public:
     void amplify(Coord x, Coord y, Coord z, Temperature temperature) override;
 
     void foreach(ForeachCellFn func) const override;
+    void foreachCellOnEdge(Edge edge, ForeachCellFn func) const override;
 
     Parallelepiped bounds() const noexcept override;
 

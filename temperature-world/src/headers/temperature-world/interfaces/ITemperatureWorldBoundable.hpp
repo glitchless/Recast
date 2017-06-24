@@ -7,6 +7,7 @@
 
 
 #include <functional>
+#include "temperature-world/types/Edge.hpp"
 #include "temperature-world/types/Coord.hpp"
 #include "temperature-world/types/Size.hpp"
 #include "temperature-world/types/Temperature.hpp"
@@ -27,6 +28,14 @@ public:
      * @param func Function to execute at each point.
      */
     virtual void foreach(ForeachCellFn func) const = 0;
+
+    /**
+     * Loops over each point on specified edge.
+     *
+     * @param edge Edge.
+     * @param func Function to execute at each point.
+     */
+    virtual void foreachCellOnEdge(Edge edge, ForeachCellFn func) const = 0;
 
     /**
      * @return Bounds of this temperature world.
