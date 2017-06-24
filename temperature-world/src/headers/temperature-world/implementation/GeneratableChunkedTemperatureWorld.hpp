@@ -17,7 +17,7 @@
  */
 class GeneratableChunkedTemperatureWorld
         : public virtual ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>
-        , public ChunkedTemperatureWorld
+        , public virtual ChunkedTemperatureWorld
 {
 public:
     GeneratableChunkedTemperatureWorld(
