@@ -9,7 +9,7 @@
 #define RECAST_SERVER_NODE_H
 
 #include <set>
-#include "spells/events/IEventListener.h"
+#include "spells/events/IEventListener.hpp"
 
 class SpellNode {
 public:

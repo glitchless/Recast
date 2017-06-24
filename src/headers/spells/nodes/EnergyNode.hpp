@@ -9,7 +9,7 @@
 #define RECAST_SERVER_ENERGYNODE_H
 
 #include "io/configs/Config.hpp"
-#include "SpellNode.h"
+#include "SpellNode.hpp"
 
 //static float MAX_TRANSFER = 0.1; //// SpellNode throughput (pressure simulation) energyTransfer = (oldEnergy - tmp->getEnergy()) * MAX_TRANSFER
 //static float TAX_ENERGY_TRANSACTION_PER_COORD = 0.001; //// Transmission expense. Can go to a useful job (heating and stuff)

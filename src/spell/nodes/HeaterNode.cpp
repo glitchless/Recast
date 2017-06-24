@@ -5,8 +5,8 @@
  * @date 24.06.17
  * @email nikita@kulikof.ru
  **/
-#include <spells/events/HeatEvent.h>
-#include "spells/nodes/HeaterNode.h"
+#include <spells/events/HeatEvent.hpp>
+#include "spells/nodes/HeaterNode.hpp"
 
 HeaterNode::HeaterNode(float x, float y, float z, float energy) : EnergyNode(x, y, z, energy) {}
 

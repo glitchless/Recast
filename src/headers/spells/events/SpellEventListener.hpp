@@ -8,7 +8,7 @@
 #ifndef RECAST_SERVER_SPELLEVENTLISTENER_H
 #define RECAST_SERVER_SPELLEVENTLISTENER_H
 
-#include "IEventListener.h"
+#include "IEventListener.hpp"
 
 class Spell;
 

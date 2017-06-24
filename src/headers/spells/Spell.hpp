@@ -9,8 +9,8 @@
 #define RECAST_SERVER_SPELL_H
 
 
-#include "spells/nodes/SpellNode.h"
-#include "spells/events/SpellEventListener.h"
+#include "spells/nodes/SpellNode.hpp"
+#include "spells/events/SpellEventListener.hpp"
 
 class Spell {
 public:

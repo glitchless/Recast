@@ -6,7 +6,7 @@
  * @email nikita@kulikof.ru
  **/
 #include <cmath>
-#include "spells/nodes/SpellNode.h"
+#include "spells/nodes/SpellNode.hpp"
 
 using namespace std;
 

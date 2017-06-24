@@ -9,7 +9,7 @@
 #define RECAST_SERVER_HEATEVENT_H
 
 #include <io/configs/Config.hpp>
-#include "IEvent.h"
+#include "IEvent.hpp"
 
 class HeatEvent : public IEvent {
 public:

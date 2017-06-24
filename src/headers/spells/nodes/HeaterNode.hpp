@@ -9,7 +9,7 @@
 #define RECAST_SERVER_HEATERNODE_H
 
 
-#include "EnergyNode.h"
+#include "EnergyNode.hpp"
 
 class HeaterNode: public EnergyNode {
 public:

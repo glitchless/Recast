@@ -8,7 +8,7 @@
 #ifndef RECAST_SERVER_IEVENTLISTENER_H
 #define RECAST_SERVER_IEVENTLISTENER_H
 
-#include "IEvent.h"
+#include "IEvent.hpp"
 
 class IEventListener {
 public:

@@ -5,7 +5,7 @@
  * @date 24.06.17
  * @email nikita@kulikof.ru
  **/
-#include "spells/events/SpellEventListener.h"
+#include "spells/events/SpellEventListener.hpp"
 
 void SpellEventListener::onEvent(IEvent event) {
     event.commit();

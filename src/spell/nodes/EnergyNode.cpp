@@ -5,7 +5,7 @@
  * @date 20.06.17
  * @email nikita@kulikof.ru
  **/
-#include "spells/nodes/EnergyNode.h"
+#include "spells/nodes/EnergyNode.hpp"
 
 using namespace std;
 
