@@ -19,13 +19,13 @@
 #include <boost/log/utility/setup/common_attributes.hpp>
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
+#include <Box2D/Box2D.h>
 
 #include "Server.hpp"
 #include "io/SQLite.hpp"
 #include "io/configs/Config.hpp"
 #include "models/collections/PlayersOnline.hpp"
 #include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
-#include "temperature-world/implementation/BasicTimer.hpp"
 
 using namespace std;
 using namespace boost;
@@ -65,16 +65,11 @@ void Server::initServer() {
     BOOST_LOG_TRIVIAL(info) << "Initializing network...";
     runNetworkServer(serverTCP, serverUDP);
 
-    BasicTimer benchmarkTimer;
-    while (isRunning()) {
-        benchmarkTimer.update();
-        update();
-        BOOST_LOG_TRIVIAL(info) << "Update delta: " << benchmarkTimer.deltaFloatSeconds() << "s";
-    }
+    b2Vec2 gravity(0.0f, -10.0f);
 }
 
 void Server::update() {
-    temperatureWorldUpdater->update();
+    //temperatureWorldUpdater->update();
 }
 
 Server::Server() {
