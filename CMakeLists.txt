@@ -15,7 +15,7 @@ find_package(Boost 1.55 COMPONENTS system thread log program_options filesystem 
 include_directories(${Boost_INCLUDE_DIR})
 
 ## result
-set(LIBRARIES ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} sqlite3)
+set(LIBRARIES ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} sqlite3 Box2D)
 
 
 # main source
