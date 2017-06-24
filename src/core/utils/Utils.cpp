@@ -9,7 +9,8 @@
  * Misc methods
  * 
  **/
-#include "utils/Utils.h"
+#include "utils/Utils.hpp"
+#include <cstdlib>
 
 using namespace std;
 

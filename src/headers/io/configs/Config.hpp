@@ -55,7 +55,6 @@ public:
         }
     }
 
-
     template<class T>
     static T g(const std::string &key, T defaultVar) {
         return instance()->get(key, defaultVar);

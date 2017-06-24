@@ -8,7 +8,7 @@
 #ifndef RECAST_SERVER_ENERGYNODE_H
 #define RECAST_SERVER_ENERGYNODE_H
 
-#include "io/configs/Config.h"
+#include "io/configs/Config.hpp"
 #include "Node.h"
 
 //static float MAX_TRANSFER = 0.1; //// Node throughput (pressure simulation) energyTransfer = (oldEnergy - tmp->getEnergy()) * MAX_TRANSFER

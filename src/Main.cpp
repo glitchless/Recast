@@ -6,10 +6,7 @@
  * Starting point for Recast server. Initializing @see Server and @see MainThread.
  * Init config class @see Config.
  **/
-#include <spells/nodes/EnergyNode.h>
-#include <spells/Spell.h>
-#include <spells/nodes/HeaterNode.h>
-#include <Server.h>
+#include "Server.hpp"
 
 /**
  * @brief Main method :)

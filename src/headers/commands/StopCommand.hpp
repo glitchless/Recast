@@ -2,7 +2,7 @@
 #define RECAST_SERVER_STOPCOMMAND_H
 
 
-#include "ICommand.h"
+#include "ICommand.hpp"
 
 /**
  * @brief StopCommand

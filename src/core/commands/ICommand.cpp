@@ -8,4 +8,4 @@
  * Now do nothing :3
  * 
  **/
-#include "commands/ICommand.h"
+#include "commands/ICommand.hpp"
