@@ -60,7 +60,7 @@ PlayersOnline::~PlayersOnline() {
         }
 }
 
-void PlayersOnline::registerPlayer(string login, string password) throw(InvalidLoginOrPassword) {
+void PlayersOnline::registerPlayer(string login, string password){
     try {
         sqLite.registerUser(login, password);
     } catch (exception &e) {
@@ -69,7 +69,7 @@ void PlayersOnline::registerPlayer(string login, string password) throw(InvalidL
     }
 }
 
-string PlayersOnline::authPlayer(string login, string password) throw(InvalidLoginOrPassword, ServerFullException) {
+string PlayersOnline::authPlayer(string login, string password){
     User user = sqLite.authUser(login, password);
     if (currentPlayers == maxPlayers) {
         throw ServerFullException();

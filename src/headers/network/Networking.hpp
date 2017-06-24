@@ -30,22 +30,22 @@ string int2ipv4(uint32_t ip);
 //
 //public:
 //    int  getSocketDescr() const noexcept { return socketDescr; }
-//    void setNonBlocked(bool option)                                           throw (exception);
-//    void send(const string &str)                                              throw (exception);
-//    void sendTo(struct sockaddr_in &sendToAddr, const string &str)            throw (exception);
-//    string recvFrom(struct sockaddr_in &recvFromAddr)                         throw (exception);
-//    string recv()                                                             throw (exception);
-//    string recv(size_t bytes)                                                 throw (exception);
-//    string recvTimed(int timeout)                                             throw (exception);
-//    void setRecvTimeout(int seconds, int microseconds)                        throw (exception);
-//    bool hasData()                                                            throw (exception);
-//    void createServerSocketUDP(uint32_t port)                                 throw (exception);
-//    void createServerSocketTCP(uint32_t port, uint32_t queueSize)             throw (exception);
-//    shared_ptr<Socket> accept()                                               throw (exception);
+//    void setNonBlocked(bool option)                                           noexcept (false);
+//    void send(const string &str)                                              noexcept (false);
+//    void sendTo(struct sockaddr_in &sendToAddr, const string &str)            noexcept (false);
+//    string recvFrom(struct sockaddr_in &recvFromAddr)                         noexcept (false);
+//    string recv()                                                             noexcept (false);
+//    string recv(size_t bytes)                                                 noexcept (false);
+//    string recvTimed(int timeout)                                             noexcept (false);
+//    void setRecvTimeout(int seconds, int microseconds)                        noexcept (false);
+//    bool hasData()                                                            noexcept (false);
+//    void createServerSocketUDP(uint32_t port)                                 noexcept (false);
+//    void createServerSocketTCP(uint32_t port, uint32_t queueSize)             noexcept (false);
+//    shared_ptr<Socket> accept()                                               noexcept (false);
 //    void close() { ::close(socketDescr); }
 //
 //private:
-//    void setReuseAddress(int sd)                                              throw (exception);
+//    void setReuseAddress(int sd)                                              noexcept (false);
 //    int socketDescr;
 //};
 
@@ -56,10 +56,10 @@ public:
     ~Socket() { if (socketDescr > 0) ::close(socketDescr); }
 public:
     int  getSocketDescr() const noexcept { return socketDescr; }
-    void setNonBlocked(bool option)                                                throw (exception);
+    void setNonBlocked(bool option);
     void close() { ::close(socketDescr); }
 protected:
-    void setReuseAddress(int sd)                                                   throw (exception);
+    void setReuseAddress(int sd);
     int socketDescr;
 };
 
@@ -68,17 +68,17 @@ public:
     using Socket::Socket;
     SocketTCP(uint32_t port, uint32_t queueSize) : Socket::Socket() { createServerSocket(port, queueSize); }
 public:
-    void setRecvTimeout(int seconds, int microseconds)                             throw (exception);
-    void createServerSocket(uint32_t port, uint32_t queueSize)                     throw (exception);
+    void setRecvTimeout(int seconds, int microseconds);
+    void createServerSocket(uint32_t port, uint32_t queueSize);
 
-    void send(const string &str)                                                   throw (exception);
-    void sendBytes(const char *data, size_t num)                                   throw (exception);
-    string recv()                                                                  throw (exception);
-    string recv(size_t bytes)                                                      throw (exception);
-    string recvTimed(int timeout)                                                  throw (exception);
-    char* recvBytes(size_t num)                                                    throw (exception);
-    bool hasData()                                                                 throw (exception);
-    shared_ptr<SocketTCP> accept()                                                 throw (exception);
+    void send(const string &str);
+    void sendBytes(const char *data, size_t num);
+    string recv();
+    string recv(size_t bytes);
+    string recvTimed(int timeout);
+    char* recvBytes(size_t num);
+    bool hasData();
+    shared_ptr<SocketTCP> accept();
 };
 
 class SocketUDP : Socket {
@@ -86,12 +86,12 @@ public:
     using Socket::Socket;
     SocketUDP(uint32_t port) : Socket::Socket() { createServerSocket(port); }
 public:
-    void createServerSocket(uint32_t port)                                         throw (exception);
-    void sendTo(struct sockaddr_in &sendToAddr, const string &str)                 throw (exception);
-    string recvFrom(struct sockaddr_in &recvFromAddr)                              throw (exception);
+    void createServerSocket(uint32_t port);
+    void sendTo(struct sockaddr_in &sendToAddr, const string &str);
+    string recvFrom(struct sockaddr_in &recvFromAddr);
 
-    void sendBytesTo(struct sockaddr_in &sendToAddr, const char *data, size_t num) throw (exception);
-    char* recvBytesFrom(struct sockaddr_in &recvFromAddr)                          throw (exception);
+    void sendBytesTo(struct sockaddr_in &sendToAddr, const char *data, size_t num);
+    char* recvBytesFrom(struct sockaddr_in &recvFromAddr);
 };
 
 #endif //RECAST_NETWORKING_H
