@@ -12,7 +12,7 @@
 #include <boost/property_tree/json_parser.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/log/trivial.hpp>
-#include "configs/Config.hpp"
+#include "io/configs/Config.hpp"
 
 
 using namespace boost::property_tree::json_parser;

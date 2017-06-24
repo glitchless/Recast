@@ -6,7 +6,6 @@
  * Starting point for Recast server. Initializing @see Server and @see MainThread.
  * Init config class @see Config.
  **/
-#include <sqlite/src/sqlite3.h>
 #include "Server.hpp"
 
 /**
