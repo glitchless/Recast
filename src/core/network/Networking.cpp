@@ -221,6 +221,10 @@ void SocketTCP::createServerSocket(uint32_t port, uint32_t queueSize) noexcept (
     // setNonBlocked(true);
 }
 
+void SocketTCP::createServerSocket() noexcept (false) {
+    createServerSocket(socketBoundPort, socketQueueSize);
+}
+
 shared_ptr<SocketTCP> SocketTCP::accept() noexcept (false) {
     struct sockaddr_in client;
     memset(&client, 0, sizeof(client));
@@ -293,4 +297,8 @@ void SocketUDP::createServerSocket(uint32_t port) noexcept (false) {
 
     socketDescr = sd;
     // setNonBlocked(true);
+}
+
+void SocketUDP::createServerSocket() noexcept (false) {
+    createServerSocket(socketBoundPort);
 }

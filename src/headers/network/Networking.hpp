@@ -22,53 +22,33 @@ const int DEFAULT_PORT_UDP = 1338;
 
 string int2ipv4(uint32_t ip);
 
-//class Socket {
-//public:
-//    Socket()       : socketDescr(-1) {}
-//    Socket(int sd) : socketDescr(sd) {}
-//    ~Socket() { if (socketDescr > 0) ::close(socketDescr); }
-//
-//public:
-//    int  getSocketDescr() const noexcept { return socketDescr; }
-//    void setNonBlocked(bool option)                                           noexcept (false);
-//    void send(const string &str)                                              noexcept (false);
-//    void sendTo(struct sockaddr_in &sendToAddr, const string &str)            noexcept (false);
-//    string recvFrom(struct sockaddr_in &recvFromAddr)                         noexcept (false);
-//    string recv()                                                             noexcept (false);
-//    string recv(size_t bytes)                                                 noexcept (false);
-//    string recvTimed(int timeout)                                             noexcept (false);
-//    void setRecvTimeout(int seconds, int microseconds)                        noexcept (false);
-//    bool hasData()                                                            noexcept (false);
-//    void createServerSocketUDP(uint32_t port)                                 noexcept (false);
-//    void createServerSocketTCP(uint32_t port, uint32_t queueSize)             noexcept (false);
-//    shared_ptr<Socket> accept()                                               noexcept (false);
-//    void close() { ::close(socketDescr); }
-//
-//private:
-//    void setReuseAddress(int sd)                                              noexcept (false);
-//    int socketDescr;
-//};
-
 class Socket {
 public:
-    Socket()       : socketDescr(-1) {}
-    Socket(int sd) : socketDescr(sd) {}
+    Socket()       : socketDescr(-1), socketBoundPort(0) {}
+    Socket(int sd) : socketDescr(sd), socketBoundPort(0) {}
     ~Socket() { if (socketDescr > 0) ::close(socketDescr); }
 public:
     int  getSocketDescr() const noexcept { return socketDescr; }
     void setNonBlocked(bool option);
     void close() { ::close(socketDescr); }
+    virtual void createServerSocket() = 0;
 protected:
     void setReuseAddress(int sd);
     int socketDescr;
+    uint32_t socketBoundPort;
 };
 
-class SocketTCP : Socket {
+class SocketTCP : public Socket {
 public:
     using Socket::Socket;
-    SocketTCP(uint32_t port, uint32_t queueSize) : Socket::Socket() { createServerSocket(port, queueSize); }
+    SocketTCP(uint32_t port, uint32_t queueSize) : Socket::Socket() {
+        socketBoundPort = port;
+        socketQueueSize = queueSize;
+        createServerSocket();
+    }
 public:
     void setRecvTimeout(int seconds, int microseconds);
+    void createServerSocket() override;
     void createServerSocket(uint32_t port, uint32_t queueSize);
 
     void send(const string &str);
@@ -79,13 +59,19 @@ public:
     char* recvBytes(size_t num);
     bool hasData();
     shared_ptr<SocketTCP> accept();
+private:
+    uint32_t socketQueueSize;
 };
 
-class SocketUDP : Socket {
+class SocketUDP : public Socket {
 public:
     using Socket::Socket;
-    SocketUDP(uint32_t port) : Socket::Socket() { createServerSocket(port); }
+    SocketUDP(uint32_t port) : Socket::Socket() {
+        socketBoundPort = port;
+        createServerSocket();
+    }
 public:
+    void createServerSocket() override;
     void createServerSocket(uint32_t port);
     void sendTo(struct sockaddr_in &sendToAddr, const string &str);
     string recvFrom(struct sockaddr_in &recvFromAddr);
