@@ -51,7 +51,11 @@ void Server::initTemperatureWorld() {
     temperatureWorld = injector.world();
     temperatureWorldUpdater = injector.updater();
 
-    temperatureWorld->getOrGenerateChunk(0, 0, 0);
+    for (int ix = -4; ix < 4; ix++) {
+        for (int iy = -4; iy < 4; iy++) {
+            temperatureWorld->getOrGenerateChunk(ix * injector.chunkBounds().sizeX() + 1, iy * injector.chunkBounds().sizeY() + 1, 0);
+        }
+    }
 }
 
 void Server::initServer() {

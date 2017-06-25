@@ -10,6 +10,7 @@
 #include <memory>
 #include "temperature-world/types/Parallelepiped.hpp"
 #include "temperature-world/interfaces/IUpdater.hpp"
+#include "temperature-world/interfaces/IUpdaterTemperatureWorldSemiChunkUpdatable.hpp"
 #include "temperature-world/interfaces/ITimer.hpp"
 #include "temperature-world/interfaces/ITimerBlockable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorld.hpp"
@@ -118,8 +119,8 @@ public:
 
 protected:
     static bool _needChunkFn(Coord x, Coord y, Coord z) noexcept;
-    static std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> _makeChunkFn(Parallelepiped chunkBounds, Coord x, Coord y, Coord z);
-    static std::shared_ptr<IUpdater> _makeChunkUpdaterFn(double temperatureExchangeCoefficient, std::shared_ptr<ITimerBlockable<ITimer>> timer, std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk);
+    static std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> _makeChunkFn(Parallelepiped baseChunkBounds, Coord x, Coord y, Coord z);
+    static std::shared_ptr<IUpdaterTemperatureWorldSemiChunkUpdatable<IUpdater>> _makeChunkUpdaterFn(double temperatureExchangeCoefficient, std::shared_ptr<ITimerBlockable<ITimer>> timer, std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk);
 
     void _makeWorld();
     void _makeUpdater();

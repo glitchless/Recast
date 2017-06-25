@@ -17,7 +17,7 @@ using namespace std::placeholders;
 ScalingGeneratableChunkedTemperatureWorldInjector::ScalingGeneratableChunkedTemperatureWorldInjector() {
     setMinUpdateDelta(milliseconds(20));
     setTemperatureExchangeCoefficient(0.1);
-    setChunkBounds(Parallelepiped(32, 32, 8));
+    setChunkBounds(Parallelepiped(16, 16, 8));
 }
 
 bool ScalingGeneratableChunkedTemperatureWorldInjector::hasChunkBounds() const noexcept {
@@ -78,18 +78,6 @@ shared_ptr<ITimerBlockable<ITimer>> ScalingGeneratableChunkedTemperatureWorldInj
     return _timer;
 }
 
-bool ScalingGeneratableChunkedTemperatureWorldInjector::_needChunkFn(Coord x, Coord y, Coord z) noexcept {
-    return true;
-}
-
-shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> ScalingGeneratableChunkedTemperatureWorldInjector::_makeChunkFn(Parallelepiped chunkBounds, Coord x, Coord y, Coord z) {
-    return make_shared<ScalableBoundTemperatureWorld>(chunkBounds);
-}
-
-shared_ptr<IUpdater> ScalingGeneratableChunkedTemperatureWorldInjector::_makeChunkUpdaterFn(double temperatureExchangeCoefficient, shared_ptr<ITimerBlockable<ITimer>> timer, shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
-    return make_shared<AverageShareTemperatureWorldUpdater>(temperatureExchangeCoefficient, chunk, timer);
-}
-
 void ScalingGeneratableChunkedTemperatureWorldInjector::_makeWorld() {
     using T = remove_reference_t<decltype(*_world)>;
     _world = dynamic_pointer_cast<T>(make_shared<ScalingGeneratableChunkedTemperatureWorld>(
@@ -111,4 +99,23 @@ void ScalingGeneratableChunkedTemperatureWorldInjector::_makeTimer() {
     using T = remove_reference_t<decltype(*_timer)>;
     _timer = dynamic_pointer_cast<T>(make_shared<SynchronizedBlockingTimer>(minUpdateDelta()));
     assert(_timer != nullptr);
+}
+
+bool ScalingGeneratableChunkedTemperatureWorldInjector::_needChunkFn(Coord x, Coord y, Coord z) noexcept {
+    return true;
+}
+
+shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> ScalingGeneratableChunkedTemperatureWorldInjector::_makeChunkFn(Parallelepiped baseChunkBounds, Coord x, Coord y, Coord z) {
+    Coord minX = (int) (x / baseChunkBounds.sizeX()) * baseChunkBounds.sizeX();
+    Coord minY = (int) (y / baseChunkBounds.sizeY()) * baseChunkBounds.sizeY();
+    Coord minZ = (int) (z / baseChunkBounds.sizeZ()) * baseChunkBounds.sizeZ();
+    Coord maxX = minX + baseChunkBounds.sizeX() - 1;
+    Coord maxY = minY + baseChunkBounds.sizeY() - 1;
+    Coord maxZ = minZ + baseChunkBounds.sizeZ() - 1;
+    Parallelepiped chunkBounds(minX, maxX, minY, maxY, minZ, maxZ);
+    return make_shared<ScalableBoundTemperatureWorld>(chunkBounds);
+}
+
+shared_ptr<IUpdaterTemperatureWorldSemiChunkUpdatable<IUpdater>> ScalingGeneratableChunkedTemperatureWorldInjector::_makeChunkUpdaterFn(double temperatureExchangeCoefficient, shared_ptr<ITimerBlockable<ITimer>> timer, shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
+    return make_shared<AverageShareTemperatureWorldUpdater>(temperatureExchangeCoefficient, chunk, timer);
 }

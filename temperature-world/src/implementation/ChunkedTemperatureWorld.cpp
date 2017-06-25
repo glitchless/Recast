@@ -30,7 +30,7 @@ shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> ChunkedTemperatureWorl
 
 void ChunkedTemperatureWorld::foreachChunk(ChunkedTemperatureWorld::ForeachChunkFn func) const {
     for (const shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>& chunk : _chunks) {
-        func(*chunk);
+        func(chunk);
     }
 }
 

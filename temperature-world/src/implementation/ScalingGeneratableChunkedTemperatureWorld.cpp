@@ -29,15 +29,13 @@ void ScalingGeneratableChunkedTemperatureWorld::removePriorityPoint(Coord x, Coo
     _updateScales();
 }
 
-void ScalingGeneratableChunkedTemperatureWorld::addChunk(
-        std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
+void ScalingGeneratableChunkedTemperatureWorld::addChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
     assert(dynamic_pointer_cast<ITemperatureWorldScalableMutableMixin>(chunk));
-    assert(chunk->bounds() == _baseChunkSize);
+    assert(chunk->bounds().isSameSize(_baseChunkSize));
     GeneratableChunkedTemperatureWorld::addChunk(chunk);
 }
 
-void ScalingGeneratableChunkedTemperatureWorld::removeChunk(
-        std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
+void ScalingGeneratableChunkedTemperatureWorld::removeChunk(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
     assert(dynamic_pointer_cast<ITemperatureWorldScalableMutableMixin>(chunk));
     GeneratableChunkedTemperatureWorld::removeChunk(chunk);
 }

@@ -18,7 +18,7 @@ struct Parallelepiped {
 public:
     Parallelepiped(Coord minX, Coord maxX, Coord minY, Coord maxY, Coord minZ, Coord maxZ)
             : _minX(minX), _maxX(maxX), _minY(minY), _maxY(maxY), _minZ(minZ), _maxZ(maxZ)
-            , _sizeX(maxX - minX + 1), _sizeY(maxY - minY + 1), _sizeZ(maxY - minY + 1)
+            , _sizeX(maxX - minX + 1), _sizeY(maxY - minY + 1), _sizeZ(maxZ - minZ + 1)
     {
         assert(_minX <= _maxX && _minY <= _maxY && _minZ <= _maxZ);
     }
@@ -93,8 +93,19 @@ public:
         return _sizeZ;
     };
 
+    /**
+     * @return Count of points inside.
+     */
     inline Size volume() const noexcept {
         return _sizeX * _sizeY * _sizeZ;
+    }
+
+    /**
+     * @param other Parallelepiped to compare with.
+     * @return True if sizes of this parallepiped and other parallepiped are equal.
+     */
+    inline bool isSameSize(const Parallelepiped& other) const noexcept {
+        return _sizeX == other._sizeX && _sizeY == other._sizeY && _sizeZ == other._sizeZ;
     }
 
     inline bool operator==(const Parallelepiped& other) const noexcept {

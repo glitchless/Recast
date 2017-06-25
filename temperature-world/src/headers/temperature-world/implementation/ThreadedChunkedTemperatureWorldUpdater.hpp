@@ -11,6 +11,7 @@
 #include <condition_variable>
 #include <thread>
 #include <future>
+#include "temperature-world/interfaces/IUpdaterTemperatureWorldSemiChunkUpdatable.hpp"
 #include "temperature-world/interfaces/IUpdater.hpp"
 #include "temperature-world/interfaces/ITemperatureWorld.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkable.hpp"
@@ -29,7 +30,7 @@ class ThreadedChunkedTemperatureWorldUpdater : public virtual IUpdater {
 public:
     ThreadedChunkedTemperatureWorldUpdater(
             std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> world,
-            std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn);
+            std::function<std::shared_ptr<IUpdaterTemperatureWorldSemiChunkUpdatable<IUpdater>>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn);
 
     ~ThreadedChunkedTemperatureWorldUpdater();
 
@@ -39,12 +40,12 @@ protected:
     struct ThreadData {
     public:
         std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> world;
-        std::function<std::shared_ptr<IUpdater>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn;
+        std::function<std::shared_ptr<IUpdaterTemperatureWorldSemiChunkUpdatable<IUpdater>>(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>)> makeChunkUpdaterFn;
 
         std::atomic<bool> isRunning;
         std::vector<std::thread> workers;
 
-        std::vector<std::shared_ptr<IUpdater>> updaters;
+        std::vector<std::shared_ptr<IUpdaterTemperatureWorldSemiChunkUpdatable<IUpdater>>> updaters;
         std::mutex updatersMutex;
 
         std::vector<std::future<void>> tasks;

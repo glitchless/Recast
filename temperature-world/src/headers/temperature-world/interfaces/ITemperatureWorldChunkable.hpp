@@ -16,7 +16,7 @@
  */
 class ITemperatureWorldChunkableMixin {
 public:
-    using ForeachChunkFn = std::function<void(ITemperatureWorldBoundable<ITemperatureWorld>&)>;
+    using ForeachChunkFn = std::function<void(const std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>&)>;
 
     /**
      * Tells whether the chunk which holds this point exists.
