@@ -8,6 +8,7 @@
 #include "world/Box2DWorld.h"
 #include <world/utils/CollectEntity.h>
 #include <world/wrappers/EntityData.h>
+#include "world/wrappers/SpellEntity.h"
 
 static const float32 WIDTH_CHUNK = 50.0f;
 static const float32 STEP_TIME = 1.0f / 60.0f;
@@ -123,7 +124,7 @@ SpellEntity *Box2DWorld::createSpellEntity(b2Vec2 &position, Spell *spell) {
     ((EntityData *) bodyDef.userData)->id = freeId;
 
     b2Body *body = world->CreateBody(&bodyDef);
-    SpellEntity *entity = new SpellEntity(body->CreateFixture(&fixtureDef), spell);
+    SpellEntity *entity = new SpellEntity(body->CreateFixture(&fixtureDef), spell, this);
     entitysId[freeId] = entity;
     data->spellEntity = entity;
     return (SpellEntity *) entity;

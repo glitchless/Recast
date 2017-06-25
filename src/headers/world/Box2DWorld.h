@@ -13,7 +13,9 @@
 #include <unordered_map>
 #include "world/wrappers/Entity.h"
 #include <Box2D/Box2D.h>
-#include <world/wrappers/SpellEntity.h>
+
+class Spell;
+class SpellEntity;
 
 class Box2DWorld : public b2DestructionListener {
 public:

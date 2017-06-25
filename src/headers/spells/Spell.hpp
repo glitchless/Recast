@@ -14,19 +14,18 @@
 
 class Spell {
 public:
-    Spell() : rootNode(new SpellNode(0, 0, 0)), listener(SpellEventListener(this)) {};
+    Spell() : rootNode(new SpellNode(0, 0, 0)) {};
 
-    Spell(SpellNode *rootNode) : rootNode(rootNode), listener(SpellEventListener(this)) {};
+    Spell(SpellNode *rootNode) : rootNode(rootNode) {};
 
     ~Spell();
 
     SpellNode *getRootNode() { return rootNode; }
 
-    void tickSpell(/*TODO EntityList and Temperature map*/);
+    void tickSpell(SpellEventListener &listener);
 
 private:
     SpellNode *rootNode;
-    SpellEventListener listener;
 };
 
 

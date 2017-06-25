@@ -8,7 +8,7 @@
 #include <boost/log/trivial.hpp>
 #include <spells/Spell.hpp>
 
-void Spell::tickSpell() {
+void Spell::tickSpell(SpellEventListener &listener) {
     rootNode->tick(listener, NULL);
 }
 

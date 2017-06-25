@@ -11,15 +11,18 @@
 #include "IEventListener.hpp"
 
 class Spell;
+class SpellEntity;
 
-class SpellEventListener : public IEventListener {
+class SpellEventListener : public IEventListener{
 public:
-    SpellEventListener(Spell *spell) : spell(spell) {}
+    SpellEventListener(SpellEntity *entity, Box2DWorld *world) : spell(spell), entity(entity), world(world) {}
 
     void onEvent(IEvent event);
 
 private:
     Spell *spell;
+    SpellEntity *entity;
+    Box2DWorld *world;
 };
 
 

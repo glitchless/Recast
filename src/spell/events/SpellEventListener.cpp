@@ -8,5 +8,5 @@
 #include "spells/events/SpellEventListener.hpp"
 
 void SpellEventListener::onEvent(IEvent event) {
-    event.commit();
+    event.commit(world);
 }

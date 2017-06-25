@@ -27,6 +27,8 @@
 #include "io/SQLite.hpp"
 #include "models/collections/PlayersOnline.hpp"
 #include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
+#include "spells/Spell.hpp"
+#include "world/wrappers/SpellEntity.h"
 
 using namespace std;
 using namespace boost;

@@ -9,6 +9,7 @@
 #define RECAST_SERVER_IEVENT_H
 
 #include <boost/log/trivial.hpp>
+#include <world/Box2DWorld.h>
 
 class SpellNode;
 
@@ -18,7 +19,7 @@ public:
 
     SpellNode *getNode() const { return fromNode; }
 
-    virtual void commit(/*Temperature and Entity*/) { BOOST_LOG_TRIVIAL(info) << "Calling event"; }
+    virtual void commit(Box2DWorld *world) { BOOST_LOG_TRIVIAL(info) << "Calling event"; }
 
 private:
     SpellNode *fromNode;
