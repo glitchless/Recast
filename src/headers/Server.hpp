@@ -13,6 +13,7 @@
 
 #include <string>
 #include <thread>
+#include <world/Box2DWorld.h>
 #include "threads/InputThread.hpp"
 #include "commands/ICommandSender.hpp"
 #include "commands/CommandManager.hpp"
@@ -76,6 +77,8 @@ private:
     InputThread *inputObject;
     std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> temperatureWorld;
     std::shared_ptr<IUpdater> temperatureWorldUpdater;
+
+    Box2DWorld world;
 };
 
 
