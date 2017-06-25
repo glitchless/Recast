@@ -13,9 +13,10 @@
 
 class MoveEvent : public IEvent {
 public:
-    MoveEvent(SpellNode *node, int entityId, float energy) : IEvent(node), entityId(entityId) {}
-
+    MoveEvent(SpellNode *node, int entityId, float energy) : IEvent(node), entityId(entityId), energy(energy) {}
+    void commit(Box2DWorld *world, SpellEntity * entity);
 private:
+    float energy;
     int entityId;
 };
 

@@ -12,6 +12,7 @@
 #include <world/Box2DWorld.h>
 
 class SpellNode;
+class SpellEntity;
 
 class IEvent {
 public:
@@ -19,9 +20,9 @@ public:
 
     SpellNode *getNode() const { return fromNode; }
 
-    virtual void commit(Box2DWorld *world) { BOOST_LOG_TRIVIAL(info) << "Calling event"; }
+    virtual void commit(Box2DWorld *world, SpellEntity * entity) { BOOST_LOG_TRIVIAL(info) << "Calling event"; }
 
-private:
+protected:
     SpellNode *fromNode;
 };
 

@@ -13,7 +13,9 @@
 
 class EnergyNode : public SpellNode {
 public:
-    EnergyNode(float x, float y, float z, float energy) : SpellNode(x, y, z), energy(energy) {}
+    EnergyNode(float x, float y, float z, float energy) : SpellNode(NodeType::ENERGY, x, y, z), energy(energy) {}
+
+    EnergyNode(NodeType type, float x, float y, float z, float energy) : SpellNode(type, x, y, z), energy(energy) {}
 
     virtual bool isEnergyNode() { return true; }
 

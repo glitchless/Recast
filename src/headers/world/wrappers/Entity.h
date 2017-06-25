@@ -9,7 +9,9 @@
 #define RECAST_SERVER_ENTITY_H
 
 class EntityData;
+
 class b2Fixture;
+
 class Box2DWorld;
 
 class Entity {
@@ -19,6 +21,8 @@ public:
     int getId();
 
     virtual void update(Box2DWorld *box2DWorld) {}
+
+    b2Fixture *getFixture() const { return fixture; }
 
 private:
     b2Fixture *fixture;

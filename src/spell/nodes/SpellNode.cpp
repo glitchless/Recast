@@ -28,7 +28,7 @@ void SpellNode::tick(IEventListener &listener, SpellNode *callable) {
 }
 
 
-float pSq(float var) { // Возведение в квадрат
+float pSqu(float var) { // Возведение в квадрат
     return var * var;
 }
 /**
@@ -38,7 +38,7 @@ float pSq(float var) { // Возведение в квадрат
  * @return
  */
 float SpellNode::getDistance(const SpellNode *otherNode) const {
-    return sqrt(pSq(otherNode->x - x) + pSq(otherNode->y - y) + pSq(otherNode->z - z));
+    return sqrt(pSqu(otherNode->x - x) + pSqu(otherNode->y - y) + pSqu(otherNode->z - z));
 }
 
 SpellNode::~SpellNode() {

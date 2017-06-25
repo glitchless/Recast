@@ -19,6 +19,6 @@ void AimNode::onTick(IEventListener &listener, SpellNode *callable) {
 }
 
 AimNode::AimNode(float x, float y, float z, float energy,
-                 int entityId) : EnergyNode(x, y, z, energy), entityId(entityId) {
+                 int entityId) : EnergyNode(NodeType::AIM, x, y, z, energy), entityId(entityId) {
 
 }

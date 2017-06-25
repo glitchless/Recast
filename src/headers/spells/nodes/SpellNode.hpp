@@ -11,9 +11,16 @@
 #include <set>
 #include "spells/events/IEventListener.hpp"
 
+enum NodeType {
+    USUALLY = 0,
+    ENERGY = 1,
+    HEATER = 2,
+    AIM = 3
+};
+
 class SpellNode {
 public:
-    SpellNode(float x, float y, float z) : x(x), y(y), z(z), nowInTick(false) {}
+    SpellNode(NodeType type, float x, float y, float z) : x(x), y(y), z(z), type(type), nowInTick(false) {}
 
     ~SpellNode();
 
@@ -39,11 +46,13 @@ public:
 
     float getDistance(const SpellNode *otherNode) const;
 
+    NodeType getType() const { return type; }
+
 protected:
     float x, y, z; //// Relative coordinates from root node
     std::set<SpellNode *> connectedNodes;
     bool nowInTick; //// Inside var for iterrator between nodes
-
+    NodeType type;
 
     virtual inline void onTick(IEventListener &listener, SpellNode *callable) {};
 };

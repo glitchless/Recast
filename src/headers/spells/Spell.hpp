@@ -14,7 +14,7 @@
 
 class Spell {
 public:
-    Spell() : rootNode(new SpellNode(0, 0, 0)) {};
+    Spell() : rootNode(new SpellNode(NodeType::USUALLY, 0, 0, 0)) {};
 
     Spell(SpellNode *rootNode) : rootNode(rootNode) {};
 

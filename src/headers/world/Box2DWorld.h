@@ -15,6 +15,7 @@
 #include <Box2D/Box2D.h>
 
 class Spell;
+
 class SpellEntity;
 
 class Box2DWorld : public b2DestructionListener {
@@ -30,6 +31,8 @@ public:
     Entity *createEntity(b2BodyDef &bodyDef, b2FixtureDef &fixtureDef);
 
     SpellEntity *createSpellEntity(b2Vec2 &position, Spell *spell);
+
+    Entity *getEntityById(int id) { return entitysId[id]; }
 
     void subscribeToUpdate(Entity *entity) { needTickEntity.push_back(entity); }
 
