@@ -21,10 +21,16 @@ public:
     void run();
     void shutdown();
     bool running() { return isRunning; }
+    bool registerListener(NetworkListener *listener);
+    bool removeListener(NetworkListener *listener);
 private:
     uint32_t port;
     bool isTCP;
     volatile bool isRunning;
+    vector<NetworkListener*> listeners;
+
+    bool notifyListeners();
+    bool nofityListener(int id);
 
     void listenFor(shared_ptr<SocketTCP> client);
     void listenFor(shared_ptr<SocketUDP> client);

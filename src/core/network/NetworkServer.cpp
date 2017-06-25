@@ -77,11 +77,9 @@ void NetworkServer::shutdown() {
     isRunning = false;
 }
 
-string NetworkServer::exchange(const string action) {
-    // Game logic goes here
-
-    // Answer to client (difference snapshots? yes/no answer?)
-    string state = check(action);
+string NetworkServer::exchange(const string request) {
+    notifyListeners();
+    string state = check(request);
 
     return state;
 }
@@ -94,4 +92,38 @@ string NetworkServer::check(const string action) {
         result = "APPLIED";
     }
     return result;
+}
+
+bool NetworkServer::registerListener(NetworkListener* listener) {
+    vector<NetworkListener*>::iterator temp = find(listeners.begin(), listeners.end(), listener);
+    if (temp != listeners.end()) { return false; }
+    listeners.push_back(listener);
+    return true;
+}
+
+bool NetworkServer::removeListener(NetworkListener *listener) {
+    vector<NetworkListener*>::iterator temp = find(listeners.begin(), listeners.end(), listener);
+    if (temp == listeners.end()) {
+        return false;
+    } else {
+        listeners.erase(remove(listeners.begin(), listeners.end(), listener));
+        return true;
+    }
+}
+
+bool NetworkServer::notifyListeners() {
+    for_each(listeners.begin(), listeners.end(), Notifier(this)); // not implemented
+    return (listeners.size() > 0);
+}
+
+bool NetworkServer::nofityListener(int id) {
+    vector<NetworkListener*>::iterator temp = find_if(
+            listeners.begin(), listeners.end(),
+            [&id](NetworkListener& obj) { return obj.getId() == id; }
+    );
+    if (temp == listeners.end()) {
+        return false;
+    } else {
+        // Notify
+    }
 }
