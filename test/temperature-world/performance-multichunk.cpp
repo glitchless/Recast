@@ -4,7 +4,7 @@
 
 #include "temperature-world/implementation/BasicTimer.hpp"
 #include "temperature-world/types/Parallelepiped.hpp"
-#include "temperature-world/injectors/BoundTemperatureWorldInjector.hpp"
+#include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
 
 #include <memory>
 #include <iostream>
@@ -12,17 +12,19 @@
 using namespace std;
 
 int main() {
-    Size n = 99;
-    Parallelepiped worldBounds(n, n, n);
-
-    BoundTemperatureWorldInjector injector;
-    injector.setWorldBounds(worldBounds);
+    ScalingGeneratableChunkedTemperatureWorldInjector injector;
+    injector.setChunkBounds(Parallelepiped(32, 32, 8));
 
     auto world = injector.world();
     auto updater = injector.updater();
 
+    for (int ix = -4; ix < 4; ix++) {
+        for (int iy = -4; iy < 4; iy++) {
+            world->getOrGenerateChunk(ix * injector.chunkBounds().sizeX() + 1, iy * injector.chunkBounds().sizeY() + 1, 0);
+        }
+    }
+
     BasicTimer benchmarkTimer;
-    cout << "Number of blocks: " << world->bounds().volume() << endl;
     for (size_t i = 0; i < 5; i++) {
         benchmarkTimer.update();
 
