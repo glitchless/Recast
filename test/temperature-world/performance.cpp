@@ -6,7 +6,6 @@
 #include "temperature-world/types/Parallelepiped.hpp"
 #include "temperature-world/injectors/BoundTemperatureWorldInjector.hpp"
 
-#include <memory>
 #include <iostream>
 
 using namespace std;

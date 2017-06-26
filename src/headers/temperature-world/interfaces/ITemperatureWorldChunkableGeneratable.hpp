@@ -24,7 +24,6 @@ public:
      */
     virtual bool hasOrIsGeneratableChunk(Coord x, Coord y, Coord z) const noexcept = 0;
 
-
     /**
      * Retrieves chunk which holds this point.
      * If chunk doesn't exist, the method will generate chunk if it's possible.

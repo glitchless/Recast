@@ -99,7 +99,7 @@ function initWorld(scene, world) {
         meshCache = new Map();
         world.forEach(function (block) {
             var geometry = new THREE.BoxGeometry(5, 5, 5);
-            var material = new THREE.MeshBasicMaterial({color: new THREE.Color(block.t / 100, 0, 0.05)});
+            var material = new THREE.MeshBasicMaterial({color: new THREE.Color(block.t / 100, 0, 0.25)});
 
             var mesh = new THREE.Mesh(geometry, material);
             mesh.position.x = block.x * 100;

@@ -7,7 +7,7 @@
 #include "lib/crow_all.h"
 #include "temperature-world/interfaces/ITemperatureWorld.hpp"
 #include "temperature-world/interfaces/IUpdater.hpp"
-#include "temperature-world/injectors/BoundTemperatureWorldInjector.hpp"
+#include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
 #include "temperature-world/utils/FileUtils.hpp"
 
 using namespace std;
@@ -21,7 +21,7 @@ void startUpdater(shared_ptr<IUpdater> updater) {
     t.detach();
 }
 
-void startServer(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> world, shared_ptr<IUpdater> updater) {
+void startServer(shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> world, shared_ptr<IUpdater> updater) {
     crow::SimpleApp app;
 
     CROW_ROUTE(app, "/")([](){
@@ -40,12 +40,14 @@ void startServer(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> world
     CROW_ROUTE(app, "/get_world")([&](){
         crow::json::wvalue json;
         size_t i = 0;
-        world->foreach([&](Coord x, Coord y, Coord z) {
-            json["blocks"][i]["x"] = x;
-            json["blocks"][i]["y"] = y;
-            json["blocks"][i]["z"] = z;
-            json["blocks"][i]["t"] = world->get(x, y, z);
-            i++;
+        world->foreachChunk([&](const shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>& chunk) {
+            chunk->foreach([&](Coord x, Coord y, Coord z) {
+                json["blocks"][i]["x"] = x;
+                json["blocks"][i]["y"] = y;
+                json["blocks"][i]["z"] = z;
+                json["blocks"][i]["t"] = chunk->get(x, y, z);
+                i++;
+            });
         });
         return json;
     });
@@ -54,18 +56,20 @@ void startServer(shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> world
 }
 
 int main() {
-    Parallelepiped worldBounds(10, 10, 10);
-
-    BoundTemperatureWorldInjector injector;
-    injector.setWorldBounds(worldBounds);
+    ScalingGeneratableChunkedTemperatureWorldInjector injector;
+    injector.setChunkBounds(Parallelepiped(4, 4, 4));
 
     auto world = injector.world();
     auto updater = injector.updater();
 
-    for (Coord x = -2; x <= 2; x++) {
-        for (Coord z = -2; z <= 2; z++) {
-            world->set(x, world->bounds().maxY(), z, 750);
+    for (int ix = -3; ix < 3; ix++) {
+        for (int iy = -1; iy < 1; iy++) {
+            world->getOrGenerateChunk(ix * injector.chunkBounds().sizeX(), iy * injector.chunkBounds().sizeY(), 0);
         }
+    }
+
+    for (Coord x = -3; x <= 3; x++) {
+        world->set(x, 0, 0, 1000);
     }
 
     startUpdater(updater);

@@ -10,7 +10,7 @@ endif(PROFILE)
 # settings
 set(CMAKE_CXX_STANDARD 14)
 if(PROFILE)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g")
 endif(PROFILE)
 
 
@@ -63,6 +63,10 @@ target_link_libraries(temperature-world-unittest ${LIBRARIES})
 ### demo
 add_executable(temperature-world-demo test/temperature-world/demo.cpp test/temperature-world/lib/crow_all.h ${SOURCE_FILES})
 target_link_libraries(temperature-world-demo ${LIBRARIES})
+
+### demo-multichunk
+add_executable(temperature-world-demo-multichunk test/temperature-world/demo-multichunk.cpp test/temperature-world/lib/crow_all.h ${SOURCE_FILES})
+target_link_libraries(temperature-world-demo-multichunk ${LIBRARIES})
 
 ### performance
 add_executable(temperature-world-performance test/temperature-world/performance.cpp ${SOURCE_FILES})

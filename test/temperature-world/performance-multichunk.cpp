@@ -6,7 +6,6 @@
 #include "temperature-world/types/Parallelepiped.hpp"
 #include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
 
-#include <memory>
 #include <iostream>
 
 using namespace std;

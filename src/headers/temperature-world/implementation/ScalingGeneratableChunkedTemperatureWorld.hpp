@@ -37,6 +37,7 @@ public:
 
 protected:
     virtual void _updateScales();
+    virtual void _updateScale(std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>& chunk);
 
     Parallelepiped _baseChunkSize;
     std::list<Point> _priorityPoints;
