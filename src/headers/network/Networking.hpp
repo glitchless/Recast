@@ -19,8 +19,6 @@ using namespace std;
 
 const int DEFAULT_PORT_TCP = 1337;
 const int DEFAULT_PORT_UDP = 1338;
-const char NETWORKING_TCP = 1;
-const char NETWORKING_UDP = 2;
 
 string int2ipv4(uint32_t ip);
 
@@ -84,15 +82,17 @@ public:
 
 class NetworkListener {
 public:
-    NetworkListener(char listenerType) : type(listenerType), id(NetworkListener::swipeNext()) { };
+    NetworkListener() : id(NetworkListener::swipeNext()) { }
     ~NetworkListener() {}
 public:
-    static int next_id = -1;
+    static int next_id;
     static int swipeNext() { next_id++; return next_id; }
     int getId() { return id; }
+    char* onPacket(char *request) = 0;
 protected:
-    char type;
     int id;
 };
+
+
 
 #endif //RECAST_NETWORKING_H

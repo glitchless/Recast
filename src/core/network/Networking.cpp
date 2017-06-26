@@ -19,6 +19,8 @@
 
 #include "network/Networking.hpp"
 
+int NetworkListener::next_id = -1;
+
 string int2ipv4(uint32_t ip) {
     char buffer[128];
     snprintf(buffer, sizeof(buffer), "%u.%u.%u.%u", ip&0xFF, (ip&0xFF00) >> 8, (ip&0xFF0000) >> 16, (ip&0xFF000000) >> 24);
@@ -274,7 +276,6 @@ char* SocketUDP::recvBytesFrom(struct sockaddr_in &recvFromAddr) noexcept (false
     return buffer;
 }
 
-
 void SocketUDP::createServerSocket(uint32_t port) noexcept (false) {
     int sd = socket(PF_INET, SOCK_DGRAM, 0);
     if (sd <= 0) {
@@ -302,3 +303,10 @@ void SocketUDP::createServerSocket(uint32_t port) noexcept (false) {
 void SocketUDP::createServerSocket() noexcept (false) {
     createServerSocket(socketBoundPort);
 }
+
+char* NetworkListener::onPacket(char *request) {
+    // Do something when notified
+    cout << "Listener [" << id << "] got request \'" << request << "\'" << endl;
+    return request;
+}
+

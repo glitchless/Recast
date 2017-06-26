@@ -41,7 +41,7 @@ void NetworkServer::run() {
             isRunning = true;
             while (isRunning) {
                 shared_ptr<SocketUDP> client = make_shared<SocketUDP>(sock);
-                listenFor(client);
+                listenForBytes(client);
             }
         }
     } catch (const exception &e) {
@@ -61,6 +61,18 @@ void NetworkServer::listenFor(shared_ptr<SocketTCP> client) {
             }
 }
 
+void NetworkServer::listenForBytes(shared_ptr<SocketTCP> client) {
+    client->setRecvTimeout(30, 0); // s, ms
+    while (true) try {
+            char *request = client->recvBytes(1024);
+            char *response = exchange(request);
+            client->send(response);
+        } catch(const exception &e) {
+            cerr << "[ERR] An exception occurred: " << e.what() << endl;
+            return;
+            }
+}
+
 void NetworkServer::listenFor(shared_ptr<SocketUDP> client) {
     while(true) try {
             struct sockaddr_in senderAddr;
@@ -73,57 +85,65 @@ void NetworkServer::listenFor(shared_ptr<SocketUDP> client) {
         }
 }
 
+void NetworkServer::listenForBytes(shared_ptr<SocketUDP> client) {
+    while(true) try {
+            struct sockaddr_in senderAddr;
+            char *request = client->recvBytesFrom(senderAddr);
+            char *response = exchange(request);
+            client->sendTo(senderAddr, response);
+        } catch(const exception &e) {
+            cerr << "[ERR] An exception occurred: " << e.what() << endl;
+            return;
+        }
+}
+
 void NetworkServer::shutdown() {
     isRunning = false;
 }
 
 string NetworkServer::exchange(const string request) {
-    notifyListeners();
-    string state = check(request);
+    nofityListener(const_cast<char*>(request.data()));
 
-    return state;
+    return request;
 }
 
-string NetworkServer::check(const string action) {
-    // Example
-    string result = "DENIED";
-    if (action.find("CAST") != -1) {
-        // Checking appliability
-        result = "APPLIED";
-    }
-    return result;
+char* NetworkServer::exchange(char *request) {
+    nofityListener(request);
+
+    return request;
 }
 
 bool NetworkServer::registerListener(NetworkListener* listener) {
     vector<NetworkListener*>::iterator temp = find(listeners.begin(), listeners.end(), listener);
-    if (temp != listeners.end()) { return false; }
+    if (temp != listeners.end()) {
+        BOOST_LOG_TRIVIAL(info) << "[ERR] Listener id " << listener->getId() << " is already registered";
+        return false;
+    }
     listeners.push_back(listener);
+    BOOST_LOG_TRIVIAL(info) << "[INFO] Registered listener id " << listener->getId();
     return true;
 }
 
 bool NetworkServer::removeListener(NetworkListener *listener) {
     vector<NetworkListener*>::iterator temp = find(listeners.begin(), listeners.end(), listener);
     if (temp == listeners.end()) {
+        BOOST_LOG_TRIVIAL(info) << "[ERR] Listener id " << listener->getId() << " is not registered";
         return false;
     } else {
         listeners.erase(remove(listeners.begin(), listeners.end(), listener));
+        BOOST_LOG_TRIVIAL(info) << "[INFO] Unregistered listener id " << listener->getId();
         return true;
     }
 }
 
-bool NetworkServer::notifyListeners() {
-    for_each(listeners.begin(), listeners.end(), Notifier(this)); // not implemented
-    return (listeners.size() > 0);
-}
-
-bool NetworkServer::nofityListener(int id) {
+bool NetworkServer::nofityListener(char *request) {
+    int id = request[0];
     vector<NetworkListener*>::iterator temp = find_if(
-            listeners.begin(), listeners.end(),
-            [&id](NetworkListener& obj) { return obj.getId() == id; }
-    );
+            listeners.begin(), listeners.end(), [&id](NetworkListener* listener) { return listener->getId() == id; });
+
     if (temp == listeners.end()) {
         return false;
     } else {
-        // Notify
+        (*temp)->onPacket(request);
     }
 }
