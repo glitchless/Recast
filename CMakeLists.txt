@@ -28,13 +28,20 @@ file(GLOB_RECURSE SOURCE_FILES
         "src/*.cpp")
 
 
-# modules
-## temperature world
-add_subdirectory(temperature-world)
-include_directories(temperature-world/src/headers/)
-list(APPEND LIBRARIES temperature-world)
-
-
 # executable
 add_executable(Recast-server ${SOURCE_FILES})
 target_link_libraries(Recast-server ${LIBRARIES})
+
+
+# tests
+## unittest
+add_executable(temperature-world-unittest test/temperature-world/unittest.cpp test/temperature-world/lib/catch.hpp ${SOURCE_FILES})
+target_link_libraries(temperature-world-unittest ${LIBRARIES})
+
+## demo
+add_executable(temperature-world-demo test/temperature-world/demo.cpp test/temperature-world/lib/crow_all.h ${SOURCE_FILES})
+target_link_libraries(temperature-world-demo ${LIBRARIES})
+
+## performance
+add_executable(temperature-world-performance test/temperature-world/performance.cpp ${SOURCE_FILES})
+target_link_libraries(temperature-world-performance ${LIBRARIES})
