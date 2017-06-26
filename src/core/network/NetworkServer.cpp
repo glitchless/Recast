@@ -138,6 +138,7 @@ bool NetworkServer::removeListener(NetworkListener *listener) {
 
 bool NetworkServer::nofityListener(char *request) {
     int id = request[0];
+//    int id = 0; // DEBUG
     vector<NetworkListener*>::iterator temp = find_if(
             listeners.begin(), listeners.end(), [&id](NetworkListener* listener) { return listener->getId() == id; });
 

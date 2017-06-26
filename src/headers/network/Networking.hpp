@@ -82,17 +82,12 @@ public:
 
 class NetworkListener {
 public:
-    NetworkListener() : id(NetworkListener::swipeNext()) { }
-    ~NetworkListener() {}
+    NetworkListener(int id) : listenerId(id) { }
 public:
-    static int next_id;
-    static int swipeNext() { next_id++; return next_id; }
-    int getId() { return id; }
-    char* onPacket(char *request);
+    int getId() { return listenerId; }
+    virtual char* onPacket(char *request) = 0;
 protected:
-    int id;
+    int listenerId;
 };
-
-
 
 #endif //RECAST_NETWORKING_H
