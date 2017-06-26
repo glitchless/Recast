@@ -88,7 +88,7 @@ public:
     static int next_id;
     static int swipeNext() { next_id++; return next_id; }
     int getId() { return id; }
-    char* onPacket(char *request) = 0;
+    char* onPacket(char *request);
 protected:
     int id;
 };

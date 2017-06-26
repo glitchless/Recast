@@ -306,7 +306,7 @@ void SocketUDP::createServerSocket() noexcept (false) {
 
 char* NetworkListener::onPacket(char *request) {
     // Do something when notified
-    cout << "Listener [" << id << "] got request \'" << request << "\'" << endl;
+    cout << "[INFO] Listener [" << id << "] got request \'" << request << "\'" << endl;
     return request;
 }
 
