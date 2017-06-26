@@ -54,7 +54,7 @@ namespace {
         return address;
     }
 
-    void setNonBlockedImpl(int sd, bool option) throw (exception) {
+    void setNonBlockedImpl(int sd, bool option) noexcept (false) {
         int flags = fcntl(sd, F_GETFL, 0);
         int new_flags = (option)? (flags | O_NONBLOCK) : (flags & ~O_NONBLOCK);
         if (fcntl(sd, F_SETFL, new_flags) == -1) {
@@ -63,11 +63,11 @@ namespace {
     }
 } // namespace end //
 
-void Socket::setNonBlocked(bool option) throw (exception) {
+void Socket::setNonBlocked(bool option) noexcept (false) {
     setNonBlockedImpl(socketDescr, option);
 }
 
-void Socket::setReuseAddress(int sd) throw (exception) {
+void Socket::setReuseAddress(int sd) noexcept (false) {
     int yes = 1;
     if (setsockopt(sd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1) {
         ::close(sd);
@@ -75,7 +75,7 @@ void Socket::setReuseAddress(int sd) throw (exception) {
     }
 }
 
-void SocketTCP::setRecvTimeout(int seconds, int microseconds) throw (exception) {
+void SocketTCP::setRecvTimeout(int seconds, int microseconds) noexcept (false) {
     struct timeval tv;
     tv.tv_sec = seconds;
     tv.tv_usec = microseconds;
@@ -85,7 +85,7 @@ void SocketTCP::setRecvTimeout(int seconds, int microseconds) throw (exception) 
     }
 }
 
-void SocketTCP::send(const string &str) throw (exception) {
+void SocketTCP::send(const string &str) noexcept (false) {
     size_t left = str.size();
     ssize_t sent = 0;
     int flags = 0;
@@ -100,7 +100,7 @@ void SocketTCP::send(const string &str) throw (exception) {
     }
 }
 
-void SocketTCP::sendBytes(const char *data, size_t num) throw (exception) {
+void SocketTCP::sendBytes(const char *data, size_t num) noexcept (false) {
     size_t left = num;
     ssize_t sent = 0;
     int flags = 0;
@@ -115,7 +115,7 @@ void SocketTCP::sendBytes(const char *data, size_t num) throw (exception) {
     }
 }
 
-string SocketTCP::recv(size_t bytes) throw (exception) {
+string SocketTCP::recv(size_t bytes) noexcept (false) {
     char *buffer = new char[bytes];
     size_t r = 0;
     while (r != bytes) {
@@ -133,7 +133,7 @@ string SocketTCP::recv(size_t bytes) throw (exception) {
     return ret;
 }
 
-char* SocketTCP::recvBytes(size_t bytes) throw (exception) {
+char* SocketTCP::recvBytes(size_t bytes) noexcept (false) {
     char *buffer = new char[bytes];
     size_t r = 0;
     while (r != bytes) {
@@ -149,7 +149,7 @@ char* SocketTCP::recvBytes(size_t bytes) throw (exception) {
     return buffer;
 }
 
-string SocketTCP::recv() throw (exception) {
+string SocketTCP::recv() noexcept (false) {
     char buffer[256];
 #ifdef __APPLE__
     // mac os x doesn't define MSG_NOSIGNAL
@@ -176,7 +176,7 @@ string SocketTCP::recv() throw (exception) {
     return ret;
 }
 
-string SocketTCP::recvTimed(int timeout) throw (exception) {
+string SocketTCP::recvTimed(int timeout) noexcept (false) {
     fd_set read_fds;
     FD_ZERO(&read_fds);
     FD_SET(socketDescr, &read_fds);
@@ -189,14 +189,14 @@ string SocketTCP::recvTimed(int timeout) throw (exception) {
     return recv();
 }
 
-bool SocketTCP::hasData() throw (exception) {
+bool SocketTCP::hasData() noexcept (false) {
     char buf[1];
     int n = ::recv(socketDescr, buf, sizeof(buf), MSG_PEEK);
     if (n > 0) { return true; }
     return false;
 }
 
-void SocketTCP::createServerSocket(uint32_t port, uint32_t queueSize) throw (exception) {
+void SocketTCP::createServerSocket(uint32_t port, uint32_t queueSize) noexcept (false) {
     int sd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sd <= 0) {
         throw runtime_error("socket: " + string(strerror(errno)));
@@ -221,7 +221,7 @@ void SocketTCP::createServerSocket(uint32_t port, uint32_t queueSize) throw (exc
     // setNonBlocked(true);
 }
 
-shared_ptr<SocketTCP> SocketTCP::accept() throw (exception) {
+shared_ptr<SocketTCP> SocketTCP::accept() noexcept (false) {
     struct sockaddr_in client;
     memset(&client, 0, sizeof(client));
     socklen_t cli_len = sizeof(client);
@@ -234,15 +234,15 @@ shared_ptr<SocketTCP> SocketTCP::accept() throw (exception) {
 }
 
 
-void SocketUDP::sendTo(struct sockaddr_in &sendToAddr, const string &str) throw (exception) {
+void SocketUDP::sendTo(struct sockaddr_in &sendToAddr, const string &str) noexcept (false) {
     sendto(socketDescr, str.data(), str.size(), 0, (struct sockaddr *) &sendToAddr, sizeof(sendToAddr));
 }
 
-void SocketUDP::sendBytesTo(struct sockaddr_in &sendToAddr, const char *data, size_t num) throw (exception) {
+void SocketUDP::sendBytesTo(struct sockaddr_in &sendToAddr, const char *data, size_t num) noexcept (false) {
     sendto(socketDescr, data, num, 0, (struct sockaddr *) &sendToAddr, sizeof(sendToAddr));
 }
 
-string SocketUDP::recvFrom(struct sockaddr_in &recvFromAddr) throw (exception) {
+string SocketUDP::recvFrom(struct sockaddr_in &recvFromAddr) noexcept (false) {
     const size_t BUFFER_SIZE = 1024;
     ssize_t numBytes;
     socklen_t socketSize = sizeof(struct sockaddr_in);
@@ -257,7 +257,7 @@ string SocketUDP::recvFrom(struct sockaddr_in &recvFromAddr) throw (exception) {
     return result;
 }
 
-char* SocketUDP::recvBytesFrom(struct sockaddr_in &recvFromAddr) throw (exception) {
+char* SocketUDP::recvBytesFrom(struct sockaddr_in &recvFromAddr) noexcept (false) {
     const size_t BUFFER_SIZE = 1024;
     ssize_t numBytes;
     socklen_t socketSize = sizeof(struct sockaddr_in);
@@ -271,7 +271,7 @@ char* SocketUDP::recvBytesFrom(struct sockaddr_in &recvFromAddr) throw (exceptio
 }
 
 
-void SocketUDP::createServerSocket(uint32_t port) throw (exception) {
+void SocketUDP::createServerSocket(uint32_t port) noexcept (false) {
     int sd = socket(PF_INET, SOCK_DGRAM, 0);
     if (sd <= 0) {
         throw runtime_error("socket: " + string(strerror(errno)));

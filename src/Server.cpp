@@ -22,9 +22,7 @@
 
 #include "Server.hpp"
 #include "io/SQLite.hpp"
-#include "configs/Config.hpp"
-#include "exceptions/InvalidLoginOrPassword.hpp"
-#include "threads/InputThread.hpp"
+#include "io/configs/Config.hpp"
 #include "models/collections/PlayersOnline.hpp"
 #include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
 #include "temperature-world/implementation/BasicTimer.hpp"
