@@ -1,6 +1,6 @@
 /**
- * @file Serializable.cpp
- * @brief Serialization
+ * @file Parcel.hpp
+ * @brief Serialization Parcel class header file
  * @author LionZXY
  * @project Recast
  * @email nikita@kulikof.ru
