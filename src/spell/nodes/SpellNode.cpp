@@ -31,6 +31,7 @@ void SpellNode::tick(IEventListener &listener, SpellNode *callable) {
 float pSqu(float var) { // Возведение в квадрат
     return var * var;
 }
+
 /**
  * Получение расстояния от одной ноды до другой
  *
@@ -46,5 +47,14 @@ SpellNode::~SpellNode() {
     for (SpellNode *node : connectedNodes)
         if (!node->nowInTick)
             delete node;
+    nowInTick = false;
+}
+
+void SpellNode::iterrator(std::function<void(SpellNode *)> next) {
+    nowInTick = true;
+    next(this);
+    for (SpellNode *node : connectedNodes)
+        if (!node->nowInTick)
+            iterrator(next);
     nowInTick = false;
 }

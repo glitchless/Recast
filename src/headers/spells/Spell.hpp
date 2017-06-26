@@ -23,7 +23,7 @@ public:
     SpellNode *getRootNode() { return rootNode; }
 
     void tickSpell(SpellEventListener &listener);
-
+    void des(); //TODO
 private:
     SpellNode *rootNode;
 };

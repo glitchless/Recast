@@ -65,7 +65,10 @@ void CommandManager::onCommand(ICommandSender *sender, const std::string &cmd) {
 
     for (int i = 0; i < commands.size(); i++) {
         if (commands[i]->isValid(cmds[0], args)) {
-            valid.push_back(i);
+            if (commands[i]->isOnlyUICommand())
+                delayedCommand.push(new DelayCommand(sender, commands[i], cmds[0], args));
+            else
+                valid.push_back(i);
         }
     }
 
@@ -75,6 +78,16 @@ void CommandManager::onCommand(ICommandSender *sender, const std::string &cmd) {
         for (int i = 0; i < valid.size(); i++) {
             commands[valid[i]]->onCommand(*sender, cmds[0], args);
         }
+    }
+}
+
+using namespace std;
+
+void CommandManager::executeDelayedCommandInUI() {
+    DelayCommand *delayCommand;
+    while (!delayedCommand.empty() && delayedCommand.pop(delayCommand)) {
+        delayCommand->execute();
+        delete delayCommand;
     }
 }
 

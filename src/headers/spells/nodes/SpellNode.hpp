@@ -48,6 +48,10 @@ public:
 
     NodeType getType() const { return type; }
 
+    void iterrator(std::function<void(SpellNode *)> next);
+
+    std::set<SpellNode *> &getConnectedNodes() { return connectedNodes; }
+
 protected:
     float x, y, z; //// Relative coordinates from root node
     std::set<SpellNode *> connectedNodes;

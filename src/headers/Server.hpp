@@ -57,8 +57,9 @@ public:
 
     PlayersOnline *getPlayers() const { return players; }
 
-    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>>
-    getTemperatureWorld() const { return temperatureWorld; }
+    virtual Box2DWorld *getWorld() { return &world; }
+
+    auto getTemperatureWorld() const { return temperatureWorld; }
 
 private:
     void initTemperatureWorld();

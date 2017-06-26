@@ -21,14 +21,11 @@
 #include <boost/filesystem.hpp>
 #include <Box2D/Box2D.h>
 #include <spells/nodes/EnergyNode.hpp>
-#include <spells/nodes/HeaterNode.hpp>
 
 #include "Server.hpp"
 #include "io/SQLite.hpp"
 #include "models/collections/PlayersOnline.hpp"
 #include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
-#include "spells/Spell.hpp"
-#include "world/wrappers/SpellEntity.h"
 
 using namespace std;
 using namespace boost;
@@ -72,15 +69,9 @@ void Server::initServer() {
 }
 
 void Server::update() {
-    //temperatureWorldUpdater->update();
-
-    Spell *spell = new Spell(new EnergyNode(0, 0, 0, 200));
-    spell->getRootNode()->connectNode(new HeaterNode(2, 2, 2, 0));
-    b2Vec2 pos = b2Vec2(10.0f, 10.0f);
-    world.subscribeToUpdate(world.createSpellEntity(pos, spell));
-    vector<Entity> entity = world.getAllEntityInChunk(-1000.0f, 1000.0f);
-    for (int i = 0; i < 360; i++)
-        world.update();
+    temperatureWorldUpdater->update();
+    world.update();
+    inputObject->getManager()->executeDelayedCommandInUI();
 }
 
 Server::Server() {

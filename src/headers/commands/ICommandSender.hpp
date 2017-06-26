@@ -2,6 +2,7 @@
 #define RECAST_SERVER_ICOMMANDSENDER_H
 
 #include <string>
+#include <world/Box2DWorld.h>
 
 class Server;
 
@@ -13,7 +14,8 @@ public:
 
     virtual Server *getServer() = 0;
 
-    //TODO getWorld()
+    virtual Box2DWorld *getWorld() = 0;
+
     virtual Player *getPlayer() = 0;
 
     virtual void onMessage(const std::string &msg) = 0;

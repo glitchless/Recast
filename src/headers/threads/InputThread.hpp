@@ -24,6 +24,8 @@ public:
 
     void init();
 
+    CommandManager *getManager() { return &manager; }
+
 private:
     Server *server;
     CommandManager manager;

@@ -14,6 +14,9 @@
 #include <vector>
 #include <string>
 #include <boost/shared_ptr.hpp>
+#include <boost/lockfree/queue.hpp>
+#include <queue>
+#include "utils/DelayCommand.h"
 
 class ICommandSender;
 
@@ -32,8 +35,11 @@ public:
 
     void onCommand(ICommandSender *sender, const std::string &cmd);
 
+    void executeDelayedCommandInUI();
+
 private:
     std::vector<std::shared_ptr<ICommand>> commands;
+    boost::lockfree::queue<DelayCommand *, boost::lockfree::capacity<10>> delayedCommand;
 };
 
 
