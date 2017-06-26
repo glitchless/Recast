@@ -10,20 +10,18 @@
  *
  **/
 
-
 #include "utils/Parcel.hpp"
 
+template<class T>
+char inline getByte(T var, int number);
 
 template<class T>
-unsigned char inline getByte(T var, int number);
-
-template<class T>
-void inline setByte(unsigned char byte, int number, T *var);
+void inline setByte(char byte, int number, T *var);
 
 Parcel::Parcel(int code) {
     this->code = code;
     curPos = sizeof(int);
-    data = new std::vector<unsigned char>();
+    data = new std::vector<char>();
     put(code);
 }
 
@@ -31,7 +29,7 @@ int Parcel::getCode() {
     return this->code;
 }
 
-Parcel::Parcel(std::vector<unsigned char> *data) {
+Parcel::Parcel(std::vector<char> *data) {
     this->code = readInt();
     this->data = data;
     this->curPos = 0;
@@ -57,7 +55,7 @@ int Parcel::readInt() {
 
 std::string Parcel::readString() {
     std::string str;
-    unsigned char tmp;
+    char tmp;
     while ((tmp = (*data)[curPos++]) != '\0') {
         str.push_back(tmp);
     }
@@ -74,16 +72,16 @@ float Parcel::readFloat() {
 
 void Parcel::putString(std::string var) {
     for (size_t i = 0; i < var.length(); i++)
-        data->push_back((unsigned char) var.at(i));
+        data->push_back((char) var.at(i));
     data->push_back('\0');
 }
 
 template<class T>
-void inline setByte(unsigned char byte, int number, T *var) {
-    *(unsigned char *) (((void *) var) + number) = byte;
+void inline setByte(char byte, int number, T *var) {
+    *(char *) (((void *) var) + number) = byte;
 }
 
 template<class T>
-unsigned char inline getByte(T var, int number) {
-    return (unsigned char) ((var >> ((sizeof(T) - number - 1) * 8)) & 255);
+char inline getByte(T var, int number) {
+    return (char) ((var >> ((sizeof(T) - number - 1) * 8)) & 255);
 }

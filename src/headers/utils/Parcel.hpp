@@ -25,7 +25,7 @@
 class Parcel {
 public:
     Parcel(int code);
-    Parcel(std::vector<unsigned char> * data);
+    Parcel(std::vector<char> * data);
     ~Parcel();
     Parcel(Parcel &other) = delete;
 
@@ -39,7 +39,7 @@ public:
 private:
     int code;
     int curPos;
-    std::vector<unsigned char> * data;
+    std::vector<char> * data;
 };
 
 
