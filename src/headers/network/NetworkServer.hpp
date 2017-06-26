@@ -1,5 +1,5 @@
 /**
- * @file server.cpp
+ * @file NetworkServer.hpp
  * @brief Networking server header file
  * @author StealthTech
  * @project Recast-server
@@ -8,14 +8,15 @@
  *
  **/
 
-#ifndef RECAST_NETWORKINGSERVER_H
-#define RECAST_NETWORKINGSERVER_H
+#ifndef RECAST_NETWORKING_SERVER_HPP
+#define RECAST_NETWORKING_SERVER_HPP
 
 #include <vector>
-
 #include "network/Networking.hpp"
 
 using namespace std;
+
+void setNonBlockedImpl(int sd, bool option) noexcept (false);
 
 class NetworkServer {
 public:
@@ -40,4 +41,4 @@ private:
     char* exchange(char *request);
 };
 
-#endif //RECAST_NETWORKINGSERVER_H
+#endif //RECAST_NETWORKING_SERVER_HPP
