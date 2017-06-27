@@ -22,7 +22,6 @@
 #include <Box2D/Box2D.h>
 #include <spells/nodes/EnergyNode.hpp>
 
-#include "Server.hpp"
 #include "io/SQLite.hpp"
 #include "models/collections/PlayersOnline.hpp"
 #include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
@@ -74,7 +73,7 @@ void Server::update() {
     inputObject->getManager()->executeDelayedCommandInUI();
 }
 
-Server::Server() {
+Server::Server() : world(this) {
     isLaunching = false;
 
     uint32_t portTCP = static_cast<uint32_t>(Config::g("general.server.port.tcp", DEFAULT_PORT_TCP));

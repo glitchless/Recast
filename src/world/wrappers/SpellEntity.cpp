@@ -9,8 +9,9 @@
 #include "world/wrappers/SpellEntity.h"
 #include "spells/Spell.hpp"
 
-SpellEntity::SpellEntity(b2Fixture *fixture1, Spell *spell, Box2DWorld *world) : Entity(fixture1), spell(spell),
-                                                                                 listener(this, world) {}
+SpellEntity::SpellEntity(b2Fixture *fixture1, Spell *spell, Box2DWorld *world, std::shared_ptr<TempWorld> tempWorld)
+        : Entity(fixture1), spell(spell),
+          listener(this, world, tempWorld) {}
 
 void SpellEntity::update(Box2DWorld *box2DWorld) {
     spell->tickSpell(listener);

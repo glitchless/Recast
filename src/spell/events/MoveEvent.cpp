@@ -13,7 +13,7 @@ float pSq(float var) { // Возведение в квадрат
     return var * var;
 }
 
-void MoveEvent::commit(Box2DWorld *world, SpellEntity * entity) {
+void MoveEvent::commit(Box2DWorld *world, SpellEntity * entity, std::shared_ptr<TempWorld> tempWorld) {
     double k = Config::g("spell.event.move.density_k", 0.001); // Коэфициент сжатия силовой пружины
     Entity *target = world->getEntityById(entityId);
     if(target == NULL)

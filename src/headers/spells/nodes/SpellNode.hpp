@@ -52,6 +52,10 @@ public:
 
     std::set<SpellNode *> &getConnectedNodes() { return connectedNodes; }
 
+    float getX() const { return x; }
+    float getY() const { return y; }
+    float getZ() const { return z; }
+
 protected:
     float x, y, z; //// Relative coordinates from root node
     std::set<SpellNode *> connectedNodes;

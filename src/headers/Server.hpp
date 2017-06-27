@@ -29,6 +29,8 @@ class Player;
 
 class PlayersOnline;
 
+typedef ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>> TempWorld;
+
 /**
  * @brief Main class in Recast Server
  */
@@ -59,7 +61,7 @@ public:
 
     virtual Box2DWorld *getWorld() { return &world; }
 
-    auto getTemperatureWorld() const { return temperatureWorld; }
+    std::shared_ptr<TempWorld> getTemperatureWorld() const { return temperatureWorld; }
 
 private:
     void initTemperatureWorld();
@@ -76,7 +78,7 @@ private:
     NetworkServer *serverTCP;
     NetworkServer *serverUDP;
     InputThread *inputObject;
-    std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> temperatureWorld;
+    std::shared_ptr<TempWorld> temperatureWorld;
     std::shared_ptr<IUpdater> temperatureWorldUpdater;
 
     Box2DWorld world;

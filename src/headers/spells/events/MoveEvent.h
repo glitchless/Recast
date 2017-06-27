@@ -14,7 +14,7 @@
 class MoveEvent : public IEvent {
 public:
     MoveEvent(SpellNode *node, int entityId, float energy) : IEvent(node), entityId(entityId), energy(energy) {}
-    void commit(Box2DWorld *world, SpellEntity * entity);
+    void commit(Box2DWorld *world, SpellEntity * entity, std::shared_ptr<TempWorld> tempWorld);
 private:
     float energy;
     int entityId;

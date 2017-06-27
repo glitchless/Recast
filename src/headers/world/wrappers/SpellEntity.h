@@ -15,12 +15,14 @@ class Spell;
 
 class SpellEntity : public Entity {
 public:
-    SpellEntity(b2Fixture *fixture1, Spell *spell, Box2DWorld * world);
+    SpellEntity(b2Fixture *fixture1, Spell *spell, Box2DWorld *world, std::shared_ptr<TempWorld> tempWorld);
+
     ~SpellEntity();
+
     void update(Box2DWorld *box2DWorld);
 
 private:
-    Spell * spell;
+    Spell *spell;
     SpellEventListener listener;
 };
 

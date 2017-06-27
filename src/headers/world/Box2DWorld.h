@@ -16,11 +16,13 @@
 
 class Spell;
 
+class Server;
+
 class SpellEntity;
 
 class Box2DWorld : public b2DestructionListener {
 public:
-    Box2DWorld();
+    Box2DWorld(Server *server);
 
     ~Box2DWorld();
 
@@ -45,7 +47,7 @@ private:
     std::set<int> existGround; // Костыль божественной мощи
     std::vector<Entity *> needTickEntity;
     std::unordered_map<int, Entity *> entitysId;
-
+    Server *server;
     int freeId = 0;
 
     void checkAndCreateGround(float x1, float x2);

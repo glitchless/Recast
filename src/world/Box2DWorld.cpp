@@ -16,7 +16,7 @@ static const int32 POS_ITERRATION_PER_CALCULATE = 10;
 static const int32 VELOCITY_ITERRATION_PER_CALCULATE = 10;
 static const float32 MAX_HEIGHT = 100.0f;
 
-Box2DWorld::Box2DWorld() {
+Box2DWorld::Box2DWorld(Server *server) : server(server) {
     // Создание мира с гравитацией 10g
     world = new b2World(b2Vec2(0.0f, -10.0f));
     world->SetDestructionListener(this);
@@ -96,7 +96,7 @@ void Box2DWorld::SayGoodbye(b2Fixture *fixture) {
             delete entitysId[data->id];
             entitysId[data->id] = NULL;
         }
-        if(data->spellEntity != NULL){
+        if (data->spellEntity != NULL) {
             data->spellEntity = NULL;
         }
         delete data;
@@ -124,7 +124,7 @@ SpellEntity *Box2DWorld::createSpellEntity(b2Vec2 &position, Spell *spell) {
     ((EntityData *) bodyDef.userData)->id = freeId;
 
     b2Body *body = world->CreateBody(&bodyDef);
-    SpellEntity *entity = new SpellEntity(body->CreateFixture(&fixtureDef), spell, this);
+    SpellEntity *entity = new SpellEntity(body->CreateFixture(&fixtureDef), spell, this, server->getTemperatureWorld());
     entitysId[freeId] = entity;
     data->spellEntity = entity;
     return (SpellEntity *) entity;
