@@ -32,7 +32,7 @@ public:
 
     Entity *createEntity(b2BodyDef &bodyDef, b2FixtureDef &fixtureDef);
 
-    SpellEntity *createSpellEntity(b2Vec2 &position, Spell *spell);
+    SpellEntity *createSpellEntity(b2Vec2 position, Spell *spell);
 
     Entity *getEntityById(int id) { return entitysId[id]; }
 

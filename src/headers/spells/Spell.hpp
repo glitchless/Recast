@@ -23,7 +23,9 @@ public:
     SpellNode *getRootNode() { return rootNode; }
 
     void tickSpell(SpellEventListener &listener);
-    void des(); //TODO
+
+    static void write(Parcel &in, Spell * obj);
+    static Spell *read(Parcel &out);
 private:
     SpellNode *rootNode;
 };

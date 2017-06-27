@@ -39,12 +39,6 @@ Parcel::~Parcel() {
     delete data;
 }
 
-template<class T>
-void Parcel::put(T var) {
-    for (int i = 0; i < sizeof(T); i++)
-        data->push_back(getByte(var, i));
-}
-
 int Parcel::readInt() {
     int var = 0;
     for (int i = 0; i < sizeof(int); i++, curPos++) {
@@ -76,12 +70,3 @@ void Parcel::putString(std::string var) {
     data->push_back('\0');
 }
 
-template<class T>
-void inline setByte(char byte, int number, T *var) {
-    *(char *) (((void *) var) + number) = byte;
-}
-
-template<class T>
-char inline getByte(T var, int number) {
-    return (char) ((var >> ((sizeof(T) - number - 1) * 8)) & 255);
-}

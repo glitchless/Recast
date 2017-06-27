@@ -17,6 +17,16 @@
 #include <vector>
 #include <string>
 
+template<class T>
+void inline setByte(char byte, int number, T *var) {
+    *(char *) (((void *) var) + number) = byte;
+}
+
+template<class T>
+char inline getByte(T var, int number) {
+    return (char) ((var >> ((sizeof(T) - number - 1) * 8)) & 255);
+}
+
 /**
  * @class Parcel
  *
@@ -25,33 +35,40 @@
 class Parcel {
 public:
     Parcel(int code);
-    Parcel(std::vector<char> * data);
+
+    Parcel(std::vector<char> *data);
+
     ~Parcel();
+
     Parcel(Parcel &other) = delete;
 
     int getCode();
+
     void putString(std::string var);
-    template <class T> void put(T var);
+
+    template<class T>
+    void put(T var) {
+        unsigned char const * p = reinterpret_cast<unsigned char const *>(&var);
+        for (int i = 0; i < sizeof(T); i++)
+            data->push_back((char &&) p[i]);
+    }
 
     int readInt();
+
     std::string readString();
+
     float readFloat();
+
 private:
     int code;
     int curPos;
-    std::vector<char> * data;
+    std::vector<char> *data;
 };
 
 
-enum ParcelableIDs{
+enum ParcelableIDs {
     USER_PARCE = 0,
     UNKNOWN = 0
-};
-
-class ISerializable {
-public:
-    void write(Parcel in);
-    void read(Parcel out);
 };
 
 #endif //RECAST_SERIALIZABLE_H

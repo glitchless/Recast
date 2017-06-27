@@ -104,7 +104,7 @@ void Box2DWorld::SayGoodbye(b2Fixture *fixture) {
     }
 }
 
-SpellEntity *Box2DWorld::createSpellEntity(b2Vec2 &position, Spell *spell) {
+SpellEntity *Box2DWorld::createSpellEntity(b2Vec2 position, Spell *spell) {
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
     bodyDef.position.Set(position.x, position.y);

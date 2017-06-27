@@ -21,10 +21,13 @@
 #include <boost/filesystem.hpp>
 #include <Box2D/Box2D.h>
 #include <spells/nodes/EnergyNode.hpp>
+#include <spells/Spell.hpp>
 
 #include "io/SQLite.hpp"
 #include "models/collections/PlayersOnline.hpp"
 #include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
+#include "spells/nodes/HeaterNode.hpp"
+#include "spells/nodes/GeneratorNode.h"
 
 using namespace std;
 using namespace boost;
@@ -64,6 +67,16 @@ void Server::initServer() {
     BOOST_LOG_TRIVIAL(info) << "Initializing network...";
     runNetworkServer(serverTCP, serverUDP);
 
+    Spell *spell = new Spell();
+    SpellNode *node = new HeaterNode(1, 1, 1, 0);
+    node->connectNode(new GeneratorNode(2, 2, 2, 0));
+    spell->getRootNode()->connectNode(node);
+    Parcel parcel(1);
+    spell->write(parcel, spell);
+
+    Spell *newSpell = Spell::read(parcel);
+    b2Vec2 pos(0.0f, 0.0f);
+    world.subscribeToUpdate((Entity *) world.createSpellEntity(pos, newSpell));
     while (isRunning()) {
         update();
     }
