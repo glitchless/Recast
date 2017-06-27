@@ -26,4 +26,11 @@ protected:
     int listenerId;
 };
 
+class DebugNetworkListener : public NetworkListener {
+public:
+    using NetworkListener::NetworkListener;
+public:
+    char* onPacket(char *request) { cout << "Listener [" << listenerId << "] got request" << request << endl; return request; }
+};
+
 #endif //RECAST_SERVER_NETWORKLISTENER_HPP
