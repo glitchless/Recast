@@ -1,7 +1,4 @@
 <map id="Server::initServer" name="Server::initServer">
-<area shape="rect" id="node2" href="$_server_8cpp.html#a4fa9798662b6f85f704142579620acd0" title="initLogger" alt="" coords="239,5,318,32"/>
-<area shape="rect" id="node3" href="$class_input_thread.html#ac33f0f934c6dc40c7747b96e8b60a736" title="InputThread::init" alt="" coords="221,56,337,83"/>
-<area shape="rect" id="node4" href="$class_basic_timer.html#abf76823ef1c782a0c6d49af2652b5271" title="BasicTimer::update" alt="" coords="211,107,346,133"/>
-<area shape="rect" id="node5" href="$class_basic_timer.html#afbe3d01b15f26573eb12c04ae7c28684" title="BasicTimer::deltaFloatSeconds" alt="" coords="177,157,381,184"/>
-<area shape="rect" id="node6" href="$class_basic_timer.html#a49bc91a549323a1a7fc6b7d9ec727174" title="BasicTimer::delta" alt="" coords="430,157,554,184"/>
+<area shape="rect" id="node2" href="$_server_8cpp.html#a4fa9798662b6f85f704142579620acd0" title="initLogger" alt="" coords="195,5,274,32"/>
+<area shape="rect" id="node3" href="$class_input_thread.html#ac33f0f934c6dc40c7747b96e8b60a736" title="InputThread::init" alt="" coords="177,56,293,83"/>
 </map>

@@ -3,7 +3,7 @@
 }
 
 
-{\ttfamily \#include $<$Networking.\-hpp$>$}
+{\ttfamily \#include $<$Socket.\-hpp$>$}
 
 
 
@@ -22,7 +22,7 @@ Collaboration diagram for Socket\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=188pt]{class_socket__coll__graph}
+\includegraphics[width=198pt]{class_socket__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -39,6 +39,8 @@ int \hyperlink{class_socket_ae10384da04283e2a75b4cfbb8c6da59a}{get\-Socket\-Desc
 void \hyperlink{class_socket_aa264f52f830e5c1bea3cd92732df35f8}{set\-Non\-Blocked} (bool option)
 \item 
 void \hyperlink{class_socket_a75ee749264ccbcfc4dfbf5442e55dcb8}{close} ()
+\item 
+virtual void \hyperlink{class_socket_a3376aae78f0c696c3787e4f04ed7f680}{create\-Server\-Socket} ()=0
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -49,6 +51,8 @@ void \hyperlink{class_socket_a51eb429ad7f6f6ab1adafe64d302ed55}{set\-Reuse\-Addr
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{class_socket_a610fbf456550dd084cfaee9d1267e5c8}{socket\-Descr}
+\item 
+uint32\-\_\-t \hyperlink{class_socket_ab05ebf38966e1cd1f093819a6bdad5b1}{socket\-Bound\-Port}
 \end{DoxyCompactItemize}
 
 
@@ -76,6 +80,18 @@ int \hyperlink{class_socket_a610fbf456550dd084cfaee9d1267e5c8}{socket\-Descr}
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_socket_aeac4eb6379a543d38ed88977d3b6630a}
 
 
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{class_socket_aeac4eb6379a543d38ed88977d3b6630a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_socket_a75ee749264ccbcfc4dfbf5442e55dcb8}{\index{Socket@{Socket}!close@{close}}
 \index{close@{close}!Socket@{Socket}}
@@ -84,6 +100,29 @@ int \hyperlink{class_socket_a610fbf456550dd084cfaee9d1267e5c8}{socket\-Descr}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_socket_a75ee749264ccbcfc4dfbf5442e55dcb8}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{class_socket_a75ee749264ccbcfc4dfbf5442e55dcb8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_socket_a3376aae78f0c696c3787e4f04ed7f680}{\index{Socket@{Socket}!create\-Server\-Socket@{create\-Server\-Socket}}
+\index{create\-Server\-Socket@{create\-Server\-Socket}!Socket@{Socket}}
+\subsubsection[{create\-Server\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Socket\-::create\-Server\-Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_socket_a3376aae78f0c696c3787e4f04ed7f680}
+
+
+Implemented in \hyperlink{class_socket_t_c_p_a4c2511b908febb309453487a5e79aaf9}{Socket\-T\-C\-P}, and \hyperlink{class_socket_u_d_p_aeac93900205bb3c08a90008dfda3585b}{Socket\-U\-D\-P}.
+
 \hypertarget{class_socket_ae10384da04283e2a75b4cfbb8c6da59a}{\index{Socket@{Socket}!get\-Socket\-Descr@{get\-Socket\-Descr}}
 \index{get\-Socket\-Descr@{get\-Socket\-Descr}!Socket@{Socket}}
 \subsubsection[{get\-Socket\-Descr}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\-::get\-Socket\-Descr (
@@ -98,6 +137,18 @@ int \hyperlink{class_socket_a610fbf456550dd084cfaee9d1267e5c8}{socket\-Descr}
 \item[{bool}]{option}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{class_socket_aa264f52f830e5c1bea3cd92732df35f8}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_socket_aa264f52f830e5c1bea3cd92732df35f8_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_socket_a51eb429ad7f6f6ab1adafe64d302ed55}{\index{Socket@{Socket}!set\-Reuse\-Address@{set\-Reuse\-Address}}
 \index{set\-Reuse\-Address@{set\-Reuse\-Address}!Socket@{Socket}}
 \subsubsection[{set\-Reuse\-Address}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-::set\-Reuse\-Address (
@@ -108,6 +159,9 @@ int \hyperlink{class_socket_a610fbf456550dd084cfaee9d1267e5c8}{socket\-Descr}
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_socket_ab05ebf38966e1cd1f093819a6bdad5b1}{\index{Socket@{Socket}!socket\-Bound\-Port@{socket\-Bound\-Port}}
+\index{socket\-Bound\-Port@{socket\-Bound\-Port}!Socket@{Socket}}
+\subsubsection[{socket\-Bound\-Port}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t Socket\-::socket\-Bound\-Port\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_socket_ab05ebf38966e1cd1f093819a6bdad5b1}
 \hypertarget{class_socket_a610fbf456550dd084cfaee9d1267e5c8}{\index{Socket@{Socket}!socket\-Descr@{socket\-Descr}}
 \index{socket\-Descr@{socket\-Descr}!Socket@{Socket}}
 \subsubsection[{socket\-Descr}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\-::socket\-Descr\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_socket_a610fbf456550dd084cfaee9d1267e5c8}
@@ -115,5 +169,5 @@ int \hyperlink{class_socket_a610fbf456550dd084cfaee9d1267e5c8}{socket\-Descr}
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/network/\hyperlink{_networking_8hpp}{Networking.\-hpp}\item 
-/home/travis/build/bender-\/wardrobe/\-Recast/src/core/network/\hyperlink{_networking_8cpp}{Networking.\-cpp}\end{DoxyCompactItemize}
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/network/\hyperlink{_socket_8hpp}{Socket.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/core/network/\hyperlink{_socket_8cpp}{Socket.\-cpp}\end{DoxyCompactItemize}

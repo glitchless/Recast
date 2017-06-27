@@ -8,6 +8,7 @@ var searchData=
   ['session_5flength',['SESSION_LENGTH',['../_players_online_8hpp.html#a691e4bc5ad1d481487a1c16f953a7adc',1,'PlayersOnline.hpp']]],
   ['sizer',['sizer',['../struct_catch_1_1_detail_1_1_true_type.html#a3aaaeb75909e668b293c8a81f5fb6419',1,'Catch::Detail::TrueType::sizer()'],['../struct_catch_1_1_detail_1_1_false_type.html#abc1a730e197d6f7750ae8aaf47b63477',1,'Catch::Detail::FalseType::sizer()']]],
   ['socket_5f',['socket_',['../structcrow_1_1_socket_adaptor.html#adfae304955845303cee26c31910b1f2c',1,'crow::SocketAdaptor']]],
+  ['socketboundport',['socketBoundPort',['../class_socket.html#ab05ebf38966e1cd1f093819a6bdad5b1',1,'Socket']]],
   ['socketdescr',['socketDescr',['../class_socket.html#a610fbf456550dd084cfaee9d1267e5c8',1,'Socket']]],
   ['start',['start',['../structcrow_1_1mustache_1_1_action.html#a643c89b2d81bfc2d2eedfca0cb119068',1,'crow::mustache::Action']]],
   ['state',['state',['../structhttp__parser.html#a6f5952e0b47c83aeacf64fc287fd8003',1,'http_parser']]],

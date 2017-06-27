@@ -95,26 +95,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_networking_8hpp_source.html">Networking.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_socket_u_d_p_8hpp_source.html">SocketUDP.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SocketUDP:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_socket_u_d_p__inherit__graph.png" border="0" usemap="#_socket_u_d_p_inherit__map" alt="Inheritance graph"/></div>
 <map name="_socket_u_d_p_inherit__map" id="_socket_u_d_p_inherit__map">
-<area shape="rect" id="node2" href="class_socket.html" title="{Socket\n|# socketDescr\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ getSocketDescr()\l+ setNonBlocked()\l+ close()\l# setReuseAddress()\l}" alt="" coords="11,5,156,171"/></map>
+<area shape="rect" id="node2" href="class_socket.html" title="{Socket\n|# socketDescr\l# socketBoundPort\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ getSocketDescr()\l+ setNonBlocked()\l+ close()\l+ createServerSocket()\l# setReuseAddress()\l}" alt="" coords="5,5,163,200"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for SocketUDP:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_socket_u_d_p__coll__graph.png" border="0" usemap="#_socket_u_d_p_coll__map" alt="Collaboration graph"/></div>
 <map name="_socket_u_d_p_coll__map" id="_socket_u_d_p_coll__map">
-<area shape="rect" id="node2" href="class_socket.html" title="{Socket\n|# socketDescr\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ getSocketDescr()\l+ setNonBlocked()\l+ close()\l# setReuseAddress()\l}" alt="" coords="11,5,156,171"/></map>
+<area shape="rect" id="node2" href="class_socket.html" title="{Socket\n|# socketDescr\l# socketBoundPort\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ getSocketDescr()\l+ setNonBlocked()\l+ close()\l+ createServerSocket()\l# setReuseAddress()\l}" alt="" coords="5,5,163,200"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa41096c8eecdf55a7557549e8f6a5d4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#aa41096c8eecdf55a7557549e8f6a5d4a">SocketUDP</a> (uint32_t port)</td></tr>
 <tr class="separator:aa41096c8eecdf55a7557549e8f6a5d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeac93900205bb3c08a90008dfda3585b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#aeac93900205bb3c08a90008dfda3585b">createServerSocket</a> () override</td></tr>
+<tr class="separator:aeac93900205bb3c08a90008dfda3585b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48b2c650565eba38d9654ac16d21c60c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#a48b2c650565eba38d9654ac16d21c60c">createServerSocket</a> (uint32_t port)</td></tr>
 <tr class="separator:a48b2c650565eba38d9654ac16d21c60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a207c3d7c2b854b140dcb4ca9a9c81292"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#a207c3d7c2b854b140dcb4ca9a9c81292">sendTo</a> (struct sockaddr_in &amp;sendToAddr, const string &amp;str)</td></tr>
@@ -125,6 +127,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a69cce05867435fb471a50319855e34fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c3ff487d034850ad2096339cfa06707"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html#a4c3ff487d034850ad2096339cfa06707">recvBytesFrom</a> (struct sockaddr_in &amp;recvFromAddr)</td></tr>
 <tr class="separator:a4c3ff487d034850ad2096339cfa06707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_socket"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_socket')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_socket.html">Socket</a></td></tr>
+<tr class="memitem:a7c3256c4fc6e2c603df73201049fae5a inherit pub_methods_class_socket"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a7c3256c4fc6e2c603df73201049fae5a">Socket</a> ()</td></tr>
+<tr class="separator:a7c3256c4fc6e2c603df73201049fae5a inherit pub_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba0adce0be29d723470f6e80d65b67e inherit pub_methods_class_socket"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aaba0adce0be29d723470f6e80d65b67e">Socket</a> (int sd)</td></tr>
+<tr class="separator:aaba0adce0be29d723470f6e80d65b67e inherit pub_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeac4eb6379a543d38ed88977d3b6630a inherit pub_methods_class_socket"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aeac4eb6379a543d38ed88977d3b6630a">~Socket</a> ()</td></tr>
+<tr class="separator:aeac4eb6379a543d38ed88977d3b6630a inherit pub_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae10384da04283e2a75b4cfbb8c6da59a inherit pub_methods_class_socket"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#ae10384da04283e2a75b4cfbb8c6da59a">getSocketDescr</a> () const noexcept</td></tr>
+<tr class="separator:ae10384da04283e2a75b4cfbb8c6da59a inherit pub_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa264f52f830e5c1bea3cd92732df35f8 inherit pub_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aa264f52f830e5c1bea3cd92732df35f8">setNonBlocked</a> (bool option)</td></tr>
+<tr class="separator:aa264f52f830e5c1bea3cd92732df35f8 inherit pub_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75ee749264ccbcfc4dfbf5442e55dcb8 inherit pub_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a75ee749264ccbcfc4dfbf5442e55dcb8">close</a> ()</td></tr>
+<tr class="separator:a75ee749264ccbcfc4dfbf5442e55dcb8 inherit pub_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_class_socket"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_socket')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_socket.html">Socket</a></td></tr>
+<tr class="memitem:a51eb429ad7f6f6ab1adafe64d302ed55 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a51eb429ad7f6f6ab1adafe64d302ed55">setReuseAddress</a> (int sd)</td></tr>
+<tr class="separator:a51eb429ad7f6f6ab1adafe64d302ed55 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_socket"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_socket')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_socket.html">Socket</a></td></tr>
+<tr class="memitem:a610fbf456550dd084cfaee9d1267e5c8 inherit pro_attribs_class_socket"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a610fbf456550dd084cfaee9d1267e5c8">socketDescr</a></td></tr>
+<tr class="separator:a610fbf456550dd084cfaee9d1267e5c8 inherit pro_attribs_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05ebf38966e1cd1f093819a6bdad5b1 inherit pro_attribs_class_socket"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#ab05ebf38966e1cd1f093819a6bdad5b1">socketBoundPort</a></td></tr>
+<tr class="separator:ab05ebf38966e1cd1f093819a6bdad5b1 inherit pro_attribs_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa41096c8eecdf55a7557549e8f6a5d4a"></a>
@@ -149,9 +175,52 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_socket_u_d_p_aa41096c8eecdf55a7557549e8f6a5d4a_cgraph.png" border="0" usemap="#class_socket_u_d_p_aa41096c8eecdf55a7557549e8f6a5d4a_cgraph" alt=""/></div>
+<map name="class_socket_u_d_p_aa41096c8eecdf55a7557549e8f6a5d4a_cgraph" id="class_socket_u_d_p_aa41096c8eecdf55a7557549e8f6a5d4a_cgraph">
+<area shape="rect" id="node2" href="class_socket_u_d_p.html#aeac93900205bb3c08a90008dfda3585b" title="SocketUDP::createServerSocket" alt="" coords="225,5,439,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aeac93900205bb3c08a90008dfda3585b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SocketUDP::createServerSocket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_socket.html#a3376aae78f0c696c3787e4f04ed7f680">Socket</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_socket_u_d_p_aeac93900205bb3c08a90008dfda3585b_icgraph.png" border="0" usemap="#class_socket_u_d_p_aeac93900205bb3c08a90008dfda3585b_icgraph" alt=""/></div>
+<map name="class_socket_u_d_p_aeac93900205bb3c08a90008dfda3585b_icgraph" id="class_socket_u_d_p_aeac93900205bb3c08a90008dfda3585b_icgraph">
+<area shape="rect" id="node2" href="class_socket_u_d_p.html#aa41096c8eecdf55a7557549e8f6a5d4a" title="SocketUDP::SocketUDP" alt="" coords="269,5,440,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a48b2c650565eba38d9654ac16d21c60c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -299,8 +368,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/bender-wardrobe/Recast/src/headers/network/<a class="el" href="_networking_8hpp_source.html">Networking.hpp</a></li>
-<li>/home/travis/build/bender-wardrobe/Recast/src/core/network/<a class="el" href="_networking_8cpp.html">Networking.cpp</a></li>
+<li>/home/travis/build/bender-wardrobe/Recast/src/headers/network/<a class="el" href="_socket_u_d_p_8hpp_source.html">SocketUDP.hpp</a></li>
+<li>/home/travis/build/bender-wardrobe/Recast/src/core/network/<a class="el" href="_socket_u_d_p_8cpp.html">SocketUDP.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

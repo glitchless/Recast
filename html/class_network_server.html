@@ -106,17 +106,21 @@ Collaboration diagram for NetworkServer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae8f0e8315a02c80bcd39938c6ab23538"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_server.html#ae8f0e8315a02c80bcd39938c6ab23538">NetworkServer</a> (uint32_t port, bool isTCP=false)</td></tr>
-<tr class="separator:ae8f0e8315a02c80bcd39938c6ab23538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7305827935f68d67c018f0e7554598cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_server.html#a7305827935f68d67c018f0e7554598cf">NetworkServer</a> (uint32_t port, <a class="el" href="class_i_command_sender.html">ICommandSender</a> *sender, bool isTCP=false)</td></tr>
+<tr class="separator:a7305827935f68d67c018f0e7554598cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9a3ec5c90111aa30caa44dfe4e653fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_server.html#ae9a3ec5c90111aa30caa44dfe4e653fb">run</a> ()</td></tr>
 <tr class="separator:ae9a3ec5c90111aa30caa44dfe4e653fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ccac6f1950c9e6e15052fce78d4dd94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_server.html#a9ccac6f1950c9e6e15052fce78d4dd94">shutdown</a> ()</td></tr>
 <tr class="separator:a9ccac6f1950c9e6e15052fce78d4dd94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34695eaa70558f1c150bb9b6e1fa715a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_server.html#a34695eaa70558f1c150bb9b6e1fa715a">running</a> ()</td></tr>
 <tr class="separator:a34695eaa70558f1c150bb9b6e1fa715a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea0a42a02bd350e15d1a437ef98a646"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_server.html#afea0a42a02bd350e15d1a437ef98a646">registerListener</a> (<a class="el" href="class_network_listener.html">NetworkListener</a> *listener)</td></tr>
+<tr class="separator:afea0a42a02bd350e15d1a437ef98a646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a237f9f81ac6dc65d5d65941cab588"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_server.html#ab5a237f9f81ac6dc65d5d65941cab588">removeListener</a> (<a class="el" href="class_network_listener.html">NetworkListener</a> *listener)</td></tr>
+<tr class="separator:ab5a237f9f81ac6dc65d5d65941cab588"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ae8f0e8315a02c80bcd39938c6ab23538"></a>
+<a class="anchor" id="a7305827935f68d67c018f0e7554598cf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -125,6 +129,12 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_i_command_sender.html">ICommandSender</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -143,6 +153,56 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="afea0a42a02bd350e15d1a437ef98a646"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NetworkServer::registerListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_network_listener.html">NetworkListener</a> *&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_server_afea0a42a02bd350e15d1a437ef98a646_cgraph.png" border="0" usemap="#class_network_server_afea0a42a02bd350e15d1a437ef98a646_cgraph" alt=""/></div>
+<map name="class_network_server_afea0a42a02bd350e15d1a437ef98a646_cgraph" id="class_network_server_afea0a42a02bd350e15d1a437ef98a646_cgraph">
+<area shape="rect" id="node2" href="class_network_listener.html#a728999d4c710bf9800b1b53e992509d4" title="NetworkListener::getId" alt="" coords="261,5,416,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5a237f9f81ac6dc65d5d65941cab588"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NetworkServer::removeListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_network_listener.html">NetworkListener</a> *&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_server_ab5a237f9f81ac6dc65d5d65941cab588_cgraph.png" border="0" usemap="#class_network_server_ab5a237f9f81ac6dc65d5d65941cab588_cgraph" alt=""/></div>
+<map name="class_network_server_ab5a237f9f81ac6dc65d5d65941cab588_cgraph" id="class_network_server_ab5a237f9f81ac6dc65d5d65941cab588_cgraph">
+<area shape="rect" id="node2" href="class_network_listener.html#a728999d4c710bf9800b1b53e992509d4" title="NetworkListener::getId" alt="" coords="261,5,416,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="ae9a3ec5c90111aa30caa44dfe4e653fb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -161,7 +221,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_network_server_ae9a3ec5c90111aa30caa44dfe4e653fb_cgraph.png" border="0" usemap="#class_network_server_ae9a3ec5c90111aa30caa44dfe4e653fb_cgraph" alt=""/></div>
 <map name="class_network_server_ae9a3ec5c90111aa30caa44dfe4e653fb_cgraph" id="class_network_server_ae9a3ec5c90111aa30caa44dfe4e653fb_cgraph">
-<area shape="rect" id="node2" href="class_socket_t_c_p.html#a4a895bc95518aa10f02d476e88465809" title="SocketTCP::accept" alt="" coords="190,5,327,32"/><area shape="rect" id="node3" href="_networking_8cpp.html#a5131b5de27f0a6d8603a10c38bd01821" title="int2ipv4" alt="" coords="376,5,443,32"/></map>
+<area shape="rect" id="node2" href="class_socket_t_c_p.html#a4a895bc95518aa10f02d476e88465809" title="SocketTCP::accept" alt="" coords="190,5,327,32"/><area shape="rect" id="node3" href="_network_utils_8cpp.html#a5131b5de27f0a6d8603a10c38bd01821" title="int2ipv4" alt="" coords="376,5,443,32"/></map>
 </div>
 </p>
 

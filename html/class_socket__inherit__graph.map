@@ -1,4 +1,4 @@
 <map id="Socket" name="Socket">
-<area shape="rect" id="node2" href="$class_socket_t_c_p.html" title="{SocketTCP\n||+ SocketTCP()\l+ setRecvTimeout()\l+ createServerSocket()\l+ send()\l+ sendBytes()\l+ recv()\l+ recv()\l+ recvTimed()\l+ recvBytes()\l+ hasData()\l+ accept()\l}" alt="" coords="5,219,163,443"/>
-<area shape="rect" id="node3" href="$class_socket_u_d_p.html" title="{SocketUDP\n||+ SocketUDP()\l+ createServerSocket()\l+ sendTo()\l+ recvFrom()\l+ sendBytesTo()\l+ recvBytesFrom()\l}" alt="" coords="187,255,344,406"/>
+<area shape="rect" id="node2" href="$class_socket_t_c_p.html" title="{SocketTCP\n||+ SocketTCP()\l+ setRecvTimeout()\l+ createServerSocket()\l+ createServerSocket()\l+ send()\l+ sendBytes()\l+ recv()\l+ recv()\l+ recvTimed()\l+ recvBytes()\l+ hasData()\l+ accept()\l}" alt="" coords="5,249,163,487"/>
+<area shape="rect" id="node3" href="$class_socket_u_d_p.html" title="{SocketUDP\n||+ SocketUDP()\l+ createServerSocket()\l+ createServerSocket()\l+ sendTo()\l+ recvFrom()\l+ sendBytesTo()\l+ recvBytesFrom()\l}" alt="" coords="187,285,344,451"/>
 </map>

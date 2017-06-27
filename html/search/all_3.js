@@ -135,7 +135,7 @@ var searchData=
   ['counts',['Counts',['../struct_catch_1_1_counts.html',1,'Catch']]],
   ['create_5fdb',['create_db',['../_s_q_lite_8hpp.html#a5080f07fca3d0d456ceae6e817803fd3',1,'SQLite.hpp']]],
   ['creategeneratorsfortest',['createGeneratorsForTest',['../namespace_catch.html#a3d93b31e88fd01ee9e0d20757ff64eab',1,'Catch']]],
-  ['createserversocket',['createServerSocket',['../class_socket_t_c_p.html#a51b9d8a8c461f357ec72244570c69e5c',1,'SocketTCP::createServerSocket()'],['../class_socket_u_d_p.html#a48b2c650565eba38d9654ac16d21c60c',1,'SocketUDP::createServerSocket()']]],
+  ['createserversocket',['createServerSocket',['../class_socket.html#a3376aae78f0c696c3787e4f04ed7f680',1,'Socket::createServerSocket()'],['../class_socket_t_c_p.html#a4c2511b908febb309453487a5e79aaf9',1,'SocketTCP::createServerSocket() override'],['../class_socket_t_c_p.html#a51b9d8a8c461f357ec72244570c69e5c',1,'SocketTCP::createServerSocket(uint32_t port, uint32_t queueSize)'],['../class_socket_u_d_p.html#aeac93900205bb3c08a90008dfda3585b',1,'SocketUDP::createServerSocket() override'],['../class_socket_u_d_p.html#a48b2c650565eba38d9654ac16d21c60c',1,'SocketUDP::createServerSocket(uint32_t port)']]],
   ['createstream',['createStream',['../namespace_catch.html#ad7591011c5d99d59504ecd3384001c3e',1,'Catch']]],
   ['critical',['Critical',['../namespacecrow.html#ad07dc32e163caa516aa1225a1ec4afe4a278d01e5af56273bae1bb99a98b370cd',1,'crow::Critical()'],['../namespacecrow.html#ad07dc32e163caa516aa1225a1ec4afe4a99cd1c61610c76a57cb8d10d6df6b870',1,'crow::CRITICAL()']]],
   ['crow',['Crow',['../classcrow_1_1_crow.html',1,'crow']]],

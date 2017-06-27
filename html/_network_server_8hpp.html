@@ -90,18 +90,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">NetworkServer.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_networking_8hpp_source.html">network/Networking.hpp</a>&quot;</code><br/>
+
+<p>Networking server header file.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;unordered_map&gt;</code><br/>
+<code>#include &quot;<a class="el" href="_networking_8hpp_source.html">network/Networking.hpp</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for NetworkServer.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_network_server_8hpp__incl.png" border="0" usemap="#_2home_2travis_2build_2bender-wardrobe_2_recast_2src_2headers_2network_2_network_server_8hpp" alt=""/></div>
 <map name="_2home_2travis_2build_2bender-wardrobe_2_recast_2src_2headers_2network_2_network_server_8hpp" id="_2home_2travis_2build_2bender-wardrobe_2_recast_2src_2headers_2network_2_network_server_8hpp">
-<area shape="rect" id="node2" href="_networking_8hpp.html" title="network/Networking.hpp" alt="" coords="53,109,216,136"/></map>
+<area shape="rect" id="node4" href="_networking_8hpp.html" title="Networking quick&#45;include header file. " alt="" coords="231,109,393,136"/><area shape="rect" id="node5" href="_network_utils_8hpp.html" title="Basic networking utils header file. " alt="" coords="385,333,559,360"/><area shape="rect" id="node16" href="_network_listener_8hpp.html" title="network/NetworkListener.hpp" alt="" coords="115,184,307,211"/><area shape="rect" id="node17" href="_socket_8hpp.html" title="Socket abstract utils header file. " alt="" coords="460,259,599,285"/><area shape="rect" id="node18" href="_socket_t_c_p_8hpp.html" title="network/SocketTCP.hpp" alt="" coords="331,184,495,211"/><area shape="rect" id="node19" href="_socket_u_d_p_8hpp.html" title="Socket (UDP) utils header file. " alt="" coords="571,184,737,211"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -117,7 +123,60 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_server.html">NetworkServer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a037b4e42ee44987075964a5fca4263af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_network_server_8hpp.html#a037b4e42ee44987075964a5fca4263af">setNonBlockedImpl</a> (int sd, bool option) noexcept(false)</td></tr>
+<tr class="separator:a037b4e42ee44987075964a5fca4263af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Networking server header file. </p>
+<dl class="section author"><dt>Author</dt><dd>StealthTech  Recast-server </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>19.06.17  <a href="#" onclick="location.href='mai'+'lto:'+'st3'+'al'+'tht'+'ec'+'h@m'+'ai'+'l.r'+'u'; return false;">st3al<span style="display: none;">.nosp@m.</span>thte<span style="display: none;">.nosp@m.</span>ch@ma<span style="display: none;">.nosp@m.</span>il.r<span style="display: none;">.nosp@m.</span>u</a> </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a037b4e42ee44987075964a5fca4263af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setNonBlockedImpl </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>option</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_network_server_8hpp_a037b4e42ee44987075964a5fca4263af_icgraph.png" border="0" usemap="#_network_server_8hpp_a037b4e42ee44987075964a5fca4263af_icgraph" alt=""/></div>
+<map name="_network_server_8hpp_a037b4e42ee44987075964a5fca4263af_icgraph" id="_network_server_8hpp_a037b4e42ee44987075964a5fca4263af_icgraph">
+<area shape="rect" id="node2" href="class_socket.html#aa264f52f830e5c1bea3cd92732df35f8" title="Socket::setNonBlocked" alt="" coords="189,5,349,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

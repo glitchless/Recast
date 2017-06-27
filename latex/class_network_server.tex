@@ -18,28 +18,71 @@ Collaboration diagram for Network\-Server\-:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_network_server_ae8f0e8315a02c80bcd39938c6ab23538}{Network\-Server} (uint32\-\_\-t port, bool is\-T\-C\-P=false)
+\hyperlink{class_network_server_a7305827935f68d67c018f0e7554598cf}{Network\-Server} (uint32\-\_\-t port, \hyperlink{class_i_command_sender}{I\-Command\-Sender} $\ast$sender, bool is\-T\-C\-P=false)
 \item 
 void \hyperlink{class_network_server_ae9a3ec5c90111aa30caa44dfe4e653fb}{run} ()
 \item 
 void \hyperlink{class_network_server_a9ccac6f1950c9e6e15052fce78d4dd94}{shutdown} ()
 \item 
 bool \hyperlink{class_network_server_a34695eaa70558f1c150bb9b6e1fa715a}{running} ()
+\item 
+bool \hyperlink{class_network_server_afea0a42a02bd350e15d1a437ef98a646}{register\-Listener} (\hyperlink{class_network_listener}{Network\-Listener} $\ast$listener)
+\item 
+bool \hyperlink{class_network_server_ab5a237f9f81ac6dc65d5d65941cab588}{remove\-Listener} (\hyperlink{class_network_listener}{Network\-Listener} $\ast$listener)
 \end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_network_server_ae8f0e8315a02c80bcd39938c6ab23538}{\index{Network\-Server@{Network\-Server}!Network\-Server@{Network\-Server}}
+\hypertarget{class_network_server_a7305827935f68d67c018f0e7554598cf}{\index{Network\-Server@{Network\-Server}!Network\-Server@{Network\-Server}}
 \index{Network\-Server@{Network\-Server}!NetworkServer@{Network\-Server}}
 \subsubsection[{Network\-Server}]{\setlength{\rightskip}{0pt plus 5cm}Network\-Server\-::\-Network\-Server (
 \begin{DoxyParamCaption}
 \item[{uint32\-\_\-t}]{port, }
+\item[{{\bf I\-Command\-Sender} $\ast$}]{sender, }
 \item[{bool}]{is\-T\-C\-P = {\ttfamily false}}
 \end{DoxyParamCaption}
-)}}\label{class_network_server_ae8f0e8315a02c80bcd39938c6ab23538}
+)}}\label{class_network_server_a7305827935f68d67c018f0e7554598cf}
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_network_server_afea0a42a02bd350e15d1a437ef98a646}{\index{Network\-Server@{Network\-Server}!register\-Listener@{register\-Listener}}
+\index{register\-Listener@{register\-Listener}!NetworkServer@{Network\-Server}}
+\subsubsection[{register\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\-Server\-::register\-Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf Network\-Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}\label{class_network_server_afea0a42a02bd350e15d1a437ef98a646}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_server_afea0a42a02bd350e15d1a437ef98a646_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_network_server_ab5a237f9f81ac6dc65d5d65941cab588}{\index{Network\-Server@{Network\-Server}!remove\-Listener@{remove\-Listener}}
+\index{remove\-Listener@{remove\-Listener}!NetworkServer@{Network\-Server}}
+\subsubsection[{remove\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\-Server\-::remove\-Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf Network\-Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}\label{class_network_server_ab5a237f9f81ac6dc65d5d65941cab588}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_server_ab5a237f9f81ac6dc65d5d65941cab588_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_network_server_ae9a3ec5c90111aa30caa44dfe4e653fb}{\index{Network\-Server@{Network\-Server}!run@{run}}
 \index{run@{run}!NetworkServer@{Network\-Server}}
 \subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Network\-Server\-::run (

@@ -73,6 +73,6 @@ var searchData=
   ['s_5fstart_5freq_5for_5fres',['s_start_req_or_res',['../crow__all_8h.html#adc6e5733fc3c22f0a7b2914188c49c90a5a871b16732400896f13a0b4bf4d2d2e',1,'crow_all.h']]],
   ['s_5fstart_5fres',['s_start_res',['../crow__all_8h.html#adc6e5733fc3c22f0a7b2914188c49c90a17f7885ac699f68b5179b74e264605d8',1,'crow_all.h']]],
   ['shouldfail',['ShouldFail',['../struct_catch_1_1_test_case_info.html#a39b232f74b4a7a6f2183b96759027eacaf9002285bccfc343935958f3953f4c01',1,'Catch::TestCaseInfo']]],
-  ['string',['String',['../namespacecrow_1_1json.html#adb9569a402d1b289a75025c8c96e5d99a27118326006d3829667a400ad23d5d98',1,'crow::json::String()'],['../namespacecrow.html#ab3c83b2f7f161d992dcc38da41a8bf44a63b588d5559f64f89a416e656880b949',1,'crow::STRING()']]],
+  ['string',['STRING',['../namespacecrow.html#ab3c83b2f7f161d992dcc38da41a8bf44a63b588d5559f64f89a416e656880b949',1,'crow::STRING()'],['../namespacecrow_1_1json.html#adb9569a402d1b289a75025c8c96e5d99a27118326006d3829667a400ad23d5d98',1,'crow::json::String()']]],
   ['suppressfail',['SuppressFail',['../struct_catch_1_1_result_disposition.html#a3396cad6e2259af326b3aae93e23e9d8a1a88eb6004bddee4ccae4b421991bf54',1,'Catch::ResultDisposition']]]
 ];

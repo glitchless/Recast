@@ -2,6 +2,7 @@ var searchData=
 [
   ['parallelepiped',['Parallelepiped',['../struct_parallelepiped.html',1,'']]],
   ['parameter_5ftag',['parameter_tag',['../structcrow_1_1black__magic_1_1parameter__tag.html',1,'crow::black_magic']]],
+  ['parcel',['Parcel',['../class_parcel.html',1,'']]],
   ['partial_5fcontext',['partial_context',['../structcrow_1_1detail_1_1partial__context.html',1,'crow::detail']]],
   ['partial_5fcontext_3c_20middlewares_2e_2e_2e_3e',['partial_context&lt; Middlewares...&gt;',['../structcrow_1_1detail_1_1partial__context.html',1,'crow::detail']]],
   ['partial_5fcontext_3c_3e',['partial_context&lt;&gt;',['../structcrow_1_1detail_1_1partial__context_3_4.html',1,'crow::detail']]],

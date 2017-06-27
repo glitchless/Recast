@@ -1,0 +1,5 @@
+<map id="setByte" name="setByte">
+<area shape="rect" id="node2" href="$class_parcel.html#a4540d13bf8699f6f3bcafd9e95bce706" title="Parcel::readInt" alt="" coords="128,5,235,32"/>
+<area shape="rect" id="node4" href="$class_parcel.html#aea33f46c6e77dd0c297e1ef5fdf5973e" title="Parcel::readFloat" alt="" coords="121,56,242,83"/>
+<area shape="rect" id="node3" href="$class_parcel.html#a8fe786594990e38b7aecb1e994aa50fc" title="Parcel::Parcel" alt="" coords="291,5,395,32"/>
+</map>

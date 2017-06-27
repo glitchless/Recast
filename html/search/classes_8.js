@@ -23,6 +23,7 @@ var searchData=
   ['irunner',['IRunner',['../struct_catch_1_1_i_runner.html',1,'Catch']]],
   ['is_5fafter_5fhandle_5farity_5f3_5fimpl',['is_after_handle_arity_3_impl',['../structcrow_1_1detail_1_1is__after__handle__arity__3__impl.html',1,'crow::detail']]],
   ['is_5fbefore_5fhandle_5farity_5f3_5fimpl',['is_before_handle_arity_3_impl',['../structcrow_1_1detail_1_1is__before__handle__arity__3__impl.html',1,'crow::detail']]],
+  ['iserializable',['ISerializable',['../class_i_serializable.html',1,'']]],
   ['ishared',['IShared',['../struct_catch_1_1_i_shared.html',1,'Catch']]],
   ['isstreaminsertable',['IsStreamInsertable',['../struct_catch_1_1_detail_1_1_is_stream_insertable.html',1,'Catch::Detail']]],
   ['itagaliasregistry',['ITagAliasRegistry',['../struct_catch_1_1_i_tag_alias_registry.html',1,'Catch']]],

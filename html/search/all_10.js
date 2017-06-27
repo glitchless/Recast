@@ -7,6 +7,10 @@ var searchData=
   ['parameter_5ftag',['parameter_tag',['../structcrow_1_1black__magic_1_1parameter__tag.html',1,'crow::black_magic']]],
   ['params',['params',['../structcrow_1_1detail_1_1routing__handler__call__helper_1_1call__params.html#a3e6c2066cd82b91d35550db36513d4bc',1,'crow::detail::routing_handler_call_helper::call_params']]],
   ['paramtype',['ParamType',['../namespacecrow.html#ab3c83b2f7f161d992dcc38da41a8bf44',1,'crow']]],
+  ['parcel',['Parcel',['../class_parcel.html',1,'Parcel'],['../class_parcel.html#ac4940394afdfc35d38d695d4b0e14956',1,'Parcel::Parcel(int code)'],['../class_parcel.html#a8fe786594990e38b7aecb1e994aa50fc',1,'Parcel::Parcel(std::vector&lt; char &gt; *data)'],['../class_parcel.html#a75b0f276e47657edb2cc4f51d571158e',1,'Parcel::Parcel(Parcel &amp;other)=delete']]],
+  ['parcel_2ecpp',['Parcel.cpp',['../_parcel_8cpp.html',1,'']]],
+  ['parcel_2ehpp',['Parcel.hpp',['../_parcel_8hpp.html',1,'']]],
+  ['parcelableids',['ParcelableIDs',['../_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53',1,'Parcel.hpp']]],
   ['parent_5fcontext',['parent_context',['../structcrow_1_1detail_1_1partial__context.html#a96e8bff131568e0e6ecffd75b5b29e09',1,'crow::detail::partial_context']]],
   ['parent_5ft',['parent_t',['../structcrow_1_1utility_1_1function__traits.html#a6af347e0d7de1279042128f2d9d510d8',1,'crow::utility::function_traits']]],
   ['parenthesized',['parenthesized',['../struct_catch_1_1_assertion_result_data.html#a8418e3744b5486cb7f0d79c84569078e',1,'Catch::AssertionResultData']]],
@@ -26,8 +30,8 @@ var searchData=
   ['playersonline',['PlayersOnline',['../class_players_online.html',1,'PlayersOnline'],['../class_players_online.html#a8496d232e48655c31e1f74539f11c985',1,'PlayersOnline::PlayersOnline(int playerCount)'],['../class_players_online.html#acace980a0794f56eecab5ddf01ff51c7',1,'PlayersOnline::playersOnline() const ']]],
   ['playersonline_2ecpp',['PlayersOnline.cpp',['../_players_online_8cpp.html',1,'']]],
   ['playersonline_2ehpp',['PlayersOnline.hpp',['../_players_online_8hpp.html',1,'']]],
-  ['pluralise',['pluralise',['../struct_catch_1_1pluralise.html#a5c55e22de2416cfe416edf715c6b9234',1,'Catch::pluralise']]],
   ['pluralise',['pluralise',['../struct_catch_1_1pluralise.html',1,'Catch']]],
+  ['pluralise',['pluralise',['../struct_catch_1_1pluralise.html#a5c55e22de2416cfe416edf715c6b9234',1,'Catch::pluralise']]],
   ['point',['Point',['../struct_point.html',1,'Point'],['../struct_point.html#a4d43f5247afe8c85c6da1aa39dbcc738',1,'Point::Point(double x, double y, double z)'],['../struct_point.html#abcbc44cd825a9fc26fc9027256cf4cb4',1,'Point::Point(Coord x, Coord y, Coord z)']]],
   ['point_2ehpp',['Point.hpp',['../src_2headers_2models_2_point_8hpp.html',1,'']]],
   ['point_2ehpp',['Point.hpp',['../temperature-world_2src_2headers_2temperature-world_2types_2_point_8hpp.html',1,'']]],
@@ -38,7 +42,7 @@ var searchData=
   ['popscopedmessage',['popScopedMessage',['../struct_catch_1_1_i_result_capture.html#a42bcb13276706bf8c3ce081ce16d37fd',1,'Catch::IResultCapture']]],
   ['port',['port',['../structhttp__parser__url.html#a875fb8faf3ee45707078eda5435fa563',1,'http_parser_url::port()'],['../classcrow_1_1_crow.html#a365f9c95fc2bd8bb583967f499c1f4a1',1,'crow::Crow::port()']]],
   ['pos',['pos',['../structcrow_1_1mustache_1_1_action.html#a1af3f38c04cdc0978c2a788eeda81eab',1,'crow::mustache::Action::pos()'],['../structcrow_1_1detail_1_1routing__handler__call__helper_1_1call__pair.html#a3308154ca21ab288c0dca19c2bd545af',1,'crow::detail::routing_handler_call_helper::call_pair::pos()']]],
-  ['post',['post',['../structcrow_1_1request.html#a33aa146a3914864ce82ef22136451601',1,'crow::request::post()'],['../classcrow_1_1websocket_1_1_connection.html#ac3d4cebfc05076982ff002b7c3186ade',1,'crow::websocket::Connection::post()'],['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1a03d947a2158373c3b9d74325850cb8b9',1,'crow::Post()'],['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1aa02439ec229d8be0e74b0c1602392310',1,'crow::POST()']]],
+  ['post',['post',['../structcrow_1_1request.html#a33aa146a3914864ce82ef22136451601',1,'crow::request::post()'],['../classcrow_1_1websocket_1_1_connection.html#ac3d4cebfc05076982ff002b7c3186ade',1,'crow::websocket::Connection::post()'],['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1aa02439ec229d8be0e74b0c1602392310',1,'crow::POST()'],['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1a03d947a2158373c3b9d74325850cb8b9',1,'crow::Post()']]],
   ['prevassertions',['prevAssertions',['../struct_catch_1_1_section_end_info.html#ae70b154cbc05b5dd2901d97f89303d8c',1,'Catch::SectionEndInfo']]],
   ['process',['process',['../classcrow_1_1detail_1_1dumb__timer__queue.html#a5822b813fd984da37971cb21133bb67c',1,'crow::detail::dumb_timer_queue']]],
   ['process_5fheader',['process_header',['../structcrow_1_1_h_t_t_p_parser.html#ae074619da72a866f764821a981444404',1,'crow::HTTPParser']]],
@@ -56,5 +60,6 @@ var searchData=
   ['push',['push',['../structcrow_1_1black__magic_1_1_s.html#a95ac106c4ecab7bb696de30b2364e784',1,'crow::black_magic::S']]],
   ['push_5fback',['push_back',['../structcrow_1_1black__magic_1_1_s.html#a046413e7ff33e4e0395926f9fc00e59a',1,'crow::black_magic::S']]],
   ['pushscopedmessage',['pushScopedMessage',['../struct_catch_1_1_i_result_capture.html#a91d154c1e087e383dcde5aad95cb6a05',1,'Catch::IResultCapture']]],
-  ['put',['PUT',['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1a3e75383a5992a6d15fb81e872e46e256',1,'crow::PUT()'],['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1ad0bf1810982e9728fcf3ac444a015373',1,'crow::Put()']]]
+  ['put',['put',['../class_parcel.html#a19b5c8e0abaec80ea10da49d0832ad5b',1,'Parcel::put()'],['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1a3e75383a5992a6d15fb81e872e46e256',1,'crow::PUT()'],['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1ad0bf1810982e9728fcf3ac444a015373',1,'crow::Put()']]],
+  ['putstring',['putString',['../class_parcel.html#a0b164ec23965e3f37dd8a0d99321e232',1,'Parcel']]]
 ];

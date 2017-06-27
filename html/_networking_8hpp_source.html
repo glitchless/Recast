@@ -94,107 +94,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="_networking_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef RECAST_NETWORKING_H</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RECAST_NETWORKING_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef RECAST_SERVER_NETWORKING_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RECAST_SERVER_NETWORKING_HPP</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_network_utils_8hpp.html">network/NetworkUtils.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_network_listener_8hpp.html">network/NetworkListener.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_socket_8hpp.html">network/Socket.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_socket_t_c_p_8hpp.html">network/SocketTCP.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_socket_u_d_p_8hpp.html">network/SocketUDP.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_networking_8hpp.html#a08503b9a325023d1ac88c0b89de3236c">   20</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="_networking_8hpp.html#a08503b9a325023d1ac88c0b89de3236c">DEFAULT_PORT_TCP</a> = 1337;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_networking_8hpp.html#aa69183107def82b9a64b8166816f6ab3">   21</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="_networking_8hpp.html#aa69183107def82b9a64b8166816f6ab3">DEFAULT_PORT_UDP</a> = 1338;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">string</span> <a class="code" href="_networking_8hpp.html#a5131b5de27f0a6d8603a10c38bd01821">int2ipv4</a>(uint32_t ip);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//class Socket {</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//public:</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//    Socket()       : socketDescr(-1) {}</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//    Socket(int sd) : socketDescr(sd) {}</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//    ~Socket() { if (socketDescr &gt; 0) ::close(socketDescr); }</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//public:</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//    int  getSocketDescr() const noexcept { return socketDescr; }</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//    void setNonBlocked(bool option)                                           noexcept (false);</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//    void send(const string &amp;str)                                              noexcept (false);</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//    void sendTo(struct sockaddr_in &amp;sendToAddr, const string &amp;str)            noexcept (false);</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//    string recvFrom(struct sockaddr_in &amp;recvFromAddr)                         noexcept (false);</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//    string recv()                                                             noexcept (false);</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//    string recv(size_t bytes)                                                 noexcept (false);</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//    string recvTimed(int timeout)                                             noexcept (false);</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//    void setRecvTimeout(int seconds, int microseconds)                        noexcept (false);</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//    bool hasData()                                                            noexcept (false);</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//    void createServerSocketUDP(uint32_t port)                                 noexcept (false);</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//    void createServerSocketTCP(uint32_t port, uint32_t queueSize)             noexcept (false);</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//    shared_ptr&lt;Socket&gt; accept()                                               noexcept (false);</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//    void close() { ::close(socketDescr); }</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//private:</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//    void setReuseAddress(int sd)                                              noexcept (false);</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//    int socketDescr;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">//};</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_socket.html">   52</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_socket.html">Socket</a> {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_socket.html#a7c3256c4fc6e2c603df73201049fae5a">   54</a></span>&#160;    <a class="code" href="class_socket.html#a7c3256c4fc6e2c603df73201049fae5a">Socket</a>()       : socketDescr(-1) {}</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_socket.html#aaba0adce0be29d723470f6e80d65b67e">   55</a></span>&#160;    <a class="code" href="class_socket.html#aaba0adce0be29d723470f6e80d65b67e">Socket</a>(<span class="keywordtype">int</span> sd) : socketDescr(sd) {}</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_socket.html#aeac4eb6379a543d38ed88977d3b6630a">   56</a></span>&#160;    <a class="code" href="class_socket.html#aeac4eb6379a543d38ed88977d3b6630a">~Socket</a>() { <span class="keywordflow">if</span> (socketDescr &gt; 0) ::close(socketDescr); }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_socket.html#ae10384da04283e2a75b4cfbb8c6da59a">   58</a></span>&#160;    <span class="keywordtype">int</span>  <a class="code" href="class_socket.html#ae10384da04283e2a75b4cfbb8c6da59a">getSocketDescr</a>() const noexcept { <span class="keywordflow">return</span> socketDescr; }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> setNonBlocked(<span class="keywordtype">bool</span> option);</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_socket.html#a75ee749264ccbcfc4dfbf5442e55dcb8">   60</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_socket.html#a75ee749264ccbcfc4dfbf5442e55dcb8">close</a>() { ::close(socketDescr); }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> setReuseAddress(<span class="keywordtype">int</span> sd);</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_socket.html#a610fbf456550dd084cfaee9d1267e5c8">   63</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_socket.html#a610fbf456550dd084cfaee9d1267e5c8">socketDescr</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_socket_t_c_p.html">   66</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_socket_t_c_p.html">SocketTCP</a> : <a class="code" href="class_socket.html">Socket</a> {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">using</span> <a class="code" href="class_socket.html#a7c3256c4fc6e2c603df73201049fae5a">Socket::Socket</a>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_socket_t_c_p.html#a03fa65da98287c442592f6602087703f">   69</a></span>&#160;    <a class="code" href="class_socket_t_c_p.html#a03fa65da98287c442592f6602087703f">SocketTCP</a>(uint32_t port, uint32_t queueSize) : <a class="code" href="class_socket.html">Socket</a>::<a class="code" href="class_socket.html">Socket</a>() { createServerSocket(port, queueSize); }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> setRecvTimeout(<span class="keywordtype">int</span> seconds, <span class="keywordtype">int</span> microseconds);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> createServerSocket(uint32_t port, uint32_t queueSize);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> send(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;str);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> sendBytes(<span class="keyword">const</span> <span class="keywordtype">char</span> *data, <span class="keywordtype">size_t</span> num);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">string</span> recv();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">string</span> recv(<span class="keywordtype">size_t</span> bytes);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">string</span> recvTimed(<span class="keywordtype">int</span> timeout);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">char</span>* recvBytes(<span class="keywordtype">size_t</span> num);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">bool</span> hasData();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    shared_ptr&lt;SocketTCP&gt; accept();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_socket_u_d_p.html">   84</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_socket_u_d_p.html">SocketUDP</a> : <a class="code" href="class_socket.html">Socket</a> {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">using</span> <a class="code" href="class_socket.html#a7c3256c4fc6e2c603df73201049fae5a">Socket::Socket</a>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_socket_u_d_p.html#aa41096c8eecdf55a7557549e8f6a5d4a">   87</a></span>&#160;    <a class="code" href="class_socket_u_d_p.html#aa41096c8eecdf55a7557549e8f6a5d4a">SocketUDP</a>(uint32_t port) : <a class="code" href="class_socket.html">Socket</a>::<a class="code" href="class_socket.html">Socket</a>() { createServerSocket(port); }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> createServerSocket(uint32_t port);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> sendTo(<span class="keyword">struct</span> sockaddr_in &amp;sendToAddr, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;str);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">string</span> recvFrom(<span class="keyword">struct</span> sockaddr_in &amp;recvFromAddr);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> sendBytesTo(<span class="keyword">struct</span> sockaddr_in &amp;sendToAddr, <span class="keyword">const</span> <span class="keywordtype">char</span> *data, <span class="keywordtype">size_t</span> num);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">char</span>* recvBytesFrom(<span class="keyword">struct</span> sockaddr_in &amp;recvFromAddr);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif //RECAST_NETWORKING_H</span></div>
-<div class="ttc" id="class_socket_u_d_p_html_aa41096c8eecdf55a7557549e8f6a5d4a"><div class="ttname"><a href="class_socket_u_d_p.html#aa41096c8eecdf55a7557549e8f6a5d4a">SocketUDP::SocketUDP</a></div><div class="ttdeci">SocketUDP(uint32_t port)</div><div class="ttdef"><b>Definition:</b> Networking.hpp:87</div></div>
-<div class="ttc" id="class_socket_html_a7c3256c4fc6e2c603df73201049fae5a"><div class="ttname"><a href="class_socket.html#a7c3256c4fc6e2c603df73201049fae5a">Socket::Socket</a></div><div class="ttdeci">Socket()</div><div class="ttdef"><b>Definition:</b> Networking.hpp:54</div></div>
-<div class="ttc" id="class_socket_html_aeac4eb6379a543d38ed88977d3b6630a"><div class="ttname"><a href="class_socket.html#aeac4eb6379a543d38ed88977d3b6630a">Socket::~Socket</a></div><div class="ttdeci">~Socket()</div><div class="ttdef"><b>Definition:</b> Networking.hpp:56</div></div>
-<div class="ttc" id="class_socket_html_a75ee749264ccbcfc4dfbf5442e55dcb8"><div class="ttname"><a href="class_socket.html#a75ee749264ccbcfc4dfbf5442e55dcb8">Socket::close</a></div><div class="ttdeci">void close()</div><div class="ttdef"><b>Definition:</b> Networking.hpp:60</div></div>
-<div class="ttc" id="class_socket_t_c_p_html"><div class="ttname"><a href="class_socket_t_c_p.html">SocketTCP</a></div><div class="ttdef"><b>Definition:</b> Networking.hpp:66</div></div>
-<div class="ttc" id="class_socket_t_c_p_html_a03fa65da98287c442592f6602087703f"><div class="ttname"><a href="class_socket_t_c_p.html#a03fa65da98287c442592f6602087703f">SocketTCP::SocketTCP</a></div><div class="ttdeci">SocketTCP(uint32_t port, uint32_t queueSize)</div><div class="ttdef"><b>Definition:</b> Networking.hpp:69</div></div>
-<div class="ttc" id="class_socket_html_ae10384da04283e2a75b4cfbb8c6da59a"><div class="ttname"><a href="class_socket.html#ae10384da04283e2a75b4cfbb8c6da59a">Socket::getSocketDescr</a></div><div class="ttdeci">int getSocketDescr() const noexcept</div><div class="ttdef"><b>Definition:</b> Networking.hpp:58</div></div>
-<div class="ttc" id="_networking_8hpp_html_a08503b9a325023d1ac88c0b89de3236c"><div class="ttname"><a href="_networking_8hpp.html#a08503b9a325023d1ac88c0b89de3236c">DEFAULT_PORT_TCP</a></div><div class="ttdeci">const int DEFAULT_PORT_TCP</div><div class="ttdef"><b>Definition:</b> Networking.hpp:20</div></div>
-<div class="ttc" id="class_socket_html"><div class="ttname"><a href="class_socket.html">Socket</a></div><div class="ttdef"><b>Definition:</b> Networking.hpp:52</div></div>
-<div class="ttc" id="_networking_8hpp_html_a5131b5de27f0a6d8603a10c38bd01821"><div class="ttname"><a href="_networking_8hpp.html#a5131b5de27f0a6d8603a10c38bd01821">int2ipv4</a></div><div class="ttdeci">string int2ipv4(uint32_t ip)</div><div class="ttdef"><b>Definition:</b> Networking.cpp:22</div></div>
-<div class="ttc" id="class_socket_html_aaba0adce0be29d723470f6e80d65b67e"><div class="ttname"><a href="class_socket.html#aaba0adce0be29d723470f6e80d65b67e">Socket::Socket</a></div><div class="ttdeci">Socket(int sd)</div><div class="ttdef"><b>Definition:</b> Networking.hpp:55</div></div>
-<div class="ttc" id="class_socket_u_d_p_html"><div class="ttname"><a href="class_socket_u_d_p.html">SocketUDP</a></div><div class="ttdef"><b>Definition:</b> Networking.hpp:84</div></div>
-<div class="ttc" id="_networking_8hpp_html_aa69183107def82b9a64b8166816f6ab3"><div class="ttname"><a href="_networking_8hpp.html#aa69183107def82b9a64b8166816f6ab3">DEFAULT_PORT_UDP</a></div><div class="ttdeci">const int DEFAULT_PORT_UDP</div><div class="ttdef"><b>Definition:</b> Networking.hpp:21</div></div>
-<div class="ttc" id="class_socket_html_a610fbf456550dd084cfaee9d1267e5c8"><div class="ttname"><a href="class_socket.html#a610fbf456550dd084cfaee9d1267e5c8">Socket::socketDescr</a></div><div class="ttdeci">int socketDescr</div><div class="ttdef"><b>Definition:</b> Networking.hpp:63</div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_NETWORKING_HPP</span></div>
+<div class="ttc" id="_network_listener_8hpp_html"><div class="ttname"><a href="_network_listener_8hpp.html">NetworkListener.hpp</a></div></div>
+<div class="ttc" id="_socket_t_c_p_8hpp_html"><div class="ttname"><a href="_socket_t_c_p_8hpp.html">SocketTCP.hpp</a></div></div>
+<div class="ttc" id="_socket_u_d_p_8hpp_html"><div class="ttname"><a href="_socket_u_d_p_8hpp.html">SocketUDP.hpp</a></div><div class="ttdoc">Socket (UDP) utils header file. </div></div>
+<div class="ttc" id="_network_utils_8hpp_html"><div class="ttname"><a href="_network_utils_8hpp.html">NetworkUtils.hpp</a></div><div class="ttdoc">Basic networking utils header file. </div></div>
+<div class="ttc" id="_socket_8hpp_html"><div class="ttname"><a href="_socket_8hpp.html">Socket.hpp</a></div><div class="ttdoc">Socket abstract utils header file. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

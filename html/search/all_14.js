@@ -53,7 +53,7 @@ var searchData=
   ['tostring_3c_20detail_3a_3aapprox_20_3e',['toString&lt; Detail::Approx &gt;',['../namespace_catch.html#ac501c2b6bfe82978d699ddda37c53d13',1,'Catch']]],
   ['total',['total',['../struct_catch_1_1_counts.html#a9125c662e30114e5c5cc94729b1e9e84',1,'Catch::Counts']]],
   ['totals',['Totals',['../struct_catch_1_1_totals.html',1,'Catch']]],
-  ['trace',['Trace',['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1add4ec0ac4e58f7c32a01244ae91150b1',1,'crow::Trace()'],['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1a2d3e4144aa384b18849ab9a8abad74d6',1,'crow::TRACE()']]],
+  ['trace',['TRACE',['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1a2d3e4144aa384b18849ab9a8abad74d6',1,'crow::TRACE()'],['../namespacecrow.html#a02d34072d2b3415aee5e7287edd06ae1add4ec0ac4e58f7c32a01244ae91150b1',1,'crow::Trace()']]],
   ['transferenergy',['transferEnergy',['../class_energy_node.html#a04b3fe7a8aa49157a5c66ee8e25cfb3b',1,'EnergyNode']]],
   ['translate',['translate',['../struct_catch_1_1_i_exception_translator.html#a2a554b96ed5ed411e7c796b6b42837a5',1,'Catch::IExceptionTranslator']]],
   ['translateactiveexception',['translateActiveException',['../struct_catch_1_1_i_exception_translator_registry.html#af76ae8c331a17f2a94c9720bc0d686bb',1,'Catch::IExceptionTranslatorRegistry::translateActiveException()'],['../namespace_catch.html#adafff91485eeeeb9e9333f317cc0e3b1',1,'Catch::translateActiveException()']]],

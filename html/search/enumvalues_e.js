@@ -10,6 +10,7 @@ var searchData=
   ['uf_5fuserinfo',['UF_USERINFO',['../crow__all_8h.html#a9ca1f91c2958091e2ac9e9b2f903d4ebacb4a85c6a7d6cd0b64ec6e91e7ba8689',1,'crow_all.h']]],
   ['uint',['UINT',['../namespacecrow.html#ab3c83b2f7f161d992dcc38da41a8bf44a3351504090a741e69da641a42e00da80',1,'crow']]],
   ['unescapetag',['UnescapeTag',['../namespacecrow_1_1mustache.html#aeb8da2ae9d8d9fe55f6ab0a7455dd667a6a92aa81e0cd0b1c2f77a84226ad4777',1,'crow::mustache']]],
-  ['unknown',['Unknown',['../struct_catch_1_1_result_was.html#a624e1ee3661fcf6094ceef1f654601efa65721dda02fe5efb522e7449e496608a',1,'Catch::ResultWas']]],
-  ['upscale',['Upscale',['../struct_int_scale.html#ab7d4e812b60cd562ddc4fb120ff1f0cca2438a8014fcf179200678d989f41d3ac',1,'IntScale']]]
+  ['unknown',['Unknown',['../struct_catch_1_1_result_was.html#a624e1ee3661fcf6094ceef1f654601efa65721dda02fe5efb522e7449e496608a',1,'Catch::ResultWas::Unknown()'],['../_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53a6ce26a62afab55d7606ad4e92428b30c',1,'UNKNOWN():&#160;Parcel.hpp']]],
+  ['upscale',['Upscale',['../struct_int_scale.html#ab7d4e812b60cd562ddc4fb120ff1f0cca2438a8014fcf179200678d989f41d3ac',1,'IntScale']]],
+  ['user_5fparce',['USER_PARCE',['../_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53a19a6af17fd96277607046ea72bc48988',1,'Parcel.hpp']]]
 ];

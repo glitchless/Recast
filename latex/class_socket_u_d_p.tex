@@ -3,7 +3,7 @@
 }
 
 
-{\ttfamily \#include $<$Networking.\-hpp$>$}
+{\ttfamily \#include $<$Socket\-U\-D\-P.\-hpp$>$}
 
 
 
@@ -30,6 +30,8 @@ Collaboration diagram for Socket\-U\-D\-P\-:
 \item 
 \hyperlink{class_socket_u_d_p_aa41096c8eecdf55a7557549e8f6a5d4a}{Socket\-U\-D\-P} (uint32\-\_\-t port)
 \item 
+void \hyperlink{class_socket_u_d_p_aeac93900205bb3c08a90008dfda3585b}{create\-Server\-Socket} () override
+\item 
 void \hyperlink{class_socket_u_d_p_a48b2c650565eba38d9654ac16d21c60c}{create\-Server\-Socket} (uint32\-\_\-t port)
 \item 
 void \hyperlink{class_socket_u_d_p_a207c3d7c2b854b140dcb4ca9a9c81292}{send\-To} (struct sockaddr\-\_\-in \&send\-To\-Addr, const string \&str)
@@ -40,6 +42,7 @@ void \hyperlink{class_socket_u_d_p_a69cce05867435fb471a50319855e34fc}{send\-Byte
 \item 
 char $\ast$ \hyperlink{class_socket_u_d_p_a4c3ff487d034850ad2096339cfa06707}{recv\-Bytes\-From} (struct sockaddr\-\_\-in \&recv\-From\-Addr)
 \end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -52,7 +55,42 @@ char $\ast$ \hyperlink{class_socket_u_d_p_a4c3ff487d034850ad2096339cfa06707}{rec
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_socket_u_d_p_aa41096c8eecdf55a7557549e8f6a5d4a}
 
 
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_socket_u_d_p_aa41096c8eecdf55a7557549e8f6a5d4a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{class_socket_u_d_p_aeac93900205bb3c08a90008dfda3585b}{\index{Socket\-U\-D\-P@{Socket\-U\-D\-P}!create\-Server\-Socket@{create\-Server\-Socket}}
+\index{create\-Server\-Socket@{create\-Server\-Socket}!SocketUDP@{Socket\-U\-D\-P}}
+\subsubsection[{create\-Server\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-U\-D\-P\-::create\-Server\-Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_socket_u_d_p_aeac93900205bb3c08a90008dfda3585b}
+
+
+Implements \hyperlink{class_socket_a3376aae78f0c696c3787e4f04ed7f680}{Socket}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_socket_u_d_p_aeac93900205bb3c08a90008dfda3585b_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_socket_u_d_p_a48b2c650565eba38d9654ac16d21c60c}{\index{Socket\-U\-D\-P@{Socket\-U\-D\-P}!create\-Server\-Socket@{create\-Server\-Socket}}
 \index{create\-Server\-Socket@{create\-Server\-Socket}!SocketUDP@{Socket\-U\-D\-P}}
 \subsubsection[{create\-Server\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-U\-D\-P\-::create\-Server\-Socket (
@@ -95,5 +133,5 @@ char $\ast$ \hyperlink{class_socket_u_d_p_a4c3ff487d034850ad2096339cfa06707}{rec
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/network/\hyperlink{_networking_8hpp}{Networking.\-hpp}\item 
-/home/travis/build/bender-\/wardrobe/\-Recast/src/core/network/\hyperlink{_networking_8cpp}{Networking.\-cpp}\end{DoxyCompactItemize}
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/network/\hyperlink{_socket_u_d_p_8hpp}{Socket\-U\-D\-P.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/core/network/\hyperlink{_socket_u_d_p_8cpp}{Socket\-U\-D\-P.\-cpp}\end{DoxyCompactItemize}

@@ -3,7 +3,7 @@
 }
 
 
-{\ttfamily \#include $<$Networking.\-hpp$>$}
+{\ttfamily \#include $<$Socket\-T\-C\-P.\-hpp$>$}
 
 
 
@@ -32,6 +32,8 @@ Collaboration diagram for Socket\-T\-C\-P\-:
 \item 
 void \hyperlink{class_socket_t_c_p_a473fa103469c9b83720b4f8ecfde1298}{set\-Recv\-Timeout} (int seconds, int microseconds)
 \item 
+void \hyperlink{class_socket_t_c_p_a4c2511b908febb309453487a5e79aaf9}{create\-Server\-Socket} () override
+\item 
 void \hyperlink{class_socket_t_c_p_a51b9d8a8c461f357ec72244570c69e5c}{create\-Server\-Socket} (uint32\-\_\-t port, uint32\-\_\-t queue\-Size)
 \item 
 void \hyperlink{class_socket_t_c_p_a853ec6fc95a21f49186829a72321cdc8}{send} (const string \&str)
@@ -50,6 +52,7 @@ bool \hyperlink{class_socket_t_c_p_a0ef19d204316995c6e1943f6894f82c3}{has\-Data}
 \item 
 shared\-\_\-ptr$<$ \hyperlink{class_socket_t_c_p}{Socket\-T\-C\-P} $>$ \hyperlink{class_socket_t_c_p_a4a895bc95518aa10f02d476e88465809}{accept} ()
 \end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -94,6 +97,17 @@ Here is the caller graph for this function\-:
 \end{center}
 \end{figure}
 
+
+\hypertarget{class_socket_t_c_p_a4c2511b908febb309453487a5e79aaf9}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!create\-Server\-Socket@{create\-Server\-Socket}}
+\index{create\-Server\-Socket@{create\-Server\-Socket}!SocketTCP@{Socket\-T\-C\-P}}
+\subsubsection[{create\-Server\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-T\-C\-P\-::create\-Server\-Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_socket_t_c_p_a4c2511b908febb309453487a5e79aaf9}
+
+
+Implements \hyperlink{class_socket_a3376aae78f0c696c3787e4f04ed7f680}{Socket}.
 
 \hypertarget{class_socket_t_c_p_a51b9d8a8c461f357ec72244570c69e5c}{\index{Socket\-T\-C\-P@{Socket\-T\-C\-P}!create\-Server\-Socket@{create\-Server\-Socket}}
 \index{create\-Server\-Socket@{create\-Server\-Socket}!SocketTCP@{Socket\-T\-C\-P}}
@@ -189,5 +203,5 @@ Here is the caller graph for this function\-:
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/network/\hyperlink{_networking_8hpp}{Networking.\-hpp}\item 
-/home/travis/build/bender-\/wardrobe/\-Recast/src/core/network/\hyperlink{_networking_8cpp}{Networking.\-cpp}\end{DoxyCompactItemize}
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/network/\hyperlink{_socket_t_c_p_8hpp}{Socket\-T\-C\-P.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/core/network/\hyperlink{_socket_t_c_p_8cpp}{Socket\-T\-C\-P.\-cpp}\end{DoxyCompactItemize}

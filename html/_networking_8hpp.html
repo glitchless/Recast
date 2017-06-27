@@ -89,107 +89,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Networking.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br/>
-<code>#include &lt;unistd.h&gt;</code><br/>
-<code>#include &lt;memory&gt;</code><br/>
+
+<p>Networking quick-include header file.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_network_utils_8hpp_source.html">network/NetworkUtils.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_network_listener_8hpp_source.html">network/NetworkListener.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_socket_8hpp_source.html">network/Socket.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_socket_t_c_p_8hpp_source.html">network/SocketTCP.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_socket_u_d_p_8hpp_source.html">network/SocketUDP.hpp</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Networking.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_networking_8hpp__incl.png" border="0" usemap="#_2home_2travis_2build_2bender-wardrobe_2_recast_2src_2headers_2network_2_networking_8hpp" alt=""/></div>
 <map name="_2home_2travis_2build_2bender-wardrobe_2_recast_2src_2headers_2network_2_networking_8hpp" id="_2home_2travis_2build_2bender-wardrobe_2_recast_2src_2headers_2network_2_networking_8hpp">
-</map>
+<area shape="rect" id="node2" href="_network_utils_8hpp.html" title="Basic networking utils header file. " alt="" coords="385,259,559,285"/><area shape="rect" id="node13" href="_network_listener_8hpp.html" title="network/NetworkListener.hpp" alt="" coords="115,109,307,136"/><area shape="rect" id="node14" href="_socket_8hpp.html" title="Socket abstract utils header file. " alt="" coords="460,184,599,211"/><area shape="rect" id="node15" href="_socket_t_c_p_8hpp.html" title="network/SocketTCP.hpp" alt="" coords="331,109,495,136"/><area shape="rect" id="node16" href="_socket_u_d_p_8hpp.html" title="Socket (UDP) utils header file. " alt="" coords="571,109,737,136"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_networking_8hpp__dep__incl.png" border="0" usemap="#_2home_2travis_2build_2bender-wardrobe_2_recast_2src_2headers_2network_2_networking_8hppdep" alt=""/></div>
 <map name="_2home_2travis_2build_2bender-wardrobe_2_recast_2src_2headers_2network_2_networking_8hppdep" id="_2home_2travis_2build_2bender-wardrobe_2_recast_2src_2headers_2network_2_networking_8hppdep">
-<area shape="rect" id="node2" href="_networking_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/core/network/Networking.cpp" alt="" coords="5,109,224,165"/><area shape="rect" id="node3" href="_network_server_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/core/network/NetworkServer.cpp" alt="" coords="142,213,380,269"/><area shape="rect" id="node4" href="_network_server_8hpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/headers/network/NetworkServer.hpp" alt="" coords="298,109,557,165"/><area shape="rect" id="node5" href="_server_8hpp.html" title="Server file. " alt="" coords="405,213,573,269"/><area shape="rect" id="node6" href="_stop_command_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/core/commands/StopCommand.cpp" alt="" coords="27,317,284,373"/><area shape="rect" id="node7" href="_main_8cpp.html" title="Starting point. " alt="" coords="309,317,477,373"/><area shape="rect" id="node8" href="_server_8cpp.html" title="Config file. " alt="" coords="501,317,669,373"/><area shape="rect" id="node9" href="_input_thread_8cpp.html" title="Input thread for execution of terminal command. " alt="" coords="693,317,883,373"/></map>
+<area shape="rect" id="node2" href="_network_server_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/core/network/NetworkServer.cpp" alt="" coords="5,213,243,269"/><area shape="rect" id="node3" href="_network_listener_8hpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/headers/network/NetworkListener.hpp" alt="" coords="46,109,313,165"/><area shape="rect" id="node4" href="_network_server_8hpp.html" title="Networking server header file. " alt="" coords="338,109,597,165"/><area shape="rect" id="node5" href="_server_8hpp.html" title="Server file. " alt="" coords="384,213,552,269"/><area shape="rect" id="node6" href="_stop_command_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/core/commands/StopCommand.cpp" alt="" coords="6,317,263,373"/><area shape="rect" id="node7" href="_main_8cpp.html" title="Starting point. " alt="" coords="288,317,456,373"/><area shape="rect" id="node8" href="_server_8cpp.html" title="Config file. " alt="" coords="480,317,648,373"/><area shape="rect" id="node9" href="_input_thread_8cpp.html" title="Input thread for execution of terminal command. " alt="" coords="672,317,861,373"/></map>
 </div>
 </div>
 <p><a href="_networking_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html">Socket</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_t_c_p.html">SocketTCP</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket_u_d_p.html">SocketUDP</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a5131b5de27f0a6d8603a10c38bd01821"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_networking_8hpp.html#a5131b5de27f0a6d8603a10c38bd01821">int2ipv4</a> (uint32_t ip)</td></tr>
-<tr class="separator:a5131b5de27f0a6d8603a10c38bd01821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a08503b9a325023d1ac88c0b89de3236c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_networking_8hpp.html#a08503b9a325023d1ac88c0b89de3236c">DEFAULT_PORT_TCP</a> = 1337</td></tr>
-<tr class="separator:a08503b9a325023d1ac88c0b89de3236c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa69183107def82b9a64b8166816f6ab3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_networking_8hpp.html#aa69183107def82b9a64b8166816f6ab3">DEFAULT_PORT_UDP</a> = 1338</td></tr>
-<tr class="separator:aa69183107def82b9a64b8166816f6ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a5131b5de27f0a6d8603a10c38bd01821"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string int2ipv4 </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>ip</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="_networking_8hpp_a5131b5de27f0a6d8603a10c38bd01821_icgraph.png" border="0" usemap="#_networking_8hpp_a5131b5de27f0a6d8603a10c38bd01821_icgraph" alt=""/></div>
-<map name="_networking_8hpp_a5131b5de27f0a6d8603a10c38bd01821_icgraph" id="_networking_8hpp_a5131b5de27f0a6d8603a10c38bd01821_icgraph">
-<area shape="rect" id="node2" href="class_socket_t_c_p.html#a4a895bc95518aa10f02d476e88465809" title="SocketTCP::accept" alt="" coords="121,5,258,32"/><area shape="rect" id="node3" href="class_network_server.html#ae9a3ec5c90111aa30caa44dfe4e653fb" title="NetworkServer::run" alt="" coords="307,5,442,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a08503b9a325023d1ac88c0b89de3236c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int DEFAULT_PORT_TCP = 1337</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa69183107def82b9a64b8166816f6ab3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int DEFAULT_PORT_UDP = 1338</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Networking quick-include header file. </p>
+<dl class="section author"><dt>Author</dt><dd>StealthTech  Recast-server </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>27.06.17  <a href="#" onclick="location.href='mai'+'lto:'+'st3'+'al'+'tht'+'ec'+'h@m'+'ai'+'l.r'+'u'; return false;">st3al<span style="display: none;">.nosp@m.</span>thte<span style="display: none;">.nosp@m.</span>ch@ma<span style="display: none;">.nosp@m.</span>il.r<span style="display: none;">.nosp@m.</span>u</a> </dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
