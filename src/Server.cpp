@@ -87,6 +87,8 @@ Server::Server() {
 }
 
 void Server::runNetworkServer(NetworkServer *tcp, NetworkServer *udp) {
+    tcp->registerListener(new DebugNetworkListener(0));
+    udp->registerListener(new DebugNetworkListener(0));
     listenUDPThread = thread(&NetworkServer::run, tcp);
     listenUDPThread.detach();
     listenTCPThread = thread(&NetworkServer::run, udp);
