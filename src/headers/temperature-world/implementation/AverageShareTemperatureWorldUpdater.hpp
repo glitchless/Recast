@@ -50,7 +50,7 @@ protected:
     std::shared_ptr<ITimerBlockable<ITimer>> _timer;
 
     std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> _nearRightChunk;
-    std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> _nearDownChunk;
+    std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> _nearUpChunk;
     std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> _nearFarChunk;
 };
 

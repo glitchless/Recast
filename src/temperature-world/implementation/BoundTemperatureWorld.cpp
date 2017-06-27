@@ -72,7 +72,7 @@ void BoundTemperatureWorld::foreachCellOnEdge(Edge edge, ITemperatureWorldBounda
             }
             break;
 
-        case Edge::UP:
+        case Edge::DOWN:
             for (Coord x = _bounds.minX(); x <= _bounds.maxX(); x++) {
                 for (Coord z = _bounds.minZ(); z <= _bounds.maxZ(); z++) {
                     func(x, _bounds.minY(), z);
@@ -80,7 +80,7 @@ void BoundTemperatureWorld::foreachCellOnEdge(Edge edge, ITemperatureWorldBounda
             }
             break;
 
-        case Edge::DOWN:
+        case Edge::UP:
             for (Coord x = _bounds.minX(); x <= _bounds.maxX(); x++) {
                 for (Coord z = _bounds.minZ(); z <= _bounds.maxZ(); z++) {
                     func(x, _bounds.maxY(), z);

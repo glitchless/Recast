@@ -20,6 +20,7 @@ AverageShareTemperatureWorldUpdater::AverageShareTemperatureWorldUpdater(double 
 
 void AverageShareTemperatureWorldUpdater::update() {
     const double dt = _timer->deltaFloatSeconds();
+    _timer->update();
 
     _world->foreach([&](Coord x, Coord y, Coord z) {
         _checkThenShareTemperature(dt, _world, x, y, z, _world, _world->nextCoordX(x), y, z);
@@ -32,34 +33,90 @@ void AverageShareTemperatureWorldUpdater::update() {
             _shareTemperature(dt, _world, x, y, z, _nearRightChunk, _world->nextCoordX(x), y, z);
         });
     }
-    if (_nearDownChunk) {
-        _world->foreachCellOnEdge(Edge::DOWN, [&](Coord x, Coord y, Coord z) {
-            _shareTemperature(dt, _world, x, y, z, _nearDownChunk, x, _world->nextCoordY(y), z);
+    if (_nearUpChunk) {
+        _world->foreachCellOnEdge(Edge::UP, [&](Coord x, Coord y, Coord z) {
+            _shareTemperature(dt, _world, x, y, z, _nearUpChunk, x, _world->nextCoordY(y), z);
         });
     }
     if (_nearFarChunk) {
         _world->foreachCellOnEdge(Edge::FAR, [&](Coord x, Coord y, Coord z) {
-            _shareTemperature(dt, _world, x, y, z, _nearDownChunk, x, y, _world->nextCoordZ(z));
+            _shareTemperature(dt, _world, x, y, z, _nearFarChunk, x, y, _world->nextCoordZ(z));
         });
     }
 
-    _timer->update();
+    _timer->wait();
 }
 
 bool AverageShareTemperatureWorldUpdater::canAddNearChunk(Edge edge, const std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>& chunk) const noexcept {
-    return (edge == Edge::RIGHT && !_nearRightChunk && _world->nextCoordX(_world->bounds().maxX()) >= chunk->bounds().minX()) ||
-           (edge == Edge::DOWN && !_nearDownChunk && _world->nextCoordY(_world->bounds().maxY()) >= chunk->bounds().minY()) ||
-           (edge == Edge::FAR && !_nearFarChunk && _world->nextCoordZ(_world->bounds().maxZ()) >= chunk->bounds().minZ());
+    if (_world == chunk) {
+        return false;
+    }
+    switch (edge) {
+        case Edge::RIGHT: {
+            if (_nearRightChunk) {
+                return false;
+            }
+            Coord nextOverMaxX = _world->nextCoordX(_world->bounds().maxX());
+            for (Coord y = _world->bounds().minY(); y <= _world->bounds().maxY(); y++) {
+                for (Coord z = _world->bounds().minZ(); z <= _world->bounds().maxZ(); z++) {
+                    if (!chunk->has(nextOverMaxX, y, z)) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        case Edge::UP: {
+            if (_nearUpChunk) {
+                return false;
+            }
+            Coord nextOverMaxY = _world->nextCoordY(_world->bounds().maxY());
+            for (Coord x = _world->bounds().minX(); x <= _world->bounds().maxX(); x++) {
+                for (Coord z = _world->bounds().minZ(); z <= _world->bounds().maxZ(); z++) {
+                    if (!chunk->has(x, nextOverMaxY, z)) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        case Edge::FAR: {
+            if (_nearFarChunk) {
+                return false;
+            }
+            Coord nextOverMaxZ = _world->nextCoordZ(_world->bounds().maxZ());
+            for (Coord x = _world->bounds().minX(); x <= _world->bounds().maxX(); x++) {
+                for (Coord y = _world->bounds().minY(); y <= _world->bounds().maxY(); y++) {
+                    if (!chunk->has(x, y, nextOverMaxZ)) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        default: {
+            return false;
+        }
+    }
 }
 
 void AverageShareTemperatureWorldUpdater::addNearChunk(Edge edge, std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk) {
     assert(canAddNearChunk(edge, chunk));
-    if (edge == Edge::RIGHT) {
-        _nearRightChunk = chunk;
-    } else if (edge == Edge::DOWN) {
-        _nearDownChunk = chunk;
-    } else if (edge == Edge::FAR) {
-        _nearFarChunk = chunk;
+    switch (edge) {
+        case Edge::RIGHT:
+            _nearRightChunk = chunk;
+            break;
+
+        case Edge::UP:
+            _nearUpChunk = chunk;
+            break;
+
+        case Edge::FAR:
+            _nearFarChunk = chunk;
+            break;
+
+        default:
+            break;
     }
 }
 

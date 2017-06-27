@@ -18,19 +18,26 @@ milliseconds SynchronizedBlockingTimer::delta() const {
     return duration_cast<milliseconds>(system_clock::now() - _lastUpdateTime);
 }
 
+milliseconds SynchronizedBlockingTimer::minDelta() const {
+    return _minDelta;
+}
+
 double SynchronizedBlockingTimer::deltaFloatSeconds() const {
     return delta().count() / 1000.0;
 }
 
 void SynchronizedBlockingTimer::update() {
     lock_guard<mutex> guard(_lastUpdateTimeMutex);
-    const auto dt = system_clock::now() - _lastUpdateTime;
     _lastUpdateTime = system_clock::now();
+}
+
+void SynchronizedBlockingTimer::wait() {
+    milliseconds dt(0);
+    {
+        lock_guard<mutex> guard(_lastUpdateTimeMutex);
+        dt = duration_cast<milliseconds>(system_clock::now() - _lastUpdateTime);
+    }
     if (dt < _minDelta) {
         this_thread::sleep_for(_minDelta - dt);
     }
-}
-
-milliseconds SynchronizedBlockingTimer::minDelta() const {
-    return _minDelta;
 }

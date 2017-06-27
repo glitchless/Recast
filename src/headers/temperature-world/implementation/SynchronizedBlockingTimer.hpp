@@ -21,6 +21,7 @@ public:
     double deltaFloatSeconds() const override;
 
     void update() override;
+    void wait() override;
 
 protected:
     std::chrono::milliseconds _minDelta;

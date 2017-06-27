@@ -18,7 +18,7 @@ ThreadedChunkedTemperatureWorldUpdater::ThreadedChunkedTemperatureWorldUpdater(
 
     _data->isRunning.store(true);
 
-    for (size_t i = 0; i < thread::hardware_concurrency(); i++) {
+    for (size_t i = 0; i < 1; /*thread::hardware_concurrency();*/ i++) {
         _data->workers.push_back(move(thread(bind(&_work, _data))));
     }
 
@@ -90,33 +90,26 @@ void ThreadedChunkedTemperatureWorldUpdater::_watchChunk(shared_ptr<ThreadedChun
     lock_guard<mutex> guard(data->updatersMutex);
 
     auto updater = data->makeChunkUpdaterFn(chunk);
+
+    // connect chunk to others
     data->world->foreachChunk([&](const shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>& loopChunk) {
-        Coord someX = loopChunk->bounds().minX();
-        Coord someY = loopChunk->bounds().minY();
-        Coord someZ = loopChunk->bounds().minZ();
-
-        Coord loopMinX = loopChunk->bounds().minX();
-        Coord loopMinY = loopChunk->bounds().minY();
-        Coord loopMinZ = loopChunk->bounds().minZ();
-
-        bool isOnRight = !chunk->has(loopMinX, someY, someZ) && chunk->has(loopChunk->previousCoordX(loopMinX), someY, someZ);
-        bool isOnDown = !isOnRight && !chunk->has(someX, loopMinY, someZ) && chunk->has(someX, loopChunk->previousCoordY(loopMinY), someZ);
-        bool isOnFar = !isOnDown && !chunk->has(someX, someY, loopMinZ) && chunk->has(someX, someY, loopChunk->previousCoordZ(loopMinZ));
-
-        isOnRight = isOnRight && updater->canAddNearChunk(Edge::RIGHT, loopChunk);
-        isOnDown = isOnDown && updater->canAddNearChunk(Edge::DOWN, loopChunk);
-        isOnFar = isOnFar && updater->canAddNearChunk(Edge::FAR, loopChunk);
-
-        if (isOnRight) {
-            updater->addNearChunk(Edge::RIGHT, loopChunk);
-        }
-        if (isOnDown) {
-            updater->addNearChunk(Edge::DOWN, loopChunk);
-        }
-        if (isOnFar) {
-            updater->addNearChunk(Edge::FAR, loopChunk);
+        for (Edge edge : {Edge::RIGHT, Edge::UP, Edge::FAR}) {
+            if (updater->canAddNearChunk(edge, loopChunk)) {
+                updater->addNearChunk(edge, loopChunk);
+                break;
+            }
         }
     });
+
+    // connect others to chunk
+    for (const shared_ptr<IUpdaterTemperatureWorldSemiChunkUpdatable<IUpdater>>& loopUpdater : data->updaters) {
+        for (Edge edge : {Edge::RIGHT, Edge::UP, Edge::FAR}) {
+            if (loopUpdater->canAddNearChunk(edge, chunk)) {
+                loopUpdater->addNearChunk(edge, chunk);
+                break;
+            }
+        }
+    }
 
     data->updaters.push_back(move(updater));
 }

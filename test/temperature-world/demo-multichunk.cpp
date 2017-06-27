@@ -12,14 +12,13 @@
 
 using namespace std;
 
-void startUpdater(shared_ptr<IUpdater> updater) {
-    thread t([&]() {
-        while (true) {
-            updater->update();
-        }
-    });
-    t.detach();
-}
+//void startUpdater(shared_ptr<IUpdater> updater) {
+//    thread t([&]() {
+//        while (true) {
+//        }
+//    });
+//    t.detach();
+//}
 
 void startServer(shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> world, shared_ptr<IUpdater> updater) {
     crow::SimpleApp app;
@@ -38,6 +37,8 @@ void startServer(shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWor
     });
 
     CROW_ROUTE(app, "/get_world")([&](){
+        updater->update();
+
         crow::json::wvalue json;
         size_t i = 0;
         world->foreachChunk([&](const shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>& chunk) {
@@ -62,17 +63,19 @@ int main() {
     auto world = injector.world();
     auto updater = injector.updater();
 
-    for (int ix = -3; ix < 3; ix++) {
-        for (int iy = -1; iy < 1; iy++) {
-            world->getOrGenerateChunk(ix * injector.chunkBounds().sizeX(), iy * injector.chunkBounds().sizeY(), 0);
+    for (int ix = -2; ix <= 2; ix++) {
+        for (int iy = 0; iy <= 1; iy++) {
+            for (int iz = 0; iz <= 1; iz++) {
+                world->getOrGenerateChunk(ix * injector.chunkBounds().sizeX(), iy * injector.chunkBounds().sizeY(), iz * injector.chunkBounds().sizeZ());
+            }
         }
     }
 
-    for (Coord x = -3; x <= 3; x++) {
-        world->set(x, 0, 0, 1000);
+    for (Coord x = -5; x <= 5; x++) {
+        world->set(x, 0, 0, 100);
     }
 
-    startUpdater(updater);
+//    startUpdater(updater);
     startServer(world, updater);
     return 0;
 }
