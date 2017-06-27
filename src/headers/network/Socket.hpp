@@ -13,8 +13,6 @@
 
 #include "network/NetworkUtils.hpp"
 
-using namespace std;
-
 class Socket {
 public:
     Socket()       : socketDescr(-1), socketBoundPort(0) {}

@@ -13,6 +13,7 @@
 
 #include "network/Networking.hpp"
 
+class ICommandSender;
 using namespace std;
 
 class NetworkListener {
@@ -20,7 +21,7 @@ public:
     NetworkListener(int id) : listenerId(id) { }
 public:
     int getId() { return listenerId; }
-    virtual char* onPacket(char *request) = 0;
+    virtual char* onPacket(char *request, ICommandSender * sender) = 0;
 protected:
     int listenerId;
 };

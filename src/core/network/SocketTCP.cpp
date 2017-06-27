@@ -8,6 +8,7 @@
  *
  **/
 
+#include <cstring>
 #include "network/SocketTCP.hpp"
 
 void SocketTCP::setRecvTimeout(int seconds, int microseconds) noexcept (false) {

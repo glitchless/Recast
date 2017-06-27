@@ -8,7 +8,9 @@
  *
  **/
 
+#include <cstring>
 #include "network/Socket.hpp"
+using namespace std;
 
 void setNonBlockedImpl(int sd, bool option) noexcept (false) {
     int flags = fcntl(sd, F_GETFL, 0);

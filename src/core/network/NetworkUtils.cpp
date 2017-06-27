@@ -8,8 +8,10 @@
  *
  **/
 
+#include <cstring>
 #include "network/NetworkUtils.hpp"
 
+using namespace std;
 string int2ipv4(uint32_t ip) {
     char buffer[128];
     snprintf(buffer, sizeof(buffer), "%u.%u.%u.%u", ip&0xFF, (ip&0xFF00) >> 8, (ip&0xFF0000) >> 16, (ip&0xFF000000) >> 24);

@@ -14,8 +14,6 @@
 #include "network/NetworkUtils.hpp"
 #include "network/Socket.hpp"
 
-using namespace std;
-
 class SocketUDP : public Socket {
 public:
     using Socket::Socket;
