@@ -10,16 +10,14 @@
 
 #include <iostream>
 #include <thread>
-#include <memory>
-#include <sys/socket.h>
 #include <netinet/in.h> // struct sockaddr_in
-#include <thread>
 #include <boost/log/trivial.hpp>
 
 #include "network/Networking.hpp"
 #include "network/NetworkServer.hpp"
 
-NetworkServer::NetworkServer(uint32_t port, bool isTCP) : port(port), isTCP(isTCP) { };
+NetworkServer::NetworkServer(uint32_t port, ICommandSender *sender, bool isTCP) : port(port), isTCP(isTCP),
+                                                                                  sender(sender) {};
 
 void NetworkServer::run() {
     try {
@@ -41,7 +39,7 @@ void NetworkServer::run() {
             isRunning = true;
             while (isRunning) {
                 shared_ptr<SocketUDP> client = make_shared<SocketUDP>(sock);
-                listenFor(client);
+                listenForBytes(client);
             }
         }
     } catch (const exception &e) {
@@ -51,23 +49,51 @@ void NetworkServer::run() {
 
 void NetworkServer::listenFor(shared_ptr<SocketTCP> client) {
     client->setRecvTimeout(30, 0); // s, ms
-    while (true) try {
+    while (true)
+        try {
             string request = client->recv();
             string response = exchange(request);
             client->send(response);
-        } catch(const exception &e) {
+        } catch (const exception &e) {
             cerr << "[ERR] An exception occurred: " << e.what() << endl;
             return;
-            }
+        }
+}
+
+void NetworkServer::listenForBytes(shared_ptr<SocketTCP> client) {
+    client->setRecvTimeout(30, 0); // s, ms
+    while (true)
+        try {
+            char *request = client->recvBytes(1024);
+            char *response = exchange(request);
+            client->send(response);
+        } catch (const exception &e) {
+            cerr << "[ERR] An exception occurred: " << e.what() << endl;
+            return;
+        }
 }
 
 void NetworkServer::listenFor(shared_ptr<SocketUDP> client) {
-    while(true) try {
+    while (true)
+        try {
             struct sockaddr_in senderAddr;
             string request = client->recvFrom(senderAddr);
             string response = exchange(request);
             client->sendTo(senderAddr, response);
-        } catch(const exception &e) {
+        } catch (const exception &e) {
+            cerr << "[ERR] An exception occurred: " << e.what() << endl;
+            return;
+        }
+}
+
+void NetworkServer::listenForBytes(shared_ptr<SocketUDP> client) {
+    while (true)
+        try {
+            struct sockaddr_in senderAddr;
+            char *request = client->recvBytesFrom(senderAddr);
+            char *response = exchange(request);
+            client->sendTo(senderAddr, response);
+        } catch (const exception &e) {
             cerr << "[ERR] An exception occurred: " << e.what() << endl;
             return;
         }
@@ -77,21 +103,49 @@ void NetworkServer::shutdown() {
     isRunning = false;
 }
 
-string NetworkServer::exchange(const string action) {
-    // Game logic goes here
+string NetworkServer::exchange(const string request) {
+    nofityListener(const_cast<char *>(request.data()));
 
-    // Answer to client (difference snapshots? yes/no answer?)
-    string state = check(action);
-
-    return state;
+    return request;
 }
 
-string NetworkServer::check(const string action) {
-    // Example
-    string result = "DENIED";
-    if (action.find("CAST") != -1) {
-        // Checking appliability
-        result = "APPLIED";
+char *NetworkServer::exchange(char *request) {
+    nofityListener(request);
+
+    return request;
+}
+
+bool NetworkServer::registerListener(NetworkListener *listener) {
+    auto temp = listeners.find(listener->getId());
+    if (temp != listeners.end()) {
+        BOOST_LOG_TRIVIAL(info) << "[ERR] Listener id " << listener->getId() << " is already registered";
+        return false;
     }
-    return result;
+    listeners[listener->getId()] = listener;
+    BOOST_LOG_TRIVIAL(info) << "[INFO] Registered listener id " << listener->getId();
+    return true;
+}
+
+bool NetworkServer::removeListener(NetworkListener *listener) {
+    auto temp = listeners.find(listener->getId());
+    if (temp == listeners.end()) {
+        BOOST_LOG_TRIVIAL(info) << "[ERR] Listener id " << listener->getId() << " is not registered";
+        return false;
+    } else {
+        listeners.erase(listener->getId());
+        BOOST_LOG_TRIVIAL(info) << "[INFO] Unregistered listener id " << listener->getId();
+        return true;
+    }
+}
+
+bool NetworkServer::nofityListener(char *request) {
+    int id = request[0];
+//    int id = 0; // DEBUG
+    auto temp = listeners.find(id);
+
+    if (temp == listeners.end()) {
+        return false;
+    } else {
+        (*temp).second->onPacket(request, sender);
+    }
 }

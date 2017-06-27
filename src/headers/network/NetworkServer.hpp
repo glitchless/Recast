@@ -1,5 +1,5 @@
 /**
- * @file server.cpp
+ * @file NetworkServer.hpp
  * @brief Networking server header file
  * @author StealthTech
  * @project Recast-server
@@ -8,28 +8,38 @@
  *
  **/
 
-#ifndef RECAST_NETWORKINGSERVER_H
-#define RECAST_NETWORKINGSERVER_H
+#ifndef RECAST_NETWORKING_SERVER_HPP
+#define RECAST_NETWORKING_SERVER_HPP
 
+#include <vector>
+#include <unordered_map>
 #include "network/Networking.hpp"
 
-using namespace std;
+class ICommandSender;
+void setNonBlockedImpl(int sd, bool option) noexcept (false);
 
 class NetworkServer {
 public:
-    NetworkServer(uint32_t port, bool isTCP = false);
+    NetworkServer(uint32_t port, ICommandSender *sender, bool isTCP = false);
     void run();
     void shutdown();
     bool running() { return isRunning; }
+    bool registerListener(NetworkListener *listener);
+    bool removeListener(NetworkListener *listener);
 private:
+    ICommandSender *sender;
     uint32_t port;
     bool isTCP;
     volatile bool isRunning;
+    std::unordered_map<int, NetworkListener*>  listeners;
 
-    void listenFor(shared_ptr<SocketTCP> client);
-    void listenFor(shared_ptr<SocketUDP> client);
-    string exchange(const string action);
-    string check(const string action);
+    bool nofityListener(char *request);
+    void listenFor(std::shared_ptr<SocketTCP> client);
+    void listenForBytes(std::shared_ptr<SocketTCP> client);
+    void listenFor(std::shared_ptr<SocketUDP> client);
+    void listenForBytes(std::shared_ptr<SocketUDP> client);
+    string exchange(const string request);
+    char* exchange(char *request);
 };
 
-#endif //RECAST_NETWORKINGSERVER_H
+#endif //RECAST_NETWORKING_SERVER_HPP

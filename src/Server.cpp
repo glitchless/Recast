@@ -65,11 +65,8 @@ void Server::initServer() {
     BOOST_LOG_TRIVIAL(info) << "Initializing network...";
     runNetworkServer(serverTCP, serverUDP);
 
-    BasicTimer benchmarkTimer;
     while (isRunning()) {
-        benchmarkTimer.update();
         update();
-        BOOST_LOG_TRIVIAL(info) << "Update delta: " << benchmarkTimer.deltaFloatSeconds() << "s";
     }
 }
 
@@ -83,8 +80,8 @@ Server::Server() {
     uint32_t portTCP = static_cast<uint32_t>(Config::instance()->get("general.server.port.tcp", DEFAULT_PORT_TCP));
     uint32_t portUDP = static_cast<uint32_t>(Config::instance()->get("general.server.port.udp", DEFAULT_PORT_UDP));
 
-    serverTCP = new NetworkServer(portTCP, true);
-    serverUDP = new NetworkServer(portUDP, false);
+    serverTCP = new NetworkServer(portTCP, this, true);
+    serverUDP = new NetworkServer(portUDP, this, false);
 
     players = new PlayersOnline(Config::instance()->get("server.max_players", 20));
 }
