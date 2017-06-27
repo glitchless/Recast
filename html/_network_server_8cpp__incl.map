@@ -1,9 +1,10 @@
 <map id="/home/travis/build/bender&#45;wardrobe/Recast/src/core/network/NetworkServer.cpp" name="/home/travis/build/bender&#45;wardrobe/Recast/src/core/network/NetworkServer.cpp">
-<area shape="rect" id="node6" href="$_networking_8hpp.html" title="Networking quick&#45;include header file. " alt="" coords="512,184,675,211"/>
-<area shape="rect" id="node19" href="$_network_server_8hpp.html" title="Networking server header file. " alt="" coords="855,109,1039,136"/>
-<area shape="rect" id="node7" href="$_network_utils_8hpp.html" title="Basic networking utils header file. " alt="" coords="465,408,639,435"/>
-<area shape="rect" id="node15" href="$_network_listener_8hpp.html" title="network/NetworkListener.hpp" alt="" coords="183,259,375,285"/>
-<area shape="rect" id="node16" href="$_socket_8hpp.html" title="Socket abstract utils header file. " alt="" coords="579,333,717,360"/>
-<area shape="rect" id="node17" href="$_socket_t_c_p_8hpp.html" title="network/SocketTCP.hpp" alt="" coords="692,259,856,285"/>
-<area shape="rect" id="node18" href="$_socket_u_d_p_8hpp.html" title="Socket (UDP) utils header file. " alt="" coords="450,259,616,285"/>
+<area shape="rect" id="node6" href="$_networking_8hpp.html" title="Networking quick&#45;include header file. " alt="" coords="447,184,609,211"/>
+<area shape="rect" id="node20" href="$_network_server_8hpp.html" title="Networking server header file. " alt="" coords="568,109,752,136"/>
+<area shape="rect" id="node7" href="$_network_utils_8hpp.html" title="Basic networking utils header file. " alt="" coords="461,408,635,435"/>
+<area shape="rect" id="node15" href="$_network_listener_8hpp.html" title="network/NetworkListener.hpp" alt="" coords="745,259,937,285"/>
+<area shape="rect" id="node17" href="$_socket_8hpp.html" title="Socket abstract utils header file. " alt="" coords="403,333,541,360"/>
+<area shape="rect" id="node18" href="$_socket_t_c_p_8hpp.html" title="network/SocketTCP.hpp" alt="" coords="505,259,669,285"/>
+<area shape="rect" id="node19" href="$_socket_u_d_p_8hpp.html" title="Socket (UDP) utils header file. " alt="" coords="263,259,429,285"/>
+<area shape="rect" id="node16" href="$_i_command_sender_8hpp.html" title="commands/ICommandSender.hpp" alt="" coords="878,408,1097,435"/>
 </map>

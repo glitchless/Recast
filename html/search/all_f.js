@@ -23,7 +23,7 @@ var searchData=
   ['onevent',['onEvent',['../class_i_event_listener.html#ad5716bb760dfcc444e0b38f705579d59',1,'IEventListener::onEvent()'],['../class_spell_event_listener.html#aad071b51be0727a2e5554252d50586f4',1,'SpellEventListener::onEvent()']]],
   ['onmessage',['onMessage',['../class_i_command_sender.html#a613b27b190c7fb5123597939c0896080',1,'ICommandSender::onMessage()'],['../class_server.html#a37a56fedea3137e9b8080ee0e86e8278',1,'Server::onMessage()'],['../classcrow_1_1_web_socket_rule.html#ab74486cbe36cb5e6f70362998e55b0e0',1,'crow::WebSocketRule::onmessage()']]],
   ['onopen',['onopen',['../classcrow_1_1_web_socket_rule.html#a8a37c7e29ef137b02cb2d48af5241bad',1,'crow::WebSocketRule']]],
-  ['onpacket',['onPacket',['../class_network_listener.html#a721846b67227e7b3ac96c3d7d7065655',1,'NetworkListener']]],
+  ['onpacket',['onPacket',['../class_network_listener.html#a721846b67227e7b3ac96c3d7d7065655',1,'NetworkListener::onPacket()'],['../class_debug_network_listener.html#a320f61476c1bacc235594731e39c51ff',1,'DebugNetworkListener::onPacket()']]],
   ['ontick',['onTick',['../class_energy_node.html#ab52474e2e15ff2af2d969b6a88a778f7',1,'EnergyNode::onTick()'],['../class_spell_node.html#a0e8d39e7ebc6c7bd9e52eaf1be213af8',1,'SpellNode::onTick()']]],
   ['opcast',['opCast',['../namespace_catch_1_1_internal.html#adde98c1a650e94615e2b37ab0b3734e2',1,'Catch::Internal']]],
   ['opcode',['opcode',['../classcrow_1_1websocket_1_1_connection.html#a47a804e0269c7e70f45434f7618c6e7b',1,'crow::websocket::Connection']]],
