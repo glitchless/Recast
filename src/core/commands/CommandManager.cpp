@@ -12,6 +12,7 @@
 #include <iterator>
 #include <memory>
 #include <vector>
+#include <commands/CreateEntityCommand.h>
 #include "commands/CommandManager.hpp"
 #include "commands/StopCommand.hpp"
 
@@ -45,6 +46,7 @@ namespace {
  */
 CommandManager::CommandManager() {
     commands.push_back(make_shared<StopCommand>());
+    commands.push_back(make_shared<CreateEntityCommand>());
 }
 
 
@@ -62,9 +64,11 @@ void CommandManager::onCommand(ICommandSender *sender, const std::string &cmd) {
     auto first = cmds.begin() + 1;
     auto last = cmds.end();
     vector<string> args(first, last);
+    bool isFind = false;
 
     for (int i = 0; i < commands.size(); i++) {
         if (commands[i]->isValid(cmds[0], args)) {
+            isFind = true;
             if (commands[i]->isOnlyUICommand())
                 delayedCommand.push(new DelayCommand(sender, commands[i], cmds[0], args));
             else
@@ -72,7 +76,7 @@ void CommandManager::onCommand(ICommandSender *sender, const std::string &cmd) {
         }
     }
 
-    if (valid.size() == 0) {
+    if (!isFind) {
         sender->onMessage("Not found command");
     } else {
         for (int i = 0; i < valid.size(); i++) {

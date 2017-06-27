@@ -16,5 +16,5 @@ int Entity::getId() {
 }
 
 Entity::Entity(b2Fixture *fixture1) : fixture(fixture1) {
-    data = (EntityData *) fixture->GetUserData();
+    data = (EntityData *) fixture->GetBody()->GetUserData();
 }

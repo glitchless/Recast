@@ -64,7 +64,8 @@ void Server::initServer() {
     BOOST_LOG_TRIVIAL(info) << "Initializing network...";
     runNetworkServer(serverTCP, serverUDP);
 
-    update();
+    while(isRunning())
+        update();
 }
 
 void Server::update() {

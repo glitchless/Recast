@@ -82,7 +82,8 @@ Entity *Box2DWorld::createEntity(b2BodyDef &bodyDef, b2FixtureDef &fixtureDef) {
     ((EntityData *) bodyDef.userData)->id = freeId;
 
     b2Body *body = world->CreateBody(&bodyDef);
-    Entity *entity = new Entity(body->CreateFixture(&fixtureDef));
+    b2Fixture * fixture = body->CreateFixture(&fixtureDef);
+    Entity *entity = new Entity(fixture);
     entitysId[freeId] = entity;
     return entity;
 }
