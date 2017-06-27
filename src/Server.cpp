@@ -64,8 +64,9 @@ void Server::initServer() {
     BOOST_LOG_TRIVIAL(info) << "Initializing network...";
     runNetworkServer(serverTCP, serverUDP);
 
-    while(isRunning())
+    while (isRunning()) {
         update();
+    }
 }
 
 void Server::update() {
@@ -80,13 +81,15 @@ Server::Server() : world(this) {
     uint32_t portTCP = static_cast<uint32_t>(Config::g("general.server.port.tcp", DEFAULT_PORT_TCP));
     uint32_t portUDP = static_cast<uint32_t>(Config::g("general.server.port.udp", DEFAULT_PORT_UDP));
 
-    serverTCP = new NetworkServer(portTCP, true);
-    serverUDP = new NetworkServer(portUDP, false);
+    serverTCP = new NetworkServer(portTCP, this, true);
+    serverUDP = new NetworkServer(portUDP, this, false);
 
     players = new PlayersOnline(Config::instance()->get("server.max_players", 20));
 }
 
 void Server::runNetworkServer(NetworkServer *tcp, NetworkServer *udp) {
+    tcp->registerListener(new DebugNetworkListener(0));
+    udp->registerListener(new DebugNetworkListener(0));
     listenUDPThread = thread(&NetworkServer::run, udp);
     listenUDPThread.detach();
     listenTCPThread = thread(&NetworkServer::run, tcp);
