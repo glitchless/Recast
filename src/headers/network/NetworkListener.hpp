@@ -30,7 +30,7 @@ class DebugNetworkListener : public NetworkListener {
 public:
     using NetworkListener::NetworkListener;
 public:
-    char* onPacket(char *request) { cout << "Listener [" << listenerId << "] got request" << request << endl; return request; }
+    char* onPacket(char *request, ICommandSender * sender) { cout << "Listener [" << listenerId << "] got request " << request << endl; return request; };
 };
 
 #endif //RECAST_SERVER_NETWORKLISTENER_HPP
