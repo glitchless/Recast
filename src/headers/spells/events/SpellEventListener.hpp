@@ -17,10 +17,11 @@ class SpellEntity;
 
 class SpellEventListener : public IEventListener {
 public:
-    SpellEventListener(SpellEntity *entity, Box2DWorld *world, std::shared_ptr<TempWorld> tempWorld) : spell(spell),
-                                                                                                       entity(entity),
-                                                                                                       world(world),
-                                                                                                       tempWorld(tempWorld) {}
+    SpellEventListener(Spell *spell, SpellEntity *entity, Box2DWorld *world, std::shared_ptr<TempWorld> tempWorld)
+            : spell(spell),
+              entity(entity),
+              world(world),
+              tempWorld(tempWorld) {}
 
     void onEvent(IEvent event);
 
