@@ -20,7 +20,10 @@ Entity::Entity(b2Fixture *fixture1) : fixture(fixture1) {
 }
 
 void Entity::write(Parcel &in, Entity *obj) {
-    //TODO
+    in.put(obj->getType());
+    b2Vec2 pos = obj->getFixture()->GetBody()->GetPosition();
+    in.put(pos.x);
+    in.put(pos.y);
 }
 
 EntityType Entity::getType() const {
@@ -29,7 +32,7 @@ EntityType Entity::getType() const {
     return data->type;
 }
 
-void Entity::setType(EntityType type)  {
+void Entity::setType(EntityType type) {
     if (data == NULL)
         return;
     else data->type = type;

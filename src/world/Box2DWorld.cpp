@@ -7,7 +7,6 @@
  **/
 #include "world/Box2DWorld.h"
 #include <world/utils/CollectEntity.h>
-#include <world/wrappers/EntityData.h>
 #include "world/wrappers/SpellEntity.h"
 
 static const float32 WIDTH_CHUNK = 50.0f;
@@ -20,6 +19,7 @@ Box2DWorld::Box2DWorld(Server *server) : server(server) {
     // Создание мира с гравитацией 10g
     world = new b2World(b2Vec2(0.0f, -10.0f));
     world->SetDestructionListener(this);
+    world->SetContactListener(this);
 
     // Создание земли
     b2BodyDef groundBodyDef;
@@ -42,6 +42,10 @@ void Box2DWorld::update() {
     for (Entity *entity: needTickEntity)
         if (entity != NULL)
             entity->update(this);
+    for (Entity *entity : beDestroyed)
+        if (entity != NULL)
+            world->DestroyBody(entity->getFixture()->GetBody());
+    beDestroyed.clear();
 }
 
 
@@ -75,7 +79,7 @@ void Box2DWorld::checkAndCreateGround(float x) {
 
 Entity *Box2DWorld::createEntity(b2BodyDef &bodyDef, b2FixtureDef &fixtureDef) {
     if (bodyDef.userData == NULL) {
-        EntityData * data = new EntityData();
+        EntityData *data = new EntityData();
         data->type = EntityType::MOB;
         bodyDef.userData = data;
     }
@@ -85,7 +89,7 @@ Entity *Box2DWorld::createEntity(b2BodyDef &bodyDef, b2FixtureDef &fixtureDef) {
     ((EntityData *) bodyDef.userData)->id = freeId;
 
     b2Body *body = world->CreateBody(&bodyDef);
-    b2Fixture * fixture = body->CreateFixture(&fixtureDef);
+    b2Fixture *fixture = body->CreateFixture(&fixtureDef);
     Entity *entity = new Entity(fixture);
     entitysId[freeId] = entity;
     return entity;
@@ -113,7 +117,7 @@ SpellEntity *Box2DWorld::createSpellEntity(b2Vec2 position, Spell *spell) {
     bodyDef.position.Set(position.x, position.y);
 
     b2PolygonShape dynamicBox;
-    dynamicBox.SetAsBox(0.1f,0.1f);
+    dynamicBox.SetAsBox(0.1f, 0.1f);
 
     b2FixtureDef fixtureDef;
     fixtureDef.shape = &dynamicBox;
@@ -133,4 +137,17 @@ SpellEntity *Box2DWorld::createSpellEntity(b2Vec2 position, Spell *spell) {
     entitysId[freeId] = entity;
     data->spellEntity = entity;
     return (SpellEntity *) entity;
+}
+
+void Box2DWorld::BeginContact(b2Contact *contact) {
+    Entity *entity = (Entity *) contact->GetFixtureA()->GetBody()->GetUserData();
+    if (entity != NULL && (entity->getType() == EntityType::FIREBALL || entity->getType() == EntityType::SPELL)) {
+        beDestroyed.push_back(entity);
+    }
+
+    entity = (Entity *) contact->GetFixtureB()->GetBody()->GetUserData();
+    if (entity != NULL && (entity->getType() == EntityType::FIREBALL || entity->getType() == EntityType::SPELL)) {
+        beDestroyed.push_back(entity);
+    }
+
 }

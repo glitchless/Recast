@@ -20,7 +20,7 @@ class Server;
 
 class SpellEntity;
 
-class Box2DWorld : public b2DestructionListener {
+class Box2DWorld : public b2DestructionListener, b2ContactListener {
 public:
     Box2DWorld(Server *server);
 
@@ -42,10 +42,12 @@ public:
 
     void SayGoodbye(b2Joint *joint) {}
 
+    void BeginContact(b2Contact* contact);
 private:
     b2World *world;
     std::set<int> existGround; // Костыль божественной мощи
     std::vector<Entity *> needTickEntity;
+    std::vector<Entity *> beDestroyed;
     std::unordered_map<int, Entity *> entitysId;
     Server *server;
     int freeId = 0;
