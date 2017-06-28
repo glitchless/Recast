@@ -78,7 +78,7 @@ void Parcel::putString(std::string var) {
 
 template<class T>
 void inline setByte(char byte, int number, T *var) {
-    *(char *) (((void *) var) + number) = byte;
+    *(((char *) var) + number) = byte;
 }
 
 template<class T>
