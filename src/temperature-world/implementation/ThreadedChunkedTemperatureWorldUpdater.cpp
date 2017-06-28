@@ -91,7 +91,7 @@ void ThreadedChunkedTemperatureWorldUpdater::_watchChunk(shared_ptr<ThreadedChun
 
     auto updater = data->makeChunkUpdaterFn(chunk);
 
-    // connect chunk to others
+    // connect others to chunk
     data->world->foreachChunk([&](const shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>>& loopChunk) {
         for (Edge edge : {Edge::RIGHT, Edge::UP, Edge::FAR}) {
             if (updater->canAddNearChunk(edge, loopChunk)) {
@@ -101,7 +101,7 @@ void ThreadedChunkedTemperatureWorldUpdater::_watchChunk(shared_ptr<ThreadedChun
         }
     });
 
-    // connect others to chunk
+    // connect chunk to others
     for (const shared_ptr<IUpdaterTemperatureWorldSemiChunkUpdatable<IUpdater>>& loopUpdater : data->updaters) {
         for (Edge edge : {Edge::RIGHT, Edge::UP, Edge::FAR}) {
             if (loopUpdater->canAddNearChunk(edge, chunk)) {
