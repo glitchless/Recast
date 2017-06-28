@@ -101,54 +101,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_parcel.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_parcel.html">Parcel</a> {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_parcel.html#ac4940394afdfc35d38d695d4b0e14956">Parcel</a>(<span class="keywordtype">int</span> code);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_parcel.html#ac4940394afdfc35d38d695d4b0e14956">Parcel</a>(std::vector&lt;char&gt; * data);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_parcel.html#a7a5f1bd543d5685042b7ab61399abfc6">~Parcel</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_parcel.html#ac4940394afdfc35d38d695d4b0e14956">Parcel</a>(<a class="code" href="class_parcel.html">Parcel</a> &amp;other) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_parcel.html#a6f146387f34b3d2ac590f33b5126bc23">getCode</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_parcel.html#a0b164ec23965e3f37dd8a0d99321e232">putString</a>(std::string var);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="class_parcel.html#a19b5c8e0abaec80ea10da49d0832ad5b">put</a>(T var);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_parcel.html#a4540d13bf8699f6f3bcafd9e95bce706">readInt</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    std::string <a class="code" href="class_parcel.html#ad0d3b72bb1ca2319bab9a1981f60cd53">readString</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_parcel.html#aea33f46c6e77dd0c297e1ef5fdf5973e">readFloat</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> code;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> curPos;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::vector&lt;char&gt; * data;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_parcel_8hpp.html#ab8119384bb71fe92a1619107979baa6f">   21</a></span>&#160;<span class="keywordtype">void</span> <span class="keyword">inline</span> <a class="code" href="_parcel_8hpp.html#ab8119384bb71fe92a1619107979baa6f">setByte</a>(<span class="keywordtype">char</span> byte, <span class="keywordtype">int</span> number, T *var) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    *(<span class="keywordtype">char</span> *) (((<span class="keywordtype">void</span> *) var) + number) = byte;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="_parcel_8hpp.html#a105271315030f8e3fc6640b8b5042d68">   26</a></span>&#160;<span class="keywordtype">char</span> <span class="keyword">inline</span> <a class="code" href="_parcel_8hpp.html#a105271315030f8e3fc6640b8b5042d68">getByte</a>(T var, <span class="keywordtype">int</span> number) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">char</span>) ((var &gt;&gt; ((<span class="keyword">sizeof</span>(T) - number - 1) * 8)) &amp; 255);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_parcel.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_parcel.html">Parcel</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_parcel.html#a80bc44e52660817288138bc3e8eeb913">Parcel</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_parcel.html#af4041109946826da335989a6554153e0">   39</a></span>&#160;    <a class="code" href="class_parcel.html#af4041109946826da335989a6554153e0">Parcel</a>(std::vector&lt;char&gt; vector) : data(vector) {}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_parcel.html#a80bc44e52660817288138bc3e8eeb913">Parcel</a>(<a class="code" href="class_parcel.html">Parcel</a> &amp;other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_parcel.html#a0b164ec23965e3f37dd8a0d99321e232">putString</a>(std::string var);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53">   46</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53">ParcelableIDs</a>{</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53a19a6af17fd96277607046ea72bc48988">   47</a></span>&#160;    <a class="code" href="_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53a19a6af17fd96277607046ea72bc48988">USER_PARCE</a> = 0,</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53a6ce26a62afab55d7606ad4e92428b30c">   48</a></span>&#160;    <a class="code" href="_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a> = 0</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_i_serializable.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_serializable.html">ISerializable</a> {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_i_serializable.html#a330cb206b9261420f80b3bf42047865d">write</a>(<a class="code" href="class_parcel.html">Parcel</a> in);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_i_serializable.html#a99380501a318f099a512fd2cf3df75b0">read</a>(<a class="code" href="class_parcel.html">Parcel</a> out);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif //RECAST_SERIALIZABLE_H</span></div>
-<div class="ttc" id="class_parcel_html_a7a5f1bd543d5685042b7ab61399abfc6"><div class="ttname"><a href="class_parcel.html#a7a5f1bd543d5685042b7ab61399abfc6">Parcel::~Parcel</a></div><div class="ttdeci">~Parcel()</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:38</div></div>
-<div class="ttc" id="class_i_serializable_html_a330cb206b9261420f80b3bf42047865d"><div class="ttname"><a href="class_i_serializable.html#a330cb206b9261420f80b3bf42047865d">ISerializable::write</a></div><div class="ttdeci">void write(Parcel in)</div></div>
-<div class="ttc" id="class_parcel_html_ad0d3b72bb1ca2319bab9a1981f60cd53"><div class="ttname"><a href="class_parcel.html#ad0d3b72bb1ca2319bab9a1981f60cd53">Parcel::readString</a></div><div class="ttdeci">std::string readString()</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:56</div></div>
-<div class="ttc" id="class_parcel_html_a4540d13bf8699f6f3bcafd9e95bce706"><div class="ttname"><a href="class_parcel.html#a4540d13bf8699f6f3bcafd9e95bce706">Parcel::readInt</a></div><div class="ttdeci">int readInt()</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:48</div></div>
-<div class="ttc" id="class_parcel_html_a6f146387f34b3d2ac590f33b5126bc23"><div class="ttname"><a href="class_parcel.html#a6f146387f34b3d2ac590f33b5126bc23">Parcel::getCode</a></div><div class="ttdeci">int getCode()</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:28</div></div>
-<div class="ttc" id="class_i_serializable_html"><div class="ttname"><a href="class_i_serializable.html">ISerializable</a></div><div class="ttdef"><b>Definition:</b> Parcel.hpp:51</div></div>
-<div class="ttc" id="class_parcel_html_a0b164ec23965e3f37dd8a0d99321e232"><div class="ttname"><a href="class_parcel.html#a0b164ec23965e3f37dd8a0d99321e232">Parcel::putString</a></div><div class="ttdeci">void putString(std::string var)</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:73</div></div>
-<div class="ttc" id="class_parcel_html_a19b5c8e0abaec80ea10da49d0832ad5b"><div class="ttname"><a href="class_parcel.html#a19b5c8e0abaec80ea10da49d0832ad5b">Parcel::put</a></div><div class="ttdeci">void put(T var)</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:43</div></div>
-<div class="ttc" id="class_parcel_html"><div class="ttname"><a href="class_parcel.html">Parcel</a></div><div class="ttdef"><b>Definition:</b> Parcel.hpp:25</div></div>
-<div class="ttc" id="class_i_serializable_html_a99380501a318f099a512fd2cf3df75b0"><div class="ttname"><a href="class_i_serializable.html#a99380501a318f099a512fd2cf3df75b0">ISerializable::read</a></div><div class="ttdeci">void read(Parcel out)</div></div>
-<div class="ttc" id="class_parcel_html_aea33f46c6e77dd0c297e1ef5fdf5973e"><div class="ttname"><a href="class_parcel.html#aea33f46c6e77dd0c297e1ef5fdf5973e">Parcel::readFloat</a></div><div class="ttdeci">float readFloat()</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:65</div></div>
-<div class="ttc" id="class_parcel_html_ac4940394afdfc35d38d695d4b0e14956"><div class="ttname"><a href="class_parcel.html#ac4940394afdfc35d38d695d4b0e14956">Parcel::Parcel</a></div><div class="ttdeci">Parcel(int code)</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:21</div></div>
-<div class="ttc" id="_parcel_8hpp_html_a4978ffb8bae4c099637a44e82b661d53"><div class="ttname"><a href="_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53">ParcelableIDs</a></div><div class="ttdeci">ParcelableIDs</div><div class="ttdef"><b>Definition:</b> Parcel.hpp:46</div></div>
-<div class="ttc" id="_parcel_8hpp_html_a4978ffb8bae4c099637a44e82b661d53a6ce26a62afab55d7606ad4e92428b30c"><div class="ttname"><a href="_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a></div><div class="ttdef"><b>Definition:</b> Parcel.hpp:48</div></div>
-<div class="ttc" id="_parcel_8hpp_html_a4978ffb8bae4c099637a44e82b661d53a19a6af17fd96277607046ea72bc48988"><div class="ttname"><a href="_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53a19a6af17fd96277607046ea72bc48988">USER_PARCE</a></div><div class="ttdef"><b>Definition:</b> Parcel.hpp:47</div></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_parcel.html#a19b5c8e0abaec80ea10da49d0832ad5b">   46</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_parcel.html#a19b5c8e0abaec80ea10da49d0832ad5b">put</a>(T var) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <span class="keyword">const</span> *p = <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <span class="keyword">const </span>*<span class="keyword">&gt;</span>(&amp;var);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <span class="keyword">sizeof</span>(T); i++)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            data.push_back((<span class="keywordtype">char</span> &amp;&amp;) p[i]);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_parcel.html#a4540d13bf8699f6f3bcafd9e95bce706">readInt</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::string <a class="code" href="class_parcel.html#ad0d3b72bb1ca2319bab9a1981f60cd53">readString</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_parcel.html#aea33f46c6e77dd0c297e1ef5fdf5973e">readFloat</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_parcel.html#ad76fa40dc5cf6ede93b627f3f4845176">   58</a></span>&#160;    <span class="keyword">const</span> std::vector&lt;char&gt; *<a class="code" href="class_parcel.html#ad76fa40dc5cf6ede93b627f3f4845176">getVector</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> &amp;data; }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> curPos;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::vector&lt;char&gt; data;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif //RECAST_SERIALIZABLE_H</span></div>
+<div class="ttc" id="_parcel_8hpp_html_a105271315030f8e3fc6640b8b5042d68"><div class="ttname"><a href="_parcel_8hpp.html#a105271315030f8e3fc6640b8b5042d68">getByte</a></div><div class="ttdeci">char getByte(T var, int number)</div><div class="ttdef"><b>Definition:</b> Parcel.hpp:26</div></div>
+<div class="ttc" id="_parcel_8hpp_html_ab8119384bb71fe92a1619107979baa6f"><div class="ttname"><a href="_parcel_8hpp.html#ab8119384bb71fe92a1619107979baa6f">setByte</a></div><div class="ttdeci">void setByte(char byte, int number, T *var)</div><div class="ttdef"><b>Definition:</b> Parcel.hpp:21</div></div>
+<div class="ttc" id="class_parcel_html_ad0d3b72bb1ca2319bab9a1981f60cd53"><div class="ttname"><a href="class_parcel.html#ad0d3b72bb1ca2319bab9a1981f60cd53">Parcel::readString</a></div><div class="ttdeci">std::string readString()</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:33</div></div>
+<div class="ttc" id="class_parcel_html_a4540d13bf8699f6f3bcafd9e95bce706"><div class="ttname"><a href="class_parcel.html#a4540d13bf8699f6f3bcafd9e95bce706">Parcel::readInt</a></div><div class="ttdeci">int readInt()</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:25</div></div>
+<div class="ttc" id="class_parcel_html_af4041109946826da335989a6554153e0"><div class="ttname"><a href="class_parcel.html#af4041109946826da335989a6554153e0">Parcel::Parcel</a></div><div class="ttdeci">Parcel(std::vector&lt; char &gt; vector)</div><div class="ttdef"><b>Definition:</b> Parcel.hpp:39</div></div>
+<div class="ttc" id="class_parcel_html_a80bc44e52660817288138bc3e8eeb913"><div class="ttname"><a href="class_parcel.html#a80bc44e52660817288138bc3e8eeb913">Parcel::Parcel</a></div><div class="ttdeci">Parcel()</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:21</div></div>
+<div class="ttc" id="class_parcel_html_a0b164ec23965e3f37dd8a0d99321e232"><div class="ttname"><a href="class_parcel.html#a0b164ec23965e3f37dd8a0d99321e232">Parcel::putString</a></div><div class="ttdeci">void putString(std::string var)</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:50</div></div>
+<div class="ttc" id="class_parcel_html_a19b5c8e0abaec80ea10da49d0832ad5b"><div class="ttname"><a href="class_parcel.html#a19b5c8e0abaec80ea10da49d0832ad5b">Parcel::put</a></div><div class="ttdeci">void put(T var)</div><div class="ttdef"><b>Definition:</b> Parcel.hpp:46</div></div>
+<div class="ttc" id="class_parcel_html"><div class="ttname"><a href="class_parcel.html">Parcel</a></div><div class="ttdef"><b>Definition:</b> Parcel.hpp:35</div></div>
+<div class="ttc" id="class_parcel_html_aea33f46c6e77dd0c297e1ef5fdf5973e"><div class="ttname"><a href="class_parcel.html#aea33f46c6e77dd0c297e1ef5fdf5973e">Parcel::readFloat</a></div><div class="ttdeci">float readFloat()</div><div class="ttdef"><b>Definition:</b> Parcel.cpp:42</div></div>
+<div class="ttc" id="class_parcel_html_ad76fa40dc5cf6ede93b627f3f4845176"><div class="ttname"><a href="class_parcel.html#ad76fa40dc5cf6ede93b627f3f4845176">Parcel::getVector</a></div><div class="ttdeci">const std::vector&lt; char &gt; * getVector() const </div><div class="ttdef"><b>Definition:</b> Parcel.hpp:58</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

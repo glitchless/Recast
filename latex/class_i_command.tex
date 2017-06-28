@@ -17,7 +17,7 @@ Inheritance diagram for I\-Command\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=166pt]{class_i_command__inherit__graph}
+\includegraphics[width=301pt]{class_i_command__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -27,7 +27,7 @@ Collaboration diagram for I\-Command\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=166pt]{class_i_command__coll__graph}
+\includegraphics[width=194pt]{class_i_command__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -36,6 +36,8 @@ Collaboration diagram for I\-Command\-:
 \hyperlink{class_i_command_acf142bc073aaf829663ba395bacd34cc}{I\-Command} ()
 \item 
 \hyperlink{class_i_command_a1a3e297aea5c94d785060e49801860dc}{I\-Command} (const \hyperlink{class_i_command}{I\-Command} \&other)
+\item 
+virtual bool \hyperlink{class_i_command_ac2bd771dcd2fda5a951869bdc4928b48}{is\-Only\-U\-I\-Command} ()
 \item 
 virtual bool \hyperlink{class_i_command_acb0beea12bd5ec963884dc35d4d48014}{is\-Valid} (const std\-::string \&cmd, const std\-::vector$<$ std\-::string $>$ \&args) const =0
 \item 
@@ -71,6 +73,17 @@ Don't forget to register your Command in Command\-Manager!!!
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_i_command_ac2bd771dcd2fda5a951869bdc4928b48}{\index{I\-Command@{I\-Command}!is\-Only\-U\-I\-Command@{is\-Only\-U\-I\-Command}}
+\index{is\-Only\-U\-I\-Command@{is\-Only\-U\-I\-Command}!ICommand@{I\-Command}}
+\subsubsection[{is\-Only\-U\-I\-Command}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool I\-Command\-::is\-Only\-U\-I\-Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_i_command_ac2bd771dcd2fda5a951869bdc4928b48}
+
+
+Reimplemented in \hyperlink{class_create_entity_command_a8cb21ea7a4b172a26e2a3e62586a1c4a}{Create\-Entity\-Command}.
+
 \hypertarget{class_i_command_acb0beea12bd5ec963884dc35d4d48014}{\index{I\-Command@{I\-Command}!is\-Valid@{is\-Valid}}
 \index{is\-Valid@{is\-Valid}!ICommand@{I\-Command}}
 \subsubsection[{is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool I\-Command\-::is\-Valid (
@@ -81,7 +94,7 @@ Don't forget to register your Command in Command\-Manager!!!
 ) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_command_acb0beea12bd5ec963884dc35d4d48014}
 
 
-Implemented in \hyperlink{class_stop_command_a0f9a9fd9bb238524e1be3ea25b9bbb79}{Stop\-Command}.
+Implemented in \hyperlink{class_create_entity_command_abeba611ac32b8d438736a383cf5f041f}{Create\-Entity\-Command}, and \hyperlink{class_stop_command_a0f9a9fd9bb238524e1be3ea25b9bbb79}{Stop\-Command}.
 
 \hypertarget{class_i_command_a55f931bb7304e2bc591ba2edd717e86c}{\index{I\-Command@{I\-Command}!on\-Command@{on\-Command}}
 \index{on\-Command@{on\-Command}!ICommand@{I\-Command}}
@@ -94,7 +107,7 @@ Implemented in \hyperlink{class_stop_command_a0f9a9fd9bb238524e1be3ea25b9bbb79}{
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_command_a55f931bb7304e2bc591ba2edd717e86c}
 
 
-Implemented in \hyperlink{class_stop_command_a5f1df22a117e1f9afd65f0c55dcfc983}{Stop\-Command}.
+Implemented in \hyperlink{class_create_entity_command_aacb06adba7b70b5a5225c72bf943bab2}{Create\-Entity\-Command}, and \hyperlink{class_stop_command_a5f1df22a117e1f9afd65f0c55dcfc983}{Stop\-Command}.
 
 
 

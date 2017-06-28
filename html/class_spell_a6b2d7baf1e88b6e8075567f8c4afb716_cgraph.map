@@ -1,0 +1,8 @@
+<map id="Spell::write" name="Spell::write">
+<area shape="rect" id="node2" href="$class_spell.html#a8b234c2b1930d3dfc1954c6d4a30cdac" title="Spell::getRootNode" alt="" coords="179,5,315,32"/>
+<area shape="rect" id="node3" href="$class_spell_node.html#aac7571c9caae433a697b94d29a6468fa" title="SpellNode::iterrator" alt="" coords="179,56,314,83"/>
+<area shape="rect" id="node4" href="$class_spell_node.html#a2dfb0810e266ab201cd0fb5023d3bcc4" title="SpellNode::getConnectedNodes" alt="" coords="142,107,351,133"/>
+<area shape="rect" id="node5" href="$class_parcel.html#a19b5c8e0abaec80ea10da49d0832ad5b" title="Parcel::put" alt="" coords="427,157,512,184"/>
+<area shape="rect" id="node6" href="$class_spell_node.html#a2c02575f831e8c7de826dc144279d19d" title="SpellNode::write" alt="" coords="187,208,306,235"/>
+<area shape="rect" id="node7" href="$class_spell_node.html#aba3a1891696bb331002148ba15dc72c3" title="SpellNode::getType" alt="" coords="401,208,538,235"/>
+</map>

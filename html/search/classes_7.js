@@ -8,7 +8,6 @@ var searchData=
   ['intscale',['IntScale',['../struct_int_scale.html',1,'']]],
   ['intscaleparallelepiped',['IntScaleParallelepiped',['../struct_int_scale_parallelepiped.html',1,'']]],
   ['invalidloginorpassword',['InvalidLoginOrPassword',['../class_invalid_login_or_password.html',1,'']]],
-  ['iserializable',['ISerializable',['../class_i_serializable.html',1,'']]],
   ['itemperatureworld',['ITemperatureWorld',['../class_i_temperature_world.html',1,'']]],
   ['itemperatureworldboundable',['ITemperatureWorldBoundable',['../class_i_temperature_world_boundable.html',1,'']]],
   ['itemperatureworldboundable_3c_20itemperatureworld_20_3e',['ITemperatureWorldBoundable&lt; ITemperatureWorld &gt;',['../class_i_temperature_world_boundable.html',1,'']]],

@@ -1,0 +1,4 @@
+<map id="EntityData" name="EntityData">
+<area shape="rect" id="node2" href="$class_spell_entity.html" title="{SpellEntity\n||+ SpellEntity()\l+ ~SpellEntity()\l+ update()\l}" alt="" coords="5,221,117,328"/>
+<area shape="rect" id="node3" href="$class_entity.html" title="{Entity\n||+ Entity()\l+ getId()\l+ update()\l+ getFixture()\l+ getType()\l+ setType()\l+ write()\l}" alt="" coords="11,5,111,171"/>
+</map>

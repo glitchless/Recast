@@ -89,9 +89,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_i_event-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">IEvent Class Reference</div>  </div>
+<div class="title">IEvent Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -101,14 +102,14 @@ Inheritance diagram for IEvent:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_event__inherit__graph.png" border="0" usemap="#_i_event_inherit__map" alt="Inheritance graph"/></div>
 <map name="_i_event_inherit__map" id="_i_event_inherit__map">
-<area shape="rect" id="node2" href="class_heat_event.html" title="{HeatEvent\n||+ HeatEvent()\l+ getTempFromEnergy()\l}" alt="" coords="5,161,168,253"/></map>
+<area shape="rect" id="node2" href="class_heat_event.html" title="{HeatEvent\n||+ HeatEvent()\l+ commit()\l+ getTempFromEnergy()\l}" alt="" coords="5,160,168,267"/><area shape="rect" id="node3" href="class_move_event.html" title="{MoveEvent\n||+ MoveEvent()\l+ commit()\l}" alt="" coords="193,167,300,259"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for IEvent:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_event__coll__graph.png" border="0" usemap="#_i_event_coll__map" alt="Collaboration graph"/></div>
 <map name="_i_event_coll__map" id="_i_event_coll__map">
-</map>
+<area shape="rect" id="node2" href="class_spell_node.html" title="{SpellNode\n|# x\l# y\l# z\l# connectedNodes\l# nowInTick\l# type\l|+ SpellNode()\l+ ~SpellNode()\l+ isEnergyNode()\l+ connectNode()\l+ tick()\l+ inTick()\l+ getDistance()\l+ getType()\l+ iterrator()\l+ getConnectedNodes()\l+ getX()\l+ getY()\l+ getZ()\l+ write()\l+ read()\l# onTick()\l}" alt="" coords="5,5,165,376"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -117,8 +118,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a47970d711c08bc2e097daa4c93810445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedde6835702a67a72e833b67230c5c66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spell_node.html">SpellNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_event.html#aedde6835702a67a72e833b67230c5c66">getNode</a> () const </td></tr>
 <tr class="separator:aedde6835702a67a72e833b67230c5c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a458dd99d3b32a1abe792ebebaf6a7002"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_event.html#a458dd99d3b32a1abe792ebebaf6a7002">commit</a> ()</td></tr>
-<tr class="separator:a458dd99d3b32a1abe792ebebaf6a7002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5422b83a412e52b68c7885b53a421e0e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_event.html#a5422b83a412e52b68c7885b53a421e0e">commit</a> (<a class="el" href="class_box2_d_world.html">Box2DWorld</a> *world, <a class="el" href="class_spell_entity.html">SpellEntity</a> *entity, std::shared_ptr&lt; <a class="el" href="_server_8hpp.html#ac147588bd69e1d052194e0dea10202ff">TempWorld</a> &gt; tempWorld)=0</td></tr>
+<tr class="separator:a5422b83a412e52b68c7885b53a421e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a3bc076098af89f7da2364efeae372876"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spell_node.html">SpellNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_event.html#a3bc076098af89f7da2364efeae372876">fromNode</a></td></tr>
+<tr class="separator:a3bc076098af89f7da2364efeae372876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a47970d711c08bc2e097daa4c93810445"></a>
@@ -146,7 +152,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a458dd99d3b32a1abe792ebebaf6a7002"></a>
+<a class="anchor" id="a5422b83a412e52b68c7885b53a421e0e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -156,16 +162,35 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void IEvent::commit </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_box2_d_world.html">Box2DWorld</a> *&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_spell_entity.html">SpellEntity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="_server_8hpp.html#ac147588bd69e1d052194e0dea10202ff">TempWorld</a> &gt;&#160;</td>
+          <td class="paramname"><em>tempWorld</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_heat_event.html#a9dcc28accc54844fc128daff999f2f22">HeatEvent</a>, and <a class="el" href="class_move_event.html#a409faa8726fad01a66fe86d61369fcaf">MoveEvent</a>.</p>
 
 </div>
 </div>
@@ -186,6 +211,36 @@ Public Member Functions</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_event_aedde6835702a67a72e833b67230c5c66_icgraph.png" border="0" usemap="#class_i_event_aedde6835702a67a72e833b67230c5c66_icgraph" alt=""/></div>
+<map name="class_i_event_aedde6835702a67a72e833b67230c5c66_icgraph" id="class_i_event_aedde6835702a67a72e833b67230c5c66_icgraph">
+<area shape="rect" id="node2" href="class_heat_event.html#a9dcc28accc54844fc128daff999f2f22" title="HeatEvent::commit" alt="" coords="171,5,306,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a3bc076098af89f7da2364efeae372876"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spell_node.html">SpellNode</a>* IEvent::fromNode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

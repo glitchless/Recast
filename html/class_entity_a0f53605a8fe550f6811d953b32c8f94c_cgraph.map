@@ -1,0 +1,6 @@
+<map id="Entity::write" name="Entity::write">
+<area shape="rect" id="node2" href="$class_parcel.html#a19b5c8e0abaec80ea10da49d0832ad5b" title="Parcel::put" alt="" coords="165,5,251,32"/>
+<area shape="rect" id="node3" href="$class_entity.html#aad9408b6cfd1102b6176970ccfa5270a" title="Entity::getType" alt="" coords="153,56,263,83"/>
+<area shape="rect" id="node4" href="$class_entity.html#a6cb5ba93ecc7c9cb85c71af69b5aeff8" title="Entity::getId" alt="" coords="161,107,255,133"/>
+<area shape="rect" id="node5" href="$class_entity.html#a18e3fada062aba11a04c974d2294bb23" title="Entity::getFixture" alt="" coords="147,157,269,184"/>
+</map>

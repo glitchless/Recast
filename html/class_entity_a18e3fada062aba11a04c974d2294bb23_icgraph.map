@@ -1,0 +1,6 @@
+<map id="Entity::getFixture" name="Entity::getFixture">
+<area shape="rect" id="node2" href="$class_heat_event.html#a9dcc28accc54844fc128daff999f2f22" title="HeatEvent::commit" alt="" coords="178,5,313,32"/>
+<area shape="rect" id="node3" href="$class_move_event.html#a409faa8726fad01a66fe86d61369fcaf" title="MoveEvent::commit" alt="" coords="176,56,315,83"/>
+<area shape="rect" id="node4" href="$class_entity.html#a0f53605a8fe550f6811d953b32c8f94c" title="Entity::write" alt="" coords="199,107,291,133"/>
+<area shape="rect" id="node5" href="$class_get_entitys.html#a14af21ff8ce5555e57ec532bc2db9448" title="GetEntitys::onPacket" alt="" coords="363,107,509,133"/>
+</map>

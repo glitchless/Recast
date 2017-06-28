@@ -113,13 +113,13 @@ Collaboration diagram for SpellEventListener:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac0c7b6c313e21fc2d48605b3581fde7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_event_listener.html#ac0c7b6c313e21fc2d48605b3581fde7a">SpellEventListener</a> (<a class="el" href="class_spell.html">Spell</a> *spell)</td></tr>
-<tr class="separator:ac0c7b6c313e21fc2d48605b3581fde7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad071b51be0727a2e5554252d50586f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_event_listener.html#aad071b51be0727a2e5554252d50586f4">onEvent</a> (<a class="el" href="class_i_event.html">IEvent</a> event)</td></tr>
-<tr class="separator:aad071b51be0727a2e5554252d50586f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f77a32833b02102acf5cddf789d9b31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_event_listener.html#a8f77a32833b02102acf5cddf789d9b31">SpellEventListener</a> (<a class="el" href="class_spell.html">Spell</a> *spell, <a class="el" href="class_spell_entity.html">SpellEntity</a> *entity, <a class="el" href="class_box2_d_world.html">Box2DWorld</a> *world, std::shared_ptr&lt; <a class="el" href="_server_8hpp.html#ac147588bd69e1d052194e0dea10202ff">TempWorld</a> &gt; tempWorld)</td></tr>
+<tr class="separator:a8f77a32833b02102acf5cddf789d9b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932a0a7b25fc732ebd796244370162e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_event_listener.html#a932a0a7b25fc732ebd796244370162e7">onEvent</a> (<a class="el" href="class_i_event.html">IEvent</a> &amp;event)</td></tr>
+<tr class="separator:a932a0a7b25fc732ebd796244370162e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac0c7b6c313e21fc2d48605b3581fde7a"></a>
+<a class="anchor" id="a8f77a32833b02102acf5cddf789d9b31"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -130,8 +130,30 @@ Public Member Functions</h2></td></tr>
           <td class="memname">SpellEventListener::SpellEventListener </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_spell.html">Spell</a> *&#160;</td>
-          <td class="paramname"><em>spell</em></td><td>)</td>
+          <td class="paramname"><em>spell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_spell_entity.html">SpellEntity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_box2_d_world.html">Box2DWorld</a> *&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="_server_8hpp.html#ac147588bd69e1d052194e0dea10202ff">TempWorld</a> &gt;&#160;</td>
+          <td class="paramname"><em>tempWorld</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -144,7 +166,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aad071b51be0727a2e5554252d50586f4"></a>
+<a class="anchor" id="a932a0a7b25fc732ebd796244370162e7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -154,7 +176,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void SpellEventListener::onEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_i_event.html">IEvent</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_i_event.html">IEvent</a> &amp;&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
         </tr>
@@ -166,7 +188,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_i_event_listener.html#ad5716bb760dfcc444e0b38f705579d59">IEventListener</a>.</p>
+<p>Reimplemented from <a class="el" href="class_i_event_listener.html#a4b31aabdd3a75fb19017ea47ed729dc8">IEventListener</a>.</p>
 
 </div>
 </div>

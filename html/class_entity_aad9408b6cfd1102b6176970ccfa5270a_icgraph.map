@@ -1,0 +1,5 @@
+<map id="Entity::getType" name="Entity::getType">
+<area shape="rect" id="node2" href="$class_box2_d_world.html#a5cceaada591649875632c6bfbca8041f" title="Box2DWorld::BeginContact" alt="" coords="166,5,349,32"/>
+<area shape="rect" id="node3" href="$class_entity.html#a0f53605a8fe550f6811d953b32c8f94c" title="Entity::write" alt="" coords="211,56,303,83"/>
+<area shape="rect" id="node4" href="$class_get_entitys.html#a14af21ff8ce5555e57ec532bc2db9448" title="GetEntitys::onPacket" alt="" coords="397,56,544,83"/>
+</map>

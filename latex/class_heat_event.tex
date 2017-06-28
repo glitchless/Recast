@@ -22,19 +22,22 @@ Collaboration diagram for Heat\-Event\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=202pt]{class_heat_event__coll__graph}
+\includegraphics[height=550pt]{class_heat_event__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_heat_event_a7015a08ccd75b135599dd40b755c5e68}{Heat\-Event} (\hyperlink{class_spell_node}{Spell\-Node} $\ast$node, float temp)
+\item 
+void \hyperlink{class_heat_event_a9dcc28accc54844fc128daff999f2f22}{commit} (\hyperlink{class_box2_d_world}{Box2\-D\-World} $\ast$world, \hyperlink{class_spell_entity}{Spell\-Entity} $\ast$entity, std\-::shared\-\_\-ptr$<$ \hyperlink{_server_8hpp_ac147588bd69e1d052194e0dea10202ff}{Temp\-World} $>$ temp\-World)
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static float \hyperlink{class_heat_event_af2d9aa99e9b2a57d8e8778598ba1c8cc}{get\-Temp\-From\-Energy} (float energy\-Ejection)
 \end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -49,6 +52,31 @@ static float \hyperlink{class_heat_event_af2d9aa99e9b2a57d8e8778598ba1c8cc}{get\
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_heat_event_a9dcc28accc54844fc128daff999f2f22}{\index{Heat\-Event@{Heat\-Event}!commit@{commit}}
+\index{commit@{commit}!HeatEvent@{Heat\-Event}}
+\subsubsection[{commit}]{\setlength{\rightskip}{0pt plus 5cm}void Heat\-Event\-::commit (
+\begin{DoxyParamCaption}
+\item[{{\bf Box2\-D\-World} $\ast$}]{world, }
+\item[{{\bf Spell\-Entity} $\ast$}]{entity, }
+\item[{std\-::shared\-\_\-ptr$<$ {\bf Temp\-World} $>$}]{temp\-World}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_heat_event_a9dcc28accc54844fc128daff999f2f22}
+
+
+Implements \hyperlink{class_i_event_a5422b83a412e52b68c7885b53a421e0e}{I\-Event}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_heat_event_a9dcc28accc54844fc128daff999f2f22_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_heat_event_af2d9aa99e9b2a57d8e8778598ba1c8cc}{\index{Heat\-Event@{Heat\-Event}!get\-Temp\-From\-Energy@{get\-Temp\-From\-Energy}}
 \index{get\-Temp\-From\-Energy@{get\-Temp\-From\-Energy}!HeatEvent@{Heat\-Event}}
 \subsubsection[{get\-Temp\-From\-Energy}]{\setlength{\rightskip}{0pt plus 5cm}static float Heat\-Event\-::get\-Temp\-From\-Energy (
@@ -70,6 +98,7 @@ Here is the call graph for this function\-:
 
 
 
-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/spells/events/\hyperlink{_heat_event_8hpp}{Heat\-Event.\-hpp}\end{DoxyCompactItemize}
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/spells/events/\hyperlink{_heat_event_8hpp}{Heat\-Event.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/spell/events/\hyperlink{_heat_event_8cpp}{Heat\-Event.\-cpp}\end{DoxyCompactItemize}

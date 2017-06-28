@@ -1,4 +1,6 @@
 <map id="SpellNode" name="SpellNode">
-<area shape="rect" id="node2" href="$class_energy_node.html" title="{EnergyNode\n|# energy\l|+ EnergyNode()\l+ isEnergyNode()\l+ getEnergy()\l+ transferEnergy()\l# onTick()\l}" alt="" coords="6,293,132,429"/>
-<area shape="rect" id="node3" href="$class_heater_node.html" title="{HeaterNode\n||+ HeaterNode()\l}" alt="" coords="13,477,124,555"/>
+<area shape="rect" id="node2" href="$class_energy_node.html" title="{EnergyNode\n|# energy\l|+ EnergyNode()\l+ EnergyNode()\l+ isEnergyNode()\l+ getEnergy()\l+ transferEnergy()\l# onTick()\l}" alt="" coords="127,425,253,575"/>
+<area shape="rect" id="node3" href="$class_aim_node.html" title="{AimNode\n||+ AimNode()\l}" alt="" coords="5,624,101,701"/>
+<area shape="rect" id="node4" href="$class_generator_node.html" title="{GeneratorNode\n||+ GeneratorNode()\l}" alt="" coords="125,624,255,701"/>
+<area shape="rect" id="node5" href="$class_heater_node.html" title="{HeaterNode\n||+ HeaterNode()\l}" alt="" coords="280,624,391,701"/>
 </map>

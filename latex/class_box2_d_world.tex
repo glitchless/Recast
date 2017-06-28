@@ -1,0 +1,238 @@
+\hypertarget{class_box2_d_world}{\section{Box2\-D\-World Class Reference}
+\label{class_box2_d_world}\index{Box2\-D\-World@{Box2\-D\-World}}
+}
+
+
+{\ttfamily \#include $<$Box2\-D\-World.\-h$>$}
+
+
+
+Inheritance diagram for Box2\-D\-World\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_box2_d_world__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Box2\-D\-World\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_box2_d_world__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_box2_d_world_a1afb954136708078d76c5a1282cded85}{Box2\-D\-World} (\hyperlink{class_server}{Server} $\ast$server)
+\item 
+\hyperlink{class_box2_d_world_afde1226d1128ca4b16bbffe7bf79b0b0}{$\sim$\-Box2\-D\-World} ()
+\item 
+void \hyperlink{class_box2_d_world_a2f8ab17447c51b4343f07ac403cc9454}{update} ()
+\item 
+std\-::vector$<$ \hyperlink{class_entity}{Entity} $>$ \hyperlink{class_box2_d_world_ae1d2d9777c5a7b87253d3396b9f64451}{get\-All\-Entity\-In\-Chunk} (float x1, float x2)
+\item 
+\hyperlink{class_entity}{Entity} $\ast$ \hyperlink{class_box2_d_world_a13348d9a46d2f0a566d6ea653a5d4598}{create\-Entity} (b2\-Body\-Def \&body\-Def, b2\-Fixture\-Def \&fixture\-Def)
+\item 
+\hyperlink{class_spell_entity}{Spell\-Entity} $\ast$ \hyperlink{class_box2_d_world_a135cc7599bfc2a3978428fbb155cfcdc}{create\-Spell\-Entity} (b2\-Vec2 position, \hyperlink{class_spell}{Spell} $\ast$spell)
+\item 
+\hyperlink{class_entity}{Entity} $\ast$ \hyperlink{class_box2_d_world_ad44088e2139e8b6a48437b83de0d545e}{get\-Entity\-By\-Id} (int id)
+\item 
+void \hyperlink{class_box2_d_world_a4c330d0ac42a183c2bd2dbd8e4bffe9f}{async\-Create\-Spell\-Entity} (b2\-Vec2 position, \hyperlink{class_spell}{Spell} $\ast$spell)
+\item 
+void \hyperlink{class_box2_d_world_aed35f7a519c5844bf66464bb8aee30ce}{subscribe\-To\-Update} (\hyperlink{class_entity}{Entity} $\ast$entity)
+\item 
+void \hyperlink{class_box2_d_world_af99542cb5c6eda96dfdec279f73c5e8b}{Say\-Goodbye} (b2\-Fixture $\ast$fixture)
+\item 
+void \hyperlink{class_box2_d_world_a268ef72c46673588a071d99afd745c98}{Say\-Goodbye} (b2\-Joint $\ast$joint)
+\item 
+void \hyperlink{class_box2_d_world_a5cceaada591649875632c6bfbca8041f}{Begin\-Contact} (b2\-Contact $\ast$contact)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_box2_d_world_a1afb954136708078d76c5a1282cded85}{\index{Box2\-D\-World@{Box2\-D\-World}!Box2\-D\-World@{Box2\-D\-World}}
+\index{Box2\-D\-World@{Box2\-D\-World}!Box2DWorld@{Box2\-D\-World}}
+\subsubsection[{Box2\-D\-World}]{\setlength{\rightskip}{0pt plus 5cm}Box2\-D\-World\-::\-Box2\-D\-World (
+\begin{DoxyParamCaption}
+\item[{{\bf Server} $\ast$}]{server}
+\end{DoxyParamCaption}
+)}}\label{class_box2_d_world_a1afb954136708078d76c5a1282cded85}
+\hypertarget{class_box2_d_world_afde1226d1128ca4b16bbffe7bf79b0b0}{\index{Box2\-D\-World@{Box2\-D\-World}!$\sim$\-Box2\-D\-World@{$\sim$\-Box2\-D\-World}}
+\index{$\sim$\-Box2\-D\-World@{$\sim$\-Box2\-D\-World}!Box2DWorld@{Box2\-D\-World}}
+\subsubsection[{$\sim$\-Box2\-D\-World}]{\setlength{\rightskip}{0pt plus 5cm}Box2\-D\-World\-::$\sim$\-Box2\-D\-World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_box2_d_world_afde1226d1128ca4b16bbffe7bf79b0b0}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_box2_d_world_a4c330d0ac42a183c2bd2dbd8e4bffe9f}{\index{Box2\-D\-World@{Box2\-D\-World}!async\-Create\-Spell\-Entity@{async\-Create\-Spell\-Entity}}
+\index{async\-Create\-Spell\-Entity@{async\-Create\-Spell\-Entity}!Box2DWorld@{Box2\-D\-World}}
+\subsubsection[{async\-Create\-Spell\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}void Box2\-D\-World\-::async\-Create\-Spell\-Entity (
+\begin{DoxyParamCaption}
+\item[{b2\-Vec2}]{position, }
+\item[{{\bf Spell} $\ast$}]{spell}
+\end{DoxyParamCaption}
+)}}\label{class_box2_d_world_a4c330d0ac42a183c2bd2dbd8e4bffe9f}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_box2_d_world_a4c330d0ac42a183c2bd2dbd8e4bffe9f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_box2_d_world_a5cceaada591649875632c6bfbca8041f}{\index{Box2\-D\-World@{Box2\-D\-World}!Begin\-Contact@{Begin\-Contact}}
+\index{Begin\-Contact@{Begin\-Contact}!Box2DWorld@{Box2\-D\-World}}
+\subsubsection[{Begin\-Contact}]{\setlength{\rightskip}{0pt plus 5cm}void Box2\-D\-World\-::\-Begin\-Contact (
+\begin{DoxyParamCaption}
+\item[{b2\-Contact $\ast$}]{contact}
+\end{DoxyParamCaption}
+)}}\label{class_box2_d_world_a5cceaada591649875632c6bfbca8041f}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_box2_d_world_a5cceaada591649875632c6bfbca8041f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_box2_d_world_a13348d9a46d2f0a566d6ea653a5d4598}{\index{Box2\-D\-World@{Box2\-D\-World}!create\-Entity@{create\-Entity}}
+\index{create\-Entity@{create\-Entity}!Box2DWorld@{Box2\-D\-World}}
+\subsubsection[{create\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} $\ast$ Box2\-D\-World\-::create\-Entity (
+\begin{DoxyParamCaption}
+\item[{b2\-Body\-Def \&}]{body\-Def, }
+\item[{b2\-Fixture\-Def \&}]{fixture\-Def}
+\end{DoxyParamCaption}
+)}}\label{class_box2_d_world_a13348d9a46d2f0a566d6ea653a5d4598}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_box2_d_world_a13348d9a46d2f0a566d6ea653a5d4598_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_box2_d_world_a135cc7599bfc2a3978428fbb155cfcdc}{\index{Box2\-D\-World@{Box2\-D\-World}!create\-Spell\-Entity@{create\-Spell\-Entity}}
+\index{create\-Spell\-Entity@{create\-Spell\-Entity}!Box2DWorld@{Box2\-D\-World}}
+\subsubsection[{create\-Spell\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Spell\-Entity} $\ast$ Box2\-D\-World\-::create\-Spell\-Entity (
+\begin{DoxyParamCaption}
+\item[{b2\-Vec2}]{position, }
+\item[{{\bf Spell} $\ast$}]{spell}
+\end{DoxyParamCaption}
+)}}\label{class_box2_d_world_a135cc7599bfc2a3978428fbb155cfcdc}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_box2_d_world_a135cc7599bfc2a3978428fbb155cfcdc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_box2_d_world_ae1d2d9777c5a7b87253d3396b9f64451}{\index{Box2\-D\-World@{Box2\-D\-World}!get\-All\-Entity\-In\-Chunk@{get\-All\-Entity\-In\-Chunk}}
+\index{get\-All\-Entity\-In\-Chunk@{get\-All\-Entity\-In\-Chunk}!Box2DWorld@{Box2\-D\-World}}
+\subsubsection[{get\-All\-Entity\-In\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf Entity} $>$ Box2\-D\-World\-::get\-All\-Entity\-In\-Chunk (
+\begin{DoxyParamCaption}
+\item[{float}]{x1, }
+\item[{float}]{x2}
+\end{DoxyParamCaption}
+)}}\label{class_box2_d_world_ae1d2d9777c5a7b87253d3396b9f64451}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_box2_d_world_ae1d2d9777c5a7b87253d3396b9f64451_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_box2_d_world_ae1d2d9777c5a7b87253d3396b9f64451_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_box2_d_world_ad44088e2139e8b6a48437b83de0d545e}{\index{Box2\-D\-World@{Box2\-D\-World}!get\-Entity\-By\-Id@{get\-Entity\-By\-Id}}
+\index{get\-Entity\-By\-Id@{get\-Entity\-By\-Id}!Box2DWorld@{Box2\-D\-World}}
+\subsubsection[{get\-Entity\-By\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity}$\ast$ Box2\-D\-World\-::get\-Entity\-By\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_box2_d_world_ad44088e2139e8b6a48437b83de0d545e}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_box2_d_world_ad44088e2139e8b6a48437b83de0d545e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_box2_d_world_af99542cb5c6eda96dfdec279f73c5e8b}{\index{Box2\-D\-World@{Box2\-D\-World}!Say\-Goodbye@{Say\-Goodbye}}
+\index{Say\-Goodbye@{Say\-Goodbye}!Box2DWorld@{Box2\-D\-World}}
+\subsubsection[{Say\-Goodbye}]{\setlength{\rightskip}{0pt plus 5cm}void Box2\-D\-World\-::\-Say\-Goodbye (
+\begin{DoxyParamCaption}
+\item[{b2\-Fixture $\ast$}]{fixture}
+\end{DoxyParamCaption}
+)}}\label{class_box2_d_world_af99542cb5c6eda96dfdec279f73c5e8b}
+\hypertarget{class_box2_d_world_a268ef72c46673588a071d99afd745c98}{\index{Box2\-D\-World@{Box2\-D\-World}!Say\-Goodbye@{Say\-Goodbye}}
+\index{Say\-Goodbye@{Say\-Goodbye}!Box2DWorld@{Box2\-D\-World}}
+\subsubsection[{Say\-Goodbye}]{\setlength{\rightskip}{0pt plus 5cm}void Box2\-D\-World\-::\-Say\-Goodbye (
+\begin{DoxyParamCaption}
+\item[{b2\-Joint $\ast$}]{joint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_box2_d_world_a268ef72c46673588a071d99afd745c98}
+\hypertarget{class_box2_d_world_aed35f7a519c5844bf66464bb8aee30ce}{\index{Box2\-D\-World@{Box2\-D\-World}!subscribe\-To\-Update@{subscribe\-To\-Update}}
+\index{subscribe\-To\-Update@{subscribe\-To\-Update}!Box2DWorld@{Box2\-D\-World}}
+\subsubsection[{subscribe\-To\-Update}]{\setlength{\rightskip}{0pt plus 5cm}void Box2\-D\-World\-::subscribe\-To\-Update (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity} $\ast$}]{entity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_box2_d_world_aed35f7a519c5844bf66464bb8aee30ce}
+\hypertarget{class_box2_d_world_a2f8ab17447c51b4343f07ac403cc9454}{\index{Box2\-D\-World@{Box2\-D\-World}!update@{update}}
+\index{update@{update}!Box2DWorld@{Box2\-D\-World}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Box2\-D\-World\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_box2_d_world_a2f8ab17447c51b4343f07ac403cc9454}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/world/\hyperlink{_box2_d_world_8h}{Box2\-D\-World.\-h}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/world/\hyperlink{_box2_d_world_8cpp}{Box2\-D\-World.\-cpp}\end{DoxyCompactItemize}

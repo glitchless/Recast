@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parcelableids',['ParcelableIDs',['../_parcel_8hpp.html#a4978ffb8bae4c099637a44e82b661d53',1,'Parcel.hpp']]]
+  ['nodetype',['NodeType',['../_spell_node_8hpp.html#acac9cbaeea226ed297804c012dc12b16',1,'SpellNode.hpp']]]
 ];

@@ -104,14 +104,14 @@ Inheritance diagram for Server:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server__inherit__graph.png" border="0" usemap="#_server_inherit__map" alt="Inheritance graph"/></div>
 <map name="_server_inherit__map" id="_server_inherit__map">
-<area shape="rect" id="node2" href="class_i_command_sender.html" title="{ICommandSender\n||+ isOP()\l+ getServer()\l+ getPlayer()\l+ onMessage()\l}" alt="" coords="25,6,151,127"/></map>
+<area shape="rect" id="node2" href="class_i_command_sender.html" title="{ICommandSender\n||+ isOP()\l+ getServer()\l+ getWorld()\l+ getPlayer()\l+ onMessage()\l}" alt="" coords="25,5,151,141"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for Server:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server__coll__graph.png" border="0" usemap="#_server_coll__map" alt="Collaboration graph"/></div>
 <map name="_server_coll__map" id="_server_coll__map">
-<area shape="rect" id="node2" href="class_i_command_sender.html" title="{ICommandSender\n||+ isOP()\l+ getServer()\l+ getPlayer()\l+ onMessage()\l}" alt="" coords="25,6,151,127"/></map>
+<area shape="rect" id="node2" href="class_i_command_sender.html" title="{ICommandSender\n||+ isOP()\l+ getServer()\l+ getWorld()\l+ getPlayer()\l+ onMessage()\l}" alt="" coords="25,5,151,141"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -138,13 +138,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab8c22a0d6809e9aa84bebce478ba7bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab103cde2777536fa63b2746b6e0a98d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_players_online.html">PlayersOnline</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#ab103cde2777536fa63b2746b6e0a98d4">getPlayers</a> () const </td></tr>
 <tr class="separator:ab103cde2777536fa63b2746b6e0a98d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adea320b40e941db6ab354c63de9128e3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr<br class="typebreak"/>
-&lt; <a class="el" href="class_i_temperature_world_chunkable_observable.html">ITemperatureWorldChunkableObservable</a><br class="typebreak"/>
-&lt; <a class="el" href="class_i_temperature_world_chunkable_generatable.html">ITemperatureWorldChunkableGeneratable</a><br class="typebreak"/>
-&lt; <a class="el" href="class_i_temperature_world_chunkable_mutable.html">ITemperatureWorldChunkableMutable</a><br class="typebreak"/>
-&lt; <a class="el" href="class_i_temperature_world_chunkable.html">ITemperatureWorldChunkable</a><br class="typebreak"/>
-&lt; <a class="el" href="class_i_temperature_world.html">ITemperatureWorld</a> &gt; &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#adea320b40e941db6ab354c63de9128e3">getTemperatureWorld</a> () const </td></tr>
-<tr class="separator:adea320b40e941db6ab354c63de9128e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5e54ba60c174321e880e1a10e61cc53"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_box2_d_world.html">Box2DWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#ad5e54ba60c174321e880e1a10e61cc53">getWorld</a> ()</td></tr>
+<tr class="separator:ad5e54ba60c174321e880e1a10e61cc53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc049030ac9523415295a889a2e34042"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="_server_8hpp.html#ac147588bd69e1d052194e0dea10202ff">TempWorld</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#adc049030ac9523415295a889a2e34042">getTemperatureWorld</a> () const </td></tr>
+<tr class="separator:adc049030ac9523415295a889a2e34042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main class in Recast <a class="el" href="class_server.html" title="Main class in Recast Server. ">Server</a>. </p>
@@ -167,7 +164,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_ad5ec9462b520e59f7ea831e157ee5e59_cgraph.png" border="0" usemap="#class_server_ad5ec9462b520e59f7ea831e157ee5e59_cgraph" alt=""/></div>
 <map name="class_server_ad5ec9462b520e59f7ea831e157ee5e59_cgraph" id="class_server_ad5ec9462b520e59f7ea831e157ee5e59_cgraph">
-<area shape="rect" id="node2" href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9" title="Config::instance" alt="" coords="160,5,277,32"/><area shape="rect" id="node4" href="class_config.html#a1f8e429f853f20cac7cf128f2b71543e" title="Config::get" alt="" coords="175,56,262,83"/><area shape="rect" id="node3" href="_config_8cpp.html#ab330b966aa1026a8014370d5732fae26" title="DEFAULT_CONFIG" alt="" coords="326,5,469,32"/><area shape="rect" id="node5" href="class_config.html#a006701bd126aa5809b3a15e75c63bfb6" title="Config::tree" alt="" coords="352,56,443,83"/></map>
+<area shape="rect" id="node2" href="class_config.html#aaff6aaabead6b7486ec122f9dda807fd" title="Config::g" alt="" coords="160,56,235,83"/><area shape="rect" id="node3" href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9" title="Config::instance" alt="" coords="283,5,400,32"/><area shape="rect" id="node5" href="class_config.html#a1f8e429f853f20cac7cf128f2b71543e" title="Config::get" alt="" coords="298,56,385,83"/><area shape="rect" id="node4" href="_config_8cpp.html#ab330b966aa1026a8014370d5732fae26" title="DEFAULT_CONFIG" alt="" coords="449,5,591,32"/><area shape="rect" id="node6" href="class_config.html#a006701bd126aa5809b3a15e75c63bfb6" title="Config::tree" alt="" coords="475,56,565,83"/></map>
 </div>
 </p>
 
@@ -295,7 +292,7 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="adea320b40e941db6ab354c63de9128e3"></a>
+<a class="anchor" id="adc049030ac9523415295a889a2e34042"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -303,7 +300,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_i_temperature_world_chunkable_observable.html">ITemperatureWorldChunkableObservable</a>&lt;<a class="el" href="class_i_temperature_world_chunkable_generatable.html">ITemperatureWorldChunkableGeneratable</a>&lt;<a class="el" href="class_i_temperature_world_chunkable_mutable.html">ITemperatureWorldChunkableMutable</a>&lt;<a class="el" href="class_i_temperature_world_chunkable.html">ITemperatureWorldChunkable</a>&lt;<a class="el" href="class_i_temperature_world.html">ITemperatureWorld</a>&gt; &gt; &gt; &gt; &gt; Server::getTemperatureWorld </td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="_server_8hpp.html#ac147588bd69e1d052194e0dea10202ff">TempWorld</a>&gt; Server::getTemperatureWorld </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -315,6 +312,40 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_adc049030ac9523415295a889a2e34042_icgraph.png" border="0" usemap="#class_server_adc049030ac9523415295a889a2e34042_icgraph" alt=""/></div>
+<map name="class_server_adc049030ac9523415295a889a2e34042_icgraph" id="class_server_adc049030ac9523415295a889a2e34042_icgraph">
+<area shape="rect" id="node2" href="class_box2_d_world.html#a135cc7599bfc2a3978428fbb155cfcdc" title="Box2DWorld::createSpellEntity" alt="" coords="248,5,451,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5e54ba60c174321e880e1a10e61cc53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_box2_d_world.html">Box2DWorld</a>* Server::getWorld </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_i_command_sender.html#ae5a701968c93ec631c06106a61c41275">ICommandSender</a>.</p>
 
 </div>
 </div>
@@ -336,7 +367,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph.png" border="0" usemap="#class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph" alt=""/></div>
 <map name="class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph" id="class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph">
-<area shape="rect" id="node2" href="_server_8cpp.html#a4fa9798662b6f85f704142579620acd0" title="initLogger" alt="" coords="195,5,274,32"/><area shape="rect" id="node3" href="class_input_thread.html#ac33f0f934c6dc40c7747b96e8b60a736" title="InputThread::init" alt="" coords="177,56,293,83"/></map>
+<area shape="rect" id="node2" href="_server_8cpp.html#a4fa9798662b6f85f704142579620acd0" title="initLogger" alt="" coords="221,5,299,32"/><area shape="rect" id="node3" href="class_input_thread.html#ac33f0f934c6dc40c7747b96e8b60a736" title="InputThread::init" alt="" coords="202,56,318,83"/><area shape="rect" id="node4" href="class_spell_node.html#a66ea41a0a12d0dd8a2ac4eb0c5b1e046" title="SpellNode::connectNode" alt="" coords="177,107,343,133"/><area shape="rect" id="node5" href="class_spell.html#a8b234c2b1930d3dfc1954c6d4a30cdac" title="Spell::getRootNode" alt="" coords="192,157,328,184"/></map>
 </div>
 </p>
 
@@ -437,6 +468,15 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_a58c74bafaaf20b24e9243c7cf5fdfd16_cgraph.png" border="0" usemap="#class_server_a58c74bafaaf20b24e9243c7cf5fdfd16_cgraph" alt=""/></div>
+<map name="class_server_a58c74bafaaf20b24e9243c7cf5fdfd16_cgraph" id="class_server_a58c74bafaaf20b24e9243c7cf5fdfd16_cgraph">
+<area shape="rect" id="node2" href="class_network_server.html#a9ccac6f1950c9e6e15052fce78d4dd94" title="NetworkServer::shutdown" alt="" coords="179,5,352,32"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>

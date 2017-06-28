@@ -1,0 +1,6 @@
+<map id="CreateEntityCommand::onCommand" name="CreateEntityCommand::onCommand">
+<area shape="rect" id="node2" href="$class_i_command_sender.html#a613b27b190c7fb5123597939c0896080" title="ICommandSender::onMessage" alt="" coords="208,5,411,32"/>
+<area shape="rect" id="node3" href="$class_i_command_sender.html#ae5a701968c93ec631c06106a61c41275" title="ICommandSender::getWorld" alt="" coords="216,56,403,83"/>
+<area shape="rect" id="node4" href="$class_box2_d_world.html#a13348d9a46d2f0a566d6ea653a5d4598" title="Box2DWorld::createEntity" alt="" coords="222,107,397,133"/>
+<area shape="rect" id="node5" href="$class_entity.html#a6cb5ba93ecc7c9cb85c71af69b5aeff8" title="Entity::getId" alt="" coords="263,157,356,184"/>
+</map>

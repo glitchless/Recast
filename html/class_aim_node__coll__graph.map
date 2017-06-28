@@ -1,0 +1,4 @@
+<map id="AimNode" name="AimNode">
+<area shape="rect" id="node2" href="$class_energy_node.html" title="{EnergyNode\n|# energy\l|+ EnergyNode()\l+ EnergyNode()\l+ isEnergyNode()\l+ getEnergy()\l+ transferEnergy()\l# onTick()\l}" alt="" coords="22,425,148,575"/>
+<area shape="rect" id="node3" href="$class_spell_node.html" title="{SpellNode\n|# x\l# y\l# z\l# connectedNodes\l# nowInTick\l# type\l|+ SpellNode()\l+ ~SpellNode()\l+ isEnergyNode()\l+ connectNode()\l+ tick()\l+ inTick()\l+ getDistance()\l+ getType()\l+ iterrator()\l+ getConnectedNodes()\l+ getX()\l+ getY()\l+ getZ()\l+ write()\l+ read()\l# onTick()\l}" alt="" coords="5,5,165,376"/>
+</map>

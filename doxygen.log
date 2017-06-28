@@ -14,7 +14,6 @@ Warning: ignoring unsupported tag `DOCBOOK_PROGRAMLISTING =' at line 1983, file 
 Warning: ignoring unsupported tag `PLANTUML_JAR_PATH      =' at line 2414, file /home/travis/build/bender-wardrobe/Recast/doxyfile
 Warning: ignoring unsupported tag `PLANTUML_INCLUDE_PATH  =' at line 2419, file /home/travis/build/bender-wardrobe/Recast/doxyfile
 Warning: tag INPUT: input source `../../temperature-world' does not exist
-warning: source ../../temperature-world is not a readable file or directory... skipping.
 Searching for include files...
 Searching for example files...
 Searching for images...
@@ -28,18 +27,20 @@ Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/c
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/commands
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/io
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/io/configs
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/io/network
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/models
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/models/collections
-Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/network
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/core/utils
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/commands
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/io
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/io/configs
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/io/network
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/models
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/models/collections
-Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/network
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/spells
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes
@@ -52,13 +53,19 @@ Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/h
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/utils
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/threads
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/utils
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/world
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/world/utils
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/spell
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/spell/events
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/spell/nodes
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/temperature-world
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation
-Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/temperature-world/injectors
+Searchwarning: source ../../temperature-world is not a readable file or directory... skipping.
+ing for files in directory /home/travis/build/bender-wardrobe/Recast/src/temperature-world/injectors
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/threads
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/world
+Searching for files in directory /home/travis/build/bender-wardrobe/Recast/src/world/wrappers
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/code_docs/Recast/custom-docs
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/code_docs/Recast/custom-docs/Logo
 Searching for files in directory /home/travis/build/bender-wardrobe/Recast/code_docs/Recast/custom-docs/Logo/1024x1024
@@ -71,6 +78,8 @@ Parsing files
 Reading /home/travis/build/bender-wardrobe/Recast/README.md...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/commands/CreateEntityCommand.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/commands/CreateEntityCommand.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommand.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommand.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommandSender.cpp...
@@ -79,26 +88,32 @@ Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/commands/StopCo
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/commands/StopCommand.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/io/configs/Config.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/io/configs/Config.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners/CastSpell.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners/CastSpell.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners/GetEntitys.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners/GetEntitys.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkServer.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkServer.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkUtils.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkUtils.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/io/network/Socket.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/Socket.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/io/network/SocketTCP.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/SocketTCP.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/io/network/SocketUDP.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/SocketUDP.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkServer.cpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkServer.cpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkUtils.cpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkUtils.cpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/network/Socket.cpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/network/Socket.cpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/network/SocketTCP.cpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/network/SocketTCP.cpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/network/SocketUDP.cpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/network/SocketUDP.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/utils/Parcel.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/utils/Parcel.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/core/utils/Utils.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/core/utils/Utils.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CreateEntityCommand.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CreateEntityCommand.h...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.hpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommandSender.hpp...
@@ -111,6 +126,24 @@ Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/S
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/ServerFullException.hpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/io/configs/Config.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/io/configs/Config.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners/CastSpell.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners/CastSpell.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners/GetEntitys.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners/GetEntitys.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/Networking.hpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/Networking.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkListener.hpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkListener.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkServer.hpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkServer.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkUtils.hpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkUtils.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/Socket.hpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/Socket.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/SocketTCP.hpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/SocketTCP.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/SocketUDP.hpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/SocketUDP.hpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.hpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.hpp...
@@ -121,20 +154,6 @@ Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point.hpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/models/User.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/models/User.hpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/network/Networking.hpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/network/Networking.hpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkListener.hpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkListener.hpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkServer.hpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkServer.hpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkUtils.hpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkUtils.hpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/network/Socket.hpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/network/Socket.hpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/network/SocketTCP.hpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/network/SocketTCP.hpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/network/SocketUDP.hpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/network/SocketUDP.hpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/Server.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/Server.hpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/HeatEvent.hpp...
@@ -143,10 +162,16 @@ Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/spells/event
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/IEvent.hpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/IEventListener.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/IEventListener.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/MoveEvent.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/MoveEvent.h...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/SpellEventListener.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/SpellEventListener.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/AimNode.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/AimNode.h...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/EnergyNode.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/EnergyNode.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/GeneratorNode.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/GeneratorNode.h...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/HeaterNode.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/HeaterNode.hpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/SpellNode.hpp...
@@ -233,35 +258,52 @@ Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/utils/TimeUtils.hpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/utils/DelayCommand.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/DelayCommand.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/utils/DelayedSpellCreate.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/DelayedSpellCreate.h...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Parcel.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Parcel.hpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Utils.hpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Utils.hpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/world/Box2DWorld.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/world/Box2DWorld.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/world/utils/CollectEntity.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/world/utils/CollectEntity.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/Entity.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/Entity.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/EntityData.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/EntityData.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/EntityType.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/EntityType.h...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/SpellEntity.h...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/SpellEntity.h...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/Main.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/Main.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/Server.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/Server.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/spell/events/HeatEvent.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/spell/events/HeatEvent.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/spell/events/MoveEvent.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/spell/events/MoveEvent.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/spell/events/SpellEventListener.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/spell/events/SpellEventListener.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/AimNode.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/AimNode.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/EnergyNode.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/EnergyNode.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/GeneratorNode.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/GeneratorNode.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/HeaterNode.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/HeaterNode.cpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/SpellNode.cpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/SpellNode.cpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/spell/Spell.cpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/spell/Spell.cpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/AverageShareTemperatureWorldUpdater.cpp...
-Parsing file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/AverageShareTemperatureWorldUpdater.cpp...
-Preprocessing /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/BasicTimer.cpp...
-Parsing file /home/travis/build/bender-wardrobe/home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkServer.cpp:2: warning: the name `server.cpp' supplied as the second argument in the \file statement is not an input file
+Preprocessing /home/travis/build/home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkServer.cpp:2: warning: the name `server.cpp' supplied as the second argument in the \file statement is not an input file
 /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/InvalidLoginOrPassword.hpp:2: warning: the name `InvalidLoginOrPassword.h' supplied as the second argument in the \file statement is not an input file
 /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/ServerFullException.hpp:2: warning: the name `ServerFullException.h' supplied as the second argument in the \file statement is not an input file
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkListener.hpp:2: warning: the name `networking.cpp' supplied as the second argument in the \file statement is not an input file
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/SocketTCP.hpp:2: warning: the name `networking.cpp' supplied as the second argument in the \file statement is not an input file
 /home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.hpp:2: warning: the name `SQLite.h' supplied as the second argument in the \file statement is not an input file
 /home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.hpp:2: warning: the name `PlayersOnline.h' supplied as the second argument in the \file statement is not an input file
 /home/travis/build/bender-wardrobe/Recast/src/headers/models/User.hpp:2: warning: the name `PlayerAuth.h' supplied as the second argument in the \file statement is not an input file
-/home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkListener.hpp:2: warning: the name `networking.cpp' supplied as the second argument in the \file statement is not an input file
-/home/travis/build/bender-wardrobe/Recast/src/headers/network/SocketTCP.hpp:2: warning: the name `networking.cpp' supplied as the second argument in the \file statement is not an input file
 /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/HeatEvent.hpp:2: warning: the name `HeatEvent.h' supplied as the second argument in the \file statement is not an input file
 /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/IEvent.hpp:2: warning: the name `IEvent.h' supplied as the second argument in the \file statement is not an input file
 /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/IEventListener.hpp:2: warning: the name `IEventListener.h' supplied as the second argument in the \file statement is not an input file
@@ -273,38 +315,14 @@ Parsing file /home/travis/build/bender-wardrobe/home/travis/build/bender-wardrob
 /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.hpp:2: warning: the name `InputThread.h' supplied as the second argument in the \file statement is not an input file
 /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Utils.hpp:2: warning: the name `Utils.h' supplied as the second argument in the \file statement is not an input file
 /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/SpellNode.cpp:2: warning: the name `Node.cpp' supplied as the second argument in the \file statement is not an input file
-/home/travis/build/bender-wardrobe/Recast/src/headers/commands/StopCommand.hpp:10: warning: Example stop was already documented. Ignoring documentation found here.
-/home/travis/build/bender-wardrobe/Recast/src/core/io/configs/Config.cpp:34: warning: no matching class member found for 
-  Config::Config(const string &filename)
-Possible candidates:
-  Config::Config(const std::string &filename)
-  Config::Config(const Config &other)=delete
-
-/home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkServer.cpp:50: warning: no matching class member found for 
-  void NetworkServer::listenFor(shared_ptr< SocketTCP > client)
-Possible candidates:
-  void NetworkServer::listenFor(std::shared_ptr< SocketTCP > client)
-  void NetworkServer::listenFor(std::shared_ptr< SocketUDP > client)
-
-/home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkServer.cpp:63: warning: no matching class member found for 
-  void NetworkServer::listenForBytes(shared_ptr< SocketTCP > client)
-Possible candidates:
-  void NetworkServer::listenForBytes(std::shared_ptr< SocketTCP > client)
-  void NetworkServer::listenForBytes(std::shared_ptr< SocketUDP > client)
-
-/home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkServer.cpp:76: warning: no matching class member found for 
-  void NetworkServer::listenFor(shared_ptr< SocketUDP > client)
-Possible candidates:
-  void NetworkServer::listenFor(std::shared_ptr< SocketTCP > client)
-  void NetworkServer::listenFor(std::shared_ptr< SocketUDP > client)
-
-/home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkServer.cpp:89: warning: no matching class member found for 
-  void NetworkServer::listenForBytes(shared_ptr< SocketUDP > client)
-Possible candidates:
-  void NetworkServer::listenForBytes(std::shared_ptr< SocketTCP > client)
-  void NetworkServer::listenForBytes(std::shared_ptr< SocketUDP > client)
-
-/Recast/src/temperature-world/implementation/BasicTimer.cpp...
+/bender-wardrobe/Recast/src/spell/nodes/SpellNode.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/SpellNode.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/spell/Spell.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/spell/Spell.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/AverageShareTemperatureWorldUpdater.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/AverageShareTemperatureWorldUpdater.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/BasicTimer.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/BasicTimer.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/BoundTemperatureWorld.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/BoundTemperatureWorld.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/ChunkedTemperatureWorld.cpp...
@@ -325,13 +343,53 @@ Preprocessing /home/travis/build/bender-wardrobe/Recast/src/temperature-world/in
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.cpp...
 Preprocessing /home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp...
 Parsing file /home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/world/Box2DWorld.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/world/Box2DWorld.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/world/wrappers/Entity.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/world/wrappers/Entity.cpp...
+Preprocessing /home/travis/build/bender-wardrobe/Recast/src/world/wrappers/SpellEntity.cpp...
+Parsing file /home/travis/build/bender-wardrobe/Recast/src/world/wrappers/SpellEntity.cpp...
 Reading /home/travis/build/bender-wardrobe/Recast/code_docs/Recast/custom-docs/Nodes.md...
 Building group list...
 Building directory list...
 Building namespace list...
 Building file list...
 Building class list...
-Associating documentation with classes...
+Associating docume/home/travis/build/bender-wardrobe/Recast/src/headers/commands/StopCommand.hpp:10: warning: Example stop was already documented. Ignoring documentation found here.
+/home/travis/build/bender-wardrobe/Recast/src/core/io/configs/Config.cpp:34: warning: no matching class member found for 
+  Config::Config(const string &filename)
+Possible candidates:
+  Config::Config(const std::string &filename)
+  Config::Config(const Config &other)=delete
+
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkServer.cpp:50: warning: no matching class member found for 
+  void NetworkServer::listenFor(shared_ptr< SocketTCP > client)
+Possible candidates:
+  void NetworkServer::listenFor(std::shared_ptr< SocketTCP > client)
+  void NetworkServer::listenFor(std::shared_ptr< SocketUDP > client)
+
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkServer.cpp:63: warning: no matching class member found for 
+  void NetworkServer::listenForBytes(shared_ptr< SocketTCP > client)
+Possible candidates:
+  void NetworkServer::listenForBytes(std::shared_ptr< SocketTCP > client)
+  void NetworkServer::listenForBytes(std::shared_ptr< SocketUDP > client)
+
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkServer.cpp:76: warning: no matching class member found for 
+  void NetworkServer::listenFor(shared_ptr< SocketUDP > client)
+Possible candidates:
+  void NetworkServer::listenFor(std::shared_ptr< SocketTCP > client)
+  void NetworkServer::listenFor(std::shared_ptr< SocketUDP > client)
+
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkServer.cpp:89: warning: no matching class member found for 
+  void NetworkServer::listenForBytes(shared_ptr< SocketUDP > client)
+Possible candidates:
+  void NetworkServer::listenForBytes(std::shared_ptr< SocketTCP > client)
+  void NetworkServer::listenForBytes(std::shared_ptr< SocketUDP > client)
+
+/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/EnergyNode.cpp:49: warning: included file node- is not found. Check your EXAMPLE_PATH
+/home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.hpp:26: warning: included file On is not found. Check your EXAMPLE_PATH
+/home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp:21: warning: included file stop is not found. Check your EXAMPLE_PATH
+ntation with classes...
 Computing nesting relations for classes...
 Building example list...
 Searching for enumerations...
@@ -369,10 +427,7 @@ Sorting member lists...
 Computing dependencies between directories...
 Generating citations page...
 Counting data structures...
-Resolving us/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/EnergyNode.cpp:49: warning: included file node- is not found. Check your EXAMPLE_PATH
-/home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.hpp:26: warning: included file On is not found. Check your EXAMPLE_PATH
-/home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp:21: warning: included file stop is not found. Check your EXAMPLE_PATH
-er defined references...
+Resolving user defined references...
 Finding anchors and sections in the documentation...
 Transferring function references...
 Combining using relations...
@@ -387,45 +442,54 @@ Generating file sources...
 Parsing code for file custom-docs/Nodes.md...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/README.md...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/CreateEntityCommand.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommand.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommandSender.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/StopCommand.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/io/configs/Config.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners/CastSpell.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners/GetEntitys.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkServer.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkUtils.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/Socket.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/SocketTCP.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/SocketUDP.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp...
-Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkServer.cpp...
-Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkUtils.cpp...
-Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/network/Socket.cpp...
-Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/network/SocketTCP.cpp...
-Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/network/SocketUDP.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/utils/Parcel.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/core/utils/Utils.cpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CreateEntityCommand.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommandSender.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/StopCommand.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/InvalidLoginOrPassword.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/ServerFullException.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/configs/Config.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners/CastSpell.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners/GetEntitys.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/Networking.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkListener.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkServer.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkUtils.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/Socket.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/SocketTCP.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/SocketUDP.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/types/Point.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/User.hpp...
-Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/Networking.hpp...
-Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkListener.hpp...
-Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkServer.hpp...
-Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkUtils.hpp...
-Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/Socket.hpp...
-Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/SocketTCP.hpp...
-Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/SocketUDP.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/Server.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/HeatEvent.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/IEvent.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/IEventListener.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/MoveEvent.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/SpellEventListener.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/AimNode.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/EnergyNode.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/GeneratorNode.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/HeaterNode.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/SpellNode.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/Spell.hpp...
@@ -468,12 +532,24 @@ Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/t
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/utils/TemperatureWorldUtils.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/utils/TimeUtils.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/DelayCommand.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/DelayedSpellCreate.h...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Parcel.hpp...
 Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Utils.hpp...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/world/Box2DWorld.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/world/utils/CollectEntity.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/Entity.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/EntityData.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/EntityType.h...
+Generating code for file /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/SpellEntity.h...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/Main.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/Server.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/spell/events/HeatEvent.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/spell/events/MoveEvent.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/spell/events/SpellEventListener.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/AimNode.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/EnergyNode.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/GeneratorNode.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/HeaterNode.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/SpellNode.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/spell/Spell.cpp...
@@ -484,67 +560,115 @@ Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/temperature-
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/GeneratableChunkedTemperatureWorld.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/ScalableBoundTemperatureWorld.cpp...
 Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/ScalingGeneratableChunkedTemperatureWorld.cpp...
-Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/imple/home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp:4: warning: Found unknown command `\project'
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/SynchronizedBlockingTimer.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/ThreadedChunkedTemperatureWorldUpdater.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/injectors/BoundTemperatureWorldInjector.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/th/home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/commands/CreateEntityCommand.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/commands/CreateEntityCommand.cpp:6: warning: Found unknown command `\email'
 /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommand.cpp:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommandSender.cpp:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/core/io/configs/Config.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners/CastSpell.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners/CastSpell.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners/GetEntitys.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners/GetEntitys.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkUtils.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkUtils.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/Socket.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/Socket.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/SocketTCP.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/SocketTCP.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/SocketUDP.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/core/io/network/SocketUDP.cpp:6: warning: Found unknown command `\email'
 /home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp:6: warning: Found unknown command `\email'
 /home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkUtils.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkUtils.cpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/core/network/Socket.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/core/network/Socket.cpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/core/network/SocketTCP.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/core/network/SocketTCP.cpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/core/network/SocketUDP.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/core/network/SocketUDP.cpp:6: warning: Found unknown command `\email'
 /home/travis/build/bender-wardrobe/Recast/src/core/utils/Parcel.cpp:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/core/utils/Parcel.cpp:5: warning: Found unknown command `\email'
 /home/travis/build/bender-wardrobe/Recast/src/core/utils/Utils.cpp:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/core/utils/Utils.cpp:6: warning: Found unknown command `\email'
 /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.hpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/commands/CreateEntityCommand.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/commands/CreateEntityCommand.h:6: warning: Found unknown command `\email'
 /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.hpp:4: warning: Found unknown command `\project'
 /home/travis/build/bender-wardrobe/Recast/src/headers/io/configs/Config.hpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.hpp:4: warning: Found unknown command `\project'
-mentation/SynchronizedBlockingTimer.cpp...
-Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/ThreadedChunkedTemperatureWorldUpdater.cpp...
-Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/injectors/BoundTemperatureWorldInjector.cpp...
-Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.cpp...
-Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp...
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners/CastSpell.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners/CastSpell.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners/GetEntitys.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners/GetEntitys.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/Networking.hpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/Networking.hpp:6: warning: Found unknown command `\email'
+reads/InputThread.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/world/Box2DWorld.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/world/wrappers/Entity.cpp...
+Parsing code for file /home/travis/build/bender-wardrobe/Recast/src/world/wrappers/SpellEntity.cpp...
 Generating file documentation...
 Generating docs for file custom-docs/Nodes.md...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/README.md...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/CommandManager.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/CreateEntityCommand.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommand.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/ICommandSender.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/commands/StopCommand.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/io/configs/Config.cpp...
 Generating caller graph for function DEFAULT_CONFIG
 Generating caller graph for function DEFAULT_FOLDER
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkServer.cpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/network/NetworkUtils.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners/CastSpell.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners/GetEntitys.cpp...
+Generating caller graph for function readFloat
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkServer.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/NetworkUtils.cpp...
 Generating caller graph for function int2ipv4
 Generating call graph for function resolve
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/network/Socket.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/Socket.cpp...
 Generating caller graph for function setNonBlockedImpl
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/network/SocketTCP.cpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/network/SocketUDP.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/SocketTCP.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/io/network/SocketUDP.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/io/SQLite.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/models/collections/PlayersOnline.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/utils/Parcel.cpp...
-Generating caller graph for function getByte
 Generating caller graph for function setByte
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/core/utils/Utils.cpp...
 Generating caller graph for function genRandomString
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CommandManager.hpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/CreateEntityCommand.h...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommand.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/ICommandSender.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/commands/StopCommand.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/InvalidLoginOrPassword.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/exceptions/ServerFullException.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/configs/Config.hpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners/CastSpell.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners/GetEntitys.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/Networking.hpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkListener.hpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkServer/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkServer.hpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkServer.hpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkUtils.hpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkUtils.hpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/Socket.hpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/Socket.hpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/SocketUDP.hpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/io/network/SocketUDP.hpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/models/Player.hpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/Server.hpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/MoveEvent.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/MoveEvent.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/AimNode.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/AimNode.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/GeneratorNode.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/GeneratorNode.h:6: warning: Found unknown command `\email'
+.hpp...
+Generating caller graph for function setNonBlockedImpl
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/NetworkUtils.hpp...
+Generating caller graph for function int2ipv4
+Generating call graph for function resolve
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/Socket.hpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/SocketTCP.hpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/SocketUDP.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/io/SQLite.hpp...
 Generating call graph for function create_db
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/collections/PlayersOnline.hpp...
@@ -552,33 +676,15 @@ Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/m
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/Point.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/types/Point.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/models/User.hpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/Networking./home/travis/build/bender-wardrobe/Recast/src/headers/network/Networking.hpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/headers/network/Networking.hpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkServer.hpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkServer.hpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkUtils.hpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkUtils.hpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/headers/network/Socket.hpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/headers/network/Socket.hpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/headers/network/SocketUDP.hpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/headers/network/SocketUDP.hpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/headers/Server.hpp:4: warning: Found unknown command `\project'
-hpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkListener.hpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkServer.hpp...
-Generating caller graph for function setNonBlockedImpl
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/NetworkUtils.hpp...
-Generating caller graph for function int2ipv4
-Generating call graph for function resolve
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/Socket.hpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/SocketTCP.hpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/network/SocketUDP.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/Server.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/HeatEvent.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/IEvent.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/IEventListener.hpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/MoveEvent.h...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/SpellEventListener.hpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/AimNode.h...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/EnergyNode.hpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/GeneratorNode.h...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/HeaterNode.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes/SpellNode.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/spells/Spell.hpp...
@@ -592,24 +698,16 @@ Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/t
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/implementation/ScalingGeneratableChunkedTemperatureWorld.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/implementation/SynchronizedBlockingTimer.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/implementation/ThreadedChunkedTemperatureWorldUpdater.hpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/implementation/typedefs/GeneratableChunkedTemperatureWorldTypedefs.hpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/home/travis/build/bender-wardrobe/Recast/src/headers/utils/DelayCommand.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/utils/DelayCommand.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/utils/DelayedSpellCreate.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/utils/DelayedSpellCreate.h:6: warning: Found unknown command `\email'
+/src/headers/temperature-world/implementation/typedefs/GeneratableChunkedTemperatureWorldTypedefs.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/injectors/BoundTemperatureWorldInjector.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfaces/ITemperatureWorld.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfaces/ITemperatureWorldBoundable.hpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfa/home/travis/build/bender-wardrobe/Recast/src/headers/utils/Parcel.hpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/headers/utils/Parcel.hpp:5: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/Server.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/Server.cpp:5: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/spell/events/SpellEventListener.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/spell/events/SpellEventListener.cpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/EnergyNode.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/EnergyNode.cpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/HeaterNode.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/HeaterNode.cpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/spell/Spell.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/spell/Spell.cpp:6: warning: Found unknown command `\email'
-ces/ITemperatureWorldChunkable.hpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfaces/ITemperatureWorldChunkable.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfaces/ITemperatureWorldChunkableGeneratable.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfaces/ITemperatureWorldChunkableMutable.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfaces/ITemperatureWorldChunkableObservable.hpp...
@@ -633,26 +731,74 @@ Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/t
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/utils/TemperatureWorldUtils.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/utils/TimeUtils.hpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/threads/InputThread.hpp...
-Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Parcel.hpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/DelayCommand.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/DelayedSpellCreate.h...
+Generating docs for file /home/travis/build/bender-wardrob/home/travis/build/bender-wardrobe/Recast/src/headers/utils/Parcel.hpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/utils/Parcel.hpp:5: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/world/Box2DWorld.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/world/Box2DWorld.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/world/utils/CollectEntity.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/world/utils/CollectEntity.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/Entity.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/Entity.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/EntityData.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/EntityData.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/EntityType.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/EntityType.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/SpellEntity.h:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/SpellEntity.h:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/Server.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/Server.cpp:5: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/spell/events/HeatEvent.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/spell/events/HeatEvent.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/spell/events/MoveEvent.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/spell/events/MoveEvent.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/spell/events/SpellEventListener.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/spell/events/SpellEventListener.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/AimNode.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/AimNode.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/EnergyNode.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/EnergyNode.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/GeneratorNode.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/GeneratorNode.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/HeaterNode.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/spell/nodes/HeaterNode.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/spell/Spell.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/spell/Spell.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/world/Box2DWorld.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/world/Box2DWorld.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/world/wrappers/Entity.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/world/wrappers/Entity.cpp:6: warning: Found unknown command `\email'
+/home/travis/build/bender-wardrobe/Recast/src/world/wrappers/SpellEntity.cpp:4: warning: Found unknown command `\project'
+/home/travis/build/bender-wardrobe/Recast/src/world/wrappers/SpellEntity.cpp:6: warning: Found unknown command `\email'
+e/Recast/src/headers/utils/Parcel.hpp...
+Generating caller graph for function setByte
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/utils/Utils.hpp...
 Generating caller graph for function genRandomString
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/world/Box2DWorld.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/world/utils/CollectEntity.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/Entity.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/EntityData.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/EntityType.h...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers/SpellEntity.h...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/Main.cpp...
 Generating call graph for function main
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/Server.cpp...
 Generating caller graph for function initLogger
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/spell/events/HeatEvent.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/spell/events/MoveEvent.cpp...
+Generating caller graph for function pSq
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/spell/events/SpellEventListener.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/AimNode.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/EnergyNode.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/GeneratorNode.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/HeaterNode.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/spell/nodes/SpellNode.cpp...
-Generating caller graph for function pSq
+Generating caller graph for function pSqu
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/spell/Spell.cpp...
-Generating do/home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp:4: warning: Found unknown command `\project'
-/home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp:6: warning: Found unknown command `\email'
-/home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/implementation/AverageShareTemperatureWorldUpdater.hpp:33: warning: The following parameters of AverageShareTemperatureWorldUpdater::addNearChunk(Edge edge, std::shared_ptr< ITemperatureWorldBoundable< ITemperatureWorld >> otherChunk) are not documented:
-  parameter 'edge'
-/home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/implementation/AverageShareTemperatureWorldUpdater.hpp:32: warning: The following parameters of AverageShareTemperatureWorldUpdater::canAddNearChunk(Edge edge, const std::shared_ptr< ITemperatureWorldBoundable< ITemperatureWorld >> &otherChunk) const are not documented:
-  parameter 'edge'
-cs for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/AverageShareTemperatureWorldUpdater.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/AverageShareTemperatureWorldUpdater.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/BasicTimer.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/BoundTemperatureWorld.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/implementation/ChunkedTemperatureWorld.cpp...
@@ -664,10 +810,18 @@ Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/temperatu
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/injectors/BoundTemperatureWorldInjector.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.cpp...
 Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/threads/InputThread.cpp...
-Generating page documentation...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/world/Box2DWorld.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/world/wrappers/Entity.cpp...
+Generating docs for file /home/travis/build/bender-wardrobe/Recast/src/world/wrappers/SpellEntity.cpp...
+Generating p/home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/implementation/AverageShareTemperatureWorldUpdater.hpp:33: warning: The following parameters of AverageShareTemperatureWorldUpdater::addNearChunk(Edge edge, std::shared_ptr< ITemperatureWorldBoundable< ITemperatureWorld >> otherChunk) are not documented:
+  parameter 'edge'
+/home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/implementation/AverageShareTemperatureWorldUpdater.hpp:32: warning: The following parameters of AverageShareTemperatureWorldUpdater::canAddNearChunk(Edge edge, const std::shared_ptr< ITemperatureWorldBoundable< ITemperatureWorld >> &otherChunk) const are not documented:
+  parameter 'edge'
+age documentation...
 Generating docs for page md_custom-docs_Nodes...
 Generating group documentation...
 Generating class documentation...
+Generating docs for compound AimNode...
 Generating docs for compound AverageShareTemperatureWorldUpdater...
 Generating call graph for function AverageShareTemperatureWorldUpdater::_checkThenShareTemperature
 Generating caller graph for function AverageShareTemperatureWorldUpdater::_checkThenShareTemperature
@@ -690,10 +844,23 @@ Generating call graph for function BoundTemperatureWorld::get
 Generating caller graph for function BoundTemperatureWorld::has
 Generating call graph for function BoundTemperatureWorld::set
 Generating docs for compound BoundTemperatureWorldInjector...
+Generating docs for compound Box2DWorld...
+Generating caller graph for function Box2DWorld::asyncCreateSpellEntity
+Generating call graph for function Box2DWorld::BeginContact
+Generating caller graph for function Box2DWorld::createEntity
+Generating call graph for function Box2DWorld::createSpellEntity
+Generating call graph for function Box2DWorld::getAllEntityInChunk
+Generating caller graph for function Box2DWorld::getAllEntityInChunk
+Generating caller graph for function Box2DWorld::getEntityById
+Generating docs for compound CastSpell...
+Generating call graph for function CastSpell::onPacket
 Generating docs for compound ChunkedTemperatureWorld...
 Generating caller graph for function ChunkedTemperatureWorld::addChunk
 Generating caller graph for function ChunkedTemperatureWorld::removeChunk
+Generating docs for compound CollectEntity...
+Generating caller graph for function CollectEntity::getEntitys
 Generating docs for compound CommandManager...
+Generating call graph for function CommandManager::executeDelayedCommandInUI
 Generating call graph for function CommandManager::onCommand
 Generating docs for compound Config...
 Generating call graph for function Config::g
@@ -703,35 +870,54 @@ Generating caller graph for function Config::get
 Generating call graph for function Config::instance
 Generating caller graph for function Config::instance
 Generating call graph for function Config::save
-Genera/home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfaces/IUpdaterTemperatureWorldSemiChunkUpdatable.hpp:29: warning: The following parameters of IUpdaterTemperatureWorldSemiChunkUpdatableMixin::addNearChunk(Edge edge, std::shared_ptr< ITemperatureWorldBoundable< ITemperatureWorld >> otherChunk)=0 are not documented:
-  parameter 'edge'
-/home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfaces/IUpdaterTemperatureWorldSemiChunkUpdatable.hpp:20: warning: The following parameters of IUpdaterTemperatureWorldSemiChunkUpdatableMixin::canAddNearChunk(Edge edge, const std::shared_ptr< ITemperatureWorldBoundable< ITemperatureWorld >> &otherChunk) const =0 are not documented:
-  parameter 'edge'
-ting caller graph for function Config::tree
+Generating caller graph for function Config::tree
 Generating docs for compound Coord...
+Generating docs for compound CreateEntityCommand...
+Generating call graph for function CreateEntityCommand::onCommand
 Generating docs for compound DebugNetworkListener...
 Generating call graph for function DebugNetworkListener::onPacket
+Generating docs for compound DelayCommand...
+Generating caller graph for function DelayCommand::execute
+Generating docs for compound DelayedSpellCreate...
 Generating docs for compound EnergyNode...
 Generating caller graph for function EnergyNode::getEnergy
 Generating call graph for function EnergyNode::onTick
 Generating call graph for function EnergyNode::transferEnergy
 Generating caller graph for function EnergyNode::transferEnergy
+Generating docs for compound Entity...
+Generating caller graph for functi/home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfaces/IUpdaterTemperatureWorldSemiChunkUpdatable.hpp:29: warning: The following parameters of IUpdaterTemperatureWorldSemiChunkUpdatableMixin::addNearChunk(Edge edge, std::shared_ptr< ITemperatureWorldBoundable< ITemperatureWorld >> otherChunk)=0 are not documented:
+  parameter 'edge'
+/home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfaces/IUpdaterTemperatureWorldSemiChunkUpdatable.hpp:20: warning: The following parameters of IUpdaterTemperatureWorldSemiChunkUpdatableMixin::canAddNearChunk(Edge edge, const std::shared_ptr< ITemperatureWorldBoundable< ITemperatureWorld >> &otherChunk) const =0 are not documented:
+  parameter 'edge'
+on Entity::getFixture
+Generating caller graph for function Entity::getId
+Generating caller graph for function Entity::getType
+Generating caller graph for function Entity::setType
+Generating call graph for function Entity::write
+Generating caller graph for function Entity::write
+Generating docs for compound EntityData...
 Generating docs for compound GeneratableChunkedTemperatureWorld...
 Generating call graph for function GeneratableChunkedTemperatureWorld::addChunk
 Generating caller graph for function GeneratableChunkedTemperatureWorld::addChunk
 Generating call graph for function GeneratableChunkedTemperatureWorld::getOrGenerateChunk
 Generating call graph for function GeneratableChunkedTemperatureWorld::removeChunk
 Generating caller graph for function GeneratableChunkedTemperatureWorld::removeChunk
+Generating docs for compound GeneratorNode...
 Generating docs for compound GenericScalar...
+Generating docs for compound GetEntitys...
+Generating call graph for function GetEntitys::onPacket
 Generating docs for compound HeaterNode...
 Generating docs for compound HeatEvent...
+Generating call graph for function HeatEvent::commit
 Generating call graph for function HeatEvent::getTempFromEnergy
 Generating docs for compound ICommand...
 Generating docs for compound ICommandSender...
 Generating caller graph for function ICommandSender::getServer
+Generating caller graph for function ICommandSender::getWorld
 Generating caller graph for function ICommandSender::isOP
 Generating caller graph for function ICommandSender::onMessage
 Generating docs for compound IEvent...
+Generating caller graph for function IEvent::getNode
 Generating docs for compound IEventListener...
 Generating docs for compound InputThread...
 Generating caller graph for function InputThread::init
@@ -743,7 +929,6 @@ Generating caller graph for function IntScaleParallelepiped::x
 Generating caller graph for function IntScaleParallelepiped::y
 Generating caller graph for function IntScaleParallelepiped::z
 Generating docs for compound InvalidLoginOrPassword...
-Generating docs for compound ISerializable...
 Generating docs for compound ITemperatureWorld...
 Generating docs for compound ITemperatureWorldBoundable...
 Generating docs for compound ITemperatureWorldBoundableMixin...
@@ -769,12 +954,15 @@ Generating docs for compound ITimerBlockableMixin...
 Generating docs for compound IUpdater...
 Generating docs for compound IUpdaterTemperatureWorldSemiChunkUpdatable...
 Generating docs for compound IUpdaterTemperatureWorldSemiChunkUpdatableMixin...
+Generating docs for compound MoveEvent...
+Generating call graph for function MoveEvent::commit
 Generating docs for compound NetworkListener...
 Generating caller graph for function NetworkListener::getId
 Generating docs for compound NetworkServer...
 Generating call graph for function NetworkServer::registerListener
 Generating call graph for function NetworkServer::removeListener
 Generating call graph for function NetworkServer::run
+Generating caller graph for function NetworkServer::shutdown
 Generating docs for compound Parallelepiped...
 Generating caller graph for function Parallelepiped::maxX
 Generating caller graph for function Parallelepiped::maxY
@@ -786,11 +974,10 @@ Generating caller graph for function Parallelepiped::sizeX
 Generating caller graph for function Parallelepiped::sizeY
 Generating caller graph for function Parallelepiped::sizeZ
 Generating docs for compound Parcel...
-Generating call graph for function Parcel::Parcel
-Generating call graph for function Parcel::Parcel
-Generating call graph for function Parcel::put
+Generating caller graph for function Parcel::getVector
 Generating caller graph for function Parcel::put
 Generating call graph for function Parcel::readFloat
+Generating caller graph for function Parcel::readFloat
 Generating call graph for function Parcel::readInt
 Generating caller graph for function Parcel::readInt
 Generating docs for compound Player...
@@ -823,8 +1010,10 @@ Generating call graph for function ScalingGeneratableChunkedTemperatureWorldInje
 Generating docs for compound Server...
 Generating call graph for function Server::Server
 Generating call graph for function Server::~Server
+Generating caller graph for function Server::getTemperatureWorld
 Generating call graph for function Server::initServer
 Generating caller graph for function Server::initServer
+Generating call graph for function Server::shutdown
 Generating caller graph for function Server::shutdown
 Generating docs for compound ServerFullException...
 Generating docs for compound Size...
@@ -841,11 +1030,26 @@ Generating docs for compound SocketUDP...
 Generating call graph for function SocketUDP::SocketUDP
 Generating caller graph for function SocketUDP::createServerSocket
 Generating docs for compound Spell...
+Generating caller graph for function Spell::getRootNode
+Generating call graph for function Spell::read
+Generating caller graph for function Spell::read
 Generating call graph for function Spell::tickSpell
+Generating caller graph for function Spell::tickSpell
+Generating call graph for function Spell::write
+Generating docs for compound SpellEntity...
+Generating call graph for function SpellEntity::update
 Generating docs for compound SpellEventListener...
 Generating docs for compound SpellNode...
+Generating caller graph for function SpellNode::connectNode
+Generating caller graph for function SpellNode::getConnectedNodes
 Generating call graph for function SpellNode::getDistance
+Generating caller graph for function SpellNode::getType
+Generating caller graph for function SpellNode::iterrator
+Generating call graph for function SpellNode::read
+Generating caller graph for function SpellNode::read
 Generating caller graph for function SpellNode::tick
+Generating call graph for function SpellNode::write
+Generating caller graph for function SpellNode::write
 Generating docs for compound SQLite...
 Generating docs for compound StopCommand...
 Generating call graph for function StopCommand::onCommand
@@ -890,10 +1094,12 @@ Generating dependency graph for directory /home/travis/build/bender-wardrobe/Rec
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfaces
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/io
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core/io
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/io/network/listeners
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core/io/network/listeners
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/models
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core/models
-Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/network
-Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core/network
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/io/network
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core/io/network
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/spell/nodes
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/spells/nodes
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/spell
@@ -905,9 +1111,14 @@ Generating dependency graph for directory /home/travis/build/bender-wardrobe/Rec
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/threads
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/implementation/typedefs
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/types
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/world/utils
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/utils
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/utils
 Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/core/utils
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/world
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/world
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/world/wrappers
+Generating dependency graph for directory /home/travis/build/bender-wardrobe/Recast/src/headers/world/wrappers
 Generating index page...
 Generating page index...
 Generating module index...
@@ -924,1384 +1135,1689 @@ Generating example index...
 finalizing index lists...
 Running dot...
 Generating dot graphs using 3 parallel threads...
-Running dot for graph 1/950
-Running dot for graph 2/950
-Running dot for graph 3/950
-Running dot for graph 4/950
-Running dot for graph 5/950
-Running dot for graph 6/950
-Running dot for graph 7/950
-Running dot for graph 8/950
-Running dot for graph 9/950
-Running dot for graph 10/950
-Running dot for graph 11/950
-Running dot for graph 12/950
-Running dot for graph 13/950
-Running dot for graph 14/950
-Running dot for graph 15/950
-Running dot for graph 16/950
-Running dot for graph 17/950
-Running dot for graph 18/950
-Running dot for graph 19/950
-Running dot for graph 20/950
-Running dot for graph 21/950
-Running dot for graph 22/950
-Running dot for graph 23/950
-Running dot for graph 24/950
-Running dot for graph 25/950
-Running dot for graph 26/950
-Running dot for graph 27/950
-Running dot for graph 28/950
-Running dot for graph 29/950
-Running dot for graph 30/950
-Running dot for graph 31/950
-Running dot for graph 32/950
-Running dot for graph 33/950
-Running dot for graph 34/950
-Running dot for graph 35/950
-Running dot for graph 36/950
-Running dot for graph 37/950
-Running dot for graph 38/950
-Running dot for graph 39/950
-Running dot for graph 40/950
-Running dot for graph 41/950
-Running dot for graph 42/950
-Running dot for graph 43/950
-Running dot for graph 44/950
-Running dot for graph 45/950
-Running dot for graph 46/950
-Running dot for graph 47/950
-Running dot for graph 48/950
-Running dot for graph 49/950
-Running dot for graph 50/950
-Running dot for graph 51/950
-Running dot for graph 52/950
-Running dot for graph 53/950
-Running dot for graph 54/950
-Running dot for graph 55/950
-Running dot for graph 56/950
-Running dot for graph 57/950
-Running dot for graph 58/950
-Running dot for graph 59/950
-Running dot for graph 60/950
-Running dot for graph 61/950
-Running dot for graph 62/950
-Running dot for graph 63/950
-Running dot for graph 64/950
-Running dot for graph 65/950
-Running dot for graph 66/950
-Running dot for graph 67/950
-Running dot for graph 68/950
-Running dot for graph 69/950
-Running dot for graph 70/950
-Running dot for graph 71/950
-Running dot for graph 72/950
-Running dot for graph 73/950
-Running dot for graph 74/950
-Running dot for graph 75/950
-Running dot for graph 76/950
-Running dot for graph 77/950
-Running dot for graph 78/950
-Running dot for graph 79/950
-Running dot for graph 80/950
-Running dot for graph 81/950
-Running dot for graph 82/950
-Running dot for graph 83/950
-Running dot for graph 84/950
-Running dot for graph 85/950
-Running dot for graph 86/950
-Running dot for graph 87/950
-Running dot for graph 88/950
-Running dot for graph 89/950
-Running dot for graph 90/950
-Running dot for graph 91/950
-Running dot for graph 92/950
-Running dot for graph 93/950
-Running dot for graph 94/950
-Running dot for graph 95/950
-Running dot for graph 96/950
-Running dot for graph 97/950
-Running dot for graph 98/950
-Running dot for graph 99/950
-Running dot for graph 100/950
-Running dot for graph 101/950
-Running dot for graph 102/950
-Running dot for graph 103/950
-Running dot for graph 104/950
-Running dot for graph 105/950
-Running dot for graph 106/950
-Running dot for graph 107/950
-Running dot for graph 108/950
-Running dot for graph 109/950
-Running dot for graph 110/950
-Running dot for graph 111/950
-Running dot for graph 112/950
-Running dot for graph 113/950
-Running dot for graph 114/950
-Running dot for graph 115/950
-Running dot for graph 116/950
-Running dot for graph 117/950
-Running dot for graph 118/950
-Running dot for graph 119/950
-Running dot for graph 120/950
-Running dot for graph 121/950
-Running dot for graph 122/950
-Running dot for graph 123/950
-Running dot for graph 124/950
-Running dot for graph 125/950
-Running dot for graph 126/950
-Running dot for graph 127/950
-Running dot for graph 128/950
-Running dot for graph 129/950
-Running dot for graph 130/950
-Running dot for graph 131/950
-Running dot for graph 132/950
-Running dot for graph 133/950
-Running dot for graph 134/950
-Running dot for graph 135/950
-Running dot for graph 136/950
-Running dot for graph 137/950
-Running dot for graph 138/950
-Running dot for graph 139/950
-Running dot for graph 140/950
-Running dot for graph 141/950
-Running dot for graph 142/950
-Running dot for graph 143/950
-Running dot for graph 144/950
-Running dot for graph 145/950
-Running dot for graph 146/950
-Running dot for graph 147/950
-Running dot for graph 148/950
-Running dot for graph 149/950
-Running dot for graph 150/950
-Running dot for graph 151/950
-Running dot for graph 152/950
-Running dot for graph 153/950
-Running dot for graph 154/950
-Running dot for graph 155/950
-Running dot for graph 156/950
-Running dot for graph 157/950
-Running dot for graph 158/950
-Running dot for graph 159/950
-Running dot for graph 160/950
-Running dot for graph 161/950
-Running dot for graph 162/950
-Running dot for graph 163/950
-Running dot for graph 164/950
-Running dot for graph 165/950
-Running dot for graph 166/950
-Running dot for graph 167/950
-Running dot for graph 168/950
-Running dot for graph 169/950
-Running dot for graph 170/950
-Running dot for graph 171/950
-Running dot for graph 172/950
-Running dot for graph 173/950
-Running dot for graph 174/950
-Running dot for graph 175/950
-Running dot for graph 176/950
-Running dot for graph 177/950
-Running dot for graph 178/950
-Running dot for graph 179/950
-Running dot for graph 180/950
-Running dot for graph 181/950
-Running dot for graph 182/950
-Running dot for graph 183/950
-Running dot for graph 184/950
-Running dot for graph 185/950
-Running dot for graph 186/950
-Running dot for graph 187/950
-Running dot for graph 188/950
-Running dot for graph 189/950
-Running dot for graph 190/950
-Running dot for graph 191/950
-Running dot for graph 192/950
-Running dot for graph 193/950
-Running dot for graph 194/950
-Running dot for graph 195/950
-Running dot for graph 196/950
-Running dot for graph 197/950
-Running dot for graph 198/950
-Running dot for graph 199/950
-Running dot for graph 200/950
-Running dot for graph 201/950
-Running dot for graph 202/950
-Running dot for graph 203/950
-Running dot for graph 204/950
-Running dot for graph 205/950
-Running dot for graph 206/950
-Running dot for graph 207/950
-Running dot for graph 208/950
-Running dot for graph 209/950
-Running dot for graph 210/950
-Running dot for graph 211/950
-Running dot for graph 212/950
-Running dot for graph 213/950
-Running dot for graph 214/950
-Running dot for graph 215/950
-Running dot for graph 216/950
-Running dot for graph 217/950
-Running dot for graph 218/950
-Running dot for graph 219/950
-Running dot for graph 220/950
-Running dot for graph 221/950
-Running dot for graph 222/950
-Running dot for graph 223/950
-Running dot for graph 224/950
-Running dot for graph 225/950
-Running dot for graph 226/950
-Running dot for graph 227/950
-Running dot for graph 228/950
-Running dot for graph 229/950
-Running dot for graph 230/950
-Running dot for graph 231/950
-Running dot for graph 232/950
-Running dot for graph 233/950
-Running dot for graph 234/950
-Running dot for graph 235/950
-Running dot for graph 236/950
-Running dot for graph 237/950
-Running dot for graph 238/950
-Running dot for graph 239/950
-Running dot for graph 240/950
-Running dot for graph 241/950
-Running dot for graph 242/950
-Running dot for graph 243/950
-Running dot for graph 244/950
-Running dot for graph 245/950
-Running dot for graph 246/950
-Running dot for graph 247/950
-Running dot for graph 248/950
-Running dot for graph 249/950
-Running dot for graph 250/950
-Running dot for graph 251/950
-Running dot for graph 252/950
-Running dot for graph 253/950
-Running dot for graph 254/950
-Running dot for graph 255/950
-Running dot for graph 256/950
-Running dot for graph 257/950
-Running dot for graph 258/950
-Running dot for graph 259/950
-Running dot for graph 260/950
-Running dot for graph 261/950
-Running dot for graph 262/950
-Running dot for graph 263/950
-Running dot for graph 264/950
-Running dot for graph 265/950
-Running dot for graph 266/950
-Running dot for graph 267/950
-Running dot for graph 268/950
-Running dot for graph 269/950
-Running dot for graph 270/950
-Running dot for graph 271/950
-Running dot for graph 272/950
-Running dot for graph 273/950
-Running dot for graph 274/950
-Running dot for graph 275/950
-Running dot for graph 276/950
-Running dot for graph 277/950
-Running dot for graph 278/950
-Running dot for graph 279/950
-Running dot for graph 280/950
-Running dot for graph 281/950
-Running dot for graph 282/950
-Running dot for graph 283/950
-Running dot for graph 284/950
-Running dot for graph 285/950
-Running dot for graph 286/950
-Running dot for graph 287/950
-Running dot for graph 288/950
-Running dot for graph 289/950
-Running dot for graph 290/950
-Running dot for graph 291/950
-Running dot for graph 292/950
-Running dot for graph 293/950
-Running dot for graph 294/950
-Running dot for graph 295/950
-Running dot for graph 296/950
-Running dot for graph 297/950
-Running dot for graph 298/950
-Running dot for graph 299/950
-Running dot for graph 300/950
-Running dot for graph 301/950
-Running dot for graph 302/950
-Running dot for graph 303/950
-Running dot for graph 304/950
-Running dot for graph 305/950
-Running dot for graph 306/950
-Running dot for graph 307/950
-Running dot for graph 308/950
-Running dot for graph 309/950
-Running dot for graph 310/950
-Running dot for graph 311/950
-Running dot for graph 312/950
-Running dot for graph 313/950
-Running dot for graph 314/950
-Running dot for graph 315/950
-Running dot for graph 316/950
-Running dot for graph 317/950
-Running dot for graph 318/950
-Running dot for graph 319/950
-Running dot for graph 320/950
-Running dot for graph 321/950
-Running dot for graph 322/950
-Running dot for graph 323/950
-Running dot for graph 324/950
-Running dot for graph 325/950
-Running dot for graph 326/950
-Running dot for graph 327/950
-Running dot for graph 328/950
-Running dot for graph 329/950
-Running dot for graph 330/950
-Running dot for graph 331/950
-Running dot for graph 332/950
-Running dot for graph 333/950
-Running dot for graph 334/950
-Running dot for graph 335/950
-Running dot for graph 336/950
-Running dot for graph 337/950
-Running dot for graph 338/950
-Running dot for graph 339/950
-Running dot for graph 340/950
-Running dot for graph 341/950
-Running dot for graph 342/950
-Running dot for graph 343/950
-Running dot for graph 344/950
-Running dot for graph 345/950
-Running dot for graph 346/950
-Running dot for graph 347/950
-Running dot for graph 348/950
-Running dot for graph 349/950
-Running dot for graph 350/950
-Running dot for graph 351/950
-Running dot for graph 352/950
-Running dot for graph 353/950
-Running dot for graph 354/950
-Running dot for graph 355/950
-Running dot for graph 356/950
-Running dot for graph 357/950
-Running dot for graph 358/950
-Running dot for graph 359/950
-Running dot for graph 360/950
-Running dot for graph 361/950
-Running dot for graph 362/950
-Running dot for graph 363/950
-Running dot for graph 364/950
-Running dot for graph 365/950
-Running dot for graph 366/950
-Running dot for graph 367/950
-Running dot for graph 368/950
-Running dot for graph 369/950
-Running dot for graph 370/950
-Running dot for graph 371/950
-Running dot for graph 372/950
-Running dot for graph 373/950
-Running dot for graph 374/950
-Running dot for graph 375/950
-Running dot for graph 376/950
-Running dot for graph 377/950
-Running dot for graph 378/950
-Running dot for graph 379/950
-Running dot for graph 380/950
-Running dot for graph 381/950
-Running dot for graph 382/950
-Running dot for graph 383/950
-Running dot for graph 384/950
-Running dot for graph 385/950
-Running dot for graph 386/950
-Running dot for graph 387/950
-Running dot for graph 388/950
-Running dot for graph 389/950
-Running dot for graph 390/950
-Running dot for graph 391/950
-Running dot for graph 392/950
-Running dot for graph 393/950
-Running dot for graph 394/950
-Running dot for graph 395/950
-Running dot for graph 396/950
-Running dot for graph 397/950
-Running dot for graph 398/950
-Running dot for graph 399/950
-Running dot for graph 400/950
-Running dot for graph 401/950
-Running dot for graph 402/950
-Running dot for graph 403/950
-Running dot for graph 404/950
-Running dot for graph 405/950
-Running dot for graph 406/950
-Running dot for graph 407/950
-Running dot for graph 408/950
-Running dot for graph 409/950
-Running dot for graph 410/950
-Running dot for graph 411/950
-Running dot for graph 412/950
-Running dot for graph 413/950
-Running dot for graph 414/950
-Running dot for graph 415/950
-Running dot for graph 416/950
-Running dot for graph 417/950
-Running dot for graph 418/950
-Running dot for graph 419/950
-Running dot for graph 420/950
-Running dot for graph 421/950
-Running dot for graph 422/950
-Running dot for graph 423/950
-Running dot for graph 424/950
-Running dot for graph 425/950
-Running dot for graph 426/950
-Running dot for graph 427/950
-Running dot for graph 428/950
-Running dot for graph 429/950
-Running dot for graph 430/950
-Running dot for graph 431/950
-Running dot for graph 432/950
-Running dot for graph 433/950
-Running dot for graph 434/950
-Running dot for graph 435/950
-Running dot for graph 436/950
-Running dot for graph 437/950
-Running dot for graph 438/950
-Running dot for graph 439/950
-Running dot for graph 440/950
-Running dot for graph 441/950
-Running dot for graph 442/950
-Running dot for graph 443/950
-Running dot for graph 444/950
-Running dot for graph 445/950
-Running dot for graph 446/950
-Running dot for graph 447/950
-Running dot for graph 448/950
-Running dot for graph 449/950
-Running dot for graph 450/950
-Running dot for graph 451/950
-Running dot for graph 452/950
-Running dot for graph 453/950
-Running dot for graph 454/950
-Running dot for graph 455/950
-Running dot for graph 456/950
-Running dot for graph 457/950
-Running dot for graph 458/950
-Running dot for graph 459/950
-Running dot for graph 460/950
-Running dot for graph 461/950
-Running dot for graph 462/950
-Running dot for graph 463/950
-Running dot for graph 464/950
-Running dot for graph 465/950
-Running dot for graph 466/950
-Running dot for graph 467/950
-Running dot for graph 468/950
-Running dot for graph 469/950
-Running dot for graph 470/950
-Running dot for graph 471/950
-Running dot for graph 472/950
-Running dot for graph 473/950
-Running dot for graph 474/950
-Running dot for graph 475/950
-Running dot for graph 476/950
-Running dot for graph 477/950
-Running dot for graph 478/950
-Running dot for graph 479/950
-Running dot for graph 480/950
-Running dot for graph 481/950
-Running dot for graph 482/950
-Running dot for graph 483/950
-Running dot for graph 484/950
-Running dot for graph 485/950
-Running dot for graph 486/950
-Running dot for graph 487/950
-Running dot for graph 488/950
-Running dot for graph 489/950
-Running dot for graph 490/950
-Running dot for graph 491/950
-Running dot for graph 492/950
-Running dot for graph 493/950
-Running dot for graph 494/950
-Running dot for graph 495/950
-Running dot for graph 496/950
-Running dot for graph 497/950
-Running dot for graph 498/950
-Running dot for graph 499/950
-Running dot for graph 500/950
-Running dot for graph 501/950
-Running dot for graph 502/950
-Running dot for graph 503/950
-Running dot for graph 504/950
-Running dot for graph 505/950
-Running dot for graph 506/950
-Running dot for graph 507/950
-Running dot for graph 508/950
-Running dot for graph 509/950
-Running dot for graph 510/950
-Running dot for graph 511/950
-Running dot for graph 512/950
-Running dot for graph 513/950
-Running dot for graph 514/950
-Running dot for graph 515/950
-Running dot for graph 516/950
-Running dot for graph 517/950
-Running dot for graph 518/950
-Running dot for graph 519/950
-Running dot for graph 520/950
-Running dot for graph 521/950
-Running dot for graph 522/950
-Running dot for graph 523/950
-Running dot for graph 524/950
-Running dot for graph 525/950
-Running dot for graph 526/950
-Running dot for graph 527/950
-Running dot for graph 528/950
-Running dot for graph 529/950
-Running dot for graph 530/950
-Running dot for graph 531/950
-Running dot for graph 532/950
-Running dot for graph 533/950
-Running dot for graph 534/950
-Running dot for graph 535/950
-Running dot for graph 536/950
-Running dot for graph 537/950
-Running dot for graph 538/950
-Running dot for graph 539/950
-Running dot for graph 540/950
-Running dot for graph 541/950
-Running dot for graph 542/950
-Running dot for graph 543/950
-Running dot for graph 544/950
-Running dot for graph 545/950
-Running dot for graph 546/950
-Running dot for graph 547/950
-Running dot for graph 548/950
-Running dot for graph 549/950
-Running dot for graph 550/950
-Running dot for graph 551/950
-Running dot for graph 552/950
-Running dot for graph 553/950
-Running dot for graph 554/950
-Running dot for graph 555/950
-Running dot for graph 556/950
-Running dot for graph 557/950
-Running dot for graph 558/950
-Running dot for graph 559/950
-Running dot for graph 560/950
-Running dot for graph 561/950
-Running dot for graph 562/950
-Running dot for graph 563/950
-Running dot for graph 564/950
-Running dot for graph 565/950
-Running dot for graph 566/950
-Running dot for graph 567/950
-Running dot for graph 568/950
-Running dot for graph 569/950
-Running dot for graph 570/950
-Running dot for graph 571/950
-Running dot for graph 572/950
-Running dot for graph 573/950
-Running dot for graph 574/950
-Running dot for graph 575/950
-Running dot for graph 576/950
-Running dot for graph 577/950
-Running dot for graph 578/950
-Running dot for graph 579/950
-Running dot for graph 580/950
-Running dot for graph 581/950
-Running dot for graph 582/950
-Running dot for graph 583/950
-Running dot for graph 584/950
-Running dot for graph 585/950
-Running dot for graph 586/950
-Running dot for graph 587/950
-Running dot for graph 588/950
-Running dot for graph 589/950
-Running dot for graph 590/950
-Running dot for graph 591/950
-Running dot for graph 592/950
-Running dot for graph 593/950
-Running dot for graph 594/950
-Running dot for graph 595/950
-Running dot for graph 596/950
-Running dot for graph 597/950
-Running dot for graph 598/950
-Running dot for graph 599/950
-Running dot for graph 600/950
-Running dot for graph 601/950
-Running dot for graph 602/950
-Running dot for graph 603/950
-Running dot for graph 604/950
-Running dot for graph 605/950
-Running dot for graph 606/950
-Running dot for graph 607/950
-Running dot for graph 608/950
-Running dot for graph 609/950
-Running dot for graph 610/950
-Running dot for graph 611/950
-Running dot for graph 612/950
-Running dot for graph 613/950
-Running dot for graph 614/950
-Running dot for graph 615/950
-Running dot for graph 616/950
-Running dot for graph 617/950
-Running dot for graph 618/950
-Running dot for graph 619/950
-Running dot for graph 620/950
-Running dot for graph 621/950
-Running dot for graph 622/950
-Running dot for graph 623/950
-Running dot for graph 624/950
-Running dot for graph 625/950
-Running dot for graph 626/950
-Running dot for graph 627/950
-Running dot for graph 628/950
-Running dot for graph 629/950
-Running dot for graph 630/950
-Running dot for graph 631/950
-Running dot for graph 632/950
-Running dot for graph 633/950
-Running dot for graph 634/950
-Running dot for graph 635/950
-Running dot for graph 636/950
-Running dot for graph 637/950
-Running dot for graph 638/950
-Running dot for graph 639/950
-Running dot for graph 640/950
-Running dot for graph 641/950
-Running dot for graph 642/950
-Running dot for graph 643/950
-Running dot for graph 644/950
-Running dot for graph 645/950
-Running dot for graph 646/950
-Running dot for graph 647/950
-Running dot for graph 648/950
-Running dot for graph 649/950
-Running dot for graph 650/950
-Running dot for graph 651/950
-Running dot for graph 652/950
-Running dot for graph 653/950
-Running dot for graph 654/950
-Running dot for graph 655/950
-Running dot for graph 656/950
-Running dot for graph 657/950
-Running dot for graph 658/950
-Running dot for graph 659/950
-Running dot for graph 660/950
-Running dot for graph 661/950
-Running dot for graph 662/950
-Running dot for graph 663/950
-Running dot for graph 664/950
-Running dot for graph 665/950
-Running dot for graph 666/950
-Running dot for graph 667/950
-Running dot for graph 668/950
-Running dot for graph 669/950
-Running dot for graph 670/950
-Running dot for graph 671/950
-Running dot for graph 672/950
-Running dot for graph 673/950
-Running dot for graph 674/950
-Running dot for graph 675/950
-Running dot for graph 676/950
-Running dot for graph 677/950
-Running dot for graph 678/950
-Running dot for graph 679/950
-Running dot for graph 680/950
-Running dot for graph 681/950
-Running dot for graph 682/950
-Running dot for graph 683/950
-Running dot for graph 684/950
-Running dot for graph 685/950
-Running dot for graph 686/950
-Running dot for graph 687/950
-Running dot for graph 688/950
-Running dot for graph 689/950
-Running dot for graph 690/950
-Running dot for graph 691/950
-Running dot for graph 692/950
-Running dot for graph 693/950
-Running dot for graph 694/950
-Running dot for graph 695/950
-Running dot for graph 696/950
-Running dot for graph 697/950
-Running dot for graph 698/950
-Running dot for graph 699/950
-Running dot for graph 700/950
-Running dot for graph 701/950
-Running dot for graph 702/950
-Running dot for graph 703/950
-Running dot for graph 704/950
-Running dot for graph 705/950
-Running dot for graph 706/950
-Running dot for graph 707/950
-Running dot for graph 708/950
-Running dot for graph 709/950
-Running dot for graph 710/950
-Running dot for graph 711/950
-Running dot for graph 712/950
-Running dot for graph 713/950
-Running dot for graph 714/950
-Running dot for graph 715/950
-Running dot for graph 716/950
-Running dot for graph 717/950
-Running dot for graph 718/950
-Running dot for graph 719/950
-Running dot for graph 720/950
-Running dot for graph 721/950
-Running dot for graph 722/950
-Running dot for graph 723/950
-Running dot for graph 724/950
-Running dot for graph 725/950
-Running dot for graph 726/950
-Running dot for graph 727/950
-Running dot for graph 728/950
-Running dot for graph 729/950
-Running dot for graph 730/950
-Running dot for graph 731/950
-Running dot for graph 732/950
-Running dot for graph 733/950
-Running dot for graph 734/950
-Running dot for graph 735/950
-Running dot for graph 736/950
-Running dot for graph 737/950
-Running dot for graph 738/950
-Running dot for graph 739/950
-Running dot for graph 740/950
-Running dot for graph 741/950
-Running dot for graph 742/950
-Running dot for graph 743/950
-Running dot for graph 744/950
-Running dot for graph 745/950
-Running dot for graph 746/950
-Running dot for graph 747/950
-Running dot for graph 748/950
-Running dot for graph 749/950
-Running dot for graph 750/950
-Running dot for graph 751/950
-Running dot for graph 752/950
-Running dot for graph 753/950
-Running dot for graph 754/950
-Running dot for graph 755/950
-Running dot for graph 756/950
-Running dot for graph 757/950
-Running dot for graph 758/950
-Running dot for graph 759/950
-Running dot for graph 760/950
-Running dot for graph 761/950
-Running dot for graph 762/950
-Running dot for graph 763/950
-Running dot for graph 764/950
-Running dot for graph 765/950
-Running dot for graph 766/950
-Running dot for graph 767/950
-Running dot for graph 768/950
-Running dot for graph 769/950
-Running dot for graph 770/950
-Running dot for graph 771/950
-Running dot for graph 772/950
-Running dot for graph 773/950
-Running dot for graph 774/950
-Running dot for graph 775/950
-Running dot for graph 776/950
-Running dot for graph 777/950
-Running dot for graph 778/950
-Running dot for graph 779/950
-Running dot for graph 780/950
-Running dot for graph 781/950
-Running dot for graph 782/950
-Running dot for graph 783/950
-Running dot for graph 784/950
-Running dot for graph 785/950
-Running dot for graph 786/950
-Running dot for graph 787/950
-Running dot for graph 788/950
-Running dot for graph 789/950
-Running dot for graph 790/950
-Running dot for graph 791/950
-Running dot for graph 792/950
-Running dot for graph 793/950
-Running dot for graph 794/950
-Running dot for graph 795/950
-Running dot for graph 796/950
-Running dot for graph 797/950
-Running dot for graph 798/950
-Running dot for graph 799/950
-Running dot for graph 800/950
-Running dot for graph 801/950
-Running dot for graph 802/950
-Running dot for graph 803/950
-Running dot for graph 804/950
-Running dot for graph 805/950
-Running dot for graph 806/950
-Running dot for graph 807/950
-Running dot for graph 808/950
-Running dot for graph 809/950
-Running dot for graph 810/950
-Running dot for graph 811/950
-Running dot for graph 812/950
-Running dot for graph 813/950
-Running dot for graph 814/950
-Running dot for graph 815/950
-Running dot for graph 816/950
-Running dot for graph 817/950
-Running dot for graph 818/950
-Running dot for graph 819/950
-Running dot for graph 820/950
-Running dot for graph 821/950
-Running dot for graph 822/950
-Running dot for graph 823/950
-Running dot for graph 824/950
-Running dot for graph 825/950
-Running dot for graph 826/950
-Running dot for graph 827/950
-Running dot for graph 828/950
-Running dot for graph 829/950
-Running dot for graph 830/950
-Running dot for graph 831/950
-Running dot for graph 832/950
-Running dot for graph 833/950
-Running dot for graph 834/950
-Running dot for graph 835/950
-Running dot for graph 836/950
-Running dot for graph 837/950
-Running dot for graph 838/950
-Running dot for graph 839/950
-Running dot for graph 840/950
-Running dot for graph 841/950
-Running dot for graph 842/950
-Running dot for graph 843/950
-Running dot for graph 844/950
-Running dot for graph 845/950
-Running dot for graph 846/950
-Running dot for graph 847/950
-Running dot for graph 848/950
-Running dot for graph 849/950
-Running dot for graph 850/950
-Running dot for graph 851/950
-Running dot for graph 852/950
-Running dot for graph 853/950
-Running dot for graph 854/950
-Running dot for graph 855/950
-Running dot for graph 856/950
-Running dot for graph 857/950
-Running dot for graph 858/950
-Running dot for graph 859/950
-Running dot for graph 860/950
-Running dot for graph 861/950
-Running dot for graph 862/950
-Running dot for graph 863/950
-Running dot for graph 864/950
-Running dot for graph 865/950
-Running dot for graph 866/950
-Running dot for graph 867/950
-Running dot for graph 868/950
-Running dot for graph 869/950
-Running dot for graph 870/950
-Running dot for graph 871/950
-Running dot for graph 872/950
-Running dot for graph 873/950
-Running dot for graph 874/950
-Running dot for graph 875/950
-Running dot for graph 876/950
-Running dot for graph 877/950
-Running dot for graph 878/950
-Running dot for graph 879/950
-Running dot for graph 880/950
-Running dot for graph 881/950
-Running dot for graph 882/950
-Running dot for graph 883/950
-Running dot for graph 884/950
-Running dot for graph 885/950
-Running dot for graph 886/950
-Running dot for graph 887/950
-Running dot for graph 888/950
-Running dot for graph 889/950
-Running dot for graph 890/950
-Running dot for graph 891/950
-Running dot for graph 892/950
-Running dot for graph 893/950
-Running dot for graph 894/950
-Running dot for graph 895/950
-Running dot for graph 896/950
-Running dot for graph 897/950
-Running dot for graph 898/950
-Running dot for graph 899/950
-Running dot for graph 900/950
-Running dot for graph 901/950
-Running dot for graph 902/950
-Running dot for graph 903/950
-Running dot for graph 904/950
-Running dot for graph 905/950
-Running dot for graph 906/950
-Running dot for graph 907/950
-Running dot for graph 908/950
-Running dot for graph 909/950
-Running dot for graph 910/950
-Running dot for graph 911/950
-Running dot for graph 912/950
-Running dot for graph 913/950
-Running dot for graph 914/950
-Running dot for graph 915/950
-Running dot for graph 916/950
-Running dot for graph 917/950
-Running dot for graph 918/950
-Running dot for graph 919/950
-Running dot for graph 920/950
-Running dot for graph 921/950
-Running dot for graph 922/950
-Running dot for graph 923/950
-Running dot for graph 924/950
-Running dot for graph 925/950
-Running dot for graph 926/950
-Running dot for graph 927/950
-Running dot for graph 928/950
-Running dot for graph 929/950
-Running dot for graph 930/950
-Running dot for graph 931/950
-Running dot for graph 932/950
-Running dot for graph 933/950
-Running dot for graph 934/950
-Running dot for graph 935/950
-Running dot for graph 936/950
-Running dot for graph 937/950
-Running dot for graph 938/950
-Running dot for graph 939/950
-Running dot for graph 940/950
-Running dot for graph 941/950
-Running dot for graph 942/950
-Running dot for graph 943/950
-Running dot for graph 944/950
-Running dot for graph 945/950
-Running dot for graph 946/950
-Running dot for graph 947/950
-Running dot for graph 948/950
-Running dot for graph 949/950
-Running dot for graph 950/950
-Patching output file 1/429
-Patching output file 2/429
-Patching output file 3/429
-Patching output file 4/429
-Patching output file 5/429
-Patching output file 6/429
-Patching output file 7/429
-Patching output file 8/429
-Patching output file 9/429
-Patching output file 10/429
-Patching output file 11/429
-Patching output file 12/429
-Patching output file 13/429
-Patching output file 14/429
-Patching output file 15/429
-Patching output file 16/429
-Patching output file 17/429
-Patching output file 18/429
-Patching output file 19/429
-Patching output file 20/429
-Patching output file 21/429
-Patching output file 22/429
-Patching output file 23/429
-Patching output file 24/429
-Patching output file 25/429
-Patching output file 26/429
-Patching output file 27/429
-Patching output file 28/429
-Patching output file 29/429
-Patching output file 30/429
-Patching output file 31/429
-Patching output file 32/429
-Patching output file 33/429
-Patching output file 34/429
-Patching output file 35/429
-Patching output file 36/429
-Patching output file 37/429
-Patching output file 38/429
-Patching output file 39/429
-Patching output file 40/429
-Patching output file 41/429
-Patching output file 42/429
-Patching output file 43/429
-Patching output file 44/429
-Patching output file 45/429
-Patching output file 46/429
-Patching output file 47/429
-Patching output file 48/429
-Patching output file 49/429
-Patching output file 50/429
-Patching output file 51/429
-Patching output file 52/429
-Patching output file 53/429
-Patching output file 54/429
-Patching output file 55/429
-Patching output file 56/429
-Patching output file 57/429
-Patching output file 58/429
-Patching output file 59/429
-Patching output file 60/429
-Patching output file 61/429
-Patching output file 62/429
-Patching output file 63/429
-Patching output file 64/429
-Patching output file 65/429
-Patching output file 66/429
-Patching output file 67/429
-Patching output file 68/429
-Patching output file 69/429
-Patching output file 70/429
-Patching output file 71/429
-Patching output file 72/429
-Patching output file 73/429
-Patching output file 74/429
-Patching output file 75/429
-Patching output file 76/429
-Patching output file 77/429
-Patching output file 78/429
-Patching output file 79/429
-Patching output file 80/429
-Patching output file 81/429
-Patching output file 82/429
-Patching output file 83/429
-Patching output file 84/429
-Patching output file 85/429
-Patching output file 86/429
-Patching output file 87/429
-Patching output file 88/429
-Patching output file 89/429
-Patching output file 90/429
-Patching output file 91/429
-Patching output file 92/429
-Patching output file 93/429
-Patching output file 94/429
-Patching output file 95/429
-Patching output file 96/429
-Patching output file 97/429
-Patching output file 98/429
-Patching output file 99/429
-Patching output file 100/429
-Patching output file 101/429
-Patching output file 102/429
-Patching output file 103/429
-Patching output file 104/429
-Patching output file 105/429
-Patching output file 106/429
-Patching output file 107/429
-Patching output file 108/429
-Patching output file 109/429
-Patching output file 110/429
-Patching output file 111/429
-Patching output file 112/429
-Patching output file 113/429
-Patching output file 114/429
-Patching output file 115/429
-Patching output file 116/429
-Patching output file 117/429
-Patching output file 118/429
-Patching output file 119/429
-Patching output file 120/429
-Patching output file 121/429
-Patching output file 122/429
-Patching output file 123/429
-Patching output file 124/429
-Patching output file 125/429
-Patching output file 126/429
-Patching output file 127/429
-Patching output file 128/429
-Patching output file 129/429
-Patching output file 130/429
-Patching output file 131/429
-Patching output file 132/429
-Patching output file 133/429
-Patching output file 134/429
-Patching output file 135/429
-Patching output file 136/429
-Patching output file 137/429
-Patching output file 138/429
-Patching output file 139/429
-Patching output file 140/429
-Patching output file 141/429
-Patching output file 142/429
-Patching output file 143/429
-Patching output file 144/429
-Patching output file 145/429
-Patching output file 146/429
-Patching output file 147/429
-Patching output file 148/429
-Patching output file 149/429
-Patching output file 150/429
-Patching output file 151/429
-Patching output file 152/429
-Patching output file 153/429
-Patching output file 154/429
-Patching output file 155/429
-Patching output file 156/429
-Patching output file 157/429
-Patching output file 158/429
-Patching output file 159/429
-Patching output file 160/429
-Patching output file 161/429
-Patching output file 162/429
-Patching output file 163/429
-Patching output file 164/429
-Patching output file 165/429
-Patching output file 166/429
-Patching output file 167/429
-Patching output file 168/429
-Patching output file 169/429
-Patching output file 170/429
-Patching output file 171/429
-Patching output file 172/429
-Patching output file 173/429
-Patching output file 174/429
-Patching output file 175/429
-Patching output file 176/429
-Patching output file 177/429
-Patching output file 178/429
-Patching output file 179/429
-Patching output file 180/429
-Patching output file 181/429
-Patching output file 182/429
-Patching output file 183/429
-Patching output file 184/429
-Patching output file 185/429
-Patching output file 186/429
-Patching output file 187/429
-Patching output file 188/429
-Patching output file 189/429
-Patching output file 190/429
-Patching output file 191/429
-Patching output file 192/429
-Patching output file 193/429
-Patching output file 194/429
-Patching output file 195/429
-Patching output file 196/429
-Patching output file 197/429
-Patching output file 198/429
-Patching output file 199/429
-Patching output file 200/429
-Patching output file 201/429
-Patching output file 202/429
-Patching output file 203/429
-Patching output file 204/429
-Patching output file 205/429
-Patching output file 206/429
-Patching output file 207/429
-Patching output file 208/429
-Patching output file 209/429
-Patching output file 210/429
-Patching output file 211/429
-Patching output file 212/429
-Patching output file 213/429
-Patching output file 214/429
-Patching output file 215/429
-Patching output file 216/429
-Patching output file 217/429
-Patching output file 218/429
-Patching output file 219/429
-Patching output file 220/429
-Patching output file 221/429
-Patching output file 222/429
-Patching output file 223/429
-Patching output file 224/429
-Patching output file 225/429
-Patching output file 226/429
-Patching output file 227/429
-Patching output file 228/429
-Patching output file 229/429
-Patching output file 230/429
-Patching output file 231/429
-Patching output file 232/429
-Patching output file 233/429
-Patching output file 234/429
-Patching output file 235/429
-Patching output file 236/429
-Patching output file 237/429
-Patching output file 238/429
-Patching output file 239/429
-Patching output file 240/429
-Patching output file 241/429
-Patching output file 242/429
-Patching output file 243/429
-Patching output file 244/429
-Patching output file 245/429
-Patching output file 246/429
-Patching output file 247/429
-Patching output file 248/429
-Patching output file 249/429
-Patching output file 250/429
-Patching output file 251/429
-Patching output file 252/429
-Patching output file 253/429
-Patching output file 254/429
-Patching output file 255/429
-Patching output file 256/429
-Patching output file 257/429
-Patching output file 258/429
-Patching output file 259/429
-Patching output file 260/429
-Patching output file 261/429
-Patching output file 262/429
-Patching output file 263/429
-Patching output file 264/429
-Patching output file 265/429
-Patching output file 266/429
-Patching output file 267/429
-Patching output file 268/429
-Patching output file 269/429
-Patching output file 270/429
-Patching output file 271/429
-Patching output file 272/429
-Patching output file 273/429
-Patching output file 274/429
-Patching output file 275/429
-Patching output file 276/429
-Patching output file 277/429
-Patching output file 278/429
-Patching output file 279/429
-Patching output file 280/429
-Patching output file 281/429
-Patching output file 282/429
-Patching output file 283/429
-Patching output file 284/429
-Patching output file 285/429
-Patching output file 286/429
-Patching output file 287/429
-Patching output file 288/429
-Patching output file 289/429
-Patching output file 290/429
-Patching output file 291/429
-Patching output file 292/429
-Patching output file 293/429
-Patching output file 294/429
-Patching output file 295/429
-Patching output file 296/429
-Patching output file 297/429
-Patching output file 298/429
-Patching output file 299/429
-Patching output file 300/429
-Patching output file 301/429
-Patching output file 302/429
-Patching output file 303/429
-Patching output file 304/429
-Patching output file 305/429
-Patching output file 306/429
-Patching output file 307/429
-Patching output file 308/429
-Patching output file 309/429
-Patching output file 310/429
-Patching output file 311/429
-Patching output file 312/429
-Patching output file 313/429
-Patching output file 314/429
-Patching output file 315/429
-Patching output file 316/429
-Patching output file 317/429
-Patching output file 318/429
-Patching output file 319/429
-Patching output file 320/429
-Patching output file 321/429
-Patching output file 322/429
-Patching output file 323/429
-Patching output file 324/429
-Patching output file 325/429
-Patching output file 326/429
-Patching output file 327/429
-Patching output file 328/429
-Patching output file 329/429
-Patching output file 330/429
-Patching output file 331/429
-Patching output file 332/429
-Patching output file 333/429
-Patching output file 334/429
-Patching output file 335/429
-Patching output file 336/429
-Patching output file 337/429
-Patching output file 338/429
-Patching output file 339/429
-Patching output file 340/429
-Patching output file 341/429
-Patching output file 342/429
-Patching output file 343/429
-Patching output file 344/429
-Patching output file 345/429
-Patching output file 346/429
-Patching output file 347/429
-Patching output file 348/429
-Patching output file 349/429
-Patching output file 350/429
-Patching output file 351/429
-Patching output file 352/429
-Patching output file 353/429
-Patching output file 354/429
-Patching output file 355/429
-Patching output file 356/429
-Patching output file 357/429
-Patching output file 358/429
-Patching output file 359/429
-Patching output file 360/429
-Patching output file 361/429
-Patching output file 362/429
-Patching output file 363/429
-Patching output file 364/429
-Patching output file 365/429
-Patching output file 366/429
-Patching output file 367/429
-Patching output file 368/429
-Patching output file 369/429
-Patching output file 370/429
-Patching output file 371/429
-Patching output file 372/429
-Patching output file 373/429
-Patching output file 374/429
-Patching output file 375/429
-Patching output file 376/429
-Patching output file 377/429
-Patching output file 378/429
-Patching output file 379/429
-Patching output file 380/429
-Patching output file 381/429
-Patching output file 382/429
-Patching output file 383/429
-Patching output file 384/429
-Patching output file 385/429
-Patching output file 386/429
-Patching output file 387/429
-Patching output file 388/429
-Patching output file 389/429
-Patching output file 390/429
-Patching output file 391/429
-Patching output file 392/429
-Patching output file 393/429
-Patching output file 394/429
-Patching output file 395/429
-Patching output file 396/429
-Patching output file 397/429
-Patching output file 398/429
-Patching output file 399/429
-Patching output file 400/429
-Patching output file 401/429
-Patching output file 402/429
-Patching output file 403/429
-Patching output file 404/429
-Patching output file 405/429
-Patching output file 406/429
-Patching output file 407/429
-Patching output file 408/429
-Patching output file 409/429
-Patching output file 410/429
-Patching output file 411/429
-Patching output file 412/429
-Patching output file 413/429
-Patching output file 414/429
-Patching output file 415/429
-Patching output file 416/429
-Patching output file 417/429
-Patching output file 418/429
-Patching output file 419/429
-Patching output file 420/429
-Patching output file 421/429
-Patching output file 422/429
-Patching output file 423/429
-Patching output file 424/429
-Patching output file 425/429
-Patching output file 426/429
-Patching output file 427/429
-Patching output file 428/429
-Patching output file 429/429
-lookup cache used 1631/65536 hits=10120 misses=1703
+Running dot for graph 1/1169
+Running dot for graph 2/1169
+Running dot for graph 3/1169
+Running dot for graph 4/1169
+Running dot for graph 5/1169
+Running dot for graph 6/1169
+Running dot for graph 7/1169
+Running dot for graph 8/1169
+Running dot for graph 9/1169
+Running dot for graph 10/1169
+Running dot for graph 11/1169
+Running dot for graph 12/1169
+Running dot for graph 13/1169
+Running dot for graph 14/1169
+Running dot for graph 15/1169
+Running dot for graph 16/1169
+Running dot for graph 17/1169
+Running dot for graph 18/1169
+Running dot for graph 19/1169
+Running dot for graph 20/1169
+Running dot for graph 21/1169
+Running dot for graph 22/1169
+Running dot for graph 23/1169
+Running dot for graph 24/1169
+Running dot for graph 25/1169
+Running dot for graph 26/1169
+Running dot for graph 27/1169
+Running dot for graph 28/1169
+Running dot for graph 29/1169
+Running dot for graph 30/1169
+Running dot for graph 31/1169
+Running dot for graph 32/1169
+Running dot for graph 33/1169
+Running dot for graph 34/1169
+Running dot for graph 35/1169
+Running dot for graph 36/1169
+Running dot for graph 37/1169
+Running dot for graph 38/1169
+Running dot for graph 39/1169
+Running dot for graph 40/1169
+Running dot for graph 41/1169
+Running dot for graph 42/1169
+Running dot for graph 43/1169
+Running dot for graph 44/1169
+Running dot for graph 45/1169
+Running dot for graph 46/1169
+Running dot for graph 47/1169
+Running dot for graph 48/1169
+Running dot for graph 49/1169
+Running dot for graph 50/1169
+Running dot for graph 51/1169
+Running dot for graph 52/1169
+Running dot for graph 53/1169
+Running dot for graph 54/1169
+Running dot for graph 55/1169
+Running dot for graph 56/1169
+Running dot for graph 57/1169
+Running dot for graph 58/1169
+Running dot for graph 59/1169
+Running dot for graph 60/1169
+Running dot for graph 61/1169
+Running dot for graph 62/1169
+Running dot for graph 63/1169
+Running dot for graph 64/1169
+Running dot for graph 65/1169
+Running dot for graph 66/1169
+Running dot for graph 67/1169
+Running dot for graph 68/1169
+Running dot for graph 69/1169
+Running dot for graph 70/1169
+Running dot for graph 71/1169
+Running dot for graph 72/1169
+Running dot for graph 73/1169
+Running dot for graph 74/1169
+Running dot for graph 75/1169
+Running dot for graph 76/1169
+Running dot for graph 77/1169
+Running dot for graph 78/1169
+Running dot for graph 79/1169
+Running dot for graph 80/1169
+Running dot for graph 81/1169
+Running dot for graph 82/1169
+Running dot for graph 83/1169
+Running dot for graph 84/1169
+Running dot for graph 85/1169
+Running dot for graph 86/1169
+Running dot for graph 87/1169
+Running dot for graph 88/1169
+Running dot for graph 89/1169
+Running dot for graph 90/1169
+Running dot for graph 91/1169
+Running dot for graph 92/1169
+Running dot for graph 93/1169
+Running dot for graph 94/1169
+Running dot for graph 95/1169
+Running dot for graph 96/1169
+Running dot for graph 97/1169
+Running dot for graph 98/1169
+Running dot for graph 99/1169
+Running dot for graph 100/1169
+Running dot for graph 101/1169
+Running dot for graph 102/1169
+Running dot for graph 103/1169
+Running dot for graph 104/1169
+Running dot for graph 105/1169
+Running dot for graph 106/1169
+Running dot for graph 107/1169
+Running dot for graph 108/1169
+Running dot for graph 109/1169
+Running dot for graph 110/1169
+Running dot for graph 111/1169
+Running dot for graph 112/1169
+Running dot for graph 113/1169
+Running dot for graph 114/1169
+Running dot for graph 115/1169
+Running dot for graph 116/1169
+Running dot for graph 117/1169
+Running dot for graph 118/1169
+Running dot for graph 119/1169
+Running dot for graph 120/1169
+Running dot for graph 121/1169
+Running dot for graph 122/1169
+Running dot for graph 123/1169
+Running dot for graph 124/1169
+Running dot for graph 125/1169
+Running dot for graph 126/1169
+Running dot for graph 127/1169
+Running dot for graph 128/1169
+Running dot for graph 129/1169
+Running dot for graph 130/1169
+Running dot for graph 131/1169
+Running dot for graph 132/1169
+Running dot for graph 133/1169
+Running dot for graph 134/1169
+Running dot for graph 135/1169
+Running dot for graph 136/1169
+Running dot for graph 137/1169
+Running dot for graph 138/1169
+Running dot for graph 139/1169
+Running dot for graph 140/1169
+Running dot for graph 141/1169
+Running dot for graph 142/1169
+Running dot for graph 143/1169
+Running dot for graph 144/1169
+Running dot for graph 145/1169
+Running dot for graph 146/1169
+Running dot for graph 147/1169
+Running dot for graph 148/1169
+Running dot for graph 149/1169
+Running dot for graph 150/1169
+Running dot for graph 151/1169
+Running dot for graph 152/1169
+Running dot for graph 153/1169
+Running dot for graph 154/1169
+Running dot for graph 155/1169
+Running dot for graph 156/1169
+Running dot for graph 157/1169
+Running dot for graph 158/1169
+Running dot for graph 159/1169
+Running dot for graph 160/1169
+Running dot for graph 161/1169
+Running dot for graph 162/1169
+Running dot for graph 163/1169
+Running dot for graph 164/1169
+Running dot for graph 165/1169
+Running dot for graph 166/1169
+Running dot for graph 167/1169
+Running dot for graph 168/1169
+Running dot for graph 169/1169
+Running dot for graph 170/1169
+Running dot for graph 171/1169
+Running dot for graph 172/1169
+Running dot for graph 173/1169
+Running dot for graph 174/1169
+Running dot for graph 175/1169
+Running dot for graph 176/1169
+Running dot for graph 177/1169
+Running dot for graph 178/1169
+Running dot for graph 179/1169
+Running dot for graph 180/1169
+Running dot for graph 181/1169
+Running dot for graph 182/1169
+Running dot for graph 183/1169
+Running dot for graph 184/1169
+Running dot for graph 185/1169
+Running dot for graph 186/1169
+Running dot for graph 187/1169
+Running dot for graph 188/1169
+Running dot for graph 189/1169
+Running dot for graph 190/1169
+Running dot for graph 191/1169
+Running dot for graph 192/1169
+Running dot for graph 193/1169
+Running dot for graph 194/1169
+Running dot for graph 195/1169
+Running dot for graph 196/1169
+Running dot for graph 197/1169
+Running dot for graph 198/1169
+Running dot for graph 199/1169
+Running dot for graph 200/1169
+Running dot for graph 201/1169
+Running dot for graph 202/1169
+Running dot for graph 203/1169
+Running dot for graph 204/1169
+Running dot for graph 205/1169
+Running dot for graph 206/1169
+Running dot for graph 207/1169
+Running dot for graph 208/1169
+Running dot for graph 209/1169
+Running dot for graph 210/1169
+Running dot for graph 211/1169
+Running dot for graph 212/1169
+Running dot for graph 213/1169
+Running dot for graph 214/1169
+Running dot for graph 215/1169
+Running dot for graph 216/1169
+Running dot for graph 217/1169
+Running dot for graph 218/1169
+Running dot for graph 219/1169
+Running dot for graph 220/1169
+Running dot for graph 221/1169
+Running dot for graph 222/1169
+Running dot for graph 223/1169
+Running dot for graph 224/1169
+Running dot for graph 225/1169
+Running dot for graph 226/1169
+Running dot for graph 227/1169
+Running dot for graph 228/1169
+Running dot for graph 229/1169
+Running dot for graph 230/1169
+Running dot for graph 231/1169
+Running dot for graph 232/1169
+Running dot for graph 233/1169
+Running dot for graph 234/1169
+Running dot for graph 235/1169
+Running dot for graph 236/1169
+Running dot for graph 237/1169
+Running dot for graph 238/1169
+Running dot for graph 239/1169
+Running dot for graph 240/1169
+Running dot for graph 241/1169
+Running dot for graph 242/1169
+Running dot for graph 243/1169
+Running dot for graph 244/1169
+Running dot for graph 245/1169
+Running dot for graph 246/1169
+Running dot for graph 247/1169
+Running dot for graph 248/1169
+Running dot for graph 249/1169
+Running dot for graph 250/1169
+Running dot for graph 251/1169
+Running dot for graph 252/1169
+Running dot for graph 253/1169
+Running dot for graph 254/1169
+Running dot for graph 255/1169
+Running dot for graph 256/1169
+Running dot for graph 257/1169
+Running dot for graph 258/1169
+Running dot for graph 259/1169
+Running dot for graph 260/1169
+Running dot for graph 261/1169
+Running dot for graph 262/1169
+Running dot for graph 263/1169
+Running dot for graph 264/1169
+Running dot for graph 265/1169
+Running dot for graph 266/1169
+Running dot for graph 267/1169
+Running dot for graph 268/1169
+Running dot for graph 269/1169
+Running dot for graph 270/1169
+Running dot for graph 271/1169
+Running dot for graph 272/1169
+Running dot for graph 273/1169
+Running dot for graph 274/1169
+Running dot for graph 275/1169
+Running dot for graph 276/1169
+Running dot for graph 277/1169
+Running dot for graph 278/1169
+Running dot for graph 279/1169
+Running dot for graph 280/1169
+Running dot for graph 281/1169
+Running dot for graph 282/1169
+Running dot for graph 283/1169
+Running dot for graph 284/1169
+Running dot for graph 285/1169
+Running dot for graph 286/1169
+Running dot for graph 287/1169
+Running dot for graph 288/1169
+Running dot for graph 289/1169
+Running dot for graph 290/1169
+Running dot for graph 291/1169
+Running dot for graph 292/1169
+Running dot for graph 293/1169
+Running dot for graph 294/1169
+Running dot for graph 295/1169
+Running dot for graph 296/1169
+Running dot for graph 297/1169
+Running dot for graph 298/1169
+Running dot for graph 299/1169
+Running dot for graph 300/1169
+Running dot for graph 301/1169
+Running dot for graph 302/1169
+Running dot for graph 303/1169
+Running dot for graph 304/1169
+Running dot for graph 305/1169
+Running dot for graph 306/1169
+Running dot for graph 307/1169
+Running dot for graph 308/1169
+Running dot for graph 309/1169
+Running dot for graph 310/1169
+Running dot for graph 311/1169
+Running dot for graph 312/1169
+Running dot for graph 313/1169
+Running dot for graph 314/1169
+Running dot for graph 315/1169
+Running dot for graph 316/1169
+Running dot for graph 317/1169
+Running dot for graph 318/1169
+Running dot for graph 319/1169
+Running dot for graph 320/1169
+Running dot for graph 321/1169
+Running dot for graph 322/1169
+Running dot for graph 323/1169
+Running dot for graph 324/1169
+Running dot for graph 325/1169
+Running dot for graph 326/1169
+Running dot for graph 327/1169
+Running dot for graph 328/1169
+Running dot for graph 329/1169
+Running dot for graph 330/1169
+Running dot for graph 331/1169
+Running dot for graph 332/1169
+Running dot for graph 333/1169
+Running dot for graph 334/1169
+Running dot for graph 335/1169
+Running dot for graph 336/1169
+Running dot for graph 337/1169
+Running dot for graph 338/1169
+Running dot for graph 339/1169
+Running dot for graph 340/1169
+Running dot for graph 341/1169
+Running dot for graph 342/1169
+Running dot for graph 343/1169
+Running dot for graph 344/1169
+Running dot for graph 345/1169
+Running dot for graph 346/1169
+Running dot for graph 347/1169
+Running dot for graph 348/1169
+Running dot for graph 349/1169
+Running dot for graph 350/1169
+Running dot for graph 351/1169
+Running dot for graph 352/1169
+Running dot for graph 353/1169
+Running dot for graph 354/1169
+Running dot for graph 355/1169
+Running dot for graph 356/1169
+Running dot for graph 357/1169
+Running dot for graph 358/1169
+Running dot for graph 359/1169
+Running dot for graph 360/1169
+Running dot for graph 361/1169
+Running dot for graph 362/1169
+Running dot for graph 363/1169
+Running dot for graph 364/1169
+Running dot for graph 365/1169
+Running dot for graph 366/1169
+Running dot for graph 367/1169
+Running dot for graph 368/1169
+Running dot for graph 369/1169
+Running dot for graph 370/1169
+Running dot for graph 371/1169
+Running dot for graph 372/1169
+Running dot for graph 373/1169
+Running dot for graph 374/1169
+Running dot for graph 375/1169
+Running dot for graph 376/1169
+Running dot for graph 377/1169
+Running dot for graph 378/1169
+Running dot for graph 379/1169
+Running dot for graph 380/1169
+Running dot for graph 381/1169
+Running dot for graph 382/1169
+Running dot for graph 383/1169
+Running dot for graph 384/1169
+Running dot for graph 385/1169
+Running dot for graph 386/1169
+Running dot for graph 387/1169
+Running dot for graph 388/1169
+Running dot for graph 389/1169
+Running dot for graph 390/1169
+Running dot for graph 391/1169
+Running dot for graph 392/1169
+Running dot for graph 393/1169
+Running dot for graph 394/1169
+Running dot for graph 395/1169
+Running dot for graph 396/1169
+Running dot for graph 397/1169
+Running dot for graph 398/1169
+Running dot for graph 399/1169
+Running dot for graph 400/1169
+Running dot for graph 401/1169
+Running dot for graph 402/1169
+Running dot for graph 403/1169
+Running dot for graph 404/1169
+Running dot for graph 405/1169
+Running dot for graph 406/1169
+Running dot for graph 407/1169
+Running dot for graph 408/1169
+Running dot for graph 409/1169
+Running dot for graph 410/1169
+Running dot for graph 411/1169
+Running dot for graph 412/1169
+Running dot for graph 413/1169
+Running dot for graph 414/1169
+Running dot for graph 415/1169
+Running dot for graph 416/1169
+Running dot for graph 417/1169
+Running dot for graph 418/1169
+Running dot for graph 419/1169
+Running dot for graph 420/1169
+Running dot for graph 421/1169
+Running dot for graph 422/1169
+Running dot for graph 423/1169
+Running dot for graph 424/1169
+Running dot for graph 425/1169
+Running dot for graph 426/1169
+Running dot for graph 427/1169
+Running dot for graph 428/1169
+Running dot for graph 429/1169
+Running dot for graph 430/1169
+Running dot for graph 431/1169
+Running dot for graph 432/1169
+Running dot for graph 433/1169
+Running dot for graph 434/1169
+Running dot for graph 435/1169
+Running dot for graph 436/1169
+Running dot for graph 437/1169
+Running dot for graph 438/1169
+Running dot for graph 439/1169
+Running dot for graph 440/1169
+Running dot for graph 441/1169
+Running dot for graph 442/1169
+Running dot for graph 443/1169
+Running dot for graph 444/1169
+Running dot for graph 445/1169
+Running dot for graph 446/1169
+Running dot for graph 447/1169
+Running dot for graph 448/1169
+Running dot for graph 449/1169
+Running dot for graph 450/1169
+Running dot for graph 451/1169
+Running dot for graph 452/1169
+Running dot for graph 453/1169
+Running dot for graph 454/1169
+Running dot for graph 455/1169
+Running dot for graph 456/1169
+Running dot for graph 457/1169
+Running dot for graph 458/1169
+Running dot for graph 459/1169
+Running dot for graph 460/1169
+Running dot for graph 461/1169
+Running dot for graph 462/1169
+Running dot for graph 463/1169
+Running dot for graph 464/1169
+Running dot for graph 465/1169
+Running dot for graph 466/1169
+Running dot for graph 467/1169
+Running dot for graph 468/1169
+Running dot for graph 469/1169
+Running dot for graph 470/1169
+Running dot for graph 471/1169
+Running dot for graph 472/1169
+Running dot for graph 473/1169
+Running dot for graph 474/1169
+Running dot for graph 475/1169
+Running dot for graph 476/1169
+Running dot for graph 477/1169
+Running dot for graph 478/1169
+Running dot for graph 479/1169
+Running dot for graph 480/1169
+Running dot for graph 481/1169
+Running dot for graph 482/1169
+Running dot for graph 483/1169
+Running dot for graph 484/1169
+Running dot for graph 485/1169
+Running dot for graph 486/1169
+Running dot for graph 487/1169
+Running dot for graph 488/1169
+Running dot for graph 489/1169
+Running dot for graph 490/1169
+Running dot for graph 491/1169
+Running dot for graph 492/1169
+Running dot for graph 493/1169
+Running dot for graph 494/1169
+Running dot for graph 495/1169
+Running dot for graph 496/1169
+Running dot for graph 497/1169
+Running dot for graph 498/1169
+Running dot for graph 499/1169
+Running dot for graph 500/1169
+Running dot for graph 501/1169
+Running dot for graph 502/1169
+Running dot for graph 503/1169
+Running dot for graph 504/1169
+Running dot for graph 505/1169
+Running dot for graph 506/1169
+Running dot for graph 507/1169
+Running dot for graph 508/1169
+Running dot for graph 509/1169
+Running dot for graph 510/1169
+Running dot for graph 511/1169
+Running dot for graph 512/1169
+Running dot for graph 513/1169
+Running dot for graph 514/1169
+Running dot for graph 515/1169
+Running dot for graph 516/1169
+Running dot for graph 517/1169
+Running dot for graph 518/1169
+Running dot for graph 519/1169
+Running dot for graph 520/1169
+Running dot for graph 521/1169
+Running dot for graph 522/1169
+Running dot for graph 523/1169
+Running dot for graph 524/1169
+Running dot for graph 525/1169
+Running dot for graph 526/1169
+Running dot for graph 527/1169
+Running dot for graph 528/1169
+Running dot for graph 529/1169
+Running dot for graph 530/1169
+Running dot for graph 531/1169
+Running dot for graph 532/1169
+Running dot for graph 533/1169
+Running dot for graph 534/1169
+Running dot for graph 535/1169
+Running dot for graph 536/1169
+Running dot for graph 537/1169
+Running dot for graph 538/1169
+Running dot for graph 539/1169
+Running dot for graph 540/1169
+Running dot for graph 541/1169
+Running dot for graph 542/1169
+Running dot for graph 543/1169
+Running dot for graph 544/1169
+Running dot for graph 545/1169
+Running dot for graph 546/1169
+Running dot for graph 547/1169
+Running dot for graph 548/1169
+Running dot for graph 549/1169
+Running dot for graph 550/1169
+Running dot for graph 551/1169
+Running dot for graph 552/1169
+Running dot for graph 553/1169
+Running dot for graph 554/1169
+Running dot for graph 555/1169
+Running dot for graph 556/1169
+Running dot for graph 557/1169
+Running dot for graph 558/1169
+Running dot for graph 559/1169
+Running dot for graph 560/1169
+Running dot for graph 561/1169
+Running dot for graph 562/1169
+Running dot for graph 563/1169
+Running dot for graph 564/1169
+Running dot for graph 565/1169
+Running dot for graph 566/1169
+Running dot for graph 567/1169
+Running dot for graph 568/1169
+Running dot for graph 569/1169
+Running dot for graph 570/1169
+Running dot for graph 571/1169
+Running dot for graph 572/1169
+Running dot for graph 573/1169
+Running dot for graph 574/1169
+Running dot for graph 575/1169
+Running dot for graph 576/1169
+Running dot for graph 577/1169
+Running dot for graph 578/1169
+Running dot for graph 579/1169
+Running dot for graph 580/1169
+Running dot for graph 581/1169
+Running dot for graph 582/1169
+Running dot for graph 583/1169
+Running dot for graph 584/1169
+Running dot for graph 585/1169
+Running dot for graph 586/1169
+Running dot for graph 587/1169
+Running dot for graph 588/1169
+Running dot for graph 589/1169
+Running dot for graph 590/1169
+Running dot for graph 591/1169
+Running dot for graph 592/1169
+Running dot for graph 593/1169
+Running dot for graph 594/1169
+Running dot for graph 595/1169
+Running dot for graph 596/1169
+Running dot for graph 597/1169
+Running dot for graph 598/1169
+Running dot for graph 599/1169
+Running dot for graph 600/1169
+Running dot for graph 601/1169
+Running dot for graph 602/1169
+Running dot for graph 603/1169
+Running dot for graph 604/1169
+Running dot for graph 605/1169
+Running dot for graph 606/1169
+Running dot for graph 607/1169
+Running dot for graph 608/1169
+Running dot for graph 609/1169
+Running dot for graph 610/1169
+Running dot for graph 611/1169
+Running dot for graph 612/1169
+Running dot for graph 613/1169
+Running dot for graph 614/1169
+Running dot for graph 615/1169
+Running dot for graph 616/1169
+Running dot for graph 617/1169
+Running dot for graph 618/1169
+Running dot for graph 619/1169
+Running dot for graph 620/1169
+Running dot for graph 621/1169
+Running dot for graph 622/1169
+Running dot for graph 623/1169
+Running dot for graph 624/1169
+Running dot for graph 625/1169
+Running dot for graph 626/1169
+Running dot for graph 627/1169
+Running dot for graph 628/1169
+Running dot for graph 629/1169
+Running dot for graph 630/1169
+Running dot for graph 631/1169
+Running dot for graph 632/1169
+Running dot for graph 633/1169
+Running dot for graph 634/1169
+Running dot for graph 635/1169
+Running dot for graph 636/1169
+Running dot for graph 637/1169
+Running dot for graph 638/1169
+Running dot for graph 639/1169
+Running dot for graph 640/1169
+Running dot for graph 641/1169
+Running dot for graph 642/1169
+Running dot for graph 643/1169
+Running dot for graph 644/1169
+Running dot for graph 645/1169
+Running dot for graph 646/1169
+Running dot for graph 647/1169
+Running dot for graph 648/1169
+Running dot for graph 649/1169
+Running dot for graph 650/1169
+Running dot for graph 651/1169
+Running dot for graph 652/1169
+Running dot for graph 653/1169
+Running dot for graph 654/1169
+Running dot for graph 655/1169
+Running dot for graph 656/1169
+Running dot for graph 657/1169
+Running dot for graph 658/1169
+Running dot for graph 659/1169
+Running dot for graph 660/1169
+Running dot for graph 661/1169
+Running dot for graph 662/1169
+Running dot for graph 663/1169
+Running dot for graph 664/1169
+Running dot for graph 665/1169
+Running dot for graph 666/1169
+Running dot for graph 667/1169
+Running dot for graph 668/1169
+Running dot for graph 669/1169
+Running dot for graph 670/1169
+Running dot for graph 671/1169
+Running dot for graph 672/1169
+Running dot for graph 673/1169
+Running dot for graph 674/1169
+Running dot for graph 675/1169
+Running dot for graph 676/1169
+Running dot for graph 677/1169
+Running dot for graph 678/1169
+Running dot for graph 679/1169
+Running dot for graph 680/1169
+Running dot for graph 681/1169
+Running dot for graph 682/1169
+Running dot for graph 683/1169
+Running dot for graph 684/1169
+Running dot for graph 685/1169
+Running dot for graph 686/1169
+Running dot for graph 687/1169
+Running dot for graph 688/1169
+Running dot for graph 689/1169
+Running dot for graph 690/1169
+Running dot for graph 691/1169
+Running dot for graph 692/1169
+Running dot for graph 693/1169
+Running dot for graph 694/1169
+Running dot for graph 695/1169
+Running dot for graph 696/1169
+Running dot for graph 697/1169
+Running dot for graph 698/1169
+Running dot for graph 699/1169
+Running dot for graph 700/1169
+Running dot for graph 701/1169
+Running dot for graph 702/1169
+Running dot for graph 703/1169
+Running dot for graph 704/1169
+Running dot for graph 705/1169
+Running dot for graph 706/1169
+Running dot for graph 707/1169
+Running dot for graph 708/1169
+Running dot for graph 709/1169
+Running dot for graph 710/1169
+Running dot for graph 711/1169
+Running dot for graph 712/1169
+Running dot for graph 713/1169
+Running dot for graph 714/1169
+Running dot for graph 715/1169
+Running dot for graph 716/1169
+Running dot for graph 717/1169
+Running dot for graph 718/1169
+Running dot for graph 719/1169
+Running dot for graph 720/1169
+Running dot for graph 721/1169
+Running dot for graph 722/1169
+Running dot for graph 723/1169
+Running dot for graph 724/1169
+Running dot for graph 725/1169
+Running dot for graph 726/1169
+Running dot for graph 727/1169
+Running dot for graph 728/1169
+Running dot for graph 729/1169
+Running dot for graph 730/1169
+Running dot for graph 731/1169
+Running dot for graph 732/1169
+Running dot for graph 733/1169
+Running dot for graph 734/1169
+Running dot for graph 735/1169
+Running dot for graph 736/1169
+Running dot for graph 737/1169
+Running dot for graph 738/1169
+Running dot for graph 739/1169
+Running dot for graph 740/1169
+Running dot for graph 741/1169
+Running dot for graph 742/1169
+Running dot for graph 743/1169
+Running dot for graph 744/1169
+Running dot for graph 745/1169
+Running dot for graph 746/1169
+Running dot for graph 747/1169
+Running dot for graph 748/1169
+Running dot for graph 749/1169
+Running dot for graph 750/1169
+Running dot for graph 751/1169
+Running dot for graph 752/1169
+Running dot for graph 753/1169
+Running dot for graph 754/1169
+Running dot for graph 755/1169
+Running dot for graph 756/1169
+Running dot for graph 757/1169
+Running dot for graph 758/1169
+Running dot for graph 759/1169
+Running dot for graph 760/1169
+Running dot for graph 761/1169
+Running dot for graph 762/1169
+Running dot for graph 763/1169
+Running dot for graph 764/1169
+Running dot for graph 765/1169
+Running dot for graph 766/1169
+Running dot for graph 767/1169
+Running dot for graph 768/1169
+Running dot for graph 769/1169
+Running dot for graph 770/1169
+Running dot for graph 771/1169
+Running dot for graph 772/1169
+Running dot for graph 773/1169
+Running dot for graph 774/1169
+Running dot for graph 775/1169
+Running dot for graph 776/1169
+Running dot for graph 777/1169
+Running dot for graph 778/1169
+Running dot for graph 779/1169
+Running dot for graph 780/1169
+Running dot for graph 781/1169
+Running dot for graph 782/1169
+Running dot for graph 783/1169
+Running dot for graph 784/1169
+Running dot for graph 785/1169
+Running dot for graph 786/1169
+Running dot for graph 787/1169
+Running dot for graph 788/1169
+Running dot for graph 789/1169
+Running dot for graph 790/1169
+Running dot for graph 791/1169
+Running dot for graph 792/1169
+Running dot for graph 793/1169
+Running dot for graph 794/1169
+Running dot for graph 795/1169
+Running dot for graph 796/1169
+Running dot for graph 797/1169
+Running dot for graph 798/1169
+Running dot for graph 799/1169
+Running dot for graph 800/1169
+Running dot for graph 801/1169
+Running dot for graph 802/1169
+Running dot for graph 803/1169
+Running dot for graph 804/1169
+Running dot for graph 805/1169
+Running dot for graph 806/1169
+Running dot for graph 807/1169
+Running dot for graph 808/1169
+Running dot for graph 809/1169
+Running dot for graph 810/1169
+Running dot for graph 811/1169
+Running dot for graph 812/1169
+Running dot for graph 813/1169
+Running dot for graph 814/1169
+Running dot for graph 815/1169
+Running dot for graph 816/1169
+Running dot for graph 817/1169
+Running dot for graph 818/1169
+Running dot for graph 819/1169
+Running dot for graph 820/1169
+Running dot for graph 821/1169
+Running dot for graph 822/1169
+Running dot for graph 823/1169
+Running dot for graph 824/1169
+Running dot for graph 825/1169
+Running dot for graph 826/1169
+Running dot for graph 827/1169
+Running dot for graph 828/1169
+Running dot for graph 829/1169
+Running dot for graph 830/1169
+Running dot for graph 831/1169
+Running dot for graph 832/1169
+Running dot for graph 833/1169
+Running dot for graph 834/1169
+Running dot for graph 835/1169
+Running dot for graph 836/1169
+Running dot for graph 837/1169
+Running dot for graph 838/1169
+Running dot for graph 839/1169
+Running dot for graph 840/1169
+Running dot for graph 841/1169
+Running dot for graph 842/1169
+Running dot for graph 843/1169
+Running dot for graph 844/1169
+Running dot for graph 845/1169
+Running dot for graph 846/1169
+Running dot for graph 847/1169
+Running dot for graph 848/1169
+Running dot for graph 849/1169
+Running dot for graph 850/1169
+Running dot for graph 851/1169
+Running dot for graph 852/1169
+Running dot for graph 853/1169
+Running dot for graph 854/1169
+Running dot for graph 855/1169
+Running dot for graph 856/1169
+Running dot for graph 857/1169
+Running dot for graph 858/1169
+Running dot for graph 859/1169
+Running dot for graph 860/1169
+Running dot for graph 861/1169
+Running dot for graph 862/1169
+Running dot for graph 863/1169
+Running dot for graph 864/1169
+Running dot for graph 865/1169
+Running dot for graph 866/1169
+Running dot for graph 867/1169
+Running dot for graph 868/1169
+Running dot for graph 869/1169
+Running dot for graph 870/1169
+Running dot for graph 871/1169
+Running dot for graph 872/1169
+Running dot for graph 873/1169
+Running dot for graph 874/1169
+Running dot for graph 875/1169
+Running dot for graph 876/1169
+Running dot for graph 877/1169
+Running dot for graph 878/1169
+Running dot for graph 879/1169
+Running dot for graph 880/1169
+Running dot for graph 881/1169
+Running dot for graph 882/1169
+Running dot for graph 883/1169
+Running dot for graph 884/1169
+Running dot for graph 885/1169
+Running dot for graph 886/1169
+Running dot for graph 887/1169
+Running dot for graph 888/1169
+Running dot for graph 889/1169
+Running dot for graph 890/1169
+Running dot for graph 891/1169
+Running dot for graph 892/1169
+Running dot for graph 893/1169
+Running dot for graph 894/1169
+Running dot for graph 895/1169
+Running dot for graph 896/1169
+Running dot for graph 897/1169
+Running dot for graph 898/1169
+Running dot for graph 899/1169
+Running dot for graph 900/1169
+Running dot for graph 901/1169
+Running dot for graph 902/1169
+Running dot for graph 903/1169
+Running dot for graph 904/1169
+Running dot for graph 905/1169
+Running dot for graph 906/1169
+Running dot for graph 907/1169
+Running dot for graph 908/1169
+Running dot for graph 909/1169
+Running dot for graph 910/1169
+Running dot for graph 911/1169
+Running dot for graph 912/1169
+Running dot for graph 913/1169
+Running dot for graph 914/1169
+Running dot for graph 915/1169
+Running dot for graph 916/1169
+Running dot for graph 917/1169
+Running dot for graph 918/1169
+Running dot for graph 919/1169
+Running dot for graph 920/1169
+Running dot for graph 921/1169
+Running dot for graph 922/1169
+Running dot for graph 923/1169
+Running dot for graph 924/1169
+Running dot for graph 925/1169
+Running dot for graph 926/1169
+Running dot for graph 927/1169
+Running dot for graph 928/1169
+Running dot for graph 929/1169
+Running dot for graph 930/1169
+Running dot for graph 931/1169
+Running dot for graph 932/1169
+Running dot for graph 933/1169
+Running dot for graph 934/1169
+Running dot for graph 935/1169
+Running dot for graph 936/1169
+Running dot for graph 937/1169
+Running dot for graph 938/1169
+Running dot for graph 939/1169
+Running dot for graph 940/1169
+Running dot for graph 941/1169
+Running dot for graph 942/1169
+Running dot for graph 943/1169
+Running dot for graph 944/1169
+Running dot for graph 945/1169
+Running dot for graph 946/1169
+Running dot for graph 947/1169
+Running dot for graph 948/1169
+Running dot for graph 949/1169
+Running dot for graph 950/1169
+Running dot for graph 951/1169
+Running dot for graph 952/1169
+Running dot for graph 953/1169
+Running dot for graph 954/1169
+Running dot for graph 955/1169
+Running dot for graph 956/1169
+Running dot for graph 957/1169
+Running dot for graph 958/1169
+Running dot for graph 959/1169
+Running dot for graph 960/1169
+Running dot for graph 961/1169
+Running dot for graph 962/1169
+Running dot for graph 963/1169
+Running dot for graph 964/1169
+Running dot for graph 965/1169
+Running dot for graph 966/1169
+Running dot for graph 967/1169
+Running dot for graph 968/1169
+Running dot for graph 969/1169
+Running dot for graph 970/1169
+Running dot for graph 971/1169
+Running dot for graph 972/1169
+Running dot for graph 973/1169
+Running dot for graph 974/1169
+Running dot for graph 975/1169
+Running dot for graph 976/1169
+Running dot for graph 977/1169
+Running dot for graph 978/1169
+Running dot for graph 979/1169
+Running dot for graph 980/1169
+Running dot for graph 981/1169
+Running dot for graph 982/1169
+Running dot for graph 983/1169
+Running dot for graph 984/1169
+Running dot for graph 985/1169
+Running dot for graph 986/1169
+Running dot for graph 987/1169
+Running dot for graph 988/1169
+Running dot for graph 989/1169
+Running dot for graph 990/1169
+Running dot for graph 991/1169
+Running dot for graph 992/1169
+Running dot for graph 993/1169
+Running dot for graph 994/1169
+Running dot for graph 995/1169
+Running dot for graph 996/1169
+Running dot for graph 997/1169
+Running dot for graph 998/1169
+Running dot for graph 999/1169
+Running dot for graph 1000/1169
+Running dot for graph 1001/1169
+Running dot for graph 1002/1169
+Running dot for graph 1003/1169
+Running dot for graph 1004/1169
+Running dot for graph 1005/1169
+Running dot for graph 1006/1169
+Running dot for graph 1007/1169
+Running dot for graph 1008/1169
+Running dot for graph 1009/1169
+Running dot for graph 1010/1169
+Running dot for graph 1011/1169
+Running dot for graph 1012/1169
+Running dot for graph 1013/1169
+Running dot for graph 1014/1169
+Running dot for graph 1015/1169
+Running dot for graph 1016/1169
+Running dot for graph 1017/1169
+Running dot for graph 1018/1169
+Running dot for graph 1019/1169
+Running dot for graph 1020/1169
+Running dot for graph 1021/1169
+Running dot for graph 1022/1169
+Running dot for graph 1023/1169
+Running dot for graph 1024/1169
+Running dot for graph 1025/1169
+Running dot for graph 1026/1169
+Running dot for graph 1027/1169
+Running dot for graph 1028/1169
+Running dot for graph 1029/1169
+Running dot for graph 1030/1169
+Running dot for graph 1031/1169
+Running dot for graph 1032/1169
+Running dot for graph 1033/1169
+Running dot for graph 1034/1169
+Running dot for graph 1035/1169
+Running dot for graph 1036/1169
+Running dot for graph 1037/1169
+Running dot for graph 1038/1169
+Running dot for graph 1039/1169
+Running dot for graph 1040/1169
+Running dot for graph 1041/1169
+Running dot for graph 1042/1169
+Running dot for graph 1043/1169
+Running dot for graph 1044/1169
+Running dot for graph 1045/1169
+Running dot for graph 1046/1169
+Running dot for graph 1047/1169
+Running dot for graph 1048/1169
+Running dot for graph 1049/1169
+Running dot for graph 1050/1169
+Running dot for graph 1051/1169
+Running dot for graph 1052/1169
+Running dot for graph 1053/1169
+Running dot for graph 1054/1169
+Running dot for graph 1055/1169
+Running dot for graph 1056/1169
+Running dot for graph 1057/1169
+Running dot for graph 1058/1169
+Running dot for graph 1059/1169
+Running dot for graph 1060/1169
+Running dot for graph 1061/1169
+Running dot for graph 1062/1169
+Running dot for graph 1063/1169
+Running dot for graph 1064/1169
+Running dot for graph 1065/1169
+Running dot for graph 1066/1169
+Running dot for graph 1067/1169
+Running dot for graph 1068/1169
+Running dot for graph 1069/1169
+Running dot for graph 1070/1169
+Running dot for graph 1071/1169
+Running dot for graph 1072/1169
+Running dot for graph 1073/1169
+Running dot for graph 1074/1169
+Running dot for graph 1075/1169
+Running dot for graph 1076/1169
+Running dot for graph 1077/1169
+Running dot for graph 1078/1169
+Running dot for graph 1079/1169
+Running dot for graph 1080/1169
+Running dot for graph 1081/1169
+Running dot for graph 1082/1169
+Running dot for graph 1083/1169
+Running dot for graph 1084/1169
+Running dot for graph 1085/1169
+Running dot for graph 1086/1169
+Running dot for graph 1087/1169
+Running dot for graph 1088/1169
+Running dot for graph 1089/1169
+Running dot for graph 1090/1169
+Running dot for graph 1091/1169
+Running dot for graph 1092/1169
+Running dot for graph 1093/1169
+Running dot for graph 1094/1169
+Running dot for graph 1095/1169
+Running dot for graph 1096/1169
+Running dot for graph 1097/1169
+Running dot for graph 1098/1169
+Running dot for graph 1099/1169
+Running dot for graph 1100/1169
+Running dot for graph 1101/1169
+Running dot for graph 1102/1169
+Running dot for graph 1103/1169
+Running dot for graph 1104/1169
+Running dot for graph 1105/1169
+Running dot for graph 1106/1169
+Running dot for graph 1107/1169
+Running dot for graph 1108/1169
+Running dot for graph 1109/1169
+Running dot for graph 1110/1169
+Running dot for graph 1111/1169
+Running dot for graph 1112/1169
+Running dot for graph 1113/1169
+Running dot for graph 1114/1169
+Running dot for graph 1115/1169
+Running dot for graph 1116/1169
+Running dot for graph 1117/1169
+Running dot for graph 1118/1169
+Running dot for graph 1119/1169
+Running dot for graph 1120/1169
+Running dot for graph 1121/1169
+Running dot for graph 1122/1169
+Running dot for graph 1123/1169
+Running dot for graph 1124/1169
+Running dot for graph 1125/1169
+Running dot for graph 1126/1169
+Running dot for graph 1127/1169
+Running dot for graph 1128/1169
+Running dot for graph 1129/1169
+Running dot for graph 1130/1169
+Running dot for graph 1131/1169
+Running dot for graph 1132/1169
+Running dot for graph 1133/1169
+Running dot for graph 1134/1169
+Running dot for graph 1135/1169
+Running dot for graph 1136/1169
+Running dot for graph 1137/1169
+Running dot for graph 1138/1169
+Running dot for graph 1139/1169
+Running dot for graph 1140/1169
+Running dot for graph 1141/1169
+Running dot for graph 1142/1169
+Running dot for graph 1143/1169
+Running dot for graph 1144/1169
+Running dot for graph 1145/1169
+Running dot for graph 1146/1169
+Running dot for graph 1147/1169
+Running dot for graph 1148/1169
+Running dot for graph 1149/1169
+Running dot for graph 1150/1169
+Running dot for graph 1151/1169
+Running dot for graph 1152/1169
+Running dot for graph 1153/1169
+Running dot for graph 1154/1169
+Running dot for graph 1155/1169
+Running dot for graph 1156/1169
+Running dot for graph 1157/1169
+Running dot for graph 1158/1169
+Running dot for graph 1159/1169
+Running dot for graph 1160/1169
+Running dot for graph 1161/1169
+Running dot for graph 1162/1169
+Running dot for graph 1163/1169
+Running dot for graph 1164/1169
+Running dot for graph 1165/1169
+Running dot for graph 1166/1169
+Running dot for graph 1167/1169
+Running dot for graph 1168/1169
+Running dot for graph 1169/1169
+Patching output file 1/515
+Patching output file 2/515
+Patching output file 3/515
+Patching output file 4/515
+Patching output file 5/515
+Patching output file 6/515
+Patching output file 7/515
+Patching output file 8/515
+Patching output file 9/515
+Patching output file 10/515
+Patching output file 11/515
+Patching output file 12/515
+Patching output file 13/515
+Patching output file 14/515
+Patching output file 15/515
+Patching output file 16/515
+Patching output file 17/515
+Patching output file 18/515
+Patching output file 19/515
+Patching output file 20/515
+Patching output file 21/515
+Patching output file 22/515
+Patching output file 23/515
+Patching output file 24/515
+Patching output file 25/515
+Patching output file 26/515
+Patching output file 27/515
+Patching output file 28/515
+Patching output file 29/515
+Patching output file 30/515
+Patching output file 31/515
+Patching output file 32/515
+Patching output file 33/515
+Patching output file 34/515
+Patching output file 35/515
+Patching output file 36/515
+Patching output file 37/515
+Patching output file 38/515
+Patching output file 39/515
+Patching output file 40/515
+Patching output file 41/515
+Patching output file 42/515
+Patching output file 43/515
+Patching output file 44/515
+Patching output file 45/515
+Patching output file 46/515
+Patching output file 47/515
+Patching output file 48/515
+Patching output file 49/515
+Patching output file 50/515
+Patching output file 51/515
+Patching output file 52/515
+Patching output file 53/515
+Patching output file 54/515
+Patching output file 55/515
+Patching output file 56/515
+Patching output file 57/515
+Patching output file 58/515
+Patching output file 59/515
+Patching output file 60/515
+Patching output file 61/515
+Patching output file 62/515
+Patching output file 63/515
+Patching output file 64/515
+Patching output file 65/515
+Patching output file 66/515
+Patching output file 67/515
+Patching output file 68/515
+Patching output file 69/515
+Patching output file 70/515
+Patching output file 71/515
+Patching output file 72/515
+Patching output file 73/515
+Patching output file 74/515
+Patching output file 75/515
+Patching output file 76/515
+Patching output file 77/515
+Patching output file 78/515
+Patching output file 79/515
+Patching output file 80/515
+Patching output file 81/515
+Patching output file 82/515
+Patching output file 83/515
+Patching output file 84/515
+Patching output file 85/515
+Patching output file 86/515
+Patching output file 87/515
+Patching output file 88/515
+Patching output file 89/515
+Patching output file 90/515
+Patching output file 91/515
+Patching output file 92/515
+Patching output file 93/515
+Patching output file 94/515
+Patching output file 95/515
+Patching output file 96/515
+Patching output file 97/515
+Patching output file 98/515
+Patching output file 99/515
+Patching output file 100/515
+Patching output file 101/515
+Patching output file 102/515
+Patching output file 103/515
+Patching output file 104/515
+Patching output file 105/515
+Patching output file 106/515
+Patching output file 107/515
+Patching output file 108/515
+Patching output file 109/515
+Patching output file 110/515
+Patching output file 111/515
+Patching output file 112/515
+Patching output file 113/515
+Patching output file 114/515
+Patching output file 115/515
+Patching output file 116/515
+Patching output file 117/515
+Patching output file 118/515
+Patching output file 119/515
+Patching output file 120/515
+Patching output file 121/515
+Patching output file 122/515
+Patching output file 123/515
+Patching output file 124/515
+Patching output file 125/515
+Patching output file 126/515
+Patching output file 127/515
+Patching output file 128/515
+Patching output file 129/515
+Patching output file 130/515
+Patching output file 131/515
+Patching output file 132/515
+Patching output file 133/515
+Patching output file 134/515
+Patching output file 135/515
+Patching output file 136/515
+Patching output file 137/515
+Patching output file 138/515
+Patching output file 139/515
+Patching output file 140/515
+Patching output file 141/515
+Patching output file 142/515
+Patching output file 143/515
+Patching output file 144/515
+Patching output file 145/515
+Patching output file 146/515
+Patching output file 147/515
+Patching output file 148/515
+Patching output file 149/515
+Patching output file 150/515
+Patching output file 151/515
+Patching output file 152/515
+Patching output file 153/515
+Patching output file 154/515
+Patching output file 155/515
+Patching output file 156/515
+Patching output file 157/515
+Patching output file 158/515
+Patching output file 159/515
+Patching output file 160/515
+Patching output file 161/515
+Patching output file 162/515
+Patching output file 163/515
+Patching output file 164/515
+Patching output file 165/515
+Patching output file 166/515
+Patching output file 167/515
+Patching output file 168/515
+Patching output file 169/515
+Patching output file 170/515
+Patching output file 171/515
+Patching output file 172/515
+Patching output file 173/515
+Patching output file 174/515
+Patching output file 175/515
+Patching output file 176/515
+Patching output file 177/515
+Patching output file 178/515
+Patching output file 179/515
+Patching output file 180/515
+Patching output file 181/515
+Patching output file 182/515
+Patching output file 183/515
+Patching output file 184/515
+Patching output file 185/515
+Patching output file 186/515
+Patching output file 187/515
+Patching output file 188/515
+Patching output file 189/515
+Patching output file 190/515
+Patching output file 191/515
+Patching output file 192/515
+Patching output file 193/515
+Patching output file 194/515
+Patching output file 195/515
+Patching output file 196/515
+Patching output file 197/515
+Patching output file 198/515
+Patching output file 199/515
+Patching output file 200/515
+Patching output file 201/515
+Patching output file 202/515
+Patching output file 203/515
+Patching output file 204/515
+Patching output file 205/515
+Patching output file 206/515
+Patching output file 207/515
+Patching output file 208/515
+Patching output file 209/515
+Patching output file 210/515
+Patching output file 211/515
+Patching output file 212/515
+Patching output file 213/515
+Patching output file 214/515
+Patching output file 215/515
+Patching output file 216/515
+Patching output file 217/515
+Patching output file 218/515
+Patching output file 219/515
+Patching output file 220/515
+Patching output file 221/515
+Patching output file 222/515
+Patching output file 223/515
+Patching output file 224/515
+Patching output file 225/515
+Patching output file 226/515
+Patching output file 227/515
+Patching output file 228/515
+Patching output file 229/515
+Patching output file 230/515
+Patching output file 231/515
+Patching output file 232/515
+Patching output file 233/515
+Patching output file 234/515
+Patching output file 235/515
+Patching output file 236/515
+Patching output file 237/515
+Patching output file 238/515
+Patching output file 239/515
+Patching output file 240/515
+Patching output file 241/515
+Patching output file 242/515
+Patching output file 243/515
+Patching output file 244/515
+Patching output file 245/515
+Patching output file 246/515
+Patching output file 247/515
+Patching output file 248/515
+Patching output file 249/515
+Patching output file 250/515
+Patching output file 251/515
+Patching output file 252/515
+Patching output file 253/515
+Patching output file 254/515
+Patching output file 255/515
+Patching output file 256/515
+Patching output file 257/515
+Patching output file 258/515
+Patching output file 259/515
+Patching output file 260/515
+Patching output file 261/515
+Patching output file 262/515
+Patching output file 263/515
+Patching output file 264/515
+Patching output file 265/515
+Patching output file 266/515
+Patching output file 267/515
+Patching output file 268/515
+Patching output file 269/515
+Patching output file 270/515
+Patching output file 271/515
+Patching output file 272/515
+Patching output file 273/515
+Patching output file 274/515
+Patching output file 275/515
+Patching output file 276/515
+Patching output file 277/515
+Patching output file 278/515
+Patching output file 279/515
+Patching output file 280/515
+Patching output file 281/515
+Patching output file 282/515
+Patching output file 283/515
+Patching output file 284/515
+Patching output file 285/515
+Patching output file 286/515
+Patching output file 287/515
+Patching output file 288/515
+Patching output file 289/515
+Patching output file 290/515
+Patching output file 291/515
+Patching output file 292/515
+Patching output file 293/515
+Patching output file 294/515
+Patching output file 295/515
+Patching output file 296/515
+Patching output file 297/515
+Patching output file 298/515
+Patching output file 299/515
+Patching output file 300/515
+Patching output file 301/515
+Patching output file 302/515
+Patching output file 303/515
+Patching output file 304/515
+Patching output file 305/515
+Patching output file 306/515
+Patching output file 307/515
+Patching output file 308/515
+Patching output file 309/515
+Patching output file 310/515
+Patching output file 311/515
+Patching output file 312/515
+Patching output file 313/515
+Patching output file 314/515
+Patching output file 315/515
+Patching output file 316/515
+Patching output file 317/515
+Patching output file 318/515
+Patching output file 319/515
+Patching output file 320/515
+Patching output file 321/515
+Patching output file 322/515
+Patching output file 323/515
+Patching output file 324/515
+Patching output file 325/515
+Patching output file 326/515
+Patching output file 327/515
+Patching output file 328/515
+Patching output file 329/515
+Patching output file 330/515
+Patching output file 331/515
+Patching output file 332/515
+Patching output file 333/515
+Patching output file 334/515
+Patching output file 335/515
+Patching output file 336/515
+Patching output file 337/515
+Patching output file 338/515
+Patching output file 339/515
+Patching output file 340/515
+Patching output file 341/515
+Patching output file 342/515
+Patching output file 343/515
+Patching output file 344/515
+Patching output file 345/515
+Patching output file 346/515
+Patching output file 347/515
+Patching output file 348/515
+Patching output file 349/515
+Patching output file 350/515
+Patching output file 351/515
+Patching output file 352/515
+Patching output file 353/515
+Patching output file 354/515
+Patching output file 355/515
+Patching output file 356/515
+Patching output file 357/515
+Patching output file 358/515
+Patching output file 359/515
+Patching output file 360/515
+Patching output file 361/515
+Patching output file 362/515
+Patching output file 363/515
+Patching output file 364/515
+Patching output file 365/515
+Patching output file 366/515
+Patching output file 367/515
+Patching output file 368/515
+Patching output file 369/515
+Patching output file 370/515
+Patching output file 371/515
+Patching output file 372/515
+Patching output file 373/515
+Patching output file 374/515
+Patching output file 375/515
+Patching output file 376/515
+Patching output file 377/515
+Patching output file 378/515
+Patching output file 379/515
+Patching output file 380/515
+Patching output file 381/515
+Patching output file 382/515
+Patching output file 383/515
+Patching output file 384/515
+Patching output file 385/515
+Patching output file 386/515
+Patching output file 387/515
+Patching output file 388/515
+Patching output file 389/515
+Patching output file 390/515
+Patching output file 391/515
+Patching output file 392/515
+Patching output file 393/515
+Patching output file 394/515
+Patching output file 395/515
+Patching output file 396/515
+Patching output file 397/515
+Patching output file 398/515
+Patching output file 399/515
+Patching output file 400/515
+Patching output file 401/515
+Patching output file 402/515
+Patching output file 403/515
+Patching output file 404/515
+Patching output file 405/515
+Patching output file 406/515
+Patching output file 407/515
+Patching output file 408/515
+Patching output file 409/515
+Patching output file 410/515
+Patching output file 411/515
+Patching output file 412/515
+Patching output file 413/515
+Patching output file 414/515
+Patching output file 415/515
+Patching output file 416/515
+Patching output file 417/515
+Patching output file 418/515
+Patching output file 419/515
+Patching output file 420/515
+Patching output file 421/515
+Patching output file 422/515
+Patching output file 423/515
+Patching output file 424/515
+Patching output file 425/515
+Patching output file 426/515
+Patching output file 427/515
+Patching output file 428/515
+Patching output file 429/515
+Patching output file 430/515
+Patching output file 431/515
+Patching output file 432/515
+Patching output file 433/515
+Patching output file 434/515
+Patching output file 435/515
+Patching output file 436/515
+Patching output file 437/515
+Patching output file 438/515
+Patching output file 439/515
+Patching output file 440/515
+Patching output file 441/515
+Patching output file 442/515
+Patching output file 443/515
+Patching output file 444/515
+Patching output file 445/515
+Patching output file 446/515
+Patching output file 447/515
+Patching output file 448/515
+Patching output file 449/515
+Patching output file 450/515
+Patching output file 451/515
+Patching output file 452/515
+Patching output file 453/515
+Patching output file 454/515
+Patching output file 455/515
+Patching output file 456/515
+Patching output file 457/515
+Patching output file 458/515
+Patching output file 459/515
+Patching output file 460/515
+Patching output file 461/515
+Patching output file 462/515
+Patching output file 463/515
+Patching output file 464/515
+Patching output file 465/515
+Patching output file 466/515
+Patching output file 467/515
+Patching output file 468/515
+Patching output file 469/515
+Patching output file 470/515
+Patching output file 471/515
+Patching output file 472/515
+Patching output file 473/515
+Patching output file 474/515
+Patching output file 475/515
+Patching output file 476/515
+Patching output file 477/515
+Patching output file 478/515
+Patching output file 479/515
+Patching output file 480/515
+Patching output file 481/515
+Patching output file 482/515
+Patching output file 483/515
+Patching output file 484/515
+Patching output file 485/515
+Patching output file 486/515
+Patching output file 487/515
+Patching output file 488/515
+Patching output file 489/515
+Patching output file 490/515
+Patching output file 491/515
+Patching output file 492/515
+Patching output file 493/515
+Patching output file 494/515
+Patching output file 495/515
+Patching output file 496/515
+Patching output file 497/515
+Patching output file 498/515
+Patching output file 499/515
+Patching output file 500/515
+Patching output file 501/515
+Patching output file 502/515
+Patching output file 503/515
+Patching output file 504/515
+Patching output file 505/515
+Patching output file 506/515
+Patching output file 507/515
+Patching output file 508/515
+Patching output file 509/515
+Patching output file 510/515
+Patching output file 511/515
+Patching output file 512/515
+Patching output file 513/515
+Patching output file 514/515
+Patching output file 515/515
+lookup cache used 2170/65536 hits=12113 misses=2257
 finished...

@@ -102,32 +102,38 @@ Inheritance diagram for HeatEvent:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_heat_event__inherit__graph.png" border="0" usemap="#_heat_event_inherit__map" alt="Inheritance graph"/></div>
 <map name="_heat_event_inherit__map" id="_heat_event_inherit__map">
-<area shape="rect" id="node2" href="class_i_event.html" title="{IEvent\n||+ IEvent()\l+ getNode()\l+ commit()\l}" alt="" coords="41,5,132,112"/></map>
+<area shape="rect" id="node2" href="class_i_event.html" title="{IEvent\n|# fromNode\l|+ IEvent()\l+ getNode()\l+ commit()\l}" alt="" coords="41,5,132,112"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for HeatEvent:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_heat_event__coll__graph.png" border="0" usemap="#_heat_event_coll__map" alt="Collaboration graph"/></div>
 <map name="_heat_event_coll__map" id="_heat_event_coll__map">
-<area shape="rect" id="node2" href="class_i_event.html" title="{IEvent\n||+ IEvent()\l+ getNode()\l+ commit()\l}" alt="" coords="41,5,132,112"/></map>
+<area shape="rect" id="node2" href="class_i_event.html" title="{IEvent\n||+ IEvent()\l+ getNode()\l+ commit()\l}" alt="" coords="41,440,132,547"/><area shape="rect" id="node3" href="class_spell_node.html" title="{SpellNode\n|# x\l# y\l# z\l# connectedNodes\l# nowInTick\l# type\l|+ SpellNode()\l+ ~SpellNode()\l+ isEnergyNode()\l+ connectNode()\l+ tick()\l+ inTick()\l+ getDistance()\l+ getType()\l+ iterrator()\l+ getConnectedNodes()\l+ getX()\l+ getY()\l+ getZ()\l+ write()\l+ read()\l# onTick()\l}" alt="" coords="6,5,167,376"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7015a08ccd75b135599dd40b755c5e68"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heat_event.html#a7015a08ccd75b135599dd40b755c5e68">HeatEvent</a> (<a class="el" href="class_spell_node.html">SpellNode</a> *node, float temp)</td></tr>
 <tr class="separator:a7015a08ccd75b135599dd40b755c5e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dcc28accc54844fc128daff999f2f22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heat_event.html#a9dcc28accc54844fc128daff999f2f22">commit</a> (<a class="el" href="class_box2_d_world.html">Box2DWorld</a> *world, <a class="el" href="class_spell_entity.html">SpellEntity</a> *entity, std::shared_ptr&lt; <a class="el" href="_server_8hpp.html#ac147588bd69e1d052194e0dea10202ff">TempWorld</a> &gt; tempWorld)</td></tr>
+<tr class="separator:a9dcc28accc54844fc128daff999f2f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_event"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_event')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_event.html">IEvent</a></td></tr>
 <tr class="memitem:a47970d711c08bc2e097daa4c93810445 inherit pub_methods_class_i_event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_event.html#a47970d711c08bc2e097daa4c93810445">IEvent</a> (<a class="el" href="class_spell_node.html">SpellNode</a> *node)</td></tr>
 <tr class="separator:a47970d711c08bc2e097daa4c93810445 inherit pub_methods_class_i_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedde6835702a67a72e833b67230c5c66 inherit pub_methods_class_i_event"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spell_node.html">SpellNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_event.html#aedde6835702a67a72e833b67230c5c66">getNode</a> () const </td></tr>
 <tr class="separator:aedde6835702a67a72e833b67230c5c66 inherit pub_methods_class_i_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a458dd99d3b32a1abe792ebebaf6a7002 inherit pub_methods_class_i_event"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_event.html#a458dd99d3b32a1abe792ebebaf6a7002">commit</a> ()</td></tr>
-<tr class="separator:a458dd99d3b32a1abe792ebebaf6a7002 inherit pub_methods_class_i_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:af2d9aa99e9b2a57d8e8778598ba1c8cc"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heat_event.html#af2d9aa99e9b2a57d8e8778598ba1c8cc">getTempFromEnergy</a> (float energyEjection)</td></tr>
 <tr class="separator:af2d9aa99e9b2a57d8e8778598ba1c8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_i_event"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_event')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_i_event.html">IEvent</a></td></tr>
+<tr class="memitem:a3bc076098af89f7da2364efeae372876 inherit pro_attribs_class_i_event"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spell_node.html">SpellNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_event.html#a3bc076098af89f7da2364efeae372876">fromNode</a></td></tr>
+<tr class="separator:a3bc076098af89f7da2364efeae372876 inherit pro_attribs_class_i_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7015a08ccd75b135599dd40b755c5e68"></a>
@@ -165,6 +171,57 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9dcc28accc54844fc128daff999f2f22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HeatEvent::commit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_box2_d_world.html">Box2DWorld</a> *&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_spell_entity.html">SpellEntity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="_server_8hpp.html#ac147588bd69e1d052194e0dea10202ff">TempWorld</a> &gt;&#160;</td>
+          <td class="paramname"><em>tempWorld</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_i_event.html#a5422b83a412e52b68c7885b53a421e0e">IEvent</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_heat_event_a9dcc28accc54844fc128daff999f2f22_cgraph.png" border="0" usemap="#class_heat_event_a9dcc28accc54844fc128daff999f2f22_cgraph" alt=""/></div>
+<map name="class_heat_event_a9dcc28accc54844fc128daff999f2f22_cgraph" id="class_heat_event_a9dcc28accc54844fc128daff999f2f22_cgraph">
+<area shape="rect" id="node2" href="class_config.html#aaff6aaabead6b7486ec122f9dda807fd" title="Config::g" alt="" coords="213,31,288,57"/><area shape="rect" id="node7" href="class_entity.html#a18e3fada062aba11a04c974d2294bb23" title="Entity::getFixture" alt="" coords="189,81,312,108"/><area shape="rect" id="node8" href="class_i_event.html#aedde6835702a67a72e833b67230c5c66" title="IEvent::getNode" alt="" coords="192,132,309,159"/><area shape="rect" id="node9" href="class_entity.html#aedbd9622f9be98c2d28bd664442fbef8" title="Entity::setType" alt="" coords="195,183,306,209"/><area shape="rect" id="node3" href="class_config.html#abf1d4539011ef83cac0fef2ac864a3a9" title="Config::instance" alt="" coords="360,5,477,32"/><area shape="rect" id="node5" href="class_config.html#a1f8e429f853f20cac7cf128f2b71543e" title="Config::get" alt="" coords="375,56,462,83"/><area shape="rect" id="node4" href="_config_8cpp.html#ab330b966aa1026a8014370d5732fae26" title="DEFAULT_CONFIG" alt="" coords="526,5,669,32"/><area shape="rect" id="node6" href="class_config.html#a006701bd126aa5809b3a15e75c63bfb6" title="Config::tree" alt="" coords="552,56,643,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="af2d9aa99e9b2a57d8e8778598ba1c8cc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -198,8 +255,9 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/bender-wardrobe/Recast/src/headers/spells/events/<a class="el" href="_heat_event_8hpp_source.html">HeatEvent.hpp</a></li>
+<li>/home/travis/build/bender-wardrobe/Recast/src/spell/events/<a class="el" href="_heat_event_8cpp.html">HeatEvent.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

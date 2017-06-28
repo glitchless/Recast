@@ -98,28 +98,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RECAST_SERVER_IEVENT_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;boost/log/trivial.hpp&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span><a class="code" href="class_spell_node.html">SpellNode</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_box2_d_world_8h.html">world/Box2DWorld.h</a>&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_server_8hpp.html">Server.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_i_event.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_event.html">IEvent</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_i_event.html#a47970d711c08bc2e097daa4c93810445">   17</a></span>&#160;    <a class="code" href="class_i_event.html#a47970d711c08bc2e097daa4c93810445">IEvent</a>(<a class="code" href="class_spell_node.html">SpellNode</a> *node) : fromNode(node) {}</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_i_event.html#aedde6835702a67a72e833b67230c5c66">   19</a></span>&#160;    <a class="code" href="class_spell_node.html">SpellNode</a> *<a class="code" href="class_i_event.html#aedde6835702a67a72e833b67230c5c66">getNode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> fromNode; }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_i_event.html#a458dd99d3b32a1abe792ebebaf6a7002">   21</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_event.html#a458dd99d3b32a1abe792ebebaf6a7002">commit</a>(<span class="comment">/*Temperature and Entity*/</span>) { BOOST_LOG_TRIVIAL(info) &lt;&lt; <span class="stringliteral">&quot;Calling event&quot;</span>; }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_spell_node.html">SpellNode</a> *fromNode;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_IEVENT_H</span></div>
-<div class="ttc" id="class_i_event_html_aedde6835702a67a72e833b67230c5c66"><div class="ttname"><a href="class_i_event.html#aedde6835702a67a72e833b67230c5c66">IEvent::getNode</a></div><div class="ttdeci">SpellNode * getNode() const </div><div class="ttdef"><b>Definition:</b> IEvent.hpp:19</div></div>
-<div class="ttc" id="class_i_event_html"><div class="ttname"><a href="class_i_event.html">IEvent</a></div><div class="ttdef"><b>Definition:</b> IEvent.hpp:15</div></div>
-<div class="ttc" id="class_i_event_html_a47970d711c08bc2e097daa4c93810445"><div class="ttname"><a href="class_i_event.html#a47970d711c08bc2e097daa4c93810445">IEvent::IEvent</a></div><div class="ttdeci">IEvent(SpellNode *node)</div><div class="ttdef"><b>Definition:</b> IEvent.hpp:17</div></div>
-<div class="ttc" id="class_spell_node_html"><div class="ttname"><a href="class_spell_node.html">SpellNode</a></div><div class="ttdef"><b>Definition:</b> SpellNode.hpp:14</div></div>
-<div class="ttc" id="class_i_event_html_a458dd99d3b32a1abe792ebebaf6a7002"><div class="ttname"><a href="class_i_event.html#a458dd99d3b32a1abe792ebebaf6a7002">IEvent::commit</a></div><div class="ttdeci">virtual void commit()</div><div class="ttdef"><b>Definition:</b> IEvent.hpp:21</div></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span><a class="code" href="class_spell_node.html">SpellNode</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="class_spell_entity.html">SpellEntity</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_i_event.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_event.html">IEvent</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_i_event.html#a47970d711c08bc2e097daa4c93810445">   20</a></span>&#160;    <a class="code" href="class_i_event.html#a47970d711c08bc2e097daa4c93810445">IEvent</a>(<a class="code" href="class_spell_node.html">SpellNode</a> *node) : <a class="code" href="class_i_event.html#a3bc076098af89f7da2364efeae372876">fromNode</a>(node) {}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_i_event.html#aedde6835702a67a72e833b67230c5c66">   22</a></span>&#160;    <a class="code" href="class_spell_node.html">SpellNode</a> *<a class="code" href="class_i_event.html#aedde6835702a67a72e833b67230c5c66">getNode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_i_event.html#a3bc076098af89f7da2364efeae372876">fromNode</a>; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_event.html#a5422b83a412e52b68c7885b53a421e0e">commit</a>(<a class="code" href="class_box2_d_world.html">Box2DWorld</a> *world, <a class="code" href="class_spell_entity.html">SpellEntity</a> * entity, std::shared_ptr&lt;TempWorld&gt; tempWorld) = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_i_event.html#a3bc076098af89f7da2364efeae372876">   27</a></span>&#160;    <a class="code" href="class_spell_node.html">SpellNode</a> *<a class="code" href="class_i_event.html#a3bc076098af89f7da2364efeae372876">fromNode</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_IEVENT_H</span></div>
+<div class="ttc" id="class_i_event_html_aedde6835702a67a72e833b67230c5c66"><div class="ttname"><a href="class_i_event.html#aedde6835702a67a72e833b67230c5c66">IEvent::getNode</a></div><div class="ttdeci">SpellNode * getNode() const </div><div class="ttdef"><b>Definition:</b> IEvent.hpp:22</div></div>
+<div class="ttc" id="class_i_event_html_a3bc076098af89f7da2364efeae372876"><div class="ttname"><a href="class_i_event.html#a3bc076098af89f7da2364efeae372876">IEvent::fromNode</a></div><div class="ttdeci">SpellNode * fromNode</div><div class="ttdef"><b>Definition:</b> IEvent.hpp:27</div></div>
+<div class="ttc" id="class_i_event_html_a5422b83a412e52b68c7885b53a421e0e"><div class="ttname"><a href="class_i_event.html#a5422b83a412e52b68c7885b53a421e0e">IEvent::commit</a></div><div class="ttdeci">virtual void commit(Box2DWorld *world, SpellEntity *entity, std::shared_ptr&lt; TempWorld &gt; tempWorld)=0</div></div>
+<div class="ttc" id="_box2_d_world_8h_html"><div class="ttname"><a href="_box2_d_world_8h.html">Box2DWorld.h</a></div></div>
+<div class="ttc" id="_server_8hpp_html"><div class="ttname"><a href="_server_8hpp.html">Server.hpp</a></div><div class="ttdoc">Server file. </div></div>
+<div class="ttc" id="class_spell_entity_html"><div class="ttname"><a href="class_spell_entity.html">SpellEntity</a></div><div class="ttdef"><b>Definition:</b> SpellEntity.h:16</div></div>
+<div class="ttc" id="class_i_event_html"><div class="ttname"><a href="class_i_event.html">IEvent</a></div><div class="ttdef"><b>Definition:</b> IEvent.hpp:18</div></div>
+<div class="ttc" id="class_i_event_html_a47970d711c08bc2e097daa4c93810445"><div class="ttname"><a href="class_i_event.html#a47970d711c08bc2e097daa4c93810445">IEvent::IEvent</a></div><div class="ttdeci">IEvent(SpellNode *node)</div><div class="ttdef"><b>Definition:</b> IEvent.hpp:20</div></div>
+<div class="ttc" id="class_box2_d_world_html"><div class="ttname"><a href="class_box2_d_world.html">Box2DWorld</a></div><div class="ttdef"><b>Definition:</b> Box2DWorld.h:26</div></div>
+<div class="ttc" id="class_spell_node_html"><div class="ttname"><a href="class_spell_node.html">SpellNode</a></div><div class="ttdef"><b>Definition:</b> SpellNode.hpp:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z',['z',['../struct_point.html#a05ba3b1dfcb19430582ae953cbbfbded',1,'Point::z()'],['../class_spell_node.html#aff090331ff1bd816a22e974a50c1a180',1,'SpellNode::z()']]]
+  ['y',['y',['../struct_point.html#afa38be143ae800e6ad69ce8ed4df62d8',1,'Point::y()'],['../class_spell_node.html#a754d80fd0fd82dbc12443b5f277b9fb4',1,'SpellNode::y()']]]
 ];

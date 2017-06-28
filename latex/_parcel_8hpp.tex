@@ -21,22 +21,20 @@ This graph shows which files directly or indirectly include this file\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=220pt]{_parcel_8hpp__dep__incl}
+\includegraphics[width=350pt]{_parcel_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \hyperlink{class_parcel}{Parcel}
-\item 
-class \hyperlink{class_i_serializable}{I\-Serializable}
 \end{DoxyCompactItemize}
-\subsection*{Enumerations}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{_parcel_8hpp_a4978ffb8bae4c099637a44e82b661d53}{Parcelable\-I\-Ds} \{ \hyperlink{_parcel_8hpp_a4978ffb8bae4c099637a44e82b661d53a19a6af17fd96277607046ea72bc48988}{U\-S\-E\-R\-\_\-\-P\-A\-R\-C\-E} = 0, 
-\hyperlink{_parcel_8hpp_a4978ffb8bae4c099637a44e82b661d53a6ce26a62afab55d7606ad4e92428b30c}{U\-N\-K\-N\-O\-W\-N} = 0
- \}
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{_parcel_8hpp_ab8119384bb71fe92a1619107979baa6f}{set\-Byte} (char byte, int number, T $\ast$var)
+\item 
+{\footnotesize template$<$class T $>$ }\\char \hyperlink{_parcel_8hpp_a105271315030f8e3fc6640b8b5042d68}{get\-Byte} (T var, int number)
 \end{DoxyCompactItemize}
 
 
@@ -49,16 +47,33 @@ Lion\-Z\-X\-Y  Recast  \href{mailto:nikita@kulikof.ru}{\tt nikita@kulikof.\-ru}
 \end{DoxyDate}
 Serialization 
 
-\subsection{Enumeration Type Documentation}
-\hypertarget{_parcel_8hpp_a4978ffb8bae4c099637a44e82b661d53}{\index{Parcel.\-hpp@{Parcel.\-hpp}!Parcelable\-I\-Ds@{Parcelable\-I\-Ds}}
-\index{Parcelable\-I\-Ds@{Parcelable\-I\-Ds}!Parcel.hpp@{Parcel.\-hpp}}
-\subsubsection[{Parcelable\-I\-Ds}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Parcelable\-I\-Ds}}}\label{_parcel_8hpp_a4978ffb8bae4c099637a44e82b661d53}
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{U\-S\-E\-R\-\_\-\-P\-A\-R\-C\-E@{U\-S\-E\-R\-\_\-\-P\-A\-R\-C\-E}!Parcel.\-hpp@{Parcel.\-hpp}}\index{Parcel.\-hpp@{Parcel.\-hpp}!U\-S\-E\-R\-\_\-\-P\-A\-R\-C\-E@{U\-S\-E\-R\-\_\-\-P\-A\-R\-C\-E}}\item[{\em 
-\hypertarget{_parcel_8hpp_a4978ffb8bae4c099637a44e82b661d53a19a6af17fd96277607046ea72bc48988}{U\-S\-E\-R\-\_\-\-P\-A\-R\-C\-E}\label{_parcel_8hpp_a4978ffb8bae4c099637a44e82b661d53a19a6af17fd96277607046ea72bc48988}
-}]\index{U\-N\-K\-N\-O\-W\-N@{U\-N\-K\-N\-O\-W\-N}!Parcel.\-hpp@{Parcel.\-hpp}}\index{Parcel.\-hpp@{Parcel.\-hpp}!U\-N\-K\-N\-O\-W\-N@{U\-N\-K\-N\-O\-W\-N}}\item[{\em 
-\hypertarget{_parcel_8hpp_a4978ffb8bae4c099637a44e82b661d53a6ce26a62afab55d7606ad4e92428b30c}{U\-N\-K\-N\-O\-W\-N}\label{_parcel_8hpp_a4978ffb8bae4c099637a44e82b661d53a6ce26a62afab55d7606ad4e92428b30c}
-}]\end{description}
-\end{Desc}
+\subsection{Function Documentation}
+\hypertarget{_parcel_8hpp_a105271315030f8e3fc6640b8b5042d68}{\index{Parcel.\-hpp@{Parcel.\-hpp}!get\-Byte@{get\-Byte}}
+\index{get\-Byte@{get\-Byte}!Parcel.hpp@{Parcel.\-hpp}}
+\subsubsection[{get\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ char get\-Byte (
+\begin{DoxyParamCaption}
+\item[{T}]{var, }
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{_parcel_8hpp_a105271315030f8e3fc6640b8b5042d68}
+\hypertarget{_parcel_8hpp_ab8119384bb71fe92a1619107979baa6f}{\index{Parcel.\-hpp@{Parcel.\-hpp}!set\-Byte@{set\-Byte}}
+\index{set\-Byte@{set\-Byte}!Parcel.hpp@{Parcel.\-hpp}}
+\subsubsection[{set\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void set\-Byte (
+\begin{DoxyParamCaption}
+\item[{char}]{byte, }
+\item[{int}]{number, }
+\item[{T $\ast$}]{var}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{_parcel_8hpp_ab8119384bb71fe92a1619107979baa6f}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_parcel_8hpp_ab8119384bb71fe92a1619107979baa6f_icgraph}
+\end{center}
+\end{figure}
+
+

@@ -8,10 +8,11 @@
 
 {\ttfamily \#include $<$string$>$}\\*
 {\ttfamily \#include $<$thread$>$}\\*
+{\ttfamily \#include $<$world/\-Box2\-D\-World.\-h$>$}\\*
 {\ttfamily \#include \char`\"{}threads/\-Input\-Thread.\-hpp\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}commands/\-I\-Command\-Sender.\-hpp\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}commands/\-Command\-Manager.\-hpp\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}network/\-Network\-Server.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}io/network/\-Network\-Server.\-hpp\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}temperature-\/world/interfaces/\-I\-Updater.\-hpp\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}temperature-\/world/interfaces/\-I\-Temperature\-World\-Chunkable\-Observable.\-hpp\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}temperature-\/world/interfaces/\-I\-Temperature\-World\-Chunkable\-Generatable.\-hpp\char`\"{}}\\*
@@ -39,6 +40,16 @@ This graph shows which files directly or indirectly include this file\-:
 \item 
 class \hyperlink{class_server}{Server}
 \begin{DoxyCompactList}\small\item\em Main class in Recast \hyperlink{class_server}{Server}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \\*
+\hyperlink{class_i_temperature_world_chunkable_observable}{I\-Temperature\-World\-Chunkable\-Observable}\\*
+$<$ \hyperlink{class_i_temperature_world_chunkable_generatable}{I\-Temperature\-World\-Chunkable\-Generatable}\\*
+$<$ \hyperlink{class_i_temperature_world_chunkable_mutable}{I\-Temperature\-World\-Chunkable\-Mutable}\\*
+$<$ \hyperlink{class_i_temperature_world_chunkable}{I\-Temperature\-World\-Chunkable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ $>$ $>$ \hyperlink{_server_8hpp_ac147588bd69e1d052194e0dea10202ff}{Temp\-World}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -49,3 +60,8 @@ Lion\-Z\-X\-Y  Recast
 08.\-06.\-17
 \end{DoxyDate}
 Main server file (aka Context) 
+
+\subsection{Typedef Documentation}
+\hypertarget{_server_8hpp_ac147588bd69e1d052194e0dea10202ff}{\index{Server.\-hpp@{Server.\-hpp}!Temp\-World@{Temp\-World}}
+\index{Temp\-World@{Temp\-World}!Server.hpp@{Server.\-hpp}}
+\subsubsection[{Temp\-World}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf I\-Temperature\-World\-Chunkable\-Observable}$<${\bf I\-Temperature\-World\-Chunkable\-Generatable}$<${\bf I\-Temperature\-World\-Chunkable\-Mutable}$<${\bf I\-Temperature\-World\-Chunkable}$<${\bf I\-Temperature\-World}$>$ $>$ $>$ $>$ {\bf Temp\-World}}}\label{_server_8hpp_ac147588bd69e1d052194e0dea10202ff}

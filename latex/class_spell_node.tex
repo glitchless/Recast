@@ -12,7 +12,7 @@ Inheritance diagram for Spell\-Node\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=176pt]{class_spell_node__inherit__graph}
+\includegraphics[height=550pt]{class_spell_node__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -22,13 +22,13 @@ Collaboration diagram for Spell\-Node\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=176pt]{class_spell_node__coll__graph}
+\includegraphics[width=200pt]{class_spell_node__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_spell_node_a494db54e25007a0a5a0f0fb69e4e0edf}{Spell\-Node} (float \hyperlink{class_spell_node_a916f2a709a674dd2a61530b6acc339cc}{x}, float \hyperlink{class_spell_node_a754d80fd0fd82dbc12443b5f277b9fb4}{y}, float \hyperlink{class_spell_node_aff090331ff1bd816a22e974a50c1a180}{z})
+\hyperlink{class_spell_node_a131e6e5862945a8371fffcf907603f23}{Spell\-Node} (\hyperlink{_spell_node_8hpp_acac9cbaeea226ed297804c012dc12b16}{Node\-Type} \hyperlink{class_spell_node_ae897f4f135608a9c71948b5f703aeb99}{type}, float \hyperlink{class_spell_node_a916f2a709a674dd2a61530b6acc339cc}{x}, float \hyperlink{class_spell_node_a754d80fd0fd82dbc12443b5f277b9fb4}{y}, float \hyperlink{class_spell_node_aff090331ff1bd816a22e974a50c1a180}{z})
 \item 
 \hyperlink{class_spell_node_a30bca8b90baeb81361db17ed3f712f7a}{$\sim$\-Spell\-Node} ()
 \item 
@@ -41,6 +41,25 @@ void \hyperlink{class_spell_node_a1286f427e4386e3524ce6914b22a94fb}{tick} (\hype
 bool \hyperlink{class_spell_node_a711b368a0e285c644737c6f53f641a6f}{in\-Tick} () const 
 \item 
 float \hyperlink{class_spell_node_ad5fb7d9576d5ea948cbb0451387df7aa}{get\-Distance} (const \hyperlink{class_spell_node}{Spell\-Node} $\ast$other\-Node) const 
+\item 
+\hyperlink{_spell_node_8hpp_acac9cbaeea226ed297804c012dc12b16}{Node\-Type} \hyperlink{class_spell_node_aba3a1891696bb331002148ba15dc72c3}{get\-Type} () const 
+\item 
+void \hyperlink{class_spell_node_aac7571c9caae433a697b94d29a6468fa}{iterrator} (std\-::function$<$ void(\hyperlink{class_spell_node}{Spell\-Node} $\ast$)$>$ next)
+\item 
+std\-::set$<$ \hyperlink{class_spell_node}{Spell\-Node} $\ast$ $>$ \& \hyperlink{class_spell_node_a2dfb0810e266ab201cd0fb5023d3bcc4}{get\-Connected\-Nodes} ()
+\item 
+float \hyperlink{class_spell_node_ab9c6d7ecd9668f1351648d2f8ce01a0f}{get\-X} () const 
+\item 
+float \hyperlink{class_spell_node_a6a78fbac60b94cff6ed1aa004ad3c703}{get\-Y} () const 
+\item 
+float \hyperlink{class_spell_node_ae018717cbd4b78897dedb585a5e40dfd}{get\-Z} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_spell_node_a2c02575f831e8c7de826dc144279d19d}{write} (\hyperlink{class_parcel}{Parcel} \&in, \hyperlink{class_spell_node}{Spell\-Node} $\ast$obj)
+\item 
+static \hyperlink{class_spell_node}{Spell\-Node} $\ast$ \hyperlink{class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c}{read} (\hyperlink{class_parcel}{Parcel} \&out)
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -59,19 +78,22 @@ float \hyperlink{class_spell_node_aff090331ff1bd816a22e974a50c1a180}{z}
 std\-::set$<$ \hyperlink{class_spell_node}{Spell\-Node} $\ast$ $>$ \hyperlink{class_spell_node_a5073f68f588de6227430cb0abe3e161a}{connected\-Nodes}
 \item 
 bool \hyperlink{class_spell_node_a334bcdb7648ffd704510a6b277057fa5}{now\-In\-Tick}
+\item 
+\hyperlink{_spell_node_8hpp_acac9cbaeea226ed297804c012dc12b16}{Node\-Type} \hyperlink{class_spell_node_ae897f4f135608a9c71948b5f703aeb99}{type}
 \end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_spell_node_a494db54e25007a0a5a0f0fb69e4e0edf}{\index{Spell\-Node@{Spell\-Node}!Spell\-Node@{Spell\-Node}}
+\hypertarget{class_spell_node_a131e6e5862945a8371fffcf907603f23}{\index{Spell\-Node@{Spell\-Node}!Spell\-Node@{Spell\-Node}}
 \index{Spell\-Node@{Spell\-Node}!SpellNode@{Spell\-Node}}
 \subsubsection[{Spell\-Node}]{\setlength{\rightskip}{0pt plus 5cm}Spell\-Node\-::\-Spell\-Node (
 \begin{DoxyParamCaption}
+\item[{{\bf Node\-Type}}]{type, }
 \item[{float}]{x, }
 \item[{float}]{y, }
 \item[{float}]{z}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_spell_node_a494db54e25007a0a5a0f0fb69e4e0edf}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_spell_node_a131e6e5862945a8371fffcf907603f23}
 \hypertarget{class_spell_node_a30bca8b90baeb81361db17ed3f712f7a}{\index{Spell\-Node@{Spell\-Node}!$\sim$\-Spell\-Node@{$\sim$\-Spell\-Node}}
 \index{$\sim$\-Spell\-Node@{$\sim$\-Spell\-Node}!SpellNode@{Spell\-Node}}
 \subsubsection[{$\sim$\-Spell\-Node}]{\setlength{\rightskip}{0pt plus 5cm}Spell\-Node\-::$\sim$\-Spell\-Node (
@@ -96,6 +118,37 @@ Link node if not already exist The contract involves adding the current node fro
 {\em other\-Node} & \\
 \hline
 \end{DoxyParams}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_spell_node_a66ea41a0a12d0dd8a2ac4eb0c5b1e046_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_spell_node_a2dfb0810e266ab201cd0fb5023d3bcc4}{\index{Spell\-Node@{Spell\-Node}!get\-Connected\-Nodes@{get\-Connected\-Nodes}}
+\index{get\-Connected\-Nodes@{get\-Connected\-Nodes}!SpellNode@{Spell\-Node}}
+\subsubsection[{get\-Connected\-Nodes}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<${\bf Spell\-Node} $\ast$$>$\& Spell\-Node\-::get\-Connected\-Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_spell_node_a2dfb0810e266ab201cd0fb5023d3bcc4}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{class_spell_node_a2dfb0810e266ab201cd0fb5023d3bcc4_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_spell_node_ad5fb7d9576d5ea948cbb0451387df7aa}{\index{Spell\-Node@{Spell\-Node}!get\-Distance@{get\-Distance}}
 \index{get\-Distance@{get\-Distance}!SpellNode@{Spell\-Node}}
 \subsubsection[{get\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}float Spell\-Node\-::get\-Distance (
@@ -120,11 +173,51 @@ Here is the call graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=270pt]{class_spell_node_ad5fb7d9576d5ea948cbb0451387df7aa_cgraph}
+\includegraphics[width=276pt]{class_spell_node_ad5fb7d9576d5ea948cbb0451387df7aa_cgraph}
 \end{center}
 \end{figure}
 
 
+\hypertarget{class_spell_node_aba3a1891696bb331002148ba15dc72c3}{\index{Spell\-Node@{Spell\-Node}!get\-Type@{get\-Type}}
+\index{get\-Type@{get\-Type}!SpellNode@{Spell\-Node}}
+\subsubsection[{get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\-Type} Spell\-Node\-::get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_spell_node_aba3a1891696bb331002148ba15dc72c3}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_spell_node_aba3a1891696bb331002148ba15dc72c3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_spell_node_ab9c6d7ecd9668f1351648d2f8ce01a0f}{\index{Spell\-Node@{Spell\-Node}!get\-X@{get\-X}}
+\index{get\-X@{get\-X}!SpellNode@{Spell\-Node}}
+\subsubsection[{get\-X}]{\setlength{\rightskip}{0pt plus 5cm}float Spell\-Node\-::get\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_spell_node_ab9c6d7ecd9668f1351648d2f8ce01a0f}
+\hypertarget{class_spell_node_a6a78fbac60b94cff6ed1aa004ad3c703}{\index{Spell\-Node@{Spell\-Node}!get\-Y@{get\-Y}}
+\index{get\-Y@{get\-Y}!SpellNode@{Spell\-Node}}
+\subsubsection[{get\-Y}]{\setlength{\rightskip}{0pt plus 5cm}float Spell\-Node\-::get\-Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_spell_node_a6a78fbac60b94cff6ed1aa004ad3c703}
+\hypertarget{class_spell_node_ae018717cbd4b78897dedb585a5e40dfd}{\index{Spell\-Node@{Spell\-Node}!get\-Z@{get\-Z}}
+\index{get\-Z@{get\-Z}!SpellNode@{Spell\-Node}}
+\subsubsection[{get\-Z}]{\setlength{\rightskip}{0pt plus 5cm}float Spell\-Node\-::get\-Z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_spell_node_ae018717cbd4b78897dedb585a5e40dfd}
 \hypertarget{class_spell_node_a711b368a0e285c644737c6f53f641a6f}{\index{Spell\-Node@{Spell\-Node}!in\-Tick@{in\-Tick}}
 \index{in\-Tick@{in\-Tick}!SpellNode@{Spell\-Node}}
 \subsubsection[{in\-Tick}]{\setlength{\rightskip}{0pt plus 5cm}bool Spell\-Node\-::in\-Tick (
@@ -143,6 +236,25 @@ Here is the call graph for this function\-:
 
 Reimplemented in \hyperlink{class_energy_node_a3a215be078964713e490198ee311d70f}{Energy\-Node}.
 
+\hypertarget{class_spell_node_aac7571c9caae433a697b94d29a6468fa}{\index{Spell\-Node@{Spell\-Node}!iterrator@{iterrator}}
+\index{iterrator@{iterrator}!SpellNode@{Spell\-Node}}
+\subsubsection[{iterrator}]{\setlength{\rightskip}{0pt plus 5cm}void Spell\-Node\-::iterrator (
+\begin{DoxyParamCaption}
+\item[{std\-::function$<$ void({\bf Spell\-Node} $\ast$)$>$}]{next}
+\end{DoxyParamCaption}
+)}}\label{class_spell_node_aac7571c9caae433a697b94d29a6468fa}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{class_spell_node_aac7571c9caae433a697b94d29a6468fa_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_spell_node_a0e8d39e7ebc6c7bd9e52eaf1be213af8}{\index{Spell\-Node@{Spell\-Node}!on\-Tick@{on\-Tick}}
 \index{on\-Tick@{on\-Tick}!SpellNode@{Spell\-Node}}
 \subsubsection[{on\-Tick}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Spell\-Node\-::on\-Tick (
@@ -154,6 +266,37 @@ Reimplemented in \hyperlink{class_energy_node_a3a215be078964713e490198ee311d70f}
 
 
 Reimplemented in \hyperlink{class_energy_node_ab52474e2e15ff2af2d969b6a88a778f7}{Energy\-Node}.
+
+\hypertarget{class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c}{\index{Spell\-Node@{Spell\-Node}!read@{read}}
+\index{read@{read}!SpellNode@{Spell\-Node}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Spell\-Node} $\ast$ Spell\-Node\-::read (
+\begin{DoxyParamCaption}
+\item[{{\bf Parcel} \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c_icgraph}
+\end{center}
+\end{figure}
+
 
 \hypertarget{class_spell_node_a1286f427e4386e3524ce6914b22a94fb}{\index{Spell\-Node@{Spell\-Node}!tick@{tick}}
 \index{tick@{tick}!SpellNode@{Spell\-Node}}
@@ -179,7 +322,39 @@ Here is the caller graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=282pt]{class_spell_node_a1286f427e4386e3524ce6914b22a94fb_icgraph}
+\includegraphics[width=350pt]{class_spell_node_a1286f427e4386e3524ce6914b22a94fb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_spell_node_a2c02575f831e8c7de826dc144279d19d}{\index{Spell\-Node@{Spell\-Node}!write@{write}}
+\index{write@{write}!SpellNode@{Spell\-Node}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Spell\-Node\-::write (
+\begin{DoxyParamCaption}
+\item[{{\bf Parcel} \&}]{in, }
+\item[{{\bf Spell\-Node} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_spell_node_a2c02575f831e8c7de826dc144279d19d}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_spell_node_a2c02575f831e8c7de826dc144279d19d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{class_spell_node_a2c02575f831e8c7de826dc144279d19d_icgraph}
 \end{center}
 \end{figure}
 
@@ -193,6 +368,9 @@ Here is the caller graph for this function\-:
 \hypertarget{class_spell_node_a334bcdb7648ffd704510a6b277057fa5}{\index{Spell\-Node@{Spell\-Node}!now\-In\-Tick@{now\-In\-Tick}}
 \index{now\-In\-Tick@{now\-In\-Tick}!SpellNode@{Spell\-Node}}
 \subsubsection[{now\-In\-Tick}]{\setlength{\rightskip}{0pt plus 5cm}bool Spell\-Node\-::now\-In\-Tick\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_spell_node_a334bcdb7648ffd704510a6b277057fa5}
+\hypertarget{class_spell_node_ae897f4f135608a9c71948b5f703aeb99}{\index{Spell\-Node@{Spell\-Node}!type@{type}}
+\index{type@{type}!SpellNode@{Spell\-Node}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\-Type} Spell\-Node\-::type\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_spell_node_ae897f4f135608a9c71948b5f703aeb99}
 \hypertarget{class_spell_node_a916f2a709a674dd2a61530b6acc339cc}{\index{Spell\-Node@{Spell\-Node}!x@{x}}
 \index{x@{x}!SpellNode@{Spell\-Node}}
 \subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}float Spell\-Node\-::x\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_spell_node_a916f2a709a674dd2a61530b6acc339cc}

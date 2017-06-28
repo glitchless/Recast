@@ -1,7 +1,9 @@
 <map id="Config::get" name="Config::get">
-<area shape="rect" id="node2" href="$class_config.html#aaff6aaabead6b7486ec122f9dda807fd" title="Config::g" alt="" coords="157,56,232,83"/>
-<area shape="rect" id="node6" href="$class_server.html#ad5ec9462b520e59f7ea831e157ee5e59" title="Server::Server" alt="" coords="141,107,248,133"/>
-<area shape="rect" id="node3" href="$class_heat_event.html#af2d9aa99e9b2a57d8e8778598ba1c8cc" title="HeatEvent::getTempFromEnergy" alt="" coords="297,5,511,32"/>
-<area shape="rect" id="node4" href="$class_energy_node.html#ab52474e2e15ff2af2d969b6a88a778f7" title="EnergyNode::onTick" alt="" coords="560,81,701,108"/>
-<area shape="rect" id="node5" href="$class_energy_node.html#a04b3fe7a8aa49157a5c66ee8e25cfb3b" title="EnergyNode::transferEnergy" alt="" coords="311,107,497,133"/>
+<area shape="rect" id="node2" href="$class_config.html#aaff6aaabead6b7486ec122f9dda807fd" title="Config::g" alt="" coords="141,132,216,159"/>
+<area shape="rect" id="node3" href="$class_heat_event.html#af2d9aa99e9b2a57d8e8778598ba1c8cc" title="HeatEvent::getTempFromEnergy" alt="" coords="265,5,479,32"/>
+<area shape="rect" id="node4" href="$class_server.html#ad5ec9462b520e59f7ea831e157ee5e59" title="Server::Server" alt="" coords="319,56,425,83"/>
+<area shape="rect" id="node5" href="$class_heat_event.html#a9dcc28accc54844fc128daff999f2f22" title="HeatEvent::commit" alt="" coords="305,107,439,133"/>
+<area shape="rect" id="node6" href="$class_move_event.html#a409faa8726fad01a66fe86d61369fcaf" title="MoveEvent::commit" alt="" coords="303,157,441,184"/>
+<area shape="rect" id="node7" href="$class_energy_node.html#ab52474e2e15ff2af2d969b6a88a778f7" title="EnergyNode::onTick" alt="" coords="528,233,669,260"/>
+<area shape="rect" id="node8" href="$class_energy_node.html#a04b3fe7a8aa49157a5c66ee8e25cfb3b" title="EnergyNode::transferEnergy" alt="" coords="279,259,465,285"/>
 </map>

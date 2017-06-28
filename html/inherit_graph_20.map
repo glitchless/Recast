@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_players_online.html" title="PlayersOnline" alt="" coords="6,5,109,32"/>
+<area shape="rect" id="node1" href="$class_network_listener.html" title="NetworkListener" alt="" coords="5,56,123,83"/>
+<area shape="rect" id="node2" href="$class_cast_spell.html" title="CastSpell" alt="" coords="209,5,287,32"/>
+<area shape="rect" id="node3" href="$class_debug_network_listener.html" title="DebugNetworkListener" alt="" coords="171,56,325,83"/>
+<area shape="rect" id="node4" href="$class_get_entitys.html" title="GetEntitys" alt="" coords="206,107,290,133"/>
 </map>

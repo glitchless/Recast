@@ -1,0 +1,4 @@
+<map id="NetworkServer::shutdown" name="NetworkServer::shutdown">
+<area shape="rect" id="node2" href="$class_server.html#a58c74bafaaf20b24e9243c7cf5fdfd16" title="Server::shutdown" alt="" coords="227,5,351,32"/>
+<area shape="rect" id="node3" href="$class_stop_command.html#a5f1df22a117e1f9afd65f0c55dcfc983" title="StopCommand::onCommand" alt="" coords="401,5,591,32"/>
+</map>

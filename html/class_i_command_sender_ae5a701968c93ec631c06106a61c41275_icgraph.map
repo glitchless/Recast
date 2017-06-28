@@ -1,0 +1,5 @@
+<map id="ICommandSender::getWorld" name="ICommandSender::getWorld">
+<area shape="rect" id="node2" href="$class_create_entity_command.html#aacb06adba7b70b5a5225c72bf943bab2" title="CreateEntityCommand\l::onCommand" alt="" coords="240,5,395,46"/>
+<area shape="rect" id="node3" href="$class_cast_spell.html#ae1eb065bf5eef89f24b5b540e2ef8df2" title="CastSpell::onPacket" alt="" coords="246,71,389,97"/>
+<area shape="rect" id="node4" href="$class_get_entitys.html#a14af21ff8ce5555e57ec532bc2db9448" title="GetEntitys::onPacket" alt="" coords="244,121,391,148"/>
+</map>

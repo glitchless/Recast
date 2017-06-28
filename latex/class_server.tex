@@ -55,12 +55,9 @@ bool \hyperlink{class_server_ab8c22a0d6809e9aa84bebce478ba7bc5}{is\-Running} () 
 \item 
 \hyperlink{class_players_online}{Players\-Online} $\ast$ \hyperlink{class_server_ab103cde2777536fa63b2746b6e0a98d4}{get\-Players} () const 
 \item 
-std\-::shared\-\_\-ptr\\*
-$<$ \hyperlink{class_i_temperature_world_chunkable_observable}{I\-Temperature\-World\-Chunkable\-Observable}\\*
-$<$ \hyperlink{class_i_temperature_world_chunkable_generatable}{I\-Temperature\-World\-Chunkable\-Generatable}\\*
-$<$ \hyperlink{class_i_temperature_world_chunkable_mutable}{I\-Temperature\-World\-Chunkable\-Mutable}\\*
-$<$ \hyperlink{class_i_temperature_world_chunkable}{I\-Temperature\-World\-Chunkable}\\*
-$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ $>$ $>$ $>$ \hyperlink{class_server_adea320b40e941db6ab354c63de9128e3}{get\-Temperature\-World} () const 
+virtual \hyperlink{class_box2_d_world}{Box2\-D\-World} $\ast$ \hyperlink{class_server_ad5e54ba60c174321e880e1a10e61cc53}{get\-World} ()
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{_server_8hpp_ac147588bd69e1d052194e0dea10202ff}{Temp\-World} $>$ \hyperlink{class_server_adc049030ac9523415295a889a2e34042}{get\-Temperature\-World} () const 
 \end{DoxyCompactItemize}
 
 
@@ -145,13 +142,36 @@ Implements \hyperlink{class_i_command_sender_abe8ec89d12e5de40cec1062da47f336c}{
 
 Implements \hyperlink{class_i_command_sender_afe665fdd44daefad719049b540fc14b9}{I\-Command\-Sender}.
 
-\hypertarget{class_server_adea320b40e941db6ab354c63de9128e3}{\index{Server@{Server}!get\-Temperature\-World@{get\-Temperature\-World}}
+\hypertarget{class_server_adc049030ac9523415295a889a2e34042}{\index{Server@{Server}!get\-Temperature\-World@{get\-Temperature\-World}}
 \index{get\-Temperature\-World@{get\-Temperature\-World}!Server@{Server}}
-\subsubsection[{get\-Temperature\-World}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Chunkable\-Observable}$<${\bf I\-Temperature\-World\-Chunkable\-Generatable}$<${\bf I\-Temperature\-World\-Chunkable\-Mutable}$<${\bf I\-Temperature\-World\-Chunkable}$<${\bf I\-Temperature\-World}$>$ $>$ $>$ $>$ $>$ Server\-::get\-Temperature\-World (
+\subsubsection[{get\-Temperature\-World}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf Temp\-World}$>$ Server\-::get\-Temperature\-World (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_server_adea320b40e941db6ab354c63de9128e3}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_server_adc049030ac9523415295a889a2e34042}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_server_adc049030ac9523415295a889a2e34042_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_server_ad5e54ba60c174321e880e1a10e61cc53}{\index{Server@{Server}!get\-World@{get\-World}}
+\index{get\-World@{get\-World}!Server@{Server}}
+\subsubsection[{get\-World}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Box2\-D\-World}$\ast$ Server\-::get\-World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_server_ad5e54ba60c174321e880e1a10e61cc53}
+
+
+Implements \hyperlink{class_i_command_sender_ae5a701968c93ec631c06106a61c41275}{I\-Command\-Sender}.
+
 \hypertarget{class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea}{\index{Server@{Server}!init\-Server@{init\-Server}}
 \index{init\-Server@{init\-Server}!Server@{Server}}
 \subsubsection[{init\-Server}]{\setlength{\rightskip}{0pt plus 5cm}void Server\-::init\-Server (
@@ -166,7 +186,7 @@ Here is the call graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=296pt]{class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph}
+\includegraphics[width=334pt]{class_server_a7bc5c00fa3ae1ddfae71274ee7d025ea_cgraph}
 \end{center}
 \end{figure}
 
@@ -219,6 +239,18 @@ Implements \hyperlink{class_i_command_sender_a613b27b190c7fb5123597939c0896080}{
 {}
 \end{DoxyParamCaption}
 )}}\label{class_server_a58c74bafaaf20b24e9243c7cf5fdfd16}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{class_server_a58c74bafaaf20b24e9243c7cf5fdfd16_cgraph}
+\end{center}
+\end{figure}
+
+
 
 
 Here is the caller graph for this function\-:

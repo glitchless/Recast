@@ -1,8 +1,10 @@
 <map id="Config::instance" name="Config::instance">
-<area shape="rect" id="node2" href="$class_config.html#aaff6aaabead6b7486ec122f9dda807fd" title="Config::g" alt="" coords="191,56,265,83"/>
-<area shape="rect" id="node6" href="$class_server.html#ad5ec9462b520e59f7ea831e157ee5e59" title="Server::Server" alt="" coords="175,107,281,133"/>
-<area shape="rect" id="node7" href="$class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6" title="Server::~Server" alt="" coords="171,157,285,184"/>
-<area shape="rect" id="node3" href="$class_heat_event.html#af2d9aa99e9b2a57d8e8778598ba1c8cc" title="HeatEvent::getTempFromEnergy" alt="" coords="334,5,549,32"/>
-<area shape="rect" id="node4" href="$class_energy_node.html#ab52474e2e15ff2af2d969b6a88a778f7" title="EnergyNode::onTick" alt="" coords="597,81,739,108"/>
-<area shape="rect" id="node5" href="$class_energy_node.html#a04b3fe7a8aa49157a5c66ee8e25cfb3b" title="EnergyNode::transferEnergy" alt="" coords="348,107,535,133"/>
+<area shape="rect" id="node2" href="$class_config.html#aaff6aaabead6b7486ec122f9dda807fd" title="Config::g" alt="" coords="191,107,265,133"/>
+<area shape="rect" id="node4" href="$class_server.html#ad5ec9462b520e59f7ea831e157ee5e59" title="Server::Server" alt="" coords="388,5,495,32"/>
+<area shape="rect" id="node9" href="$class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6" title="Server::~Server" alt="" coords="171,157,285,184"/>
+<area shape="rect" id="node3" href="$class_heat_event.html#af2d9aa99e9b2a57d8e8778598ba1c8cc" title="HeatEvent::getTempFromEnergy" alt="" coords="334,56,549,83"/>
+<area shape="rect" id="node5" href="$class_heat_event.html#a9dcc28accc54844fc128daff999f2f22" title="HeatEvent::commit" alt="" coords="374,107,509,133"/>
+<area shape="rect" id="node6" href="$class_move_event.html#a409faa8726fad01a66fe86d61369fcaf" title="MoveEvent::commit" alt="" coords="372,157,511,184"/>
+<area shape="rect" id="node7" href="$class_energy_node.html#ab52474e2e15ff2af2d969b6a88a778f7" title="EnergyNode::onTick" alt="" coords="597,233,739,260"/>
+<area shape="rect" id="node8" href="$class_energy_node.html#a04b3fe7a8aa49157a5c66ee8e25cfb3b" title="EnergyNode::transferEnergy" alt="" coords="348,259,535,285"/>
 </map>

@@ -1,5 +1,5 @@
-<map id="/home/travis/build/bender&#45;wardrobe/Recast/src/core/network/SocketTCP.cpp" name="/home/travis/build/bender&#45;wardrobe/Recast/src/core/network/SocketTCP.cpp">
-<area shape="rect" id="node3" href="$_socket_t_c_p_8hpp.html" title="network/SocketTCP.hpp" alt="" coords="389,109,553,136"/>
-<area shape="rect" id="node4" href="$_network_utils_8hpp.html" title="Basic networking utils header file. " alt="" coords="385,259,559,285"/>
-<area shape="rect" id="node15" href="$_socket_8hpp.html" title="Socket abstract utils header file. " alt="" coords="456,184,595,211"/>
+<map id="/home/travis/build/bender&#45;wardrobe/Recast/src/core/io/network/SocketTCP.cpp" name="/home/travis/build/bender&#45;wardrobe/Recast/src/core/io/network/SocketTCP.cpp">
+<area shape="rect" id="node3" href="$_socket_t_c_p_8hpp.html" title="io/network/SocketTCP.hpp" alt="" coords="384,109,563,136"/>
+<area shape="rect" id="node4" href="$_network_utils_8hpp.html" title="Basic networking utils header file. " alt="" coords="411,259,533,285"/>
+<area shape="rect" id="node15" href="$_socket_8hpp.html" title="Socket abstract utils header file. " alt="" coords="469,184,557,211"/>
 </map>

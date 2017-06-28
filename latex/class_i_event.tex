@@ -12,7 +12,7 @@ Inheritance diagram for I\-Event\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=202pt]{class_i_event__inherit__graph}
+\includegraphics[width=301pt]{class_i_event__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -22,7 +22,7 @@ Collaboration diagram for I\-Event\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=148pt]{class_i_event__coll__graph}
+\includegraphics[width=200pt]{class_i_event__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -32,7 +32,12 @@ Collaboration diagram for I\-Event\-:
 \item 
 \hyperlink{class_spell_node}{Spell\-Node} $\ast$ \hyperlink{class_i_event_aedde6835702a67a72e833b67230c5c66}{get\-Node} () const 
 \item 
-virtual void \hyperlink{class_i_event_a458dd99d3b32a1abe792ebebaf6a7002}{commit} ()
+virtual void \hyperlink{class_i_event_a5422b83a412e52b68c7885b53a421e0e}{commit} (\hyperlink{class_box2_d_world}{Box2\-D\-World} $\ast$world, \hyperlink{class_spell_entity}{Spell\-Entity} $\ast$entity, std\-::shared\-\_\-ptr$<$ \hyperlink{_server_8hpp_ac147588bd69e1d052194e0dea10202ff}{Temp\-World} $>$ temp\-World)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_spell_node}{Spell\-Node} $\ast$ \hyperlink{class_i_event_a3bc076098af89f7da2364efeae372876}{from\-Node}
 \end{DoxyCompactItemize}
 
 
@@ -47,13 +52,19 @@ virtual void \hyperlink{class_i_event_a458dd99d3b32a1abe792ebebaf6a7002}{commit}
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_i_event_a458dd99d3b32a1abe792ebebaf6a7002}{\index{I\-Event@{I\-Event}!commit@{commit}}
+\hypertarget{class_i_event_a5422b83a412e52b68c7885b53a421e0e}{\index{I\-Event@{I\-Event}!commit@{commit}}
 \index{commit@{commit}!IEvent@{I\-Event}}
 \subsubsection[{commit}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Event\-::commit (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf Box2\-D\-World} $\ast$}]{world, }
+\item[{{\bf Spell\-Entity} $\ast$}]{entity, }
+\item[{std\-::shared\-\_\-ptr$<$ {\bf Temp\-World} $>$}]{temp\-World}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_i_event_a458dd99d3b32a1abe792ebebaf6a7002}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_event_a5422b83a412e52b68c7885b53a421e0e}
+
+
+Implemented in \hyperlink{class_heat_event_a9dcc28accc54844fc128daff999f2f22}{Heat\-Event}, and \hyperlink{class_move_event_a409faa8726fad01a66fe86d61369fcaf}{Move\-Event}.
+
 \hypertarget{class_i_event_aedde6835702a67a72e833b67230c5c66}{\index{I\-Event@{I\-Event}!get\-Node@{get\-Node}}
 \index{get\-Node@{get\-Node}!IEvent@{I\-Event}}
 \subsubsection[{get\-Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Spell\-Node}$\ast$ I\-Event\-::get\-Node (
@@ -61,6 +72,24 @@ virtual void \hyperlink{class_i_event_a458dd99d3b32a1abe792ebebaf6a7002}{commit}
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_i_event_aedde6835702a67a72e833b67230c5c66}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_i_event_aedde6835702a67a72e833b67230c5c66_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_i_event_a3bc076098af89f7da2364efeae372876}{\index{I\-Event@{I\-Event}!from\-Node@{from\-Node}}
+\index{from\-Node@{from\-Node}!IEvent@{I\-Event}}
+\subsubsection[{from\-Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Spell\-Node}$\ast$ I\-Event\-::from\-Node\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_i_event_a3bc076098af89f7da2364efeae372876}
 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}

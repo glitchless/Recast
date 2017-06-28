@@ -108,19 +108,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_config.html#aaff6aaabead6b7486ec122f9dda807fd">Config::g</a>(<span class="stringliteral">&quot;spell.heater.temp_per_energy&quot;</span>, 1) * energyEjection;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">float</span> temp;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_heat_event.html#a9dcc28accc54844fc128daff999f2f22">commit</a>(<a class="code" href="class_box2_d_world.html">Box2DWorld</a> *world, <a class="code" href="class_spell_entity.html">SpellEntity</a> *entity, std::shared_ptr&lt;TempWorld&gt; tempWorld);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> temp;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_HEATEVENT_H</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_HEATEVENT_H</span></div>
 <div class="ttc" id="class_heat_event_html_a7015a08ccd75b135599dd40b755c5e68"><div class="ttname"><a href="class_heat_event.html#a7015a08ccd75b135599dd40b755c5e68">HeatEvent::HeatEvent</a></div><div class="ttdeci">HeatEvent(SpellNode *node, float temp)</div><div class="ttdef"><b>Definition:</b> HeatEvent.hpp:16</div></div>
+<div class="ttc" id="class_heat_event_html_a9dcc28accc54844fc128daff999f2f22"><div class="ttname"><a href="class_heat_event.html#a9dcc28accc54844fc128daff999f2f22">HeatEvent::commit</a></div><div class="ttdeci">void commit(Box2DWorld *world, SpellEntity *entity, std::shared_ptr&lt; TempWorld &gt; tempWorld)</div><div class="ttdef"><b>Definition:</b> HeatEvent.cpp:12</div></div>
 <div class="ttc" id="_i_event_8hpp_html"><div class="ttname"><a href="_i_event_8hpp.html">IEvent.hpp</a></div></div>
+<div class="ttc" id="class_spell_entity_html"><div class="ttname"><a href="class_spell_entity.html">SpellEntity</a></div><div class="ttdef"><b>Definition:</b> SpellEntity.h:16</div></div>
 <div class="ttc" id="_config_8hpp_html"><div class="ttname"><a href="_config_8hpp.html">Config.hpp</a></div><div class="ttdoc">Config file. </div></div>
-<div class="ttc" id="class_i_event_html"><div class="ttname"><a href="class_i_event.html">IEvent</a></div><div class="ttdef"><b>Definition:</b> IEvent.hpp:15</div></div>
+<div class="ttc" id="class_i_event_html"><div class="ttname"><a href="class_i_event.html">IEvent</a></div><div class="ttdef"><b>Definition:</b> IEvent.hpp:18</div></div>
 <div class="ttc" id="class_heat_event_html_af2d9aa99e9b2a57d8e8778598ba1c8cc"><div class="ttname"><a href="class_heat_event.html#af2d9aa99e9b2a57d8e8778598ba1c8cc">HeatEvent::getTempFromEnergy</a></div><div class="ttdeci">static float getTempFromEnergy(float energyEjection)</div><div class="ttdef"><b>Definition:</b> HeatEvent.hpp:18</div></div>
-<div class="ttc" id="class_spell_node_html"><div class="ttname"><a href="class_spell_node.html">SpellNode</a></div><div class="ttdef"><b>Definition:</b> SpellNode.hpp:14</div></div>
+<div class="ttc" id="class_box2_d_world_html"><div class="ttname"><a href="class_box2_d_world.html">Box2DWorld</a></div><div class="ttdef"><b>Definition:</b> Box2DWorld.h:26</div></div>
+<div class="ttc" id="class_spell_node_html"><div class="ttname"><a href="class_spell_node.html">SpellNode</a></div><div class="ttdef"><b>Definition:</b> SpellNode.hpp:23</div></div>
 <div class="ttc" id="class_heat_event_html"><div class="ttname"><a href="class_heat_event.html">HeatEvent</a></div><div class="ttdef"><b>Definition:</b> HeatEvent.hpp:14</div></div>
 <div class="ttc" id="class_config_html_aaff6aaabead6b7486ec122f9dda807fd"><div class="ttname"><a href="class_config.html#aaff6aaabead6b7486ec122f9dda807fd">Config::g</a></div><div class="ttdeci">static T g(const std::string &amp;key, T defaultVar)</div><div class="ttdef"><b>Definition:</b> Config.hpp:59</div></div>
 </div><!-- fragment --></div><!-- contents -->

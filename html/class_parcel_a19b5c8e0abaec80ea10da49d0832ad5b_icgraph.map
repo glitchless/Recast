@@ -1,3 +1,6 @@
 <map id="Parcel::put" name="Parcel::put">
-<area shape="rect" id="node2" href="$class_parcel.html#ac4940394afdfc35d38d695d4b0e14956" title="Parcel::Parcel" alt="" coords="139,5,243,32"/>
+<area shape="rect" id="node2" href="$class_get_entitys.html#a14af21ff8ce5555e57ec532bc2db9448" title="GetEntitys::onPacket" alt="" coords="307,15,453,42"/>
+<area shape="rect" id="node3" href="$class_spell_node.html#a2c02575f831e8c7de826dc144279d19d" title="SpellNode::write" alt="" coords="139,78,258,104"/>
+<area shape="rect" id="node4" href="$class_spell.html#a6b2d7baf1e88b6e8075567f8c4afb716" title="Spell::write" alt="" coords="337,91,423,118"/>
+<area shape="rect" id="node5" href="$class_entity.html#a0f53605a8fe550f6811d953b32c8f94c" title="Entity::write" alt="" coords="153,27,245,54"/>
 </map>

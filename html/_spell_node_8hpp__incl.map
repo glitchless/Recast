@@ -1,4 +1,35 @@
 <map id="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/spells/nodes/SpellNode.hpp" name="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/spells/nodes/SpellNode.hpp">
-<area shape="rect" id="node3" href="$_i_event_listener_8hpp.html" title="spells/events/IEventListener.hpp" alt="" coords="67,125,279,152"/>
-<area shape="rect" id="node4" href="$_i_event_8hpp.html" title="IEvent.hpp" alt="" coords="131,200,216,227"/>
+<area shape="rect" id="node3" href="$_parcel_8hpp.html" title="Serialization Parcel class header file. " alt="" coords="2427,629,2537,656"/>
+<area shape="rect" id="node6" href="$_i_event_listener_8hpp.html" title="spells/events/IEventListener.hpp" alt="" coords="1783,125,1995,152"/>
+<area shape="rect" id="node7" href="$_i_event_8hpp.html" title="IEvent.hpp" alt="" coords="1605,200,1691,227"/>
+<area shape="rect" id="node9" href="$_box2_d_world_8h.html" title="world/Box2DWorld.h" alt="" coords="2190,357,2332,384"/>
+<area shape="rect" id="node16" href="$_server_8hpp.html" title="Server file. " alt="" coords="1484,275,1569,301"/>
+<area shape="rect" id="node11" href="$_entity_8h.html" title="world/wrappers/Entity.h" alt="" coords="2487,448,2645,475"/>
+<area shape="rect" id="node12" href="$_entity_data_8h.html" title="EntityData.h" alt="" coords="2529,539,2623,565"/>
+<area shape="rect" id="node13" href="$_entity_type_8h.html" title="EntityType.h" alt="" coords="2588,629,2684,656"/>
+<area shape="rect" id="node18" href="$_input_thread_8hpp.html" title="threads/InputThread.hpp" alt="" coords="1952,357,2115,384"/>
+<area shape="rect" id="node19" href="$_command_manager_8hpp.html" title="CommandManager file. " alt="" coords="1802,448,2027,475"/>
+<area shape="rect" id="node24" href="$_i_command_sender_8hpp.html" title="ICommandSender.hpp" alt="" coords="1461,720,1613,747"/>
+<area shape="rect" id="node25" href="$_network_server_8hpp.html" title="Networking server header file. " alt="" coords="1679,357,1877,384"/>
+<area shape="rect" id="node36" href="$_i_updater_8hpp.html" title="temperature&#45;world/interfaces\l/IUpdater.hpp" alt="" coords="1017,350,1204,391"/>
+<area shape="rect" id="node37" href="$_i_temperature_world_chunkable_observable_8hpp.html" title="temperature&#45;world/interfaces\l/ITemperatureWorldChunkableObservable.hpp" alt="" coords="356,350,647,391"/>
+<area shape="rect" id="node46" href="$_i_temperature_world_8hpp.html" title="ITemperatureWorld.hpp" alt="" coords="723,539,881,565"/>
+<area shape="rect" id="node48" href="$_i_temperature_world_chunkable_generatable_8hpp.html" title="temperature&#45;world/interfaces\l/ITemperatureWorldChunkableGeneratable.hpp" alt="" coords="1279,350,1573,391"/>
+<area shape="rect" id="node49" href="$_i_temperature_world_chunkable_mutable_8hpp.html" title="temperature&#45;world/interfaces\l/ITemperatureWorldChunkableMutable.hpp" alt="" coords="671,350,941,391"/>
+<area shape="rect" id="node50" href="$_i_temperature_world_chunkable_8hpp.html" title="temperature&#45;world/interfaces\l/ITemperatureWorldChunkable.hpp" alt="" coords="108,350,331,391"/>
+<area shape="rect" id="node22" href="$_delay_command_8h.html" title="utils/DelayCommand.h" alt="" coords="1835,539,1988,565"/>
+<area shape="rect" id="node23" href="$_i_command_8hpp.html" title="Command file. " alt="" coords="1507,629,1685,656"/>
+<area shape="rect" id="node26" href="$_networking_8hpp.html" title="Networking quick&#45;include header file. " alt="" coords="1199,448,1312,475"/>
+<area shape="rect" id="node27" href="$_network_utils_8hpp.html" title="Basic networking utils header file. " alt="" coords="1004,720,1127,747"/>
+<area shape="rect" id="node32" href="$_network_listener_8hpp.html" title="NetworkListener.hpp" alt="" coords="1289,629,1431,656"/>
+<area shape="rect" id="node33" href="$_socket_8hpp.html" title="Socket abstract utils header file. " alt="" coords="1109,629,1197,656"/>
+<area shape="rect" id="node34" href="$_socket_t_c_p_8hpp.html" title="SocketTCP.hpp" alt="" coords="1008,539,1123,565"/>
+<area shape="rect" id="node35" href="$_socket_u_d_p_8hpp.html" title="Socket (UDP) utils header file. " alt="" coords="1197,539,1313,565"/>
+<area shape="rect" id="node38" href="$_i_temperature_world_boundable_8hpp.html" title="temperature&#45;world/interfaces\l/ITemperatureWorldBoundable.hpp" alt="" coords="409,441,631,482"/>
+<area shape="rect" id="node40" href="$_edge_8hpp.html" title="temperature&#45;world/types\l/Edge.hpp" alt="" coords="331,531,493,573"/>
+<area shape="rect" id="node41" href="$_coord_8hpp.html" title="temperature&#45;world/types\l/Coord.hpp" alt="" coords="636,622,799,663"/>
+<area shape="rect" id="node44" href="$_size_8hpp.html" title="temperature&#45;world/types\l/Size.hpp" alt="" coords="144,622,307,663"/>
+<area shape="rect" id="node45" href="$_temperature_8hpp.html" title="temperature&#45;world/types\l/Temperature.hpp" alt="" coords="449,622,612,663"/>
+<area shape="rect" id="node47" href="$_parallelepiped_8hpp.html" title="temperature&#45;world/types\l/Parallelepiped.hpp" alt="" coords="144,531,307,573"/>
+<area shape="rect" id="node43" href="$_generic_scalar_8hpp.html" title="GenericScalar.hpp" alt="" coords="466,720,595,747"/>
 </map>

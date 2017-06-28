@@ -1,0 +1,4 @@
+<map id="SpellEntity::update" name="SpellEntity::update">
+<area shape="rect" id="node2" href="$class_spell.html#a1837ad4ea2fecb2644f4818cd0a99d62" title="Spell::tickSpell" alt="" coords="187,5,296,32"/>
+<area shape="rect" id="node3" href="$class_spell_node.html#a1286f427e4386e3524ce6914b22a94fb" title="SpellNode::tick" alt="" coords="345,5,455,32"/>
+</map>

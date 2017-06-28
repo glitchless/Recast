@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['tasks',['tasks',['../struct_threaded_chunked_temperature_world_updater_1_1_thread_data.html#ab084ac0c15a2536095bef8c9297361f5',1,'ThreadedChunkedTemperatureWorldUpdater::ThreadData']]],
-  ['tasksqueue',['tasksQueue',['../struct_threaded_chunked_temperature_world_updater_1_1_thread_data.html#ac72652dd6c97da60b3d4d1415ddb6f3d',1,'ThreadedChunkedTemperatureWorldUpdater::ThreadData']]],
-  ['tasksqueuemutex',['tasksQueueMutex',['../struct_threaded_chunked_temperature_world_updater_1_1_thread_data.html#a79a7bd3c8bcb2441418511bd54bf52ce',1,'ThreadedChunkedTemperatureWorldUpdater::ThreadData']]],
-  ['tasksqueuewait',['tasksQueueWait',['../struct_threaded_chunked_temperature_world_updater_1_1_thread_data.html#a177bfecc3ca2c821c762743d36abc0ae',1,'ThreadedChunkedTemperatureWorldUpdater::ThreadData']]],
-  ['tasksqueuewaitmutex',['tasksQueueWaitMutex',['../struct_threaded_chunked_temperature_world_updater_1_1_thread_data.html#ae7997a285fb8f3215745638c8201207e',1,'ThreadedChunkedTemperatureWorldUpdater::ThreadData']]]
+  ['session_5flength',['SESSION_LENGTH',['../_players_online_8hpp.html#a691e4bc5ad1d481487a1c16f953a7adc',1,'PlayersOnline.hpp']]],
+  ['socketboundport',['socketBoundPort',['../class_socket.html#ab05ebf38966e1cd1f093819a6bdad5b1',1,'Socket']]],
+  ['socketdescr',['socketDescr',['../class_socket.html#a610fbf456550dd084cfaee9d1267e5c8',1,'Socket']]],
+  ['spellentity',['spellEntity',['../class_entity_data.html#a5c2ab0f4236334b63ebd90800aa07e03',1,'EntityData']]]
 ];

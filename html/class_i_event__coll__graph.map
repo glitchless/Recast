@@ -1,2 +1,3 @@
 <map id="IEvent" name="IEvent">
+<area shape="rect" id="node2" href="$class_spell_node.html" title="{SpellNode\n|# x\l# y\l# z\l# connectedNodes\l# nowInTick\l# type\l|+ SpellNode()\l+ ~SpellNode()\l+ isEnergyNode()\l+ connectNode()\l+ tick()\l+ inTick()\l+ getDistance()\l+ getType()\l+ iterrator()\l+ getConnectedNodes()\l+ getX()\l+ getY()\l+ getZ()\l+ write()\l+ read()\l# onTick()\l}" alt="" coords="5,5,165,376"/>
 </map>

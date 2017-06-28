@@ -1,0 +1,5 @@
+<map id="Entity::getId" name="Entity::getId">
+<area shape="rect" id="node2" href="$class_create_entity_command.html#aacb06adba7b70b5a5225c72bf943bab2" title="CreateEntityCommand\l::onCommand" alt="" coords="147,5,301,46"/>
+<area shape="rect" id="node3" href="$class_entity.html#a0f53605a8fe550f6811d953b32c8f94c" title="Entity::write" alt="" coords="178,71,270,97"/>
+<area shape="rect" id="node4" href="$class_get_entitys.html#a14af21ff8ce5555e57ec532bc2db9448" title="GetEntitys::onPacket" alt="" coords="349,71,496,97"/>
+</map>

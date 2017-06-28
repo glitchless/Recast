@@ -15,9 +15,11 @@ var searchData=
   ['isdownscale',['isDownscale',['../struct_int_scale.html#af516c13864dcbf3e493d2a9e0fff1e01',1,'IntScale']]],
   ['isenergynode',['isEnergyNode',['../class_energy_node.html#a3a215be078964713e490198ee311d70f',1,'EnergyNode::isEnergyNode()'],['../class_spell_node.html#aa697b780e010dea8deb78eae8f61e36f',1,'SpellNode::isEnergyNode()']]],
   ['isfirstupdate',['isFirstUpdate',['../class_basic_timer.html#a5277953b0009fffbf0f085d96956114f',1,'BasicTimer::isFirstUpdate()'],['../class_synchronized_blocking_timer.html#aac722c8e143693caf08eed7cce5c3664',1,'SynchronizedBlockingTimer::isFirstUpdate()'],['../class_i_timer.html#a781d77c2f58562e049e68d90fff2ad85',1,'ITimer::isFirstUpdate()']]],
+  ['isonlyuicommand',['isOnlyUICommand',['../class_create_entity_command.html#a8cb21ea7a4b172a26e2a3e62586a1c4a',1,'CreateEntityCommand::isOnlyUICommand()'],['../class_i_command.html#ac2bd771dcd2fda5a951869bdc4928b48',1,'ICommand::isOnlyUICommand()']]],
   ['isop',['isOP',['../class_i_command_sender.html#afe930466c485c8d9a67f624dc1dcac5e',1,'ICommandSender::isOP()'],['../class_server.html#a7b6439f1e85af364215c544d675ea972',1,'Server::isOP()']]],
   ['isrunning',['isRunning',['../class_server.html#ab8c22a0d6809e9aa84bebce478ba7bc5',1,'Server']]],
   ['issamesize',['isSameSize',['../struct_parallelepiped.html#a1233e1b19767f80b991b2dc4a9e20146',1,'Parallelepiped']]],
   ['isupscale',['isUpscale',['../struct_int_scale.html#a8e29056cca4118d125a425a9380d9260',1,'IntScale']]],
-  ['isvalid',['isValid',['../class_i_command.html#acb0beea12bd5ec963884dc35d4d48014',1,'ICommand::isValid()'],['../class_stop_command.html#a0f9a9fd9bb238524e1be3ea25b9bbb79',1,'StopCommand::isValid()']]]
+  ['isvalid',['isValid',['../class_create_entity_command.html#abeba611ac32b8d438736a383cf5f041f',1,'CreateEntityCommand::isValid()'],['../class_i_command.html#acb0beea12bd5ec963884dc35d4d48014',1,'ICommand::isValid()'],['../class_stop_command.html#a0f9a9fd9bb238524e1be3ea25b9bbb79',1,'StopCommand::isValid()']]],
+  ['iterrator',['iterrator',['../class_spell_node.html#aac7571c9caae433a697b94d29a6468fa',1,'SpellNode']]]
 ];

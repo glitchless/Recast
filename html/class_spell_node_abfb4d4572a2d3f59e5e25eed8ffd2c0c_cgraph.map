@@ -1,0 +1,5 @@
+<map id="SpellNode::read" name="SpellNode::read">
+<area shape="rect" id="node2" href="$class_parcel.html#a4540d13bf8699f6f3bcafd9e95bce706" title="Parcel::readInt" alt="" coords="176,5,283,32"/>
+<area shape="rect" id="node4" href="$class_parcel.html#aea33f46c6e77dd0c297e1ef5fdf5973e" title="Parcel::readFloat" alt="" coords="169,56,290,83"/>
+<area shape="rect" id="node3" href="$_parcel_8cpp.html#ab8119384bb71fe92a1619107979baa6f" title="setByte" alt="" coords="339,31,405,57"/>
+</map>

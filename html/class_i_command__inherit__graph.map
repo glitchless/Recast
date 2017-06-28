@@ -1,3 +1,4 @@
 <map id="ICommand" name="ICommand">
-<area shape="rect" id="node2" href="$class_stop_command.html" title="{StopCommand\n||+ isValid()\l+ onCommand()\l}" alt="" coords="5,177,120,269"/>
+<area shape="rect" id="node2" href="$class_create_entity_command.html" title="{CreateEntityCommand\n||+ isOnlyUICommand()\l+ isValid()\l+ onCommand()\l}" alt="" coords="5,189,159,296"/>
+<area shape="rect" id="node3" href="$class_stop_command.html" title="{StopCommand\n||+ isValid()\l+ onCommand()\l}" alt="" coords="185,197,300,289"/>
 </map>

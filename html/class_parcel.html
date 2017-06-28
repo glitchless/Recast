@@ -106,16 +106,12 @@ Collaboration diagram for Parcel:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac4940394afdfc35d38d695d4b0e14956"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parcel.html#ac4940394afdfc35d38d695d4b0e14956">Parcel</a> (int code)</td></tr>
-<tr class="separator:ac4940394afdfc35d38d695d4b0e14956"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fe786594990e38b7aecb1e994aa50fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parcel.html#a8fe786594990e38b7aecb1e994aa50fc">Parcel</a> (std::vector&lt; char &gt; *data)</td></tr>
-<tr class="separator:a8fe786594990e38b7aecb1e994aa50fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a5f1bd543d5685042b7ab61399abfc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parcel.html#a7a5f1bd543d5685042b7ab61399abfc6">~Parcel</a> ()</td></tr>
-<tr class="separator:a7a5f1bd543d5685042b7ab61399abfc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80bc44e52660817288138bc3e8eeb913"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parcel.html#a80bc44e52660817288138bc3e8eeb913">Parcel</a> ()</td></tr>
+<tr class="separator:a80bc44e52660817288138bc3e8eeb913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4041109946826da335989a6554153e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parcel.html#af4041109946826da335989a6554153e0">Parcel</a> (std::vector&lt; char &gt; vector)</td></tr>
+<tr class="separator:af4041109946826da335989a6554153e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75b0f276e47657edb2cc4f51d571158e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parcel.html#a75b0f276e47657edb2cc4f51d571158e">Parcel</a> (<a class="el" href="class_parcel.html">Parcel</a> &amp;other)=delete</td></tr>
 <tr class="separator:a75b0f276e47657edb2cc4f51d571158e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f146387f34b3d2ac590f33b5126bc23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parcel.html#a6f146387f34b3d2ac590f33b5126bc23">getCode</a> ()</td></tr>
-<tr class="separator:a6f146387f34b3d2ac590f33b5126bc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b164ec23965e3f37dd8a0d99321e232"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parcel.html#a0b164ec23965e3f37dd8a0d99321e232">putString</a> (std::string var)</td></tr>
 <tr class="separator:a0b164ec23965e3f37dd8a0d99321e232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19b5c8e0abaec80ea10da49d0832ad5b"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
@@ -127,71 +123,47 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad0d3b72bb1ca2319bab9a1981f60cd53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea33f46c6e77dd0c297e1ef5fdf5973e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parcel.html#aea33f46c6e77dd0c297e1ef5fdf5973e">readFloat</a> ()</td></tr>
 <tr class="separator:aea33f46c6e77dd0c297e1ef5fdf5973e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76fa40dc5cf6ede93b627f3f4845176"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; char &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parcel.html#ad76fa40dc5cf6ede93b627f3f4845176">getVector</a> () const </td></tr>
+<tr class="separator:ad76fa40dc5cf6ede93b627f3f4845176"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Позволяет переводить удобно данные в массив. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac4940394afdfc35d38d695d4b0e14956"></a>
+<a class="anchor" id="a80bc44e52660817288138bc3e8eeb913"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Parcel::Parcel </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>code</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_parcel_ac4940394afdfc35d38d695d4b0e14956_cgraph.png" border="0" usemap="#class_parcel_ac4940394afdfc35d38d695d4b0e14956_cgraph" alt=""/></div>
-<map name="class_parcel_ac4940394afdfc35d38d695d4b0e14956_cgraph" id="class_parcel_ac4940394afdfc35d38d695d4b0e14956_cgraph">
-<area shape="rect" id="node2" href="class_parcel.html#a19b5c8e0abaec80ea10da49d0832ad5b" title="Parcel::put" alt="" coords="157,5,243,32"/><area shape="rect" id="node3" href="_parcel_8cpp.html#a105271315030f8e3fc6640b8b5042d68" title="getByte" alt="" coords="291,5,357,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a8fe786594990e38b7aecb1e994aa50fc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Parcel::Parcel </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; char &gt; *&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_parcel_a8fe786594990e38b7aecb1e994aa50fc_cgraph.png" border="0" usemap="#class_parcel_a8fe786594990e38b7aecb1e994aa50fc_cgraph" alt=""/></div>
-<map name="class_parcel_a8fe786594990e38b7aecb1e994aa50fc_cgraph" id="class_parcel_a8fe786594990e38b7aecb1e994aa50fc_cgraph">
-<area shape="rect" id="node2" href="class_parcel.html#a4540d13bf8699f6f3bcafd9e95bce706" title="Parcel::readInt" alt="" coords="157,5,264,32"/><area shape="rect" id="node3" href="_parcel_8cpp.html#ab8119384bb71fe92a1619107979baa6f" title="setByte" alt="" coords="312,5,379,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a7a5f1bd543d5685042b7ab61399abfc6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Parcel::~Parcel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af4041109946826da335989a6554153e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Parcel::Parcel </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; char &gt;&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -221,18 +193,35 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6f146387f34b3d2ac590f33b5126bc23"></a>
+<a class="anchor" id="ad76fa40dc5cf6ede93b627f3f4845176"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Parcel::getCode </td>
+          <td class="memname">const std::vector&lt;char&gt;* Parcel::getVector </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parcel_ad76fa40dc5cf6ede93b627f3f4845176_icgraph.png" border="0" usemap="#class_parcel_ad76fa40dc5cf6ede93b627f3f4845176_icgraph" alt=""/></div>
+<map name="class_parcel_ad76fa40dc5cf6ede93b627f3f4845176_icgraph" id="class_parcel_ad76fa40dc5cf6ede93b627f3f4845176_icgraph">
+<area shape="rect" id="node2" href="class_get_entitys.html#a14af21ff8ce5555e57ec532bc2db9448" title="GetEntitys::onPacket" alt="" coords="176,5,323,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -241,6 +230,9 @@ Here is the call graph for this function:</div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Parcel::put </td>
@@ -250,23 +242,19 @@ template&lt;class T &gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_parcel_a19b5c8e0abaec80ea10da49d0832ad5b_cgraph.png" border="0" usemap="#class_parcel_a19b5c8e0abaec80ea10da49d0832ad5b_cgraph" alt=""/></div>
-<map name="class_parcel_a19b5c8e0abaec80ea10da49d0832ad5b_cgraph" id="class_parcel_a19b5c8e0abaec80ea10da49d0832ad5b_cgraph">
-<area shape="rect" id="node2" href="_parcel_8cpp.html#a105271315030f8e3fc6640b8b5042d68" title="getByte" alt="" coords="139,5,205,32"/></map>
-</div>
-</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parcel_a19b5c8e0abaec80ea10da49d0832ad5b_icgraph.png" border="0" usemap="#class_parcel_a19b5c8e0abaec80ea10da49d0832ad5b_icgraph" alt=""/></div>
 <map name="class_parcel_a19b5c8e0abaec80ea10da49d0832ad5b_icgraph" id="class_parcel_a19b5c8e0abaec80ea10da49d0832ad5b_icgraph">
-<area shape="rect" id="node2" href="class_parcel.html#ac4940394afdfc35d38d695d4b0e14956" title="Parcel::Parcel" alt="" coords="139,5,243,32"/></map>
+<area shape="rect" id="node2" href="class_get_entitys.html#a14af21ff8ce5555e57ec532bc2db9448" title="GetEntitys::onPacket" alt="" coords="307,15,453,42"/><area shape="rect" id="node3" href="class_spell_node.html#a2c02575f831e8c7de826dc144279d19d" title="SpellNode::write" alt="" coords="139,78,258,104"/><area shape="rect" id="node4" href="class_spell.html#a6b2d7baf1e88b6e8075567f8c4afb716" title="Spell::write" alt="" coords="337,91,423,118"/><area shape="rect" id="node5" href="class_entity.html#a0f53605a8fe550f6811d953b32c8f94c" title="Entity::write" alt="" coords="153,27,245,54"/></map>
 </div>
 </p>
 
@@ -310,6 +298,15 @@ Here is the call graph for this function:</div>
 </div>
 </p>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parcel_aea33f46c6e77dd0c297e1ef5fdf5973e_icgraph.png" border="0" usemap="#class_parcel_aea33f46c6e77dd0c297e1ef5fdf5973e_icgraph" alt=""/></div>
+<map name="class_parcel_aea33f46c6e77dd0c297e1ef5fdf5973e_icgraph" id="class_parcel_aea33f46c6e77dd0c297e1ef5fdf5973e_icgraph">
+<area shape="rect" id="node2" href="class_cast_spell.html#ae1eb065bf5eef89f24b5b540e2ef8df2" title="CastSpell::onPacket" alt="" coords="473,5,615,32"/><area shape="rect" id="node3" href="class_spell_node.html#abfb4d4572a2d3f59e5e25eed8ffd2c0c" title="SpellNode::read" alt="" coords="176,31,291,57"/><area shape="rect" id="node4" href="class_spell.html#aaaa7ff3183bf18d35d555f3d994fb76d" title="Spell::read" alt="" coords="339,31,423,57"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a4540d13bf8699f6f3bcafd9e95bce706"></a>
@@ -339,7 +336,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parcel_a4540d13bf8699f6f3bcafd9e95bce706_icgraph.png" border="0" usemap="#class_parcel_a4540d13bf8699f6f3bcafd9e95bce706_icgraph" alt=""/></div>
 <map name="class_parcel_a4540d13bf8699f6f3bcafd9e95bce706_icgraph" id="class_parcel_a4540d13bf8699f6f3bcafd9e95bce706_icgraph">
-<area shape="rect" id="node2" href="class_parcel.html#a8fe786594990e38b7aecb1e994aa50fc" title="Parcel::Parcel" alt="" coords="160,5,264,32"/></map>
+<area shape="rect" id="node2" href="class_spell_node.html#abfb4d4572a2d3f59e5e25eed8ffd2c0c" title="SpellNode::read" alt="" coords="160,5,275,32"/><area shape="rect" id="node3" href="class_spell.html#aaaa7ff3183bf18d35d555f3d994fb76d" title="Spell::read" alt="" coords="323,31,407,57"/><area shape="rect" id="node4" href="class_cast_spell.html#ae1eb065bf5eef89f24b5b540e2ef8df2" title="CastSpell::onPacket" alt="" coords="457,31,599,57"/></map>
 </div>
 </p>
 

@@ -1,3 +1,4 @@
 <map id="IEvent" name="IEvent">
-<area shape="rect" id="node2" href="$class_heat_event.html" title="{HeatEvent\n||+ HeatEvent()\l+ getTempFromEnergy()\l}" alt="" coords="5,161,168,253"/>
+<area shape="rect" id="node2" href="$class_heat_event.html" title="{HeatEvent\n||+ HeatEvent()\l+ commit()\l+ getTempFromEnergy()\l}" alt="" coords="5,160,168,267"/>
+<area shape="rect" id="node3" href="$class_move_event.html" title="{MoveEvent\n||+ MoveEvent()\l+ commit()\l}" alt="" coords="193,167,300,259"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="CollectEntity::getEntitys" name="CollectEntity::getEntitys">
+<area shape="rect" id="node2" href="$class_box2_d_world.html#ae1d2d9777c5a7b87253d3396b9f64451" title="Box2DWorld::getAllEntity\lInChunk" alt="" coords="219,5,389,46"/>
+<area shape="rect" id="node3" href="$class_get_entitys.html#a14af21ff8ce5555e57ec532bc2db9448" title="GetEntitys::onPacket" alt="" coords="437,12,584,39"/>
+</map>

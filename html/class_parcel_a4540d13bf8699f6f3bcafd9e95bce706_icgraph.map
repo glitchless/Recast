@@ -1,3 +1,5 @@
 <map id="Parcel::readInt" name="Parcel::readInt">
-<area shape="rect" id="node2" href="$class_parcel.html#a8fe786594990e38b7aecb1e994aa50fc" title="Parcel::Parcel" alt="" coords="160,5,264,32"/>
+<area shape="rect" id="node2" href="$class_spell_node.html#abfb4d4572a2d3f59e5e25eed8ffd2c0c" title="SpellNode::read" alt="" coords="160,5,275,32"/>
+<area shape="rect" id="node3" href="$class_spell.html#aaaa7ff3183bf18d35d555f3d994fb76d" title="Spell::read" alt="" coords="323,31,407,57"/>
+<area shape="rect" id="node4" href="$class_cast_spell.html#ae1eb065bf5eef89f24b5b540e2ef8df2" title="CastSpell::onPacket" alt="" coords="457,31,599,57"/>
 </map>

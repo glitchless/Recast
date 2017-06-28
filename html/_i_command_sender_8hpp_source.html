@@ -102,26 +102,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span><a class="code" href="struct_player.html">Player</a>;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_i_command_sender.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_command_sender.html">ICommandSender</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_i_command_sender.html#afe930466c485c8d9a67f624dc1dcac5e">isOP</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_server.html">Server</a> *<a class="code" href="class_i_command_sender.html#afe665fdd44daefad719049b540fc14b9">getServer</a>() = 0;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">class </span><a class="code" href="class_box2_d_world.html">Box2DWorld</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_i_command_sender.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_command_sender.html">ICommandSender</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_i_command_sender.html#afe930466c485c8d9a67f624dc1dcac5e">isOP</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//TODO getWorld()</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="struct_player.html">Player</a> *<a class="code" href="class_i_command_sender.html#abe8ec89d12e5de40cec1062da47f336c">getPlayer</a>() = 0;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_command_sender.html#a613b27b190c7fb5123597939c0896080">onMessage</a>(<span class="keyword">const</span> std::string &amp;msg) = 0;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_server.html">Server</a> *<a class="code" href="class_i_command_sender.html#afe665fdd44daefad719049b540fc14b9">getServer</a>() = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_box2_d_world.html">Box2DWorld</a> *<a class="code" href="class_i_command_sender.html#ae5a701968c93ec631c06106a61c41275">getWorld</a>() = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="struct_player.html">Player</a> *<a class="code" href="class_i_command_sender.html#abe8ec89d12e5de40cec1062da47f336c">getPlayer</a>() = 0;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_ICOMMANDSENDER_H</span></div>
-<div class="ttc" id="class_server_html"><div class="ttname"><a href="class_server.html">Server</a></div><div class="ttdoc">Main class in Recast Server. </div><div class="ttdef"><b>Definition:</b> Server.hpp:34</div></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_command_sender.html#a613b27b190c7fb5123597939c0896080">onMessage</a>(<span class="keyword">const</span> std::string &amp;msg) = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_ICOMMANDSENDER_H</span></div>
+<div class="ttc" id="class_server_html"><div class="ttname"><a href="class_server.html">Server</a></div><div class="ttdoc">Main class in Recast Server. </div><div class="ttdef"><b>Definition:</b> Server.hpp:37</div></div>
+<div class="ttc" id="class_i_command_sender_html_ae5a701968c93ec631c06106a61c41275"><div class="ttname"><a href="class_i_command_sender.html#ae5a701968c93ec631c06106a61c41275">ICommandSender::getWorld</a></div><div class="ttdeci">virtual Box2DWorld * getWorld()=0</div></div>
+<div class="ttc" id="class_box2_d_world_html"><div class="ttname"><a href="class_box2_d_world.html">Box2DWorld</a></div><div class="ttdef"><b>Definition:</b> Box2DWorld.h:26</div></div>
 <div class="ttc" id="class_i_command_sender_html_afe665fdd44daefad719049b540fc14b9"><div class="ttname"><a href="class_i_command_sender.html#afe665fdd44daefad719049b540fc14b9">ICommandSender::getServer</a></div><div class="ttdeci">virtual Server * getServer()=0</div></div>
 <div class="ttc" id="class_i_command_sender_html_a613b27b190c7fb5123597939c0896080"><div class="ttname"><a href="class_i_command_sender.html#a613b27b190c7fb5123597939c0896080">ICommandSender::onMessage</a></div><div class="ttdeci">virtual void onMessage(const std::string &amp;msg)=0</div></div>
 <div class="ttc" id="class_i_command_sender_html_abe8ec89d12e5de40cec1062da47f336c"><div class="ttname"><a href="class_i_command_sender.html#abe8ec89d12e5de40cec1062da47f336c">ICommandSender::getPlayer</a></div><div class="ttdeci">virtual Player * getPlayer()=0</div></div>
 <div class="ttc" id="class_i_command_sender_html_afe930466c485c8d9a67f624dc1dcac5e"><div class="ttname"><a href="class_i_command_sender.html#afe930466c485c8d9a67f624dc1dcac5e">ICommandSender::isOP</a></div><div class="ttdeci">virtual bool isOP() const =0</div></div>
-<div class="ttc" id="class_i_command_sender_html"><div class="ttname"><a href="class_i_command_sender.html">ICommandSender</a></div><div class="ttdef"><b>Definition:</b> ICommandSender.hpp:10</div></div>
+<div class="ttc" id="class_i_command_sender_html"><div class="ttname"><a href="class_i_command_sender.html">ICommandSender</a></div><div class="ttdef"><b>Definition:</b> ICommandSender.hpp:12</div></div>
 <div class="ttc" id="struct_player_html"><div class="ttname"><a href="struct_player.html">Player</a></div><div class="ttdoc">Player class. XP, Life points and other. </div><div class="ttdef"><b>Definition:</b> Player.hpp:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

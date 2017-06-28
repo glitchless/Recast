@@ -1,3 +1,5 @@
 <map id="NetworkListener" name="NetworkListener">
-<area shape="rect" id="node2" href="$class_debug_network_listener.html" title="{DebugNetworkListener\n||+ onPacket()\l}" alt="" coords="4,160,157,237"/>
+<area shape="rect" id="node2" href="$class_cast_spell.html" title="{CastSpell\n||+ CastSpell()\l+ onPacket()\l}" alt="" coords="5,161,104,253"/>
+<area shape="rect" id="node3" href="$class_debug_network_listener.html" title="{DebugNetworkListener\n||+ onPacket()\l}" alt="" coords="128,168,281,245"/>
+<area shape="rect" id="node4" href="$class_get_entitys.html" title="{GetEntitys\n||+ GetEntitys()\l+ onPacket()\l}" alt="" coords="307,161,411,253"/>
 </map>

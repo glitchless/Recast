@@ -97,29 +97,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef RECAST_SERVER_SPELLEVENTLISTENER_H</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RECAST_SERVER_SPELLEVENTLISTENER_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_event_listener_8hpp.html">IEventListener.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span><a class="code" href="class_spell.html">Spell</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_spell_event_listener.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_spell_event_listener.html">SpellEventListener</a> : <span class="keyword">public</span> <a class="code" href="class_i_event_listener.html">IEventListener</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_spell_event_listener.html#ac0c7b6c313e21fc2d48605b3581fde7a">   17</a></span>&#160;    <a class="code" href="class_spell_event_listener.html#ac0c7b6c313e21fc2d48605b3581fde7a">SpellEventListener</a>(<a class="code" href="class_spell.html">Spell</a> *spell) : spell(spell) {}</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_spell_event_listener.html#aad071b51be0727a2e5554252d50586f4">onEvent</a>(<a class="code" href="class_i_event.html">IEvent</a> event);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_spell.html">Spell</a> *spell;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_server_8hpp.html">Server.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_event_listener_8hpp.html">IEventListener.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="class_spell.html">Spell</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="class_spell_entity.html">SpellEntity</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_spell_event_listener.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_spell_event_listener.html">SpellEventListener</a> : <span class="keyword">public</span> <a class="code" href="class_i_event_listener.html">IEventListener</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_spell_event_listener.html#a8f77a32833b02102acf5cddf789d9b31">   20</a></span>&#160;    <a class="code" href="class_spell_event_listener.html#a8f77a32833b02102acf5cddf789d9b31">SpellEventListener</a>(<a class="code" href="class_spell.html">Spell</a> *spell, <a class="code" href="class_spell_entity.html">SpellEntity</a> *entity, <a class="code" href="class_box2_d_world.html">Box2DWorld</a> *world, std::shared_ptr&lt;TempWorld&gt; tempWorld)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            : spell(spell),</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;              entity(entity),</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;              world(world),</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;              tempWorld(tempWorld) {}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_SPELLEVENTLISTENER_H</span></div>
-<div class="ttc" id="class_spell_event_listener_html_aad071b51be0727a2e5554252d50586f4"><div class="ttname"><a href="class_spell_event_listener.html#aad071b51be0727a2e5554252d50586f4">SpellEventListener::onEvent</a></div><div class="ttdeci">void onEvent(IEvent event)</div><div class="ttdef"><b>Definition:</b> SpellEventListener.cpp:10</div></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_spell_event_listener.html#a932a0a7b25fc732ebd796244370162e7">onEvent</a>(<a class="code" href="class_i_event.html">IEvent</a> &amp;event);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_spell.html">Spell</a> *spell;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_spell_entity.html">SpellEntity</a> *entity;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_box2_d_world.html">Box2DWorld</a> *world;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::shared_ptr&lt;TempWorld&gt; tempWorld;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif //RECAST_SERVER_SPELLEVENTLISTENER_H</span></div>
+<div class="ttc" id="class_spell_event_listener_html_a8f77a32833b02102acf5cddf789d9b31"><div class="ttname"><a href="class_spell_event_listener.html#a8f77a32833b02102acf5cddf789d9b31">SpellEventListener::SpellEventListener</a></div><div class="ttdeci">SpellEventListener(Spell *spell, SpellEntity *entity, Box2DWorld *world, std::shared_ptr&lt; TempWorld &gt; tempWorld)</div><div class="ttdef"><b>Definition:</b> SpellEventListener.hpp:20</div></div>
 <div class="ttc" id="class_spell_html"><div class="ttname"><a href="class_spell.html">Spell</a></div><div class="ttdef"><b>Definition:</b> Spell.hpp:15</div></div>
-<div class="ttc" id="class_spell_event_listener_html"><div class="ttname"><a href="class_spell_event_listener.html">SpellEventListener</a></div><div class="ttdef"><b>Definition:</b> SpellEventListener.hpp:15</div></div>
-<div class="ttc" id="class_i_event_html"><div class="ttname"><a href="class_i_event.html">IEvent</a></div><div class="ttdef"><b>Definition:</b> IEvent.hpp:15</div></div>
+<div class="ttc" id="_server_8hpp_html"><div class="ttname"><a href="_server_8hpp.html">Server.hpp</a></div><div class="ttdoc">Server file. </div></div>
+<div class="ttc" id="class_spell_entity_html"><div class="ttname"><a href="class_spell_entity.html">SpellEntity</a></div><div class="ttdef"><b>Definition:</b> SpellEntity.h:16</div></div>
+<div class="ttc" id="class_spell_event_listener_html"><div class="ttname"><a href="class_spell_event_listener.html">SpellEventListener</a></div><div class="ttdef"><b>Definition:</b> SpellEventListener.hpp:18</div></div>
+<div class="ttc" id="class_i_event_html"><div class="ttname"><a href="class_i_event.html">IEvent</a></div><div class="ttdef"><b>Definition:</b> IEvent.hpp:18</div></div>
+<div class="ttc" id="class_box2_d_world_html"><div class="ttname"><a href="class_box2_d_world.html">Box2DWorld</a></div><div class="ttdef"><b>Definition:</b> Box2DWorld.h:26</div></div>
 <div class="ttc" id="_i_event_listener_8hpp_html"><div class="ttname"><a href="_i_event_listener_8hpp.html">IEventListener.hpp</a></div></div>
+<div class="ttc" id="class_spell_event_listener_html_a932a0a7b25fc732ebd796244370162e7"><div class="ttname"><a href="class_spell_event_listener.html#a932a0a7b25fc732ebd796244370162e7">SpellEventListener::onEvent</a></div><div class="ttdeci">void onEvent(IEvent &amp;event)</div><div class="ttdef"><b>Definition:</b> SpellEventListener.cpp:10</div></div>
 <div class="ttc" id="class_i_event_listener_html"><div class="ttname"><a href="class_i_event_listener.html">IEventListener</a></div><div class="ttdef"><b>Definition:</b> IEventListener.hpp:13</div></div>
-<div class="ttc" id="class_spell_event_listener_html_ac0c7b6c313e21fc2d48605b3581fde7a"><div class="ttname"><a href="class_spell_event_listener.html#ac0c7b6c313e21fc2d48605b3581fde7a">SpellEventListener::SpellEventListener</a></div><div class="ttdeci">SpellEventListener(Spell *spell)</div><div class="ttdef"><b>Definition:</b> SpellEventListener.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

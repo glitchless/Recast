@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_spell_node-members.html">List of all members</a>  </div>
@@ -103,7 +104,7 @@ Inheritance diagram for SpellNode:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_spell_node__inherit__graph.png" border="0" usemap="#_spell_node_inherit__map" alt="Inheritance graph"/></div>
 <map name="_spell_node_inherit__map" id="_spell_node_inherit__map">
-<area shape="rect" id="node2" href="class_energy_node.html" title="{EnergyNode\n|# energy\l|+ EnergyNode()\l+ isEnergyNode()\l+ getEnergy()\l+ transferEnergy()\l# onTick()\l}" alt="" coords="6,293,132,429"/><area shape="rect" id="node3" href="class_heater_node.html" title="{HeaterNode\n||+ HeaterNode()\l}" alt="" coords="13,477,124,555"/></map>
+<area shape="rect" id="node2" href="class_energy_node.html" title="{EnergyNode\n|# energy\l|+ EnergyNode()\l+ EnergyNode()\l+ isEnergyNode()\l+ getEnergy()\l+ transferEnergy()\l# onTick()\l}" alt="" coords="127,425,253,575"/><area shape="rect" id="node3" href="class_aim_node.html" title="{AimNode\n||+ AimNode()\l}" alt="" coords="5,624,101,701"/><area shape="rect" id="node4" href="class_generator_node.html" title="{GeneratorNode\n||+ GeneratorNode()\l}" alt="" coords="125,624,255,701"/><area shape="rect" id="node5" href="class_heater_node.html" title="{HeaterNode\n||+ HeaterNode()\l}" alt="" coords="280,624,391,701"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for SpellNode:</div>
@@ -115,8 +116,8 @@ Collaboration diagram for SpellNode:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a494db54e25007a0a5a0f0fb69e4e0edf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#a494db54e25007a0a5a0f0fb69e4e0edf">SpellNode</a> (float <a class="el" href="class_spell_node.html#a916f2a709a674dd2a61530b6acc339cc">x</a>, float <a class="el" href="class_spell_node.html#a754d80fd0fd82dbc12443b5f277b9fb4">y</a>, float <a class="el" href="class_spell_node.html#aff090331ff1bd816a22e974a50c1a180">z</a>)</td></tr>
-<tr class="separator:a494db54e25007a0a5a0f0fb69e4e0edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a131e6e5862945a8371fffcf907603f23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#a131e6e5862945a8371fffcf907603f23">SpellNode</a> (<a class="el" href="_spell_node_8hpp.html#acac9cbaeea226ed297804c012dc12b16">NodeType</a> <a class="el" href="class_spell_node.html#ae897f4f135608a9c71948b5f703aeb99">type</a>, float <a class="el" href="class_spell_node.html#a916f2a709a674dd2a61530b6acc339cc">x</a>, float <a class="el" href="class_spell_node.html#a754d80fd0fd82dbc12443b5f277b9fb4">y</a>, float <a class="el" href="class_spell_node.html#aff090331ff1bd816a22e974a50c1a180">z</a>)</td></tr>
+<tr class="separator:a131e6e5862945a8371fffcf907603f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30bca8b90baeb81361db17ed3f712f7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#a30bca8b90baeb81361db17ed3f712f7a">~SpellNode</a> ()</td></tr>
 <tr class="separator:a30bca8b90baeb81361db17ed3f712f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa697b780e010dea8deb78eae8f61e36f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#aa697b780e010dea8deb78eae8f61e36f">isEnergyNode</a> ()</td></tr>
@@ -129,6 +130,25 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a711b368a0e285c644737c6f53f641a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5fb7d9576d5ea948cbb0451387df7aa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#ad5fb7d9576d5ea948cbb0451387df7aa">getDistance</a> (const <a class="el" href="class_spell_node.html">SpellNode</a> *otherNode) const </td></tr>
 <tr class="separator:ad5fb7d9576d5ea948cbb0451387df7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba3a1891696bb331002148ba15dc72c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_spell_node_8hpp.html#acac9cbaeea226ed297804c012dc12b16">NodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#aba3a1891696bb331002148ba15dc72c3">getType</a> () const </td></tr>
+<tr class="separator:aba3a1891696bb331002148ba15dc72c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac7571c9caae433a697b94d29a6468fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#aac7571c9caae433a697b94d29a6468fa">iterrator</a> (std::function&lt; void(<a class="el" href="class_spell_node.html">SpellNode</a> *)&gt; next)</td></tr>
+<tr class="separator:aac7571c9caae433a697b94d29a6468fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dfb0810e266ab201cd0fb5023d3bcc4"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_spell_node.html">SpellNode</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#a2dfb0810e266ab201cd0fb5023d3bcc4">getConnectedNodes</a> ()</td></tr>
+<tr class="separator:a2dfb0810e266ab201cd0fb5023d3bcc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9c6d7ecd9668f1351648d2f8ce01a0f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#ab9c6d7ecd9668f1351648d2f8ce01a0f">getX</a> () const </td></tr>
+<tr class="separator:ab9c6d7ecd9668f1351648d2f8ce01a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a78fbac60b94cff6ed1aa004ad3c703"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#a6a78fbac60b94cff6ed1aa004ad3c703">getY</a> () const </td></tr>
+<tr class="separator:a6a78fbac60b94cff6ed1aa004ad3c703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae018717cbd4b78897dedb585a5e40dfd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#ae018717cbd4b78897dedb585a5e40dfd">getZ</a> () const </td></tr>
+<tr class="separator:ae018717cbd4b78897dedb585a5e40dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a2c02575f831e8c7de826dc144279d19d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#a2c02575f831e8c7de826dc144279d19d">write</a> (<a class="el" href="class_parcel.html">Parcel</a> &amp;in, <a class="el" href="class_spell_node.html">SpellNode</a> *obj)</td></tr>
+<tr class="separator:a2c02575f831e8c7de826dc144279d19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb4d4572a2d3f59e5e25eed8ffd2c0c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_spell_node.html">SpellNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#abfb4d4572a2d3f59e5e25eed8ffd2c0c">read</a> (<a class="el" href="class_parcel.html">Parcel</a> &amp;out)</td></tr>
+<tr class="separator:abfb4d4572a2d3f59e5e25eed8ffd2c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -147,9 +167,11 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a5073f68f588de6227430cb0abe3e161a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a334bcdb7648ffd704510a6b277057fa5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#a334bcdb7648ffd704510a6b277057fa5">nowInTick</a></td></tr>
 <tr class="separator:a334bcdb7648ffd704510a6b277057fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae897f4f135608a9c71948b5f703aeb99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_spell_node_8hpp.html#acac9cbaeea226ed297804c012dc12b16">NodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spell_node.html#ae897f4f135608a9c71948b5f703aeb99">type</a></td></tr>
+<tr class="separator:ae897f4f135608a9c71948b5f703aeb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a494db54e25007a0a5a0f0fb69e4e0edf"></a>
+<a class="anchor" id="a131e6e5862945a8371fffcf907603f23"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -159,6 +181,12 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">SpellNode::SpellNode </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="_spell_node_8hpp.html#acac9cbaeea226ed297804c012dc12b16">NodeType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
@@ -226,6 +254,47 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_spell_node_a66ea41a0a12d0dd8a2ac4eb0c5b1e046_icgraph.png" border="0" usemap="#class_spell_node_a66ea41a0a12d0dd8a2ac4eb0c5b1e046_icgraph" alt=""/></div>
+<map name="class_spell_node_a66ea41a0a12d0dd8a2ac4eb0c5b1e046_icgraph" id="class_spell_node_a66ea41a0a12d0dd8a2ac4eb0c5b1e046_icgraph">
+<area shape="rect" id="node2" href="class_server.html#a7bc5c00fa3ae1ddfae71274ee7d025ea" title="Server::initServer" alt="" coords="221,5,344,32"/><area shape="rect" id="node3" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main method :) " alt="" coords="392,5,443,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2dfb0810e266ab201cd0fb5023d3bcc4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="class_spell_node.html">SpellNode</a> *&gt;&amp; SpellNode::getConnectedNodes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_spell_node_a2dfb0810e266ab201cd0fb5023d3bcc4_icgraph.png" border="0" usemap="#class_spell_node_a2dfb0810e266ab201cd0fb5023d3bcc4_icgraph" alt=""/></div>
+<map name="class_spell_node_a2dfb0810e266ab201cd0fb5023d3bcc4_icgraph" id="class_spell_node_a2dfb0810e266ab201cd0fb5023d3bcc4_icgraph">
+<area shape="rect" id="node2" href="class_spell.html#a6b2d7baf1e88b6e8075567f8c4afb716" title="Spell::write" alt="" coords="265,5,351,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="ad5fb7d9576d5ea948cbb0451387df7aa"></a>
@@ -255,9 +324,110 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_spell_node_ad5fb7d9576d5ea948cbb0451387df7aa_cgraph.png" border="0" usemap="#class_spell_node_ad5fb7d9576d5ea948cbb0451387df7aa_cgraph" alt=""/></div>
 <map name="class_spell_node_ad5fb7d9576d5ea948cbb0451387df7aa_cgraph" id="class_spell_node_ad5fb7d9576d5ea948cbb0451387df7aa_cgraph">
-<area shape="rect" id="node2" href="_spell_node_8cpp.html#adde3cf418512a5ca731d32a17bb19f69" title="pSq" alt="" coords="213,5,259,32"/></map>
+<area shape="rect" id="node2" href="_spell_node_8cpp.html#ad842f1dc03bd73799a8adc7c0ae6a625" title="pSqu" alt="" coords="214,5,266,32"/></map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="aba3a1891696bb331002148ba15dc72c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_spell_node_8hpp.html#acac9cbaeea226ed297804c012dc12b16">NodeType</a> SpellNode::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_spell_node_aba3a1891696bb331002148ba15dc72c3_icgraph.png" border="0" usemap="#class_spell_node_aba3a1891696bb331002148ba15dc72c3_icgraph" alt=""/></div>
+<map name="class_spell_node_aba3a1891696bb331002148ba15dc72c3_icgraph" id="class_spell_node_aba3a1891696bb331002148ba15dc72c3_icgraph">
+<area shape="rect" id="node2" href="class_spell_node.html#a2c02575f831e8c7de826dc144279d19d" title="SpellNode::write" alt="" coords="193,5,311,32"/><area shape="rect" id="node3" href="class_spell.html#a6b2d7baf1e88b6e8075567f8c4afb716" title="Spell::write" alt="" coords="361,5,447,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab9c6d7ecd9668f1351648d2f8ce01a0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SpellNode::getX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6a78fbac60b94cff6ed1aa004ad3c703"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SpellNode::getY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae018717cbd4b78897dedb585a5e40dfd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SpellNode::getZ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -309,6 +479,31 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="aac7571c9caae433a697b94d29a6468fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpellNode::iterrator </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(<a class="el" href="class_spell_node.html">SpellNode</a> *)&gt;&#160;</td>
+          <td class="paramname"><em>next</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_spell_node_aac7571c9caae433a697b94d29a6468fa_icgraph.png" border="0" usemap="#class_spell_node_aac7571c9caae433a697b94d29a6468fa_icgraph" alt=""/></div>
+<map name="class_spell_node_aac7571c9caae433a697b94d29a6468fa_icgraph" id="class_spell_node_aac7571c9caae433a697b94d29a6468fa_icgraph">
+<area shape="rect" id="node2" href="class_spell.html#a6b2d7baf1e88b6e8075567f8c4afb716" title="Spell::write" alt="" coords="190,5,277,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a0e8d39e7ebc6c7bd9e52eaf1be213af8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -342,6 +537,48 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="class_energy_node.html#ab52474e2e15ff2af2d969b6a88a778f7">EnergyNode</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abfb4d4572a2d3f59e5e25eed8ffd2c0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spell_node.html">SpellNode</a> * SpellNode::read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_parcel.html">Parcel</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c_cgraph.png" border="0" usemap="#class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c_cgraph" alt=""/></div>
+<map name="class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c_cgraph" id="class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c_cgraph">
+<area shape="rect" id="node2" href="class_parcel.html#a4540d13bf8699f6f3bcafd9e95bce706" title="Parcel::readInt" alt="" coords="176,5,283,32"/><area shape="rect" id="node4" href="class_parcel.html#aea33f46c6e77dd0c297e1ef5fdf5973e" title="Parcel::readFloat" alt="" coords="169,56,290,83"/><area shape="rect" id="node3" href="_parcel_8cpp.html#ab8119384bb71fe92a1619107979baa6f" title="setByte" alt="" coords="339,31,405,57"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c_icgraph.png" border="0" usemap="#class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c_icgraph" alt=""/></div>
+<map name="class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c_icgraph" id="class_spell_node_abfb4d4572a2d3f59e5e25eed8ffd2c0c_icgraph">
+<area shape="rect" id="node2" href="class_spell.html#aaaa7ff3183bf18d35d555f3d994fb76d" title="Spell::read" alt="" coords="169,5,253,32"/><area shape="rect" id="node3" href="class_cast_spell.html#ae1eb065bf5eef89f24b5b540e2ef8df2" title="CastSpell::onPacket" alt="" coords="302,5,445,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -382,7 +619,59 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_spell_node_a1286f427e4386e3524ce6914b22a94fb_icgraph.png" border="0" usemap="#class_spell_node_a1286f427e4386e3524ce6914b22a94fb_icgraph" alt=""/></div>
 <map name="class_spell_node_a1286f427e4386e3524ce6914b22a94fb_icgraph" id="class_spell_node_a1286f427e4386e3524ce6914b22a94fb_icgraph">
-<area shape="rect" id="node2" href="class_spell.html#a538fe9e612d1ce78820587fe208d675e" title="Spell::tickSpell" alt="" coords="165,5,275,32"/></map>
+<area shape="rect" id="node2" href="class_spell.html#a1837ad4ea2fecb2644f4818cd0a99d62" title="Spell::tickSpell" alt="" coords="165,5,275,32"/><area shape="rect" id="node3" href="class_spell_entity.html#a3016a06a9f70f16ab4050643491bf978" title="SpellEntity::update" alt="" coords="323,5,455,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c02575f831e8c7de826dc144279d19d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpellNode::write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_parcel.html">Parcel</a> &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_spell_node.html">SpellNode</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_spell_node_a2c02575f831e8c7de826dc144279d19d_cgraph.png" border="0" usemap="#class_spell_node_a2c02575f831e8c7de826dc144279d19d_cgraph" alt=""/></div>
+<map name="class_spell_node_a2c02575f831e8c7de826dc144279d19d_cgraph" id="class_spell_node_a2c02575f831e8c7de826dc144279d19d_cgraph">
+<area shape="rect" id="node2" href="class_parcel.html#a19b5c8e0abaec80ea10da49d0832ad5b" title="Parcel::put" alt="" coords="200,5,285,32"/><area shape="rect" id="node3" href="class_spell_node.html#aba3a1891696bb331002148ba15dc72c3" title="SpellNode::getType" alt="" coords="174,56,311,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_spell_node_a2c02575f831e8c7de826dc144279d19d_icgraph.png" border="0" usemap="#class_spell_node_a2c02575f831e8c7de826dc144279d19d_icgraph" alt=""/></div>
+<map name="class_spell_node_a2c02575f831e8c7de826dc144279d19d_icgraph" id="class_spell_node_a2c02575f831e8c7de826dc144279d19d_icgraph">
+<area shape="rect" id="node2" href="class_spell.html#a6b2d7baf1e88b6e8075567f8c4afb716" title="Spell::write" alt="" coords="174,5,261,32"/></map>
 </div>
 </p>
 
@@ -418,6 +707,26 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">bool SpellNode::nowInTick</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae897f4f135608a9c71948b5f703aeb99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_spell_node_8hpp.html#acac9cbaeea226ed297804c012dc12b16">NodeType</a> SpellNode::type</td>
         </tr>
       </table>
   </td>

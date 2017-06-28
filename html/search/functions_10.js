@@ -1,6 +1,7 @@
 var searchData=
 [
   ['save',['save',['../class_config.html#ae7e68962f22a2c965a61702de1c637db',1,'Config']]],
+  ['saygoodbye',['SayGoodbye',['../class_box2_d_world.html#af99542cb5c6eda96dfdec279f73c5e8b',1,'Box2DWorld::SayGoodbye(b2Fixture *fixture)'],['../class_box2_d_world.html#a268ef72c46673588a071d99afd745c98',1,'Box2DWorld::SayGoodbye(b2Joint *joint)']]],
   ['scalableboundtemperatureworld',['ScalableBoundTemperatureWorld',['../class_scalable_bound_temperature_world.html#a70e95f32bc19f298649ac99d0b69068c',1,'ScalableBoundTemperatureWorld']]],
   ['scale',['scale',['../struct_int_scale.html#acde6987ea678e2f5e4c94ee39047318f',1,'IntScale']]],
   ['scalinggeneratablechunkedtemperatureworld',['ScalingGeneratableChunkedTemperatureWorld',['../class_scaling_generatable_chunked_temperature_world.html#a48b49e12d9005baf785c8d8782c240ad',1,'ScalingGeneratableChunkedTemperatureWorld']]],
@@ -11,7 +12,7 @@ var searchData=
   ['sendto',['sendTo',['../class_socket_u_d_p.html#a207c3d7c2b854b140dcb4ca9a9c81292',1,'SocketUDP']]],
   ['server',['Server',['../class_server.html#ad5ec9462b520e59f7ea831e157ee5e59',1,'Server::Server()'],['../class_server.html#aca4a9834f8bf136619d3c4cdb1db4e1e',1,'Server::Server(const Server &amp;other)=delete']]],
   ['set',['set',['../class_bound_temperature_world.html#aa069691f31dd38006cfeacab94b6e94e',1,'BoundTemperatureWorld::set()'],['../class_chunked_temperature_world.html#a97210f06e70f9ea07a4b284963e610e1',1,'ChunkedTemperatureWorld::set()'],['../class_scalable_bound_temperature_world.html#ade4ecf303ae025e824c0bd5ecd2e2ca7',1,'ScalableBoundTemperatureWorld::set()'],['../class_i_temperature_world.html#ab23db7ec9a890d6dbb172b26c2fd3d00',1,'ITemperatureWorld::set()']]],
-  ['setbyte',['setByte',['../_parcel_8cpp.html#ab8119384bb71fe92a1619107979baa6f',1,'Parcel.cpp']]],
+  ['setbyte',['setByte',['../_parcel_8cpp.html#ab8119384bb71fe92a1619107979baa6f',1,'setByte(char byte, int number, T *var):&#160;Parcel.hpp'],['../_parcel_8hpp.html#ab8119384bb71fe92a1619107979baa6f',1,'setByte(char byte, int number, T *var):&#160;Parcel.hpp']]],
   ['setcellscale',['setCellScale',['../class_scalable_bound_temperature_world.html#addf3187d106391375b4453614a84563b',1,'ScalableBoundTemperatureWorld::setCellScale()'],['../class_i_temperature_world_scalable_mutable_mixin.html#a570d17e46a6b97d7ab6c0b7512603a4d',1,'ITemperatureWorldScalableMutableMixin::setCellScale()']]],
   ['setchunkbounds',['setChunkBounds',['../class_scaling_generatable_chunked_temperature_world_injector.html#a786fc4d04bd556c4b27645903cbfb77c',1,'ScalingGeneratableChunkedTemperatureWorldInjector']]],
   ['setminupdatedelta',['setMinUpdateDelta',['../class_bound_temperature_world_injector.html#a3017672c819fd74e17fb79d69aa7beae',1,'BoundTemperatureWorldInjector::setMinUpdateDelta()'],['../class_scaling_generatable_chunked_temperature_world_injector.html#af495ed097d3ea85642df7702e6ae565e',1,'ScalingGeneratableChunkedTemperatureWorldInjector::setMinUpdateDelta()']]],
@@ -23,6 +24,7 @@ var searchData=
   ['setrecvtimeout',['setRecvTimeout',['../class_socket_t_c_p.html#a473fa103469c9b83720b4f8ecfde1298',1,'SocketTCP']]],
   ['setreuseaddress',['setReuseAddress',['../class_socket.html#a51eb429ad7f6f6ab1adafe64d302ed55',1,'Socket']]],
   ['settemperatureexchangecoefficient',['setTemperatureExchangeCoefficient',['../class_bound_temperature_world_injector.html#a1e71c5d4a8397b9c8f87bccfe5cf5328',1,'BoundTemperatureWorldInjector::setTemperatureExchangeCoefficient()'],['../class_scaling_generatable_chunked_temperature_world_injector.html#ab06a2b915012e60d41b2db4cc77abbc4',1,'ScalingGeneratableChunkedTemperatureWorldInjector::setTemperatureExchangeCoefficient()']]],
+  ['settype',['setType',['../class_entity.html#aedbd9622f9be98c2d28bd664442fbef8',1,'Entity']]],
   ['setworldbounds',['setWorldBounds',['../class_bound_temperature_world_injector.html#aa3c6c0c782869509238b83774434347c',1,'BoundTemperatureWorldInjector']]],
   ['shutdown',['shutdown',['../class_network_server.html#a9ccac6f1950c9e6e15052fce78d4dd94',1,'NetworkServer::shutdown()'],['../class_server.html#a58c74bafaaf20b24e9243c7cf5fdfd16',1,'Server::shutdown()']]],
   ['size',['Size',['../struct_size.html#a64d9f9c5939b6b32cee65270357d8b43',1,'Size']]],
@@ -33,9 +35,11 @@ var searchData=
   ['sockettcp',['SocketTCP',['../class_socket_t_c_p.html#a03fa65da98287c442592f6602087703f',1,'SocketTCP']]],
   ['socketudp',['SocketUDP',['../class_socket_u_d_p.html#aa41096c8eecdf55a7557549e8f6a5d4a',1,'SocketUDP']]],
   ['spell',['Spell',['../class_spell.html#a614361c1702859a162e1572030166cb0',1,'Spell::Spell()'],['../class_spell.html#a868259bb869176239ef3fb1e8f0d198c',1,'Spell::Spell(SpellNode *rootNode)']]],
-  ['spelleventlistener',['SpellEventListener',['../class_spell_event_listener.html#ac0c7b6c313e21fc2d48605b3581fde7a',1,'SpellEventListener']]],
-  ['spellnode',['SpellNode',['../class_spell_node.html#a494db54e25007a0a5a0f0fb69e4e0edf',1,'SpellNode']]],
+  ['spellentity',['SpellEntity',['../class_spell_entity.html#ae110221a8a5a2c2676cdcf45658de22a',1,'SpellEntity']]],
+  ['spelleventlistener',['SpellEventListener',['../class_spell_event_listener.html#a8f77a32833b02102acf5cddf789d9b31',1,'SpellEventListener']]],
+  ['spellnode',['SpellNode',['../class_spell_node.html#a131e6e5862945a8371fffcf907603f23',1,'SpellNode']]],
   ['sqlite',['SQLite',['../class_s_q_lite.html#ae7b35dc7e3c41543a0acde669ad4ba0d',1,'SQLite']]],
+  ['subscribetoupdate',['subscribeToUpdate',['../class_box2_d_world.html#aed35f7a519c5844bf66464bb8aee30ce',1,'Box2DWorld']]],
   ['swap',['swap',['../_bound_temperature_world_8inc_8hpp.html#a684a1f2310369a9bcf86e6c8e4384e51',1,'BoundTemperatureWorld.inc.hpp']]],
   ['synchronizedblockingtimer',['SynchronizedBlockingTimer',['../class_synchronized_blocking_timer.html#a574e962e33397f3ad630f071ebe1b00d',1,'SynchronizedBlockingTimer']]]
 ];
