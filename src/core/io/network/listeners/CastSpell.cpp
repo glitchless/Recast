@@ -7,11 +7,10 @@
  **/
 #include "io/network/listeners/CastSpell.h"
 
-CastSpell::CastSpell() : NetworkListener(2) {
-
-}
+CastSpell::CastSpell() : NetworkListener(2) {}
 
 char *CastSpell::onPacket(char *request, ICommandSender *sender) {
     //TODO
+
     return NULL;
 }

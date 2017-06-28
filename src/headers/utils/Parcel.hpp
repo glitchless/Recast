@@ -19,12 +19,18 @@
 
 template<class T>
 void inline setByte(char byte, int number, T *var) {
-    *(char *) (((void *) var) + number) = byte;
+    ((union {
+        T a;
+        char bytes[sizeof(T)];
+    } *) var)->bytes[number] = byte;
 }
 
 template<class T>
 char inline getByte(T var, int number) {
-    return (char) ((var >> ((sizeof(T) - number - 1) * 8)) & 255);
+    return ((union {
+        T a;
+        char bytes[sizeof(T)];
+    } *) var)->bytes[number];
 }
 
 /**
@@ -35,6 +41,8 @@ char inline getByte(T var, int number) {
 class Parcel {
 public:
     Parcel();
+
+    Parcel(std::vector<char> vector) : data(vector) {}
 
     Parcel(Parcel &other) = delete;
 
@@ -53,7 +61,7 @@ public:
 
     float readFloat();
 
-    const std::vector<char> * getVector() const { return &data; }
+    const std::vector<char> *getVector() const { return &data; }
 
 private:
     int curPos;
