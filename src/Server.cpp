@@ -71,12 +71,8 @@ void Server::initServer() {
     SpellNode *node = new HeaterNode(1, 1, 1, 0);
     node->connectNode(new GeneratorNode(2, 2, 2, 0));
     spell->getRootNode()->connectNode(node);
-    Parcel parcel(1);
-    spell->write(parcel, spell);
-
-    Spell *newSpell = Spell::read(parcel);
     b2Vec2 pos(0.0f, 0.0f);
-    world.subscribeToUpdate((Entity *) world.createSpellEntity(pos, newSpell));
+    world.subscribeToUpdate((Entity *) world.createSpellEntity(pos,spell));
     while (isRunning()) {
         update();
     }
@@ -86,6 +82,9 @@ void Server::update() {
     temperatureWorldUpdater->update();
     world.update();
     inputObject->getManager()->executeDelayedCommandInUI();
+    for(Entity & entity : world.getAllEntityInChunk(-100.0f, 100.0f)){
+        BOOST_LOG_TRIVIAL(info) << entity.getType();
+    }
 }
 
 Server::Server() : world(this) {

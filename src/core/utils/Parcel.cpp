@@ -18,19 +18,13 @@ char inline getByte(T var, int number);
 template<class T>
 void inline setByte(char byte, int number, T *var);
 
-Parcel::Parcel(int code) {
-    this->code = code;
+Parcel::Parcel() {
     curPos = sizeof(int);
     data = new std::vector<char>();
-    put(code);
 }
 
-int Parcel::getCode() {
-    return this->code;
-}
 
 Parcel::Parcel(std::vector<char> *data) {
-    this->code = readInt();
     this->data = data;
     this->curPos = 0;
 }

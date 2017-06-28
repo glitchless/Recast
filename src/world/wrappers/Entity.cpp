@@ -18,3 +18,19 @@ int Entity::getId() {
 Entity::Entity(b2Fixture *fixture1) : fixture(fixture1) {
     data = (EntityData *) fixture->GetBody()->GetUserData();
 }
+
+void Entity::write(Parcel &in, Entity *obj) {
+    //TODO
+}
+
+EntityType Entity::getType() const {
+    if (data == NULL)
+        return EntityType::UNKN;
+    return data->type;
+}
+
+void Entity::setType(EntityType type)  {
+    if (data == NULL)
+        return;
+    else data->type = type;
+}

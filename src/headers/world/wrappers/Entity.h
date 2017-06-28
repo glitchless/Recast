@@ -8,6 +8,10 @@
 #ifndef RECAST_SERVER_ENTITY_H
 #define RECAST_SERVER_ENTITY_H
 
+#include <utils/Parcel.hpp>
+#include "EntityData.h"
+#include "EntityType.h"
+
 class EntityData;
 
 class b2Fixture;
@@ -23,6 +27,12 @@ public:
     virtual void update(Box2DWorld *box2DWorld) {}
 
     b2Fixture *getFixture() const { return fixture; }
+
+    static void write(Parcel &in, Entity *obj);
+
+    EntityType getType() const;
+
+    void setType(EntityType type);
 
 private:
     b2Fixture *fixture;

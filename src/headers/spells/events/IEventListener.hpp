@@ -12,7 +12,7 @@
 
 class IEventListener {
 public:
-    virtual void onEvent(IEvent event) {};
+    virtual void onEvent(IEvent &event) {};
 };
 
 

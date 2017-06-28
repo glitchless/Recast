@@ -16,9 +16,9 @@ class CollectEntity : public b2QueryCallback {
 public:
     bool ReportFixture(b2Fixture *fixture) {
         b2Body *body = fixture->GetBody();
-        entitys.push_back(Entity(fixture));
+        if (body->GetType() == b2_dynamicBody)
+            entitys.push_back(Entity(fixture));
 
-        // Return true to continue the query.
         return true;
     }
 

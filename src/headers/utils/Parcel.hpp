@@ -34,15 +34,13 @@ char inline getByte(T var, int number) {
  */
 class Parcel {
 public:
-    Parcel(int code);
+    Parcel();
 
     Parcel(std::vector<char> *data);
 
     ~Parcel();
 
     Parcel(Parcel &other) = delete;
-
-    int getCode();
 
     void putString(std::string var);
 
@@ -60,15 +58,9 @@ public:
     float readFloat();
 
 private:
-    int code;
     int curPos;
     std::vector<char> *data;
 };
 
-
-enum ParcelableIDs {
-    USER_PARCE = 0,
-    UNKNOWN = 0
-};
 
 #endif //RECAST_SERIALIZABLE_H

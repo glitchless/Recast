@@ -17,4 +17,5 @@ void HeatEvent::commit(Box2DWorld *world, SpellEntity *entity, std::shared_ptr<T
     Coord newZ((int) (getNode()->getZ() * per_real_metr));
 
     tempWorld->set(newX, newY, newZ, Temperature(tempWorld->get(newX, newY, newZ) + temp));
+    entity->setType(EntityType::FIREBALL);
 }

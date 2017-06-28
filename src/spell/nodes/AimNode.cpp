@@ -12,7 +12,8 @@
 void AimNode::onTick(IEventListener &listener, SpellNode *callable) {
     float energyPerTickHeater = Config::g("spell.aim.per_tick_consumer", 10);
     if (energy > energyPerTickHeater) {
-        listener.onEvent(MoveEvent(this, entityId, energyPerTickHeater));
+        MoveEvent event(this, entityId, energyPerTickHeater);
+        listener.onEvent(event);
         energy -= energyPerTickHeater;
     }
     EnergyNode::onTick(listener, callable);

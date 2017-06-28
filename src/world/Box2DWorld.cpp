@@ -75,8 +75,11 @@ void Box2DWorld::checkAndCreateGround(float x) {
 
 Entity *Box2DWorld::createEntity(b2BodyDef &bodyDef, b2FixtureDef &fixtureDef) {
     if (bodyDef.userData == NULL) {
-        bodyDef.userData = new EntityData();
+        EntityData * data = new EntityData();
+        data->type = EntityType::MOB;
+        bodyDef.userData = data;
     }
+
     while (entitysId[freeId] != NULL)
         freeId++;
     ((EntityData *) bodyDef.userData)->id = freeId;
@@ -110,7 +113,7 @@ SpellEntity *Box2DWorld::createSpellEntity(b2Vec2 position, Spell *spell) {
     bodyDef.position.Set(position.x, position.y);
 
     b2PolygonShape dynamicBox;
-    dynamicBox.SetAsBox(1.0f, 1.0f);
+    dynamicBox.SetAsBox(0.1f,0.1f);
 
     b2FixtureDef fixtureDef;
     fixtureDef.shape = &dynamicBox;
@@ -118,6 +121,7 @@ SpellEntity *Box2DWorld::createSpellEntity(b2Vec2 position, Spell *spell) {
     fixtureDef.friction = 0.3f;
 
     EntityData *data = new EntityData();
+    data->type = EntityType::SPELL;
     bodyDef.userData = data;
 
     while (entitysId[freeId] != NULL)

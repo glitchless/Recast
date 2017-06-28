@@ -2,11 +2,12 @@
 #define RECAST_SERVER_ICOMMANDSENDER_H
 
 #include <string>
-#include <world/Box2DWorld.h>
 
 class Server;
 
 class Player;
+
+class Box2DWorld;
 
 class ICommandSender {
 public:

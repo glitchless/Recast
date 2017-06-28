@@ -5,7 +5,10 @@
  * @date 27.06.17
  * @email nikita@kulikof.ru
  **/
+#include <world/wrappers/Entity.h>
 #include "commands/CreateEntityCommand.h"
+#include "Box2D/Box2D.h"
+#include "world/Box2DWorld.h"
 
 using namespace std;
 

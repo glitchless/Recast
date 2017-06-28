@@ -21,7 +21,7 @@ public:
 
     SpellNode *getNode() const { return fromNode; }
 
-    virtual void commit(Box2DWorld *world, SpellEntity * entity, std::shared_ptr<TempWorld> tempWorld) { BOOST_LOG_TRIVIAL(info) << "Calling event"; }
+    virtual void commit(Box2DWorld *world, SpellEntity * entity, std::shared_ptr<TempWorld> tempWorld) = 0;
 
 protected:
     SpellNode *fromNode;

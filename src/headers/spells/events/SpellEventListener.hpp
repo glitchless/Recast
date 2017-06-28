@@ -23,7 +23,7 @@ public:
               world(world),
               tempWorld(tempWorld) {}
 
-    void onEvent(IEvent event);
+    void onEvent(IEvent &event);
 
 private:
     Spell *spell;

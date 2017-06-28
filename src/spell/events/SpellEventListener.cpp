@@ -7,6 +7,6 @@
  **/
 #include "spells/events/SpellEventListener.hpp"
 
-void SpellEventListener::onEvent(IEvent event) {
+void SpellEventListener::onEvent(IEvent &event) {
     event.commit(world, entity, tempWorld);
 }

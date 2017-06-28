@@ -8,12 +8,15 @@
 #ifndef RECAST_SERVER_ENTITYDATA_H
 #define RECAST_SERVER_ENTITYDATA_H
 
+#include "EntityType.h"
+
 class SpellEntity;
 
 class EntityData {
 public:
     int id = -1;
-    SpellEntity * spellEntity = NULL;
+    SpellEntity *spellEntity = NULL;
+    EntityType type = EntityType::UNKN;
 };
 
 
