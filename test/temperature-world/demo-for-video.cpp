@@ -19,9 +19,9 @@ using namespace std::chrono;
 static Coord fireballX = 4;
 void updateFireball(const shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>>& world) {
     try {
-        fireballX += 1;
+        fireballX += 3;
         for (int i = 0; i < 3; i++) {
-            world->set(fireballX + i, 0, 0, 400);
+            world->set(fireballX + i, 0, 0, 300);
         }
     } catch (exception& ignored) {
     }
