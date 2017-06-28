@@ -27,6 +27,11 @@ public:
     virtual double deltaFloatSeconds() const = 0;
 
     /**
+     * @return True if timer was never updated.
+     */
+    virtual bool isFirstUpdate() const = 0;
+
+    /**
      * Saves update, saves the "tick". It will influence value of `delta`.
      */
     virtual void update() = 0;

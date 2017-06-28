@@ -19,6 +19,12 @@ AverageShareTemperatureWorldUpdater::AverageShareTemperatureWorldUpdater(double 
 }
 
 void AverageShareTemperatureWorldUpdater::update() {
+    if (_timer->isFirstUpdate()) {
+        _timer->update();
+        _timer->wait();
+        return;
+    }
+
     const double dt = _timer->deltaFloatSeconds();
     _timer->update();
 

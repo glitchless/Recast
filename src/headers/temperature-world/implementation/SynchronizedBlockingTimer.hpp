@@ -19,6 +19,7 @@ public:
     std::chrono::milliseconds delta() const override;
     std::chrono::milliseconds minDelta() const override;
     double deltaFloatSeconds() const override;
+    bool isFirstUpdate() const override;
 
     void update() override;
     void wait() override;
@@ -28,6 +29,8 @@ protected:
 
     std::chrono::system_clock::time_point _lastUpdateTime;
     mutable std::mutex _lastUpdateTimeMutex;
+
+    bool _isFirstUpdate;
 };
 
 

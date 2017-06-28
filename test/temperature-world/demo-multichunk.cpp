@@ -12,14 +12,6 @@
 
 using namespace std;
 
-//void startUpdater(shared_ptr<IUpdater> updater) {
-//    thread t([&]() {
-//        while (true) {
-//        }
-//    });
-//    t.detach();
-//}
-
 void startServer(shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> world, shared_ptr<IUpdater> updater) {
     crow::SimpleApp app;
 
@@ -64,18 +56,17 @@ int main() {
     auto updater = injector.updater();
 
     for (int ix = -2; ix <= 2; ix++) {
-        for (int iy = 0; iy <= 1; iy++) {
-            for (int iz = 0; iz <= 1; iz++) {
+        for (int iy = -1; iy <= 1; iy++) {
+            for (int iz = -1; iz <= 1; iz++) {
                 world->getOrGenerateChunk(ix * injector.chunkBounds().sizeX(), iy * injector.chunkBounds().sizeY(), iz * injector.chunkBounds().sizeZ());
             }
         }
     }
 
     for (Coord x = -5; x <= 5; x++) {
-        world->set(x, 0, 0, 100);
+        world->set(x, 0, 0, 500);
     }
 
-//    startUpdater(updater);
     startServer(world, updater);
     return 0;
 }

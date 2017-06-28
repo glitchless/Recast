@@ -15,13 +15,15 @@ class BasicTimer : public virtual ITimer {
 public:
     BasicTimer();
 
-    std::chrono::milliseconds delta() const;
-    double deltaFloatSeconds() const;
+    std::chrono::milliseconds delta() const override;
+    double deltaFloatSeconds() const override;
+    bool isFirstUpdate() const override;
 
-    void update();
+    void update() override;
 
 protected:
     std::chrono::system_clock::time_point _lastUpdateTime;
+    bool _isFirstUpdate;
 };
 
 

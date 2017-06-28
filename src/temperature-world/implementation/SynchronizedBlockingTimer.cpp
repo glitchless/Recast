@@ -9,7 +9,7 @@ using namespace std;
 using namespace std::chrono;
 
 SynchronizedBlockingTimer::SynchronizedBlockingTimer(milliseconds minDelta)
-        : _minDelta(minDelta), _lastUpdateTime(system_clock::now())
+        : _minDelta(minDelta), _lastUpdateTime(system_clock::now()), _isFirstUpdate(true)
 {
 }
 
@@ -26,9 +26,15 @@ double SynchronizedBlockingTimer::deltaFloatSeconds() const {
     return delta().count() / 1000.0;
 }
 
+bool SynchronizedBlockingTimer::isFirstUpdate() const {
+    lock_guard<mutex> guard(_lastUpdateTimeMutex);
+    return _isFirstUpdate;
+}
+
 void SynchronizedBlockingTimer::update() {
     lock_guard<mutex> guard(_lastUpdateTimeMutex);
     _lastUpdateTime = system_clock::now();
+    _isFirstUpdate = false;
 }
 
 void SynchronizedBlockingTimer::wait() {

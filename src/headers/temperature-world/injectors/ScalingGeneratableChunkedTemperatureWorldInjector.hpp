@@ -111,7 +111,7 @@ public:
     std::shared_ptr<IUpdater> updater();
 
     /**
-     * Timer will be built only once for an injector instance.
+     * Timer will be built on each call.
      *
      * @return Built blocking timer which is used in the world updater.
      */
@@ -120,11 +120,10 @@ public:
 protected:
     static bool _needChunkFn(Coord x, Coord y, Coord z) noexcept;
     static std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> _makeChunkFn(Parallelepiped baseChunkBounds, Coord x, Coord y, Coord z);
-    static std::shared_ptr<IUpdaterTemperatureWorldSemiChunkUpdatable<IUpdater>> _makeChunkUpdaterFn(double temperatureExchangeCoefficient, std::shared_ptr<ITimerBlockable<ITimer>> timer, std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk);
+    static std::shared_ptr<IUpdaterTemperatureWorldSemiChunkUpdatable<IUpdater>> _makeChunkUpdaterFn(double temperatureExchangeCoefficient, std::function<std::shared_ptr<ITimerBlockable<ITimer>>()> timerFactory, std::shared_ptr<ITemperatureWorldBoundable<ITemperatureWorld>> chunk);
 
     void _makeWorld();
     void _makeUpdater();
-    void _makeTimer();
 
     std::unique_ptr<Parallelepiped> _chunkBounds;
     std::unique_ptr<double> _temperatureExchangeCoefficient;
@@ -132,7 +131,6 @@ protected:
 
     std::shared_ptr<ITemperatureWorldChunkableObservable<ITemperatureWorldChunkableGeneratable<ITemperatureWorldChunkableMutable<ITemperatureWorldChunkable<ITemperatureWorld>>>>> _world;
     std::shared_ptr<IUpdater> _updater;
-    std::shared_ptr<ITimerBlockable<ITimer>> _timer;
 };
 
 

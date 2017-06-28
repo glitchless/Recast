@@ -7,7 +7,7 @@
 using namespace std;
 using namespace std::chrono;
 
-BasicTimer::BasicTimer() : _lastUpdateTime(system_clock::now()) {
+BasicTimer::BasicTimer() : _lastUpdateTime(system_clock::now()), _isFirstUpdate(true) {
 }
 
 chrono::milliseconds BasicTimer::delta() const {
@@ -20,4 +20,9 @@ double BasicTimer::deltaFloatSeconds() const {
 
 void BasicTimer::update() {
     _lastUpdateTime = system_clock::now();
+    _isFirstUpdate = false;
+}
+
+bool BasicTimer::isFirstUpdate() const {
+    return _isFirstUpdate;
 }
