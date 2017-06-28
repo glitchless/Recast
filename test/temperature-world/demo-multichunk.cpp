@@ -55,16 +55,16 @@ int main() {
     auto world = injector.world();
     auto updater = injector.updater();
 
-    for (int ix = -2; ix <= 2; ix++) {
-        for (int iy = -1; iy <= 1; iy++) {
-            for (int iz = -1; iz <= 1; iz++) {
+    for (int ix = 0; ix <= 2; ix++) {
+        for (int iy = 0; iy <= 2; iy++) {
+            for (int iz = 0; iz <= 2; iz++) {
                 world->getOrGenerateChunk(ix * injector.chunkBounds().sizeX(), iy * injector.chunkBounds().sizeY(), iz * injector.chunkBounds().sizeZ());
             }
         }
     }
 
-    for (Coord x = -5; x <= 5; x++) {
-        world->set(x, 0, 0, 500);
+    for (Coord x = 0; x <= 5; x++) {
+        world->set(x, 0, 0, 750);
     }
 
     startServer(world, updater);

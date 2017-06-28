@@ -146,7 +146,7 @@ void AverageShareTemperatureWorldUpdater::_shareTemperature(double dt,
     const Temperature currentT = firstWorld->get(x, y, z);
     const Temperature anotherT = secondWorld->get(nextX, nextY, nextZ);
 
-    const Temperature averageT = Temperature((currentT + anotherT) / 2);
+    const Temperature averageT = (currentT + anotherT) / 2;
 
     const Temperature newCurrentT = MathUtils::lerp(currentT, averageT, _temperatureExchangeCoefficient * dt);
     const Temperature newAnotherT = MathUtils::lerp(anotherT, averageT, _temperatureExchangeCoefficient * dt);
