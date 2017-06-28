@@ -17,7 +17,7 @@
 #include "threads/InputThread.hpp"
 #include "commands/ICommandSender.hpp"
 #include "commands/CommandManager.hpp"
-#include "network/NetworkServer.hpp"
+#include "io/network/NetworkServer.hpp"
 #include "temperature-world/interfaces/IUpdater.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkableObservable.hpp"
 #include "temperature-world/interfaces/ITemperatureWorldChunkableGeneratable.hpp"

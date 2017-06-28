@@ -10,6 +10,7 @@
 #include <spells/Spell.hpp>
 #include <spells/nodes/HeaterNode.hpp>
 #include <spells/nodes/GeneratorNode.h>
+#include <io/network/listeners/GetEntitys.h>
 
 /**
  * @brief Main method :)

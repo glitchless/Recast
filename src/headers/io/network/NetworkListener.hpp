@@ -12,7 +12,7 @@
 #define RECAST_SERVER_NETWORKLISTENER_HPP
 
 #include <string>
-#include "network/Networking.hpp"
+#include "io/network/Networking.hpp"
 #include "commands/ICommandSender.hpp"
 
 class NetworkListener {

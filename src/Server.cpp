@@ -22,6 +22,7 @@
 #include <Box2D/Box2D.h>
 #include <spells/nodes/EnergyNode.hpp>
 #include <spells/Spell.hpp>
+#include <io/network/listeners/GetEntitys.h>
 
 #include "io/SQLite.hpp"
 #include "models/collections/PlayersOnline.hpp"
@@ -72,7 +73,7 @@ void Server::initServer() {
     node->connectNode(new GeneratorNode(2, 2, 2, 0));
     spell->getRootNode()->connectNode(node);
     b2Vec2 pos(0.0f, 0.0f);
-    world.subscribeToUpdate((Entity *) world.createSpellEntity(pos,spell));
+    world.subscribeToUpdate((Entity *) world.createSpellEntity(pos, spell));
     while (isRunning()) {
         update();
     }
@@ -82,7 +83,7 @@ void Server::update() {
     temperatureWorldUpdater->update();
     world.update();
     inputObject->getManager()->executeDelayedCommandInUI();
-    for(Entity & entity : world.getAllEntityInChunk(-100.0f, 100.0f)){
+    for (Entity &entity : world.getAllEntityInChunk(-100.0f, 100.0f)) {
         BOOST_LOG_TRIVIAL(info) << entity.getType();
     }
 }
@@ -102,6 +103,8 @@ Server::Server() : world(this) {
 void Server::runNetworkServer(NetworkServer *tcp, NetworkServer *udp) {
     tcp->registerListener(new DebugNetworkListener(0));
     udp->registerListener(new DebugNetworkListener(0));
+    tcp->registerListener(new GetEntitys());
+    udp->registerListener(new GetEntitys());
     listenUDPThread = thread(&NetworkServer::run, udp);
     listenUDPThread.detach();
     listenTCPThread = thread(&NetworkServer::run, tcp);

@@ -36,19 +36,15 @@ class Parcel {
 public:
     Parcel();
 
-    Parcel(std::vector<char> *data);
-
-    ~Parcel();
-
     Parcel(Parcel &other) = delete;
 
     void putString(std::string var);
 
     template<class T>
     void put(T var) {
-        unsigned char const * p = reinterpret_cast<unsigned char const *>(&var);
+        unsigned char const *p = reinterpret_cast<unsigned char const *>(&var);
         for (int i = 0; i < sizeof(T); i++)
-            data->push_back((char &&) p[i]);
+            data.push_back((char &&) p[i]);
     }
 
     int readInt();
@@ -57,9 +53,11 @@ public:
 
     float readFloat();
 
+    const std::vector<char> * getVector() const { return &data; }
+
 private:
     int curPos;
-    std::vector<char> *data;
+    std::vector<char> data;
 };
 
 
