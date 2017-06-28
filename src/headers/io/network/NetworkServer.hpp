@@ -13,7 +13,7 @@
 
 #include <vector>
 #include <unordered_map>
-#include "network/Networking.hpp"
+#include "Networking.hpp"
 
 class ICommandSender;
 void setNonBlockedImpl(int sd, bool option) noexcept (false);

@@ -11,7 +11,7 @@
 #ifndef RECAST_SERVER_SOCKET_HPP
 #define RECAST_SERVER_SOCKET_HPP
 
-#include "network/NetworkUtils.hpp"
+#include "NetworkUtils.hpp"
 
 class Socket {
 public:

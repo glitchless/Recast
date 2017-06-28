@@ -9,7 +9,7 @@
  **/
 
 #include <cstring>
-#include "network/SocketTCP.hpp"
+#include "io/network/SocketTCP.hpp"
 
 void SocketTCP::setRecvTimeout(int seconds, int microseconds) noexcept (false) {
     struct timeval tv;

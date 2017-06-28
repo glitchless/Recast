@@ -13,8 +13,8 @@
 #include <netinet/in.h> // struct sockaddr_in
 #include <boost/log/trivial.hpp>
 
-#include "network/Networking.hpp"
-#include "network/NetworkServer.hpp"
+#include "io/network/Networking.hpp"
+#include "io/network/NetworkServer.hpp"
 
 NetworkServer::NetworkServer(uint32_t port, ICommandSender *sender, bool isTCP) : port(port), isTCP(isTCP),
                                                                                   sender(sender) {};

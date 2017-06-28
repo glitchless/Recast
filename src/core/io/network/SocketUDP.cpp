@@ -9,7 +9,7 @@
  **/
 
 #include <cstring>
-#include "network/SocketUDP.hpp"
+#include "io/network/SocketUDP.hpp"
 
 using namespace std;
 

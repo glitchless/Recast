@@ -11,10 +11,10 @@
 #ifndef RECAST_SERVER_NETWORKING_HPP
 #define RECAST_SERVER_NETWORKING_HPP
 
-#include "network/NetworkUtils.hpp"
-#include "network/NetworkListener.hpp"
-#include "network/Socket.hpp"
-#include "network/SocketTCP.hpp"
-#include "network/SocketUDP.hpp"
+#include "NetworkUtils.hpp"
+#include "NetworkListener.hpp"
+#include "Socket.hpp"
+#include "SocketTCP.hpp"
+#include "SocketUDP.hpp"
 
 #endif //RECAST_SERVER_NETWORKING_HPP

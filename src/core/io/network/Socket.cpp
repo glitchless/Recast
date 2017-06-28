@@ -9,7 +9,7 @@
  **/
 
 #include <cstring>
-#include "network/Socket.hpp"
+#include "io/network/Socket.hpp"
 using namespace std;
 
 void setNonBlockedImpl(int sd, bool option) noexcept (false) {

@@ -11,8 +11,8 @@
 #ifndef RECAST_SERVER_SOCKET_TCP_HPP
 #define RECAST_SERVER_SOCKET_TCP_HPP
 
-#include "network/NetworkUtils.hpp"
-#include "network/Socket.hpp"
+#include "NetworkUtils.hpp"
+#include "Socket.hpp"
 
 using namespace std;
 

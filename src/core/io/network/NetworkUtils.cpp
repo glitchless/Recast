@@ -9,7 +9,7 @@
  **/
 
 #include <cstring>
-#include "network/NetworkUtils.hpp"
+#include "io/network/NetworkUtils.hpp"
 
 using namespace std;
 string int2ipv4(uint32_t ip) {
