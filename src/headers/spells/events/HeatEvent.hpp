@@ -19,6 +19,8 @@ public:
         return Config::g("spell.heater.temp_per_energy", 1) * energyEjection;
     }
 
+    void commit(Box2DWorld *world, SpellEntity *entity, std::shared_ptr<TempWorld> tempWorld);
+
 private:
     float temp;
 

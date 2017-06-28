@@ -30,6 +30,9 @@ list(APPEND LIBRARIES ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 ## sqlite3
 list(APPEND LIBRARIES sqlite3)
 
+## Box2d
+list(APPEND LIBRARIES Box2D)
+
 ## gprof
 if(PROFILE)
     list(APPEND LIBRARIES profiler)

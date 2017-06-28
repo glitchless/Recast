@@ -8,18 +8,28 @@
 #ifndef RECAST_SERVER_SPELLEVENTLISTENER_H
 #define RECAST_SERVER_SPELLEVENTLISTENER_H
 
+#include <Server.hpp>
 #include "IEventListener.hpp"
 
 class Spell;
 
+class SpellEntity;
+
 class SpellEventListener : public IEventListener {
 public:
-    SpellEventListener(Spell *spell) : spell(spell) {}
+    SpellEventListener(Spell *spell, SpellEntity *entity, Box2DWorld *world, std::shared_ptr<TempWorld> tempWorld)
+            : spell(spell),
+              entity(entity),
+              world(world),
+              tempWorld(tempWorld) {}
 
-    void onEvent(IEvent event);
+    void onEvent(IEvent &event);
 
 private:
     Spell *spell;
+    SpellEntity *entity;
+    Box2DWorld *world;
+    std::shared_ptr<TempWorld> tempWorld;
 };
 
 

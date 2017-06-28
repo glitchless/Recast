@@ -19,13 +19,16 @@
 #include <boost/log/utility/setup/common_attributes.hpp>
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/filesystem.hpp>
+#include <Box2D/Box2D.h>
+#include <spells/nodes/EnergyNode.hpp>
+#include <spells/Spell.hpp>
+#include <io/network/listeners/GetEntitys.h>
 
-#include "Server.hpp"
 #include "io/SQLite.hpp"
-#include "io/configs/Config.hpp"
 #include "models/collections/PlayersOnline.hpp"
 #include "temperature-world/injectors/ScalingGeneratableChunkedTemperatureWorldInjector.hpp"
-#include "temperature-world/implementation/BasicTimer.hpp"
+#include "spells/nodes/HeaterNode.hpp"
+#include "spells/nodes/GeneratorNode.h"
 
 using namespace std;
 using namespace boost;
@@ -69,6 +72,12 @@ void Server::initServer() {
     BOOST_LOG_TRIVIAL(info) << "Initializing network...";
     runNetworkServer(serverTCP, serverUDP);
 
+    Spell *spell = new Spell();
+    SpellNode *node = new HeaterNode(1, 1, 1, 0);
+    node->connectNode(new GeneratorNode(2, 2, 2, 0));
+    spell->getRootNode()->connectNode(node);
+    b2Vec2 pos(0.0f, 0.0f);
+    world.subscribeToUpdate((Entity *) world.createSpellEntity(pos, spell));
     while (isRunning()) {
         update();
     }
@@ -76,13 +85,18 @@ void Server::initServer() {
 
 void Server::update() {
     temperatureWorldUpdater->update();
+    world.update();
+    inputObject->getManager()->executeDelayedCommandInUI();
+    for (Entity &entity : world.getAllEntityInChunk(-100.0f, 100.0f)) {
+        BOOST_LOG_TRIVIAL(info) << entity.getType();
+    }
 }
 
-Server::Server() {
+Server::Server() : world(this) {
     isLaunching = false;
 
-    uint32_t portTCP = static_cast<uint32_t>(Config::instance()->get("general.server.port.tcp", DEFAULT_PORT_TCP));
-    uint32_t portUDP = static_cast<uint32_t>(Config::instance()->get("general.server.port.udp", DEFAULT_PORT_UDP));
+    uint32_t portTCP = static_cast<uint32_t>(Config::g("general.server.port.tcp", DEFAULT_PORT_TCP));
+    uint32_t portUDP = static_cast<uint32_t>(Config::g("general.server.port.udp", DEFAULT_PORT_UDP));
 
     serverTCP = new NetworkServer(portTCP, this, true);
     serverUDP = new NetworkServer(portUDP, this, false);
@@ -93,9 +107,11 @@ Server::Server() {
 void Server::runNetworkServer(NetworkServer *tcp, NetworkServer *udp) {
     tcp->registerListener(new DebugNetworkListener(0));
     udp->registerListener(new DebugNetworkListener(0));
-    listenUDPThread = thread(&NetworkServer::run, tcp);
+    tcp->registerListener(new GetEntitys());
+    udp->registerListener(new GetEntitys());
+    listenUDPThread = thread(&NetworkServer::run, udp);
     listenUDPThread.detach();
-    listenTCPThread = thread(&NetworkServer::run, udp);
+    listenTCPThread = thread(&NetworkServer::run, tcp);
     listenTCPThread.detach();
 }
 

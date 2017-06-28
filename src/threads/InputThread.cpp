@@ -26,7 +26,7 @@ InputThread::InputThread(Server *srv) {
 void InputThread::init() {
     while (server->isRunning()) {
         string cmd = "";
-        cin >> cmd;
+        getline(cin, cmd);
         manager.onCommand(server, cmd);
     }
 }
