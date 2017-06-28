@@ -1,4 +1,0 @@
-<map id="Catch::ScopedMessage" name="Catch::ScopedMessage">
-<area shape="rect" id="node2" href="$struct_catch_1_1_message_info.html" title="{Catch::MessageInfo\n|+ macroName\l+ type\l+ message\l+ sequence\l|+ MessageInfo()\l+ operator==()\l+ operator\&lt;()\l}" alt="" coords="17,222,156,373"/>
-<area shape="rect" id="node3" href="$struct_catch_1_1_source_line_info.html" title="{Catch::SourceLineInfo\n|+ file\l+ line\l|+ SourceLineInfo()\l+ SourceLineInfo()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l}" alt="" coords="11,6,163,157"/>
-</map>

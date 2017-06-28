@@ -1,8 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_catch_1_1_non_copyable.html" title="Catch::NonCopyable" alt="" coords="5,37,149,64"/>
-<area shape="rect" id="node2" href="$struct_catch_1_1_i_shared.html" title="Catch::IShared" alt="" coords="198,12,309,39"/>
-<area shape="rect" id="node6" href="$class_catch_1_1_section.html" title="Catch::Section" alt="" coords="199,63,308,89"/>
-<area shape="rect" id="node3" href="$struct_catch_1_1_i_test_case.html" title="Catch::ITestCase" alt="" coords="358,12,485,39"/>
-<area shape="rect" id="node4" href="$struct_catch_1_1_shared_impl.html" title="Catch::SharedImpl\&lt;\l ITestCase \&gt;" alt="" coords="533,5,672,46"/>
-<area shape="rect" id="node5" href="$class_catch_1_1_method_test_case.html" title="Catch::MethodTestCase\&lt; C \&gt;" alt="" coords="721,12,919,39"/>
-</map>

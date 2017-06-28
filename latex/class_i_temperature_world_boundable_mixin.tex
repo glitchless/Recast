@@ -35,6 +35,8 @@ using \hyperlink{class_i_temperature_world_boundable_mixin_a370c20d79642d15e9784
 \item 
 virtual void \hyperlink{class_i_temperature_world_boundable_mixin_ac350b2e2ea22a229e6543d55e3217317}{foreach} (\hyperlink{class_i_temperature_world_boundable_mixin_a370c20d79642d15e97843da972d87ba9}{Foreach\-Cell\-Fn} func) const =0
 \item 
+virtual void \hyperlink{class_i_temperature_world_boundable_mixin_a3b7ec1fc071ac95a6f6fe98b9f4bd2da}{foreach\-Cell\-On\-Edge} (\hyperlink{_edge_8hpp_a5be7c8fa582f7b873d1c6caacb633073}{Edge} edge, \hyperlink{class_i_temperature_world_boundable_mixin_a370c20d79642d15e97843da972d87ba9}{Foreach\-Cell\-Fn} func) const =0
+\item 
 virtual \hyperlink{struct_parallelepiped}{Parallelepiped} \hyperlink{class_i_temperature_world_boundable_mixin_a4811acd7f2bade56752c6326b0860f0c}{bounds} () const noexcept=0
 \end{DoxyCompactItemize}
 
@@ -79,7 +81,7 @@ Loops over each point.
 \end{DoxyParams}
 
 
-Implemented in \hyperlink{class_bound_temperature_world_afac2a24af176488487ef7aaa62936ee7}{Bound\-Temperature\-World}, and \hyperlink{class_scalable_bound_temperature_world_a57f60178c88b2cffca11a7f21c5c11c7}{Scalable\-Bound\-Temperature\-World}.
+Implemented in \hyperlink{class_scalable_bound_temperature_world_a57f60178c88b2cffca11a7f21c5c11c7}{Scalable\-Bound\-Temperature\-World}, and \hyperlink{class_bound_temperature_world_afac2a24af176488487ef7aaa62936ee7}{Bound\-Temperature\-World}.
 
 
 
@@ -93,8 +95,29 @@ Here is the caller graph for this function\-:
 \end{figure}
 
 
+\hypertarget{class_i_temperature_world_boundable_mixin_a3b7ec1fc071ac95a6f6fe98b9f4bd2da}{\index{I\-Temperature\-World\-Boundable\-Mixin@{I\-Temperature\-World\-Boundable\-Mixin}!foreach\-Cell\-On\-Edge@{foreach\-Cell\-On\-Edge}}
+\index{foreach\-Cell\-On\-Edge@{foreach\-Cell\-On\-Edge}!ITemperatureWorldBoundableMixin@{I\-Temperature\-World\-Boundable\-Mixin}}
+\subsubsection[{foreach\-Cell\-On\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Temperature\-World\-Boundable\-Mixin\-::foreach\-Cell\-On\-Edge (
+\begin{DoxyParamCaption}
+\item[{{\bf Edge}}]{edge, }
+\item[{{\bf Foreach\-Cell\-Fn}}]{func}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_temperature_world_boundable_mixin_a3b7ec1fc071ac95a6f6fe98b9f4bd2da}
+Loops over each point on specified edge.
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge} & Edge. \\
+\hline
+{\em func} & Function to execute at each point. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_bound_temperature_world_a48efcef51d61eb752512459e39fecb74}{Bound\-Temperature\-World}.
+
 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/interfaces/\hyperlink{_i_temperature_world_boundable_8hpp}{I\-Temperature\-World\-Boundable.\-hpp}\end{DoxyCompactItemize}
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/temperature-\/world/interfaces/\hyperlink{_i_temperature_world_boundable_8hpp}{I\-Temperature\-World\-Boundable.\-hpp}\end{DoxyCompactItemize}

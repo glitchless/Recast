@@ -29,6 +29,8 @@ Collaboration diagram for I\-Timer\-Blockable\-Mixin\-:
 \begin{DoxyCompactItemize}
 \item 
 virtual std\-::chrono\-::milliseconds \hyperlink{class_i_timer_blockable_mixin_a9480f79463ced5d05c05bd0dff939442}{min\-Delta} () const =0
+\item 
+virtual void \hyperlink{class_i_timer_blockable_mixin_a2175fe50ae92b59dcd866298ee4b204c}{wait} ()=0
 \end{DoxyCompactItemize}
 
 
@@ -50,8 +52,19 @@ Minimum possible value of {\ttfamily delta}.
 
 Implemented in \hyperlink{class_synchronized_blocking_timer_a42156631ff9193cdfffb60b10c40da05}{Synchronized\-Blocking\-Timer}.
 
+\hypertarget{class_i_timer_blockable_mixin_a2175fe50ae92b59dcd866298ee4b204c}{\index{I\-Timer\-Blockable\-Mixin@{I\-Timer\-Blockable\-Mixin}!wait@{wait}}
+\index{wait@{wait}!ITimerBlockableMixin@{I\-Timer\-Blockable\-Mixin}}
+\subsubsection[{wait}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Timer\-Blockable\-Mixin\-::wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_timer_blockable_mixin_a2175fe50ae92b59dcd866298ee4b204c}
+Blocks until {\ttfamily delta} $>$= {\ttfamily min\-Delta}. 
+
+Implemented in \hyperlink{class_synchronized_blocking_timer_aa4db03f54196073f9f457052d565d2ff}{Synchronized\-Blocking\-Timer}.
+
 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/interfaces/\hyperlink{_i_timer_blockable_8hpp}{I\-Timer\-Blockable.\-hpp}\end{DoxyCompactItemize}
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/temperature-\/world/interfaces/\hyperlink{_i_timer_blockable_8hpp}{I\-Timer\-Blockable.\-hpp}\end{DoxyCompactItemize}

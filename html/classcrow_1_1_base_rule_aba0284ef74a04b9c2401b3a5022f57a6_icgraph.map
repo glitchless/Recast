@@ -1,6 +1,0 @@
-<map id="crow::BaseRule::get_methods" name="crow::BaseRule::get_methods">
-<area shape="rect" id="node2" href="$classcrow_1_1_router.html#a2b37f05675d075c3de79f6a4de42320d" title="crow::Router::handle\l_upgrade" alt="" coords="195,5,338,46"/>
-<area shape="rect" id="node4" href="$classcrow_1_1_router.html#a6b7a5a19c6aa65f229eecaf47bda4dde" title="crow::Router::handle" alt="" coords="195,71,338,97"/>
-<area shape="rect" id="node3" href="$classcrow_1_1_crow.html#a6e435bf5275735effd32647772bdbd04" title="crow::Crow::handle\l_upgrade" alt="" coords="387,5,522,46"/>
-<area shape="rect" id="node5" href="$classcrow_1_1_crow.html#a9e0d9a96cd8be5374758f538cc057f26" title="crow::Crow::handle" alt="" coords="387,71,522,97"/>
-</map>

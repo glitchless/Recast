@@ -1,7 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_catch_1_1_decomposed_expression.html" title="Catch::DecomposedExpression" alt="" coords="6,100,213,127"/>
-<area shape="rect" id="node2" href="$class_catch_1_1_binary_expression.html" title="Catch::BinaryExpression\l\&lt; LhsT, Op, RhsT \&gt;" alt="" coords="270,5,437,46"/>
-<area shape="rect" id="node3" href="$class_catch_1_1_expression_lhs.html" title="Catch::ExpressionLhs\&lt; T \&gt;" alt="" coords="262,71,445,97"/>
-<area shape="rect" id="node4" href="$class_catch_1_1_match_expression.html" title="Catch::MatchExpression\l\&lt; ArgT, MatcherT \&gt;" alt="" coords="270,122,437,163"/>
-<area shape="rect" id="node5" href="$class_catch_1_1_result_builder.html" title="Catch::ResultBuilder" alt="" coords="282,188,425,215"/>
+<area shape="rect" id="node2" href="$class_invalid_login_or_password.html" title="InvalidLoginOrPassword" alt="" coords="133,5,296,32"/>
+<area shape="rect" id="node3" href="$class_server_full_exception.html" title="ServerFullException" alt="" coords="145,56,284,83"/>
 </map>

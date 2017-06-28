@@ -1,8 +1,0 @@
-<map id="crow::Router::handle" name="crow::Router::handle">
-<area shape="rect" id="node2" href="$structcrow_1_1response.html#abef42200eca49c70dc1f5140ee3603ab" title="crow::response::end" alt="" coords="198,5,338,32"/>
-<area shape="rect" id="node3" href="$structcrow_1_1request.html#ab7b219512fa6db3bffa6c102ad4b6044" title="crow::request::get\l_header_value" alt="" coords="205,57,331,98"/>
-<area shape="rect" id="node5" href="$structcrow_1_1response.html#a16d1a8bcec6460ba97f90b80881693b8" title="crow::response::add\l_header" alt="" coords="198,122,338,163"/>
-<area shape="rect" id="node6" href="$classcrow_1_1_base_rule.html#aba0284ef74a04b9c2401b3a5022f57a6" title="crow::BaseRule::get\l_methods" alt="" coords="197,187,339,229"/>
-<area shape="rect" id="node7" href="$namespacecrow.html#a2e95f26db5041c7f322bd38c2de6a6b1" title="crow::method_name" alt="" coords="198,253,338,280"/>
-<area shape="rect" id="node4" href="$namespacecrow.html#ac0940ae1e094df6107d3a2604537279a" title="crow::get_header_value" alt="" coords="387,64,547,91"/>
-</map>

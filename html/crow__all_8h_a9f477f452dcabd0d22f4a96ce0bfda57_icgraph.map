@@ -1,5 +1,0 @@
-<map id="parse_url_char" name="parse_url_char">
-<area shape="rect" id="node2" href="$crow__all_8h.html#a5034165465db6c488ce8b75fd0f72faf" title="http_parser_execute" alt="" coords="163,12,303,39"/>
-<area shape="rect" id="node4" href="$crow__all_8h.html#aeb269310a348fd68fd001b30b690fc83" title="http_parser_parse_url" alt="" coords="160,63,307,89"/>
-<area shape="rect" id="node3" href="$structcrow_1_1_h_t_t_p_parser.html#a9ca5bdc64f7ce0ffa836c6263da0da45" title="crow::HTTPParser\&lt; crow\l::Connection \&gt;::feed" alt="" coords="355,5,525,46"/>
-</map>

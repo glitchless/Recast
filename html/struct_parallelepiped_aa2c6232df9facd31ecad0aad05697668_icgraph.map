@@ -1,11 +1,11 @@
 <map id="Parallelepiped::minZ" name="Parallelepiped::minZ">
 <area shape="rect" id="node2" href="$class_bound_temperature_world.html#afac2a24af176488487ef7aaa62936ee7" title="BoundTemperatureWorld\l::foreach" alt="" coords="203,5,370,46"/>
-<area shape="rect" id="node3" href="$class_bound_temperature_world.html#a6be6a48b1a29f0b1cc4a01b5e0369f9e" title="BoundTemperatureWorld\l::_getIndexInData" alt="" coords="203,187,370,229"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#afc1d4dae6cf44b56e5e984f30b5942f2" title="SCENARIO" alt="" coords="667,224,760,251"/>
-<area shape="rect" id="node8" href="$class_scalable_bound_temperature_world.html#ade4ecf303ae025e824c0bd5ecd2e2ca7" title="ScalableBoundTemperature\lWorld::set" alt="" coords="431,122,614,163"/>
-<area shape="rect" id="node9" href="$class_scalable_bound_temperature_world.html#ab9602b36759aa857910e03856344759d" title="ScalableBoundTemperature\lWorld::amplify" alt="" coords="431,355,614,397"/>
-<area shape="rect" id="node10" href="$class_scalable_bound_temperature_world.html#a57f60178c88b2cffca11a7f21c5c11c7" title="ScalableBoundTemperature\lWorld::foreach" alt="" coords="195,305,378,346"/>
-<area shape="rect" id="node4" href="$class_bound_temperature_world.html#a1a668e9632e4179029cabad5052428fc" title="BoundTemperatureWorld::get" alt="" coords="427,253,619,280"/>
-<area shape="rect" id="node6" href="$class_bound_temperature_world.html#aa069691f31dd38006cfeacab94b6e94e" title="BoundTemperatureWorld::set" alt="" coords="427,304,619,331"/>
-<area shape="rect" id="node7" href="$class_bound_temperature_world.html#a7b49bd6e07cc78f3c7a3a722d0ec5bac" title="BoundTemperatureWorld\l::amplify" alt="" coords="439,187,606,229"/>
+<area shape="rect" id="node3" href="$class_bound_temperature_world.html#a48efcef51d61eb752512459e39fecb74" title="BoundTemperatureWorld\l::foreachCellOnEdge" alt="" coords="203,70,370,111"/>
+<area shape="rect" id="node4" href="$class_bound_temperature_world.html#a6be6a48b1a29f0b1cc4a01b5e0369f9e" title="BoundTemperatureWorld\l::_getIndexInData" alt="" coords="203,135,370,177"/>
+<area shape="rect" id="node8" href="$class_scalable_bound_temperature_world.html#ade4ecf303ae025e824c0bd5ecd2e2ca7" title="ScalableBoundTemperature\lWorld::set" alt="" coords="431,194,614,235"/>
+<area shape="rect" id="node9" href="$class_scalable_bound_temperature_world.html#ab9602b36759aa857910e03856344759d" title="ScalableBoundTemperature\lWorld::amplify" alt="" coords="431,259,614,301"/>
+<area shape="rect" id="node10" href="$class_scalable_bound_temperature_world.html#a57f60178c88b2cffca11a7f21c5c11c7" title="ScalableBoundTemperature\lWorld::foreach" alt="" coords="195,303,378,345"/>
+<area shape="rect" id="node5" href="$class_bound_temperature_world.html#a1a668e9632e4179029cabad5052428fc" title="BoundTemperatureWorld::get" alt="" coords="427,27,619,53"/>
+<area shape="rect" id="node6" href="$class_bound_temperature_world.html#aa069691f31dd38006cfeacab94b6e94e" title="BoundTemperatureWorld::set" alt="" coords="427,77,619,104"/>
+<area shape="rect" id="node7" href="$class_bound_temperature_world.html#a7b49bd6e07cc78f3c7a3a722d0ec5bac" title="BoundTemperatureWorld\l::amplify" alt="" coords="439,129,606,170"/>
 </map>

@@ -12,7 +12,7 @@ Inheritance diagram for Average\-Share\-Temperature\-World\-Updater\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=252pt]{class_average_share_temperature_world_updater__inherit__graph}
+\includegraphics[width=307pt]{class_average_share_temperature_world_updater__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -22,7 +22,7 @@ Collaboration diagram for Average\-Share\-Temperature\-World\-Updater\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=252pt]{class_average_share_temperature_world_updater__coll__graph}
+\includegraphics[width=307pt]{class_average_share_temperature_world_updater__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -31,13 +31,17 @@ Collaboration diagram for Average\-Share\-Temperature\-World\-Updater\-:
 \hyperlink{class_average_share_temperature_world_updater_a0031a5c20f9b717f0eb099f1d69e5ced}{Average\-Share\-Temperature\-World\-Updater} (double temperature\-Exchange\-Coefficient, std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ world, std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_timer_blockable}{I\-Timer\-Blockable}$<$ \hyperlink{class_i_timer}{I\-Timer} $>$$>$ timer)
 \item 
 void \hyperlink{class_average_share_temperature_world_updater_a29be9be2073572f3ef2dc5315c506245}{update} () override
+\item 
+bool \hyperlink{class_average_share_temperature_world_updater_a2b3403ad5d9c7ef2f39b359fc87f44b8}{can\-Add\-Near\-Chunk} (\hyperlink{_edge_8hpp_a5be7c8fa582f7b873d1c6caacb633073}{Edge} edge, const std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ \&chunk) const noexceptoverride
+\item 
+void \hyperlink{class_average_share_temperature_world_updater_ab48c277317950d9b9e571d13f3461307}{add\-Near\-Chunk} (\hyperlink{_edge_8hpp_a5be7c8fa582f7b873d1c6caacb633073}{Edge} edge, std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ chunk) override
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_average_share_temperature_world_updater_a70a05789b5cfa32fc7bcdf8ceb94e66f}{\-\_\-check\-Then\-Share\-Temperature} (double dt, \hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, \hyperlink{struct_coord}{Coord} next\-X, \hyperlink{struct_coord}{Coord} next\-Y, \hyperlink{struct_coord}{Coord} next\-Z)
+void \hyperlink{class_average_share_temperature_world_updater_ad117315f70e5a2e214547dbf789715f8}{\-\_\-check\-Then\-Share\-Temperature} (double dt, const std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ \&first\-World, \hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, const std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ \&second\-World, \hyperlink{struct_coord}{Coord} next\-X, \hyperlink{struct_coord}{Coord} next\-Y, \hyperlink{struct_coord}{Coord} next\-Z)
 \item 
-void \hyperlink{class_average_share_temperature_world_updater_aaf03625100ff7cd459c32bbd33956e33}{\-\_\-share\-Temperature} (double dt, \hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, \hyperlink{struct_coord}{Coord} next\-X, \hyperlink{struct_coord}{Coord} next\-Y, \hyperlink{struct_coord}{Coord} next\-Z)
+void \hyperlink{class_average_share_temperature_world_updater_ab5fe8bcd2311e4af0b4a09d5f3d7b8d9}{\-\_\-share\-Temperature} (double dt, const std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ \&first\-World, \hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, const std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ \&second\-World, \hyperlink{struct_coord}{Coord} next\-X, \hyperlink{struct_coord}{Coord} next\-Y, \hyperlink{struct_coord}{Coord} next\-Z)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -50,6 +54,18 @@ $<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ \hyperl
 \item 
 std\-::shared\-\_\-ptr\\*
 $<$ \hyperlink{class_i_timer_blockable}{I\-Timer\-Blockable}$<$ \hyperlink{class_i_timer}{I\-Timer} $>$ $>$ \hyperlink{class_average_share_temperature_world_updater_acc17234a8b1f33e1be9c7806e4973be3}{\-\_\-timer}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ \hyperlink{class_average_share_temperature_world_updater_a1e5e2936bb7b6613a27129a2a199247d}{\-\_\-near\-Right\-Chunk}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ \hyperlink{class_average_share_temperature_world_updater_a33ced05d90444ec05a0fc531d9c1fa7f}{\-\_\-near\-Up\-Chunk}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ \hyperlink{class_average_share_temperature_world_updater_a0164e9a5b9b614a3fb6fc360d4c0864a}{\-\_\-near\-Far\-Chunk}
 \end{DoxyCompactItemize}
 
 
@@ -75,19 +91,21 @@ How it works for every two cells\-:
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_average_share_temperature_world_updater_a70a05789b5cfa32fc7bcdf8ceb94e66f}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-check\-Then\-Share\-Temperature@{\-\_\-check\-Then\-Share\-Temperature}}
+\hypertarget{class_average_share_temperature_world_updater_ad117315f70e5a2e214547dbf789715f8}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-check\-Then\-Share\-Temperature@{\-\_\-check\-Then\-Share\-Temperature}}
 \index{\-\_\-check\-Then\-Share\-Temperature@{\-\_\-check\-Then\-Share\-Temperature}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
 \subsubsection[{\-\_\-check\-Then\-Share\-Temperature}]{\setlength{\rightskip}{0pt plus 5cm}void Average\-Share\-Temperature\-World\-Updater\-::\-\_\-check\-Then\-Share\-Temperature (
 \begin{DoxyParamCaption}
 \item[{double}]{dt, }
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$ \&}]{first\-World, }
 \item[{{\bf Coord}}]{x, }
 \item[{{\bf Coord}}]{y, }
 \item[{{\bf Coord}}]{z, }
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$ \&}]{second\-World, }
 \item[{{\bf Coord}}]{next\-X, }
 \item[{{\bf Coord}}]{next\-Y, }
 \item[{{\bf Coord}}]{next\-Z}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_a70a05789b5cfa32fc7bcdf8ceb94e66f}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_ad117315f70e5a2e214547dbf789715f8}
 
 
 Here is the call graph for this function\-:
@@ -95,7 +113,7 @@ Here is the call graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_average_share_temperature_world_updater_a70a05789b5cfa32fc7bcdf8ceb94e66f_cgraph}
+\includegraphics[width=350pt]{class_average_share_temperature_world_updater_ad117315f70e5a2e214547dbf789715f8_cgraph}
 \end{center}
 \end{figure}
 
@@ -107,24 +125,26 @@ Here is the caller graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_average_share_temperature_world_updater_a70a05789b5cfa32fc7bcdf8ceb94e66f_icgraph}
+\includegraphics[width=350pt]{class_average_share_temperature_world_updater_ad117315f70e5a2e214547dbf789715f8_icgraph}
 \end{center}
 \end{figure}
 
 
-\hypertarget{class_average_share_temperature_world_updater_aaf03625100ff7cd459c32bbd33956e33}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-share\-Temperature@{\-\_\-share\-Temperature}}
+\hypertarget{class_average_share_temperature_world_updater_ab5fe8bcd2311e4af0b4a09d5f3d7b8d9}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-share\-Temperature@{\-\_\-share\-Temperature}}
 \index{\-\_\-share\-Temperature@{\-\_\-share\-Temperature}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
 \subsubsection[{\-\_\-share\-Temperature}]{\setlength{\rightskip}{0pt plus 5cm}void Average\-Share\-Temperature\-World\-Updater\-::\-\_\-share\-Temperature (
 \begin{DoxyParamCaption}
 \item[{double}]{dt, }
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$ \&}]{first\-World, }
 \item[{{\bf Coord}}]{x, }
 \item[{{\bf Coord}}]{y, }
 \item[{{\bf Coord}}]{z, }
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$ \&}]{second\-World, }
 \item[{{\bf Coord}}]{next\-X, }
 \item[{{\bf Coord}}]{next\-Y, }
 \item[{{\bf Coord}}]{next\-Z}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_aaf03625100ff7cd459c32bbd33956e33}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_ab5fe8bcd2311e4af0b4a09d5f3d7b8d9}
 
 
 Here is the call graph for this function\-:
@@ -132,7 +152,7 @@ Here is the call graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_average_share_temperature_world_updater_aaf03625100ff7cd459c32bbd33956e33_cgraph}
+\includegraphics[width=350pt]{class_average_share_temperature_world_updater_ab5fe8bcd2311e4af0b4a09d5f3d7b8d9_cgraph}
 \end{center}
 \end{figure}
 
@@ -144,7 +164,72 @@ Here is the caller graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_average_share_temperature_world_updater_aaf03625100ff7cd459c32bbd33956e33_icgraph}
+\includegraphics[width=350pt]{class_average_share_temperature_world_updater_ab5fe8bcd2311e4af0b4a09d5f3d7b8d9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_average_share_temperature_world_updater_ab48c277317950d9b9e571d13f3461307}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!add\-Near\-Chunk@{add\-Near\-Chunk}}
+\index{add\-Near\-Chunk@{add\-Near\-Chunk}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
+\subsubsection[{add\-Near\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}void Average\-Share\-Temperature\-World\-Updater\-::add\-Near\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Edge}}]{edge, }
+\item[{std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$}]{other\-Chunk}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_average_share_temperature_world_updater_ab48c277317950d9b9e571d13f3461307}
+Adds chunk to near chunks collection on specified edge.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\-Chunk} & Near chunk. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_updater_temperature_world_semi_chunk_updatable_mixin_aa3139125095140f797df3cebb466c48a}{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_average_share_temperature_world_updater_ab48c277317950d9b9e571d13f3461307_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_average_share_temperature_world_updater_a2b3403ad5d9c7ef2f39b359fc87f44b8}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!can\-Add\-Near\-Chunk@{can\-Add\-Near\-Chunk}}
+\index{can\-Add\-Near\-Chunk@{can\-Add\-Near\-Chunk}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
+\subsubsection[{can\-Add\-Near\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}bool Average\-Share\-Temperature\-World\-Updater\-::can\-Add\-Near\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Edge}}]{edge, }
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$ \&}]{other\-Chunk}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_average_share_temperature_world_updater_a2b3403ad5d9c7ef2f39b359fc87f44b8}
+Tells whether it's possible to add this chunk to near chunks collection on specified edge. This method is thread-\/safe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\-Chunk} & Near chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this chunk can be added to near chunks collection. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_updater_temperature_world_semi_chunk_updatable_mixin_a35d2d34bcf2f9e857246bd8d92aec74f}{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_average_share_temperature_world_updater_a2b3403ad5d9c7ef2f39b359fc87f44b8_icgraph}
 \end{center}
 \end{figure}
 
@@ -175,6 +260,15 @@ Here is the call graph for this function\-:
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_average_share_temperature_world_updater_a0164e9a5b9b614a3fb6fc360d4c0864a}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-near\-Far\-Chunk@{\-\_\-near\-Far\-Chunk}}
+\index{\-\_\-near\-Far\-Chunk@{\-\_\-near\-Far\-Chunk}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
+\subsubsection[{\-\_\-near\-Far\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Boundable}$<${\bf I\-Temperature\-World}$>$ $>$ Average\-Share\-Temperature\-World\-Updater\-::\-\_\-near\-Far\-Chunk\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_a0164e9a5b9b614a3fb6fc360d4c0864a}
+\hypertarget{class_average_share_temperature_world_updater_a1e5e2936bb7b6613a27129a2a199247d}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-near\-Right\-Chunk@{\-\_\-near\-Right\-Chunk}}
+\index{\-\_\-near\-Right\-Chunk@{\-\_\-near\-Right\-Chunk}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
+\subsubsection[{\-\_\-near\-Right\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Boundable}$<${\bf I\-Temperature\-World}$>$ $>$ Average\-Share\-Temperature\-World\-Updater\-::\-\_\-near\-Right\-Chunk\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_a1e5e2936bb7b6613a27129a2a199247d}
+\hypertarget{class_average_share_temperature_world_updater_a33ced05d90444ec05a0fc531d9c1fa7f}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-near\-Up\-Chunk@{\-\_\-near\-Up\-Chunk}}
+\index{\-\_\-near\-Up\-Chunk@{\-\_\-near\-Up\-Chunk}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
+\subsubsection[{\-\_\-near\-Up\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Boundable}$<${\bf I\-Temperature\-World}$>$ $>$ Average\-Share\-Temperature\-World\-Updater\-::\-\_\-near\-Up\-Chunk\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_a33ced05d90444ec05a0fc531d9c1fa7f}
 \hypertarget{class_average_share_temperature_world_updater_a37ebe90d538e148a8da4efa0845d334c}{\index{Average\-Share\-Temperature\-World\-Updater@{Average\-Share\-Temperature\-World\-Updater}!\-\_\-temperature\-Exchange\-Coefficient@{\-\_\-temperature\-Exchange\-Coefficient}}
 \index{\-\_\-temperature\-Exchange\-Coefficient@{\-\_\-temperature\-Exchange\-Coefficient}!AverageShareTemperatureWorldUpdater@{Average\-Share\-Temperature\-World\-Updater}}
 \subsubsection[{\-\_\-temperature\-Exchange\-Coefficient}]{\setlength{\rightskip}{0pt plus 5cm}double Average\-Share\-Temperature\-World\-Updater\-::\-\_\-temperature\-Exchange\-Coefficient\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_average_share_temperature_world_updater_a37ebe90d538e148a8da4efa0845d334c}
@@ -188,5 +282,5 @@ Here is the call graph for this function\-:
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/implementation/\hyperlink{_average_share_temperature_world_updater_8hpp}{Average\-Share\-Temperature\-World\-Updater.\-hpp}\item 
-/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/implementation/\hyperlink{_average_share_temperature_world_updater_8cpp}{Average\-Share\-Temperature\-World\-Updater.\-cpp}\end{DoxyCompactItemize}
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/temperature-\/world/implementation/\hyperlink{_average_share_temperature_world_updater_8hpp}{Average\-Share\-Temperature\-World\-Updater.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/temperature-\/world/implementation/\hyperlink{_average_share_temperature_world_updater_8cpp}{Average\-Share\-Temperature\-World\-Updater.\-cpp}\end{DoxyCompactItemize}

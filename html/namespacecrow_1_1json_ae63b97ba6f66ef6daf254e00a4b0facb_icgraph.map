@@ -1,7 +1,0 @@
-<map id="crow::json::get_type_str" name="crow::json::get_type_str">
-<area shape="rect" id="node2" href="$classcrow_1_1json_1_1rvalue.html#aa1278bfe88422dd8433aa9b463764dfd" title="crow::json::rvalue::i" alt="" coords="219,77,355,104"/>
-<area shape="rect" id="node5" href="$classcrow_1_1json_1_1rvalue.html#a9f6f463431193b55bd8e0382d09e1665" title="crow::json::rvalue::u" alt="" coords="217,135,357,161"/>
-<area shape="rect" id="node3" href="$classcrow_1_1json_1_1rvalue.html#a94e5c69a62fde0ef9273de2ead363d18" title="crow::json::rvalue\l::operator int64_t" alt="" coords="407,5,532,46"/>
-<area shape="rect" id="node4" href="$classcrow_1_1json_1_1rvalue.html#ab29bcad01c1aa1afdea9e4e38c0161b7" title="crow::json::rvalue\l::operator int" alt="" coords="407,70,532,111"/>
-<area shape="rect" id="node6" href="$classcrow_1_1json_1_1rvalue.html#a020b1cb9d5d3245553afcb4a531d50c0" title="crow::json::rvalue\l::operator uint64_t" alt="" coords="406,135,533,177"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="main" name="main">
-<area shape="rect" id="node2" href="$class_bound_temperature_world_injector.html#aa3c6c0c782869509238b83774434347c" title="BoundTemperatureWorldInjector\l::setWorldBounds" alt="" coords="105,5,314,46"/>
-<area shape="rect" id="node3" href="$class_bound_temperature_world_injector.html#a94a6c343fa6f0a8aa7640ba4338de3e4" title="BoundTemperatureWorldInjector\l::world" alt="" coords="105,70,314,111"/>
-<area shape="rect" id="node4" href="$class_bound_temperature_world_injector.html#ab14750f84b51f9fc1b1a4d1c19b03c19" title="BoundTemperatureWorldInjector\l::updater" alt="" coords="105,135,314,177"/>
-<area shape="rect" id="node5" href="$class_basic_timer.html#abf76823ef1c782a0c6d49af2652b5271" title="BasicTimer::update" alt="" coords="142,201,277,228"/>
-<area shape="rect" id="node6" href="$class_basic_timer.html#afbe3d01b15f26573eb12c04ae7c28684" title="BasicTimer::deltaFloatSeconds" alt="" coords="107,252,311,279"/>
-<area shape="rect" id="node7" href="$class_basic_timer.html#a49bc91a549323a1a7fc6b7d9ec727174" title="BasicTimer::delta" alt="" coords="363,252,487,279"/>
-</map>

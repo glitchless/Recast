@@ -76,7 +76,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,7 +101,7 @@ Inheritance diagram for ITimerBlockableMixin:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_timer_blockable_mixin__inherit__graph.png" border="0" usemap="#_i_timer_blockable_mixin_inherit__map" alt="Inheritance graph"/></div>
 <map name="_i_timer_blockable_mixin_inherit__map" id="_i_timer_blockable_mixin_inherit__map">
-<area shape="rect" id="node2" href="class_i_timer_blockable.html" title="{ITimerBlockable\&lt; T \&gt;\n||}" alt="" coords="5,131,152,208"/><area shape="rect" id="node3" href="class_i_timer_blockable.html" title="{ITimerBlockable\&lt; ITimer \&gt;\n||}" alt="" coords="177,131,353,208"/><area shape="rect" id="node4" href="class_synchronized_blocking_timer.html" title="{SynchronizedBlockingTimer\n|# _minDelta\l# _lastUpdateTime\l# _lastUpdateTimeMutex\l|+ SynchronizedBlockingTimer()\l+ delta()\l+ minDelta()\l+ deltaFloatSeconds()\l+ update()\l}" alt="" coords="163,256,367,421"/></map>
+<area shape="rect" id="node2" href="class_i_timer_blockable.html" title="{ITimerBlockable\&lt; T \&gt;\n||}" alt="" coords="5,147,152,224"/><area shape="rect" id="node3" href="class_i_timer_blockable.html" title="{ITimerBlockable\&lt; ITimer \&gt;\n||}" alt="" coords="177,147,353,224"/><area shape="rect" id="node4" href="class_synchronized_blocking_timer.html" title="{SynchronizedBlockingTimer\n|# _minDelta\l# _lastUpdateTime\l# _lastUpdateTimeMutex\l# _isFirstUpdate\l|+ SynchronizedBlockingTimer()\l+ delta()\l+ minDelta()\l+ deltaFloatSeconds()\l+ isFirstUpdate()\l+ update()\l+ wait()\l}" alt="" coords="163,273,367,482"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for ITimerBlockableMixin:</div>
@@ -115,6 +115,8 @@ Collaboration diagram for ITimerBlockableMixin:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9480f79463ced5d05c05bd0dff939442"><td class="memItemLeft" align="right" valign="top">virtual std::chrono::milliseconds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_timer_blockable_mixin.html#a9480f79463ced5d05c05bd0dff939442">minDelta</a> () const =0</td></tr>
 <tr class="separator:a9480f79463ced5d05c05bd0dff939442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2175fe50ae92b59dcd866298ee4b204c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_timer_blockable_mixin.html#a2175fe50ae92b59dcd866298ee4b204c">wait</a> ()=0</td></tr>
+<tr class="separator:a2175fe50ae92b59dcd866298ee4b204c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Should not be derived directly. Use <code><a class="el" href="class_i_timer_blockable.html">ITimerBlockable</a></code>. This class is useful for <code>dynamic_cast</code>. </p>
@@ -145,8 +147,34 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2175fe50ae92b59dcd866298ee4b204c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ITimerBlockableMixin::wait </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Blocks until <code>delta</code> &gt;= <code>minDelta</code>. </p>
+
+<p>Implemented in <a class="el" href="class_synchronized_blocking_timer.html#aa4db03f54196073f9f457052d565d2ff">SynchronizedBlockingTimer</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/travis/build/bender-wardrobe/Recast/temperature-world/src/headers/temperature-world/interfaces/<a class="el" href="_i_timer_blockable_8hpp_source.html">ITimerBlockable.hpp</a></li>
+<li>/home/travis/build/bender-wardrobe/Recast/src/headers/temperature-world/interfaces/<a class="el" href="_i_timer_blockable_8hpp_source.html">ITimerBlockable.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

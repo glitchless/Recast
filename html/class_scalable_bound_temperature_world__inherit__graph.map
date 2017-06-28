@@ -1,10 +1,10 @@
 <map id="ScalableBoundTemperatureWorld" name="ScalableBoundTemperatureWorld">
-<area shape="rect" id="node2" href="$class_i_temperature_world_scalable_mutable.html" title="{ITemperatureWorldScalable\lMutable\&lt; ITemperatureWorldScalable\l\&lt; BoundTemperatureWorld \&gt; \&gt;\n||}" alt="" coords="275,760,516,867"/>
-<area shape="rect" id="node3" href="$class_i_temperature_world_scalable.html" title="{ITemperatureWorldScalable\l\&lt; BoundTemperatureWorld \&gt;\n||}" alt="" coords="195,619,385,711"/>
-<area shape="rect" id="node4" href="$class_bound_temperature_world.html" title="{BoundTemperatureWorld\n|# _bounds\l# _data\l|+ BoundTemperatureWorld()\l+ BoundTemperatureWorld()\l+ BoundTemperatureWorld()\l+ operator=()\l+ has()\l+ get()\l+ set()\l+ amplify()\l+ foreach()\l+ bounds()\l# _getIndexInData()\l}" alt="" coords="93,331,280,570"/>
-<area shape="rect" id="node5" href="$class_i_temperature_world_boundable.html" title="{ITemperatureWorldBoundable\l\&lt; ITemperatureWorld \&gt;\n||}" alt="" coords="89,190,284,282"/>
-<area shape="rect" id="node6" href="$class_i_temperature_world.html" title="{ITemperatureWorld\n||+ ~ITemperatureWorld()\l+ has()\l+ get()\l+ set()\l+ amplify()\l}" alt="" coords="5,5,165,141"/>
-<area shape="rect" id="node7" href="$class_i_temperature_world_boundable_mixin.html" title="{ITemperatureWorldBoundable\lMixin\n||+ foreach()\l+ bounds()\l}" alt="" coords="191,20,385,127"/>
-<area shape="rect" id="node8" href="$class_i_temperature_world_scalable_mixin.html" title="{ITemperatureWorldScalable\lMixin\n||+ cellScale()\l}" alt="" coords="305,405,487,497"/>
-<area shape="rect" id="node9" href="$class_i_temperature_world_scalable_mutable_mixin.html" title="{ITemperatureWorldScalable\lMutableMixin\n||+ setCellScale()\l}" alt="" coords="410,619,592,711"/>
+<area shape="rect" id="node2" href="$class_i_temperature_world_scalable_mutable.html" title="{ITemperatureWorldScalable\lMutable\&lt; ITemperatureWorldScalable\l\&lt; ITemperatureWorldBoundable\&lt;\l ITemperatureWorld \&gt; \&gt; \&gt;\n||}" alt="" coords="97,639,337,761"/>
+<area shape="rect" id="node3" href="$class_i_temperature_world_scalable.html" title="{ITemperatureWorldScalable\l\&lt; ITemperatureWorldBoundable\l\&lt; ITemperatureWorld \&gt; \&gt;\n||}" alt="" coords="5,419,211,525"/>
+<area shape="rect" id="node4" href="$class_i_temperature_world_boundable.html" title="{ITemperatureWorldBoundable\l\&lt; ITemperatureWorld \&gt;\n||}" alt="" coords="291,278,485,370"/>
+<area shape="rect" id="node9" href="$class_bound_temperature_world.html" title="{BoundTemperatureWorld\n|# _bounds\l# _data\l|+ BoundTemperatureWorld()\l+ BoundTemperatureWorld()\l+ BoundTemperatureWorld()\l+ operator=()\l+ has()\l+ get()\l+ set()\l+ amplify()\l+ foreach()\l+ foreachCellOnEdge()\land 7 more...\l# _getIndexInData()\l}" alt="" coords="363,573,549,827"/>
+<area shape="rect" id="node5" href="$class_i_temperature_world.html" title="{ITemperatureWorld\n||+ ~ITemperatureWorld()\l+ has()\l+ get()\l+ set()\l+ amplify()\l+ previousCoordX()\l+ previousCoordY()\l+ previousCoordZ()\l+ nextCoordX()\l+ nextCoordY()\l+ nextCoordZ()\l}" alt="" coords="206,5,367,229"/>
+<area shape="rect" id="node6" href="$class_i_temperature_world_boundable_mixin.html" title="{ITemperatureWorldBoundable\lMixin\n||+ foreach()\l+ foreachCellOnEdge()\l+ bounds()\l}" alt="" coords="392,57,587,178"/>
+<area shape="rect" id="node7" href="$class_i_temperature_world_scalable_mixin.html" title="{ITemperatureWorldScalable\lMixin\n||+ cellScale()\l}" alt="" coords="17,278,199,370"/>
+<area shape="rect" id="node8" href="$class_i_temperature_world_scalable_mutable_mixin.html" title="{ITemperatureWorldScalable\lMutableMixin\n||+ setCellScale()\l}" alt="" coords="235,426,417,518"/>
 </map>

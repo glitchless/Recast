@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['body',['body',['../structcrow_1_1request.html#afff683ed63a9e4067683786c3c6218c2',1,'crow::request::body()'],['../structcrow_1_1_h_t_t_p_parser.html#a38b29e8668db22997d92a2040a40eb69',1,'crow::HTTPParser::body()'],['../structcrow_1_1response.html#ae9f3cc153eac05954f1f4e599527892d',1,'crow::response::body()']]]
+  ['default_5fport_5ftcp',['DEFAULT_PORT_TCP',['../_network_utils_8hpp.html#a08503b9a325023d1ac88c0b89de3236c',1,'NetworkUtils.hpp']]],
+  ['default_5fport_5fudp',['DEFAULT_PORT_UDP',['../_network_utils_8hpp.html#aa69183107def82b9a64b8166816f6ab3',1,'NetworkUtils.hpp']]]
 ];

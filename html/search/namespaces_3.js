@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mathutils',['MathUtils',['../namespace_math_utils.html',1,'']]]
+  ['temperatureworldutils',['TemperatureWorldUtils',['../namespace_temperature_world_utils.html',1,'']]],
+  ['timeutils',['TimeUtils',['../namespace_time_utils.html',1,'']]]
 ];

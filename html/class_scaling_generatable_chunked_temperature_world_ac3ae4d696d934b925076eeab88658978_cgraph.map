@@ -1,4 +1,9 @@
 <map id="ScalingGeneratableChunkedTemperatureWorld::removeChunk" name="ScalingGeneratableChunkedTemperatureWorld::removeChunk">
-<area shape="rect" id="node2" href="$class_generatable_chunked_temperature_world.html#a42c646343bb79dcdeb9f96e6aa06cbec" title="GeneratableChunkedTemperature\lWorld::removeChunk" alt="" coords="273,5,490,46"/>
-<area shape="rect" id="node3" href="$class_chunked_temperature_world.html#a623c1f5efe7aa84d428ba58365ee775a" title="ChunkedTemperatureWorld\l::removeChunk" alt="" coords="539,5,720,46"/>
+<area shape="rect" id="node2" href="$class_generatable_chunked_temperature_world.html#a42c646343bb79dcdeb9f96e6aa06cbec" title="GeneratableChunkedTemperature\lWorld::removeChunk" alt="" coords="273,34,490,75"/>
+<area shape="rect" id="node4" href="$class_scaling_generatable_chunked_temperature_world.html#ab7385d1183770678642190af9369ffaf" title="ScalingGeneratableChunked\lTemperatureWorld::_updateScale" alt="" coords="273,129,489,170"/>
+<area shape="rect" id="node3" href="$class_chunked_temperature_world.html#a623c1f5efe7aa84d428ba58365ee775a" title="ChunkedTemperatureWorld\l::removeChunk" alt="" coords="540,5,721,46"/>
+<area shape="rect" id="node5" href="$class_i_temperature_world_scalable_mutable_mixin.html#a570d17e46a6b97d7ab6c0b7512603a4d" title="ITemperatureWorldScalable\lMutableMixin::setCellScale" alt="" coords="539,70,722,111"/>
+<area shape="rect" id="node6" href="$struct_parallelepiped.html#ae2e897abcd5d59d01fbb13ee43d8a915" title="Parallelepiped::sizeX" alt="" coords="559,136,703,163"/>
+<area shape="rect" id="node7" href="$struct_parallelepiped.html#a4dd40c102d8f16473ce2de8a5a93e102" title="Parallelepiped::sizeY" alt="" coords="559,187,703,213"/>
+<area shape="rect" id="node8" href="$struct_parallelepiped.html#ab259bb38f5743f1f33738f4774b33848" title="Parallelepiped::sizeZ" alt="" coords="559,237,702,264"/>
 </map>

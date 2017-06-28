@@ -1,14 +1,16 @@
-<map id="/home/travis/build/bender&#45;wardrobe/Recast/temperature&#45;world/src/implementation/AverageShareTemperatureWorldUpdater.cpp" name="/home/travis/build/bender&#45;wardrobe/Recast/temperature&#45;world/src/implementation/AverageShareTemperatureWorldUpdater.cpp">
-<area shape="rect" id="node2" href="$_i_timer_8hpp.html" title="temperature&#45;world/interfaces\l/ITimer.hpp" alt="" coords="5,321,192,362"/>
-<area shape="rect" id="node4" href="$_temperature_8hpp.html" title="temperature&#45;world/types\l/Temperature.hpp" alt="" coords="645,411,808,453"/>
-<area shape="rect" id="node6" href="$_average_share_temperature_world_updater_8hpp.html" title="temperature&#45;world/implementation\l/AverageShareTemperatureWorldUpdater.hpp" alt="" coords="289,139,575,181"/>
-<area shape="rect" id="node18" href="$_math_utils_8hpp.html" title="temperature&#45;world/utils\l/MathUtils.hpp" alt="" coords="1264,139,1417,181"/>
-<area shape="rect" id="node5" href="$_generic_scalar_8hpp.html" title="GenericScalar.hpp" alt="" coords="794,509,923,536"/>
-<area shape="rect" id="node8" href="$_i_updater_8hpp.html" title="temperature&#45;world/interfaces\l/IUpdater.hpp" alt="" coords="440,230,627,271"/>
-<area shape="rect" id="node9" href="$_i_temperature_world_boundable_8hpp.html" title="temperature&#45;world/interfaces\l/ITemperatureWorldBoundable.hpp" alt="" coords="838,230,1060,271"/>
-<area shape="rect" id="node17" href="$_i_timer_blockable_8hpp.html" title="temperature&#45;world/interfaces\l/ITimerBlockable.hpp" alt="" coords="136,230,323,271"/>
-<area shape="rect" id="node11" href="$_coord_8hpp.html" title="temperature&#45;world/types\l/Coord.hpp" alt="" coords="856,411,1019,453"/>
-<area shape="rect" id="node13" href="$_size_8hpp.html" title="temperature&#45;world/types\l/Size.hpp" alt="" coords="1043,411,1205,453"/>
-<area shape="rect" id="node14" href="$_i_temperature_world_8hpp.html" title="ITemperatureWorld.hpp" alt="" coords="753,328,911,355"/>
-<area shape="rect" id="node15" href="$_parallelepiped_8hpp.html" title="temperature&#45;world/types\l/Parallelepiped.hpp" alt="" coords="987,321,1149,362"/>
+<map id="/home/travis/build/bender&#45;wardrobe/Recast/src/temperature&#45;world/implementation/AverageShareTemperatureWorldUpdater.cpp" name="/home/travis/build/bender&#45;wardrobe/Recast/src/temperature&#45;world/implementation/AverageShareTemperatureWorldUpdater.cpp">
+<area shape="rect" id="node2" href="$_i_timer_8hpp.html" title="temperature&#45;world/interfaces\l/ITimer.hpp" alt="" coords="43,334,229,375"/>
+<area shape="rect" id="node4" href="$_temperature_8hpp.html" title="temperature&#45;world/types\l/Temperature.hpp" alt="" coords="252,515,415,557"/>
+<area shape="rect" id="node6" href="$_average_share_temperature_world_updater_8hpp.html" title="temperature&#45;world/implementation\l/AverageShareTemperatureWorldUpdater.hpp" alt="" coords="337,139,623,181"/>
+<area shape="rect" id="node21" href="$_math_utils_8hpp.html" title="temperature&#45;world/utils\l/MathUtils.hpp" alt="" coords="944,139,1097,181"/>
+<area shape="rect" id="node5" href="$_generic_scalar_8hpp.html" title="GenericScalar.hpp" alt="" coords="635,613,764,640"/>
+<area shape="rect" id="node9" href="$_i_updater_temperature_world_semi_chunk_updatable_8hpp.html" title="temperature&#45;world/interfaces\l/IUpdaterTemperatureWorldSemiChunk\lUpdatable.hpp" alt="" coords="355,229,605,285"/>
+<area shape="rect" id="node13" href="$_i_temperature_world_boundable_8hpp.html" title="ITemperatureWorldBoundable.hpp" alt="" coords="513,341,732,368"/>
+<area shape="rect" id="node20" href="$_i_timer_blockable_8hpp.html" title="temperature&#45;world/interfaces\l/ITimerBlockable.hpp" alt="" coords="144,237,331,278"/>
+<area shape="rect" id="node10" href="$_i_temperature_world_8hpp.html" title="ITemperatureWorld.hpp" alt="" coords="195,432,353,459"/>
+<area shape="rect" id="node19" href="$_i_updater_8hpp.html" title="IUpdater.hpp" alt="" coords="341,341,437,368"/>
+<area shape="rect" id="node11" href="$_coord_8hpp.html" title="temperature&#45;world/types\l/Coord.hpp" alt="" coords="540,515,703,557"/>
+<area shape="rect" id="node15" href="$_edge_8hpp.html" title="temperature&#45;world/types\l/Edge.hpp" alt="" coords="533,425,696,466"/>
+<area shape="rect" id="node16" href="$_size_8hpp.html" title="temperature&#45;world/types\l/Size.hpp" alt="" coords="727,515,889,557"/>
+<area shape="rect" id="node17" href="$_parallelepiped_8hpp.html" title="temperature&#45;world/types\l/Parallelepiped.hpp" alt="" coords="821,425,984,466"/>
 </map>

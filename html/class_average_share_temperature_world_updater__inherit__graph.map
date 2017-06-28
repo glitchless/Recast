@@ -1,3 +1,5 @@
 <map id="AverageShareTemperatureWorldUpdater" name="AverageShareTemperatureWorldUpdater">
-<area shape="rect" id="node2" href="$class_i_updater.html" title="{IUpdater\n||+ ~IUpdater()\l+ update()\l}" alt="" coords="70,6,169,98"/>
+<area shape="rect" id="node2" href="$class_i_updater_temperature_world_semi_chunk_updatable.html" title="{IUpdaterTemperatureWorld\lSemiChunkUpdatable\&lt; IUpdater \&gt;\n||}" alt="" coords="25,161,247,253"/>
+<area shape="rect" id="node3" href="$class_i_updater.html" title="{IUpdater\n||+ ~IUpdater()\l+ update()\l}" alt="" coords="5,13,104,105"/>
+<area shape="rect" id="node4" href="$class_i_updater_temperature_world_semi_chunk_updatable_mixin.html" title="{IUpdaterTemperatureWorld\lSemiChunkUpdatableMixin\n||+ canAddNearChunk()\l+ addNearChunk()\l}" alt="" coords="129,5,308,112"/>
 </map>

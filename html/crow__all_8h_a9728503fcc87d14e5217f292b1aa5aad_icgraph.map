@@ -1,6 +1,0 @@
-<map id="qs_strncmp" name="qs_strncmp">
-<area shape="rect" id="node2" href="$crow__all_8h.html#ae19296723fd64fe74880e429c3fc27bd" title="qs_k2v" alt="" coords="164,35,228,61"/>
-<area shape="rect" id="node5" href="$crow__all_8h.html#ac2801ca69f5b9fe8077359222a5933ec" title="qs_scanvalue" alt="" coords="145,85,247,112"/>
-<area shape="rect" id="node3" href="$classcrow_1_1query__string.html#aeca9afc8029e0973cb99e2a5f368dff7" title="crow::query_string::get" alt="" coords="296,5,451,32"/>
-<area shape="rect" id="node4" href="$classcrow_1_1query__string.html#ab6baa4c21cb0263f7cd03305d3f52c3f" title="crow::query_string\l::get_list" alt="" coords="309,57,438,98"/>
-</map>

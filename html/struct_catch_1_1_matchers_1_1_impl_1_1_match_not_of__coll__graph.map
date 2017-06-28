@@ -1,5 +1,0 @@
-<map id="Catch::Matchers::Impl::MatchNotOf&lt; ArgT &gt;" name="Catch::Matchers::Impl::MatchNotOf&lt; ArgT &gt;">
-<area shape="rect" id="node2" href="$struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base.html" title="{Catch::Matchers::Impl\l::MatcherBase\&lt; ArgT \&gt;\n||+ operator&amp;&amp;()\l+ operator\|\|()\l+ operator!()\l}" alt="" coords="111,179,269,301"/>
-<area shape="rect" id="node3" href="$class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base.html" title="{Catch::Matchers::Impl\l::MatcherUntypedBase\n|# m_cachedToString\l|+ toString()\l# ~MatcherUntypedBase()\l# describe()\l}" alt="" coords="5,6,179,127"/>
-<area shape="rect" id="node4" href="$struct_catch_1_1_matchers_1_1_impl_1_1_matcher_method.html" title="{Catch::Matchers::Impl\l::MatcherMethod\&lt; ArgT \&gt;\n||+ match()\l}" alt="" coords="203,21,375,113"/>
-</map>

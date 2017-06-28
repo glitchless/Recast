@@ -1,9 +1,8 @@
 <map id="BoundTemperatureWorld::has" name="BoundTemperatureWorld::has">
 <area shape="rect" id="node2" href="$class_bound_temperature_world.html#a6be6a48b1a29f0b1cc4a01b5e0369f9e" title="BoundTemperatureWorld\l::_getIndexInData" alt="" coords="249,107,415,149"/>
 <area shape="rect" id="node3" href="$class_bound_temperature_world.html#a1a668e9632e4179029cabad5052428fc" title="BoundTemperatureWorld::get" alt="" coords="464,5,656,32"/>
-<area shape="rect" id="node5" href="$class_bound_temperature_world.html#aa069691f31dd38006cfeacab94b6e94e" title="BoundTemperatureWorld::set" alt="" coords="464,56,656,83"/>
-<area shape="rect" id="node6" href="$class_bound_temperature_world.html#a7b49bd6e07cc78f3c7a3a722d0ec5bac" title="BoundTemperatureWorld\l::amplify" alt="" coords="477,107,643,149"/>
-<area shape="rect" id="node7" href="$class_scalable_bound_temperature_world.html#ade4ecf303ae025e824c0bd5ecd2e2ca7" title="ScalableBoundTemperature\lWorld::set" alt="" coords="469,173,651,214"/>
-<area shape="rect" id="node8" href="$class_scalable_bound_temperature_world.html#ab9602b36759aa857910e03856344759d" title="ScalableBoundTemperature\lWorld::amplify" alt="" coords="469,238,651,279"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#afc1d4dae6cf44b56e5e984f30b5942f2" title="SCENARIO" alt="" coords="704,56,797,83"/>
+<area shape="rect" id="node4" href="$class_bound_temperature_world.html#aa069691f31dd38006cfeacab94b6e94e" title="BoundTemperatureWorld::set" alt="" coords="464,56,656,83"/>
+<area shape="rect" id="node5" href="$class_bound_temperature_world.html#a7b49bd6e07cc78f3c7a3a722d0ec5bac" title="BoundTemperatureWorld\l::amplify" alt="" coords="477,107,643,149"/>
+<area shape="rect" id="node6" href="$class_scalable_bound_temperature_world.html#ade4ecf303ae025e824c0bd5ecd2e2ca7" title="ScalableBoundTemperature\lWorld::set" alt="" coords="469,173,651,214"/>
+<area shape="rect" id="node7" href="$class_scalable_bound_temperature_world.html#ab9602b36759aa857910e03856344759d" title="ScalableBoundTemperature\lWorld::amplify" alt="" coords="469,238,651,279"/>
 </map>

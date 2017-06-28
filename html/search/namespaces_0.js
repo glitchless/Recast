@@ -1,21 +1,4 @@
 var searchData=
 [
-  ['black_5fmagic',['black_magic',['../namespacecrow_1_1black__magic.html',1,'crow']]],
-  ['catch',['Catch',['../namespace_catch.html',1,'']]],
-  ['crow',['crow',['../namespacecrow.html',1,'']]],
-  ['detail',['Detail',['../namespace_catch_1_1_detail.html',1,'Catch']]],
-  ['detail',['detail',['../namespacecrow_1_1mustache_1_1detail.html',1,'crow::mustache']]],
-  ['detail',['detail',['../namespacecrow_1_1detail.html',1,'crow']]],
-  ['detail',['detail',['../namespacecrow_1_1json_1_1detail.html',1,'crow::json']]],
-  ['generators',['Generators',['../namespace_catch_1_1_generators.html',1,'Catch']]],
-  ['impl',['Impl',['../namespace_catch_1_1_matchers_1_1_impl.html',1,'Catch::Matchers']]],
-  ['internal',['Internal',['../namespace_catch_1_1_internal.html',1,'Catch']]],
-  ['json',['json',['../namespacecrow_1_1json.html',1,'crow']]],
-  ['matchers',['Matchers',['../namespace_catch_1_1_matchers.html',1,'Catch']]],
-  ['mustache',['mustache',['../namespacecrow_1_1mustache.html',1,'crow']]],
-  ['routing_5fhandler_5fcall_5fhelper',['routing_handler_call_helper',['../namespacecrow_1_1detail_1_1routing__handler__call__helper.html',1,'crow::detail']]],
-  ['stdstring',['StdString',['../namespace_catch_1_1_matchers_1_1_std_string.html',1,'Catch::Matchers']]],
-  ['utility',['utility',['../namespacecrow_1_1utility.html',1,'crow']]],
-  ['vector',['Vector',['../namespace_catch_1_1_matchers_1_1_vector.html',1,'Catch::Matchers']]],
-  ['websocket',['websocket',['../namespacecrow_1_1websocket.html',1,'crow']]]
+  ['fileutils',['FileUtils',['../namespace_file_utils.html',1,'']]]
 ];

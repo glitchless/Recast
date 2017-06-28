@@ -1,7 +1,0 @@
-<map id="crow::method_name" name="crow::method_name">
-<area shape="rect" id="node2" href="$classcrow_1_1_router.html#a2b37f05675d075c3de79f6a4de42320d" title="crow::Router::handle\l_upgrade" alt="" coords="209,5,351,46"/>
-<area shape="rect" id="node4" href="$classcrow_1_1_router.html#a6b7a5a19c6aa65f229eecaf47bda4dde" title="crow::Router::handle" alt="" coords="209,71,351,97"/>
-<area shape="rect" id="node6" href="$classcrow_1_1_connection.html#ac347b6e80cfbc071579781062c78e667" title="crow::Connection::handle" alt="" coords="195,121,365,148"/>
-<area shape="rect" id="node3" href="$classcrow_1_1_crow.html#a6e435bf5275735effd32647772bdbd04" title="crow::Crow::handle\l_upgrade" alt="" coords="414,5,549,46"/>
-<area shape="rect" id="node5" href="$classcrow_1_1_crow.html#a9e0d9a96cd8be5374758f538cc057f26" title="crow::Crow::handle" alt="" coords="414,71,549,97"/>
-</map>

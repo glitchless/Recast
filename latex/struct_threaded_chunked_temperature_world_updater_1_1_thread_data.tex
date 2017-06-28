@@ -26,16 +26,18 @@ $<$ \hyperlink{class_i_temperature_world_chunkable}{I\-Temperature\-World\-Chunk
 $<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$ $>$ $>$ $>$ \hyperlink{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_acc751ecf3ebda6bb89a20917380453de}{world}
 \item 
 std\-::function$<$ std\-::shared\-\_\-ptr\\*
-$<$ \hyperlink{class_i_updater}{I\-Updater} $>$std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_i_updater_temperature_world_semi_chunk_updatable}{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable}\\*
+$<$ \hyperlink{class_i_updater}{I\-Updater} $>$ $>$std\-::shared\-\_\-ptr\\*
 $<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}\\*
-$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$)$>$ \hyperlink{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_aebe35eda756d6db5245a142e483f7a98}{make\-Chunk\-Updater\-Fn}
+$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$ $>$)$>$ \hyperlink{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_aa7026a20143b64b1b98030ea715f39d7}{make\-Chunk\-Updater\-Fn}
 \item 
 std\-::atomic$<$ bool $>$ \hyperlink{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_a1c567a74e2d30e04a7b904697f5bc32d}{is\-Running}
 \item 
 std\-::vector$<$ std\-::thread $>$ \hyperlink{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_a9007df155da319c2c0d22950a32151e1}{workers}
 \item 
 std\-::vector$<$ std\-::shared\-\_\-ptr\\*
-$<$ \hyperlink{class_i_updater}{I\-Updater} $>$ $>$ \hyperlink{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_aae121b9b1c5141ed421421fc6942ba4b}{updaters}
+$<$ \hyperlink{class_i_updater_temperature_world_semi_chunk_updatable}{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable}\\*
+$<$ \hyperlink{class_i_updater}{I\-Updater} $>$ $>$ $>$ \hyperlink{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_a74f0ccd44d2f0d7ff69f363d30699d85}{updaters}
 \item 
 std\-::mutex \hyperlink{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_a6c0d8bab86b56f10e84392aafc895488}{updaters\-Mutex}
 \item 
@@ -57,9 +59,9 @@ std\-::mutex \hyperlink{struct_threaded_chunked_temperature_world_updater_1_1_th
 \hypertarget{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_a1c567a74e2d30e04a7b904697f5bc32d}{\index{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}!is\-Running@{is\-Running}}
 \index{is\-Running@{is\-Running}!ThreadedChunkedTemperatureWorldUpdater::ThreadData@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}}
 \subsubsection[{is\-Running}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data\-::is\-Running}}\label{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_a1c567a74e2d30e04a7b904697f5bc32d}
-\hypertarget{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_aebe35eda756d6db5245a142e483f7a98}{\index{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}!make\-Chunk\-Updater\-Fn@{make\-Chunk\-Updater\-Fn}}
+\hypertarget{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_aa7026a20143b64b1b98030ea715f39d7}{\index{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}!make\-Chunk\-Updater\-Fn@{make\-Chunk\-Updater\-Fn}}
 \index{make\-Chunk\-Updater\-Fn@{make\-Chunk\-Updater\-Fn}!ThreadedChunkedTemperatureWorldUpdater::ThreadData@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}}
-\subsubsection[{make\-Chunk\-Updater\-Fn}]{\setlength{\rightskip}{0pt plus 5cm}std\-::function$<$std\-::shared\-\_\-ptr$<${\bf I\-Updater}$>$std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Boundable}$<${\bf I\-Temperature\-World}$>$ $>$)$>$ Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data\-::make\-Chunk\-Updater\-Fn}}\label{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_aebe35eda756d6db5245a142e483f7a98}
+\subsubsection[{make\-Chunk\-Updater\-Fn}]{\setlength{\rightskip}{0pt plus 5cm}std\-::function$<$std\-::shared\-\_\-ptr$<${\bf I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable}$<${\bf I\-Updater}$>$ $>$std\-::shared\-\_\-ptr$<${\bf I\-Temperature\-World\-Boundable}$<${\bf I\-Temperature\-World}$>$ $>$)$>$ Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data\-::make\-Chunk\-Updater\-Fn}}\label{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_aa7026a20143b64b1b98030ea715f39d7}
 \hypertarget{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_ab084ac0c15a2536095bef8c9297361f5}{\index{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}!tasks@{tasks}}
 \index{tasks@{tasks}!ThreadedChunkedTemperatureWorldUpdater::ThreadData@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}}
 \subsubsection[{tasks}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::future$<$void$>$ $>$ Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data\-::tasks}}\label{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_ab084ac0c15a2536095bef8c9297361f5}
@@ -75,9 +77,9 @@ std\-::mutex \hyperlink{struct_threaded_chunked_temperature_world_updater_1_1_th
 \hypertarget{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_ae7997a285fb8f3215745638c8201207e}{\index{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}!tasks\-Queue\-Wait\-Mutex@{tasks\-Queue\-Wait\-Mutex}}
 \index{tasks\-Queue\-Wait\-Mutex@{tasks\-Queue\-Wait\-Mutex}!ThreadedChunkedTemperatureWorldUpdater::ThreadData@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}}
 \subsubsection[{tasks\-Queue\-Wait\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data\-::tasks\-Queue\-Wait\-Mutex}}\label{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_ae7997a285fb8f3215745638c8201207e}
-\hypertarget{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_aae121b9b1c5141ed421421fc6942ba4b}{\index{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}!updaters@{updaters}}
+\hypertarget{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_a74f0ccd44d2f0d7ff69f363d30699d85}{\index{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}!updaters@{updaters}}
 \index{updaters@{updaters}!ThreadedChunkedTemperatureWorldUpdater::ThreadData@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}}
-\subsubsection[{updaters}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::shared\-\_\-ptr$<${\bf I\-Updater}$>$ $>$ Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data\-::updaters}}\label{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_aae121b9b1c5141ed421421fc6942ba4b}
+\subsubsection[{updaters}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::shared\-\_\-ptr$<${\bf I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable}$<${\bf I\-Updater}$>$ $>$ $>$ Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data\-::updaters}}\label{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_a74f0ccd44d2f0d7ff69f363d30699d85}
 \hypertarget{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_a6c0d8bab86b56f10e84392aafc895488}{\index{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}!updaters\-Mutex@{updaters\-Mutex}}
 \index{updaters\-Mutex@{updaters\-Mutex}!ThreadedChunkedTemperatureWorldUpdater::ThreadData@{Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data}}
 \subsubsection[{updaters\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex Threaded\-Chunked\-Temperature\-World\-Updater\-::\-Thread\-Data\-::updaters\-Mutex}}\label{struct_threaded_chunked_temperature_world_updater_1_1_thread_data_a6c0d8bab86b56f10e84392aafc895488}
@@ -91,4 +93,4 @@ std\-::mutex \hyperlink{struct_threaded_chunked_temperature_world_updater_1_1_th
 
 The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/implementation/\hyperlink{_threaded_chunked_temperature_world_updater_8hpp}{Threaded\-Chunked\-Temperature\-World\-Updater.\-hpp}\end{DoxyCompactItemize}
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/temperature-\/world/implementation/\hyperlink{_threaded_chunked_temperature_world_updater_8hpp}{Threaded\-Chunked\-Temperature\-World\-Updater.\-hpp}\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
 <map id="ITimer" name="ITimer">
-<area shape="rect" id="node2" href="$class_basic_timer.html" title="{BasicTimer\n|# _lastUpdateTime\l|+ BasicTimer()\l+ delta()\l+ deltaFloatSeconds()\l+ update()\l}" alt="" coords="5,177,155,298"/>
-<area shape="rect" id="node3" href="$class_i_timer_blockable.html" title="{ITimerBlockable\&lt; ITimer \&gt;\n||}" alt="" coords="179,199,356,276"/>
-<area shape="rect" id="node4" href="$class_synchronized_blocking_timer.html" title="{SynchronizedBlockingTimer\n|# _minDelta\l# _lastUpdateTime\l# _lastUpdateTimeMutex\l|+ SynchronizedBlockingTimer()\l+ delta()\l+ minDelta()\l+ deltaFloatSeconds()\l+ update()\l}" alt="" coords="166,347,369,512"/>
+<area shape="rect" id="node2" href="$class_basic_timer.html" title="{BasicTimer\n|# _lastUpdateTime\l# _isFirstUpdate\l|+ BasicTimer()\l+ delta()\l+ deltaFloatSeconds()\l+ isFirstUpdate()\l+ update()\l}" alt="" coords="5,190,155,341"/>
+<area shape="rect" id="node3" href="$class_i_timer_blockable.html" title="{ITimerBlockable\&lt; ITimer \&gt;\n||}" alt="" coords="179,227,356,304"/>
+<area shape="rect" id="node4" href="$class_synchronized_blocking_timer.html" title="{SynchronizedBlockingTimer\n|# _minDelta\l# _lastUpdateTime\l# _lastUpdateTimeMutex\l# _isFirstUpdate\l|+ SynchronizedBlockingTimer()\l+ delta()\l+ minDelta()\l+ deltaFloatSeconds()\l+ isFirstUpdate()\l+ update()\l+ wait()\l}" alt="" coords="166,390,369,599"/>
 </map>

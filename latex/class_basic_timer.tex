@@ -30,16 +30,20 @@ Collaboration diagram for Basic\-Timer\-:
 \item 
 \hyperlink{class_basic_timer_ab557401ac85db6cf5fc7ffcebc119811}{Basic\-Timer} ()
 \item 
-std\-::chrono\-::milliseconds \hyperlink{class_basic_timer_a49bc91a549323a1a7fc6b7d9ec727174}{delta} () const 
+std\-::chrono\-::milliseconds \hyperlink{class_basic_timer_ab7f36dab76feca6d3fe01f8f07dd100e}{delta} () const override
 \item 
-double \hyperlink{class_basic_timer_afbe3d01b15f26573eb12c04ae7c28684}{delta\-Float\-Seconds} () const 
+double \hyperlink{class_basic_timer_addff8057e6f482b2fc90b5ea3818f067}{delta\-Float\-Seconds} () const override
 \item 
-void \hyperlink{class_basic_timer_abf76823ef1c782a0c6d49af2652b5271}{update} ()
+bool \hyperlink{class_basic_timer_a5277953b0009fffbf0f085d96956114f}{is\-First\-Update} () const override
+\item 
+void \hyperlink{class_basic_timer_ade1a2768fc570872ec6d134b9a0682f9}{update} () override
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\-::chrono\-::system\-\_\-clock\-::time\-\_\-point \hyperlink{class_basic_timer_a1c5ab332f195b367d5fbf91183f4dc8a}{\-\_\-last\-Update\-Time}
+\item 
+bool \hyperlink{class_basic_timer_ad6cf70a8d3049db0428aed9d6f4fbf31}{\-\_\-is\-First\-Update}
 \end{DoxyCompactItemize}
 
 
@@ -57,13 +61,13 @@ Timer that measures time duration between two updates.
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_basic_timer_a49bc91a549323a1a7fc6b7d9ec727174}{\index{Basic\-Timer@{Basic\-Timer}!delta@{delta}}
+\hypertarget{class_basic_timer_ab7f36dab76feca6d3fe01f8f07dd100e}{\index{Basic\-Timer@{Basic\-Timer}!delta@{delta}}
 \index{delta@{delta}!BasicTimer@{Basic\-Timer}}
 \subsubsection[{delta}]{\setlength{\rightskip}{0pt plus 5cm}chrono\-::milliseconds Basic\-Timer\-::delta (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_basic_timer_a49bc91a549323a1a7fc6b7d9ec727174}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_basic_timer_ab7f36dab76feca6d3fe01f8f07dd100e}
 \begin{DoxyReturn}{Returns}
 Time from last update in milliseconds. 
 \end{DoxyReturn}
@@ -78,18 +82,18 @@ Here is the caller graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_basic_timer_a49bc91a549323a1a7fc6b7d9ec727174_icgraph}
+\includegraphics[width=350pt]{class_basic_timer_ab7f36dab76feca6d3fe01f8f07dd100e_icgraph}
 \end{center}
 \end{figure}
 
 
-\hypertarget{class_basic_timer_afbe3d01b15f26573eb12c04ae7c28684}{\index{Basic\-Timer@{Basic\-Timer}!delta\-Float\-Seconds@{delta\-Float\-Seconds}}
+\hypertarget{class_basic_timer_addff8057e6f482b2fc90b5ea3818f067}{\index{Basic\-Timer@{Basic\-Timer}!delta\-Float\-Seconds@{delta\-Float\-Seconds}}
 \index{delta\-Float\-Seconds@{delta\-Float\-Seconds}!BasicTimer@{Basic\-Timer}}
 \subsubsection[{delta\-Float\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}double Basic\-Timer\-::delta\-Float\-Seconds (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_basic_timer_afbe3d01b15f26573eb12c04ae7c28684}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_basic_timer_addff8057e6f482b2fc90b5ea3818f067}
 \begin{DoxyReturn}{Returns}
 Time from last update in float-\/number seconds. 
 \end{DoxyReturn}
@@ -104,49 +108,42 @@ Here is the call graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_basic_timer_afbe3d01b15f26573eb12c04ae7c28684_cgraph}
+\includegraphics[width=350pt]{class_basic_timer_addff8057e6f482b2fc90b5ea3818f067_cgraph}
 \end{center}
 \end{figure}
 
 
+\hypertarget{class_basic_timer_a5277953b0009fffbf0f085d96956114f}{\index{Basic\-Timer@{Basic\-Timer}!is\-First\-Update@{is\-First\-Update}}
+\index{is\-First\-Update@{is\-First\-Update}!BasicTimer@{Basic\-Timer}}
+\subsubsection[{is\-First\-Update}]{\setlength{\rightskip}{0pt plus 5cm}bool Basic\-Timer\-::is\-First\-Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_basic_timer_a5277953b0009fffbf0f085d96956114f}
+\begin{DoxyReturn}{Returns}
+True if timer was never updated. 
+\end{DoxyReturn}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=308pt]{class_basic_timer_afbe3d01b15f26573eb12c04ae7c28684_icgraph}
-\end{center}
-\end{figure}
+Implements \hyperlink{class_i_timer_a781d77c2f58562e049e68d90fff2ad85}{I\-Timer}.
 
-
-\hypertarget{class_basic_timer_abf76823ef1c782a0c6d49af2652b5271}{\index{Basic\-Timer@{Basic\-Timer}!update@{update}}
+\hypertarget{class_basic_timer_ade1a2768fc570872ec6d134b9a0682f9}{\index{Basic\-Timer@{Basic\-Timer}!update@{update}}
 \index{update@{update}!BasicTimer@{Basic\-Timer}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Basic\-Timer\-::update (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_basic_timer_abf76823ef1c782a0c6d49af2652b5271}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_basic_timer_ade1a2768fc570872ec6d134b9a0682f9}
 Saves update, saves the \char`\"{}tick\char`\"{}. It will influence value of {\ttfamily delta}. 
 
 Implements \hyperlink{class_i_timer_afa6c0d962817423715ce9f944f1b6a2c}{I\-Timer}.
 
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=256pt]{class_basic_timer_abf76823ef1c782a0c6d49af2652b5271_icgraph}
-\end{center}
-\end{figure}
-
-
-
-
 \subsection{Member Data Documentation}
+\hypertarget{class_basic_timer_ad6cf70a8d3049db0428aed9d6f4fbf31}{\index{Basic\-Timer@{Basic\-Timer}!\-\_\-is\-First\-Update@{\-\_\-is\-First\-Update}}
+\index{\-\_\-is\-First\-Update@{\-\_\-is\-First\-Update}!BasicTimer@{Basic\-Timer}}
+\subsubsection[{\-\_\-is\-First\-Update}]{\setlength{\rightskip}{0pt plus 5cm}bool Basic\-Timer\-::\-\_\-is\-First\-Update\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_basic_timer_ad6cf70a8d3049db0428aed9d6f4fbf31}
 \hypertarget{class_basic_timer_a1c5ab332f195b367d5fbf91183f4dc8a}{\index{Basic\-Timer@{Basic\-Timer}!\-\_\-last\-Update\-Time@{\-\_\-last\-Update\-Time}}
 \index{\-\_\-last\-Update\-Time@{\-\_\-last\-Update\-Time}!BasicTimer@{Basic\-Timer}}
 \subsubsection[{\-\_\-last\-Update\-Time}]{\setlength{\rightskip}{0pt plus 5cm}std\-::chrono\-::system\-\_\-clock\-::time\-\_\-point Basic\-Timer\-::\-\_\-last\-Update\-Time\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_basic_timer_a1c5ab332f195b367d5fbf91183f4dc8a}
@@ -154,5 +151,5 @@ Here is the caller graph for this function\-:
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/implementation/\hyperlink{_basic_timer_8hpp}{Basic\-Timer.\-hpp}\item 
-/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/implementation/\hyperlink{_basic_timer_8cpp}{Basic\-Timer.\-cpp}\end{DoxyCompactItemize}
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/temperature-\/world/implementation/\hyperlink{_basic_timer_8hpp}{Basic\-Timer.\-hpp}\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/temperature-\/world/implementation/\hyperlink{_basic_timer_8cpp}{Basic\-Timer.\-cpp}\end{DoxyCompactItemize}

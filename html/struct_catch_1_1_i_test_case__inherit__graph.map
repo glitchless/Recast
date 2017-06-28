@@ -1,6 +1,0 @@
-<map id="Catch::ITestCase" name="Catch::ITestCase">
-<area shape="rect" id="node4" href="$struct_catch_1_1_shared_impl.html" title="{Catch::SharedImpl\&lt;\l ITestCase \&gt;\n|+ m_rc\l|+ SharedImpl()\l+ addRef()\l+ release()\l}" alt="" coords="35,443,173,565"/>
-<area shape="rect" id="node2" href="$struct_catch_1_1_i_shared.html" title="{Catch::IShared\n||+ ~IShared()\l+ addRef()\l+ release()\l}" alt="" coords="49,147,159,253"/>
-<area shape="rect" id="node3" href="$class_catch_1_1_non_copyable.html" title="{Catch::NonCopyable\n||# NonCopyable()\l# ~NonCopyable()\l}" alt="" coords="32,6,176,98"/>
-<area shape="rect" id="node5" href="$class_catch_1_1_method_test_case.html" title="{Catch::MethodTestCase\&lt; C \&gt;\n||+ MethodTestCase()\l+ invoke()\l}" alt="" coords="5,614,203,706"/>
-</map>

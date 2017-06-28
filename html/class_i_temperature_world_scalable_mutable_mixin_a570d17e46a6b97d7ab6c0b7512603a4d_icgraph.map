@@ -1,5 +1,8 @@
 <map id="ITemperatureWorldScalableMutableMixin::setCellScale" name="ITemperatureWorldScalableMutableMixin::setCellScale">
-<area shape="rect" id="node2" href="$class_scaling_generatable_chunked_temperature_world.html#aabf0380970fd95dfa8d88298f0ae07e9" title="ScalingGeneratableChunked\lTemperatureWorld::_updateScales" alt="" coords="238,38,461,79"/>
-<area shape="rect" id="node3" href="$class_scaling_generatable_chunked_temperature_world.html#ac8135352da17faeb9c41f1273630aa41" title="ScalingGeneratableChunked\lTemperatureWorld::addPriorityPoint" alt="" coords="520,5,749,46"/>
-<area shape="rect" id="node4" href="$class_scaling_generatable_chunked_temperature_world.html#aff6258637594e1b5b0e25ba628d22b20" title="ScalingGeneratableChunked\lTemperatureWorld::removePriorityPoint" alt="" coords="509,70,760,111"/>
+<area shape="rect" id="node2" href="$class_scaling_generatable_chunked_temperature_world.html#ab7385d1183770678642190af9369ffaf" title="ScalingGeneratableChunked\lTemperatureWorld::_updateScale" alt="" coords="237,70,453,111"/>
+<area shape="rect" id="node3" href="$class_scaling_generatable_chunked_temperature_world.html#a5ec1b1a2a5e058bf57bd7918fcc5a35b" title="ScalingGeneratableChunked\lTemperatureWorld::addChunk" alt="" coords="515,5,711,46"/>
+<area shape="rect" id="node4" href="$class_scaling_generatable_chunked_temperature_world.html#ac3ae4d696d934b925076eeab88658978" title="ScalingGeneratableChunked\lTemperatureWorld::removeChunk" alt="" coords="504,70,723,111"/>
+<area shape="rect" id="node5" href="$class_scaling_generatable_chunked_temperature_world.html#aabf0380970fd95dfa8d88298f0ae07e9" title="ScalingGeneratableChunked\lTemperatureWorld::_updateScales" alt="" coords="502,135,725,177"/>
+<area shape="rect" id="node6" href="$class_scaling_generatable_chunked_temperature_world.html#ac8135352da17faeb9c41f1273630aa41" title="ScalingGeneratableChunked\lTemperatureWorld::addPriorityPoint" alt="" coords="784,102,1013,143"/>
+<area shape="rect" id="node7" href="$class_scaling_generatable_chunked_temperature_world.html#aff6258637594e1b5b0e25ba628d22b20" title="ScalingGeneratableChunked\lTemperatureWorld::removePriorityPoint" alt="" coords="773,167,1024,209"/>
 </map>

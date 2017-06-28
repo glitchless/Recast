@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['actiontype',['ActionType',['../namespacecrow_1_1mustache.html#aeb8da2ae9d8d9fe55f6ab0a7455dd667',1,'crow::mustache']]]
+  ['edge',['Edge',['../_edge_8hpp.html#a5be7c8fa582f7b873d1c6caacb633073',1,'Edge.hpp']]]
 ];

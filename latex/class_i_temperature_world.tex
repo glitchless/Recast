@@ -37,6 +37,18 @@ virtual \hyperlink{struct_temperature}{Temperature} \hyperlink{class_i_temperatu
 virtual void \hyperlink{class_i_temperature_world_ab23db7ec9a890d6dbb172b26c2fd3d00}{set} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, \hyperlink{struct_temperature}{Temperature} temperature)=0
 \item 
 virtual void \hyperlink{class_i_temperature_world_ac5a8a92e7141b2e2c2e3d66ba73b7c1e}{amplify} (\hyperlink{struct_coord}{Coord} x, \hyperlink{struct_coord}{Coord} y, \hyperlink{struct_coord}{Coord} z, \hyperlink{struct_temperature}{Temperature} temperature)=0
+\item 
+virtual \hyperlink{struct_coord}{Coord} \hyperlink{class_i_temperature_world_adfa6f4c698d6407000314d9d43fe6c5d}{previous\-Coord\-X} (\hyperlink{struct_coord}{Coord} x) const noexcept=0
+\item 
+virtual \hyperlink{struct_coord}{Coord} \hyperlink{class_i_temperature_world_ab74e8cf0b0261ee342e356c1212ff9a2}{previous\-Coord\-Y} (\hyperlink{struct_coord}{Coord} y) const noexcept=0
+\item 
+virtual \hyperlink{struct_coord}{Coord} \hyperlink{class_i_temperature_world_a7ed125d1e71c39dc06cbe64ba58662c5}{previous\-Coord\-Z} (\hyperlink{struct_coord}{Coord} z) const noexcept=0
+\item 
+virtual \hyperlink{struct_coord}{Coord} \hyperlink{class_i_temperature_world_ae1daa3e639084e2c25d78ba1c9841353}{next\-Coord\-X} (\hyperlink{struct_coord}{Coord} x) const noexcept=0
+\item 
+virtual \hyperlink{struct_coord}{Coord} \hyperlink{class_i_temperature_world_a4c56188c251aee5dc5edea440ad288b5}{next\-Coord\-Y} (\hyperlink{struct_coord}{Coord} y) const noexcept=0
+\item 
+virtual \hyperlink{struct_coord}{Coord} \hyperlink{class_i_temperature_world_aeea34ba0bf416143309a0cf046ad1dce}{next\-Coord\-Z} (\hyperlink{struct_coord}{Coord} z) const noexcept=0
 \end{DoxyCompactItemize}
 
 
@@ -79,7 +91,7 @@ Adds or substracts temperature value from existing temperature value at the poin
 \end{DoxyParams}
 
 
-Implemented in \hyperlink{class_chunked_temperature_world_af4d90e4910f2197691f2c08f11cbc657}{Chunked\-Temperature\-World}, \hyperlink{class_bound_temperature_world_a7b49bd6e07cc78f3c7a3a722d0ec5bac}{Bound\-Temperature\-World}, and \hyperlink{class_scalable_bound_temperature_world_ab9602b36759aa857910e03856344759d}{Scalable\-Bound\-Temperature\-World}.
+Implemented in \hyperlink{class_scalable_bound_temperature_world_ab9602b36759aa857910e03856344759d}{Scalable\-Bound\-Temperature\-World}, \hyperlink{class_chunked_temperature_world_af4d90e4910f2197691f2c08f11cbc657}{Chunked\-Temperature\-World}, and \hyperlink{class_bound_temperature_world_a7b49bd6e07cc78f3c7a3a722d0ec5bac}{Bound\-Temperature\-World}.
 
 \hypertarget{class_i_temperature_world_a9993df60754c2c89597bd8137568c12f}{\index{I\-Temperature\-World@{I\-Temperature\-World}!get@{get}}
 \index{get@{get}!ITemperatureWorld@{I\-Temperature\-World}}
@@ -135,6 +147,120 @@ True if the point is accessible.
 
 Implemented in \hyperlink{class_chunked_temperature_world_a05f4ce24ff44a6f4f17a8aac71f78af0}{Chunked\-Temperature\-World}, and \hyperlink{class_bound_temperature_world_a75d2d3c631fb355de63dea3961ecd32b}{Bound\-Temperature\-World}.
 
+\hypertarget{class_i_temperature_world_ae1daa3e639084e2c25d78ba1c9841353}{\index{I\-Temperature\-World@{I\-Temperature\-World}!next\-Coord\-X@{next\-Coord\-X}}
+\index{next\-Coord\-X@{next\-Coord\-X}!ITemperatureWorld@{I\-Temperature\-World}}
+\subsubsection[{next\-Coord\-X}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Coord} I\-Temperature\-World\-::next\-Coord\-X (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}}\label{class_i_temperature_world_ae1daa3e639084e2c25d78ba1c9841353}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Current coordinate by x axis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Next coordinate by x axis. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_bound_temperature_world_a749eb54a29e4561695454aff9d096ac3}{Bound\-Temperature\-World}, \hyperlink{class_chunked_temperature_world_a42c80f4cc05ddf465e1ee08c2ed694f2}{Chunked\-Temperature\-World}, and \hyperlink{class_scalable_bound_temperature_world_ac384b72b9b471c9f185a0df45122456d}{Scalable\-Bound\-Temperature\-World}.
+
+\hypertarget{class_i_temperature_world_a4c56188c251aee5dc5edea440ad288b5}{\index{I\-Temperature\-World@{I\-Temperature\-World}!next\-Coord\-Y@{next\-Coord\-Y}}
+\index{next\-Coord\-Y@{next\-Coord\-Y}!ITemperatureWorld@{I\-Temperature\-World}}
+\subsubsection[{next\-Coord\-Y}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Coord} I\-Temperature\-World\-::next\-Coord\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{y}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}}\label{class_i_temperature_world_a4c56188c251aee5dc5edea440ad288b5}
+
+\begin{DoxyParams}{Parameters}
+{\em y} & Current coordinate by y axis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Next coordinate by y axis. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_bound_temperature_world_a3470b9dc65cbe1c005b3169a77df1f93}{Bound\-Temperature\-World}, \hyperlink{class_chunked_temperature_world_a5370203b68f8e248181a2a5647bfad7f}{Chunked\-Temperature\-World}, and \hyperlink{class_scalable_bound_temperature_world_a9cb3665784f5cd671736f85e6b7caac2}{Scalable\-Bound\-Temperature\-World}.
+
+\hypertarget{class_i_temperature_world_aeea34ba0bf416143309a0cf046ad1dce}{\index{I\-Temperature\-World@{I\-Temperature\-World}!next\-Coord\-Z@{next\-Coord\-Z}}
+\index{next\-Coord\-Z@{next\-Coord\-Z}!ITemperatureWorld@{I\-Temperature\-World}}
+\subsubsection[{next\-Coord\-Z}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Coord} I\-Temperature\-World\-::next\-Coord\-Z (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}}\label{class_i_temperature_world_aeea34ba0bf416143309a0cf046ad1dce}
+
+\begin{DoxyParams}{Parameters}
+{\em z} & Current coordinate by z axis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Next coordinate by z axis. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_bound_temperature_world_a3aee760043cb93d5f916da87e2397ff6}{Bound\-Temperature\-World}, \hyperlink{class_chunked_temperature_world_ada9492462c81e605b92b3ac7c2f82f3e}{Chunked\-Temperature\-World}, and \hyperlink{class_scalable_bound_temperature_world_adbe49c210f9611beecf96a2e059f5330}{Scalable\-Bound\-Temperature\-World}.
+
+\hypertarget{class_i_temperature_world_adfa6f4c698d6407000314d9d43fe6c5d}{\index{I\-Temperature\-World@{I\-Temperature\-World}!previous\-Coord\-X@{previous\-Coord\-X}}
+\index{previous\-Coord\-X@{previous\-Coord\-X}!ITemperatureWorld@{I\-Temperature\-World}}
+\subsubsection[{previous\-Coord\-X}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Coord} I\-Temperature\-World\-::previous\-Coord\-X (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}}\label{class_i_temperature_world_adfa6f4c698d6407000314d9d43fe6c5d}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Current coordinate by x axis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous coordinate by x axis. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_bound_temperature_world_ae85c5e9e19cd5eed8a2961c60ccc4a50}{Bound\-Temperature\-World}, \hyperlink{class_chunked_temperature_world_a3e547d550f0558039561c18b8c74a329}{Chunked\-Temperature\-World}, and \hyperlink{class_scalable_bound_temperature_world_ac342002bec4e1ac2e7dc6c7a7bd23c76}{Scalable\-Bound\-Temperature\-World}.
+
+\hypertarget{class_i_temperature_world_ab74e8cf0b0261ee342e356c1212ff9a2}{\index{I\-Temperature\-World@{I\-Temperature\-World}!previous\-Coord\-Y@{previous\-Coord\-Y}}
+\index{previous\-Coord\-Y@{previous\-Coord\-Y}!ITemperatureWorld@{I\-Temperature\-World}}
+\subsubsection[{previous\-Coord\-Y}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Coord} I\-Temperature\-World\-::previous\-Coord\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{y}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}}\label{class_i_temperature_world_ab74e8cf0b0261ee342e356c1212ff9a2}
+
+\begin{DoxyParams}{Parameters}
+{\em y} & Current coordinate by y axis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous coordinate by y axis. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_bound_temperature_world_a48b99d3adb50c8f3093c59c45473fa96}{Bound\-Temperature\-World}, \hyperlink{class_chunked_temperature_world_a510495c1304bed5444c53cbe8f30b31a}{Chunked\-Temperature\-World}, and \hyperlink{class_scalable_bound_temperature_world_a963106b4d121d29a49f657bac3778980}{Scalable\-Bound\-Temperature\-World}.
+
+\hypertarget{class_i_temperature_world_a7ed125d1e71c39dc06cbe64ba58662c5}{\index{I\-Temperature\-World@{I\-Temperature\-World}!previous\-Coord\-Z@{previous\-Coord\-Z}}
+\index{previous\-Coord\-Z@{previous\-Coord\-Z}!ITemperatureWorld@{I\-Temperature\-World}}
+\subsubsection[{previous\-Coord\-Z}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Coord} I\-Temperature\-World\-::previous\-Coord\-Z (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord}}]{z}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}}\label{class_i_temperature_world_a7ed125d1e71c39dc06cbe64ba58662c5}
+
+\begin{DoxyParams}{Parameters}
+{\em z} & Current coordinate by z axis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous coordinate by z axis. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_bound_temperature_world_a2161f3962f7b12345ad3dfe9952bde90}{Bound\-Temperature\-World}, \hyperlink{class_chunked_temperature_world_a0090b0b3cff4b12ffa543ff49ee6ba50}{Chunked\-Temperature\-World}, and \hyperlink{class_scalable_bound_temperature_world_a4d0a9e96c0a21e53ad8840e42337df64}{Scalable\-Bound\-Temperature\-World}.
+
 \hypertarget{class_i_temperature_world_ab23db7ec9a890d6dbb172b26c2fd3d00}{\index{I\-Temperature\-World@{I\-Temperature\-World}!set@{set}}
 \index{set@{set}!ITemperatureWorld@{I\-Temperature\-World}}
 \subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Temperature\-World\-::set (
@@ -160,10 +286,10 @@ Sets temperature at the point.
 \end{DoxyParams}
 
 
-Implemented in \hyperlink{class_chunked_temperature_world_a97210f06e70f9ea07a4b284963e610e1}{Chunked\-Temperature\-World}, \hyperlink{class_bound_temperature_world_aa069691f31dd38006cfeacab94b6e94e}{Bound\-Temperature\-World}, and \hyperlink{class_scalable_bound_temperature_world_ade4ecf303ae025e824c0bd5ecd2e2ca7}{Scalable\-Bound\-Temperature\-World}.
+Implemented in \hyperlink{class_scalable_bound_temperature_world_ade4ecf303ae025e824c0bd5ecd2e2ca7}{Scalable\-Bound\-Temperature\-World}, \hyperlink{class_chunked_temperature_world_a97210f06e70f9ea07a4b284963e610e1}{Chunked\-Temperature\-World}, and \hyperlink{class_bound_temperature_world_aa069691f31dd38006cfeacab94b6e94e}{Bound\-Temperature\-World}.
 
 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/interfaces/\hyperlink{_i_temperature_world_8hpp}{I\-Temperature\-World.\-hpp}\end{DoxyCompactItemize}
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/temperature-\/world/interfaces/\hyperlink{_i_temperature_world_8hpp}{I\-Temperature\-World.\-hpp}\end{DoxyCompactItemize}

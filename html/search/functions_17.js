@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x',['x',['../struct_int_scale_parallelepiped.html#ad6a3f505f9f24e4cbd160767935dbc8f',1,'IntScaleParallelepiped::x()'],['../struct_point.html#add97959f26c755fb67ca78ebfb616aaa',1,'Point::x()']]]
+  ['z',['z',['../struct_int_scale_parallelepiped.html#a464fa29bb3540786b028ec12c954c6f4',1,'IntScaleParallelepiped::z()'],['../struct_point.html#a848473c2345430a5bcd4d87a8e46f264',1,'Point::z()']]]
 ];

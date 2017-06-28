@@ -1,0 +1,86 @@
+\hypertarget{class_i_updater_temperature_world_semi_chunk_updatable_mixin}{\section{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin Class Reference}
+\label{class_i_updater_temperature_world_semi_chunk_updatable_mixin}\index{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin@{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin}}
+}
+
+
+{\ttfamily \#include $<$I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable.\-hpp$>$}
+
+
+
+Inheritance diagram for I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_updater_temperature_world_semi_chunk_updatable_mixin__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{class_i_updater_temperature_world_semi_chunk_updatable_mixin__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_i_updater_temperature_world_semi_chunk_updatable_mixin_a35d2d34bcf2f9e857246bd8d92aec74f}{can\-Add\-Near\-Chunk} (\hyperlink{_edge_8hpp_a5be7c8fa582f7b873d1c6caacb633073}{Edge} edge, const std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ \&other\-Chunk) const noexcept=0
+\item 
+virtual void \hyperlink{class_i_updater_temperature_world_semi_chunk_updatable_mixin_aa3139125095140f797df3cebb466c48a}{add\-Near\-Chunk} (\hyperlink{_edge_8hpp_a5be7c8fa582f7b873d1c6caacb633073}{Edge} edge, std\-::shared\-\_\-ptr$<$ \hyperlink{class_i_temperature_world_boundable}{I\-Temperature\-World\-Boundable}$<$ \hyperlink{class_i_temperature_world}{I\-Temperature\-World} $>$$>$ other\-Chunk)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Should not be derived directly. Use {\ttfamily \hyperlink{class_i_temperature_world_chunkable}{I\-Temperature\-World\-Chunkable}}. This class is useful for {\ttfamily dynamic\-\_\-cast}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i_updater_temperature_world_semi_chunk_updatable_mixin_aa3139125095140f797df3cebb466c48a}{\index{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin@{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin}!add\-Near\-Chunk@{add\-Near\-Chunk}}
+\index{add\-Near\-Chunk@{add\-Near\-Chunk}!IUpdaterTemperatureWorldSemiChunkUpdatableMixin@{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin}}
+\subsubsection[{add\-Near\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin\-::add\-Near\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Edge}}]{edge, }
+\item[{std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$}]{other\-Chunk}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_i_updater_temperature_world_semi_chunk_updatable_mixin_aa3139125095140f797df3cebb466c48a}
+Adds chunk to near chunks collection on specified edge.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\-Chunk} & Near chunk. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_average_share_temperature_world_updater_ab48c277317950d9b9e571d13f3461307}{Average\-Share\-Temperature\-World\-Updater}.
+
+\hypertarget{class_i_updater_temperature_world_semi_chunk_updatable_mixin_a35d2d34bcf2f9e857246bd8d92aec74f}{\index{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin@{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin}!can\-Add\-Near\-Chunk@{can\-Add\-Near\-Chunk}}
+\index{can\-Add\-Near\-Chunk@{can\-Add\-Near\-Chunk}!IUpdaterTemperatureWorldSemiChunkUpdatableMixin@{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin}}
+\subsubsection[{can\-Add\-Near\-Chunk}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable\-Mixin\-::can\-Add\-Near\-Chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf Edge}}]{edge, }
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf I\-Temperature\-World\-Boundable}$<$ {\bf I\-Temperature\-World} $>$$>$ \&}]{other\-Chunk}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}}\label{class_i_updater_temperature_world_semi_chunk_updatable_mixin_a35d2d34bcf2f9e857246bd8d92aec74f}
+Tells whether it's possible to add this chunk to near chunks collection on specified edge. This method is thread-\/safe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\-Chunk} & Near chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this chunk can be added to near chunks collection. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_average_share_temperature_world_updater_a2b3403ad5d9c7ef2f39b359fc87f44b8}{Average\-Share\-Temperature\-World\-Updater}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/temperature-\/world/interfaces/\hyperlink{_i_updater_temperature_world_semi_chunk_updatable_8hpp}{I\-Updater\-Temperature\-World\-Semi\-Chunk\-Updatable.\-hpp}\end{DoxyCompactItemize}

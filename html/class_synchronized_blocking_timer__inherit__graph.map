@@ -1,5 +1,5 @@
 <map id="SynchronizedBlockingTimer" name="SynchronizedBlockingTimer">
-<area shape="rect" id="node2" href="$class_i_timer_blockable.html" title="{ITimerBlockable\&lt; ITimer \&gt;\n||}" alt="" coords="78,176,255,253"/>
-<area shape="rect" id="node3" href="$class_i_timer.html" title="{ITimer\n||+ ~ITimer()\l+ delta()\l+ deltaFloatSeconds()\l+ update()\l}" alt="" coords="5,6,155,127"/>
-<area shape="rect" id="node4" href="$class_i_timer_blockable_mixin.html" title="{ITimerBlockableMixin\n||+ minDelta()\l}" alt="" coords="180,28,327,105"/>
+<area shape="rect" id="node2" href="$class_i_timer_blockable.html" title="{ITimerBlockable\&lt; ITimer \&gt;\n||}" alt="" coords="78,189,255,267"/>
+<area shape="rect" id="node3" href="$class_i_timer.html" title="{ITimer\n||+ ~ITimer()\l+ delta()\l+ deltaFloatSeconds()\l+ isFirstUpdate()\l+ update()\l}" alt="" coords="5,5,155,141"/>
+<area shape="rect" id="node4" href="$class_i_timer_blockable_mixin.html" title="{ITimerBlockableMixin\n||+ minDelta()\l+ wait()\l}" alt="" coords="180,27,327,119"/>
 </map>

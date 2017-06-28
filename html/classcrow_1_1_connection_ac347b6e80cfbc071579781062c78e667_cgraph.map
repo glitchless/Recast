@@ -1,5 +1,0 @@
-<map id="crow::Connection::handle" name="crow::Connection::handle">
-<area shape="rect" id="node2" href="$namespacecrow.html#a2e95f26db5041c7f322bd38c2de6a6b1" title="crow::method_name" alt="" coords="235,5,375,32"/>
-<area shape="rect" id="node3" href="$namespacecrow_1_1detail.html#a7e6d675c647354299b56961f649b346b" title="crow::detail::middleware\l_call_helper" alt="" coords="224,57,387,98"/>
-<area shape="rect" id="node4" href="$structcrow_1_1response.html#a9fb82c40e0c0844db70b7b86b4a23e9f" title="crow::response::is\l_completed" alt="" coords="435,57,565,98"/>
-</map>

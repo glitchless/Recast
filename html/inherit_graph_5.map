@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_catch_1_1_assertion_result.html" title="Catch::AssertionResult" alt="" coords="6,5,165,32"/>
+<area shape="rect" id="node1" href="$class_i_command.html" title="Superclass for Command object. " alt="" coords="6,5,93,32"/>
+<area shape="rect" id="node2" href="$class_stop_command.html" title="StopCommand" alt="" coords="141,5,251,32"/>
 </map>

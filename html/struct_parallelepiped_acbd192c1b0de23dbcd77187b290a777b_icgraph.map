@@ -1,7 +1,7 @@
 <map id="Parallelepiped::maxY" name="Parallelepiped::maxY">
 <area shape="rect" id="node2" href="$class_bound_temperature_world.html#afac2a24af176488487ef7aaa62936ee7" title="BoundTemperatureWorld\l::foreach" alt="" coords="209,5,375,46"/>
-<area shape="rect" id="node3" href="$class_scalable_bound_temperature_world.html#ade4ecf303ae025e824c0bd5ecd2e2ca7" title="ScalableBoundTemperature\lWorld::set" alt="" coords="201,70,383,111"/>
-<area shape="rect" id="node4" href="$class_scalable_bound_temperature_world.html#ab9602b36759aa857910e03856344759d" title="ScalableBoundTemperature\lWorld::amplify" alt="" coords="201,135,383,177"/>
-<area shape="rect" id="node5" href="$class_scalable_bound_temperature_world.html#a57f60178c88b2cffca11a7f21c5c11c7" title="ScalableBoundTemperature\lWorld::foreach" alt="" coords="201,201,383,242"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#afc1d4dae6cf44b56e5e984f30b5942f2" title="SCENARIO" alt="" coords="245,267,339,293"/>
+<area shape="rect" id="node3" href="$class_bound_temperature_world.html#a48efcef51d61eb752512459e39fecb74" title="BoundTemperatureWorld\l::foreachCellOnEdge" alt="" coords="209,70,375,111"/>
+<area shape="rect" id="node4" href="$class_scalable_bound_temperature_world.html#ade4ecf303ae025e824c0bd5ecd2e2ca7" title="ScalableBoundTemperature\lWorld::set" alt="" coords="201,135,383,177"/>
+<area shape="rect" id="node5" href="$class_scalable_bound_temperature_world.html#ab9602b36759aa857910e03856344759d" title="ScalableBoundTemperature\lWorld::amplify" alt="" coords="201,201,383,242"/>
+<area shape="rect" id="node6" href="$class_scalable_bound_temperature_world.html#a57f60178c88b2cffca11a7f21c5c11c7" title="ScalableBoundTemperature\lWorld::foreach" alt="" coords="201,266,383,307"/>
 </map>

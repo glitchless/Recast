@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['jar',['jar',['../structcrow_1_1_cookie_parser_1_1context.html#a65674550c5ee9ade652a4785c6b9b30c',1,'crow::CookieParser::context']]],
-  ['json_5fvalue',['json_value',['../structcrow_1_1response.html#ad21c0b65173426d51eca46ef4d3f1106',1,'crow::response']]]
+  ['session_5flength',['SESSION_LENGTH',['../_players_online_8hpp.html#a691e4bc5ad1d481487a1c16f953a7adc',1,'PlayersOnline.hpp']]],
+  ['socketboundport',['socketBoundPort',['../class_socket.html#ab05ebf38966e1cd1f093819a6bdad5b1',1,'Socket']]],
+  ['socketdescr',['socketDescr',['../class_socket.html#a610fbf456550dd084cfaee9d1267e5c8',1,'Socket']]]
 ];

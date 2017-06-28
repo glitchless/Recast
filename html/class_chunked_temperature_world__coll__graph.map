@@ -1,7 +1,7 @@
 <map id="ChunkedTemperatureWorld" name="ChunkedTemperatureWorld">
-<area shape="rect" id="node2" href="$class_i_temperature_world_chunkable_mutable.html" title="{ITemperatureWorldChunkable\lMutable\&lt; ITemperatureWorldChunkable\l\&lt; ITemperatureWorld \&gt; \&gt;\n||}" alt="" coords="169,344,423,451"/>
-<area shape="rect" id="node3" href="$class_i_temperature_world_chunkable.html" title="{ITemperatureWorldChunkable\l\&lt; ITemperatureWorld \&gt;\n||}" alt="" coords="89,197,284,289"/>
-<area shape="rect" id="node4" href="$class_i_temperature_world.html" title="{ITemperatureWorld\n||+ ~ITemperatureWorld()\l+ has()\l+ get()\l+ set()\l+ amplify()\l}" alt="" coords="5,5,165,141"/>
-<area shape="rect" id="node5" href="$class_i_temperature_world_chunkable_mixin.html" title="{ITemperatureWorldChunkable\lMixin\n||+ hasChunk()\l+ getChunk()\l+ foreachChunk()\l}" alt="" coords="191,13,385,134"/>
-<area shape="rect" id="node6" href="$class_i_temperature_world_chunkable_mutable_mixin.html" title="{ITemperatureWorldChunkable\lMutableMixin\n||+ addChunk()\l+ removeChunk()\l}" alt="" coords="308,189,503,296"/>
+<area shape="rect" id="node2" href="$class_i_temperature_world_chunkable_mutable.html" title="{ITemperatureWorldChunkable\lMutable\&lt; ITemperatureWorldChunkable\l\&lt; ITemperatureWorld \&gt; \&gt;\n||}" alt="" coords="169,432,423,539"/>
+<area shape="rect" id="node3" href="$class_i_temperature_world_chunkable.html" title="{ITemperatureWorldChunkable\l\&lt; ITemperatureWorld \&gt;\n||}" alt="" coords="89,285,284,377"/>
+<area shape="rect" id="node4" href="$class_i_temperature_world.html" title="{ITemperatureWorld\n||+ ~ITemperatureWorld()\l+ has()\l+ get()\l+ set()\l+ amplify()\l+ previousCoordX()\l+ previousCoordY()\l+ previousCoordZ()\l+ nextCoordX()\l+ nextCoordY()\l+ nextCoordZ()\l}" alt="" coords="5,5,165,229"/>
+<area shape="rect" id="node5" href="$class_i_temperature_world_chunkable_mixin.html" title="{ITemperatureWorldChunkable\lMixin\n||+ hasChunk()\l+ getChunk()\l+ foreachChunk()\l}" alt="" coords="191,57,385,178"/>
+<area shape="rect" id="node6" href="$class_i_temperature_world_chunkable_mutable_mixin.html" title="{ITemperatureWorldChunkable\lMutableMixin\n||+ addChunk()\l+ removeChunk()\l}" alt="" coords="308,277,503,384"/>
 </map>

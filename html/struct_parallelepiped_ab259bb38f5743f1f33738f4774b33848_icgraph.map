@@ -1,13 +1,16 @@
 <map id="Parallelepiped::sizeZ" name="Parallelepiped::sizeZ">
-<area shape="rect" id="node2" href="$class_bound_temperature_world.html#ab1843b429dc37c0c09ef0b454b9ea908" title="BoundTemperatureWorld\l::BoundTemperatureWorld" alt="" coords="222,75,397,117"/>
-<area shape="rect" id="node3" href="$class_bound_temperature_world.html#a6be6a48b1a29f0b1cc4a01b5e0369f9e" title="BoundTemperatureWorld\l::_getIndexInData" alt="" coords="226,141,393,182"/>
-<area shape="rect" id="node10" href="$class_scaling_generatable_chunked_temperature_world.html#aabf0380970fd95dfa8d88298f0ae07e9" title="ScalingGeneratableChunked\lTemperatureWorld::_updateScales" alt="" coords="198,303,421,345"/>
-<area shape="rect" id="node4" href="$class_bound_temperature_world.html#a1a668e9632e4179029cabad5052428fc" title="BoundTemperatureWorld::get" alt="" coords="499,5,691,32"/>
-<area shape="rect" id="node6" href="$class_bound_temperature_world.html#aa069691f31dd38006cfeacab94b6e94e" title="BoundTemperatureWorld::set" alt="" coords="499,56,691,83"/>
-<area shape="rect" id="node7" href="$class_bound_temperature_world.html#a7b49bd6e07cc78f3c7a3a722d0ec5bac" title="BoundTemperatureWorld\l::amplify" alt="" coords="511,107,678,149"/>
-<area shape="rect" id="node8" href="$class_scalable_bound_temperature_world.html#ade4ecf303ae025e824c0bd5ecd2e2ca7" title="ScalableBoundTemperature\lWorld::set" alt="" coords="503,173,686,214"/>
-<area shape="rect" id="node9" href="$class_scalable_bound_temperature_world.html#ab9602b36759aa857910e03856344759d" title="ScalableBoundTemperature\lWorld::amplify" alt="" coords="503,238,686,279"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#afc1d4dae6cf44b56e5e984f30b5942f2" title="SCENARIO" alt="" coords="768,56,861,83"/>
-<area shape="rect" id="node11" href="$class_scaling_generatable_chunked_temperature_world.html#ac8135352da17faeb9c41f1273630aa41" title="ScalingGeneratableChunked\lTemperatureWorld::addPriorityPoint" alt="" coords="480,303,709,345"/>
-<area shape="rect" id="node12" href="$class_scaling_generatable_chunked_temperature_world.html#aff6258637594e1b5b0e25ba628d22b20" title="ScalingGeneratableChunked\lTemperatureWorld::removePriorityPoint" alt="" coords="469,369,720,410"/>
+<area shape="rect" id="node2" href="$class_bound_temperature_world.html#ab1843b429dc37c0c09ef0b454b9ea908" title="BoundTemperatureWorld\l::BoundTemperatureWorld" alt="" coords="218,107,393,149"/>
+<area shape="rect" id="node3" href="$class_bound_temperature_world.html#a6be6a48b1a29f0b1cc4a01b5e0369f9e" title="BoundTemperatureWorld\l::_getIndexInData" alt="" coords="222,173,389,214"/>
+<area shape="rect" id="node9" href="$class_scaling_generatable_chunked_temperature_world.html#ab7385d1183770678642190af9369ffaf" title="ScalingGeneratableChunked\lTemperatureWorld::_updateScale" alt="" coords="197,303,413,345"/>
+<area shape="rect" id="node15" href="$class_scaling_generatable_chunked_temperature_world_injector.html#ac283a716752adf93a706050bad4c4336" title="ScalingGeneratableChunked\lTemperatureWorldInjector\l::_makeChunkFn" alt="" coords="212,368,399,424"/>
+<area shape="rect" id="node4" href="$class_bound_temperature_world.html#a1a668e9632e4179029cabad5052428fc" title="BoundTemperatureWorld::get" alt="" coords="477,5,669,32"/>
+<area shape="rect" id="node5" href="$class_bound_temperature_world.html#aa069691f31dd38006cfeacab94b6e94e" title="BoundTemperatureWorld::set" alt="" coords="477,56,669,83"/>
+<area shape="rect" id="node6" href="$class_bound_temperature_world.html#a7b49bd6e07cc78f3c7a3a722d0ec5bac" title="BoundTemperatureWorld\l::amplify" alt="" coords="490,107,657,149"/>
+<area shape="rect" id="node7" href="$class_scalable_bound_temperature_world.html#ade4ecf303ae025e824c0bd5ecd2e2ca7" title="ScalableBoundTemperature\lWorld::set" alt="" coords="482,173,665,214"/>
+<area shape="rect" id="node8" href="$class_scalable_bound_temperature_world.html#ab9602b36759aa857910e03856344759d" title="ScalableBoundTemperature\lWorld::amplify" alt="" coords="482,238,665,279"/>
+<area shape="rect" id="node10" href="$class_scaling_generatable_chunked_temperature_world.html#a5ec1b1a2a5e058bf57bd7918fcc5a35b" title="ScalingGeneratableChunked\lTemperatureWorld::addChunk" alt="" coords="475,303,671,345"/>
+<area shape="rect" id="node11" href="$class_scaling_generatable_chunked_temperature_world.html#ac3ae4d696d934b925076eeab88658978" title="ScalingGeneratableChunked\lTemperatureWorld::removeChunk" alt="" coords="464,369,683,410"/>
+<area shape="rect" id="node12" href="$class_scaling_generatable_chunked_temperature_world.html#aabf0380970fd95dfa8d88298f0ae07e9" title="ScalingGeneratableChunked\lTemperatureWorld::_updateScales" alt="" coords="462,434,685,475"/>
+<area shape="rect" id="node13" href="$class_scaling_generatable_chunked_temperature_world.html#ac8135352da17faeb9c41f1273630aa41" title="ScalingGeneratableChunked\lTemperatureWorld::addPriorityPoint" alt="" coords="744,401,973,442"/>
+<area shape="rect" id="node14" href="$class_scaling_generatable_chunked_temperature_world.html#aff6258637594e1b5b0e25ba628d22b20" title="ScalingGeneratableChunked\lTemperatureWorld::removePriorityPoint" alt="" coords="733,466,984,507"/>
 </map>

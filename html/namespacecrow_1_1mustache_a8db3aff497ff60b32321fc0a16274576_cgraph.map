@@ -1,5 +1,0 @@
-<map id="crow::mustache::load_text" name="crow::mustache::load_text">
-<area shape="rect" id="node2" href="$namespacecrow_1_1mustache_1_1detail.html#ac4d3e09dc0a20a8a2a56b3f8dae6e3cc" title="crow::mustache::detail\l::get_loader_ref" alt="" coords="229,5,384,46"/>
-<area shape="rect" id="node3" href="$namespacecrow_1_1mustache.html#a7e8660fbdeeb994a1f00c704b469c792" title="crow::mustache::default\l_loader" alt="" coords="432,5,595,46"/>
-<area shape="rect" id="node4" href="$namespacecrow_1_1mustache_1_1detail.html#afe3296362bdc6f187295904755c2103f" title="crow::mustache::detail\l::get_template_base_directory_ref" alt="" coords="643,5,861,46"/>
-</map>

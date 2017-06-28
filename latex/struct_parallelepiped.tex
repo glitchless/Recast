@@ -42,6 +42,8 @@ Collaboration diagram for Parallelepiped\-:
 \item 
 \hyperlink{struct_size}{Size} \hyperlink{struct_parallelepiped_a0862330294ca2ca177308d2fef56dffa}{volume} () const noexcept
 \item 
+bool \hyperlink{struct_parallelepiped_a1233e1b19767f80b991b2dc4a9e20146}{is\-Same\-Size} (const \hyperlink{struct_parallelepiped}{Parallelepiped} \&other) const noexcept
+\item 
 bool \hyperlink{struct_parallelepiped_afe121f86b46f64ebd388351ff4f06440}{operator==} (const \hyperlink{struct_parallelepiped}{Parallelepiped} \&other) const noexcept
 \item 
 bool \hyperlink{struct_parallelepiped_ab7c62b8191d9e9f5c61adb90d8042c2e}{operator!=} (const \hyperlink{struct_parallelepiped}{Parallelepiped} \&other) const noexcept
@@ -97,6 +99,21 @@ Type. Represents volume in three-\/dimensional space.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{struct_parallelepiped_a1233e1b19767f80b991b2dc4a9e20146}{\index{Parallelepiped@{Parallelepiped}!is\-Same\-Size@{is\-Same\-Size}}
+\index{is\-Same\-Size@{is\-Same\-Size}!Parallelepiped@{Parallelepiped}}
+\subsubsection[{is\-Same\-Size}]{\setlength{\rightskip}{0pt plus 5cm}bool Parallelepiped\-::is\-Same\-Size (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parallelepiped} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_parallelepiped_a1233e1b19767f80b991b2dc4a9e20146}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{struct_parallelepiped}{Parallelepiped} to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if sizes of this parallepiped and other parallepiped are equal. 
+\end{DoxyReturn}
 \hypertarget{struct_parallelepiped_a26db75a30a94efca00824940cac2ec36}{\index{Parallelepiped@{Parallelepiped}!max\-X@{max\-X}}
 \index{max\-X@{max\-X}!Parallelepiped@{Parallelepiped}}
 \subsubsection[{max\-X}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coord} Parallelepiped\-::max\-X (
@@ -316,6 +333,9 @@ Here is the caller graph for this function\-:
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{struct_parallelepiped_a0862330294ca2ca177308d2fef56dffa}
+\begin{DoxyReturn}{Returns}
+Count of points inside. 
+\end{DoxyReturn}
 
 
 \subsection{Member Data Documentation}
@@ -350,4 +370,4 @@ Here is the caller graph for this function\-:
 
 The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-/home/travis/build/bender-\/wardrobe/\-Recast/temperature-\/world/src/headers/temperature-\/world/types/\hyperlink{_parallelepiped_8hpp}{Parallelepiped.\-hpp}\end{DoxyCompactItemize}
+/home/travis/build/bender-\/wardrobe/\-Recast/src/headers/temperature-\/world/types/\hyperlink{_parallelepiped_8hpp}{Parallelepiped.\-hpp}\end{DoxyCompactItemize}
