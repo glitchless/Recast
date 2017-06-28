@@ -33,7 +33,7 @@ public:
     using NetworkListener::NetworkListener;
 public:
     char *onPacket(char *request, ICommandSender *sender) {
-        sender->onMessage(std::string("Listener [") + std::to_string(listenerId) + "] got request " + request);
+        sender->onMessage(std::string("Listener [") + std::to_string(listenerId) + "] got request " + unpack(request, 1024));
         return request;
     };
 };

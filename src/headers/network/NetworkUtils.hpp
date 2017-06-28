@@ -29,5 +29,8 @@ const int DEFAULT_PORT_UDP = 1338;
 
 string int2ipv4(uint32_t ip);
 struct sockaddr_in resolve(const char* host, int port);
+char* pack(char* data, size_t num, int listenerId);
+char* unpack(char* data, size_t num);
+char* unpack(char* data, size_t num, int &listenerId);
 
 #endif //RECAST_NETWORK_UTILS_HPP

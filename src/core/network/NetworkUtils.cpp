@@ -45,3 +45,23 @@ struct sockaddr_in resolve(const char* host, int port) {
 
     return address;
 }
+
+char* pack(char* data, size_t num, int listenerId) {
+    char* temp = new char[num + 1];
+    temp[0] = static_cast<char>(listenerId);
+    for (int i = 1; i < num; i++) { temp[i] = data[i - 1]; }
+    return temp;
+}
+
+char* unpack(char* data, size_t num) {
+    char* temp = new char[num - 1];
+    for (int i = 1; i < num; i++) { temp[i - 1] = data[i]; }
+    return temp;
+}
+
+char* unpack(char* data, size_t num, int &listenerId) {
+    char* temp = new char[num - 1];
+    listenerId = data[0];
+    for (int i = 1; i < num; i++) { temp[i - 1] = data[i]; }
+    return temp;
+}

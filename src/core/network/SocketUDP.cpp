@@ -46,7 +46,10 @@ char *SocketUDP::recvBytesFrom(struct sockaddr_in &recvFromAddr) noexcept(false)
                     -1)) {
         cerr << "[ERR] Recieve failed (recvfrom): " + string(strerror(errno)) << endl;
     }
-    BOOST_LOG_TRIVIAL(info) << "[INFO] Recieved message. Data: " << buffer;
+
+    int listenerId = -1;
+    char* unpacked = unpack(buffer, BUFFER_SIZE, listenerId);
+    BOOST_LOG_TRIVIAL(info) << "[INFO] Recieved message for UDP listener [" << listenerId << "]. Data: " << unpacked;
 
     return buffer;
 }
@@ -78,5 +81,3 @@ void SocketUDP::createServerSocket(uint32_t port) noexcept(false) {
 void SocketUDP::createServerSocket() noexcept(false) {
     createServerSocket(socketBoundPort);
 }
-
-
