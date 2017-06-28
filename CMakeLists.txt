@@ -68,6 +68,10 @@ target_link_libraries(temperature-world-demo ${LIBRARIES})
 add_executable(temperature-world-demo-multichunk test/temperature-world/demo-multichunk.cpp test/temperature-world/lib/crow_all.h ${SOURCE_FILES})
 target_link_libraries(temperature-world-demo-multichunk ${LIBRARIES})
 
+### demo-for-video
+add_executable(recast-beta test/temperature-world/demo-for-video.cpp test/temperature-world/lib/crow_all.h ${SOURCE_FILES})
+target_link_libraries(recast-beta ${LIBRARIES})
+
 ### performance
 add_executable(temperature-world-performance test/temperature-world/performance.cpp ${SOURCE_FILES})
 target_link_libraries(temperature-world-performance ${LIBRARIES})

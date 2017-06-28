@@ -16,7 +16,10 @@ function init() {
     scene = new THREE.Scene();
 
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
-    camera.position.z = 2000;
+    camera.position.x = 100;
+    camera.position.y = 300;
+    camera.position.z = 1200;
+    camera.rotateY(-0.7);
 
     continuouslyLoadWorldAsync(function (world) {
         initWorld(scene, world);
@@ -85,7 +88,7 @@ function loadWorldAsync(callback) {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 callback(JSON.parse(xmlhttp.responseText)['blocks']);
-                document.getElementById('info').innerHTML = 'Last update was at ' + new Date().toLocaleTimeString();
+                document.getElementById('info').innerHTML = '';
             }
         }
     };
