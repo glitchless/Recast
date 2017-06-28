@@ -19,18 +19,12 @@
 
 template<class T>
 void inline setByte(char byte, int number, T *var) {
-    ((union {
-        T a;
-        char bytes[sizeof(T)];
-    } *) var)->bytes[number] = byte;
+    *(char *) (((void *) var) + number) = byte;
 }
 
 template<class T>
 char inline getByte(T var, int number) {
-    return ((union {
-        T a;
-        char bytes[sizeof(T)];
-    } *) var)->bytes[number];
+    return (char) ((var >> ((sizeof(T) - number - 1) * 8)) & 255);
 }
 
 /**

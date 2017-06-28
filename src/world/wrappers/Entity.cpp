@@ -21,6 +21,7 @@ Entity::Entity(b2Fixture *fixture1) : fixture(fixture1) {
 
 void Entity::write(Parcel &in, Entity *obj) {
     in.put(obj->getType());
+    in.put(obj->getId());
     b2Vec2 pos = obj->getFixture()->GetBody()->GetPosition();
     in.put(pos.x);
     in.put(pos.y);

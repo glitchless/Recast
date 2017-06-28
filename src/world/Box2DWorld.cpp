@@ -8,6 +8,7 @@
 #include "world/Box2DWorld.h"
 #include <world/utils/CollectEntity.h>
 #include "world/wrappers/SpellEntity.h"
+#include "utils/DelayedSpellCreate.h"
 
 static const float32 WIDTH_CHUNK = 50.0f;
 static const float32 STEP_TIME = 1.0f / 60.0f;
@@ -111,6 +112,10 @@ void Box2DWorld::SayGoodbye(b2Fixture *fixture) {
     }
 }
 
+void Box2DWorld::asyncCreateSpellEntity(b2Vec2 position, Spell *spell) {
+    delayedSpell.push(new DelayedSpellCreate(position, spell));
+}
+
 SpellEntity *Box2DWorld::createSpellEntity(b2Vec2 position, Spell *spell) {
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
@@ -150,4 +155,12 @@ void Box2DWorld::BeginContact(b2Contact *contact) {
         beDestroyed.push_back(entity);
     }
 
+}
+
+void Box2DWorld::executeAllDelayed() {
+    DelayedSpellCreate *delayCommand;
+    while (!delayedSpell.empty() && delayedSpell.pop(delayCommand)) {
+        createSpellEntity(delayCommand->getPos(), delayCommand->getSpell());
+        delete delayCommand;
+    }
 }
