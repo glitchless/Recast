@@ -22,6 +22,9 @@
 ## Документация:
 Автоматическая документация генерируется с помощью Doxygen: https://glitchless.github.io/Recast/html/
 
+## Клиентская часть:
+Репозиторий с игрой на Unity3D: https://github.com/glitchless/RecastClient
+
 ## Защита проекта:
 Презентация на защите 28 июня 2017 в офисе Mail.Ru: http://files.reo7sp.ru/recast/presentation.pdf
 
