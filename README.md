@@ -20,7 +20,7 @@
 - Отталкивание
 
 ## Документация:
-Автоматическая документация генерируется с помощью Doxygen: https://bender-wardrobe.github.io/Recast/html/
+Автоматическая документация генерируется с помощью Doxygen: https://glitchless.github.io/Recast/html/
 
 ## Команда "Шкаф Бендера":
 - Олег Морозенков
