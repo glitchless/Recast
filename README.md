@@ -1,4 +1,4 @@
-#Recast
+# Recast [![Build Status](https://travis-ci.org/bender-wardrobe/Recast.svg?branch=master)](https://travis-ci.org/bender-wardrobe/Recast)
 Основная идея проекта - не ограничивать игрока в создании заклинаний. Игрок может создавать заклинания, опираясь на физические законы окружающего мира.
 
 ## Основные концепции проекта:
@@ -15,12 +15,18 @@
 - Разрушаемый мир
 - Деление мира на тайлы
 
-##Примеры заклинаний:
+## Примеры заклинаний:
 - Огненный шар
 - Отталкивание
 
-##Архитектура проекта:
-![Архитектура проекта](https://lionzxy.github.io/Recast/docs/Примерная Архитектура.svg)
+## Документация:
+Автоматическая документация генерируется с помощью Doxygen: https://glitchless.github.io/Recast/html/
+
+## Клиентская часть:
+Репозиторий с игрой на Unity3D: https://github.com/glitchless/RecastClient
+
+## Защита проекта:
+Презентация на защите 28 июня 2017 в офисе Mail.Ru: http://files.reo7sp.ru/recast/presentation.pdf
 
 ## Команда "Шкаф Бендера":
 - Олег Морозенков
