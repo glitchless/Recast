@@ -1,5 +1,5 @@
-<map id="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/spells/nodes/HeaterNode.hpp" name="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/spells/nodes/HeaterNode.hpp">
-<area shape="rect" id="node2" href="$_server_8cpp.html" title="Config file. " alt="" coords="5,125,173,181"/>
-<area shape="rect" id="node3" href="$_heater_node_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/spell/nodes/HeaterNode.cpp" alt="" coords="197,125,411,181"/>
-<area shape="rect" id="node4" href="$_spell_node_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/spell/nodes/SpellNode.cpp" alt="" coords="435,125,637,181"/>
+<map id="/home/travis/build/glitchless/Recast/src/headers/spells/nodes/HeaterNode.hpp" name="/home/travis/build/glitchless/Recast/src/headers/spells/nodes/HeaterNode.hpp">
+<area shape="rect" id="node2" href="$_server_8cpp.html" title="Config file. " alt="" coords="5,125,153,181"/>
+<area shape="rect" id="node3" href="$_heater_node_8cpp.html" title="/home/travis/build\l/glitchless/Recast/src\l/spell/nodes/HeaterNode.cpp" alt="" coords="179,125,369,181"/>
+<area shape="rect" id="node4" href="$_spell_node_8cpp.html" title="/home/travis/build\l/glitchless/Recast/src\l/spell/nodes/SpellNode.cpp" alt="" coords="395,125,576,181"/>
 </map>

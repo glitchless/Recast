@@ -1,11 +1,11 @@
-<map id="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/spells/nodes/EnergyNode.hpp" name="/home/travis/build/bender&#45;wardrobe/Recast/src/headers/spells/nodes/EnergyNode.hpp">
-<area shape="rect" id="node2" href="$_aim_node_8h.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/headers/spells/nodes\l/AimNode.h" alt="" coords="285,126,456,197"/>
-<area shape="rect" id="node5" href="$_generator_node_8h.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/headers/spells/nodes\l/GeneratorNode.h" alt="" coords="675,126,845,197"/>
-<area shape="rect" id="node6" href="$_server_8cpp.html" title="Config file. " alt="" coords="691,245,859,301"/>
-<area shape="rect" id="node8" href="$_heater_node_8hpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/headers/spells/nodes\l/HeaterNode.hpp" alt="" coords="480,126,651,197"/>
-<area shape="rect" id="node10" href="$_energy_node_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/spell/nodes/EnergyNode.cpp" alt="" coords="921,133,1135,189"/>
-<area shape="rect" id="node3" href="$_aim_node_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/spell/nodes/AimNode.cpp" alt="" coords="5,245,203,301"/>
-<area shape="rect" id="node4" href="$_spell_node_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/spell/nodes/SpellNode.cpp" alt="" coords="464,245,667,301"/>
-<area shape="rect" id="node7" href="$_generator_node_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/spell/nodes/GeneratorNode.cpp" alt="" coords="883,245,1113,301"/>
-<area shape="rect" id="node9" href="$_heater_node_8cpp.html" title="/home/travis/build\l/bender&#45;wardrobe/Recast\l/src/spell/nodes/HeaterNode.cpp" alt="" coords="227,245,440,301"/>
+<map id="/home/travis/build/glitchless/Recast/src/headers/spells/nodes/EnergyNode.hpp" name="/home/travis/build/glitchless/Recast/src/headers/spells/nodes/EnergyNode.hpp">
+<area shape="rect" id="node2" href="$_aim_node_8h.html" title="/home/travis/build\l/glitchless/Recast/src\l/headers/spells/nodes\l/AimNode.h" alt="" coords="261,126,409,197"/>
+<area shape="rect" id="node5" href="$_generator_node_8h.html" title="/home/travis/build\l/glitchless/Recast/src\l/headers/spells/nodes\l/GeneratorNode.h" alt="" coords="608,126,756,197"/>
+<area shape="rect" id="node6" href="$_server_8cpp.html" title="Config file. " alt="" coords="624,245,772,301"/>
+<area shape="rect" id="node8" href="$_heater_node_8hpp.html" title="/home/travis/build\l/glitchless/Recast/src\l/headers/spells/nodes\l/HeaterNode.hpp" alt="" coords="435,126,583,197"/>
+<area shape="rect" id="node10" href="$_energy_node_8cpp.html" title="/home/travis/build\l/glitchless/Recast/src\l/spell/nodes/EnergyNode.cpp" alt="" coords="833,133,1025,189"/>
+<area shape="rect" id="node3" href="$_aim_node_8cpp.html" title="/home/travis/build\l/glitchless/Recast/src\l/spell/nodes/AimNode.cpp" alt="" coords="5,245,179,301"/>
+<area shape="rect" id="node4" href="$_spell_node_8cpp.html" title="/home/travis/build\l/glitchless/Recast/src\l/spell/nodes/SpellNode.cpp" alt="" coords="419,245,600,301"/>
+<area shape="rect" id="node7" href="$_generator_node_8cpp.html" title="/home/travis/build\l/glitchless/Recast/src\l/spell/nodes/GeneratorNode.cpp" alt="" coords="798,245,1007,301"/>
+<area shape="rect" id="node9" href="$_heater_node_8cpp.html" title="/home/travis/build\l/glitchless/Recast/src\l/spell/nodes/HeaterNode.cpp" alt="" coords="203,245,393,301"/>
 </map>

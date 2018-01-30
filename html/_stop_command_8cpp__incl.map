@@ -1,4 +1,4 @@
-<map id="/home/travis/build/bender&#45;wardrobe/Recast/src/core/commands/StopCommand.cpp" name="/home/travis/build/bender&#45;wardrobe/Recast/src/core/commands/StopCommand.cpp">
+<map id="/home/travis/build/glitchless/Recast/src/core/commands/StopCommand.cpp" name="/home/travis/build/glitchless/Recast/src/core/commands/StopCommand.cpp">
 <area shape="rect" id="node2" href="$_i_command_sender_8hpp.html" title="commands/ICommandSender.hpp" alt="" coords="2691,555,2911,581"/>
 <area shape="rect" id="node4" href="$_stop_command_8hpp.html" title="commands/StopCommand.hpp" alt="" coords="2792,109,2995,136"/>
 <area shape="rect" id="node7" href="$_server_8hpp.html" title="Server file. " alt="" coords="1488,109,1573,136"/>
