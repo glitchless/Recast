@@ -26,7 +26,7 @@
 Репозиторий с игрой на Unity3D: https://github.com/glitchless/RecastClient
 
 ## Защита проекта:
-Презентация на защите 28 июня 2017 в офисе Mail.Ru: http://files.reo7sp.ru/recast/presentation.pdf
+Презентация на защите 28 июня 2017 в офисе Mail.Ru: http://files.s.oleg.rocks/recast/presentation.pdf
 
 ## Команда "Шкаф Бендера":
 - Олег Морозенков
